@@ -7,6 +7,51 @@ import {period} from './domain';
 import {useI18n} from './i18n';
 
 type Props={buildings:Building[];allBuildings:Building[];basemap:GeoJSON.FeatureCollection;buildingOutlines:ManifestFile;selected:string|null;onSelect:(id:string)=>void;focus:{id:string;serial:number}|null;reset:number;fit:number;showFit:boolean;onFit:()=>void;highlightedPeriods:string[]};
+type SpatialBounds={minX:number;minY:number;maxX:number;maxY:number};
+type OutlineIndexItem=SpatialBounds&{featureIndex:number};
+type OutlineIndexNode=SpatialBounds&{children:(OutlineIndexNode|OutlineIndexItem)[];leaf:boolean};
+const OUTLINE_INDEX_CAPACITY=16;
+function boundsForFeature(feature:GeoJSON.Feature):SpatialBounds|null{
+ const bounds:SpatialBounds={minX:Infinity,minY:Infinity,maxX:-Infinity,maxY:-Infinity};
+ const visit=(value:unknown):void=>{
+  if(!Array.isArray(value))return;
+  if(typeof value[0]==='number'&&typeof value[1]==='number'){
+   bounds.minX=Math.min(bounds.minX,value[0]);bounds.maxX=Math.max(bounds.maxX,value[0]);
+   bounds.minY=Math.min(bounds.minY,value[1]);bounds.maxY=Math.max(bounds.maxY,value[1]);return;
+  }
+  value.forEach(visit);
+ };
+ if(feature.geometry?.type==='GeometryCollection')feature.geometry.geometries.forEach(geometry=>visit((geometry as GeoJSON.Geometry&{coordinates?:unknown}).coordinates));
+ else if(feature.geometry)visit((feature.geometry as GeoJSON.Geometry&{coordinates?:unknown}).coordinates);
+ return Number.isFinite(bounds.minX)?bounds:null;
+}
+function unionBounds(items:(SpatialBounds)[]):SpatialBounds{
+ return items.reduce((bounds,item)=>({minX:Math.min(bounds.minX,item.minX),minY:Math.min(bounds.minY,item.minY),maxX:Math.max(bounds.maxX,item.maxX),maxY:Math.max(bounds.maxY,item.maxY)}),{minX:Infinity,minY:Infinity,maxX:-Infinity,maxY:-Infinity});
+}
+function buildOutlineIndex(features:GeoJSON.Feature[]):OutlineIndexNode|null{
+ let level:(OutlineIndexNode|OutlineIndexItem)[]=features.flatMap((feature,featureIndex)=>{const bounds=boundsForFeature(feature);return bounds?[{...bounds,featureIndex}]:[]});
+ if(!level.length)return null;
+ if(level.length===1){const item=level[0] as OutlineIndexItem;return {...item,children:[item],leaf:true}}
+ let leaf=true;
+ while(level.length>1){
+  const sliceCount=Math.ceil(Math.sqrt(level.length/OUTLINE_INDEX_CAPACITY));
+  const sliceSize=Math.ceil(level.length/sliceCount);
+  const sorted=[...level].sort((a,b)=>(a.minX+a.maxX)-(b.minX+b.maxX));
+  const next:OutlineIndexNode[]=[];
+  for(let start=0;start<sorted.length;start+=sliceSize){
+   const slice=sorted.slice(start,start+sliceSize).sort((a,b)=>(a.minY+a.maxY)-(b.minY+b.maxY));
+   for(let offset=0;offset<slice.length;offset+=OUTLINE_INDEX_CAPACITY){const children=slice.slice(offset,offset+OUTLINE_INDEX_CAPACITY);next.push({...unionBounds(children),children,leaf});}
+  }
+  level=next;leaf=false;
+ }
+ return level[0] as OutlineIndexNode;
+}
+function queryOutlineIndex(root:OutlineIndexNode,bounds:SpatialBounds):number[]{
+ const result:number[]=[],stack:OutlineIndexNode[]=[root];
+ const intersects=(item:SpatialBounds)=>item.minX<=bounds.maxX&&item.maxX>=bounds.minX&&item.minY<=bounds.maxY&&item.maxY>=bounds.minY;
+ while(stack.length){const node=stack.pop()!;for(const child of node.children){if(!intersects(child))continue;if(node.leaf)result.push((child as OutlineIndexItem).featureIndex);else stack.push(child as OutlineIndexNode)}}
+ return result;
+}
 function landmarkIcon(category:string){
  const drawings:Record<string,string>={
   museum:'M4 13h16M6 13v8M10 13v8M14 13v8M18 13v8M3 21h18M12 4 3 10h18L12 4Z',
@@ -24,7 +69,7 @@ function landmarkIcon(category:string){
 }
 export default function MapView({buildings,allBuildings,basemap,buildingOutlines,selected,onSelect,focus,reset,fit,showFit,onFit,highlightedPeriods}:Props){
  const {t,language}=useI18n();
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),basemapRenderer=useRef<L.Canvas|null>(null),buildingLayer=useRef<L.GeoJSON|null>(null),buildingData=useRef<Promise<GeoJSON.FeatureCollection>|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),basemapRenderer=useRef<L.Canvas|null>(null),buildingLayer=useRef<L.LayerGroup|null>(null),buildingData=useRef<Promise<GeoJSON.FeatureCollection>|null>(null),buildingIndex=useRef<OutlineIndexNode|null>(null),buildingLayerCache=useRef<Map<number,L.GeoJSON>>(new Map()),refreshBuildingOutlines=useRef<()=>void>(()=>{}),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
  const atlasBounds=useMemo(()=>{const bounds=L.latLngBounds([]);const visit=(coordinates:any):void=>{if(!Array.isArray(coordinates))return;if(typeof coordinates[0]==='number'&&typeof coordinates[1]==='number'){bounds.extend([coordinates[1],coordinates[0]]);return}coordinates.forEach(visit)};const geometry=(g:Geometry|null):void=>{if(!g)return;if(g.type==='GeometryCollection')g.geometries.forEach(geometry);else visit(g.coordinates)};allBuildings.forEach(building=>geometry(building.geometry as Geometry|null));return bounds},[allBuildings]);
  const layerRefs=useRef<{roads:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON}|null>(null);
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false),[buildingLayerLoading,setBuildingLayerLoading]=useState(false),[buildingLayerError,setBuildingLayerError]=useState(false);
@@ -62,7 +107,7 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
    wheelTimer=setTimeout(applyWheelZoom,40);L.DomEvent.stop(event);
   };
   L.DomEvent.on(container.current,'wheel',onWheel);
-  const resizeObserver=new ResizeObserver(()=>map.invalidateSize({pan:false}));resizeObserver.observe(container.current);
+  const resizeObserver=new ResizeObserver(()=>{map.invalidateSize({pan:false});requestAnimationFrame(()=>refreshBuildingOutlines.current())});resizeObserver.observe(container.current);
   L.control.zoom({position:'bottomright'}).addTo(map);
   map.attributionControl.setPrefix('');map.attributionControl.setPosition('topleft');
   const localPane=map.createPane('localBasemap');localPane.style.zIndex='190';
@@ -136,7 +181,7 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
   };
   const hideLabels=()=>{labelCanvas.style.display='none'};
   let dragOrigin=map.getPixelBounds().min!,dragFrame:number|null=null;
-  const finishMove=()=>{dragOrigin=map.getPixelBounds().min!;drawLabels()};
+  const finishMove=()=>{dragOrigin=map.getPixelBounds().min!;drawLabels();refreshBuildingOutlines.current()};
   const refreshDuringDrag=()=>{
    if(dragFrame!==null)return;
    dragFrame=requestAnimationFrame(()=>{
@@ -146,14 +191,14 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
     dragOrigin=current;
     // Leaflet's canvas renderer normally refreshes only on moveend.
     if(map.hasLayer(canvas))(canvas as L.Canvas & {_update:()=>void})._update();
-    drawLabels();
+    drawLabels();refreshBuildingOutlines.current();
    });
   };
   map.on('drag',refreshDuringDrag);map.on('moveend',finishMove);map.on('zoomstart',hideLabels);
   redrawLabels.current=drawLabels;
   setLabelsEnabled.current=(enabled)=>{labelsEnabled=enabled;drawLabels()};
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
-  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
+  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};refreshBuildingOutlines.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
  },[basemap,atlasBounds]);
  useEffect(()=>{redrawLabels.current()},[language]);
  useEffect(()=>{
@@ -180,9 +225,22 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
    }
    try{
     const data=await buildingData.current;if(cancelled)return;
-    if(!buildingLayer.current)buildingLayer.current=L.geoJSON(data,{renderer:basemapRenderer.current??undefined,style:()=>({color:'#9da497',weight:.7,fillColor:'#d6d8cf',fillOpacity:.34})} as L.GeoJSONOptions & L.PolylineOptions);
-    buildingLayer.current.addTo(map);setBuildingLayerLoading(false);
-   }catch{buildingData.current=null;if(!cancelled){setBuildingLayerLoading(false);setBuildingLayerError(true)}}
+   if(!buildingLayer.current){
+     buildingLayer.current=L.layerGroup();buildingIndex.current=buildOutlineIndex(data.features);
+     refreshBuildingOutlines.current=()=>{
+      const group=buildingLayer.current,index=buildingIndex.current,currentMap=mapRef.current;
+      if(!showBuildings||!group||!index||!currentMap||!currentMap.hasLayer(group))return;
+      const view=currentMap.getBounds().pad(.35),visible=new Set(queryOutlineIndex(index,{minX:view.getWest(),minY:view.getSouth(),maxX:view.getEast(),maxY:view.getNorth()}));
+      for(const [featureIndex,layer] of buildingLayerCache.current){if(!visible.has(featureIndex)){group.removeLayer(layer);buildingLayerCache.current.delete(featureIndex)}}
+      for(const featureIndex of visible){
+       if(buildingLayerCache.current.has(featureIndex))continue;
+       const layer=L.geoJSON(data.features[featureIndex],{renderer:basemapRenderer.current??undefined,interactive:false,style:()=>({color:'#9da497',weight:.7,fillColor:'#d6d8cf',fillOpacity:.34})} as L.GeoJSONOptions & L.PolylineOptions);
+       buildingLayerCache.current.set(featureIndex,layer);group.addLayer(layer);
+      }
+      };
+    }
+    buildingLayer.current.addTo(map);refreshBuildingOutlines.current();setBuildingLayerLoading(false);
+   }catch{buildingData.current=null;if(buildingLayer.current&&map.hasLayer(buildingLayer.current))map.removeLayer(buildingLayer.current);buildingLayer.current=null;buildingIndex.current=null;buildingLayerCache.current.clear();refreshBuildingOutlines.current=()=>{};if(!cancelled){setBuildingLayerLoading(false);setBuildingLayerError(true)}}
   };void load();return()=>{cancelled=true};
  },[showBuildings,buildingOutlines]);
  useEffect(()=>{
