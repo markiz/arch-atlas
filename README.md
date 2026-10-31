@@ -35,10 +35,10 @@ npm run dev
 
 - `src/` — интерфейс, Leaflet-карта и геопозиция, галерея, локальные поиск и фильтры.
 - `public/atlas/buildings.json`, `basemap.geojson`, `photos/` — данные и медиа текущего атласа.
-- `raw/osm-tbilisi-selected.json` — выборка из административной границы Тбилиси: улицы, парки и музеи без общей карты зданий.
+- `raw/osm-tbilisi-selected.json` — улицы, парки и музеи; `raw/osm-tbilisi-building-outlines.geojson` — 115 тыс. контуров зданий по административной границе Тбилиси из локально обработанного регионального PBF.
 - `data/heritage-extra.json` — 90 дополнительно отобранных объектов; `data/geometry-overrides.json` — геометрия отношений OSM для первоначальных объектов.
 - `data/editorial_sources.json`, `data/gallery-sources.json` и `data/curated-extra-photos.json` — атрибуции и пути медиа.
-- `scripts/build-data.py` — сборка объектов и подложки из данных, `raw/osm-grid-*.xml` и выборки городских слоёв; `scripts/create-manifest.mjs` — размеры и SHA-256.
+- `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` — сборка объектов и подложки; `scripts/create-manifest.mjs` — размеры и SHA-256.
 - `scripts/build-heritage-extra.py` и `resolve-geometries.py` используются только при повторной подготовке исходных геоданных и дополнительно требуют Python-пакет Shapely.
 
 Чтобы пересоздать данные из приложенных OSM-выгрузок и локальных редакционных файлов, выполните `python3 scripts/build-data.py`, затем `npm run build`. Скрипты загрузки предоставлены для исследования и требуют сети; повторная выгрузка внешних источников может изменить исходные данные.

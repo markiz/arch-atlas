@@ -149,6 +149,20 @@ if city_extract.exists():
   features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
  print('City-wide streets, parks and museums added',added)
 
+# Full Tbilisi building outlines are extracted locally from the regional PBF.
+building_extract=root/'raw/osm-tbilisi-building-outlines.geojson'
+if building_extract.exists():
+ building_data=json.loads(building_extract.read_text())
+ local_ids={('way',x) for x in ways}
+ added=0
+ for feature in building_data.get('features',[]):
+  props=feature.get('properties') or {};osm_id=props.get('osmId','')
+  if not osm_id.startswith('way/') or ('way',osm_id[4:]) in local_ids:continue
+  geometry=feature.get('geometry')
+  if not geometry or geometry.get('type') not in ('Polygon','MultiPolygon'):continue
+  features.append(feature);local_ids.add(('way',osm_id[4:]));added+=1
+ print('Tbilisi-wide building outlines added',added)
+
 def inside(p, poly):
  x,y=p;c=False
  for a,b in zip(poly,poly[1:]):
