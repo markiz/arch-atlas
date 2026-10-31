@@ -5,7 +5,9 @@ const geo=JSON.parse(await readFile('public/atlas/basemap.geojson','utf8'));
 const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,withPhotos=0,galleries=0;
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
- for(const k of ['name','address','district','yearLabel','style','description','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
+ for(const k of ['name','district','yearLabel','style','description','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
+ assert(typeof b.address==='string'&&b.address===b.addresses?.ru&&b.addresses&&['ru','en','ka','uk'].every(lang=>typeof b.addresses[lang]==='string'),`${b.id}: translated addresses`);
+ assert(['ru','en','ka','uk'].every(lang=>b.addresses[lang]===''||b.addresses[lang].trim()),`${b.id}: invalid empty address`);
  assert(typeof b.history==='string',`${b.id}: history`);
  assert(typeof b.styleId==='string'&&b.styles&&['ru','en','ka','uk'].every(lang=>typeof b.styles[lang]==='string'&&b.styles[lang].trim()),`${b.id}: translated style`);
  assert(typeof b.districtId==='string'&&b.districts&&['ru','en','ka','uk'].every(lang=>typeof b.districts[lang]==='string'&&b.districts[lang].trim()),`${b.id}: translated district`);

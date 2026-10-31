@@ -199,6 +199,16 @@ for b in rows:
  b['photos']=photos
 extra_path=root/'data/heritage-extra.json'
 if extra_path.exists():rows.extend(json.loads(extra_path.read_text()))
+address_translations_path=root/'data/building-address-translations.json'
+address_translations=json.loads(address_translations_path.read_text()) if address_translations_path.exists() else {}
+for building in rows:
+ translations=address_translations.get(building['id'])
+ if translations is None or set(translations)!={'ru','en','ka','uk'}:
+  raise SystemExit('Missing address translations: '+building['id'])
+ if any(not isinstance(value,str) for value in translations.values()):
+  raise SystemExit('Invalid address translation: '+building['id'])
+ building['addresses']=translations
+ building['address']=translations['ru']
 google_places_path=root/'data/google-place-ids.json'
 if google_places_path.exists():
  google_places=json.loads(google_places_path.read_text())
