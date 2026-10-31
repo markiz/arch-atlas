@@ -256,9 +256,10 @@ python3 scripts/validate_cards.py
 
 Правила:
 
-- `primary` — только надземный контур; если его нет, карточка не добавляется, даже если есть красивый relation.
+- `primary` — надземный контур, если он есть. Если его нет, допускается fallback `geometryRole=heritage_boundary`: карта рисует охраняемое ядро пунктиром и предупреждает, что это не footprint. Relation подземного комплекса на роль primary не подходит.
 - `variants[].role` фиксирует смысл: `heritage_boundary`, `complex_underground`, `neighbor_wrong_candidate`, `historic_plan`, `visible_domes`.
 - Когда появится обмер куполов, он становится `primary`, а старые варианты остаются в файле.
+- В данных это поля `geometry` (что рисуется), `geometryRole` (`above_ground` / `heritage_boundary` / …) и `geometryVariants`. `MapView` меняет стиль по роли, инспектор показывает предупреждение.
 - Представление можно перестроить по типу геометрии: карта берёт `primary`, а инспектор/исследование — нужный variant.
 
 `queue_report.py` читает `index.jsonl`; если появится `work/queue/<n>/verdict.json`, колонка «Вердикт» подхватит его автоматически.

@@ -4,12 +4,12 @@
   "objects": {
     "osm-19630608": {
       "name": "Баня № 5 (Грили абано), реестр 3756",
-      "primary": null,
-      "primaryRole": "above_ground_footprint",
+      "primary": "official-3756",
+      "primaryRole": "heritage_boundary",
       "missing": [
         "above_ground_footprint"
       ],
-      "note": "Основная часть бани подземная; отдельного надземного контура (видимых куполов) нет. Relation описывает комплекс, официальная граница — охраняемое ядро. Показывать relation как footprint здания нельзя.",
+      "note": "Надземного контура куполов нет. На карте показывается охраняемая граница 930,6 м² с ролью heritage_boundary (пунктир, предупреждение); relation 1808,4 м² и ошибочный way сохранены как варианты.",
       "variants": [
         {
           "id": "official-3756",

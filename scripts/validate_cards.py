@@ -176,6 +176,29 @@ def main() -> int:
                 if distance > 100:
                     warnings.append(f'{label}: coordinates are ~{distance:.0f} m from geometry centroid')
 
+        role = card.get('geometryRole')
+        if role is not None:
+            if role not in ('above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'):
+                errors.append(f'{label}: unknown geometryRole {role!r}')
+            if role == 'heritage_boundary':
+                variants = card.get('geometryVariants')
+                if not isinstance(variants, list) or not variants:
+                    errors.append(f'{label}: heritage_boundary requires geometryVariants')
+        variants = card.get('geometryVariants')
+        if variants is not None:
+            if not isinstance(variants, list):
+                errors.append(f'{label}: geometryVariants must be a list')
+            else:
+                for index, variant in enumerate(variants):
+                    if not isinstance(variant, dict):
+                        errors.append(f'{label}: geometryVariants[{index}] must be an object')
+                        continue
+                    if variant.get('role') not in ('above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'):
+                        errors.append(f'{label}: geometryVariants[{index}] has invalid role')
+                    _, variant_error = geometry_ok(variant.get('geometry'))
+                    if variant_error:
+                        errors.append(f'{label}: geometryVariants[{index}]: {variant_error}')
+
         photos = card.get('photos')
         if not isinstance(photos, list):
             errors.append(f'{label}: photos must be a list')

@@ -23,6 +23,9 @@ for(const b of data){
  assert(Array.isArray(b.architects),`${b.id}: architects`);assert(Array.isArray(b.coordinates)&&b.coordinates.length===2&&b.coordinates[0]>44.6&&b.coordinates[0]<45&&b.coordinates[1]>41.5&&b.coordinates[1]<41.9,`${b.id}: coordinates`);
  assert((b.minYear===null&&b.maxYear===null)||(Number.isInteger(b.minYear)&&Number.isInteger(b.maxYear)&&b.minYear<=b.maxYear),`${b.id}: years`);
  assert(b.geometry&&['Polygon','MultiPolygon'].includes(b.geometry.type),`${b.id}: missing outline`);
+ if(b.geometryRole!==undefined){assert(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'].includes(b.geometryRole),`${b.id}: invalid geometryRole`);}
+ if(b.geometryRole==='heritage_boundary')assert(Array.isArray(b.geometryVariants)&&b.geometryVariants.length>0,`${b.id}: heritage boundary requires geometryVariants`);
+ if(b.geometryVariants!==undefined){assert(Array.isArray(b.geometryVariants),`${b.id}: geometryVariants must be an array`);for(const variant of b.geometryVariants){assert(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'].includes(variant.role),`${b.id}: invalid variant role`);assert(variant.geometry&&['Polygon','MultiPolygon'].includes(variant.geometry.type),`${b.id}: variant missing outline`);}}
  const images=b.photos??(b.photo?[b.photo]:[]);assert(Array.isArray(images),`${b.id}: photos`);if(images.length)withPhotos++;if(images.length>1)galleries++;
  const paths=new Set();
  for(const p of images){
