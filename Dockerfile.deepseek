@@ -1,0 +1,17 @@
+FROM node:24-bookworm-slim
+
+ARG DSH_VERSION=0.2.1-rc.5
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+      git ca-certificates jq procps \
+ && rm -rf /var/lib/apt/lists/* \
+ && npm install --global "@deepseek-ai/dsh@${DSH_VERSION}" \
+ && npm cache clean --force \
+ && mkdir -p /dsh && chmod 1777 /dsh
+
+COPY scripts/run-deepseek-web.sh /usr/local/bin/atlas-deepseek-web
+RUN chmod 0755 /usr/local/bin/atlas-deepseek-web
+
+WORKDIR /workspace
+ENTRYPOINT ["/usr/local/bin/atlas-deepseek-web"]
