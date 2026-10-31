@@ -19,7 +19,7 @@
     "file": "photos/imeli-curated.webp",
     "author": "Gobrona",
     "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "source": "https://commons.wikimedia.org/wiki/File:IMEL_building_at_night,_Tbilisi.jpg",
     "modifications": "уменьшен размер, преобразовано в WebP"
   },
@@ -27,7 +27,7 @@
     "file": "photos/rustaveli-curated.webp",
     "author": "Alsandro",
     "license": "CC BY-SA 3.0",
-    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
     "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_Theatre_Facade_(front),_Tbilisi.JPG",
     "modifications": "уменьшен размер, преобразовано в WebP"
   },
