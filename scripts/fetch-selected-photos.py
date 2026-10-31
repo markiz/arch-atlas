@@ -18,11 +18,13 @@ import html
 import io
 import json
 import re
+import sys
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
 from PIL import Image
+from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / 'data/photo-candidates.json'
@@ -69,6 +71,7 @@ def main() -> int:
     wanted = {value.strip() for value in args.only.split(',')} if args.only else set(candidates)
 
     titles = '|'.join(candidates[card_id]['commons'] for card_id in wanted if card_id in candidates)
+    print(f'Requesting Commons metadata for {len(wanted)} cards...', file=sys.stderr, flush=True)
     params = urllib.parse.urlencode({
         'action': 'query', 'format': 'json', 'prop': 'imageinfo',
         'iiprop': 'url|extmetadata', 'iiurlwidth': '1200', 'titles': titles,
@@ -78,15 +81,19 @@ def main() -> int:
 
     added = 0
     skipped = 0
+    progress = Progress(len(wanted), 'fetch selected photos')
+    progress.start(f'{len(wanted)} cards')
     for card_id in sorted(wanted):
         candidate = candidates.get(card_id)
         if not candidate:
             print('missing candidate', card_id)
+            progress.advance(f'{card_id}: missing candidate')
             continue
         page = pages.get(candidate['commons'])
         if not page or 'imageinfo' not in page:
             print('missing Commons page', card_id, candidate['commons'])
             skipped += 1
+            progress.advance(f'{card_id}: missing page')
             continue
         info = page['imageinfo'][0]
         meta = info.get('extmetadata', {})
@@ -102,22 +109,27 @@ def main() -> int:
         if not (license_name and license_url and author):
             print('missing attribution', card_id, license_name, license_url, author)
             skipped += 1
+            progress.advance(f'{card_id}: missing attribution')
             continue
         if not is_free(license_name):
             print('not free, skipped', card_id, license_name)
             skipped += 1
+            progress.advance(f'{card_id}: not free')
             continue
         card = by_id.get(card_id)
         if not card:
             print('missing card', card_id)
             skipped += 1
+            progress.advance(f'{card_id}: missing card')
             continue
         source = info.get('descriptionurl') or info.get('url')
         if any(photo.get('source') == source for photo in card.get('photos', [])):
             print('already attached', card_id)
+            progress.advance(f'{card_id}: already attached')
             continue
         if args.dry_run:
             print('would add', card_id, license_name, author)
+            progress.advance(f'{card_id}: would add')
             continue
         image = Image.open(io.BytesIO(fetch(info.get('thumburl') or info['url'])))
         image.thumbnail((1000, 1000))
@@ -135,7 +147,9 @@ def main() -> int:
         })
         added += 1
         print('added', card_id, license_name, author)
+        progress.advance(f'{card_id}: added')
 
+    progress.finish()
     if not args.dry_run and added:
         write_json(EXTRA, extra)
     print(f'added: {added}; skipped: {skipped}; dry-run: {args.dry_run}')

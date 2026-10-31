@@ -1,5 +1,6 @@
 import json,pathlib,urllib.parse,urllib.request,time,re,html,concurrent.futures,threading,io
 from PIL import Image
+from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 rows=json.loads((root/'raw/research-candidates.json').read_text()); entities=json.loads((root/'raw/wikidata-heritage.json').read_text());existing=json.loads((root/'public/atlas/buildings.json').read_text());meta={}; lock=threading.Lock()
 headers={'User-Agent':'TbilisiAtlasResearch/0.2 (heritage research; educational project)'}
@@ -34,6 +35,8 @@ for b in existing:entries[b['id']]={'p18':None,'category':manual[b['id']],'files
 base={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'900'}
 # Resolve all first images in batches. Keep the exact original title from Wikidata.
 first=[('osm-'+r['osmId'],claims(r['qid'],'P18')[0]) for r in rows if claims(r['qid'],'P18')]
+primary=Progress(len(first),'Wikimedia primary images')
+primary.start(f'{len(first)} items in batches of 30')
 for start in range(0,len(first),30):
  batch=first[start:start+30]
  try:
@@ -42,8 +45,9 @@ for start in range(0,len(first),30):
   for key,title in batch:
    info=bytitle.get(('File:'+title).replace('_',' '))
    if info:entries[key]['files'].append(info)
-  print('Wikimedia primary',min(start+30,len(first)),'/',len(first),flush=True)
  except Exception as e:print('primary batch error',e,flush=True)
+ finally:primary.update(min(start+30,len(first)),f'batch {start//30+1}')
+primary.finish()
 # Categories are object-specific, rather than broad generic categories.
 def category(job):
  key,entry=job;cat=entry.get('category')
@@ -57,11 +61,14 @@ def category(job):
   return(key,photos[:4])
  except Exception as e:return(key,[])
 jobs=[x for x in entries.items() if x[1].get('category')]
+categories=Progress(len(jobs),'Wikimedia categories')
+categories.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
- for i,(key,found) in enumerate(pool.map(category,jobs),1):
+ for key,found in pool.map(category,jobs):
   known={x['title'] for x in entries[key]['files']}
   entries[key]['files']+= [x for x in found if x['title'] not in known]
-  if i%5==0:print('Wikimedia categories',i,'/',len(jobs),flush=True)
+  categories.advance(f'{key}: {len(found)} found')
+categories.finish()
 (root/'raw/gallery-research.json').write_text(json.dumps(entries,ensure_ascii=False,indent=2))
 # Existing objects keep their current hero, but receive up to two different images.
 selected=[]
@@ -78,9 +85,12 @@ def download(job):
   return(key,i,{'file':'photos/'+name,**{k:v for k,v in info.items() if k not in ('url','title')}})
  except Exception as e:return(key,i,None)
 results={}
+downloads=Progress(len(selected),'download gallery photos')
+downloads.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
- for idx,(key,i,p) in enumerate(pool.map(download,selected),1):
-  if p:results.setdefault(key,[]).append(p)
-  if idx%10==0:print('Photos',idx,'/',len(selected),'downloaded',sum(map(len,results.values())),flush=True)
+ for key,i,photo in pool.map(download,selected):
+  if photo:results.setdefault(key,[]).append(photo)
+  downloads.advance(f'{key}: {"ok" if photo else "failed"}')
+downloads.finish()
 (root/'data/gallery-sources.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
 print('Complete',sum(map(len,results.values())),'photos',len(results),'buildings',flush=True)

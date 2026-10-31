@@ -32,6 +32,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from progress import Progress
+
 try:
     from shapely.geometry import LineString, Polygon, shape
     from shapely.ops import polygonize, unary_union
@@ -543,8 +545,10 @@ def main() -> int:
     print(f'queue: {len(queue)}; already in atlas: {len(added)}; to collect: {len(remaining)}')
 
     summaries = []
-    for position, row in enumerate(remaining, 1):
-        print(f"[{position}/{len(remaining)}] {row['n']} / registry {row['registryId']} / {row['osmType']} {row['osmId']}", flush=True)
+    progress = Progress(len(remaining), 'collect queue candidates')
+    progress.start(f"{len(remaining)} to process; {len(added)} already in atlas")
+    for row in remaining:
+        progress.update(note=f"candidate {row['n']} / registry {row['registryId']} / {row['osmType']} {row['osmId']}")
         artifact = args.out / f"{row['n']:03d}" / 'collect.json'
         if artifact.exists() and not args.refresh:
             try:
@@ -572,7 +576,7 @@ def main() -> int:
                 }
                 summaries.append(summary)
                 update_index(index_path, summaries)
-                print('  cached')
+                progress.advance(f"{row['n']}: cached")
                 continue
             except Exception:
                 pass
@@ -583,7 +587,7 @@ def main() -> int:
             )
             summaries.append(summary)
             update_index(index_path, summaries)
-            print(f"  {summary['status']}; IoU {summary.get('iou')}; errors {len(summary['errors'])}")
+            progress.advance(f"{row['n']}: {summary['status']} (IoU {summary.get('iou')})")
         except Exception as error:
             summary = {
                 'n': row['n'], 'registryId': row['registryId'],
@@ -593,8 +597,9 @@ def main() -> int:
             }
             summaries.append(summary)
             update_index(index_path, summaries)
-            print(f'  ERROR: {error}')
+            progress.advance(f"{row['n']}: ERROR {error}")
 
+    progress.finish()
     ok = sum(1 for item in summaries if item['status'] == 'ok')
     partial = sum(1 for item in summaries if item['status'] == 'partial')
     errors = sum(1 for item in summaries if item['status'] == 'error')

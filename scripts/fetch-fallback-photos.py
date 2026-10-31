@@ -20,6 +20,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
+from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / 'data/photo-fallbacks.json'
@@ -56,19 +57,25 @@ def main() -> int:
     wanted = {value.strip() for value in args.only.split(',')} if args.only else set(candidates)
     added = 0
     skipped = 0
+    items = sorted(wanted)
+    progress = Progress(len(items), 'attach registry photos')
+    progress.start(f'{len(items)} cards')
 
-    for card_id in sorted(wanted):
+    for card_id in items:
         candidate = candidates.get(card_id)
         card = by_id.get(card_id)
         if not candidate or not card:
             print('missing candidate/card', card_id)
             skipped += 1
+            progress.advance(f'{card_id}: missing')
             continue
         if any(photo.get('source') == candidate['photo'] for photo in card.get('photos', [])):
             print('already attached', card_id)
+            progress.advance(f'{card_id}: already attached')
             continue
         if args.dry_run:
             print('would add (unknown license, low-res)', card_id, candidate['photo'])
+            progress.advance(f'{card_id}: would add')
             continue
         image = Image.open(io.BytesIO(fetch(candidate['photo'])))
         image.thumbnail((700, 700))
@@ -86,7 +93,9 @@ def main() -> int:
         })
         added += 1
         print('added (unknown license, low-res)', card_id)
+        progress.advance(f'{card_id}: added')
 
+    progress.finish()
     if not args.dry_run and added:
         write_json(EXTRA, extra)
     print(f'added: {added}; skipped: {skipped}; dry-run: {args.dry_run}')

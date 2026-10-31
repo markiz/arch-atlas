@@ -1,13 +1,19 @@
 import xml.etree.ElementTree as ET, pathlib, json, math
 import re
+from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
 curated_name_variants=json.loads((root/'data/basemap-name-translations.json').read_text()) if (root/'data/basemap-name-translations.json').exists() else {}
 attribute_translations=json.loads((root/'data/building-attribute-translations.json').read_text())
 nodes={};node_tags={};ways={};relations={}
-for path in sorted((root/'raw').glob('osm-grid-*.xml')):
+paths=sorted((root/'raw').glob('osm-grid-*.xml'))
+parse_progress=Progress(len(paths),'parse OSM XML')
+parse_progress.start()
+for path in paths:
  try: doc=ET.parse(path).getroot()
- except Exception: continue
+ except Exception:
+  parse_progress.advance(path.name)
+  continue
  for node in doc.findall('node'):
   nodes[node.attrib['id']]=[round(float(node.attrib['lon']),6),round(float(node.attrib['lat']),6)]
   node_tags[node.attrib['id']]={t.attrib['k']:t.attrib['v'] for t in node.findall('tag')}
@@ -15,6 +21,8 @@ for path in sorted((root/'raw').glob('osm-grid-*.xml')):
   ways[way.attrib['id']]={'refs':[n.attrib['ref'] for n in way.findall('nd')], 'tags':{t.attrib['k']:t.attrib['v'] for t in way.findall('tag')}}
  for relation in doc.findall('relation'):
   relations[relation.attrib['id']]={'members':[(m.attrib.get('type'),m.attrib.get('ref'),m.attrib.get('role')) for m in relation.findall('member')], 'tags':{t.attrib['k']:t.attrib['v'] for t in relation.findall('tag')}}
+ parse_progress.advance(path.name)
+parse_progress.finish()
 features=[];building_ways=[]
 def landmark(tags):
  if tags.get('tourism')=='museum' or tags.get('amenity')=='museum':return 'museum'
@@ -57,12 +65,16 @@ def translated_names(tags):
  ka=tags.get('name:ka') or (tags.get('name') if re.search('[\\u10a0-\\u10ff]',tags.get('name','')) else original)
  uk=tags.get('name:uk') or (georgian_label(original,'uk') if is_georgian else ukrainian_name(ru))
  return {'originalLanguage':original_language,'names':{'ru':ru,'en':en,'ka':ka,'uk':uk}}
-for nid,tags in node_tags.items():
+node_progress=Progress(len(node_tags),'scan landmark nodes')
+node_progress.start()
+for index,(nid,tags) in enumerate(node_tags.items(),1):
+ if index%1000==0:node_progress.update(index,f'{len(features)} features')
  category=landmark(tags)
  if category:
   props={'kind':'landmark','category':category,'osmId':f'node/{nid}'};props.update(translated_names(tags));name=props['names']['ru']
   if name:props['name']=name
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':nodes[nid]}})
+node_progress.finish()
 for rid,relation in relations.items():
  tags=relation['tags'];category=landmark(tags)
  if not category:continue
@@ -75,7 +87,10 @@ for rid,relation in relations.items():
   props={'kind':'landmark','category':category,'osmId':f'relation/{rid}'};props.update(translated_names(tags));name=props['names']['ru']
   if name:props['name']=name
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':center}})
-for wid,w in ways.items():
+way_progress=Progress(len(ways),'scan OSM ways')
+way_progress.start()
+for index,(wid,w) in enumerate(ways.items(),1):
+ if index%1000==0:way_progress.update(index,f'{len(features)} features')
  coords=[nodes[x] for x in w['refs'] if x in nodes]
  if len(coords)!=len(w['refs']) or len(coords)<2:continue
  tags=w['tags']; closed=len(coords)>3 and coords[0]==coords[-1]; kind=None
@@ -103,6 +118,7 @@ for wid,w in ways.items():
   if max(xs)-min(xs)<.00006 and max(ys)-min(ys)<.00006:continue
  geom={'type':'Polygon','coordinates':[coords]} if closed and kind in ('building','green','water') else {'type':'LineString','coordinates':coords}
  features.append({'type':'Feature','properties':props,'geometry':geom})
+way_progress.finish()
 
 # City-wide extract contains only mapped streets, public green areas and museums.
 city_extract=root/'raw/osm-tbilisi-selected.json'
@@ -118,7 +134,11 @@ if city_extract.exists():
    cross=a[0]*b[1]-b[0]*a[1];area+=cross;cx+=(a[0]+b[0])*cross;cy+=(a[1]+b[1])*cross
   if abs(area)<1e-15:return [sum(p[0] for p in ring)/len(ring),sum(p[1] for p in ring)/len(ring)]
   return [cx/(3*area),cy/(3*area)]
- for element in city_data.get('elements',[]):
+ city_elements=city_data.get('elements',[])
+ city_progress=Progress(len(city_elements),'add city basemap')
+ city_progress.start()
+ for index,element in enumerate(city_elements,1):
+  if index%500==0:city_progress.update(index,f'{added} features')
   osm_type=element.get('type');osm_id=element.get('id')
   if (osm_type,str(osm_id)) in local_ids:continue
   tags=element.get('tags',{});kind=None;geometry=None;props={'osmId':f'{osm_type}/{osm_id}'}
@@ -147,6 +167,7 @@ if city_extract.exists():
   else:continue
   props['kind']=kind
   features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
+ city_progress.finish()
  print('City-wide streets, parks and museums added',added)
 
 # Full Tbilisi building outlines are extracted locally from the regional PBF.
@@ -155,12 +176,17 @@ if building_extract.exists():
  building_data=json.loads(building_extract.read_text())
  local_ids={('way',x) for x in ways}
  added=0
- for feature in building_data.get('features',[]):
+ building_features=building_data.get('features',[])
+ building_progress=Progress(len(building_features),'add building outlines')
+ building_progress.start()
+ for index,feature in enumerate(building_features,1):
+  if index%1000==0:building_progress.update(index,f'{added} features')
   props=feature.get('properties') or {};osm_id=props.get('osmId','')
   if not osm_id.startswith('way/') or ('way',osm_id[4:]) in local_ids:continue
   geometry=feature.get('geometry')
   if not geometry or geometry.get('type') not in ('Polygon','MultiPolygon'):continue
   features.append(feature);local_ids.add(('way',osm_id[4:]));added+=1
+ building_progress.finish()
  print('Tbilisi-wide building outlines added',added)
 
 def inside(p, poly):
@@ -185,7 +211,10 @@ rows=[
 ]
 # Фотография бывшего министерства автодорог не включается до проверки прав на архитектурное произведение.
 rows=[b for b in rows if b['id'] != 'bank-georgia']
+match_progress=Progress(len(rows),'match initial cards')
+match_progress.start()
 for b in rows:
+ match_progress.update(note=f"{b['id']}: scanning {len(building_ways):,} outlines",force=True)
  data=wik.get(b['id'],{}); coord=data.get('coordinates');photo=data.get('photo')
  if not coord or not photo:raise SystemExit('Missing verified input: '+b['id'])
  p=[coord['lon'],coord['lat']];matches=[]
@@ -200,6 +229,8 @@ for b in rows:
   print(b['id'],'match',wid,tags.get('name',''))
  else:
   b['geometry']=None;b['geometryQuality']='Точное очертание не установлено; показана точка';print(b['id'],'point only')
+ match_progress.advance(b['id'])
+match_progress.finish()
 overrides_path=root/'data/geometry-overrides.json'
 if overrides_path.exists():
  overrides=json.loads(overrides_path.read_text())
@@ -306,9 +337,15 @@ for building in rows:
  building['architectIds']=architect_ids
  building['architectsByLanguage']=architects_by_language
  building['architects']=architects_by_language['ru']
+write_progress=Progress(3,'write atlas files')
+write_progress.start()
 (root/'public/atlas/buildings.json').write_text(json.dumps(rows,ensure_ascii=False,separators=(',',':')))
+write_progress.advance('buildings.json')
 building_outlines=[feature for feature in features if feature['properties'].get('kind')=='building']
 basemap_features=[feature for feature in features if feature['properties'].get('kind')!='building']
 (root/'public/atlas/basemap.geojson').write_text(json.dumps({'type':'FeatureCollection','features':basemap_features},ensure_ascii=False,separators=(',',':')))
+write_progress.advance('basemap.geojson')
 (root/'public/atlas/building-outlines.geojson').write_text(json.dumps({'type':'FeatureCollection','features':building_outlines},ensure_ascii=False,separators=(',',':')))
+write_progress.advance('building-outlines.geojson')
+write_progress.finish()
 print('OSM nodes',len(nodes),'ways',len(ways),'basemap',len(basemap_features),'building outlines',len(building_outlines),'buildings',len(rows))

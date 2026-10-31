@@ -22,6 +22,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from progress import Progress
+
 try:
     from shapely.geometry import shape
     from shapely.validation import make_valid
@@ -97,11 +99,14 @@ def main() -> int:
     architect_keys = attributes.get('architectIdBySource', {})
 
     ids: set[str] = set()
+    card_progress = Progress(len(extra), 'validate extra cards')
+    card_progress.start()
     for card in extra:
         card_id = card.get('id')
         label = card_id or '<missing id>'
         if not isinstance(card_id, str) or not card_id.strip():
             errors.append(f'{label}: missing id')
+            card_progress.advance(label)
             continue
         if card_id in ids:
             errors.append(f'{label}: duplicate id in heritage-extra')
@@ -220,13 +225,18 @@ def main() -> int:
                     seen_files.add(file_name)
                     if file_name and not webp_ok(ROOT / 'public/atlas' / file_name):
                         errors.append(f'{label}: photo[{index}] is not a WebP file')
+        card_progress.advance(label)
+    card_progress.finish()
 
     building_ids: set[str] = set()
     building_geometries: list[tuple[str, Any]] = []
+    building_progress = Progress(len(buildings), 'validate atlas buildings')
+    building_progress.start()
     for item in buildings:
         item_id = item.get('id')
         if not isinstance(item_id, str) or not item_id:
             errors.append('buildings.json: item without id')
+            building_progress.advance('missing id')
             continue
         if item_id in building_ids:
             errors.append(f'buildings.json: duplicate id {item_id}')
@@ -239,10 +249,14 @@ def main() -> int:
             minx, miny, maxx, maxy = geom.bounds
             if not (TIFLIS_BBOX[0] <= minx <= TIFLIS_BBOX[2] and TIFLIS_BBOX[1] <= miny <= TIFLIS_BBOX[3]):
                 errors.append(f'buildings.json {item_id}: geometry outside Tbilisi bbox')
+        building_progress.advance(item_id)
+    building_progress.finish()
 
     if not args.skip_overlaps:
         scale = 111320.0 * 111320.0 * math.cos(math.radians(41.7))
         overlaps: list[tuple[float, str, str]] = []
+        overlap_progress = Progress(len(building_geometries), 'check outline overlaps')
+        overlap_progress.start()
         for left_index, (left_id, left) in enumerate(building_geometries):
             for right_id, right in building_geometries[left_index + 1:]:
                 bx = right.bounds
@@ -254,6 +268,8 @@ def main() -> int:
                     continue
                 if area > 1.0:
                     overlaps.append((area, left_id, right_id))
+            overlap_progress.advance(left_id)
+        overlap_progress.finish()
         for area, left_id, right_id in sorted(overlaps, reverse=True)[:20]:
             message = f'buildings.json: {left_id} and {right_id} overlap by {area:.1f} m²'
             if area > 10:

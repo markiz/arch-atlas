@@ -14,6 +14,7 @@
 - Фотографии: приоритет свободным лицензиям; при их отсутствии используется фото реестра в низком разрешении с явной пометкой «лицензия не установлена». Полная политика — [photo-policy.md](photo-policy.md).
 - Для объектов без надземного контура поддерживается `geometryRole=heritage_boundary`: карта рисует охраняемую границу пунктиром и предупреждает, что это не footprint здания.
 - Добавлены детерминированный сбор фактов по очереди, отчёт и валидатор карточек: `scripts/queue_collect.py`, `scripts/queue_report.py`, `scripts/validate_cards.py`.
+- Все длительные загрузчики, сборщики и проверки печатают прогресс с ETA в stderr; общие helper'ы — `scripts/progress.py` и `scripts/lib/progress.mjs`. Правила — [long-running-scripts.md](long-running-scripts.md).
 
 ## Требуется дальше
 

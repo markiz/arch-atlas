@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {Progress} from './lib/progress.mjs';
 
 const root=process.cwd(),raw=path.join(root,'raw'),nodes=new Map(),ways=new Map(),features=[];
 const translations=JSON.parse(fs.readFileSync(path.join(root,'data/landmark-name-translations.json'),'utf8'));
@@ -16,7 +17,10 @@ function feature(kind,coordinates,tags,geometry){
  if(name)properties.name=name;
  features.push({type:'Feature',properties,geometry:{type:geometry,coordinates}});
 }
-for(const file of fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.endsWith('.xml'))){
+const files=fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.endsWith('.xml'));
+const progress=new Progress(files.length,'enrich basemap landmarks');
+progress.start();
+for(const file of files){
  const xml=fs.readFileSync(path.join(raw,file),'utf8');
  for(const match of xml.matchAll(/<node\b([^>]*)>([\s\S]*?)<\/node>|<node\b([^>]*)\/>/g)){
   const a=attrs(match[1]||match[3]||''),tags=Object.fromEntries([...(match[2]||'').matchAll(/<tag\b([^>]*)\/>/g)].map(t=>{const x=attrs(t[1]);return [x.k,x.v]}));
@@ -36,7 +40,9 @@ for(const file of fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.end
   const coords=refs.flatMap(id=>ways.get(id)?.refs.map(ref=>nodes.get(ref))||[]).filter(Boolean);
   if(coords.length){const center=coords.reduce((p,c)=>[p[0]+c[0]/coords.length,p[1]+c[1]/coords.length],[0,0]);feature('relation',center,tags,'Point')}
  }
+ progress.advance(`${file}: ${features.length} landmarks`);
 }
+progress.finish();
 const file=path.join(root,'public/atlas/basemap.geojson'),data=JSON.parse(fs.readFileSync(file,'utf8'));
 for(const f of data.features){if(f.properties?.kind==='landmark'&&translations[f.properties.name])f.properties.name=translations[f.properties.name]}
 const existing=new Set(data.features.filter(f=>f.properties?.kind==='landmark').map(f=>JSON.stringify(f.geometry.coordinates)));

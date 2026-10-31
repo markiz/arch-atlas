@@ -1,8 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {Progress} from './lib/progress.mjs';
 
 const root=process.cwd(),raw=path.join(root,'raw'),nodes=new Map(),ways=new Map();
-for(const file of fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.endsWith('.xml'))){
+const files=fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.endsWith('.xml'));
+const progress=new Progress(files.length,'enrich basemap names');
+progress.start();
+for(const file of files){
  const xml=fs.readFileSync(path.join(raw,file),'utf8');
  for(const match of xml.matchAll(/<node\b([^>]*)\/?>(?:\s*<\/node>)?/g)){
   const attrs=Object.fromEntries([...match[1].matchAll(/([\w:]+)="([^"]*)"/g)].map(x=>[x[1],x[2]]));
@@ -14,7 +18,9 @@ for(const file of fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.end
   const name=tags['name:ru']||tags.name||tags['name:ka'];
   if(name&&tags.highway)ways.set(refs.map(id=>JSON.stringify(nodes.get(id))).join('|'),name);
  }
+ progress.advance(file);
 }
+progress.finish();
 const file=path.join(root,'public/atlas/basemap.geojson'),data=JSON.parse(fs.readFileSync(file,'utf8'));
 let count=0;
 for(const feature of data.features){

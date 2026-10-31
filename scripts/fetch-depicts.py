@@ -1,5 +1,6 @@
 import json,urllib.parse,urllib.request,re,html,io,time,pathlib,concurrent.futures
 from PIL import Image
+from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 extra=json.loads((root/'data/heritage-extra.json').read_text());candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};gals=json.loads((root/'data/gallery-sources.json').read_text());head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
 def fetch(url):
@@ -31,8 +32,11 @@ def go(b):
  return key,None
 jobs=[b for b in extra if len(gals.get(b['id'],[]))<2]
 found={}
+progress=Progress(len(jobs),'search Commons depicts')
+progress.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
- for i,(key,p) in enumerate(pool.map(go,jobs),1):
+ for key,p in pool.map(go,jobs):
   if p:found[key]=p
-  if i%10==0:print('Depicts searched',i,'/',len(jobs),'new photos',len(found),flush=True)
+  progress.advance(f'{key}: {"new photo" if p else "no photo"}')
+progress.finish()
 (root/'data/depicts-photos.json').write_text(json.dumps(found,ensure_ascii=False,indent=2));print('done',len(found),flush=True)

@@ -19,6 +19,8 @@ from pathlib import Path
 import re
 from typing import Any
 
+from progress import Progress
+
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_QUEUE = ROOT / 'docs/research-next-200.md'
 DEFAULT_WORK = ROOT / 'work/queue'
@@ -71,7 +73,10 @@ def load_index(work: Path) -> dict[int, dict[str, Any]]:
                 item = json.loads(line)
                 items[int(item['n'])] = item
     if not items and work.exists():
-        for artifact in sorted(work.glob('*/collect.json')):
+        artifacts = sorted(work.glob('*/collect.json'))
+        progress = Progress(len(artifacts), 'load queue artifacts')
+        progress.start()
+        for artifact in artifacts:
             data = read_json(artifact)
             candidate = data.get('candidate', {})
             metrics = data.get('metrics', {})
@@ -87,18 +92,25 @@ def load_index(work: Path) -> dict[int, dict[str, Any]]:
                 'atlasOverlapCount': len(data.get('atlasOverlaps') or []),
                 'errors': data.get('errors') or [],
             }
+            progress.advance(artifact.parent.name)
+        progress.finish()
     return items
 
 
 def load_verdicts(work: Path) -> dict[int, dict[str, Any]]:
     verdicts: dict[int, dict[str, Any]] = {}
-    for path in sorted(work.glob('*/verdict.json')):
+    paths = sorted(work.glob('*/verdict.json'))
+    progress = Progress(len(paths), 'load verdicts')
+    progress.start()
+    for path in paths:
         try:
             data = read_json(path)
             n = int(data.get('n') or data.get('candidate', {}).get('n'))
             verdicts[n] = data
         except Exception:
-            continue
+            pass
+        progress.advance(path.parent.name)
+    progress.finish()
     return verdicts
 
 

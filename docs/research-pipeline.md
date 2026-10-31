@@ -200,7 +200,7 @@ python3 scripts/queue_report.py --out work/queue/report.md
 python3 scripts/validate_cards.py
 ```
 
-Полезные флаги: `--limit`, `--only`, `--refresh`, `--no-commons`. Коллектор по умолчанию идёт последовательно и делает паузу 0,2 с; это специально, чтобы не ловить 429 от OSM. Для чтения уже собранных фактов сеть не нужна.
+Полезные флаги: `--limit`, `--only`, `--refresh`, `--no-commons`. Коллектор по умолчанию идёт последовательно и делает паузу 0,2 с; это специально, чтобы не ловить 429 от OSM. Для чтения уже собранных фактов сеть не нужна. `queue_collect.py` печатает `[N/M]` с ETA, скоростью и отметкой кэша/ошибки; `validate_cards.py` — прогресс по карточкам, зданиям и пересечениям. Общие правила — [long-running-scripts.md](long-running-scripts.md).
 
 ### Формат `collect.json`
 

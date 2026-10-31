@@ -15,6 +15,12 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+try:
+    from progress import Progress
+except ImportError:  # tests load this file directly, outside the scripts directory
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from progress import Progress
+
 MAX_DISTANCE_M = 5.0
 LANDMARK_TYPES = {
     'tourist_attraction', 'historical_landmark', 'historical_place',
@@ -233,16 +239,26 @@ def main():
         parser.error('set GOOGLE_MAPS_API_KEY in the environment')
     client = GoogleClient(key, args.language, args.interval, args.timeout)
     completed = {item['id']: item for item in report['results']}
-    for index, row in enumerate(rows, 1):
-        if completed.get(row['id'], {}).get('status') not in ('matched', 'unmatched'):
-            try:
-                result = resolve(row, client)
-            except ApiError as error:
-                result = {'status': 'error', 'reason': str(error), 'selected': None, 'house': None}
-            completed[row['id']] = {**row, **result, 'checkedAt': datetime.now(timezone.utc).isoformat()}
-            report['results'] = [completed[item['id']] for item in rows if item['id'] in completed]
-            write_report(args.output, report)
-        print(f"{index}/{len(rows)} {row['id']}: {completed[row['id']]['status']}", file=sys.stderr)
+    pending = [
+        row for row in rows
+        if completed.get(row['id'], {}).get('status') not in ('matched', 'unmatched')
+    ]
+    already_done = len(rows) - len(pending)
+    if already_done:
+        print(f'Resume: {already_done} of {len(rows)} rows already complete; '
+              f'{len(pending)} to process', file=sys.stderr, flush=True)
+    progress = Progress(len(pending), 'resolve addresses')
+    progress.start(f"{len(pending)} rows, {args.interval}s between requests")
+    for row in pending:
+        try:
+            result = resolve(row, client)
+        except ApiError as error:
+            result = {'status': 'error', 'reason': str(error), 'selected': None, 'house': None}
+        completed[row['id']] = {**row, **result, 'checkedAt': datetime.now(timezone.utc).isoformat()}
+        report['results'] = [completed[item['id']] for item in rows if item['id'] in completed]
+        write_report(args.output, report)
+        progress.advance(f"{row['id']}: {completed[row['id']]['status']}")
+    progress.finish()
     return 1 if any(item['status'] == 'error' for item in report['results']) else 0
 
 

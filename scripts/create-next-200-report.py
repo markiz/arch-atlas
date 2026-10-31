@@ -14,6 +14,8 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 
+from progress import Progress
+
 try:
     from shapely.geometry import Point, shape
     from shapely.strtree import STRtree
@@ -35,27 +37,51 @@ def request_json(url):
         return json.load(response)
 
 
+def registry_count():
+    """Ask ArcGIS for the number of matching records so progress can show an ETA."""
+    params = {
+        'where': "Region=N'თბილისი'",
+        'returnCountOnly': 'true',
+        'f': 'json',
+    }
+    try:
+        page = request_json(REGISTRY + '/query?' + urllib.parse.urlencode(params))
+        if 'count' in page:
+            count = int(page['count'])
+            return count if count > 0 else None
+    except Exception as error:
+        print(f'Registry count unavailable: {error}', file=sys.stderr, flush=True)
+    return None
+
+
 def registry_records():
     records = []
     offset = 0
-    while True:
-        params = {
-            'where': "Region=N'თბილისი'",
-            'outFields': 'ObjectID,ID,RegistryN,Name,Description,Address,ExactDate,DateRangeFrom,DateRangeTo,Classification,Accuracy,X,Y',
-            'returnGeometry': 'false',
-            'f': 'json',
-            'resultRecordCount': '2000',
-            'resultOffset': str(offset),
-            'orderByFields': 'ObjectID',
-        }
-        page = request_json(REGISTRY + '/query?' + urllib.parse.urlencode(params))
-        if 'error' in page:
-            raise RuntimeError('Heritage registry query failed: ' + str(page['error']))
-        rows = page.get('features', [])
-        records.extend(row['attributes'] for row in rows)
-        offset += len(rows)
-        if len(rows) < 2000:
-            break
+    total = registry_count()
+    progress = Progress(total, 'fetch heritage registry')
+    progress.start(f"{total if total is not None else 'unknown'} records")
+    try:
+        while True:
+            params = {
+                'where': "Region=N'თბილისი'",
+                'outFields': 'ObjectID,ID,RegistryN,Name,Description,Address,ExactDate,DateRangeFrom,DateRangeTo,Classification,Accuracy,X,Y',
+                'returnGeometry': 'false',
+                'f': 'json',
+                'resultRecordCount': '2000',
+                'resultOffset': str(offset),
+                'orderByFields': 'ObjectID',
+            }
+            page = request_json(REGISTRY + '/query?' + urllib.parse.urlencode(params))
+            if 'error' in page:
+                raise RuntimeError('Heritage registry query failed: ' + str(page['error']))
+            rows = page.get('features', [])
+            records.extend(row['attributes'] for row in rows)
+            offset += len(rows)
+            progress.update(offset, f'page {offset // 2000}')
+            if len(rows) < 2000:
+                break
+    finally:
+        progress.finish()
     return records
 
 
@@ -74,14 +100,19 @@ def build_report(force=False):
     atlas = json.loads(atlas_file.read_text())
 
     geometries, properties = [], []
-    for feature in outlines:
+    outline_progress = Progress(len(outlines), 'index OSM outlines')
+    outline_progress.start()
+    for index, feature in enumerate(outlines, 1):
         try:
             geom = shape(feature['geometry'])
             if not geom.is_empty and geom.is_valid:
                 geometries.append(geom)
                 properties.append(feature.get('properties', {}))
         except (KeyError, TypeError, ValueError):
-            continue
+            pass
+        if index % 1000 == 0:
+            outline_progress.update(index)
+    outline_progress.finish()
     tree = STRtree(geometries)
     geometry_indexes = {id(geom): index for index, geom in enumerate(geometries)}
     existing_points = [Point(*building['coordinates']) for building in atlas]
@@ -91,32 +122,42 @@ def build_report(force=False):
 
     eligible, exclusions = [], Counter()
     used_ways = set()
+    match_progress = Progress(len(registry), 'match registry to OSM')
+    match_progress.start(f'{len(registry)} records, {len(geometries):,} valid outlines')
     for record in registry:
+        record_id = record.get('ObjectID', '?')
         if 'არქიტექტურ' not in str(record.get('Classification') or '').lower():
             exclusions['classification_not_architecture'] += 1
+            match_progress.advance(f'record {record_id}: not architecture')
             continue
         if not record.get('X') or not record.get('Y'):
             exclusions['missing_registry_coordinates'] += 1
+            match_progress.advance(f'record {record_id}: no coordinates')
             continue
         point = Point(record['X'], record['Y'])
         if any(point.distance(existing) <= EXISTING_DISTANCE for existing in existing_points):
             exclusions['near_existing_atlas_card'] += 1
+            match_progress.advance(f'record {record_id}: near existing card')
             continue
         nearby = [geom for geom in tree.query(point.buffer(MAX_DISTANCE)) if geom.distance(point) <= MAX_DISTANCE]
         if not nearby:
             exclusions['no_osm_outline_within_17m'] += 1
+            match_progress.advance(f'record {record_id}: no outline within 17 m')
             continue
         geom = min(nearby, key=lambda candidate: candidate.distance(point))
         way = properties[geometry_indexes[id(geom)]].get('osmId')
         if way in existing_ways:
             exclusions['existing_atlas_osm_id'] += 1
+            match_progress.advance(f'record {record_id}: existing OSM id')
             continue
         if any(geom.intersection(existing).area > 0.05 * min(geom.area, existing.area)
                for existing in existing_tree.query(geom)):
             exclusions['overlapping_existing_atlas_outline'] += 1
+            match_progress.advance(f'record {record_id}: overlaps atlas outline')
             continue
         if not way or way in used_ways:
             exclusions['duplicate_or_missing_osm_outline'] += 1
+            match_progress.advance(f'record {record_id}: duplicate outline')
             continue
         used_ways.add(way)
         tags = properties[geometry_indexes[id(geom)]]
@@ -125,6 +166,8 @@ def build_report(force=False):
         record['_distance_m'] = geom.distance(point) * 85000
         record['_tags'] = tags
         eligible.append(record)
+        match_progress.advance(f'record {record_id}: eligible')
+    match_progress.finish()
 
     def is_generic_name(record):
         name = re.sub(r'[^\w]+', '', str(record.get('Name') or '').lower())
@@ -196,6 +239,8 @@ def build_report(force=False):
         '| № | ID реестра | Реестр | OSM way-кандидат | Адрес в источнике | Дата в источнике | Архитектор в OSM | Стиль в OSM | Commons-ссылка | Смещение точки, м |',
         '|---:|---:|---|---|---|---|---|---|---|---:|',
     ]
+    report_progress = Progress(len(selected), 'write report rows')
+    report_progress.start()
     for number, row in enumerate(selected, 1):
         tags = row['_tags']
         lines.append(
@@ -206,7 +251,9 @@ def build_report(force=False):
             f"{'есть' if tags.get('building:architecture') else 'нет'} | "
             f"{'есть' if tags.get('wikimedia_commons') else 'нет'} | {row['_distance_m']:.1f} |"
         )
+        report_progress.advance(f'row {number}')
 
+    report_progress.finish()
     lines += [
         '',
         '## Ограничения перед добавлением в каталог',

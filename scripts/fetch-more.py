@@ -1,5 +1,6 @@
 import json, pathlib, urllib.request, urllib.parse, re, html, concurrent.futures, time
 from PIL import Image
+from progress import Progress
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 HEAD={'User-Agent':'TbilisiArchitectureAtlas/0.1 (personal educational prototype)'}
 ARTICLES={'sioni':'Tbilisi Sioni Cathedral','metekhi':'Metekhi','wedding':'Wedding Palace (Tbilisi)'}
@@ -8,6 +9,8 @@ def read(url):
  req=urllib.request.Request(url,headers=HEAD)
  with urllib.request.urlopen(req,timeout=45) as r:return r.read()
 def clean(s): return html.unescape(re.sub('<[^>]*>','',s or '')).strip()
+progress = Progress(len(ARTICLES), 'fetch Wikipedia/Commons')
+
 def get(item):
  key,title=item
  try:
@@ -30,7 +33,14 @@ def get(item):
   result={'id':key,'title':wiki.get('title'),'coordinates':wiki.get('coordinates'),'wiki':wiki.get('content_urls',{}).get('desktop',{}).get('page'),'photo':{'file':f'photos/{key}.webp','author':artist,'license':license,'licenseUrl':licenseurl,'source':info.get('descriptionurl'),'modifications':'уменьшен размер, преобразовано в WebP'},'extract':wiki.get('extract','')}
   return result
  except Exception as e: return {'id':key,'error':str(e)}
+def tracked(item):
+ result=get(item)
+ progress.advance(f"{result['id']}: {result.get('error','ok')}")
+ return result
+
+progress.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
- results=list(ex.map(get,ARTICLES.items()))
+ results=list(ex.map(tracked,ARTICLES.items()))
+progress.finish()
 (ROOT/'raw'/'wikimedia-more.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
 for r in results: print(r['id'], r.get('coordinates'),r.get('error','ok'), flush=True)

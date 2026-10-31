@@ -42,6 +42,7 @@ npm run dev
 - `scripts/queue_collect.py`, `scripts/queue_report.py` и `scripts/validate_cards.py` — сбор фактов по очереди, отчёт и проверка карточек; работают с `work/`, не меняя `data/`.
 - `scripts/fetch-selected-photos.py` и `scripts/fetch-fallback-photos.py` — свободные фото Commons и, при их отсутствии, низкокачественные фото реестра с явной пометкой «лицензия не установлена»; правила — [docs/photo-policy.md](docs/photo-policy.md).
 - `scripts/build-heritage-extra.py` и `resolve-geometries.py` используются только при повторной подготовке исходных геоданных и дополнительно требуют Python-пакет Shapely.
+- Длительные загрузчики, сборщики и проверки печатают прогресс в stderr: сколько выполнено, процент, прошедшее время, ETA и скорость; итоговые данные остаются в stdout. Правила и общие helper'ы — [docs/long-running-scripts.md](docs/long-running-scripts.md).
 
 Чтобы пересоздать данные из приложенных OSM-выгрузок и локальных редакционных файлов, выполните `python3 scripts/build-data.py`, затем `npm run build`. Скрипты загрузки предоставлены для исследования и требуют сети; повторная выгрузка внешних источников может изменить исходные данные.
 

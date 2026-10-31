@@ -7,6 +7,7 @@
 - [status.md](status.md) — текущая сборка и ограничения;
 - [research-queue-progress.md](research-queue-progress.md) — регистр оставшихся кандидатов;
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила;
+- [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс и helper'ы для длительных скриптов;
 - [archive/README.md](archive/README.md) — исходный план и ранние снимки.
 
 ## Карта исследований

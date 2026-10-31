@@ -1,6 +1,7 @@
 import json,urllib.request,urllib.parse,concurrent.futures,io,re,html,time
 from pathlib import Path
 from PIL import Image
+from progress import Progress
 root=Path(__file__).resolve().parent.parent
 research=json.loads((root/'raw/gallery-research.json').read_text());gals=json.loads((root/'data/gallery-sources.json').read_text());
 known={
@@ -40,5 +41,12 @@ def go(job):
    return key,{'file':'photos/'+name,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception as e:print('error',key,str(e),flush=True)
  return key,None
-with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:out={k:v for k,v in pool.map(go,jobs) if v}
+progress=Progress(len(jobs),'fetch Commons categories')
+progress.start()
+def tracked(job):
+ key,photo=go(job)
+ progress.advance(f'{key}: {"new photo" if photo else "no photo"}')
+ return key,photo
+with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:out={k:v for k,v in pool.map(tracked,jobs) if v}
+progress.finish()
 (root/'data/category-extra-photos.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print('additional',len(out),flush=True)
