@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_QUEUE = ROOT / 'docs/research-next-200.md'
 DEFAULT_WORK = ROOT / 'work/queue'
 DEFAULT_ATLAS = ROOT / 'public/atlas/buildings.json'
+OVERRIDES_PATH = ROOT / 'data/osm-candidate-overrides.json'
 
 
 def read_json(path: Path) -> Any:
@@ -41,13 +42,24 @@ def parse_queue(path: Path) -> list[dict[str, Any]]:
     ]
 
 
-def atlas_ways(path: Path) -> set[str]:
+def atlas_osm_ids(path: Path) -> set[str]:
     data = read_json(path)
     return {
-        str(item.get('osmId', '')).replace('way/', '')
+        str(item.get('osmId', ''))
         for item in data
-        if str(item.get('osmId', '')).startswith('way/')
+        if str(item.get('osmId', '')).startswith(('way/', 'relation/'))
     }
+
+
+def apply_overrides(rows: list[dict[str, Any]]) -> None:
+    if not OVERRIDES_PATH.exists():
+        return
+    overrides = read_json(OVERRIDES_PATH)
+    for row in rows:
+        override = overrides.get(str(row['n']))
+        if override and override.get('type') in ('way', 'relation') and override.get('id') is not None:
+            row['osmType'] = override['type']
+            row['osmId'] = str(override['id'])
 
 
 def load_index(work: Path) -> dict[int, dict[str, Any]]:
@@ -115,9 +127,13 @@ def main() -> int:
     args = parser.parse_args()
 
     queue = parse_queue(args.queue)
-    queue_ways = {row['osmWay'] for row in queue}
-    added = atlas_ways(args.atlas) & queue_ways
-    remaining_all = [row for row in queue if row['osmWay'] not in added]
+    apply_overrides(queue)
+    atlas_ids = atlas_osm_ids(args.atlas)
+    added = {
+        row['n'] for row in queue
+        if f"{row.get('osmType', 'way')}/{row.get('osmId', row['osmWay'])}" in atlas_ids
+    }
+    remaining_all = [row for row in queue if row['n'] not in added]
     remaining = remaining_all
     if args.only:
         wanted = {int(value) for value in args.only.split(',') if value.strip()}
@@ -130,6 +146,9 @@ def main() -> int:
     verdict_counts = Counter(item.get('status', 'unknown') for item in verdicts.values())
     place_counts = Counter(item.get('placeStatus') or 'none' for item in collected if item)
     iou_counts = Counter(bucket(item.get('iou')) for item in collected)
+    flag_counts = Counter(
+        flag for item in collected for flag in (item.get('geometryFlags') or [])
+    )
 
     lines: list[str] = []
     lines.append('# Очередь 200: состояние сбора')
@@ -152,19 +171,23 @@ def main() -> int:
         lines.append(f'| IoU {key} | {iou_counts.get(key, 0)} |')
     for key in ('matched', 'unmatched', 'none'):
         lines.append(f'| Place ID {key} | {place_counts.get(key, 0)} |')
+    for key, count in flag_counts.most_common():
+        lines.append(f'| Флаг {key} | {count} |')
     lines.append('')
 
     lines.append('## Кандидаты')
     lines.append('')
-    lines.append('| № | Реестр | Название | IoU | Сбор | Place ID | Commons | Пересечения | Вердикт |')
-    lines.append('|---:|---:|---|---:|---|---|---:|---|---|')
+    lines.append('| № | Реестр | Название | IoU | Тип | Флаги | Сбор | Place ID | Commons | Пересечения | Вердикт |')
+    lines.append('|---:|---:|---|---:|---|---|---|---|---:|---|---|')
     for row in remaining:
         item = index.get(row['n']) or {}
         verdict = verdicts.get(row['n']) or {}
         name = item.get('name') or verdict.get('name') or ''
-        lines.append('| {} | {} | {} | {} | {} | {} | {} | {} | {} |'.format(
+        lines.append('| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} |'.format(
             row['n'], row['registryId'], short(name),
             bucket(item.get('iou')),
+            item.get('osmType', 'way'),
+            short(', '.join(item.get('geometryFlags') or []), 28),
             item.get('status', '—'),
             item.get('placeStatus') or '—',
             item.get('commonsCount', '—'),

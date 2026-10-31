@@ -170,13 +170,15 @@ queue.jsonl
 
 При 4–6 параллельных enriching-агентах это примерно **8 кандидатов за 15–20 минут** вместо 20–28, плюс меньше повторных запросов и меньше «перевернутых» выводов.
 
+Первый фактический прогон (волна 3, 8 кандидатов, 4 агента): collect — 0:18, enrich — 4:33 wall, adjudicate — 0:21, edit одной карточки — ~0:10, validate — ~0:15, отчёт — 1:05; итого **7:14** на волну, 1 ready и 7 hold. Triage-волна оказалась быстрее гипотезы; стоимость READY-тяжёлой волны ещё нужно проверить на 3+ добавлениях. Детали — в [волне 3](research-queue-wave-3.md).
+
 ## Реализация в репозитории
 
 Скрипты уже добавлены; они не меняют `data/` и `public/`, поэтому их можно запускать без риска для атласа.
 
 | Скрипт | Что делает | Куда пишет |
 |---|---|---|
-| `scripts/queue_collect.py` | Реестр, OSM, геометрия, Place ID, Commons, пересечения с атласом | `work/queue/<n>/collect.json`, `work/queue/index.jsonl` |
+| `scripts/queue_collect.py` | Реестр, OSM way/relation, геометрия, флаги, Place ID, Commons, пересечения | `work/queue/<n>/collect.json`, `work/queue/index.jsonl` |
 | `scripts/queue_report.py` | Сводка по очереди: собрано, IoU, Place ID, ошибки, вердикты | stdout или `--out` |
 | `scripts/validate_cards.py` | Схема карточек, переводы, полигоны, фото, пересечения | только отчёт, exit code |
 
@@ -204,15 +206,60 @@ python3 scripts/validate_cards.py
 
 ```json
 {"schema": 1,
- "candidate": {"n": 15, "registryId": 3049, "osmWay": "246769267"},
+ "candidate": {"n": 59, "registryId": 3756,
+               "osmType": "relation", "osmId": "19630608",
+               "osmWay": "1207148736", "osmOverride": "..."},
  "registry": {"attributes": {}, "polygon": {}, "sourceUrls": {}},
- "osm": {"id": "way/246769267", "tags": {}, "polygon": {}},
- "metrics": {"registryAreaM2": 390.0, "osmAreaM2": 438.7,
-             "iou": 0.83, "osmInsideRegistryPct": 85.7,
-             "registryCoveredByOsmPct": 96.4, "centroidDistanceM": 0.4},
+ "osm": {"id": "relation/19630608", "type": "relation",
+         "tags": {}, "members": [], "polygon": {},
+         "sourceUrl": "https://www.openstreetmap.org/relation/19630608"},
+ "metrics": {"registryAreaM2": 930.6, "osmAreaM2": 1808.4,
+             "iou": 0.372, "osmInsideRegistryPct": 41.1,
+             "registryCoveredByOsmPct": 79.9, "centroidDistanceM": 19.6},
+ "geometryFlags": ["osm_relation", "underground", "osm_much_larger", "osm_composite_or_plot"],
  "placeId": {}, "commons": [], "atlasOverlaps": [],
  "errors": [], "warnings": [], "fetchedAt": "..."}
 ```
+
+`geometryFlags` — диагностические, не приговор: `osm_relation`, `underground`, `ruins`, `osm_much_larger`, `osm_much_smaller`, `osm_composite_or_plot`, `official_subset`, `official_point_buffer`, `osm_multi_part`. Они помогают сортировать ручную проверку и не заменяют решение.
+
+### Отношения и overrides
+
+Иногда очередь ссылается на соседний way, а объект описан relation. Исправление хранится явно в `data/osm-candidate-overrides.json`:
+
+```json
+{"59": {"type": "relation", "id": 19630608,
+        "reason": "Очередь ссылалась на соседний way; баня №5 — relation"}}
+```
+
+Коллектор применяет override по номеру кандидата, тянет `relation/<id>`, собирает внешние контуры через `polygonize`, вычитает inner и сохраняет `osm.members`. Пример разбора — [баня №5](research-bath-5-geometry.md). Без override такой объект получил бы чужой way и ложный IoU.
+
+### Primary и вторичные контуры
+
+Карта показывает **надземный след здания**, поэтому primary-геометрия карточки — это он. Официальная граница, relation подземного/составного комплекса, старый way и другие варианты — вторичные: их не выбрасываем, но и не выдаём за footprint.
+
+Вторичные контуры хранятся в `data/geometry-variants.json`:
+
+```json
+{"schema": 1,
+ "objects": {
+   "osm-19630608": {
+     "primary": null,
+     "primaryRole": "above_ground_footprint",
+     "missing": ["above_ground_footprint"],
+     "variants": [
+       {"id": "official-3756", "role": "heritage_boundary", "areaM2": 930.6, "geometry": {}},
+       {"id": "osm-relation-19630608", "role": "complex_underground", "areaM2": 1808.4, "geometry": {}},
+       {"id": "osm-way-1207148736", "role": "neighbor_wrong_candidate", "areaM2": 266.6, "geometry": {}}
+     ]}}}
+```
+
+Правила:
+
+- `primary` — только надземный контур; если его нет, карточка не добавляется, даже если есть красивый relation.
+- `variants[].role` фиксирует смысл: `heritage_boundary`, `complex_underground`, `neighbor_wrong_candidate`, `historic_plan`, `visible_domes`.
+- Когда появится обмер куполов, он становится `primary`, а старые варианты остаются в файле.
+- Представление можно перестроить по типу геометрии: карта берёт `primary`, а инспектор/исследование — нужный variant.
 
 `queue_report.py` читает `index.jsonl`; если появится `work/queue/<n>/verdict.json`, колонка «Вердикт» подхватит его автоматически.
 

@@ -2,8 +2,11 @@
 """Collect deterministic facts for the research queue (no editorial judgement).
 
 For every candidate this script stores the registry record and polygon, the OSM
-way geometry and tags, geometry metrics, the Google Place ID research status,
-Commons geosearch hits and overlaps with already published atlas cards.
+way or relation geometry and tags, geometry metrics and diagnostic flags, the
+Google Place ID research status, Commons geosearch hits and overlaps with
+already published atlas cards. Explicit relation/way corrections live in
+data/osm-candidate-overrides.json (for example, bath No. 5 is a relation, not
+the neighboring way from the queue).
 
 Output is written under work/queue/ (ignored by git):
   work/queue/<n>/collect.json
@@ -30,7 +33,8 @@ from pathlib import Path
 from typing import Any
 
 try:
-    from shapely.geometry import Polygon, shape
+    from shapely.geometry import LineString, Polygon, shape
+    from shapely.ops import polygonize, unary_union
     from shapely.validation import make_valid
 except ImportError:
     sys.exit('This script requires shapely: python3 -m pip install shapely')
@@ -49,7 +53,8 @@ REGISTRY_GEOM = (
     'https://memkvidreoba.gov.ge/arcgisch/rest/services/Culture/'
     'CulturePortalService/MapServer/4/query'
 )
-OSM_WAY = 'https://api.openstreetmap.org/api/0.6/way/{}/full.json'
+OSM_OBJECT = 'https://api.openstreetmap.org/api/0.6/{type}/{id}/full.json'
+OVERRIDES_PATH = ROOT / 'data/osm-candidate-overrides.json'
 COMMONS_GEO = 'https://commons.wikimedia.org/w/api.php'
 
 USER_AGENT = 'TbilisiArchitectureAtlasResearch/1.0 (queue collector)'
@@ -112,19 +117,41 @@ def parse_queue(path: Path) -> list[dict[str, Any]]:
             'n': int(match.group(1)),
             'registryId': int(match.group(2)),
             'osmWay': match.group(3),
+            'osmType': 'way',
+            'osmId': match.group(3),
         })
     if not rows:
         raise SystemExit(f'no queue rows parsed from {path}')
     return rows
 
 
-def added_ways(path: Path) -> set[str]:
+def atlas_osm_ids(path: Path) -> set[str]:
     data = read_json(path)
     return {
-        str(item.get('osmId', '')).replace('way/', '')
+        str(item.get('osmId', ''))
         for item in data
-        if str(item.get('osmId', '')).startswith('way/')
+        if str(item.get('osmId', '')).startswith(('way/', 'relation/'))
     }
+
+
+def load_overrides(path: Path) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
+    return read_json(path)
+
+
+def apply_overrides(rows: list[dict[str, Any]], overrides: dict[str, dict[str, Any]]) -> None:
+    for row in rows:
+        override = overrides.get(str(row['n']))
+        if not override:
+            continue
+        osm_type = override.get('type')
+        osm_id = override.get('id')
+        if osm_type not in ('way', 'relation') or osm_id is None:
+            raise SystemExit(f'invalid OSM override for candidate {row["n"]}: {override!r}')
+        row['osmType'] = osm_type
+        row['osmId'] = str(osm_id)
+        row['osmOverride'] = override.get('reason', '')
 
 
 def polygon_from_rings(rings: list[list[list[float]]]):
@@ -154,6 +181,74 @@ def polygon_from_osm_way(elements: list[dict[str, Any]]):
     if not polygon.is_valid:
         polygon = make_valid(polygon)
     return polygon, way.get('tags', {})
+
+
+def polygon_from_osm_relation(elements: list[dict[str, Any]]):
+    relation = next((item for item in elements if item.get('type') == 'relation'), None)
+    if not relation:
+        return None, {}, []
+    nodes = {str(item['id']): item for item in elements if item.get('type') == 'node'}
+    ways = {str(item['id']): item for item in elements if item.get('type') == 'way'}
+    outer_lines = []
+    inner_lines = []
+    for member in relation.get('members', []):
+        way = ways.get(str(member.get('ref')))
+        if not way:
+            continue
+        coords = []
+        for node_id in way.get('nodes', []):
+            node = nodes.get(str(node_id))
+            if node:
+                coords.append((node['lon'], node['lat']))
+        if len(coords) < 2:
+            continue
+        line = LineString(coords)
+        if member.get('role') == 'inner':
+            inner_lines.append(line)
+        else:
+            outer_lines.append(line)
+    outer_polygons = list(polygonize(outer_lines))
+    if not outer_polygons:
+        return None, relation.get('tags', {}), relation.get('members', [])
+    polygon = unary_union(outer_polygons)
+    if inner_lines:
+        inner_polygons = list(polygonize(inner_lines))
+        if inner_polygons:
+            polygon = polygon.difference(unary_union(inner_polygons))
+    polygon = make_valid(polygon)
+    return polygon, relation.get('tags', {}), relation.get('members', [])
+
+
+def geometry_flags(registry_polygon, osm_polygon, tags: dict[str, Any], osm_type: str, metrics: dict[str, Any]) -> list[str]:
+    flags: list[str] = []
+    if osm_type == 'relation':
+        flags.append('osm_relation')
+    if str(tags.get('layer')) == '-1' or tags.get('location') == 'underground':
+        flags.append('underground')
+    if tags.get('building') == 'ruins' or tags.get('historic') == 'ruins':
+        flags.append('ruins')
+    if osm_polygon is None or registry_polygon is None:
+        return flags
+    if osm_polygon.geom_type == 'MultiPolygon':
+        flags.append('osm_multi_part')
+    registry_area = metrics.get('registryAreaM2')
+    osm_area = metrics.get('osmAreaM2')
+    if registry_area and osm_area:
+        ratio = osm_area / registry_area
+        if ratio > 1.5:
+            flags.append('osm_much_larger')
+        elif ratio < 0.67:
+            flags.append('osm_much_smaller')
+    registry_covered = metrics.get('registryCoveredByOsmPct')
+    osm_inside = metrics.get('osmInsideRegistryPct')
+    if registry_covered is not None and osm_inside is not None:
+        if registry_covered > 75 and osm_inside < 60:
+            flags.append('osm_composite_or_plot')
+        elif osm_inside > 90 and registry_covered < 60:
+            flags.append('official_subset')
+    if registry_polygon.geom_type == 'Polygon' and len(registry_polygon.exterior.coords) <= 10 and (registry_area or 0) < 100:
+        flags.append('official_point_buffer')
+    return flags
 
 
 def project_polygon(polygon, lon0, lat0):
@@ -254,8 +349,8 @@ def fetch_registry(registry_id: int, cache_dir: Path, refresh: bool, delay: floa
     return attrs, geom_attrs, rings, urls
 
 
-def fetch_osm(way_id: str, cache_dir: Path, refresh: bool, delay: float) -> tuple[list[dict], str]:
-    url = OSM_WAY.format(way_id)
+def fetch_osm(osm_type: str, osm_id: str, cache_dir: Path, refresh: bool, delay: float) -> tuple[list[dict], str]:
+    url = OSM_OBJECT.format(type=osm_type, id=osm_id)
     response = fetch_json(url, cache_dir, refresh, delay)
     return response.get('elements', []), url
 
@@ -296,7 +391,8 @@ def collect_candidate(
 ) -> dict[str, Any]:
     n = row['n']
     registry_id = row['registryId']
-    way_id = row['osmWay']
+    osm_type = row.get('osmType', 'way')
+    osm_id = str(row.get('osmId') or row['osmWay'])
     errors: list[str] = []
     warnings: list[str] = []
 
@@ -307,16 +403,22 @@ def collect_candidate(
     if registry_polygon is None:
         errors.append('registry polygon missing')
 
-    osm_elements, osm_url = fetch_osm(way_id, cache_dir, refresh, delay)
-    osm_polygon, osm_tags = polygon_from_osm_way(osm_elements)
+    osm_elements, osm_api_url = fetch_osm(osm_type, osm_id, cache_dir, refresh, delay)
+    osm_url = f'https://www.openstreetmap.org/{osm_type}/{osm_id}'
+    if osm_type == 'relation':
+        osm_polygon, osm_tags, osm_members = polygon_from_osm_relation(osm_elements)
+    else:
+        osm_polygon, osm_tags = polygon_from_osm_way(osm_elements)
+        osm_members = []
     if osm_polygon is None:
-        errors.append('OSM way geometry missing')
+        errors.append(f'OSM {osm_type} geometry missing')
 
     try:
         metrics = geometry_metrics(registry_polygon, osm_polygon)
     except Exception as error:
         metrics = {}
         errors.append(f'geometry metrics: {error}')
+    flags = geometry_flags(registry_polygon, osm_polygon, osm_tags, osm_type, metrics)
     overlaps = bbox_overlaps(registry_polygon or osm_polygon, atlas)
 
     lon = attrs.get('X')
@@ -337,9 +439,12 @@ def collect_candidate(
         'candidate': {
             'n': n,
             'registryId': registry_id,
-            'osmWay': way_id,
+            'osmType': osm_type,
+            'osmId': osm_id,
+            'osmWay': row['osmWay'],
+            'osmOverride': row.get('osmOverride', ''),
             'registryUrl': f'https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id={registry_id}',
-            'osmUrl': f'https://www.openstreetmap.org/way/{way_id}',
+            'osmUrl': osm_url,
         },
         'registry': {
             'attributes': attrs,
@@ -348,12 +453,16 @@ def collect_candidate(
             'sourceUrls': urls,
         },
         'osm': {
-            'id': f'way/{way_id}',
+            'id': f'{osm_type}/{osm_id}',
+            'type': osm_type,
             'tags': osm_tags,
+            'members': osm_members,
             'polygon': osm_polygon.__geo_interface__ if osm_polygon is not None else None,
             'sourceUrl': osm_url,
+            'apiUrl': osm_api_url,
         },
         'metrics': metrics,
+        'geometryFlags': flags,
         'placeId': place,
         'commons': commons_hits,
         'atlasOverlaps': overlaps,
@@ -367,7 +476,9 @@ def collect_candidate(
     return {
         'n': n,
         'registryId': registry_id,
-        'osmWay': way_id,
+        'osmType': osm_type,
+        'osmId': osm_id,
+        'osmWay': row['osmWay'],
         'name': attrs.get('Name') or geom_attrs.get('ObjectName') or '',
         'address': attrs.get('Address') or geom_attrs.get('Address') or '',
         'status': 'ok' if not errors else ('partial' if metrics else 'error'),
@@ -377,6 +488,7 @@ def collect_candidate(
         'placeStatus': place.get('status') if place else None,
         'commonsCount': len(commons_hits),
         'atlasOverlapCount': len(overlaps),
+        'geometryFlags': flags,
         'errors': errors,
         'warnings': warnings,
         'collectedAt': result['fetchedAt'],
@@ -410,9 +522,14 @@ def main() -> int:
     args = parser.parse_args()
 
     queue = parse_queue(args.queue)
-    queue_ways = {row['osmWay'] for row in queue}
-    added = added_ways(args.atlas) & queue_ways
-    remaining = [row for row in queue if row['osmWay'] not in added]
+    apply_overrides(queue, load_overrides(OVERRIDES_PATH))
+    atlas_ids = atlas_osm_ids(args.atlas)
+
+    def osm_id(row: dict[str, Any]) -> str:
+        return f"{row['osmType']}/{row['osmId']}"
+
+    added = {row['n'] for row in queue if osm_id(row) in atlas_ids}
+    remaining = [row for row in queue if row['n'] not in added]
     if args.only:
         wanted = {int(value) for value in args.only.split(',') if value.strip()}
         remaining = [row for row in remaining if row['n'] in wanted]
@@ -427,14 +544,17 @@ def main() -> int:
 
     summaries = []
     for position, row in enumerate(remaining, 1):
-        print(f"[{position}/{len(remaining)}] {row['n']} / registry {row['registryId']} / way {row['osmWay']}", flush=True)
+        print(f"[{position}/{len(remaining)}] {row['n']} / registry {row['registryId']} / {row['osmType']} {row['osmId']}", flush=True)
         artifact = args.out / f"{row['n']:03d}" / 'collect.json'
         if artifact.exists() and not args.refresh:
             try:
                 cached = read_json(artifact)
+                candidate = cached.get('candidate', {})
                 summary = {
                     'n': row['n'],
                     'registryId': row['registryId'],
+                    'osmType': candidate.get('osmType', row['osmType']),
+                    'osmId': candidate.get('osmId', row['osmId']),
                     'osmWay': row['osmWay'],
                     'name': (cached.get('registry', {}).get('attributes') or {}).get('Name', ''),
                     'address': (cached.get('registry', {}).get('attributes') or {}).get('Address', ''),
@@ -445,6 +565,7 @@ def main() -> int:
                     'placeStatus': (cached.get('placeId') or {}).get('status'),
                     'commonsCount': len(cached.get('commons') or []),
                     'atlasOverlapCount': len(cached.get('atlasOverlaps') or []),
+                    'geometryFlags': cached.get('geometryFlags') or [],
                     'errors': cached.get('errors') or [],
                     'warnings': cached.get('warnings') or [],
                     'collectedAt': cached.get('fetchedAt'),
@@ -465,9 +586,10 @@ def main() -> int:
             print(f"  {summary['status']}; IoU {summary.get('iou')}; errors {len(summary['errors'])}")
         except Exception as error:
             summary = {
-                'n': row['n'], 'registryId': row['registryId'], 'osmWay': row['osmWay'],
+                'n': row['n'], 'registryId': row['registryId'],
+                'osmType': row['osmType'], 'osmId': row['osmId'], 'osmWay': row['osmWay'],
                 'name': '', 'address': '', 'status': 'error',
-                'errors': [str(error)], 'warnings': [], 'collectedAt': utc_now(),
+                'errors': [str(error)], 'warnings': [], 'geometryFlags': [], 'collectedAt': utc_now(),
             }
             summaries.append(summary)
             update_index(index_path, summaries)
