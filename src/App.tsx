@@ -17,14 +17,14 @@ function Loader({onReady}:{onReady:(d:Data)=>void}){
  const [status,setStatus]=useState('Подготавливаем карту и фотографии'),[error,setError]=useState(''),[attempt,setAttempt]=useState(0);
  useEffect(()=>{let cancelled=false,handedOff=false;const urls:string[]=[];const controller=new AbortController();async function run(){try{
   setError('');setStatus('Загружаем карту и данные…');
-  const get=async(path:string)=>{const r=await fetch(base+path,{signal:controller.signal});if(!r.ok)throw new Error(`Не удалось загрузить ${path}`);return r};
-  const manifest=await (await get('manifest.json')).json() as {version:number;files:{path:string;size:number;sha256:string}[]};
+  const get=async(path:string,revision=__ATLAS_REVISION__)=>{const r=await fetch(`${base}${path}?v=${encodeURIComponent(revision)}`,{signal:controller.signal});if(!r.ok)throw new Error(`Не удалось загрузить ${path}`);return r};
+  const manifest=await (await get('manifest.json')).json() as {version:number;revision:string;files:{path:string;size:number;sha256:string}[]};
   if(manifest.version!==1||!Array.isArray(manifest.files))throw new Error('Неизвестная версия пакета');
   if(!crypto.subtle)throw new Error('Для проверки пакета откройте атлас через HTTPS или localhost');
   const files=new Map<string,ArrayBuffer>();let done=0;const total=manifest.files.reduce((n,f)=>n+f.size,0);let loaded=0;
   let nextFile=0;const loadNext=async()=>{while(nextFile<manifest.files.length){const f=manifest.files[nextFile++];
     if(f.path.includes('..')||f.path.startsWith('/'))throw new Error('Некорректный путь в пакете');
-    const bytes=await (await get(f.path)).arrayBuffer();
+    const bytes=await (await get(f.path,f.sha256)).arrayBuffer();
     const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))).map(x=>x.toString(16).padStart(2,'0')).join('');
     if(bytes.byteLength!==f.size||hash!==f.sha256)throw new Error(`Поврежден файл ${f.path}`);
     files.set(f.path,bytes);done++;loaded+=f.size;

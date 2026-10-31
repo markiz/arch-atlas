@@ -1,18 +1,53 @@
 import xml.etree.ElementTree as ET, pathlib, json, math
 root=pathlib.Path(__file__).resolve().parent.parent
-nodes={};ways={}
+landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
+nodes={};node_tags={};ways={};relations={}
 for path in sorted((root/'raw').glob('osm-grid-*.xml')):
  try: doc=ET.parse(path).getroot()
  except Exception: continue
  for node in doc.findall('node'):
   nodes[node.attrib['id']]=[round(float(node.attrib['lon']),6),round(float(node.attrib['lat']),6)]
+  node_tags[node.attrib['id']]={t.attrib['k']:t.attrib['v'] for t in node.findall('tag')}
  for way in doc.findall('way'):
   ways[way.attrib['id']]={'refs':[n.attrib['ref'] for n in way.findall('nd')], 'tags':{t.attrib['k']:t.attrib['v'] for t in way.findall('tag')}}
+ for relation in doc.findall('relation'):
+  relations[relation.attrib['id']]={'members':[(m.attrib.get('type'),m.attrib.get('ref'),m.attrib.get('role')) for m in relation.findall('member')], 'tags':{t.attrib['k']:t.attrib['v'] for t in relation.findall('tag')}}
 features=[];building_ways=[]
+def landmark(tags):
+ if tags.get('tourism')=='museum' or tags.get('amenity')=='museum':return 'museum'
+ if tags.get('historic') in ('castle','fort','fortress'):return 'castle'
+ if tags.get('amenity')=='place_of_worship' or tags.get('building') in ('church','chapel','cathedral'):return 'church'
+ return None
+def landmark_name(tags):
+ name=tags.get('name:ru') or tags.get('name') or tags.get('name:ka') or tags.get('name:en')
+ return landmark_names.get(name,name)
+for nid,tags in node_tags.items():
+ category=landmark(tags)
+ if category:
+  props={'kind':'landmark','category':category};name=landmark_name(tags)
+  if name:props['name']=name
+  features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':nodes[nid]}})
+for relation in relations.values():
+ tags=relation['tags'];category=landmark(tags)
+ if not category:continue
+ coords=[]
+ for member_type,ref,role in relation['members']:
+  if member_type=='way' and role in ('','outer') and ref in ways:
+   coords.extend(nodes[n] for n in ways[ref]['refs'] if n in nodes)
+ if coords:
+  center=[round(sum(p[i] for p in coords)/len(coords),6) for i in (0,1)]
+  props={'kind':'landmark','category':category};name=landmark_name(tags)
+  if name:props['name']=name
+  features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':center}})
 for wid,w in ways.items():
  coords=[nodes[x] for x in w['refs'] if x in nodes]
  if len(coords)!=len(w['refs']) or len(coords)<2:continue
  tags=w['tags']; closed=len(coords)>3 and coords[0]==coords[-1]; kind=None
+ category=landmark(tags)
+ if category and closed:
+  props={'kind':'landmark','category':category};name=landmark_name(tags)
+  if name:props['name']=name
+  features.append({'type':'Feature','properties':props,'geometry':{'type':'Polygon','coordinates':[coords]}})
  if 'building' in tags and closed:
   building_ways.append((wid,coords,tags));kind='building'
  elif tags.get('highway') in ('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian','service','footway','path','steps'):
