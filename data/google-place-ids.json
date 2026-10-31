@@ -438,5 +438,25 @@
     "id": "osm-316656009",
     "placeId": "ChIJtel9YdsMREARub8Cqc0EJ1k",
     "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7025535%2C44.7908252&query_place_id=ChIJtel9YdsMREARub8Cqc0EJ1k"
+  },
+  {
+    "id": "osm-478568522",
+    "placeId": "ChIJaTqSIwANREAR0-TCRJSiLF4",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6905175%2C44.8301344&query_place_id=ChIJaTqSIwANREAR0-TCRJSiLF4"
+  },
+  {
+    "id": "osm-143349273",
+    "placeId": "ChIJI6zFYPcMREAR4yGUic5xhXo",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6901135%2C44.8121616&query_place_id=ChIJI6zFYPcMREAR4yGUic5xhXo"
+  },
+  {
+    "id": "osm-817688095",
+    "placeId": "ChIJ98UD2e8MREAR6qpSRCU7KBg",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/catholic-cathedral-of-assumption-of-virgin-mary?to=place.ChIJ98UD2e8MREAR6qpSRCU7KBg"
+  },
+  {
+    "id": "osm-78004768",
+    "placeId": "ChIJK-PQB-8MREARy3KFjZC7Tkg",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/4-freedom-square?to=place.ChIJK-PQB-8MREARy3KFjZC7Tkg"
   }
 ]
