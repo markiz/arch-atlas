@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {period,normalize,filterBuildings,styleEntries} from '../src/domain.js';
 const empty={query:'',from:'',to:'',architect:[],style:[]};
 const data=[
- {id:'old',name:'Анчисхати',nameKa:'ანჩისხატი',nameEn:'Anchiskhati',address:'Шавтели',district:'Старый Тбилиси',style:'Базилика',styleId:'basilica',architects:[],architectIds:[],minYear:501,maxYear:600},
+ {id:'old',name:'Анчисхати',nameKa:'ანჩისხატი',nameEn:'Anchiskhati',address:'Шавтели',district:'Старый Тбилиси',style:'Базилика',styleId:'basilica',architects:[],architectIds:[],minYear:501,maxYear:600,osmId:'way/78357093'},
  {id:'uncertain',name:'Дом Ёжика',nameKa:'სახლი',nameEn:'House',address:'Тбилиси',addresses:{en:'13 Machabeli Street'},district:'Центр',style:'Модерн, Неоготика',styleId:'art-nouveau+neo-gothic',styles:{en:'Art Nouveau, Neo-Gothic'},architects:['Заар','Озеров'],architectIds:['saar','ozerov'],architectsByLanguage:{en:['Karl Saar','Alexander Ozerov']},minYear:1895,maxYear:1905},
  {id:'unknown',name:'Дом без даты',nameKa:'',nameEn:'',address:'',district:'',style:'Модерн',styleId:'art-nouveau',architects:[],architectIds:[],minYear:null,maxYear:null}
 ];
@@ -14,6 +14,13 @@ test('normalization and multilingual search',()=>{
   assert.deepEqual(filterBuildings(data,{...empty,query}).map(x=>x.id),['uncertain']);
  }
  assert.deepEqual(filterBuildings(data,{...empty,query:'ანჩისხატი'}).map(x=>x.id),['old']);
+});
+test('search by OSM identifier in common label and URL forms',()=>{
+ for(const query of ['OSM-78357093','OSM 78357093','OSM78357093','way/78357093','way 78357093','way78357093','78357093']){
+  assert.deepEqual(filterBuildings(data,{...empty,query}).map(x=>x.id),['old'],query);
+ }
+ assert.deepEqual(filterBuildings(data,{...empty,query:'OSM-25699483'}),[]);
+ assert.deepEqual(filterBuildings(data,{...empty,query:'OSM-78357093 Анчисхати'}).map(x=>x.id),['old']);
 });
 test('date filter matches intersecting construction intervals including boundaries',()=>{
  for(const [from,to] of [['1900','1920'],['1905','1905'],['1895','1895']]){
