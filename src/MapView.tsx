@@ -24,9 +24,9 @@ function landmarkIcon(category:string){
 }
 export default function MapView({buildings,allBuildings,basemap,selected,onSelect,focus,reset,fit,showFit,onFit,highlightedPeriods}:Props){
  const {t,language}=useI18n();
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{element:HTMLElement;names:Record<string,string>;fallback:string}[]>([]);
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;major:boolean}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
  const atlasBounds=useMemo(()=>{const bounds=L.latLngBounds([]);const visit=(coordinates:any):void=>{if(!Array.isArray(coordinates))return;if(typeof coordinates[0]==='number'&&typeof coordinates[1]==='number'){bounds.extend([coordinates[1],coordinates[0]]);return}coordinates.forEach(visit)};const geometry=(g:Geometry|null):void=>{if(!g)return;if(g.type==='GeometryCollection')g.geometries.forEach(geometry);else visit(g.coordinates)};allBuildings.forEach(building=>geometry(building.geometry as Geometry|null));return bounds},[allBuildings]);
- const layerRefs=useRef<{roads:L.GeoJSON;buildings:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON;majorLabels:L.LayerGroup;localLabels:L.LayerGroup}|null>(null);
+ const layerRefs=useRef<{roads:L.GeoJSON;buildings:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON}|null>(null);
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false);
  const [showRoads,setShowRoads]=useState(true),[showBuildings,setShowBuildings]=useState(false),[showWater,setShowWater]=useState(true),[detailedStreets,setDetailedStreets]=useState(false),[showLandmarks,setShowLandmarks]=useState(()=>{try{return localStorage.getItem('atlas-layer-landmarks')==='true'}catch{return false}}),[showGreen,setShowGreen]=useState(true);
  selectionRef.current=onSelect;
@@ -43,6 +43,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   map.attributionControl.setPrefix('');map.attributionControl.setPosition('topleft');
   const localPane=map.createPane('localBasemap');localPane.style.zIndex='190';
   const canvas=L.canvas({padding:.5,pane:'localBasemap'});
+  const atlasSvg=L.svg({padding:.5});atlasRenderer.current=atlasSvg;
   const layer=(kind:string,style:(f:any)=>L.PathOptions)=>L.geoJSON(basemap,{renderer:canvas,interactive:kind==='landmark',filter:f=>f.properties?.kind===kind,pointToLayer:(feature,latlng)=>kind==='landmark'?L.marker(latlng,{icon:landmarkIcon(String(feature.properties?.category??'museum')),zIndexOffset:500}):L.circleMarker(latlng),style,onEachFeature:(feature,shape)=>{if(kind==='landmark'&&feature.properties?.name)shape.bindTooltip(()=>String(feature.properties?.names?.[languageRef.current]||feature.properties?.name),{direction:'top'})}} as L.GeoJSONOptions);
   const green=layer('green',()=>({color:'#d5dfd2',weight:.8,fillColor:'#d5dfd2',fillOpacity:.42}));
   const water=layer('water',()=>({color:'#9cbab9',weight:3,fillColor:'#b7d0ce',fillOpacity:.8}));
@@ -56,7 +57,6 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   const roadLength=(f:typeof roadFeatures[number])=>{const line=lineCoordinates(f);return line.slice(1).reduce((sum,p,i)=>sum+Math.hypot(p[0]-line[i][0],p[1]-line[i][1]),0)};
   const namedRoads=new Map<string,typeof roadFeatures[number]>();
   for(const feature of roadFeatures){const name=String(feature.properties?.name??'').trim(),current=namedRoads.get(name);if(!current||roadLength(feature)>roadLength(current))namedRoads.set(name,feature)}
-  const majorLabels=L.layerGroup(),localLabels=L.layerGroup();
   for(const feature of namedRoads.values()){
    const coordinates=lineCoordinates(feature);if(coordinates.length<2)continue;
    const total=roadLength(feature);if(total<.00035)continue;
@@ -70,29 +70,75 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
    const roadClass=String(feature.properties?.class),major=['motorway','trunk','primary','secondary','tertiary'].includes(roadClass);
    if(!major&&!['residential','unclassified','living_street','pedestrian'].includes(roadClass))continue;
    const fallback=String(feature.properties?.name??''),names=(feature.properties?.names??{}) as Record<string,string>;
-   const label=document.createElement('span');label.textContent=String(names[languageRef.current]||fallback);label.style.setProperty('--street-angle',`${angle}deg`);streetLabels.current.push({element:label,names,fallback});
-   const target=major?majorLabels:localLabels;
-   L.marker([midpoint[1],midpoint[0]],{interactive:false,icon:L.divIcon({className:'street-name-marker',html:label,iconSize:[1,1],iconAnchor:[0,0]})}).addTo(target);
+   streetLabels.current.push({latlng:L.latLng(midpoint[1],midpoint[0]),names,fallback,angle,major});
   }
-  layerRefs.current={roads,buildings:buildingLayer,water,green,landmarks,majorLabels,localLabels};
+  layerRefs.current={roads,buildings:buildingLayer,water,green,landmarks};
+  const labelCanvas=L.DomUtil.create('canvas');
+  labelCanvas.style.position='absolute';labelCanvas.style.pointerEvents='none';
+  map.getPane('overlayPane')!.appendChild(labelCanvas);
+  streetLabels.current.sort((a,b)=>Number(b.major)-Number(a.major));
+  let labelsEnabled=false;
+  const drawLabels=()=>{
+   const size=map.getSize(),ratio=window.devicePixelRatio||1;
+   const padding=size.multiplyBy(.3),canvasSize=size.add(padding.multiplyBy(2));
+   labelCanvas.width=Math.round(canvasSize.x*ratio);labelCanvas.height=Math.round(canvasSize.y*ratio);
+   labelCanvas.style.width=`${canvasSize.x}px`;labelCanvas.style.height=`${canvasSize.y}px`;
+   L.DomUtil.setPosition(labelCanvas,map.containerPointToLayerPoint(padding.multiplyBy(-1)));
+   labelCanvas.style.display='';
+   if(!labelsEnabled)return;
+   const ctx=labelCanvas.getContext('2d');if(!ctx)return;
+   ctx.scale(ratio,ratio);ctx.font='500 8.5px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+   ctx.fillStyle='rgba(117,129,118,.75)';ctx.strokeStyle='rgba(255,254,248,.85)';ctx.lineWidth=3;ctx.lineJoin='round';
+   const zoom=map.getZoom(),occupied=new Set<string>();
+   for(const entry of streetLabels.current){
+    if(zoom<(entry.major?11.5:14))continue;
+    const point=map.latLngToContainerPoint(entry.latlng).add(padding);
+    if(point.x<0||point.y<0||point.x>canvasSize.x||point.y>canvasSize.y)continue;
+    const name=entry.names[languageRef.current]||entry.fallback;
+    const width=ctx.measureText(name).width, radius=Math.max(width/2,10);
+    const cells:string[]=[];
+    for(let x=Math.floor((point.x-radius)/80);x<=Math.floor((point.x+radius)/80);x++)for(let y=Math.floor((point.y-10)/24);y<=Math.floor((point.y+10)/24);y++)cells.push(`${x}:${y}`);
+    if(cells.some(cell=>occupied.has(cell)))continue;
+    cells.forEach(cell=>occupied.add(cell));
+    ctx.save();ctx.translate(point.x,point.y);ctx.rotate(entry.angle*Math.PI/180);ctx.strokeText(name,0,0);ctx.fillText(name,0,0);ctx.restore();
+   }
+  };
+  const hideLabels=()=>{labelCanvas.style.display='none'};
+  let dragOrigin=map.getPixelBounds().min!,dragFrame:number|null=null;
+  const finishMove=()=>{dragOrigin=map.getPixelBounds().min!;drawLabels()};
+  const refreshDuringDrag=()=>{
+   if(dragFrame!==null)return;
+   dragFrame=requestAnimationFrame(()=>{
+    dragFrame=null;
+    const current=map.getPixelBounds().min!,size=map.getSize();
+    if(Math.abs(current.x-dragOrigin.x)<size.x*.2&&Math.abs(current.y-dragOrigin.y)<size.y*.2)return;
+    dragOrigin=current;
+    // Leaflet's canvas renderer normally refreshes only on moveend.
+    if(map.hasLayer(canvas))(canvas as L.Canvas & {_update:()=>void})._update();
+    if(map.hasLayer(atlasSvg))(atlasSvg as L.SVG & {_update:()=>void})._update();
+    drawLabels();
+   });
+  };
+  map.on('drag',refreshDuringDrag);map.on('moveend',finishMove);map.on('zoomstart',hideLabels);
+  redrawLabels.current=drawLabels;
+  setLabelsEnabled.current=(enabled)=>{labelsEnabled=enabled;drawLabels()};
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
-  return()=>{resizeObserver.disconnect();map.remove();mapRef.current=null;objects.current=null;position.current=null};
+  return()=>{resizeObserver.disconnect();map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
  },[basemap,atlasBounds]);
- useEffect(()=>{for(const entry of streetLabels.current)entry.element.textContent=entry.names[language]||entry.fallback},[language]);
+ useEffect(()=>{redrawLabels.current()},[language]);
  useEffect(()=>{
   const map=mapRef.current,layers=layerRefs.current;if(!map||!layers)return;
   const sync=(layer:L.Layer,visible:boolean)=>{if(visible&&!map.hasLayer(layer))layer.addTo(map);else if(!visible&&map.hasLayer(layer))map.removeLayer(layer)};
   sync(layers.roads,showRoads);sync(layers.buildings,showBuildings);sync(layers.water,showWater);sync(layers.green,showGreen);sync(layers.landmarks,showLandmarks);
   layers.roads.setStyle((feature:any)=>({color:'#fffefa',weight:detailedStreets?(['primary','secondary','trunk'].includes(feature?.properties?.class)?3.1:1.7):1.5,opacity:1}));
-  const updateLabels=()=>{sync(layers.majorLabels,detailedStreets&&map.getZoom()>=11.5);sync(layers.localLabels,detailedStreets&&map.getZoom()>=14)};
-  map.on('zoomend',updateLabels);updateLabels();return()=>{map.off('zoomend',updateLabels)};
+  setLabelsEnabled.current(detailedStreets);
  },[showRoads,showBuildings,showWater,detailedStreets,showLandmarks,showGreen,basemap]);
  useEffect(()=>{
   const group=objects.current;if(!group)return;group.clearLayers();
   for(const b of buildings){
    if(!b.geometry)continue;
    const buildingPeriod=period(b.minYear,b.maxYear)!,color=buildingPeriod.color,isSelected=b.id===selected,matches=!highlightedPeriods.length||highlightedPeriods.includes(buildingPeriod.label);
-   L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{style:{color:isSelected?'#244c3c':'#ffffff',weight:isSelected?3:highlightedPeriods.length&&matches?2.8:1.2,fillColor:color,fillOpacity:highlightedPeriods.length&&!matches ? .12 : .92,opacity:highlightedPeriods.length&&!matches ? .25 : 1},onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}}).addTo(group);
+   L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{renderer:atlasRenderer.current??undefined,style:{color:isSelected?'#244c3c':'#ffffff',weight:isSelected?3:highlightedPeriods.length&&matches?2.8:1.2,fillColor:color,fillOpacity:highlightedPeriods.length&&!matches ? .12 : .92,opacity:highlightedPeriods.length&&!matches ? .25 : 1},onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}} as L.GeoJSONOptions & L.PathOptions).addTo(group);
   }
  },[buildings,selected,highlightedPeriods,language]);
  useEffect(()=>{if(focus&&mapRef.current){const b=buildings.find(x=>x.id===focus.id);if(b) mapRef.current.flyTo([b.coordinates[1],b.coordinates[0]],17,{duration:.45})}},[focus]);
