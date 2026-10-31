@@ -35,9 +35,33 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
  useEffect(()=>{
   if(!container.current)return;
   streetLabels.current=[];
-  const map=L.map(container.current,{zoomControl:false,attributionControl:true,minZoom:10,maxZoom:19,zoomSnap:.5,preferCanvas:false}).setView([41.715,44.800],11.5);
+  const map=L.map(container.current,{zoomControl:false,attributionControl:true,minZoom:10,maxZoom:19,zoomSnap:.5,scrollWheelZoom:false,preferCanvas:false}).setView([41.715,44.800],11.5);
   if(atlasBounds.isValid())map.fitBounds(atlasBounds.pad(.08));
   mapRef.current=map;
+  // Animate intermediate zoom levels while keeping new wheel input in the target.
+  let wheelDelta=0,wheelPoint=L.point(0,0),wheelTimer:ReturnType<typeof setTimeout>|null=null,wheelFrame:number|null=null,targetZoom=map.getZoom();
+  const animateWheelZoom=(startZoom:number,startTime:number)=>{
+   const progress=Math.min((performance.now()-startTime)/220,1),eased=1-(1-progress)**3;
+   const snap=map.options.zoomSnap;map.options.zoomSnap=0;
+   map.setZoomAround(wheelPoint,startZoom+(targetZoom-startZoom)*eased,{animate:false});
+   map.options.zoomSnap=snap;
+   wheelFrame=progress<1?requestAnimationFrame(()=>animateWheelZoom(startZoom,startTime)):null;
+  };
+  const applyWheelZoom=()=>{
+   wheelTimer=null;if(!wheelDelta)return;
+   const amount=4*Math.log(2/(1+Math.exp(-Math.abs(wheelDelta)/240)))/Math.LN2;
+   const delta=Math.ceil(amount/.5)*.5*Math.sign(wheelDelta);wheelDelta=0;
+   targetZoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),(wheelFrame===null?map.getZoom():targetZoom)+delta));
+   if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);
+   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){map.setZoomAround(wheelPoint,targetZoom,{animate:false});wheelFrame=null}
+   else wheelFrame=requestAnimationFrame(()=>animateWheelZoom(map.getZoom(),performance.now()));
+  };
+  const onWheel=(event:Event)=>{
+   wheelDelta+=L.DomEvent.getWheelDelta(event);wheelPoint=map.mouseEventToContainerPoint(event as WheelEvent);
+   if(wheelTimer!==null)clearTimeout(wheelTimer);
+   wheelTimer=setTimeout(applyWheelZoom,40);L.DomEvent.stop(event);
+  };
+  L.DomEvent.on(container.current,'wheel',onWheel);
   const resizeObserver=new ResizeObserver(()=>map.invalidateSize({pan:false}));resizeObserver.observe(container.current);
   L.control.zoom({position:'bottomright'}).addTo(map);
   map.attributionControl.setPrefix('');map.attributionControl.setPosition('topleft');
@@ -115,7 +139,6 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
     dragOrigin=current;
     // Leaflet's canvas renderer normally refreshes only on moveend.
     if(map.hasLayer(canvas))(canvas as L.Canvas & {_update:()=>void})._update();
-    if(map.hasLayer(atlasSvg))(atlasSvg as L.SVG & {_update:()=>void})._update();
     drawLabels();
    });
   };
@@ -123,7 +146,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   redrawLabels.current=drawLabels;
   setLabelsEnabled.current=(enabled)=>{labelsEnabled=enabled;drawLabels()};
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
-  return()=>{resizeObserver.disconnect();map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
+  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
  },[basemap,atlasBounds]);
  useEffect(()=>{redrawLabels.current()},[language]);
  useEffect(()=>{
@@ -138,7 +161,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   for(const b of buildings){
    if(!b.geometry)continue;
    const buildingPeriod=period(b.minYear,b.maxYear)!,color=buildingPeriod.color,isSelected=b.id===selected,matches=!highlightedPeriods.length||highlightedPeriods.includes(buildingPeriod.label);
-   L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{renderer:atlasRenderer.current??undefined,style:{color:isSelected?'#244c3c':'#ffffff',weight:isSelected?3:highlightedPeriods.length&&matches?2.8:1.2,fillColor:color,fillOpacity:highlightedPeriods.length&&!matches ? .12 : .92,opacity:highlightedPeriods.length&&!matches ? .25 : 1},onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}} as L.GeoJSONOptions & L.PathOptions).addTo(group);
+   L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{renderer:atlasRenderer.current??undefined,noClip:true,style:{color:isSelected?'#244c3c':'#ffffff',weight:isSelected?3:highlightedPeriods.length&&matches?2.8:1.2,fillColor:color,fillOpacity:highlightedPeriods.length&&!matches ? .12 : .92,opacity:highlightedPeriods.length&&!matches ? .25 : 1},onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}} as L.GeoJSONOptions & L.PolylineOptions).addTo(group);
   }
  },[buildings,selected,highlightedPeriods,language]);
  useEffect(()=>{if(focus&&mapRef.current){const b=buildings.find(x=>x.id===focus.id);if(b) mapRef.current.flyTo([b.coordinates[1],b.coordinates[0]],17,{duration:.45})}},[focus]);
