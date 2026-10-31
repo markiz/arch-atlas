@@ -25,7 +25,7 @@ export default function MapView({buildings,basemap,selected,onSelect,focus,reset
  const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect);
  const layerRefs=useRef<{roads:L.GeoJSON;buildings:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON;majorLabels:L.LayerGroup;localLabels:L.LayerGroup}|null>(null);
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false);
- const [showRoads,setShowRoads]=useState(true),[showBuildings,setShowBuildings]=useState(true),[showWater,setShowWater]=useState(true),[detailedStreets,setDetailedStreets]=useState(false),[showLandmarks,setShowLandmarks]=useState(()=>{try{return localStorage.getItem('atlas-layer-landmarks')==='true'}catch{return false}}),[showGreen,setShowGreen]=useState(true);
+ const [showRoads,setShowRoads]=useState(true),[showBuildings,setShowBuildings]=useState(false),[showWater,setShowWater]=useState(true),[detailedStreets,setDetailedStreets]=useState(false),[showLandmarks,setShowLandmarks]=useState(()=>{try{return localStorage.getItem('atlas-layer-landmarks')==='true'}catch{return false}}),[showGreen,setShowGreen]=useState(true);
  selectionRef.current=onSelect;
  useEffect(()=>{try{localStorage.setItem('atlas-layer-landmarks',String(showLandmarks))}catch{}},[showLandmarks]);
  useEffect(()=>{

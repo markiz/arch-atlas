@@ -67,6 +67,51 @@ for wid,w in ways.items():
  geom={'type':'Polygon','coordinates':[coords]} if closed and kind in ('building','green','water') else {'type':'LineString','coordinates':coords}
  features.append({'type':'Feature','properties':props,'geometry':geom})
 
+# City-wide extract contains only mapped streets, public green areas and museums.
+city_extract=root/'raw/osm-tbilisi-selected.json'
+if city_extract.exists():
+ city_data=json.loads(city_extract.read_text())
+ local_ids={('node',x) for x in nodes}|{('way',x) for x in ways}|{('relation',x) for x in relations}
+ added=0
+ def city_coords(element):
+  return [[round(float(p['lon']),6),round(float(p['lat']),6)] for p in element.get('geometry',[])]
+ def polygon_center(ring):
+  area=0;cx=0;cy=0
+  for a,b in zip(ring,ring[1:]):
+   cross=a[0]*b[1]-b[0]*a[1];area+=cross;cx+=(a[0]+b[0])*cross;cy+=(a[1]+b[1])*cross
+  if abs(area)<1e-15:return [sum(p[0] for p in ring)/len(ring),sum(p[1] for p in ring)/len(ring)]
+  return [cx/(3*area),cy/(3*area)]
+ for element in city_data.get('elements',[]):
+  osm_type=element.get('type');osm_id=element.get('id')
+  if (osm_type,str(osm_id)) in local_ids:continue
+  tags=element.get('tags',{});kind=None;geometry=None;props={'osmId':f'{osm_type}/{osm_id}'}
+  if osm_type=='way' and tags.get('highway') in ('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian'):
+   coords=city_coords(element)
+   if len(coords)<2:continue
+   kind='road';props['class']=tags['highway'];geometry={'type':'LineString','coordinates':coords}
+   name=tags.get('name:ru') or tags.get('name') or tags.get('name:ka') or tags.get('name:en')
+   if name:props['name']=landmark_names.get(name,name)
+  elif osm_type=='way' and (tags.get('leisure') in ('park','garden') or tags.get('landuse')=='recreation_ground'):
+   coords=city_coords(element)
+   if len(coords)<4 or coords[0]!=coords[-1]:continue
+   kind='green';geometry={'type':'Polygon','coordinates':[coords]}
+  elif (tags.get('tourism')=='museum' or tags.get('amenity')=='museum'):
+   kind='landmark';props['category']='museum'
+   name=landmark_name(tags)
+   if name:props['name']=name
+   if 'lon' in element and 'lat' in element:point=[float(element['lon']),float(element['lat'])]
+   elif 'bounds' in element:
+    bounds=element['bounds'];point=[(bounds['minlon']+bounds['maxlon'])/2,(bounds['minlat']+bounds['maxlat'])/2]
+   else:
+    coords=city_coords(element)
+    if len(coords)<3:continue
+    point=polygon_center(coords if coords[0]==coords[-1] else coords+[coords[0]])
+   geometry={'type':'Point','coordinates':[round(float(point[0]),6),round(float(point[1]),6)]}
+  else:continue
+  props['kind']=kind
+  features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
+ print('City-wide streets, parks and museums added',added)
+
 def inside(p, poly):
  x,y=p;c=False
  for a,b in zip(poly,poly[1:]):
