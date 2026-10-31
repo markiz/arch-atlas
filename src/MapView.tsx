@@ -101,7 +101,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   labelCanvas.style.position='absolute';labelCanvas.style.pointerEvents='none';
   map.getPane('overlayPane')!.appendChild(labelCanvas);
   streetLabels.current.sort((a,b)=>Number(b.major)-Number(a.major));
-  let labelsEnabled=false;
+  let labelsEnabled=false,labelCache:{zoom:number;language:string;entries:{entry:typeof streetLabels.current[number];name:string}[]}|null=null;
   const drawLabels=()=>{
    const size=map.getSize(),ratio=window.devicePixelRatio||1;
    const padding=size.multiplyBy(.3),canvasSize=size.add(padding.multiplyBy(2));
@@ -113,17 +113,23 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
    const ctx=labelCanvas.getContext('2d');if(!ctx)return;
    ctx.scale(ratio,ratio);ctx.font='500 8.5px sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
    ctx.fillStyle='rgba(117,129,118,.75)';ctx.strokeStyle='rgba(255,254,248,.85)';ctx.lineWidth=3;ctx.lineJoin='round';
-   const zoom=map.getZoom(),occupied=new Set<string>();
-   for(const entry of streetLabels.current){
-    if(zoom<(entry.major?11.5:14))continue;
+   const zoom=map.getZoom();
+   if(!labelCache||labelCache.zoom!==zoom||labelCache.language!==languageRef.current){
+    const occupied=new Set<string>(),entries:{entry:typeof streetLabels.current[number];name:string}[]=[];
+    for(const entry of streetLabels.current){
+     if(zoom<(entry.major?11.5:14))continue;
+     // Resolve collisions in world coordinates, independent of the viewport.
+     const worldPoint=map.project(entry.latlng,zoom),name=entry.names[languageRef.current]||entry.fallback;
+     const radius=Math.max(ctx.measureText(name).width/2,10),cells:string[]=[];
+     for(let x=Math.floor((worldPoint.x-radius)/80);x<=Math.floor((worldPoint.x+radius)/80);x++)for(let y=Math.floor((worldPoint.y-10)/24);y<=Math.floor((worldPoint.y+10)/24);y++)cells.push(`${x}:${y}`);
+     if(cells.some(cell=>occupied.has(cell)))continue;
+     cells.forEach(cell=>occupied.add(cell));entries.push({entry,name});
+    }
+    labelCache={zoom,language:languageRef.current,entries};
+   }
+   for(const {entry,name} of labelCache.entries){
     const point=map.latLngToContainerPoint(entry.latlng).add(padding);
     if(point.x<0||point.y<0||point.x>canvasSize.x||point.y>canvasSize.y)continue;
-    const name=entry.names[languageRef.current]||entry.fallback;
-    const width=ctx.measureText(name).width, radius=Math.max(width/2,10);
-    const cells:string[]=[];
-    for(let x=Math.floor((point.x-radius)/80);x<=Math.floor((point.x+radius)/80);x++)for(let y=Math.floor((point.y-10)/24);y<=Math.floor((point.y+10)/24);y++)cells.push(`${x}:${y}`);
-    if(cells.some(cell=>occupied.has(cell)))continue;
-    cells.forEach(cell=>occupied.add(cell));
     ctx.save();ctx.translate(point.x,point.y);ctx.rotate(entry.angle*Math.PI/180);ctx.strokeText(name,0,0);ctx.fillText(name,0,0);ctx.restore();
    }
   };
