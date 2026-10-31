@@ -3,6 +3,8 @@ REMOTE ?= origin
 BRANCH ?= gh-pages
 CODEX_VOLUME ?= atlas-codex-home
 DEV_PORT ?= 5173
+ENV_FILE ?= .env
+ENV_FILE_ARGS = $(if $(wildcard $(ENV_FILE)),--env-file "$(ENV_FILE)")
 GIT_NAME ?= $(shell git config user.name)
 GIT_EMAIL ?= $(shell git config user.email)
 
@@ -15,6 +17,7 @@ dev: image
 # Порт открыт только на loopback хоста; внутри контейнера Vite слушает 5173.
 # Опрос файлов надёжно замечает изменения через Docker bind mount.
 	docker run --rm -it \
+		$(ENV_FILE_ARGS) \
 		-p 127.0.0.1:$(DEV_PORT):5173 \
 		--user "$$(id -u):$$(id -g)" \
 		--mount type=bind,src="$$(pwd)",dst=/workspace \
@@ -24,6 +27,7 @@ dev: image
 
 build:
 	docker run \
+		$(ENV_FILE_ARGS) \
 		--user "$$(id -u):$$(id -g)" \
 		--mount type=bind,src="$$(pwd)",dst=/workspace \
 		-e HOME=/tmp \
@@ -40,6 +44,7 @@ push:
 
 codex:
 	docker run -it \
+		$(ENV_FILE_ARGS) \
 		--read-only \
 		--cap-drop=ALL \
 		--security-opt=no-new-privileges:true \

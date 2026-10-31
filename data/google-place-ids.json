@@ -23,5 +23,420 @@
     "id": "osm-188447537",
     "placeId": "ChIJrbVtRtcMREARcfoT6Gn1lw0",
     "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/blue-monastery?to=place.ChIJrbVtRtcMREARcfoT6Gn1lw0"
+  },
+  {
+    "id": "rustaveli",
+    "placeId": "ChIJc6qzBOYMREAR1-UFqhDaN88",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Rustaveli%20National%20Theatre%2C%2017%20Shota%20Rustaveli%20Ave%2C%20Tbilisi%2C%20Georgia&query_place_id=ChIJc6qzBOYMREAR1-UFqhDaN88"
+  },
+  {
+    "id": "anchiskhati",
+    "placeId": "ChIJ-wA0IOUMREARoqE9lcQgX-I",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Anchiskhati%20Basilica&query_place_id=ChIJ-wA0IOUMREARoqE9lcQgX-I"
+  },
+  {
+    "id": "sioni",
+    "placeId": "ChIJPzumeQANREARbWArJ_IYiNY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Sioni%20Church&query_place_id=ChIJPzumeQANREARbWArJ_IYiNY"
+  },
+  {
+    "id": "metekhi",
+    "placeId": "ChIJrZZTWvcMREARrnw5_7dNJwo",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Metekhi%20church%20of%20the%20Nativity%20of%20the%20Mother%20of%20God&query_place_id=ChIJrZZTWvcMREARrnw5_7dNJwo"
+  },
+  {
+    "id": "synagogue",
+    "placeId": "ChIJ3YJOvb10REAR8nPTUSY8n3k",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Great%20Synagogue&query_place_id=ChIJ3YJOvb10REAR8nPTUSY8n3k"
+  },
+  {
+    "id": "osm-1125780341",
+    "placeId": "ChIJlxqoN-UMREARM9uGDwAs9WU",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Kari%20church%20of%20St.%20George&query_place_id=ChIJlxqoN-UMREARM9uGDwAs9WU"
+  },
+  {
+    "id": "osm-1185163208",
+    "placeId": "ChIJUyEzScANREARtNLNWv4hOCI",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=%E1%83%9B%E1%83%94%E1%83%9A%E1%83%98%E1%83%A5%20%E1%83%90%E1%83%96%E1%83%90%E1%83%A0%E1%83%98%E1%83%90%E1%83%9C%E1%83%AA%E1%83%98%E1%83%A1%20%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98%20/%20Melik%20Azaryants%20House&query_place_id=ChIJUyEzScANREARtNLNWv4hOCI"
+  },
+  {
+    "id": "osm-1206891441",
+    "placeId": "EiYxOCBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdAPIRq6fmvpEBIqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=18%20Lado%20Asatiani%20St&query_place_id=EiYxOCBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdAPIRq6fmvpEBIqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+  },
+  {
+    "id": "osm-1206891444",
+    "placeId": "ChIJV4AAUfEMREARTXqOCmhXuaQ",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Ateshgah%20Zoroastrian%20Temple&query_place_id=ChIJV4AAUfEMREARTXqOCmhXuaQ"
+  },
+  {
+    "id": "osm-1362020659",
+    "placeId": "ChIJlVUEetsMREARceSO4a05swk",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Georgian%20National%20Academy%20of%20Sciences&query_place_id=ChIJlVUEetsMREARceSO4a05swk"
+  },
+  {
+    "id": "osm-163799009",
+    "placeId": "ChIJbUQYX_EMREAR8qLNIb29COc",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Upper%20Betlemi%20Church&query_place_id=ChIJbUQYX_EMREAR8qLNIb29COc"
+  },
+  {
+    "id": "osm-190599810",
+    "placeId": "ChIJSbTXRt0MREARY5GX-OJMdzc",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=14%20Alexander%20Griboedov%20St&query_place_id=ChIJSbTXRt0MREARY5GX-OJMdzc"
+  },
+  {
+    "id": "osm-217728433",
+    "placeId": "ChIJg1HMut8MREARNI78GU5Fn50",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=36%20Davit%20Aghmashenebeli%20Ave&query_place_id=ChIJg1HMut8MREARNI78GU5Fn50"
+  },
+  {
+    "id": "osm-506741615",
+    "placeId": "ChIJS6NQXfYMREAR-bkAjLNnw88",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Tbilisi%20Juma%20Mosque%20%2A&query_place_id=ChIJS6NQXfYMREAR-bkAjLNnw88"
+  },
+  {
+    "id": "osm-509980611",
+    "placeId": "ChIJg0S1bd0MREARE34Zx0R6oos",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=26%20Shota%20Rustaveli%20Ave&query_place_id=ChIJg0S1bd0MREARE34Zx0R6oos"
+  },
+  {
+    "id": "osm-565074603",
+    "placeId": "ChIJf7LrFOkMREARvnn9fuZCNhM",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=St.%20Nino%27s%20Church&query_place_id=ChIJf7LrFOkMREARvnn9fuZCNhM"
+  },
+  {
+    "id": "osm-56677915",
+    "placeId": "ChIJs4K6yucMREARs7DDurLb3bk",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=National%20Gallery&query_place_id=ChIJs4K6yucMREARs7DDurLb3bk"
+  },
+  {
+    "id": "osm-65333597",
+    "placeId": "ChIJ22N3D5UNREARK7rOh6OmOQU",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Orbeliani%20Palace&query_place_id=ChIJ22N3D5UNREARK7rOh6OmOQU"
+  },
+  {
+    "id": "osm-65350538",
+    "placeId": "ChIJZcmtXwANREARBw8MvduSn-I",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Lower%20Betlemi%20Church&query_place_id=ChIJZcmtXwANREARBw8MvduSn-I"
+  },
+  {
+    "id": "osm-78067045",
+    "placeId": "ChIJM0WRENgMREARODV9JeWQbvI",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Kote%20Marjanishvili%20Theater&query_place_id=ChIJM0WRENgMREARODV9JeWQbvI"
+  },
+  {
+    "id": "osm-78498522",
+    "placeId": "ChIJq0pLhegNREARnBCkG_hBWI4",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Hotel%20London&query_place_id=ChIJq0pLhegNREARnBCkG_hBWI4"
+  },
+  {
+    "id": "osm-1125014792",
+    "placeId": "ChIJI2eJ5NwMREARQcLwL4Zcig8",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=27%20Alexander%20Griboedov%20St&query_place_id=ChIJI2eJ5NwMREARQcLwL4Zcig8"
+  },
+  {
+    "id": "osm-1126053463",
+    "placeId": "EiYxNyBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBEqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=17%20Lado%20Asatiani%20St&query_place_id=EiYxNyBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBEqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+  },
+  {
+    "id": "osm-1206891442",
+    "placeId": "EiYyNiBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBoqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=26%20Lado%20Asatiani%20St&query_place_id=EiYyNiBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBoqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+  },
+  {
+    "id": "osm-1206891467",
+    "placeId": "ChIJ9SEqafIMREARQwDyY2QLxik",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=44%20Lado%20Asatiani%20St&query_place_id=ChIJ9SEqafIMREARQwDyY2QLxik"
+  },
+  {
+    "id": "osm-1206891469",
+    "placeId": "ChIJFT3AZfIMREARYnrtO_4vu88",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=46%20Lado%20Asatiani%20St&query_place_id=ChIJFT3AZfIMREARYnrtO_4vu88"
+  },
+  {
+    "id": "osm-1206891470",
+    "placeId": "ChIJD3GMNvIMREAR8wtAEz2Cs9c",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=48%20Lado%20Asatiani%20St&query_place_id=ChIJD3GMNvIMREAR8wtAEz2Cs9c"
+  },
+  {
+    "id": "osm-1207148751",
+    "placeId": "ChIJQz7aV_YMREARL2WhEM-MPF8",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=25%20Abano%20St&query_place_id=ChIJQz7aV_YMREARL2WhEM-MPF8"
+  },
+  {
+    "id": "osm-1234146272",
+    "placeId": "ChIJycPoZ9sMREARPFLZwEh1bfY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=10%20Ekaterine%20Gabashvili%20St&query_place_id=ChIJycPoZ9sMREARPFLZwEh1bfY"
+  },
+  {
+    "id": "osm-1327116108",
+    "placeId": "Ei8yMywgMzcgTGFkbyBBc2F0aWFuaSBTdCwgVCdiaWxpc2kgMDEwNSwgR2VvcmdpYSIeGhwKFgoUChIJd2Avf-0MREARK44BA5JREh8SAjIz",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=23%2C%2037%20Lado%20Asatiani%20St&query_place_id=Ei8yMywgMzcgTGFkbyBBc2F0aWFuaSBTdCwgVCdiaWxpc2kgMDEwNSwgR2VvcmdpYSIeGhwKFgoUChIJd2Avf-0MREARK44BA5JREh8SAjIz"
+  },
+  {
+    "id": "osm-1361923567",
+    "placeId": "ChIJWc0_v-8MREAR5_gsVFyL9uw",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=3%20Aleksandr%20Pushkin%20St&query_place_id=ChIJWc0_v-8MREAR5_gsVFyL9uw"
+  },
+  {
+    "id": "osm-168100736",
+    "placeId": "ChIJ2wkFfd0MREARchAmQTxqpAk",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=19%20Shota%20Rustaveli%20Ave&query_place_id=ChIJ2wkFfd0MREARchAmQTxqpAk"
+  },
+  {
+    "id": "osm-168100739",
+    "placeId": "ChIJ2xVyDt0MREARydw0x4mnApk",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=28%20Shota%20Rustaveli%20Ave&query_place_id=ChIJ2xVyDt0MREARydw0x4mnApk"
+  },
+  {
+    "id": "osm-188447908",
+    "placeId": "ChIJASI4JdoMREARkxa5kR27FkY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=12%20Leo%20Kiacheli%20St&query_place_id=ChIJASI4JdoMREARkxa5kR27FkY"
+  },
+  {
+    "id": "osm-246756387",
+    "placeId": "Ei4zMyBVc2hhbmdpIENoa2hlaWR6ZSBTdHJlZXQsIFQnYmlsaXNpLCBHZW9yZ2lhIjASLgoUChIJ6Xh669cMREARGRRLRk2_DGgQISoUChIJ6Xh669cMREARRK9W-odW8eE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=33%20Ushangi%20Chkheidze%20Street&query_place_id=Ei4zMyBVc2hhbmdpIENoa2hlaWR6ZSBTdHJlZXQsIFQnYmlsaXNpLCBHZW9yZ2lhIjASLgoUChIJ6Xh669cMREARGRRLRk2_DGgQISoUChIJ6Xh669cMREARRK9W-odW8eE"
+  },
+  {
+    "id": "osm-246782186",
+    "placeId": "ChIJqRAqe-AMREARhSTMMLGOvdY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=2/8%20Davit%20Aghmashenebeli%20Ave&query_place_id=ChIJqRAqe-AMREARhSTMMLGOvdY"
+  },
+  {
+    "id": "osm-294972638",
+    "placeId": "ChIJ3fA1IN0MREARvbE9f1byI24",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=20%20Alexander%20Griboedov%20St&query_place_id=ChIJ3fA1IN0MREARvbE9f1byI24"
+  },
+  {
+    "id": "osm-506741623",
+    "placeId": "ChIJx22R-PYMREARPzi3BxwlPjI",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=23%20Abano%20St&query_place_id=ChIJx22R-PYMREARPzi3BxwlPjI"
+  },
+  {
+    "id": "osm-524387106",
+    "placeId": "ChIJfQOLgvIMREARug1Hq95xK4U",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=58%20Lado%20Asatiani%20St&query_place_id=ChIJfQOLgvIMREARug1Hq95xK4U"
+  },
+  {
+    "id": "osm-65333609",
+    "placeId": "ChIJCbPR0-YMREAR8tliwUa435A",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=27%20Atoneli%20St&query_place_id=ChIJCbPR0-YMREAR8tliwUa435A"
+  },
+  {
+    "id": "osm-65337332",
+    "placeId": "ChIJWVAOaO8MREARWtnOPW1o1mM",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=1%20Shota%20Rustaveli%20Ave&query_place_id=ChIJWVAOaO8MREARWtnOPW1o1mM"
+  },
+  {
+    "id": "osm-78075110",
+    "placeId": "ChIJ3eP8Tt4MREARsBcVAwvbAIM",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=2%20Dimitri%20Uznadze%20St&query_place_id=ChIJ3eP8Tt4MREARsBcVAwvbAIM"
+  },
+  {
+    "id": "osm-555209477",
+    "placeId": "ChIJSb4mpu0MREARM1N4EGbqXiA",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Anna%20Madatova%20House&query_place_id=ChIJSb4mpu0MREARM1N4EGbqXiA"
+  },
+  {
+    "id": "osm-58071533",
+    "placeId": "EiYyOSBNZXJhYiBLb3N0YXZhIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCU2e6SjRDERAEX5jTCTYmGnkEB0qFAoSCasTwrPWDERAEVqmB3v2jrLR",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=29%20Merab%20Kostava%20St&query_place_id=EiYyOSBNZXJhYiBLb3N0YXZhIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCU2e6SjRDERAEX5jTCTYmGnkEB0qFAoSCasTwrPWDERAEVqmB3v2jrLR"
+  },
+  {
+    "id": "osm-1125012293",
+    "placeId": "ChIJo5TgY90MREARi9Amm8haBBU",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=22%20Shota%20Rustaveli%20Ave&query_place_id=ChIJo5TgY90MREARi9Amm8haBBU"
+  },
+  {
+    "id": "osm-1234448346",
+    "placeId": "ChIJy3eTA9sMREARG01VR-r42Gw",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=1%20Mikheil%20Zandukeli%20St&query_place_id=ChIJy3eTA9sMREARG01VR-r42Gw"
+  },
+  {
+    "id": "osm-1381834674",
+    "placeId": "ChIJryvM8ycNREAR8Ho_8j3fnUE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=18%20Kote%20Marjanishvili%20St&query_place_id=ChIJryvM8ycNREAR8Ho_8j3fnUE"
+  },
+  {
+    "id": "osm-287449109",
+    "placeId": "ChIJNcNud9AMREARUVZDA6qzF6c",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=10%20Dimitri%20Bakradze%20St&query_place_id=ChIJNcNud9AMREARUVZDA6qzF6c"
+  },
+  {
+    "id": "osm-641459404",
+    "placeId": "ChIJXU8MOfIMREAR4iOIK5_arow",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=34%20Lado%20Asatiani%20St&query_place_id=ChIJXU8MOfIMREAR4iOIK5_arow"
+  },
+  {
+    "id": "osm-641459408",
+    "placeId": "ChIJyfWLMPIMREAR8OM49aI4KuY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=30%20Lado%20Asatiani%20St&query_place_id=ChIJyfWLMPIMREAR8OM49aI4KuY"
+  },
+  {
+    "id": "osm-1105505029",
+    "placeId": "ChIJn0LGpzINREARk3OGD1U-LQY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%94%E1%83%91%E1%83%98%E1%83%A1%20%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98%20%28The%20Gabashvili%20House%29&query_place_id=ChIJn0LGpzINREARk3OGD1U-LQY"
+  },
+  {
+    "id": "osm-661361748",
+    "placeId": "ChIJ_bmPXuUMREARfLc4nVUa4mE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Sourp%20Nshan%20Church&query_place_id=ChIJ_bmPXuUMREARfLc4nVUa4mE"
+  },
+  {
+    "id": "osm-416164457",
+    "placeId": "ChIJ7QQYLPIMREARIa_pdffODXs",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Sixth%20Authorized%20School&query_place_id=ChIJ7QQYLPIMREARIa_pdffODXs"
+  },
+  {
+    "id": "osm-188447543",
+    "placeId": "ChIJP3QEGtwMREAR46tDMOwmZCs",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=St.%20John%20the%20Evangelist%20temple%20of%20Vera&query_place_id=ChIJP3QEGtwMREAR46tDMOwmZCs"
+  },
+  {
+    "id": "osm-56677926",
+    "placeId": "ChIJKxalBOYMREARoXwT5WMyJ-E",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Rustaveli%20National%20Theatre&query_place_id=ChIJKxalBOYMREARoXwT5WMyJ-E"
+  },
+  {
+    "id": "osm-496798210",
+    "placeId": "ChIJycGCGuwMREARO1SgSWr3QTs",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=%E1%83%93%E1%83%90%E1%83%9C%E1%83%98%E1%83%94%E1%83%9A%20%E1%83%AD%E1%83%9D%E1%83%9C%E1%83%A5%E1%83%90%E1%83%AB%E1%83%98%E1%83%A1%20%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90%2C%2029&query_place_id=ChIJycGCGuwMREARO1SgSWr3QTs"
+  },
+  {
+    "id": "osm-641459416",
+    "placeId": "ChIJkVm8zfMMREARop27mh0ggIE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=28%20Lado%20Asatiani%20St&query_place_id=ChIJkVm8zfMMREARop27mh0ggIE"
+  },
+  {
+    "id": "osm-1123513785",
+    "placeId": "ChIJj3HS0NwMREARhphoFXmIFck",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=3%20Tamar%20Abakelia%20St&query_place_id=ChIJj3HS0NwMREARhphoFXmIFck"
+  },
+  {
+    "id": "osm-153064841",
+    "placeId": "ChIJcz-2vd0MREAR1m5tlHyOc7M",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=42%20Revaz%20Tabukashvili%20St&query_place_id=ChIJcz-2vd0MREAR1m5tlHyOc7M"
+  },
+  {
+    "id": "osm-336992379",
+    "placeId": "ChIJcXFgcd8MREARNUGQk6VrenE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Davit%20Aghmashenebeli/Giorgi%20Mazniashvili%20Street&query_place_id=ChIJcXFgcd8MREARNUGQk6VrenE"
+  },
+  {
+    "id": "kashveti",
+    "placeId": "ChIJqYYLN-YMREARQ4iJrBAtGX0",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Kashueti%20St.%20George%20Church&query_place_id=ChIJqYYLN-YMREARQ4iJrBAtGX0"
+  },
+  {
+    "id": "osm-555200462",
+    "placeId": "ChIJE4G37vsNREARPRN0FS-eVxc",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=House%20of%20Seylanov%20brothers&query_place_id=ChIJE4G37vsNREARPRN0FS-eVxc"
+  },
+  {
+    "id": "osm-372181447",
+    "placeId": "ChIJ8SYHl1kNREARe4HBfO84aDI",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=Qarvasla%20Hotel&query_place_id=ChIJ8SYHl1kNREARe4HBfO84aDI"
+  },
+  {
+    "id": "osm-1193859177",
+    "placeId": "ChIJRyNBJPIMREARH36Vv3JayWQ",
+    "sourceUrl": "https://maps.app.goo.gl/F3Jy2i2VbbtY66WV7"
+  },
+  {
+    "id": "osm-1126044267",
+    "placeId": "ChIJEzFLdPEMREARTOSW6AQbPsg",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.690067%2C44.8042808&query_place_id=ChIJEzFLdPEMREARTOSW6AQbPsg"
+  },
+  {
+    "id": "osm-1206891466",
+    "placeId": "ChIJQ9kWQ_IMREARDhtfHcQHgM0",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6891689%2C44.7997537&query_place_id=ChIJQ9kWQ_IMREARDhtfHcQHgM0"
+  },
+  {
+    "id": "osm-65254634",
+    "placeId": "ChIJEzVn6NwMREARs_OwEpxGuSE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7014051%2C44.7928919&query_place_id=ChIJEzVn6NwMREARs_OwEpxGuSE"
+  },
+  {
+    "id": "osm-1276202716",
+    "placeId": "ChIJUbOzfPYMREAR8yh5gMYVBEE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6871297%2C44.8092177&query_place_id=ChIJUbOzfPYMREAR8yh5gMYVBEE"
+  },
+  {
+    "id": "osm-1328908724",
+    "placeId": "ChIJc1VFX90MREARbb3cWqWu8dk",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6995607%2C44.7956954&query_place_id=ChIJc1VFX90MREARbb3cWqWu8dk"
+  },
+  {
+    "id": "osm-555209502",
+    "placeId": "ChIJs1jK-e0MREARsR0TfcF_Ps8",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6909908%2C44.7997011&query_place_id=ChIJs1jK-e0MREARsR0TfcF_Ps8"
+  },
+  {
+    "id": "osm-555209508",
+    "placeId": "ChIJbb6hXfIMREARrrzTqx7X4Ek",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6890821%2C44.7993765&query_place_id=ChIJbb6hXfIMREARrrzTqx7X4Ek"
+  },
+  {
+    "id": "osm-77893811",
+    "placeId": "ChIJI-qg7PAMREARMfcN62Phwg4",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6910646%2C44.8078514&query_place_id=ChIJI-qg7PAMREARMfcN62Phwg4"
+  },
+  {
+    "id": "osm-1206434333",
+    "placeId": "ChIJ0ZQcuvoMREARmOUlkCPNMxA",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6936952%2C44.8071757&query_place_id=ChIJ0ZQcuvoMREARmOUlkCPNMxA"
+  },
+  {
+    "id": "osm-1206891465",
+    "placeId": "ChIJ5Z1PQPIMREARGwmDfRrkb34",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6894826%2C44.8001726&query_place_id=ChIJ5Z1PQPIMREARGwmDfRrkb34"
+  },
+  {
+    "id": "osm-148245098",
+    "placeId": "ChIJL8ZyOOkMREARnPmR7bSFBFI",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6946936%2C44.7949852&query_place_id=ChIJL8ZyOOkMREARnPmR7bSFBFI"
+  },
+  {
+    "id": "osm-190475822",
+    "placeId": "ChIJLfV1g9wMREAR1KzDltr5-1Q",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7025895%2C44.7917713&query_place_id=ChIJLfV1g9wMREAR1KzDltr5-1Q"
+  },
+  {
+    "id": "osm-246757191",
+    "placeId": "ChIJp4aNw98MREARWzq9AgDSAmE",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7038704%2C44.8029283&query_place_id=ChIJp4aNw98MREARWzq9AgDSAmE"
+  },
+  {
+    "id": "osm-35268996",
+    "placeId": "ChIJ6w-TieUMREARPjxJo_PMdT0",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6954499%2C44.8021691&query_place_id=ChIJ6w-TieUMREARPjxJo_PMdT0"
+  },
+  {
+    "id": "osm-641459412",
+    "placeId": "ChIJu7O5KvIMREARHeZwGTkbnc4",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6895069%2C44.8027493&query_place_id=ChIJu7O5KvIMREARHeZwGTkbnc4"
+  },
+  {
+    "id": "osm-75312921",
+    "placeId": "ChIJ9-QMNO4MREARgxVdTkJTQCY",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6927341%2C44.8015391&query_place_id=ChIJ9-QMNO4MREARgxVdTkJTQCY"
+  },
+  {
+    "id": "osm-75315573",
+    "placeId": "ChIJeyehYvIMREARlov_54XZI-w",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.6891052%2C44.798247&query_place_id=ChIJeyehYvIMREARlov_54XZI-w"
+  },
+  {
+    "id": "osm-246757162",
+    "placeId": "ChIJOVa9xt8MREARsXm3e_UqSao",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7039757%2C44.8027227&query_place_id=ChIJOVa9xt8MREARsXm3e_UqSao"
+  },
+  {
+    "id": "osm-316656009",
+    "placeId": "ChIJtel9YdsMREARub8Cqc0EJ1k",
+    "sourceUrl": "https://www.google.com/maps/search/?api=1&query=41.7025535%2C44.7908252&query_place_id=ChIJtel9YdsMREARub8Cqc0EJ1k"
   }
 ]
