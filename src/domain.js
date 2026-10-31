@@ -10,7 +10,12 @@ export const periods = [
 ];
 export function period(min,max){if(min===null||max===null)return periods.at(-1);const a=periods.find(x=>x.min!==null&&min>=x.min&&min<=x.max),b=periods.find(x=>x.min!==null&&max>=x.min&&max<=x.max);return a===b?a:{label:'Несколько периодов',color:'#999b91'}}
 export function normalize(s){return (s||'').normalize('NFC').toLocaleLowerCase('ru').replaceAll('ё','е').replace(/[.,:;«»"'’()\-–—/]/g,' ').replace(/\s+/g,' ').trim()}
+export function styleEntries(building,language='ru'){
+ const ids=(building.styleId||'undetermined').split('+');
+ const labels=(building.styles?.[language]||building.style||ids.join(', ')).split(/,\s*/);
+ return ids.map((id,index)=>({id,label:labels[index]||id}));
+}
 export function filterBuildings(buildings,f){
  const terms=normalize(f.query).split(' ').filter(Boolean); const from=f.from===''?-Infinity:Number(f.from),to=f.to===''?Infinity:Number(f.to); const dateActive=f.from!==''||f.to!==''; if(Number.isNaN(from)||Number.isNaN(to)||from>to)return [];
- return buildings.filter(b=>{const hay=normalize([b.name,b.nameKa,b.nameEn,b.nameUk,...Object.values(b.names||{}),b.address,b.district,...Object.values(b.districts||{}),b.style,...Object.values(b.styles||{}),...b.architects,...Object.values(b.architectsByLanguage||{}).flat()].join(' '));return terms.every(t=>hay.includes(t)) && (!dateActive||(b.minYear!==null&&b.minYear<=to&&b.maxYear>=from)) && (!f.architect||(f.architect==='unknown'?b.architects.length===0:b.architectIds.includes(f.architect))) && (!f.style||f.style===b.styleId)})
+ return buildings.filter(b=>{const hay=normalize([b.name,b.nameKa,b.nameEn,b.nameUk,...Object.values(b.names||{}),b.address,b.district,...Object.values(b.districts||{}),b.style,...Object.values(b.styles||{}),...b.architects,...Object.values(b.architectsByLanguage||{}).flat()].join(' '));const architects=Array.isArray(f.architect)?f.architect:(f.architect?[f.architect]:[]),styles=Array.isArray(f.style)?f.style:(f.style?[f.style]:[]),buildingStyles=(b.styleId||'undetermined').split('+');return terms.every(t=>hay.includes(t)) && (!dateActive||(b.minYear!==null&&b.minYear<=to&&b.maxYear>=from)) && (!architects.length||architects.some(id=>id==='unknown'?b.architects.length===0:b.architectIds.includes(id))) && (!styles.length||styles.some(id=>buildingStyles.includes(id)))})
 }
