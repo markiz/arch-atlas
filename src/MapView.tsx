@@ -21,9 +21,25 @@ export default function MapView({buildings,basemap,selected,onSelect,focus,reset
   const layer=(kind:string,style:(f:any)=>L.PathOptions)=>L.geoJSON(basemap,{renderer:canvas,interactive:false,filter:f=>f.properties?.kind===kind,style} as L.GeoJSONOptions).addTo(map);
   layer('green',()=>({color:'#e0e8d8',weight:1,fillColor:'#e0e8d8',fillOpacity:1}));
   layer('water',()=>({color:'#a6c2c1',weight:4,fillColor:'#b7d0ce',fillOpacity:1}));
-  layer('building',()=>({color:'#d7d8ce',weight:.65,fillColor:'#dedfd5',fillOpacity:.7}));
+  layer('building',()=>({color:'#c9cdc1',weight:.65,fillColor:'#dedfd5',fillOpacity:.48}));
   layer('road',f=>({color:['primary','secondary','trunk','tertiary'].includes(f.properties?.class)?'#fffdf7':'#fbfaf4',weight:['primary','secondary','trunk'].includes(f.properties?.class)?3.3:1.7,opacity:1}));
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,keepBuffer:2,updateWhenIdle:true,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors'}).addTo(map);
+  map.attributionControl.addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors');
+  const roadFeatures=basemap.features.filter(f=>f.properties?.kind==='road'&&typeof f.properties?.name==='string'&&f.properties.name.trim());
+  const roadLength=(f:typeof roadFeatures[number])=>{
+   const lines=f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.type==='MultiLineString'?f.geometry.coordinates:[];
+   return lines.reduce((total,line)=>total+line.slice(1).reduce((sum,p,i)=>sum+Math.hypot(p[0]-line[i][0],p[1]-line[i][1]),0),0);
+  };
+  const namedRoads=new Map<string,typeof roadFeatures[number]>();
+  for(const feature of roadFeatures){const name=String(feature.properties.name).trim(),current=namedRoads.get(name);if(!current||roadLength(feature)>roadLength(current))namedRoads.set(name,feature)}
+  const streetLabels=L.layerGroup().addTo(map);
+  for(const feature of namedRoads.values()){
+   const line=L.geoJSON(feature as GeoJSON.Feature,{interactive:false}).getLayers()[0] as L.Layer & {getBounds?:()=>L.LatLngBounds};
+   if(!line.getBounds)continue;
+   const center=line.getBounds().getCenter();
+   L.tooltip({permanent:true,direction:'center',className:'street-label',opacity:.9}).setLatLng(center).setContent(String(feature.properties.name)).addTo(streetLabels);
+  }
+  const updateStreetLabels=()=>{if(map.getZoom()>=14){if(!map.hasLayer(streetLabels))streetLabels.addTo(map)}else if(map.hasLayer(streetLabels))map.removeLayer(streetLabels)};
+  map.on('zoomend',updateStreetLabels);updateStreetLabels();
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
   return()=>{map.remove();mapRef.current=null;objects.current=null;position.current=null};
  },[basemap]);

@@ -21,7 +21,10 @@ for wid,w in ways.items():
  elif tags.get('leisure') in ('park','garden') or tags.get('landuse') in ('grass','forest','recreation_ground') or tags.get('natural') in ('wood','grassland'):kind='green'
  if not kind:continue
  props={'kind':kind}
- if kind=='road':props['class']=tags['highway']
+ if kind=='road':
+  props['class']=tags['highway']
+  name=tags.get('name:ru') or tags.get('name') or tags.get('name:ka')
+  if name:props['name']=name
  # Exclude extremely small generic building footprints to keep the static map light.
  if kind=='building':
   xs=[p[0] for p in coords];ys=[p[1] for p in coords]
