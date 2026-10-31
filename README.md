@@ -40,6 +40,7 @@ npm run dev
 - `data/editorial_sources.json`, `data/gallery-sources.json` и `data/curated-extra-photos.json` — атрибуции и пути медиа.
 - `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` — сборка объектов и подложки; `scripts/create-manifest.mjs` — размеры и SHA-256.
 - `scripts/queue_collect.py`, `scripts/queue_report.py` и `scripts/validate_cards.py` — сбор фактов по очереди, отчёт и проверка карточек; работают с `work/`, не меняя `data/`.
+- `scripts/fetch-selected-photos.py` и `scripts/fetch-fallback-photos.py` — свободные фото Commons и, при их отсутствии, низкокачественные фото реестра с явной пометкой «лицензия не установлена».
 - `scripts/build-heritage-extra.py` и `resolve-geometries.py` используются только при повторной подготовке исходных геоданных и дополнительно требуют Python-пакет Shapely.
 
 Чтобы пересоздать данные из приложенных OSM-выгрузок и локальных редакционных файлов, выполните `python3 scripts/build-data.py`, затем `npm run build`. Скрипты загрузки предоставлены для исследования и требуют сети; повторная выгрузка внешних источников может изменить исходные данные.

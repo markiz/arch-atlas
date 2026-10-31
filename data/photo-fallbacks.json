@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "items": {
+    "osm-415940826": {
+      "photo": "https://memkvidreoba.gov.ge:60/Files?id=74475_4B44AA90-F019-471F-AC86-A2B77A17BD72",
+      "record": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3257",
+      "note": "Фото реестра памятников; автор и лицензия не установлены"
+    },
+    "osm-282713325": {
+      "photo": "https://memkvidreoba.gov.ge:60/Files?id=75960_D68FA031-6726-424D-BF34-BC959076D7BA",
+      "record": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3567",
+      "note": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  }
+}
