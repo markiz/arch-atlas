@@ -89,8 +89,19 @@ def year_is_numeric(value):
     return bool(re.search(r'(?<!\d)(?:1[0-9]{3}|20[0-9]{2})(?!\d)', str(value or '')))
 
 
-def build_report(force=False):
-    report_path = ROOT / 'docs/research-next-200.md'
+def read_prior_queue(path):
+    """Registry ids and OSM ways from a previous queue report."""
+    text = path.read_text(encoding='utf-8')
+    registry_ids, way_ids = set(), set()
+    for match in re.finditer(r'^\|\s*\d+\s*\|\s*(\d+)\s*\|[^|]*\|\s*\[way/(\d+)\]', text, re.MULTILINE):
+        registry_ids.add(int(match.group(1)))
+        way_ids.add(match.group(2))
+    return registry_ids, way_ids
+
+
+def build_report(force=False, output=None, exclude_queues=(), label=None):
+    report_path = (ROOT / output) if output else ROOT / 'docs/research-next-200.md'
+    report_path = report_path.resolve()
     if report_path.exists() and not force:
         raise SystemExit('Report exists; use --force only after preserving the current research snapshot')
     registry = registry_records()
@@ -117,8 +128,24 @@ def build_report(force=False):
     geometry_indexes = {id(geom): index for index, geom in enumerate(geometries)}
     existing_points = [Point(*building['coordinates']) for building in atlas]
     existing_polygons = [shape(building['geometry']) for building in atlas]
-    existing_tree = STRtree(existing_polygons)
     existing_ways = {building.get('osmId') for building in atlas}
+
+    excluded_registry, excluded_ways = set(), set()
+    for queue_path in exclude_queues:
+        registry_ids, way_ids = read_prior_queue(ROOT / queue_path)
+        excluded_registry |= registry_ids
+        excluded_ways |= {f'way/{way}' for way in way_ids}
+    outline_by_way = {
+        props.get('osmId'): geom
+        for geom, props in zip(geometries, properties)
+        if props.get('osmId')
+    }
+    for way in sorted(excluded_ways):
+        geom = outline_by_way.get(way)
+        if geom is not None:
+            existing_polygons.append(geom)
+    existing_tree = STRtree(existing_polygons)
+    existing_ways |= excluded_ways
 
     eligible, exclusions = [], Counter()
     used_ways = set()
@@ -126,6 +153,10 @@ def build_report(force=False):
     match_progress.start(f'{len(registry)} records, {len(geometries):,} valid outlines')
     for record in registry:
         record_id = record.get('ObjectID', '?')
+        if int(record_id) in excluded_registry:
+            exclusions['registry_id_in_prior_queue'] += 1
+            match_progress.advance(f'record {record_id}: in prior queue')
+            continue
         if 'არქიტექტურ' not in str(record.get('Classification') or '').lower():
             exclusions['classification_not_architecture'] += 1
             match_progress.advance(f'record {record_id}: not architecture')
@@ -147,13 +178,13 @@ def build_report(force=False):
         geom = min(nearby, key=lambda candidate: candidate.distance(point))
         way = properties[geometry_indexes[id(geom)]].get('osmId')
         if way in existing_ways:
-            exclusions['existing_atlas_osm_id'] += 1
-            match_progress.advance(f'record {record_id}: existing OSM id')
+            exclusions['existing_or_prior_osm_id'] += 1
+            match_progress.advance(f'record {record_id}: existing or prior OSM id')
             continue
         if any(geom.intersection(existing).area > 0.05 * min(geom.area, existing.area)
                for existing in existing_tree.query(geom)):
-            exclusions['overlapping_existing_atlas_outline'] += 1
-            match_progress.advance(f'record {record_id}: overlaps atlas outline')
+            exclusions['overlapping_existing_or_prior_outline'] += 1
+            match_progress.advance(f'record {record_id}: overlaps existing/prior outline')
             continue
         if not way or way in used_ways:
             exclusions['duplicate_or_missing_osm_outline'] += 1
@@ -201,20 +232,26 @@ def build_report(force=False):
         gaps['commons_reference_missing'] += not bool(tags.get('wikimedia_commons'))
         gaps['outline_match_over_5m'] += row['_distance_m'] > 5
 
+    queue_title = label or 'следующие 200 объектов Тбилиси'
+    prior_note = ''
+    if exclude_queues:
+        prior_note = f'- Исключены все записи предыдущих очередей: {", ".join(f"`{path}`" for path in exclude_queues)}. Это не даёт повторно отобрать уже разобранных кандидатов.\n'
     lines = [
-        '# Исследовательская очередь: следующие 200 объектов Тбилиси',
+        f'# Исследовательская очередь: {queue_title}',
         '',
-        '**Статус:** очередь кандидатов для редакционной проверки; эти записи ещё не добавлены в каталог атласа.',
+        '**Статус:** очередь кандидатов для редакционной проверки; эти записи ещё не добавлены в каталог атласа и не разбирались.',
         '',
-        'Первые результаты исследования и Google API: [отдельные заметки](research-next-200-findings.md).',
+        ('Предыдущая очередь: [research-next-200.md](research-next-200.md), её итоги — в [регистре](research-queue-progress.md) '
+         'и [отчёте волны 4](research-queue-wave-4.md). Эта очередь только подготовлена: карточек из неё ещё нет, факты не проверялись.'),
         '',
         f"**Снимок:** {datetime.now(timezone.utc).date().isoformat()} UTC. Контуры: © участники OpenStreetMap, [ODbL](https://www.openstreetmap.org/copyright).",
         '',
         '## Основание и метод',
         '',
         f'- В официальном реестре найдено записей по Тбилиси: **{len(registry)}**. Запрос: `Region=N\'თბილისი\'` к [слою недвижимых памятников](https://memkvidreoba.gov.ge/arcgisch/rest/services/CultureWMS/PS_ImmovableMonumentObjectP/MapServer/1).',
-        f'- Сопоставление выполнено с {len(outlines):,} контурами из локальной OSM-выгрузки `raw/osm-tbilisi-building-outlines.geojson` и 100 текущими карточками.',
+        f'- Сопоставление выполнено с {len(outlines):,} контурами из локальной OSM-выгрузки `raw/osm-tbilisi-building-outlines.geojson` и {len(atlas)} карточками атласа на момент отбора.',
         '- Отобраны записи с классификацией архитектуры, отдельным контуром OSM в радиусе примерно 17 м, без близкого совпадения или значительного пересечения с текущей карточкой атласа. Сначала взяты записи с конкретным названием и содержательным описанием.',
+        prior_note.rstrip('\n'),
         '- Сопоставление точки реестра с контуром автоматическое. Даже расстояние 0 м не подтверждает, что реестр и контур относятся к одному корпусу; каждую пару нужно проверить на карте и по адресу.',
         '- Официальные текстовые поля не перепечатываются в этом отчёте: условия повторного использования данных реестра не установлены. Идентификаторы нужны для открытия карточек источника.',
         '',
@@ -222,15 +259,15 @@ def build_report(force=False):
         '',
         '| Поле / проверка | Не хватает или нужно проверить | Что известно сейчас |',
         '|---|---:|---|',
-        f"| Адрес в реестре | {gaps['registry_address_missing']}/200 без адреса | Наличие поля не заменяет проверку адреса и перевод на русский, английский и украинский |",
-        f"| Датировка в реестре | {gaps['registry_date_missing']}/200 без `ExactDate`; {gaps['registry_date_without_numeric_year']}/200 без четырёхзначного года в строке | Год в строке также требует проверки: он может относиться к перестройке или диапазону |",
-        f"| Описание в реестре | {gaps['registry_description_missing']}/200 без описания | Тексты источника на грузинском требуют редакционной выжимки и перевода |",
-        f"| Номер реестра | {gaps['registry_number_missing']}/200 без `RegistryN` | `ObjectID` и ссылка на источник остаются доступны |",
-        f"| Архитектор | {gaps['osm_architect_tag_missing']}/200 без тега архитектора в сопоставленном OSM-контуре | Отдельного поля архитектора в схеме реестра нет; нужна профильная проверка для всех 200 |",
-        f"| Стиль | {gaps['osm_architecture_tag_missing']}/200 без `building:architecture` в OSM | У реестра нет отдельного поля стиля; классифицировать по источнику/фасаду для всех 200 |",
-        f"| Фото | {gaps['commons_reference_missing']}/200 без тега `wikimedia_commons` у контура | Для всех 200 ещё нет проверенной локальной галереи с автором, лицензией, источником и правами на изображённую архитектуру |",
-        f"| Геометрия | 0/200 без близкого контура OSM; {gaps['outline_match_over_5m']}/200 точек реестра дальше 5 м от сопоставленного контура | Все 200 пар требуют ручного подтверждения принадлежности корпуса и качества Polygon |",
-        '| Переводы и карточка атласа | 200/200 | Нужны переводы имени, адреса и описания на ru/en/ka/uk, район, стиль/авторы с ID и редакционный текст |',
+        f"| Адрес в реестре | {gaps['registry_address_missing']}/{len(selected)} без адреса | Наличие поля не заменяет проверку адреса и перевод на русский, английский и украинский |",
+        f"| Датировка в реестре | {gaps['registry_date_missing']}/{len(selected)} без `ExactDate`; {gaps['registry_date_without_numeric_year']}/{len(selected)} без четырёхзначного года в строке | Год в строке также требует проверки: он может относиться к перестройке или диапазону |",
+        f"| Описание в реестре | {gaps['registry_description_missing']}/{len(selected)} без описания | Тексты источника на грузинском требуют редакционной выжимки и перевода |",
+        f"| Номер реестра | {gaps['registry_number_missing']}/{len(selected)} без `RegistryN` | `ObjectID` и ссылка на источник остаются доступны |",
+        f"| Архитектор | {gaps['osm_architect_tag_missing']}/{len(selected)} без тега архитектора в сопоставленном OSM-контуре | Отдельного поля архитектора в схеме реестра нет; нужна профильная проверка |",
+        f"| Стиль | {gaps['osm_architecture_tag_missing']}/{len(selected)} без `building:architecture` в OSM | У реестра нет отдельного поля стиля; классифицировать по источнику/фасаду |",
+        f"| Фото | {gaps['commons_reference_missing']}/{len(selected)} без тега `wikimedia_commons` у контура | Проверенной локальной галереи с автором, лицензией и правами пока нет |",
+        f"| Геометрия | 0/{len(selected)} без близкого контура OSM; {gaps['outline_match_over_5m']}/{len(selected)} точек реестра дальше 5 м от сопоставленного контура | Все пары требуют ручного подтверждения принадлежности корпуса и качества Polygon |",
+        f'| Переводы и карточка атласа | {len(selected)}/{len(selected)} | Нужны переводы имени, адреса и описания на ru/en/ka/uk, район, стиль/авторы с ID и редакционный текст |',
         '',
         '## Список для ручной проверки',
         '',
@@ -264,11 +301,11 @@ def build_report(force=False):
         '- У каждого снимка проверить здание, ракурс, авторство, лицензию и отдельные права на архитектурное произведение.',
         '- Place ID необязателен для исторической карточки; Google API запускать только отдельным согласованным батчем с допуском 5 м.',
         '',
-        'Генератор очереди: `python3 scripts/create-next-200-report.py`. Для перезаписи существующего отчёта нужен `--force`: новый отбор может не совпадать с сохранённым Google-отчётом и редакционными заметками. Данные реестра запрашиваются по HTTPS с проверкой сертификата; при ошибке скрипт останавливается.',
+        'Генератор: `python3 scripts/create-next-200-report.py --output docs/research-next-200-v2.md --exclude-queue docs/research-next-200.md --label "следующие 200 объектов Тбилиси (вторая очередь)"`. Флаг `--exclude-queue` исключает записи предыдущей очереди по ID реестра и OSM way; для перезаписи существующего отчёта нужен `--force`. Данные реестра запрашиваются по HTTPS с проверкой сертификата.',
         '',
     ]
     report_path.write_text('\n'.join(lines), encoding='utf-8')
-    print(f"Wrote docs/research-next-200.md: registry={len(registry)}, eligible={len(eligible)}, selected={len(selected)}")
+    print(f"Wrote {report_path.relative_to(ROOT)}: registry={len(registry)}, eligible={len(eligible)}, selected={len(selected)}")
     print('Exclusions:', dict(exclusions))
     print('Gaps:', dict(gaps))
 
@@ -276,4 +313,9 @@ def build_report(force=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--force', action='store_true', help='replace the existing research snapshot')
-    build_report(force=parser.parse_args().force)
+    parser.add_argument('--output', help='report path relative to the repository root')
+    parser.add_argument('--exclude-queue', action='append', default=[],
+                        help='previous queue report whose registry records and OSM ways must be excluded (repeatable)')
+    parser.add_argument('--label', help='queue title, for example "следующие 200 объектов Тбилиси (вторая очередь)"')
+    args = parser.parse_args()
+    build_report(force=args.force, output=args.output, exclude_queues=args.exclude_queue, label=args.label)

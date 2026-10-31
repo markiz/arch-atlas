@@ -198,7 +198,21 @@ python3 scripts/queue_report.py --out work/queue/report.md
 
 # проверить исходные карточки перед сборкой
 python3 scripts/validate_cards.py
+
+# подготовить следующую очередь, не разбирая её
+python3 scripts/create-next-200-report.py \
+  --output docs/research-next-200-v2.md \
+  --exclude-queue docs/research-next-200.md \
+  --label "следующие 200 объектов Тбилиси (вторая очередь)"
+
+# собрать факты по новой очереди (номера кандидатов не совпадают с прошлой,
+# поэтому overrides нужно передать явно — для новой очереди он пустой)
+printf '{}\n' > work/queue-v2-overrides.json
+python3 scripts/queue_collect.py --queue docs/research-next-200-v2.md \
+  --out work/queue-v2 --overrides work/queue-v2-overrides.json
 ```
+
+`--exclude-queue` исключает записи прошлой очереди по ID реестра и OSM way, чтобы следующая выборка не повторяла уже разобранных. `--overrides` отделяет номер кандидата от глобального файла `data/osm-candidate-overrides.json`: без этого номера новой очереди могли бы получить чужие relation-исправления.
 
 Полезные флаги: `--limit`, `--only`, `--refresh`, `--no-commons`. Коллектор по умолчанию идёт последовательно и делает паузу 0,2 с; это специально, чтобы не ловить 429 от OSM. Для чтения уже собранных фактов сеть не нужна. `queue_collect.py` печатает `[N/M]` с ETA, скоростью и отметкой кэша/ошибки; `validate_cards.py` — прогресс по карточкам, зданиям и пересечениям. Общие правила — [long-running-scripts.md](long-running-scripts.md).
 

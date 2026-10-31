@@ -516,6 +516,8 @@ def main() -> int:
     parser.add_argument('--queue', type=Path, default=QUEUE_PATH)
     parser.add_argument('--atlas', type=Path, default=ATLAS_PATH)
     parser.add_argument('--out', type=Path, default=DEFAULT_OUT)
+    parser.add_argument('--overrides', type=Path, default=OVERRIDES_PATH,
+                        help='candidate-number -> OSM relation overrides; use an empty file for a different queue')
     parser.add_argument('--only', help='candidate numbers, comma separated')
     parser.add_argument('--limit', type=int, help='process at most N remaining candidates')
     parser.add_argument('--refresh', action='store_true', help='ignore cached HTTP responses and artifacts')
@@ -524,7 +526,7 @@ def main() -> int:
     args = parser.parse_args()
 
     queue = parse_queue(args.queue)
-    apply_overrides(queue, load_overrides(OVERRIDES_PATH))
+    apply_overrides(queue, load_overrides(args.overrides))
     atlas_ids = atlas_osm_ids(args.atlas)
 
     def osm_id(row: dict[str, Any]) -> str:
