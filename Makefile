@@ -2,13 +2,25 @@ IMAGE ?= atlas-deploy
 REMOTE ?= origin
 BRANCH ?= gh-pages
 CODEX_VOLUME ?= atlas-codex-home
+DEV_PORT ?= 5173
 GIT_NAME ?= $(shell git config user.name)
 GIT_EMAIL ?= $(shell git config user.email)
 
-.PHONY: image build push codex
+.PHONY: image dev build push codex
 
 image:
 	docker build -t $(IMAGE) .
+
+dev: image
+# Порт открыт только на loopback хоста; внутри контейнера Vite слушает 5173.
+# Опрос файлов надёжно замечает изменения через Docker bind mount.
+	docker run --rm -it \
+		-p 127.0.0.1:$(DEV_PORT):5173 \
+		--user "$$(id -u):$$(id -g)" \
+		--mount type=bind,src="$$(pwd)",dst=/workspace \
+		-e VITE_USE_POLLING=true \
+		--entrypoint bash \
+		$(IMAGE) scripts/run-dev-server.sh
 
 build:
 	docker run \
@@ -28,6 +40,10 @@ push:
 
 codex:
 	docker run -it \
+		--read-only \
+		--cap-drop=ALL \
+		--security-opt=no-new-privileges:true \
+		--tmpfs /tmp:rw,nosuid,nodev,size=256m,mode=1777 \
 		--user "$$(id -u):$$(id -g)" \
 		--mount type=bind,src="$$(pwd)",dst=/workspace \
 		--mount type=volume,src="$(CODEX_VOLUME)",dst=/codex \
@@ -38,4 +54,4 @@ codex:
 		-e GIT_COMMITTER_NAME="$(GIT_NAME)" \
 		-e GIT_COMMITTER_EMAIL="$(GIT_EMAIL)" \
 		--entrypoint codex \
-		$(IMAGE) --no-daemon $(ARGS)
+		$(IMAGE) --no-daemon --dangerously-bypass-approvals-and-sandbox $(ARGS)
