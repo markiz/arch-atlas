@@ -162,6 +162,15 @@ for b in rows:
  b['photos']=photos
 extra_path=root/'data/heritage-extra.json'
 if extra_path.exists():rows.extend(json.loads(extra_path.read_text()))
+google_places_path=root/'data/google-place-ids.json'
+if google_places_path.exists():
+ google_places=json.loads(google_places_path.read_text())
+ buildings_by_id={b['id']:b for b in rows}
+ for place in google_places:
+  building=buildings_by_id.get(place['id'])
+  if building is None:raise SystemExit('Google Place ID references unknown building: '+place['id'])
+  building['googlePlaceId']=place['placeId']
+  building['googlePlaceIdSource']=place['sourceUrl']
 (root/'public/atlas/buildings.json').write_text(json.dumps(rows,ensure_ascii=False,separators=(',',':')))
 (root/'public/atlas/basemap.geojson').write_text(json.dumps({'type':'FeatureCollection','features':features},ensure_ascii=False,separators=(',',':')))
 print('OSM nodes',len(nodes),'ways',len(ways),'basemap',len(features),'buildings',len(rows))

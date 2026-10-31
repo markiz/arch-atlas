@@ -1,0 +1,27 @@
+[
+  {
+    "id": "opera",
+    "placeId": "ChIJ19TSod0MREARed2iApXUD-M",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/opera-and-ballet-theater-of-tbilisi?to=place.ChIJ19TSod0MREARed2iApXUD-M"
+  },
+  {
+    "id": "writers",
+    "placeId": "ChIJDUaNDvIMREARXkd8THC7se0",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/writers-house-of-georgia?to=place.ChIJDUaNDvIMREARXkd8THC7se0"
+  },
+  {
+    "id": "conservatoire",
+    "placeId": "ChIJy2qBWd0MREARgFvvvXjG3_c",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/tbilisi-state-conservatoire?to=place.ChIJy2qBWd0MREARgFvvvXjG3_c"
+  },
+  {
+    "id": "osm-503326365",
+    "placeId": "ChIJp1AABfcMREAR-U0SBWHxp0E",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/chreli-abano?to=place.ChIJp1AABfcMREAR-U0SBWHxp0E"
+  },
+  {
+    "id": "osm-188447537",
+    "placeId": "ChIJrbVtRtcMREARcfoT6Gn1lw0",
+    "sourceUrl": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/blue-monastery?to=place.ChIJrbVtRtcMREARcfoT6Gn1lw0"
+  }
+]
