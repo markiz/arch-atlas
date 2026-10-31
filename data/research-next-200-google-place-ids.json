@@ -1,0 +1,2607 @@
+{
+  "description": "Research candidates only; geometry and matches require manual verification. Coordinates are representative points of local OSM polygons.",
+  "source": "Google Geocoding API and Places API (New)",
+  "maxDistanceMeters": 5,
+  "results": [
+    {
+      "id": "registry-2676",
+      "osmId": "way/1157284971",
+      "coordinates": [
+        44.803166016201885,
+        41.706334
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:06.077000+00:00",
+      "kind": "house",
+      "placeId": "ChIJ4bEEjyANREARCsV_goFl0iI"
+    },
+    {
+      "id": "registry-2684",
+      "osmId": "way/1278166606",
+      "coordinates": [
+        44.79792984121622,
+        41.708044
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:06.479694+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2694",
+      "osmId": "way/691709671",
+      "coordinates": [
+        44.810081482441475,
+        41.698165
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:06.807621+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2764",
+      "osmId": "way/78500061",
+      "coordinates": [
+        44.80914324324324,
+        41.701118
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:07.578229+00:00",
+      "kind": "house",
+      "placeId": "ChIJI5t4i-EMREARzcsNApZabVI"
+    },
+    {
+      "id": "registry-2780",
+      "osmId": "way/78509293",
+      "coordinates": [
+        44.80613424036612,
+        41.7040065
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:07.950648+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2841",
+      "osmId": "way/246757401",
+      "coordinates": [
+        44.807068,
+        41.7014995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:08.909627+00:00",
+      "kind": "house",
+      "placeId": "ChIJTy-VpOEMREARb62cNgpO9XY"
+    },
+    {
+      "id": "registry-2850",
+      "osmId": "way/218121310",
+      "coordinates": [
+        44.79707295641696,
+        41.710210000000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:09.732529+00:00",
+      "kind": "house",
+      "placeId": "ChIJC7dT2ycNREAR4stesT_9VDE"
+    },
+    {
+      "id": "registry-2858",
+      "osmId": "way/417138961",
+      "coordinates": [
+        44.79474650519995,
+        41.7185655
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:10.081695+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2902",
+      "osmId": "way/1276208586",
+      "coordinates": [
+        44.800633420731714,
+        41.708051499999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:10.794979+00:00",
+      "kind": "house",
+      "placeId": "ChIJ6WCbRycNREARQsaNdphCusM"
+    },
+    {
+      "id": "registry-2914",
+      "osmId": "way/65158233",
+      "coordinates": [
+        44.79510810842294,
+        41.708355499999996
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:11.145712+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2986",
+      "osmId": "way/565040626",
+      "coordinates": [
+        44.79804060365191,
+        41.705282499999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:12.072160+00:00",
+      "kind": "house",
+      "placeId": "ChIJuUw92N4MREARHfOokdFSP8E"
+    },
+    {
+      "id": "registry-2991",
+      "osmId": "way/337421240",
+      "coordinates": [
+        44.79970072233401,
+        41.715576999999996
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:12.458316+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3016",
+      "osmId": "way/57038408",
+      "coordinates": [
+        44.79427611726945,
+        41.7158615
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:13.435153+00:00",
+      "kind": "house",
+      "placeId": "ChIJ5zAGDiwNREARiXRmcQG43Ls"
+    },
+    {
+      "id": "registry-3040",
+      "osmId": "way/1484742676",
+      "coordinates": [
+        44.79230911589114,
+        41.7167
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:13.831225+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3049",
+      "osmId": "way/246769267",
+      "coordinates": [
+        44.801054511627896,
+        41.711344
+      ],
+      "status": "matched",
+      "reason": "landmark_found",
+      "checkedAt": "2026-10-31T15:53:14.688765+00:00",
+      "kind": "landmark",
+      "placeId": "ChIJ9xlFciYNREARI3sJTv5q1Z0"
+    },
+    {
+      "id": "registry-3064",
+      "osmId": "way/76960033",
+      "coordinates": [
+        44.789893609269996,
+        41.7188565
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:14.982654+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3069",
+      "osmId": "way/108197961",
+      "coordinates": [
+        44.803436758388564,
+        41.7133405
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:15.486367+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3100",
+      "osmId": "way/1365593642",
+      "coordinates": [
+        44.79960497759409,
+        41.716353
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:16.297442+00:00",
+      "kind": "house",
+      "placeId": "ChIJJS8xai4NREAR7mEo6UqeZxk"
+    },
+    {
+      "id": "registry-3108",
+      "osmId": "way/1070396839",
+      "coordinates": [
+        44.79409679999999,
+        41.713530000000006
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:17.037815+00:00",
+      "kind": "house",
+      "placeId": "ChIJcVbobCkNREARUcnWejr1M5o"
+    },
+    {
+      "id": "registry-3137",
+      "osmId": "way/57037627",
+      "coordinates": [
+        44.794494242238244,
+        41.714662
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:17.810050+00:00",
+      "kind": "house",
+      "placeId": "ChIJ0RLUVikNREAReGtsLk_GzaM"
+    },
+    {
+      "id": "registry-3173",
+      "osmId": "way/1013499785",
+      "coordinates": [
+        44.79536513726843,
+        41.7125805
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:18.163723+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3175",
+      "osmId": "way/1218781712",
+      "coordinates": [
+        44.81122521818182,
+        41.69443
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:18.475324+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3178",
+      "osmId": "way/462897308",
+      "coordinates": [
+        44.79236922970628,
+        41.7159255
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:19.110194+00:00",
+      "kind": "house",
+      "placeId": "ChIJN2sghisNREARrofUe1ixu-w"
+    },
+    {
+      "id": "registry-3187",
+      "osmId": "way/1188424739",
+      "coordinates": [
+        44.786147458568486,
+        41.7211735
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:19.618015+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3190",
+      "osmId": "way/1188424740",
+      "coordinates": [
+        44.786626241501416,
+        41.720691
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:19.967535+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3193",
+      "osmId": "way/555413425",
+      "coordinates": [
+        44.7942205752709,
+        41.707866499999994
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:20.329881+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3227",
+      "osmId": "way/282713323",
+      "coordinates": [
+        44.79462101020697,
+        41.713556499999996
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:20.695784+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3229",
+      "osmId": "way/57037626",
+      "coordinates": [
+        44.79479528218086,
+        41.714251000000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:21.032437+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3239",
+      "osmId": "way/217530856",
+      "coordinates": [
+        44.79135261131471,
+        41.7172755
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:21.752820+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3244",
+      "osmId": "way/192201132",
+      "coordinates": [
+        44.79617508953427,
+        41.711504500000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:22.100343+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3246",
+      "osmId": "way/102691273",
+      "coordinates": [
+        44.79543961650859,
+        41.712432
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:22.942374+00:00",
+      "kind": "house",
+      "placeId": "ChIJFc9w_CgNREARJIrSnEJytoI"
+    },
+    {
+      "id": "registry-3257",
+      "osmId": "way/415940826",
+      "coordinates": [
+        44.789612059160305,
+        41.719609000000005
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:23.711880+00:00",
+      "kind": "house",
+      "placeId": "ChIJt1j9GdNyREAR6XrjYFFyzXU"
+    },
+    {
+      "id": "registry-3303",
+      "osmId": "way/462898536",
+      "coordinates": [
+        44.793509634819245,
+        41.715444500000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:24.654054+00:00",
+      "kind": "house",
+      "placeId": "ChIJOQOQ9isNREAR2oiNg3iqX3Q"
+    },
+    {
+      "id": "registry-3310",
+      "osmId": "way/462897306",
+      "coordinates": [
+        44.7918920911215,
+        41.71655
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:25.488969+00:00",
+      "kind": "house",
+      "placeId": "ChIJwchMgCwNREAR_hb1WoNJ9_8"
+    },
+    {
+      "id": "registry-3321",
+      "osmId": "way/462897300",
+      "coordinates": [
+        44.79315755496454,
+        41.715741
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:25.802974+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3331",
+      "osmId": "way/1217883918",
+      "coordinates": [
+        44.81268511251343,
+        41.690677
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:26.158681+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3332",
+      "osmId": "way/78144732",
+      "coordinates": [
+        44.81520913797468,
+        41.691485
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:27.008710+00:00",
+      "kind": "house",
+      "placeId": "ChIJiz2ToPkMREARSSV-S2GkE1E"
+    },
+    {
+      "id": "registry-3369",
+      "osmId": "way/123574142",
+      "coordinates": [
+        44.81269310542169,
+        41.691685500000006
+      ],
+      "status": "matched",
+      "reason": "landmark_found",
+      "checkedAt": "2026-10-31T15:53:27.689239+00:00",
+      "kind": "landmark",
+      "placeId": "ChIJEyg-LxgNREARJ9exRP-YgjU"
+    },
+    {
+      "id": "registry-3386",
+      "osmId": "way/661357924",
+      "coordinates": [
+        44.81464841607811,
+        41.691096
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:28.200576+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3393",
+      "osmId": "way/1219556099",
+      "coordinates": [
+        44.81342313970588,
+        41.693649
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:29.034796+00:00",
+      "kind": "house",
+      "placeId": "ChIJOfSgv_sMREARSR2_IKYtoQc"
+    },
+    {
+      "id": "registry-3397",
+      "osmId": "way/758009917",
+      "coordinates": [
+        44.81207536688641,
+        41.693595
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:29.615135+00:00",
+      "kind": "house",
+      "placeId": "ChIJAcg5rvsMREARg4D-6XohHUo"
+    },
+    {
+      "id": "registry-3411",
+      "osmId": "way/899099223",
+      "coordinates": [
+        44.8229965,
+        41.692437
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:29.932658+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3432",
+      "osmId": "way/198140489",
+      "coordinates": [
+        44.81144865405756,
+        41.687925
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:30.301917+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3435",
+      "osmId": "way/417693230",
+      "coordinates": [
+        44.79404893965517,
+        41.7182125
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:30.915838+00:00",
+      "kind": "house",
+      "placeId": "ChIJ36EEHS0NREAR2pU-Qi1f-AQ"
+    },
+    {
+      "id": "registry-3450",
+      "osmId": "way/1069038401",
+      "coordinates": [
+        44.81520222282609,
+        41.6945745
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:31.466111+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3466",
+      "osmId": "way/549065841",
+      "coordinates": [
+        44.7996962382353,
+        41.683733000000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:31.729391+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3486",
+      "osmId": "way/817688095",
+      "coordinates": [
+        44.80357248680556,
+        41.692786999999996
+      ],
+      "status": "matched",
+      "reason": "landmark_found",
+      "checkedAt": "2026-10-31T15:53:32.639915+00:00",
+      "kind": "landmark",
+      "placeId": "ChIJ98UD2e8MREAR6qpSRCU7KBg"
+    },
+    {
+      "id": "registry-3505",
+      "osmId": "way/370845143",
+      "coordinates": [
+        44.81190501538376,
+        41.687798
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:33.325065+00:00",
+      "kind": "house",
+      "placeId": "ChIJAei3TPYMREARvBGd-epBuxg"
+    },
+    {
+      "id": "registry-3506",
+      "osmId": "way/282057534",
+      "coordinates": [
+        44.804339166515014,
+        41.698119000000005
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:33.944834+00:00",
+      "kind": "house",
+      "placeId": "ChIJq3y3IeQMREARIgi_aDBa2HE"
+    },
+    {
+      "id": "registry-3512",
+      "osmId": "way/1206434249",
+      "coordinates": [
+        44.80509503623189,
+        41.6951785
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:34.260657+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3534",
+      "osmId": "way/198140507",
+      "coordinates": [
+        44.81104115651128,
+        41.6881135
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:34.668019+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3540",
+      "osmId": "way/198125060",
+      "coordinates": [
+        44.81259958333334,
+        41.688556000000005
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:35.475688+00:00",
+      "kind": "house",
+      "placeId": "ChIJB60Lo_cMREARB0ttqfN_H_o"
+    },
+    {
+      "id": "registry-3567",
+      "osmId": "way/282713325",
+      "coordinates": [
+        44.79456757974482,
+        41.713842
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:36.124360+00:00",
+      "kind": "house",
+      "placeId": "ChIJz2wxQCkNREAREqZu2sPianE"
+    },
+    {
+      "id": "registry-3590",
+      "osmId": "way/1207608184",
+      "coordinates": [
+        44.82002501365546,
+        41.684591499999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:36.871391+00:00",
+      "kind": "house",
+      "placeId": "ChIJ6Ra6J1oMREARd_x3cvagcGU"
+    },
+    {
+      "id": "registry-3592",
+      "osmId": "way/415939084",
+      "coordinates": [
+        44.78881395728145,
+        41.720304999999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:37.555543+00:00",
+      "kind": "house",
+      "placeId": "ChIJcb6kqdNyREARl_ydJV4ScOg"
+    },
+    {
+      "id": "registry-3707",
+      "osmId": "way/337364744",
+      "coordinates": [
+        44.80366085714286,
+        41.695280999999994
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:38.353500+00:00",
+      "kind": "house",
+      "placeId": "ChIJJ7btd-UMREAR9g3uH4MRju0"
+    },
+    {
+      "id": "registry-3735",
+      "osmId": "way/591365819",
+      "coordinates": [
+        44.80649103413655,
+        41.690664
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:38.713290+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3742",
+      "osmId": "way/284620213",
+      "coordinates": [
+        44.8065325756579,
+        41.6909755
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:39.062247+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3756",
+      "osmId": "way/1207148736",
+      "coordinates": [
+        44.811577451612905,
+        41.688659
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:39.588565+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3757",
+      "osmId": "way/373390884",
+      "coordinates": [
+        44.808887,
+        41.689177
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:40.373925+00:00",
+      "kind": "house",
+      "placeId": "ChIJD-Mv2PYMREAR--PRvqe2yCY"
+    },
+    {
+      "id": "registry-3758",
+      "osmId": "way/75311175",
+      "coordinates": [
+        44.81791,
+        41.687683
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:41.106706+00:00",
+      "kind": "house",
+      "placeId": "ChIJS7rPilcMREAR2gtWjVqelUA"
+    },
+    {
+      "id": "registry-3760",
+      "osmId": "way/65275424",
+      "coordinates": [
+        44.79468463025103,
+        41.698773
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:41.625253+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3777",
+      "osmId": "way/73485191",
+      "coordinates": [
+        44.821233220779234,
+        41.690017
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:42.305377+00:00",
+      "kind": "house",
+      "placeId": "ChIJ-T4oGFYMREARhYy5102LkBw"
+    },
+    {
+      "id": "registry-3787",
+      "osmId": "way/1206434174",
+      "coordinates": [
+        44.80662448592132,
+        41.695501
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:42.617508+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3823",
+      "osmId": "way/188447905",
+      "coordinates": [
+        44.79016255733945,
+        41.706241000000006
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:43.012671+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3878",
+      "osmId": "way/1172799960",
+      "coordinates": [
+        44.801826649621205,
+        41.692257
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:43.372608+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3886",
+      "osmId": "way/549425978",
+      "coordinates": [
+        44.806356046666664,
+        41.6919005
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:44.363424+00:00",
+      "kind": "house",
+      "placeId": "ChIJiVdmXfAMREARrhtPFYWjt0I"
+    },
+    {
+      "id": "registry-3905",
+      "osmId": "way/1426901042",
+      "coordinates": [
+        44.806071,
+        41.693125
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:44.739179+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3957",
+      "osmId": "way/282242687",
+      "coordinates": [
+        44.80604504113924,
+        41.6975075
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:45.083898+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4028",
+      "osmId": "way/142657226",
+      "coordinates": [
+        44.79525441911764,
+        41.7015595
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:45.429765+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4030",
+      "osmId": "way/1172799959",
+      "coordinates": [
+        44.80160265198864,
+        41.6924075
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:45.966448+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4033",
+      "osmId": "way/1193859179",
+      "coordinates": [
+        44.801945316287885,
+        41.69038
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:46.807035+00:00",
+      "kind": "house",
+      "placeId": "ChIJw_a_jPEMREARhbFroEuJ15A"
+    },
+    {
+      "id": "registry-4070",
+      "osmId": "way/337269648",
+      "coordinates": [
+        44.788870083333336,
+        41.695825
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:47.132198+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4079",
+      "osmId": "way/75316066",
+      "coordinates": [
+        44.79679932263882,
+        41.695555
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:47.640876+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4157",
+      "osmId": "way/1373529138",
+      "coordinates": [
+        44.80081098206,
+        41.696181
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:47.950803+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4167",
+      "osmId": "way/1305830046",
+      "coordinates": [
+        44.80147489473684,
+        41.6903175
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:48.678250+00:00",
+      "kind": "house",
+      "placeId": "ChIJxSxh9fEMREARlfZ3z8Z7l9U"
+    },
+    {
+      "id": "registry-4171",
+      "osmId": "way/294982340",
+      "coordinates": [
+        44.79476052027027,
+        41.699887000000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:49.581092+00:00",
+      "kind": "house",
+      "placeId": "ChIJ01hCRN0MREAR3JppObEBIzQ"
+    },
+    {
+      "id": "registry-4177",
+      "osmId": "way/282045909",
+      "coordinates": [
+        44.801847335365856,
+        41.6981295
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:49.930606+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4185",
+      "osmId": "way/1451986805",
+      "coordinates": [
+        44.799454,
+        41.697838000000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:50.402950+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4192",
+      "osmId": "way/58078961",
+      "coordinates": [
+        44.789028784715526,
+        41.700668500000006
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:50.693878+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4209",
+      "osmId": "way/174296550",
+      "coordinates": [
+        44.7895840125,
+        41.704138
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:51.476485+00:00",
+      "kind": "house",
+      "placeId": "ChIJjxilANsMREAReyumT81YU_w"
+    },
+    {
+      "id": "registry-4222",
+      "osmId": "way/464080229",
+      "coordinates": [
+        44.794028733047355,
+        41.6967715
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:52.153284+00:00",
+      "kind": "house",
+      "placeId": "ChIJM7keTegMREARisuJKUWCZLc"
+    },
+    {
+      "id": "registry-4235",
+      "osmId": "way/77661969",
+      "coordinates": [
+        44.78773279378399,
+        41.7055335
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:52.640816+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4239",
+      "osmId": "way/56677905",
+      "coordinates": [
+        44.80103524494724,
+        41.698547000000005
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:53.359869+00:00",
+      "kind": "house",
+      "placeId": "ChIJRUIq9uYMREARoLWoFOYIeWI"
+    },
+    {
+      "id": "registry-4272",
+      "osmId": "way/1206575085",
+      "coordinates": [
+        44.798150909307196,
+        41.691863
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:53.699189+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4273",
+      "osmId": "way/142656675",
+      "coordinates": [
+        44.79928504685002,
+        41.699485
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:54.027500+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4306",
+      "osmId": "way/25699467",
+      "coordinates": [
+        44.78660849689441,
+        41.694913
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:54.323862+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4317",
+      "osmId": "way/1429048941",
+      "coordinates": [
+        44.79616692948052,
+        41.7020005
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:54.818383+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4375",
+      "osmId": "way/555200496",
+      "coordinates": [
+        44.792548816854406,
+        41.696188
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:55.142665+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4386",
+      "osmId": "way/282231532",
+      "coordinates": [
+        44.80083886666666,
+        41.697097
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:55.519788+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4414",
+      "osmId": "way/198114602",
+      "coordinates": [
+        44.7815768246863,
+        41.7117715
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:56.152677+00:00",
+      "kind": "house",
+      "placeId": "ChIJbYRljtQMREARBPxxl_4iImE"
+    },
+    {
+      "id": "registry-4493",
+      "osmId": "way/44709683",
+      "coordinates": [
+        44.79376367785952,
+        41.702953
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:56.487023+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4608",
+      "osmId": "way/190038732",
+      "coordinates": [
+        44.79752503157895,
+        41.693442
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:57.145175+00:00",
+      "kind": "house",
+      "placeId": "ChIJN9XwlO4MREARv5emhbgtn2c"
+    },
+    {
+      "id": "registry-4641",
+      "osmId": "way/25699483",
+      "coordinates": [
+        44.797756436464084,
+        41.697601
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:57.947277+00:00",
+      "kind": "house",
+      "placeId": "ChIJWSr3KuYMREARX0EUAbKXTD0"
+    },
+    {
+      "id": "registry-4666",
+      "osmId": "way/1159768301",
+      "coordinates": [
+        44.79739747626958,
+        41.701077
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:58.748452+00:00",
+      "kind": "house",
+      "placeId": "ChIJsZdnkN0MREARh66l99xt9Ws"
+    },
+    {
+      "id": "registry-4668",
+      "osmId": "way/78005878",
+      "coordinates": [
+        44.79999604885393,
+        41.6928835
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:53:59.334406+00:00",
+      "kind": "house",
+      "placeId": "ChIJ687DWu4MREARaFBpkJtLroA"
+    },
+    {
+      "id": "registry-4688",
+      "osmId": "way/588856761",
+      "coordinates": [
+        44.7797944375,
+        41.7160765
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:53:59.631097+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4751",
+      "osmId": "way/38326853",
+      "coordinates": [
+        44.785038053575455,
+        41.708175
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:00.224027+00:00",
+      "kind": "house",
+      "placeId": "ChIJtyCyJNEMREARvGg0PhSYzlo"
+    },
+    {
+      "id": "registry-4800",
+      "osmId": "way/190587065",
+      "coordinates": [
+        44.78745853689495,
+        41.703269500000005
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:00.558268+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4819",
+      "osmId": "way/190475629",
+      "coordinates": [
+        44.79194225852896,
+        41.7010585
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:00.920299+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4896",
+      "osmId": "way/198114600",
+      "coordinates": [
+        44.78173638886175,
+        41.711513999999994
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:01.222715+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4944",
+      "osmId": "way/1236448832",
+      "coordinates": [
+        44.77039180803571,
+        41.7357545
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:01.726148+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4946",
+      "osmId": "way/1163438218",
+      "coordinates": [
+        44.79563381132782,
+        41.720631999999995
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:02.258743+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4948",
+      "osmId": "way/1163438210",
+      "coordinates": [
+        44.794876393399534,
+        41.7199895
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:02.552581+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-5000",
+      "osmId": "way/34148385",
+      "coordinates": [
+        44.77959680459427,
+        41.7195855
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:03.241128+00:00",
+      "kind": "house",
+      "placeId": "ChIJY3mWYNZyREARZvM6ESE-IM0"
+    },
+    {
+      "id": "registry-5004",
+      "osmId": "way/531596101",
+      "coordinates": [
+        44.7858385546875,
+        41.729696000000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:03.838603+00:00",
+      "kind": "house",
+      "placeId": "ChIJIYFFLMRyREARKhKom-nCQes"
+    },
+    {
+      "id": "registry-5006",
+      "osmId": "way/135869289",
+      "coordinates": [
+        44.78820461260102,
+        41.7218825
+      ],
+      "status": "matched",
+      "reason": "landmark_found",
+      "checkedAt": "2026-10-31T15:54:04.730348+00:00",
+      "kind": "landmark",
+      "placeId": "ChIJHfREO9JyREARoai7xgixXvk"
+    },
+    {
+      "id": "registry-5007",
+      "osmId": "way/415585844",
+      "coordinates": [
+        44.787446105093395,
+        41.7253495
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:05.055093+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-5008",
+      "osmId": "way/415585842",
+      "coordinates": [
+        44.78708799138471,
+        41.725277500000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:05.343691+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-5047",
+      "osmId": "way/78390490",
+      "coordinates": [
+        44.76352154385965,
+        41.710995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:06.230973+00:00",
+      "kind": "house",
+      "placeId": "ChIJURTobzFzREARzRlfhUoY59k"
+    },
+    {
+      "id": "registry-5208",
+      "osmId": "way/76960034",
+      "coordinates": [
+        44.79013364356203,
+        41.718467000000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:06.558333+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-15996",
+      "osmId": "way/337421300",
+      "coordinates": [
+        44.797134335629025,
+        41.716447
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:06.909678+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16002",
+      "osmId": "way/173131485",
+      "coordinates": [
+        44.78520711403509,
+        41.711646
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:07.238157+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16003",
+      "osmId": "way/189826202",
+      "coordinates": [
+        44.78714090618935,
+        41.71171
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:07.616248+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16025",
+      "osmId": "way/1246282541",
+      "coordinates": [
+        44.79577407733966,
+        41.707190999999995
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:07.959925+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16047",
+      "osmId": "way/337851293",
+      "coordinates": [
+        44.802600272836536,
+        41.6931555
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:08.469068+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16052",
+      "osmId": "way/1274260082",
+      "coordinates": [
+        44.7972055275974,
+        41.6943245
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:08.905089+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-16057",
+      "osmId": "way/478568522",
+      "coordinates": [
+        44.830134406496065,
+        41.6905175
+      ],
+      "status": "matched",
+      "reason": "landmark_found",
+      "checkedAt": "2026-10-31T15:54:09.719850+00:00",
+      "kind": "landmark",
+      "placeId": "ChIJaTqSIwANREAR0-TCRJSiLF4"
+    },
+    {
+      "id": "registry-26717",
+      "osmId": "way/641462736",
+      "coordinates": [
+        44.8089391921783,
+        41.687297
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:10.058211+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4071",
+      "osmId": "way/129840872",
+      "coordinates": [
+        44.8016756833519,
+        41.696715999999995
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:10.369653+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4583",
+      "osmId": "way/242224841",
+      "coordinates": [
+        44.79791776816609,
+        41.701685999999995
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:10.849583+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3347",
+      "osmId": "way/1217883895",
+      "coordinates": [
+        44.81393989569027,
+        41.689946
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:11.186451+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3484",
+      "osmId": "way/295188423",
+      "coordinates": [
+        44.80221290372004,
+        41.6927695
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:12.054645+00:00",
+      "kind": "house",
+      "placeId": "ChIJhwZVzO8MREARkzvTy7b6KLk"
+    },
+    {
+      "id": "registry-4016",
+      "osmId": "way/1080996079",
+      "coordinates": [
+        44.78453763310893,
+        41.7029225
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:12.969045+00:00",
+      "kind": "house",
+      "placeId": "ChIJyxQCPMUMREARQQxJuVm-qm0"
+    },
+    {
+      "id": "registry-4436",
+      "osmId": "way/365098623",
+      "coordinates": [
+        44.793821353046596,
+        41.6940435
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:13.442772+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3099",
+      "osmId": "way/1289207833",
+      "coordinates": [
+        44.80142015941802,
+        41.713206
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:13.958346+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3773",
+      "osmId": "way/1217883916",
+      "coordinates": [
+        44.81299682272727,
+        41.690029
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:14.601707+00:00",
+      "kind": "house",
+      "placeId": "ChIJHZFD2PkMREAR_gCFc_63c0k"
+    },
+    {
+      "id": "registry-2965",
+      "osmId": "way/1365593651",
+      "coordinates": [
+        44.801928866,
+        41.712381
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:14.928875+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3377",
+      "osmId": "way/143349273",
+      "coordinates": [
+        44.81216156880252,
+        41.690113499999995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:15.569843+00:00",
+      "kind": "house",
+      "placeId": "ChIJI6zFYPcMREAR4yGUic5xhXo"
+    },
+    {
+      "id": "registry-2671",
+      "osmId": "way/1225299270",
+      "coordinates": [
+        44.80009909890295,
+        41.7051225
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:15.887243+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3326",
+      "osmId": "way/78145184",
+      "coordinates": [
+        44.814255,
+        41.6899905
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:16.639596+00:00",
+      "kind": "house",
+      "placeId": "ChIJLfGh0vkMREARYF38G1lHNHA"
+    },
+    {
+      "id": "registry-3469",
+      "osmId": "way/337365207",
+      "coordinates": [
+        44.80662772020349,
+        41.695728
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:16.979913+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4393",
+      "osmId": "way/224748690",
+      "coordinates": [
+        44.798802697961264,
+        41.6901085
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:17.350430+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3362",
+      "osmId": "way/220702092",
+      "coordinates": [
+        44.81374822675305,
+        41.692555
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:17.882023+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3690",
+      "osmId": "way/337364751",
+      "coordinates": [
+        44.808115871951216,
+        41.6906945
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:18.255113+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2849",
+      "osmId": "way/1225299272",
+      "coordinates": [
+        44.799913093962715,
+        41.704582
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:18.605529+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4101",
+      "osmId": "way/555200386",
+      "coordinates": [
+        44.789044555555556,
+        41.695749
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:18.891795+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3447",
+      "osmId": "way/1262673998",
+      "coordinates": [
+        44.8074385,
+        41.6915525
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:19.242272+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4442",
+      "osmId": "way/159818810",
+      "coordinates": [
+        44.79875597892976,
+        41.690886
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:20.058696+00:00",
+      "kind": "house",
+      "placeId": "ChIJceHh7-0MREARW5vJUJT7Qco"
+    },
+    {
+      "id": "registry-3388",
+      "osmId": "way/57403663",
+      "coordinates": [
+        44.8147766754617,
+        41.691655499999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:20.883855+00:00",
+      "kind": "house",
+      "placeId": "ChIJpR0xnvkMREARSkT3gxqQ6Rw"
+    },
+    {
+      "id": "registry-3336",
+      "osmId": "way/1222201489",
+      "coordinates": [
+        44.81737944842986,
+        41.690481
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:21.738658+00:00",
+      "kind": "house",
+      "placeId": "ChIJcbwc9vgMREARJGnqgbGX4Ws"
+    },
+    {
+      "id": "registry-3657",
+      "osmId": "way/503328572",
+      "coordinates": [
+        44.81099279637104,
+        41.6878345
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:22.053396+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3847",
+      "osmId": "way/337365203",
+      "coordinates": [
+        44.80591770173746,
+        41.694784999999996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:22.746970+00:00",
+      "kind": "house",
+      "placeId": "ChIJcQdUP-UMREARGNnHHAUH0dg"
+    },
+    {
+      "id": "registry-4763",
+      "osmId": "way/1234716193",
+      "coordinates": [
+        44.78512206346516,
+        41.714334
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:23.095546+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3339",
+      "osmId": "way/123574122",
+      "coordinates": [
+        44.81235454749745,
+        41.691595
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:23.829029+00:00",
+      "kind": "house",
+      "placeId": "ChIJ7bn_H_oMREARM7akN7mh_qY"
+    },
+    {
+      "id": "registry-4932",
+      "osmId": "way/242179595",
+      "coordinates": [
+        44.792485347576864,
+        41.702391000000006
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:24.143066+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3317",
+      "osmId": "way/1207173706",
+      "coordinates": [
+        44.81242500267558,
+        41.691015500000006
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:25.147763+00:00",
+      "kind": "house",
+      "placeId": "ChIJgYg58PkMREAR-ebdYaQ9QTc"
+    },
+    {
+      "id": "registry-3058",
+      "osmId": "way/246785818",
+      "coordinates": [
+        44.80096375532581,
+        41.7064465
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:25.483212+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4711",
+      "osmId": "way/78004768",
+      "coordinates": [
+        44.80068065735597,
+        41.693996
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:26.209148+00:00",
+      "kind": "house",
+      "placeId": "ChIJK-PQB-8MREARy3KFjZC7Tkg"
+    },
+    {
+      "id": "registry-16022",
+      "osmId": "way/1312915852",
+      "coordinates": [
+        44.79946435714286,
+        41.705571
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:26.531107+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3082",
+      "osmId": "way/218120847",
+      "coordinates": [
+        44.79403572133459,
+        41.7096255
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:26.889657+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2888",
+      "osmId": "way/1278166560",
+      "coordinates": [
+        44.79623050711193,
+        41.708916
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:27.249697+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2928",
+      "osmId": "way/336997938",
+      "coordinates": [
+        44.795510026551824,
+        41.717960500000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:27.636340+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3723",
+      "osmId": "way/680607569",
+      "coordinates": [
+        44.80444377447553,
+        41.691846999999996
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:28.192505+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3821",
+      "osmId": "way/294971081",
+      "coordinates": [
+        44.79863820046929,
+        41.69171
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:28.521558+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3290",
+      "osmId": "way/147665174",
+      "coordinates": [
+        44.79187146470589,
+        41.7107785
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:29.250974+00:00",
+      "kind": "house",
+      "placeId": "ChIJW6uW1NcMREARvB4uqvzD7sc"
+    },
+    {
+      "id": "registry-2713",
+      "osmId": "way/1069053608",
+      "coordinates": [
+        44.80971750884551,
+        41.698158
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:30.066041+00:00",
+      "kind": "house",
+      "placeId": "ChIJ_ZH6dOMMREARYYCKAIjphHw"
+    },
+    {
+      "id": "registry-3664",
+      "osmId": "way/1206434300",
+      "coordinates": [
+        44.80726303354979,
+        41.695001500000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:30.849699+00:00",
+      "kind": "house",
+      "placeId": "ChIJOeH9LuUMREAREwgaaB6ru-4"
+    },
+    {
+      "id": "registry-3714",
+      "osmId": "way/278885372",
+      "coordinates": [
+        44.78573738446383,
+        41.7086155
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:31.160151+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4002",
+      "osmId": "way/1206434315",
+      "coordinates": [
+        44.805001000000004,
+        41.6942345
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:31.648617+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4945",
+      "osmId": "way/73412942",
+      "coordinates": [
+        44.81100103947368,
+        41.714483
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:31.988530+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2956",
+      "osmId": "way/246783230",
+      "coordinates": [
+        44.80021299999999,
+        41.708355999999995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:32.627104+00:00",
+      "kind": "house",
+      "placeId": "ChIJFUnkPycNREARhvfsm1XM_u4"
+    },
+    {
+      "id": "registry-3135",
+      "osmId": "way/1127991564",
+      "coordinates": [
+        44.79241916146897,
+        41.712862
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:33.018490+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2755",
+      "osmId": "way/465566841",
+      "coordinates": [
+        44.79629347112889,
+        41.7075265
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:33.388267+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3626",
+      "osmId": "way/549425991",
+      "coordinates": [
+        44.806649408536586,
+        41.688715
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:33.676561+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3792",
+      "osmId": "way/337432044",
+      "coordinates": [
+        44.80546521198157,
+        41.692712
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:33.981190+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4721",
+      "osmId": "way/1125012315",
+      "coordinates": [
+        44.79556652104642,
+        41.698486
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:34.801412+00:00",
+      "kind": "house",
+      "placeId": "ChIJb9LHCegMREAR5z86SApjgMY"
+    },
+    {
+      "id": "registry-4579",
+      "osmId": "way/242179594",
+      "coordinates": [
+        44.793079055933845,
+        41.702197999999996
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:35.132986+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3906",
+      "osmId": "way/1206434257",
+      "coordinates": [
+        44.80337844842106,
+        41.695574
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:35.929130+00:00",
+      "kind": "house",
+      "placeId": "ChIJwe-am-UMREARNmRajaWuiPA"
+    },
+    {
+      "id": "registry-3824",
+      "osmId": "way/282034921",
+      "coordinates": [
+        44.80510673554987,
+        41.696208
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:36.491818+00:00",
+      "kind": "house",
+      "placeId": "ChIJsSqEqeUMREARJI6mGZdhIjs"
+    },
+    {
+      "id": "registry-3495",
+      "osmId": "way/337364748",
+      "coordinates": [
+        44.8086457445946,
+        41.6904845
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:37.303257+00:00",
+      "kind": "house",
+      "placeId": "ChIJGeiryPAMREARm-46MQ_N4U8"
+    },
+    {
+      "id": "registry-4162",
+      "osmId": "way/1231994177",
+      "coordinates": [
+        44.79351609596209,
+        41.695243500000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:38.284115+00:00",
+      "kind": "house",
+      "placeId": "ChIJpzbcc-kMREARExwnohlC2QQ"
+    },
+    {
+      "id": "registry-3683",
+      "osmId": "way/1066392727",
+      "coordinates": [
+        44.80505225015664,
+        41.688922500000004
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:38.732147+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3819",
+      "osmId": "way/242191025",
+      "coordinates": [
+        44.81140982093231,
+        41.6874105
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:39.234452+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3172",
+      "osmId": "way/462897307",
+      "coordinates": [
+        44.79213313085606,
+        41.716246
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:39.864795+00:00",
+      "kind": "house",
+      "placeId": "ChIJNx7BgCsNREARj155qQV_RTM"
+    },
+    {
+      "id": "registry-3319",
+      "osmId": "way/733122416",
+      "coordinates": [
+        44.79138468519882,
+        41.7135345
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:40.372642+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-5003",
+      "osmId": "way/901102995",
+      "coordinates": [
+        44.78498057905138,
+        41.7310905
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:40.707772+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3647",
+      "osmId": "way/1220380979",
+      "coordinates": [
+        44.8057918650382,
+        41.692299
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:41.059138+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4103",
+      "osmId": "way/159818820",
+      "coordinates": [
+        44.7967779298893,
+        41.692772
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:41.375887+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4304",
+      "osmId": "way/254277285",
+      "coordinates": [
+        44.80058956043549,
+        41.692677
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:41.855628+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2864",
+      "osmId": "way/1269152262",
+      "coordinates": [
+        44.79952043772971,
+        41.7061755
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:42.649182+00:00",
+      "kind": "house",
+      "placeId": "ChIJw8X7SN8MREARpzSVkHw8V6o"
+    },
+    {
+      "id": "registry-4369",
+      "osmId": "way/1206575093",
+      "coordinates": [
+        44.79940125500001,
+        41.6906865
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:43.360903+00:00",
+      "kind": "house",
+      "placeId": "ChIJk7RhCPIMREAR8FrkS-Rorn8"
+    },
+    {
+      "id": "registry-3219",
+      "osmId": "way/282471403",
+      "coordinates": [
+        44.79201873642319,
+        41.7153865
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:43.812483+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4919",
+      "osmId": "way/242224837",
+      "coordinates": [
+        44.79762786689815,
+        41.702128
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:44.155268+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-4761",
+      "osmId": "way/77639317",
+      "coordinates": [
+        44.78661644643124,
+        41.707509
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:44.723218+00:00",
+      "kind": "house",
+      "placeId": "ChIJ1epUxNAMREARUMuHojcj1_Q"
+    },
+    {
+      "id": "registry-3743",
+      "osmId": "way/77899499",
+      "coordinates": [
+        44.8082432539709,
+        41.690892500000004
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:45.541882+00:00",
+      "kind": "house",
+      "placeId": "ChIJDT-v6vAMREARbxi6Of7cdxw"
+    },
+    {
+      "id": "registry-3851",
+      "osmId": "way/1207148734",
+      "coordinates": [
+        44.81122698423424,
+        41.688607000000005
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:45.847187+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3874",
+      "osmId": "way/337365206",
+      "coordinates": [
+        44.80670517284861,
+        41.6950265
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:46.585616+00:00",
+      "kind": "house",
+      "placeId": "ChIJb0fYOuUMREAR4cvv0cQUOQY"
+    },
+    {
+      "id": "registry-3692",
+      "osmId": "way/549425902",
+      "coordinates": [
+        44.80794484090909,
+        41.6905575
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:47.381238+00:00",
+      "kind": "house",
+      "placeId": "ChIJCyMMw_AMREARP1wyIYzOWAs"
+    },
+    {
+      "id": "registry-3550",
+      "osmId": "way/1217416149",
+      "coordinates": [
+        44.8063720625,
+        41.6953205
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:48.048629+00:00",
+      "kind": "house",
+      "placeId": "ChIJQQOaIuUMREAROxIg0dVeNKo"
+    },
+    {
+      "id": "registry-3662",
+      "osmId": "way/706233174",
+      "coordinates": [
+        44.806338274336284,
+        41.696173
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:48.439208+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3751",
+      "osmId": "way/1217416151",
+      "coordinates": [
+        44.80640652108434,
+        41.69552
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:49.146387+00:00",
+      "kind": "house",
+      "placeId": "ChIJJazAGOUMREARsdBt1Po9LGA"
+    },
+    {
+      "id": "registry-5009",
+      "osmId": "way/78357093",
+      "coordinates": [
+        44.7775005,
+        41.7036025
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:49.465608+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-2792",
+      "osmId": "way/375520108",
+      "coordinates": [
+        44.79759301148435,
+        41.706481
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:50.263482+00:00",
+      "kind": "house",
+      "placeId": "ChIJD5eSxdgMREARc10_E_E1bbY"
+    },
+    {
+      "id": "registry-3443",
+      "osmId": "way/337364749",
+      "coordinates": [
+        44.80814680477528,
+        41.690524499999995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:50.893298+00:00",
+      "kind": "house",
+      "placeId": "ChIJiZuBw_AMREARkYGpS65fnl0"
+    },
+    {
+      "id": "registry-3968",
+      "osmId": "way/77893810",
+      "coordinates": [
+        44.804040280932384,
+        41.6922495
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:51.564270+00:00",
+      "kind": "house",
+      "placeId": "ChIJC6PIL_AMREARE7ttf0M1Wqo"
+    },
+    {
+      "id": "registry-3315",
+      "osmId": "way/282471274",
+      "coordinates": [
+        44.79487596206468,
+        41.7124265
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:51.919301+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3526",
+      "osmId": "way/1207148722",
+      "coordinates": [
+        44.81061379310054,
+        41.6874845
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:52.232232+00:00",
+      "kind": null,
+      "placeId": null
+    },
+    {
+      "id": "registry-3005",
+      "osmId": "way/132312112",
+      "coordinates": [
+        44.80183435344827,
+        41.709948999999995
+      ],
+      "status": "matched",
+      "reason": "no_matching_landmark",
+      "checkedAt": "2026-10-31T15:54:53.193330+00:00",
+      "kind": "house",
+      "placeId": "ChIJv2xu8iYNREARR4Ku9uwv_20"
+    },
+    {
+      "id": "registry-3911",
+      "osmId": "way/338830393",
+      "coordinates": [
+        44.80238499433656,
+        41.6937985
+      ],
+      "status": "unmatched",
+      "reason": "no_house_within_5m",
+      "checkedAt": "2026-10-31T15:54:53.545716+00:00",
+      "kind": null,
+      "placeId": null
+    }
+  ]
+}
