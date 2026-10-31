@@ -93,7 +93,8 @@
 По прямому запросу на контуры по всему Тбилиси 2026-10-31 скачан `georgia-latest.osm.pbf` с Geofabrik и локально обработан скриптом `scripts/extract-tbilisi-building-outlines.py`. Использована административная граница `relation/1996871` (`admin_level=4`); выборка включает замкнутые OSM ways с тегом `building=*`, чья внутренняя точка находится внутри границы. Получено 121 313 контуров; 115 531 добавлен в подложку после устранения повторов с центральной XML-сеткой. Незамкнутый/невалидный контур пропускается, контуры не подменяются точками. Выход — `raw/osm-tbilisi-building-outlines.geojson` (~41 MB); в поле `source` записаны URL, SHA-256 PBF, timestamp OSM и ID границы. Сам PBF (~98 MB) в репозитории не хранится; для повтора скачать его по URL Geofabrik и выполнить:
 
 ```sh
-python3 -m pip install osmium shapely
+# В образе из Dockerfile и Dockerfile.deepseek Pyosmium, Shapely и Pillow уже
+# установлены пакетами apt, а system pip в Debian 12 заблокирован (PEP 668).
 python3 scripts/extract-tbilisi-building-outlines.py georgia-latest.osm.pbf
 python3 scripts/build-data.py
 npm run build

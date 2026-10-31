@@ -2,7 +2,10 @@ FROM node:24-bookworm-slim
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        bash bubblewrap ca-certificates curl diffutils git jq procps python3 python3-pil python3-pip python3-shapely python3-venv tar
+        bash bubblewrap ca-certificates curl diffutils file git imagemagick jq procps \
+        python3 python3-pil python3-pip python3-pyosmium python3-shapely python3-venv \
+        tar unzip webp wget \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/atlas-deps
 COPY package.json package-lock.json ./

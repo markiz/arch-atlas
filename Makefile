@@ -8,8 +8,10 @@ DEV_PORT ?= 5173
 DEEPSEEK_PORT ?= 3080
 ENV_FILE ?= .env
 ENV_FILE_ARGS = $(if $(wildcard $(ENV_FILE)),--env-file "$(ENV_FILE)")
-GIT_NAME ?= $(shell git config user.name)
-GIT_EMAIL ?= $(shell git config user.email)
+# Подставляем фиктивную личность, если на хосте имя не задано: иначе git в
+# контейнере падает с "empty ident name". Переопределяется GIT_NAME/GIT_EMAIL.
+GIT_NAME ?= $(or $(shell git config user.name 2>/dev/null),Atlas Agent)
+GIT_EMAIL ?= $(or $(shell git config user.email 2>/dev/null),atlas-agent@localhost)
 TZ ?= Asia/Tbilisi
 ROOT ?= $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
@@ -69,6 +71,9 @@ codex: image
 deepseek-image:
 	docker build -f Dockerfile.deepseek -t $(DEEPSEEK_IMAGE) .
 
+# DSH_HOME указывает на /dsh/home, а не на корень тома: сам /dsh принадлежит
+# root, а Harness выставляет на домашнем каталоге режим 0700 и без владения
+# падает с EPERM (из-за этого ломалось чтение изображений и вложений).
 deepseek: deepseek-image
 	docker build -f Dockerfile.deepseek -t $(DEEPSEEK_IMAGE) .
 	docker run --rm -it \
@@ -87,8 +92,8 @@ deepseek: deepseek-image
 		--mount type=volume,src="$(DEEPSEEK_VOLUME)",dst=/dsh \
 		-w /workspace \
 		-e HOME=/dsh/home \
-		-e DSH_HOME=/dsh \
-		-e NARB_NATIVE_CACHE_DIR=/dsh/native-cache \
+		-e DSH_HOME=/dsh/home \
+		-e NARB_NATIVE_CACHE_DIR=/dsh/home/native-cache \
 		-e DSH_WEB_PORT=$(DEEPSEEK_PORT) \
 		-e TZ=$(TZ) \
 		-e GIT_AUTHOR_NAME="$(GIT_NAME)" \
