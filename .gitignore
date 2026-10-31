@@ -22,3 +22,10 @@ dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Рабочие артефакты исследовательского конвейера
+work/
+
+# Python cache
+__pycache__/
+*.pyc
