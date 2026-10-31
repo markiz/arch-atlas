@@ -25,6 +25,8 @@
 
 ## Работа и публикация
 
+Codex никогда не запускает команды `make` и `docker`. Их запускает пользователь самостоятельно.
+
 Из корня проекта: `npm ci`, `npm run dev` для разработки; `npm run check`, `npm test`, `npm run build`, `npm run verify` по необходимости. `npm run build` создаёт `dist/`; `dist/` — готовый статический сайт, исходники держите отдельно. Для проверки страницы используйте HTTP на `localhost` или HTTPS, не `file://`.
 
 `make image` собирает Docker-образ с Node, зависимостями и Codex CLI. `make codex` запускает CLI с `--no-daemon --dangerously-bypass-approvals-and-sandbox`, монтирует репозиторий и сохраняет вход/сессии в именованном Docker-томе `atlas-codex-home`; для первого входа — `make codex ARGS="login --device-auth"`. Контейнер запускается от UID/GID пользователя, с read-only корневой файловой системой, временным `/tmp`, без Linux capabilities и без повышения привилегий; записываемыми остаются примонтированные `/workspace` и `/codex`. Не добавляйте `--privileged` и не расширяйте права контейнера для обхода ограничений Codex. В образе есть `procps` (`ps`) и `bubblewrap`. При изменении Dockerfile или lockfile пересобирайте образ.
