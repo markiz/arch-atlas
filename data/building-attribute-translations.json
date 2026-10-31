@@ -1,0 +1,661 @@
+{
+  "styles": {
+    "empire": {
+      "source": "Ампир",
+      "labels": {
+        "ru": "Ампир",
+        "en": "Empire",
+        "ka": "ამპირის სტილი",
+        "uk": "Ампір"
+      }
+    },
+    "georgian-revival": {
+      "source": "Грузинское возрождение",
+      "labels": {
+        "ru": "Грузинское возрождение",
+        "en": "Georgian Revival",
+        "ka": "ქართული აღორძინების სტილი",
+        "uk": "Грузинське відродження"
+      }
+    },
+    "islamic-architecture+neo-gothic": {
+      "source": "Исламская архитектура, Неоготика",
+      "labels": {
+        "ru": "Исламская архитектура, Неоготика",
+        "en": "Islamic Architecture, Neo-Gothic",
+        "ka": "ისლამური არქიტექტურა, ნეოგოთიკა",
+        "uk": "Ісламська архітектура, неоготика"
+      }
+    },
+    "art-nouveau": {
+      "source": "Модерн",
+      "labels": {
+        "ru": "Модерн",
+        "en": "Art Nouveau",
+        "ka": "არტ ნუვო",
+        "uk": "Модерн"
+      }
+    },
+    "art-nouveau+neo-gothic": {
+      "source": "Модерн, Неоготика",
+      "labels": {
+        "ru": "Модерн, Неоготика",
+        "en": "Art Nouveau, Neo-Gothic",
+        "ka": "არტ ნუვო, ნეოგოთიკა",
+        "uk": "Модерн, неоготика"
+      }
+    },
+    "undetermined": {
+      "source": "Не определён",
+      "labels": {
+        "ru": "Не определён",
+        "en": "Not established",
+        "ka": "დადგენილი არ არის",
+        "uk": "Не встановлено"
+      }
+    },
+    "neo-baroque": {
+      "source": "Необарокко",
+      "labels": {
+        "ru": "Необарокко",
+        "en": "Neo-Baroque",
+        "ka": "ნეობაროკო",
+        "uk": "Необароко"
+      }
+    },
+    "neo-gothic": {
+      "source": "Неоготика",
+      "labels": {
+        "ru": "Неоготика",
+        "en": "Neo-Gothic",
+        "ka": "ნეოგოთიკა",
+        "uk": "Неоготика"
+      }
+    },
+    "neoclassicism": {
+      "source": "Неоклассицизм",
+      "labels": {
+        "ru": "Неоклассицизм",
+        "en": "Neoclassicism",
+        "ka": "ნეოკლასიციზმი",
+        "uk": "Неокласицизм"
+      }
+    },
+    "neoclassicism+art-nouveau": {
+      "source": "Неоклассицизм, Модерн",
+      "labels": {
+        "ru": "Неоклассицизм, Модерн",
+        "en": "Neoclassicism, Art Nouveau",
+        "ka": "ნეოკლასიციზმი, არტ ნუვო",
+        "uk": "Неокласицизм, модерн"
+      }
+    },
+    "neoclassicism+neo-baroque+neo-moorish": {
+      "source": "Неоклассицизм, Необарокко, Неомавританский стиль",
+      "labels": {
+        "ru": "Неоклассицизм, Необарокко, Неомавританский стиль",
+        "en": "Neoclassicism, Neo-Baroque, Moorish Revival",
+        "ka": "ნეოკლასიციზმი, ნეობაროკო, ნეომავრიტანული სტილი",
+        "uk": "Неокласицизм, необароко, неомавританський стиль"
+      }
+    },
+    "neoclassicism+neo-moorish": {
+      "source": "Неоклассицизм, Неомавританский стиль",
+      "labels": {
+        "ru": "Неоклассицизм, Неомавританский стиль",
+        "en": "Neoclassicism, Moorish Revival",
+        "ka": "ნეოკლასიციზმი, ნეომავრიტანული სტილი",
+        "uk": "Неокласицизм, неомавританський стиль"
+      }
+    },
+    "neo-moorish": {
+      "source": "Неомавританский стиль",
+      "labels": {
+        "ru": "Неомавританский стиль",
+        "en": "Moorish Revival",
+        "ka": "ნეომავრიტანული სტილი",
+        "uk": "Неомавританський стиль"
+      }
+    },
+    "early-christian-basilica": {
+      "source": "Раннехристианская базилика",
+      "labels": {
+        "ru": "Раннехристианская базилика",
+        "en": "Early Christian Basilica",
+        "ka": "ადრექრისტიანული ბაზილიკა",
+        "uk": "Ранньохристиянська базиліка"
+      }
+    },
+    "soviet-neoclassicism": {
+      "source": "Советский неоклассицизм",
+      "labels": {
+        "ru": "Советский неоклассицизм",
+        "en": "Soviet Neoclassicism",
+        "ka": "საბჭოთა ნეოკლასიციზმი",
+        "uk": "Радянський неокласицизм"
+      }
+    },
+    "medieval-georgian-architecture": {
+      "source": "Средневековая грузинская архитектура",
+      "labels": {
+        "ru": "Средневековая грузинская архитектура",
+        "en": "Medieval Georgian Architecture",
+        "ka": "შუა საუკუნეების ქართული არქიტექტურა",
+        "uk": "Середньовічна грузинська архітектура"
+      }
+    },
+    "eclecticism": {
+      "source": "Эклектика",
+      "labels": {
+        "ru": "Эклектика",
+        "en": "Eclecticism",
+        "ka": "ეკლექტიკა",
+        "uk": "Еклектика"
+      }
+    }
+  },
+  "styleIdBySource": {
+    "Ампир": "empire",
+    "Грузинское возрождение": "georgian-revival",
+    "Исламская архитектура, Неоготика": "islamic-architecture+neo-gothic",
+    "Модерн": "art-nouveau",
+    "Модерн, Неоготика": "art-nouveau+neo-gothic",
+    "Не определён": "undetermined",
+    "Необарокко": "neo-baroque",
+    "Неоготика": "neo-gothic",
+    "Неоклассицизм": "neoclassicism",
+    "Неоклассицизм, Модерн": "neoclassicism+art-nouveau",
+    "Неоклассицизм, Необарокко, Неомавританский стиль": "neoclassicism+neo-baroque+neo-moorish",
+    "Неоклассицизм, Неомавританский стиль": "neoclassicism+neo-moorish",
+    "Неомавританский стиль": "neo-moorish",
+    "Раннехристианская базилика": "early-christian-basilica",
+    "Советский неоклассицизм": "soviet-neoclassicism",
+    "Средневековая грузинская архитектура": "medieval-georgian-architecture",
+    "Эклектика": "eclecticism"
+  },
+  "yearLabels": {
+    "year-1711": {
+      "source": "1711",
+      "labels": {
+        "ru": "1711",
+        "en": "1711",
+        "ka": "1711",
+        "uk": "1711"
+      }
+    },
+    "year-1723": {
+      "source": "1723",
+      "labels": {
+        "ru": "1723",
+        "en": "1723",
+        "ka": "1723",
+        "uk": "1723"
+      }
+    },
+    "year-1727": {
+      "source": "1727",
+      "labels": {
+        "ru": "1727",
+        "en": "1727",
+        "ka": "1727",
+        "uk": "1727"
+      }
+    },
+    "year-1818": {
+      "source": "1818",
+      "labels": {
+        "ru": "1818",
+        "en": "1818",
+        "ka": "1818",
+        "uk": "1818"
+      }
+    },
+    "year-1838": {
+      "source": "1838",
+      "labels": {
+        "ru": "1838",
+        "en": "1838",
+        "ka": "1838",
+        "uk": "1838"
+      }
+    },
+    "year-1868": {
+      "source": "1868",
+      "labels": {
+        "ru": "1868",
+        "en": "1868",
+        "ka": "1868",
+        "uk": "1868"
+      }
+    },
+    "year-1880": {
+      "source": "1880",
+      "labels": {
+        "ru": "1880",
+        "en": "1880",
+        "ka": "1880",
+        "uk": "1880"
+      }
+    },
+    "period-1880-1896": {
+      "source": "1880–1896",
+      "labels": {
+        "ru": "1880–1896",
+        "en": "1880–1896",
+        "ka": "1880–1896",
+        "uk": "1880–1896"
+      }
+    },
+    "year-1884": {
+      "source": "1884",
+      "labels": {
+        "ru": "1884",
+        "en": "1884",
+        "ka": "1884",
+        "uk": "1884"
+      }
+    },
+    "year-1890": {
+      "source": "1890",
+      "labels": {
+        "ru": "1890",
+        "en": "1890",
+        "ka": "1890",
+        "uk": "1890"
+      }
+    },
+    "year-1893": {
+      "source": "1893",
+      "labels": {
+        "ru": "1893",
+        "en": "1893",
+        "ka": "1893",
+        "uk": "1893"
+      }
+    },
+    "year-1896": {
+      "source": "1896",
+      "labels": {
+        "ru": "1896",
+        "en": "1896",
+        "ka": "1896",
+        "uk": "1896"
+      }
+    },
+    "year-1897": {
+      "source": "1897",
+      "labels": {
+        "ru": "1897",
+        "en": "1897",
+        "ka": "1897",
+        "uk": "1897"
+      }
+    },
+    "period-1898-1901": {
+      "source": "1898–1901",
+      "labels": {
+        "ru": "1898–1901",
+        "en": "1898–1901",
+        "ka": "1898–1901",
+        "uk": "1898–1901"
+      }
+    },
+    "year-1901": {
+      "source": "1901",
+      "labels": {
+        "ru": "1901",
+        "en": "1901",
+        "ka": "1901",
+        "uk": "1901"
+      }
+    },
+    "period-1901-1904": {
+      "source": "1901–1904",
+      "labels": {
+        "ru": "1901–1904",
+        "en": "1901–1904",
+        "ka": "1901–1904",
+        "uk": "1901–1904"
+      }
+    },
+    "year-1903": {
+      "source": "1903",
+      "labels": {
+        "ru": "1903",
+        "en": "1903",
+        "ka": "1903",
+        "uk": "1903"
+      }
+    },
+    "period-1903-1905": {
+      "source": "1903–1905",
+      "labels": {
+        "ru": "1903–1905",
+        "en": "1903–1905",
+        "ka": "1903–1905",
+        "uk": "1903–1905"
+      }
+    },
+    "period-1904-1910": {
+      "source": "1904–1910",
+      "labels": {
+        "ru": "1904–1910",
+        "en": "1904–1910",
+        "ka": "1904–1910",
+        "uk": "1904–1910"
+      }
+    },
+    "year-1905": {
+      "source": "1905",
+      "labels": {
+        "ru": "1905",
+        "en": "1905",
+        "ka": "1905",
+        "uk": "1905"
+      }
+    },
+    "year-1909": {
+      "source": "1909",
+      "labels": {
+        "ru": "1909",
+        "en": "1909",
+        "ka": "1909",
+        "uk": "1909"
+      }
+    },
+    "year-1911": {
+      "source": "1911",
+      "labels": {
+        "ru": "1911",
+        "en": "1911",
+        "ka": "1911",
+        "uk": "1911"
+      }
+    },
+    "year-1914": {
+      "source": "1914",
+      "labels": {
+        "ru": "1914",
+        "en": "1914",
+        "ka": "1914",
+        "uk": "1914"
+      }
+    },
+    "year-1915": {
+      "source": "1915",
+      "labels": {
+        "ru": "1915",
+        "en": "1915",
+        "ka": "1915",
+        "uk": "1915"
+      }
+    },
+    "period-1934-1938": {
+      "source": "1934–1938",
+      "labels": {
+        "ru": "1934–1938",
+        "en": "1934–1938",
+        "ka": "1934–1938",
+        "uk": "1934–1938"
+      }
+    },
+    "year-1936": {
+      "source": "1936",
+      "labels": {
+        "ru": "1936",
+        "en": "1936",
+        "ka": "1936",
+        "uk": "1936"
+      }
+    },
+    "year-1939": {
+      "source": "1939",
+      "labels": {
+        "ru": "1939",
+        "en": "1939",
+        "ka": "1939",
+        "uk": "1939"
+      }
+    },
+    "year-1973": {
+      "source": "1973",
+      "labels": {
+        "ru": "1973",
+        "en": "1973",
+        "ka": "1973",
+        "uk": "1973"
+      }
+    },
+    "century-6": {
+      "source": "VI век",
+      "labels": {
+        "ru": "VI век",
+        "en": "6th century",
+        "ka": "VI საუკუნე",
+        "uk": "VI століття"
+      }
+    },
+    "century-13": {
+      "source": "XIII век",
+      "labels": {
+        "ru": "XIII век",
+        "en": "13th century",
+        "ka": "XIII საუკუნე",
+        "uk": "XIII століття"
+      }
+    },
+    "century-13-later-alterations": {
+      "source": "XIII век; позднейшие изменения",
+      "labels": {
+        "ru": "XIII век; позднейшие изменения",
+        "en": "13th century; later alterations",
+        "ka": "XIII საუკუნე; მოგვიანებით გადაკეთდა",
+        "uk": "XIII століття; пізніші зміни"
+      }
+    },
+    "unknown": {
+      "source": "Не установлена",
+      "labels": {
+        "ru": "Не установлена",
+        "en": "Not established",
+        "ka": "დადგენილი არ არის",
+        "uk": "Не встановлено"
+      }
+    },
+    "late-19th-early-20th-century": {
+      "source": "конец XIX — начало XX века",
+      "labels": {
+        "ru": "конец XIX — начало XX века",
+        "en": "Late 19th–early 20th century",
+        "ka": "XIX საუკუნის ბოლო — XX საუკუნის დასაწყისი",
+        "uk": "кінець XIX — початок XX століття"
+      }
+    }
+  },
+  "yearLabelIdBySource": {
+    "1711": "year-1711",
+    "1723": "year-1723",
+    "1727": "year-1727",
+    "1818": "year-1818",
+    "1838": "year-1838",
+    "1868": "year-1868",
+    "1880": "year-1880",
+    "1880–1896": "period-1880-1896",
+    "1884": "year-1884",
+    "1890": "year-1890",
+    "1893": "year-1893",
+    "1896": "year-1896",
+    "1897": "year-1897",
+    "1898–1901": "period-1898-1901",
+    "1901": "year-1901",
+    "1901–1904": "period-1901-1904",
+    "1903": "year-1903",
+    "1903–1905": "period-1903-1905",
+    "1904–1910": "period-1904-1910",
+    "1905": "year-1905",
+    "1909": "year-1909",
+    "1911": "year-1911",
+    "1914": "year-1914",
+    "1915": "year-1915",
+    "1934–1938": "period-1934-1938",
+    "1936": "year-1936",
+    "1939": "year-1939",
+    "1973": "year-1973",
+    "VI век": "century-6",
+    "XIII век": "century-13",
+    "XIII век; позднейшие изменения": "century-13-later-alterations",
+    "Не установлена": "unknown",
+    "конец XIX — начало XX века": "late-19th-early-20th-century"
+  },
+  "districts": {
+    "tbilisi": {
+      "source": "Тбилиси",
+      "labels": {
+        "ru": "Тбилиси",
+        "en": "Tbilisi",
+        "ka": "თბილისი",
+        "uk": "Тбілісі"
+      }
+    },
+    "mtatsminda": {
+      "source": "Мтацминда",
+      "labels": {
+        "ru": "Мтацминда",
+        "en": "Mtatsminda",
+        "ka": "მთაწმინდა",
+        "uk": "Мтацмінда"
+      }
+    },
+    "sololaki": {
+      "source": "Сололаки",
+      "labels": {
+        "ru": "Сололаки",
+        "en": "Sololaki",
+        "ka": "სოლოლაკი",
+        "uk": "Сололакі"
+      }
+    },
+    "old-tbilisi": {
+      "source": "Старый Тбилиси",
+      "labels": {
+        "ru": "Старый Тбилиси",
+        "en": "Old Tbilisi",
+        "ka": "ძველი თბილისი",
+        "uk": "Старий Тбілісі"
+      }
+    }
+  },
+  "districtIdBySource": {
+    "Тбилиси": "tbilisi",
+    "Мтацминда": "mtatsminda",
+    "Сололаки": "sololaki",
+    "Старый Тбилиси": "old-tbilisi"
+  },
+  "architects": {
+    "viktor-shreter": {
+      "source": "Виктор Шрётер",
+      "labels": {
+        "ru": "Виктор Шрётер",
+        "en": "Viktor Schröter",
+        "ka": "ვიქტორ შრეტერი",
+        "uk": "Віктор Шретер"
+      }
+    },
+    "karl-zaar": {
+      "source": "Карл Заар",
+      "labels": {
+        "ru": "Карл Заар",
+        "en": "Karl Zaar",
+        "ka": "კარლ ზაარი",
+        "uk": "Карл Заар"
+      }
+    },
+    "alexander-ozerov": {
+      "source": "Александр Озеров",
+      "labels": {
+        "ru": "Александр Озеров",
+        "en": "Alexander Ozerov",
+        "ka": "ალექსანდრე ოზეროვი",
+        "uk": "Олександр Озеров"
+      }
+    },
+    "korneli-tatishev": {
+      "source": "Корнели Татищев",
+      "labels": {
+        "ru": "Корнели Татищев",
+        "en": "Korneli Tatishev",
+        "ka": "კორნელი ტატიშჩევი",
+        "uk": "Корнелій Татіщев"
+      }
+    },
+    "alexey-shchusev": {
+      "source": "Алексей Щусев",
+      "labels": {
+        "ru": "Алексей Щусев",
+        "en": "Alexey Shchusev",
+        "ka": "ალექსეი შჩუსევი",
+        "uk": "Олексій Щусєв"
+      }
+    },
+    "alexander-shimkevich": {
+      "source": "Александр Шимкевич",
+      "labels": {
+        "ru": "Александр Шимкевич",
+        "en": "Alexander Shimkevich",
+        "ka": "ალექსანდრე შიმკევიჩი",
+        "uk": "Олександр Шимкевич"
+      }
+    },
+    "leopold-bielfeld": {
+      "source": "Леопольд Бильфельд",
+      "labels": {
+        "ru": "Леопольд Бильфельд",
+        "en": "Leopold Bielfeld",
+        "ka": "ლეოპოლდ ბილფელდი",
+        "uk": "Леопольд Більфельд"
+      }
+    },
+    "osmans": {
+      "source": "Османс",
+      "labels": {
+        "ru": "Османс",
+        "en": "Osmans",
+        "ka": "ოსმანსი",
+        "uk": "Османс"
+      }
+    },
+    "giovanni-scudieri": {
+      "source": "Джованни Скудиери",
+      "labels": {
+        "ru": "Джованни Скудиери",
+        "en": "Giovanni Scudieri",
+        "ka": "ჯოვანი სკუდიერი",
+        "uk": "Джованні Скудері"
+      }
+    },
+    "mikheil-kalashnikov": {
+      "source": "Михаил Калашников",
+      "labels": {
+        "ru": "Михаил Калашников",
+        "en": "Mikheil Kalashnikov",
+        "ka": "მიხეილ კალაშნიკოვი",
+        "uk": "Михайло Калашников"
+      }
+    }
+  },
+  "architectIdBySource": {
+    "Виктор Шрётер": "viktor-shreter",
+    "Карл Заар": "karl-zaar",
+    "Александр Озеров": "alexander-ozerov",
+    "Корнели Татищев": "korneli-tatishev",
+    "Алексей Щусев": "alexey-shchusev",
+    "Александр Шимкевич": "alexander-shimkevich",
+    "Леопольд Бильфельд": "leopold-bielfeld",
+    "Османс": "osmans",
+    "Джованни Скудиери": "giovanni-scudieri",
+    "Михаил Калашников": "mikheil-kalashnikov",
+    "მიხეილ კალაშნიკოვი": "mikheil-kalashnikov",
+    "Osmans": "osmans",
+    "Giovanni Scudieri": "giovanni-scudieri"
+  }
+}
