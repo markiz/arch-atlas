@@ -2,7 +2,11 @@ import {readFile,access} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const data=JSON.parse(await readFile('public/atlas/buildings.json','utf8'));
 const geo=JSON.parse(await readFile('public/atlas/basemap.geojson','utf8'));
+const buildingOutlines=JSON.parse(await readFile('public/atlas/building-outlines.geojson','utf8'));
 const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,withPhotos=0,galleries=0;
+assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.features.length>0,'Empty building outlines');
+assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
+assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
  for(const k of ['name','district','yearLabel','style','description','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
@@ -26,4 +30,4 @@ for(const b of data){
   assert(!p.file.includes('..')&&!p.file.startsWith('/')&&!paths.has(p.file),`${b.id}: invalid or duplicate photo path`);paths.add(p.file);await access('public/atlas/'+p.file);const bytes=await readFile('public/atlas/'+p.file);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file`);photos++;
  }
 }
-console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos, ${withPhotos} buildings with photos, ${galleries} with multiple photos; ${geo.features.length} basemap features.`);
+console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos, ${withPhotos} buildings with photos, ${galleries} with multiple photos; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`);

@@ -34,7 +34,7 @@ npm run dev
 Переменные окружения для контейнера можно положить в `.env` (образ их не содержит). Файл игнорируется Git и Docker build context. Для собственного файла укажи `ENV_FILE`, например `make codex ENV_FILE=.env.local`; тот же параметр поддержан командами `make dev` и `make build`. Если `.env` не существует, команды запускаются без `--env-file`. `.env.example` содержит шаблон; скопируй его в `.env` и заполни нужные значения.
 
 - `src/` — интерфейс, Leaflet-карта и геопозиция, галерея, локальные поиск и фильтры.
-- `public/atlas/buildings.json`, `basemap.geojson`, `photos/` — данные и медиа текущего атласа.
+- `public/atlas/buildings.json`, `basemap.geojson`, `building-outlines.geojson`, `photos/` — данные и медиа текущего атласа. Контуры обычных зданий вынесены в отдельный файл и загружаются только при включении слоя «Силуэты зданий».
 - `raw/osm-tbilisi-selected.json` — улицы, парки и музеи; `raw/osm-tbilisi-building-outlines.geojson` — 115 тыс. контуров зданий по административной границе Тбилиси из локально обработанного регионального PBF.
 - `data/heritage-extra.json` — 90 дополнительно отобранных объектов; `data/geometry-overrides.json` — геометрия отношений OSM для первоначальных объектов.
 - `data/editorial_sources.json`, `data/gallery-sources.json` и `data/curated-extra-photos.json` — атрибуции и пути медиа.

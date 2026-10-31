@@ -87,3 +87,5 @@
 @media(max-width:650px){.filter-panel>.multi-filter{min-width:0}.filter-panel .multi-picker-menu{width:min(330px,calc(100vw - 48px))}}
 @media(max-width:650px){html,body,#root{height:100%;overflow:hidden}.app-shell{height:100dvh;min-height:0;display:flex;flex-direction:column;overflow:hidden}.header{flex:none}.workspace{width:100%;height:auto;min-height:0;flex:1;display:flex;flex-direction:column;padding-top:16px;padding-bottom:6px}.toolbar,.filter-panel{flex:none}.content{height:auto;min-height:0;flex:1}.city-empty{flex:1;min-height:0}}
 @media(max-width:650px){.inspector{z-index:1200}}
+
+.map-layers-panel .layer-status{display:block;margin:-2px 0 6px 22px;color:#829386;font:italic 11px/1.35 Georgia,serif}

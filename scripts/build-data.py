@@ -307,5 +307,8 @@ for building in rows:
  building['architectsByLanguage']=architects_by_language
  building['architects']=architects_by_language['ru']
 (root/'public/atlas/buildings.json').write_text(json.dumps(rows,ensure_ascii=False,separators=(',',':')))
-(root/'public/atlas/basemap.geojson').write_text(json.dumps({'type':'FeatureCollection','features':features},ensure_ascii=False,separators=(',',':')))
-print('OSM nodes',len(nodes),'ways',len(ways),'basemap',len(features),'buildings',len(rows))
+building_outlines=[feature for feature in features if feature['properties'].get('kind')=='building']
+basemap_features=[feature for feature in features if feature['properties'].get('kind')!='building']
+(root/'public/atlas/basemap.geojson').write_text(json.dumps({'type':'FeatureCollection','features':basemap_features},ensure_ascii=False,separators=(',',':')))
+(root/'public/atlas/building-outlines.geojson').write_text(json.dumps({'type':'FeatureCollection','features':building_outlines},ensure_ascii=False,separators=(',',':')))
+print('OSM nodes',len(nodes),'ways',len(ways),'basemap',len(basemap_features),'building outlines',len(building_outlines),'buildings',len(rows))
