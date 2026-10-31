@@ -6,6 +6,7 @@ source links and completeness flags, not the registry's descriptive text.
 """
 import argparse
 import json
+import math
 import re
 import sys
 import urllib.parse
@@ -99,7 +100,7 @@ def read_prior_queue(path):
     return registry_ids, way_ids
 
 
-def build_report(force=False, output=None, exclude_queues=(), label=None):
+def build_report(force=False, output=None, exclude_queues=(), label=None, max_distance_km=None, excluded_classifications=(), exclude_generic_names=False, allow_fewer=False):
     report_path = (ROOT / output) if output else ROOT / 'docs/research-next-200.md'
     report_path = report_path.resolve()
     if report_path.exists() and not force:
@@ -157,14 +158,31 @@ def build_report(force=False, output=None, exclude_queues=(), label=None):
             exclusions['registry_id_in_prior_queue'] += 1
             match_progress.advance(f'record {record_id}: in prior queue')
             continue
-        if 'არქიტექტურ' not in str(record.get('Classification') or '').lower():
+        classification = str(record.get('Classification') or '')
+        if 'არქიტექტურ' not in classification.lower():
             exclusions['classification_not_architecture'] += 1
             match_progress.advance(f'record {record_id}: not architecture')
             continue
+        if any(token in classification for token in excluded_classifications):
+            exclusions['excluded_classification'] += 1
+            match_progress.advance(f'record {record_id}: excluded classification')
+            continue
+        if exclude_generic_names:
+            generic = re.sub(r'[^\w]+', '', str(record.get('Name') or '').lower())
+            if generic in {'საცხოვრებელისახლი', 'სახლი', 'შენობა'}:
+                exclusions['generic_residential_name'] += 1
+                match_progress.advance(f'record {record_id}: generic name')
+                continue
         if not record.get('X') or not record.get('Y'):
             exclusions['missing_registry_coordinates'] += 1
             match_progress.advance(f'record {record_id}: no coordinates')
             continue
+        if max_distance_km is not None:
+            distance_km = math.hypot((record['X'] - 44.80) * 85.0, (record['Y'] - 41.69) * 111.0)
+            if distance_km > max_distance_km:
+                exclusions['outside_distance_limit'] += 1
+                match_progress.advance(f'record {record_id}: outside {max_distance_km} km')
+                continue
         point = Point(record['X'], record['Y'])
         if any(point.distance(existing) <= EXISTING_DISTANCE for existing in existing_points):
             exclusions['near_existing_atlas_card'] += 1
@@ -216,7 +234,7 @@ def build_report(force=False, output=None, exclude_queues=(), label=None):
         int(row['ObjectID']),
     ))
     selected = eligible[:200]
-    if len(selected) != 200:
+    if len(selected) != 200 and not allow_fewer:
         raise RuntimeError(f'Only {len(selected)} eligible records found; expected 200')
 
     gaps = Counter()
@@ -317,5 +335,15 @@ if __name__ == '__main__':
     parser.add_argument('--exclude-queue', action='append', default=[],
                         help='previous queue report whose registry records and OSM ways must be excluded (repeatable)')
     parser.add_argument('--label', help='queue title, for example "следующие 200 объектов Тбилиси (вторая очередь)"')
+    parser.add_argument('--max-distance-km', type=float,
+                        help='exclude registry records farther than N km from the Tbilisi centre (44.80, 41.69)')
+    parser.add_argument('--exclude-classification', action='append', default=[],
+                        help='exclude records whose Classification contains this substring (repeatable)')
+    parser.add_argument('--exclude-generic-names', action='store_true',
+                        help='exclude records named only "residential house"/"house"/"building"')
+    parser.add_argument('--allow-fewer', action='store_true',
+                        help='write fewer than 200 records instead of failing (diagnostics)')
     args = parser.parse_args()
-    build_report(force=args.force, output=args.output, exclude_queues=args.exclude_queue, label=args.label)
+    build_report(force=args.force, output=args.output, exclude_queues=args.exclude_queue, label=args.label,
+                 max_distance_km=args.max_distance_km, excluded_classifications=args.exclude_classification,
+                 exclude_generic_names=args.exclude_generic_names, allow_fewer=args.allow_fewer)

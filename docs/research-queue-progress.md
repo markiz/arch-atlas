@@ -66,3 +66,7 @@
 ## Вторая очередь (2026-11-01)
 
 Вторая очередь 200 разобрана: **17 добавлено, 80 hold, 103 reject**. Полная таблица вердиктов — в [research-queue-v2.md](research-queue-v2.md). Очередь отбора — [research-next-200-v2.md](research-next-200-v2.md).
+
+## Третья очередь (2026-11-01)
+
+Третья очередь 200 разобрана: **55 добавлено, 116 hold, 29 reject**. Полная таблица — в [research-queue-v3.md](research-queue-v3.md). Очередь отбора — [research-next-200-v3.md](research-next-200-v3.md).

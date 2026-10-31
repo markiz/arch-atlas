@@ -9,6 +9,7 @@
 - [research-queue-wave-4.md](research-queue-wave-4.md) — завершение очереди 200: 19 добавлено, 77 hold, 8 reject;
 - [research-next-200-v2.md](research-next-200-v2.md) — очередь 200 кандидатов (отбор);
 - [research-queue-v2.md](research-queue-v2.md) — разбор второй очереди: 17 добавлено, 80 hold, 103 reject;
+- [research-queue-v3.md](research-queue-v3.md) — разбор третьей очереди: 55 добавлено, 116 hold, 29 reject;
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила;
 - [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс и helper'ы для длительных скриптов;
 - [archive/README.md](archive/README.md) — исходный план и ранние снимки.
@@ -24,6 +25,7 @@
 | Сводки | [findings](research-next-200-findings.md), [priority-buildings](research-priority-buildings.md), [new-buildings-photos](research-new-buildings-photos.md) | Итоги первого прохода, спорные датировки, фото и права |
 | Кампания 31.10–01.11 | [candidate-1](research-candidate-1-2676.md), [wave 1](research-queue-wave-1.md), [wave 2](research-queue-wave-2.md), [wave 3](research-queue-wave-3.md), [wave 4](research-queue-wave-4.md) | Разбор очереди 200: 95 добавлено, 105 hold/reject с причинами |
 | Вторая очередь | [research-next-200-v2.md](research-next-200-v2.md), [разбор](research-queue-v2.md) | 200 новых кандидатов: 17 добавлено, 80 hold, 103 reject |
+| Третья очередь | [research-next-200-v3.md](research-next-200-v3.md), [разбор](research-queue-v3.md) | 200 новых кандидатов: 55 добавлено, 116 hold, 29 reject |
 | Разбор геометрии | [Баня №5, реестр 3756](research-bath-5-geometry.md) | Почему way из очереди — не баня, чем отличаются официальная граница, relation и подземный комплекс |
 
 ## Правило обновления
