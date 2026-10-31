@@ -1,0 +1,34 @@
+{
+  "theatre1": {
+    "file": "photos/theatre1-curated.webp",
+    "author": "Alsandro",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mardjanishvili_Theatre_Tbilisi.jpg",
+    "modifications": "уменьшен размер, преобразовано в WebP"
+  },
+  "theatre2": {
+    "file": "photos/theatre2-curated.webp",
+    "author": "Jelger Groeneveld",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marjanishvili_Theatre_in_Tbilisi,_Georgia,_at_night._2022.jpg",
+    "modifications": "уменьшен размер, преобразовано в WebP"
+  },
+  "gallery1": {
+    "file": "photos/gallery1-curated.webp",
+    "author": "JohnDodelande_Georgie",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Gallery,_Rustaveli_Avenue,_Tbilisi,_Georgia.jpg",
+    "modifications": "уменьшен размер, преобразовано в WebP"
+  },
+  "gallery2": {
+    "file": "photos/gallery2-curated.webp",
+    "author": "Vyacheslav Argenberg",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Tbilisi_National_Gallery_2,_Georgia.jpg",
+    "modifications": "уменьшен размер, преобразовано в WebP"
+  }
+}

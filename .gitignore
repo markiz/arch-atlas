@@ -1,0 +1,22 @@
+# Зависимости
+node_modules/
+
+# Результат сборки
+dist/
+
+# Служебные файлы TypeScript
+*.tsbuildinfo
+
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example
+
+# Логи
+*.log
+
+# Файлы редакторов и ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

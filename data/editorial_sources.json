@@ -1,0 +1,152 @@
+[
+  {
+    "id": "opera",
+    "coordinates": {
+      "lat": 41.70130556,
+      "lon": 44.79616667
+    },
+    "photo": {
+      "file": "photos/opera.webp",
+      "author": "Francisco Anzola",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:National_Opera_House._Tbilisi,_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "writers",
+    "coordinates": {
+      "lat": 41.69023,
+      "lon": 44.79975
+    },
+    "photo": {
+      "file": "photos/writers.webp",
+      "author": "Hundnase",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Writer%27s_House_of_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "imeli",
+    "coordinates": {
+      "lat": 41.7022,
+      "lon": 44.7944
+    },
+    "photo": {
+      "file": "photos/imeli.webp",
+      "author": "Alsandro",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:IMEL_Building,_Tbilisi_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "rustaveli",
+    "coordinates": {
+      "lat": 41.69972222,
+      "lon": 44.79777778
+    },
+    "photo": {
+      "file": "photos/rustaveli.webp",
+      "author": "DDohler",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_National_Theater_in_Georgia_(Europe),_built_19th_century_in_Rococo_style.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "kashveti",
+    "coordinates": {
+      "lat": 41.697954,
+      "lon": 44.799324
+    },
+    "photo": {
+      "file": "photos/kashveti.webp",
+      "author": "Kashveti1.jpg: Paata Vardanashvili\nderivative work: Rabanus Flavus (talk)",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kashveti1-2.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "anchiskhati",
+    "coordinates": {
+      "lat": 41.69555556,
+      "lon": 44.80694444
+    },
+    "photo": {
+      "file": "photos/anchiskhati.webp",
+      "author": "Gerd Eichmann",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi-86-Anchiskhati_Basilica-2019-gje.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "sioni",
+    "coordinates": {
+      "lat": 41.6914,
+      "lon": 44.8075
+    },
+    "photo": {
+      "file": "photos/sioni.webp",
+      "author": "Supanut Arunoprayote",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Sioni_Cathedral_09.23.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "metekhi",
+    "coordinates": {
+      "lat": 41.69015,
+      "lon": 44.81125
+    },
+    "photo": {
+      "file": "photos/metekhi.webp",
+      "author": "Mikhail Daneliya",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Metekhi_church_Tbilisi_eastern_facade.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "synagogue",
+    "coordinates": {
+      "lat": 41.69,
+      "lon": 44.80727
+    },
+    "photo": {
+      "file": "photos/synagogue.webp",
+      "author": "Tamar kurtanidze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%93%E1%83%98%E1%83%93%E1%83%98_%E1%83%A1%E1%83%98%E1%83%9C%E1%83%90%E1%83%92%E1%83%9D%E1%83%92%E1%83%90.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  },
+  {
+    "id": "conservatoire",
+    "coordinates": {
+      "lat": 41.69953,
+      "lon": 44.79522
+    },
+    "photo": {
+      "file": "photos/conservatoire.webp",
+      "author": "Alex Maisuradze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Conservatoire.JPG",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  }
+]
