@@ -1,0 +1,53 @@
+{
+  "type": "standard",
+  "title": "Writers' House of Georgia",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Writers&#039; House of Georgia</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q42646369",
+  "titles": {
+    "canonical": "Writers'_House_of_Georgia",
+    "normalized": "Writers' House of Georgia",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Writers&#039; House of Georgia</span></span>"
+  },
+  "pageid": 73481973,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Writer%27s_House_of_Georgia.jpg/330px-Writer%27s_House_of_Georgia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 248
+  },
+  "originalimage": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Writer%27s_House_of_Georgia.jpg/3840px-Writer%27s_House_of_Georgia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 4032,
+    "height": 3024
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1352653836",
+  "tid": "bafc1e83-4889-11f1-90cf-d59df6c76423",
+  "timestamp": "2026-05-05T13:53:01Z",
+  "description": "Mansion in Tbilisi, Georgia",
+  "description_source": "local",
+  "coordinates": {
+    "lat": 41.69023,
+    "lon": 44.79975
+  },
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Writers'_House_of_Georgia",
+      "revisions": "https://en.wikipedia.org/wiki/Writers'_House_of_Georgia?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Writers'_House_of_Georgia?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Writers'_House_of_Georgia"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Writers'_House_of_Georgia",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Writers'_House_of_Georgia",
+      "edit": "https://en.wikipedia.org/wiki/Writers'_House_of_Georgia?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Writers'_House_of_Georgia"
+    }
+  },
+  "extract": "The Writers' House of Georgia is a mansion in Tbilisi dedicated to the promotion of literature and a focal point of Georgian literature. The mansion was built by David Sarajishvili, an entrepreneur, between 1903 and 1905. The architect of the building was Karl Zaar, and the building combines art nouveau with neobaroque style elements. The terrace mosaic is made from tiles by Villeroy and Boch. It is located in Sololaki, on Ivane Machabeli Street 13.",
+  "extract_html": "<p>The <b>Writers' House of Georgia</b> is a mansion in Tbilisi dedicated to the promotion of literature and a focal point of Georgian literature. The mansion was built by David Sarajishvili, an entrepreneur, between 1903 and 1905. The architect of the building was Karl Zaar, and the building combines art nouveau with neobaroque style elements. The terrace mosaic is made from tiles by Villeroy and Boch. It is located in Sololaki, on Ivane Machabeli Street 13.</p>"
+}

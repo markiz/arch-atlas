@@ -1,0 +1,53 @@
+{
+  "type": "standard",
+  "title": "Metekhi",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Metekhi</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q2167331",
+  "titles": {
+    "canonical": "Metekhi",
+    "normalized": "Metekhi",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Metekhi</span></span>"
+  },
+  "pageid": 4218592,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Metekhi_Church_and_King_Vakhtang_Gorgasali_equestrian_monument_in_Tbilisi%2C_Georgia.jpg/330px-Metekhi_Church_and_King_Vakhtang_Gorgasali_equestrian_monument_in_Tbilisi%2C_Georgia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 220
+  },
+  "originalimage": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Metekhi_Church_and_King_Vakhtang_Gorgasali_equestrian_monument_in_Tbilisi%2C_Georgia.jpg/3840px-Metekhi_Church_and_King_Vakhtang_Gorgasali_equestrian_monument_in_Tbilisi%2C_Georgia.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 8990,
+    "height": 6000
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1379768821",
+  "tid": "15777391-c5b8-11f1-9202-cc708bec6c04",
+  "timestamp": "2026-10-11T21:09:45Z",
+  "description": "District in Tbilisi, Georgia",
+  "description_source": "local",
+  "coordinates": {
+    "lat": 41.69,
+    "lon": 44.81111111
+  },
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Metekhi",
+      "revisions": "https://en.wikipedia.org/wiki/Metekhi?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Metekhi?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Metekhi"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Metekhi",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Metekhi",
+      "edit": "https://en.wikipedia.org/wiki/Metekhi?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Metekhi"
+    }
+  },
+  "extract": "Metekhi is a historic neighborhood of Tbilisi, Georgia, located on the elevated cliff that overlooks the Mtkvari river. The neighborhood is home to the eponymous Metekhi Church of Assumption.",
+  "extract_html": "<p><b>Metekhi</b> is a historic neighborhood of Tbilisi, Georgia, located on the elevated cliff that overlooks the Mtkvari river. The neighborhood is home to the eponymous Metekhi Church of Assumption.</p>"
+}

@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Georgian National Museum",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Georgian National Museum</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q2586798",
+  "titles": {
+    "canonical": "Georgian_National_Museum",
+    "normalized": "Georgian National Museum",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Georgian National Museum</span></span>"
+  },
+  "pageid": 12478981,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Museum_of_the_Soviet_Occupation_in_Tbilisi.jpg/330px-Museum_of_the_Soviet_Occupation_in_Tbilisi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 248
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Museum_of_the_Soviet_Occupation_in_Tbilisi.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 2592,
+    "height": 1944
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1325593984",
+  "tid": "df1ebeb5-d0a5-11f0-a0a3-20d72baef0bd",
+  "timestamp": "2025-12-04T00:12:08Z",
+  "description": "Unified national museum in Tbilisi, Georgia",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Georgian_National_Museum",
+      "revisions": "https://en.wikipedia.org/wiki/Georgian_National_Museum?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Georgian_National_Museum?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Georgian_National_Museum"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Georgian_National_Museum",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Georgian_National_Museum",
+      "edit": "https://en.wikipedia.org/wiki/Georgian_National_Museum?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Georgian_National_Museum"
+    }
+  },
+  "extract": "The Georgian National Museum unifies several leading museums in Georgia.\nThe museum was established within the framework of structural, institutional, and legal reforms aimed at modernizing the management of the institutions united within this network, and at coordinating research and educational activities. Since its formation on December 30, 2004, the Museum has been directed by professor David Lordkipanidze.",
+  "extract_html": "<p>The <b>Georgian National Museum</b> unifies several leading museums in Georgia.\nThe museum was established within the framework of structural, institutional, and legal reforms aimed at modernizing the management of the institutions united within this network, and at coordinating research and educational activities. Since its formation on December 30, 2004, the Museum has been directed by professor David Lordkipanidze.</p>"
+}

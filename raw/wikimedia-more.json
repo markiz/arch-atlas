@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sioni",
+    "title": "Tbilisi Sioni Cathedral",
+    "coordinates": {
+      "lat": 41.6914,
+      "lon": 44.8075
+    },
+    "wiki": "https://en.wikipedia.org/wiki/Tbilisi_Sioni_Cathedral",
+    "photo": {
+      "file": "photos/sioni.webp",
+      "author": "This Photo was taken by Supanut Arunoprayote.\n\nFeel free to use any of my images, but please mention me as the author and may send me a message.  (สามารถใช้ภาพได้อิสระ แต่กรุณาใส่เครดิตผู้ถ่ายและอาจส่งข้อความบอกกล่าวด้วย) \n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Sioni_Cathedral_09.23.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    "extract": "The Sioni Cathedral of the Dormition is a Georgian Orthodox cathedral located in Tbilisi, the capital of Georgia. Following a medieval Georgian tradition of naming churches after specific places in the Holy Land, the Sioni Cathedral bears the name of Mount Zion at Jerusalem. It is commonly referred to as the \"Tbilisi Sioni\" to distinguish it from other churches in Georgia with the same name."
+  },
+  {
+    "id": "metekhi",
+    "title": "Metekhi",
+    "coordinates": {
+      "lat": 41.69,
+      "lon": 44.81111111
+    },
+    "wiki": "https://en.wikipedia.org/wiki/Metekhi",
+    "photo": {
+      "file": "photos/metekhi.webp",
+      "author": "Rikitza",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Metekhi_Church_and_King_Vakhtang_Gorgasali_equestrian_monument_in_Tbilisi,_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    "extract": "Metekhi is a historic neighborhood of Tbilisi, Georgia, located on the elevated cliff that overlooks the Mtkvari river. The neighborhood is home to the eponymous Metekhi Church of Assumption."
+  },
+  {
+    "id": "wedding",
+    "error": "no Commons photo",
+    "coordinates": {
+      "lat": 41.685,
+      "lon": 44.82777778
+    },
+    "title": "Wedding Palace (Tbilisi)"
+  }
+]

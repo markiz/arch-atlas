@@ -1,0 +1,53 @@
+{
+  "type": "standard",
+  "title": "Kashveti Church",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Kashveti Church</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q1734896",
+  "titles": {
+    "canonical": "Kashveti_Church",
+    "normalized": "Kashveti Church",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Kashveti Church</span></span>"
+  },
+  "pageid": 12071407,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Kashveti1-2.jpg/330px-Kashveti1-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 274
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/50/Kashveti1-2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 741,
+    "height": 616
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1366880046",
+  "tid": "5ca3c9c7-8c47-11f1-b60f-f863d137a2a4",
+  "timestamp": "2026-07-30T18:49:15Z",
+  "description": "Church building in Tbilisi, Georgia",
+  "description_source": "local",
+  "coordinates": {
+    "lat": 41.697954,
+    "lon": 44.799324
+  },
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Kashveti_Church",
+      "revisions": "https://en.wikipedia.org/wiki/Kashveti_Church?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Kashveti_Church?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Kashveti_Church"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Kashveti_Church",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Kashveti_Church",
+      "edit": "https://en.wikipedia.org/wiki/Kashveti_Church?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Kashveti_Church"
+    }
+  },
+  "extract": "The Kashveti Church of St. George is a Georgian Orthodox Church in central Tbilisi, located across from the Parliament building on Rustaveli Avenue.",
+  "extract_html": "<p>The <b>Kashveti Church</b> of St. George is a Georgian Orthodox Church in central Tbilisi, located across from the Parliament building on Rustaveli Avenue.</p>"
+}

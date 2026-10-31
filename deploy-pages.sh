@@ -16,6 +16,7 @@ done
 repo_root="$(git rev-parse --show-toplevel 2>/dev/null)" || fail 'Запусти скрипт внутри Git-репозитория.'
 cd "$repo_root"
 [[ -f package.json && -f package-lock.json ]] || fail 'В корне репозитория нужны package.json и package-lock.json проекта.'
+[[ -f index.html ]] || fail 'В корне проекта не найден index.html. Нужен полный исходный проект Vite, а не только Docker-файлы.'
 git check-ref-format --branch "$branch" >/dev/null 2>&1 || fail "Некорректное имя ветки: $branch"
 current_branch="$(git symbolic-ref --quiet --short HEAD || true)"
 [[ "$branch" != "$current_branch" ]] || fail 'Ветка публикации совпадает с текущей веткой. Выбери отдельную ветку.'

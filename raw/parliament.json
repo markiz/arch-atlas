@@ -1,0 +1,49 @@
+{
+  "type": "standard",
+  "title": "Georgian Parliament Building (Tbilisi)",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Georgian Parliament Building (Tbilisi)</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q42650745",
+  "titles": {
+    "canonical": "Georgian_Parliament_Building_(Tbilisi)",
+    "normalized": "Georgian Parliament Building (Tbilisi)",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Georgian Parliament Building (Tbilisi)</span></span>"
+  },
+  "pageid": 59599708,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f0/Georgian_parliament_2025.jpg/330px-Georgian_parliament_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 243
+  },
+  "originalimage": {
+    "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f0/Georgian_parliament_2025.jpg/3840px-Georgian_parliament_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 5645,
+    "height": 4160
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1375680638",
+  "tid": "306724ee-b408-11f1-bfb0-61fcc66b5839",
+  "timestamp": "2026-09-19T08:57:49Z",
+  "description": "Cultural heritage monument in Georgia",
+  "description_source": "local",
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Georgian_Parliament_Building_(Tbilisi)",
+      "revisions": "https://en.wikipedia.org/wiki/Georgian_Parliament_Building_(Tbilisi)?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Georgian_Parliament_Building_(Tbilisi)?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Georgian_Parliament_Building_(Tbilisi)"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Georgian_Parliament_Building_(Tbilisi)",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Georgian_Parliament_Building_(Tbilisi)",
+      "edit": "https://en.wikipedia.org/wiki/Georgian_Parliament_Building_(Tbilisi)?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Georgian_Parliament_Building_(Tbilisi)"
+    }
+  },
+  "extract": "The Parliament of Georgia Building is the meeting place of the Parliament of Georgia, located in Tbilisi, the capital of Georgia. It is located in 8 Rustaveli Avenue, close to the foothills of Mount Mtatsminda.",
+  "extract_html": "<p>The <b>Parliament of Georgia Building</b> is the meeting place of the Parliament of Georgia, located in Tbilisi, the capital of Georgia. It is located in 8 Rustaveli Avenue, close to the foothills of Mount Mtatsminda.</p>"
+}

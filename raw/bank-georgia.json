@@ -1,0 +1,53 @@
+{
+  "type": "standard",
+  "title": "Bank of Georgia headquarters",
+  "displaytitle": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Bank of Georgia headquarters</span></span>",
+  "namespace": {
+    "id": 0,
+    "text": ""
+  },
+  "wikibase_item": "Q1544120",
+  "titles": {
+    "canonical": "Bank_of_Georgia_headquarters",
+    "normalized": "Bank of Georgia headquarters",
+    "display": "<span lang=\"en\" dir=\"ltr\"><span class=\"mw-page-title-main\">Bank of Georgia headquarters</span></span>"
+  },
+  "pageid": 21581787,
+  "thumbnail": {
+    "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Bank-of-georgia-hq.jpg/330px-Bank-of-georgia-hq.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "width": 330,
+    "height": 281
+  },
+  "originalimage": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Bank-of-georgia-hq.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "width": 3348,
+    "height": 2848
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "revision": "1364371494",
+  "tid": "19384efd-80cc-11f1-90b6-0c6b0e4b2691",
+  "timestamp": "2026-07-16T04:09:11Z",
+  "description": "Office building in Tbilisi, Georgia",
+  "description_source": "local",
+  "coordinates": {
+    "lat": 41.73565833,
+    "lon": 44.77121111
+  },
+  "content_urls": {
+    "desktop": {
+      "page": "https://en.wikipedia.org/wiki/Bank_of_Georgia_headquarters",
+      "revisions": "https://en.wikipedia.org/wiki/Bank_of_Georgia_headquarters?action=history",
+      "edit": "https://en.wikipedia.org/wiki/Bank_of_Georgia_headquarters?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Bank_of_Georgia_headquarters"
+    },
+    "mobile": {
+      "page": "https://en.wikipedia.org/wiki/Bank_of_Georgia_headquarters",
+      "revisions": "https://en.wikipedia.org/wiki/Special:History/Bank_of_Georgia_headquarters",
+      "edit": "https://en.wikipedia.org/wiki/Bank_of_Georgia_headquarters?action=edit",
+      "talk": "https://en.wikipedia.org/wiki/Talk:Bank_of_Georgia_headquarters"
+    }
+  },
+  "extract": "\nThe Bank of Georgia headquarters is a building in Tbilisi, Georgia. It was designed by architects George Chakhava and Zurab Jalaghania for the Ministry of Highway Construction of the Georgian SSR and finished in 1975. The engineer was Temur Tkhilava. This 18-story building was acquired by the Bank of Georgia in 2007.",
+  "extract_html": "<p>\nThe <b>Bank of Georgia headquarters</b> is a building in Tbilisi, Georgia. It was designed by architects George Chakhava and Zurab Jalaghania for the Ministry of Highway Construction of the Georgian SSR and finished in 1975. The engineer was Temur Tkhilava. This 18-story building was acquired by the Bank of Georgia in 2007.</p>"
+}
