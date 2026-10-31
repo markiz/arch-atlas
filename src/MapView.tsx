@@ -24,7 +24,7 @@ function landmarkIcon(category:string){
 }
 export default function MapView({buildings,allBuildings,basemap,selected,onSelect,focus,reset,fit,showFit,onFit,highlightedPeriods}:Props){
  const {t,language}=useI18n();
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;major:boolean}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
  const atlasBounds=useMemo(()=>{const bounds=L.latLngBounds([]);const visit=(coordinates:any):void=>{if(!Array.isArray(coordinates))return;if(typeof coordinates[0]==='number'&&typeof coordinates[1]==='number'){bounds.extend([coordinates[1],coordinates[0]]);return}coordinates.forEach(visit)};const geometry=(g:Geometry|null):void=>{if(!g)return;if(g.type==='GeometryCollection')g.geometries.forEach(geometry);else visit(g.coordinates)};allBuildings.forEach(building=>geometry(building.geometry as Geometry|null));return bounds},[allBuildings]);
  const layerRefs=useRef<{roads:L.GeoJSON;buildings:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON}|null>(null);
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false);
@@ -79,6 +79,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
   const roadFeatures=basemap.features.filter(f=>f.properties?.kind==='road'&&typeof f.properties?.name==='string'&&f.properties.name.trim());
   const lineCoordinates=(f:typeof roadFeatures[number])=>f.geometry.type==='LineString'?f.geometry.coordinates:f.geometry.type==='MultiLineString'?f.geometry.coordinates.flat():[];
   const roadLength=(f:typeof roadFeatures[number])=>{const line=lineCoordinates(f);return line.slice(1).reduce((sum,p,i)=>sum+Math.hypot(p[0]-line[i][0],p[1]-line[i][1]),0)};
+  const roadPriority:Record<string,number>={motorway:7,trunk:6,primary:5,secondary:4,tertiary:3,residential:2,unclassified:1,living_street:1,pedestrian:1};
   const namedRoads=new Map<string,typeof roadFeatures[number]>();
   for(const feature of roadFeatures){const name=String(feature.properties?.name??'').trim(),current=namedRoads.get(name);if(!current||roadLength(feature)>roadLength(current))namedRoads.set(name,feature)}
   for(const feature of namedRoads.values()){
@@ -91,16 +92,17 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
    }
    let angle=Math.atan2(-direction[1],direction[0])*180/Math.PI;if(angle>90)angle-=180;if(angle< -90)angle+=180;
    if(!direction[0]&&!direction[1])angle=0;
-   const roadClass=String(feature.properties?.class),major=['motorway','trunk','primary','secondary','tertiary'].includes(roadClass);
-   if(!major&&!['residential','unclassified','living_street','pedestrian'].includes(roadClass))continue;
+   const roadClass=String(feature.properties?.class);
+   const priority=roadPriority[roadClass];if(priority===undefined)continue;
+   const minZoom=priority>=5?11.5:priority>=3?12.5:14;
    const fallback=String(feature.properties?.name??''),names=(feature.properties?.names??{}) as Record<string,string>;
-   streetLabels.current.push({latlng:L.latLng(midpoint[1],midpoint[0]),names,fallback,angle,major});
+   streetLabels.current.push({latlng:L.latLng(midpoint[1],midpoint[0]),names,fallback,angle,priority,minZoom});
   }
   layerRefs.current={roads,buildings:buildingLayer,water,green,landmarks};
   const labelCanvas=L.DomUtil.create('canvas');
   labelCanvas.style.position='absolute';labelCanvas.style.pointerEvents='none';
   map.getPane('overlayPane')!.appendChild(labelCanvas);
-  streetLabels.current.sort((a,b)=>Number(b.major)-Number(a.major));
+  streetLabels.current.sort((a,b)=>b.priority-a.priority);
   let labelsEnabled=false,labelCache:{zoom:number;language:string;entries:{entry:typeof streetLabels.current[number];name:string}[]}|null=null;
   const drawLabels=()=>{
    const size=map.getSize(),ratio=window.devicePixelRatio||1;
@@ -117,7 +119,7 @@ export default function MapView({buildings,allBuildings,basemap,selected,onSelec
    if(!labelCache||labelCache.zoom!==zoom||labelCache.language!==languageRef.current){
     const occupied=new Set<string>(),entries:{entry:typeof streetLabels.current[number];name:string}[]=[];
     for(const entry of streetLabels.current){
-     if(zoom<(entry.major?11.5:14))continue;
+     if(zoom<entry.minZoom)continue;
      // Resolve collisions in world coordinates, independent of the viewport.
      const worldPoint=map.project(entry.latlng,zoom),name=entry.names[languageRef.current]||entry.fallback;
      const radius=Math.max(ctx.measureText(name).width/2,10),cells:string[]=[];
