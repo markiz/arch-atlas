@@ -138,6 +138,7 @@ for b in rows:
  data=wik.get(b['id'],{}); coord=data.get('coordinates');photo=data.get('photo')
  if not coord or not photo:raise SystemExit('Missing verified input: '+b['id'])
  p=[coord['lon'],coord['lat']];matches=[]
+ if data.get('googlePlaceId'):b['googlePlaceId']=data['googlePlaceId']
  for wid,poly,tags in building_ways:
   xs=[q[0] for q in poly];ys=[q[1] for q in poly]
   if min(xs)<=p[0]<=max(xs) and min(ys)<=p[1]<=max(ys) and inside(p,poly):
