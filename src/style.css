@@ -16,8 +16,8 @@
 .city-empty{min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#f0f1e9;border:1px solid #e1e4d8;padding:24px}.city-empty h1{font:400 40px Georgia,serif;color:#31543f;margin:0}.city-empty p{font-size:14px;color:#768b7a}.city-empty button{margin-top:8px;color:#47775a;font-size:12px;font-weight:700;text-decoration:underline}
 .workspace{max-width:none}
 .map-actions{position:absolute;z-index:410;top:18px;right:18px;display:flex;align-items:flex-start;gap:8px}
-.map-actions .fit-results{position:static;z-index:auto}
-.map-actions .map-layers{position:relative;top:auto;right:auto;margin-top:3px}
+.map-actions .fit-results{position:static;z-index:auto;height:36px;padding:0 11px;display:flex;align-items:center;border-radius:3px}
+.map-actions .map-layers{position:relative;top:auto;right:auto;margin-top:0}
 @media(max-width:650px){.map-actions{top:10px;right:10px}.map-actions .fit-results{right:auto;top:auto}.map-layers{margin-top:0}.map-layers-toggle{width:36px;height:36px;padding:0;justify-content:center}.map-layers-toggle span{display:none}.map-caption{display:none}.legend{bottom:12px}}
 .toolbar .search{flex:1;width:auto}
 .toolbar .view-toggle{flex:none;margin-left:24px}
