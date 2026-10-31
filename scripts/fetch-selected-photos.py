@@ -93,6 +93,12 @@ def main() -> int:
         license_name = clean(meta.get('LicenseShortName', {}).get('value'))
         license_url = clean(meta.get('LicenseUrl', {}).get('value'))
         author = clean(meta.get('Artist', {}).get('value'))[:180]
+        # Commons often leaves LicenseUrl empty for public-domain files released by
+        # their uploader ("Own work" credit). Link the PD-self template the same way
+        # the existing Public domain entries in data/heritage-extra.json do.
+        credit = clean(meta.get('Credit', {}).get('value'))
+        if not license_url and 'public domain' in license_name.lower() and 'own work' in credit.lower():
+            license_url = 'https://commons.wikimedia.org/wiki/Template:PD-self'
         if not (license_name and license_url and author):
             print('missing attribution', card_id, license_name, license_url, author)
             skipped += 1
