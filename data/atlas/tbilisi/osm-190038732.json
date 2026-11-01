@@ -74,16 +74,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.92; реестр 969.2 м², OSM 1043.5 м²; перенос центра 0.2 м. OSM way/190038732: замкнутый контур корпуса, 1043 м², 7 вершин; IoU 0,92 с реестровой границей (969 м²), центроид 0,2 м, флагов нет. Пересечений с опубликованными карточками атласа нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-190038732/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-190038732/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4608",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75410_C399D045-2560-4BE0-8343-035C80CED7AC",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a5f678881c8177dbe270da5a4d2791bb952b9f27134fababbeb1a327fc31b349"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4608",
   "otherSource": "https://www.openstreetmap.org/way/190038732"

@@ -65,16 +65,7 @@
   },
   "geometryQuality": "OSM way имеет адрес Каспи, 7 и один этаж; Национальная парламентская библиотека подтверждает по этому адресу одноэтажный дом-музей. Официальная граница памятника описывает более широкий участок с двором и отдельным музейным зданием; IoU с OSM way около 0,37, около 41% площади way внутри реестровой границы и около 81% границы покрыто way. В карточке оставлен контур именно дома, не всего музейного участка.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-478568522/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-478568522/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16057",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=85467_4ABE170F-9B2F-44E3-86F8-937A01BA6BE7",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "43335a48db605d2560ac7ae582b6d5197e10c9111fc26b3332fe0a3dd6c597fe"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16057",
   "otherSource": "https://www.nplg.gov.ge/?m=501",

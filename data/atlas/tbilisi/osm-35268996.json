@@ -95,15 +95,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-35268996/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-35268996/1.webp",
-      "author": "-Born Londoner",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Museum_-_National.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "bd2d7ee7a4ff05aa61a2a0809949ab12604443430d0409c8c2babfe52fb108e6"
   ],
   "source": "https://www.openstreetmap.org/way/35268996",
   "otherSource": "https://www.wikidata.org/wiki/Q42650001",

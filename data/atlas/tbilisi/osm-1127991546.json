@@ -152,16 +152,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.757; реестр 1601.6 м², OSM 1635.2 м²; перенос центра 2.0 м. IoU 0,757: реестр 1602 м², OSM 1635 м², центроиды в 2,0 м, флагов нет. Обведён надземный корпус больницы вместе с обоими дворами в пределах реестровой границы. У OSM-объекта нет адреса и имени — идентификация опирается на совпадение формы, площадь и адрес из независимого источника.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1127991546/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1127991546/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3312",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73802_4A71BB4D-6BD1-49DA-8340-9A624668BA7A",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "242758931c0ac911d7d7e37842cafbc9255b73dfa814532ca86377ecbc7d8d6b"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3312",
   "otherSource": "https://www.openstreetmap.org/way/1127991546"

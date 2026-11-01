@@ -96,16 +96,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.902; реестр 1077.2 м², OSM 1160.2 м²; перенос центра 1.2 м. IoU 0,902; контур way/367443302 (1160 м²) против 1077 м² реестра, реестр покрыт на 98,5 %, центроид 1,2 м, флагов нет. Обведён весь двухэтажный корпус; в OSM он подписан как Чикобава, 36/37, тогда как реестр даёт Мазиашвили, 37 / Чикобава, 38.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-367443302/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-367443302/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3086",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74007_17A4B18C-EDCF-4B8B-9C04-B3B10CAC0E86",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "176a3ac1038c5b311a2f5d15f2790a678746644e6fb51c69423e6ef84c98b365"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3086",
   "otherSource": "https://www.openstreetmap.org/way/367443302"

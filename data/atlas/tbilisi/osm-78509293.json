@@ -133,16 +133,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; идентификация по адресу, требуется проверка корпуса",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78509293/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78509293/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2780",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73925_8326200B-E920-4393-ACBC-BBAD43E30CC5",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "0812f08f16d04a6f6fe00ff2c60cf0287de49f9aa9a10ce6f9f79b1ecab950c0"
   ],
   "source": "https://tbilisimuseumsunion.ge/en/museums/ilia-chavchavadzis-literaturul-memorialuri-muzeumi/",
   "otherSource": "https://www.openstreetmap.org/way/78509293"

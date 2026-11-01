@@ -130,16 +130,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.891; реестр 942.2 м², OSM 1053.4 м²; перенос центра 0.4 м. IoU 0,891 с реестровой границей (99,8% реестра внутри контура, смещение центроида 0,4 м). OSM way/77899499 — замкнутый Polygon надземного корпуса по Бамбис Риги, 7, без дворовых пристроек; флагов нет. Контур не пересекается с опубликованным корпусом way/337364751 (Бамбис Риги, 12) — это вторая секция ансамбля.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-77899499/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-77899499/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3743",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74030_1C96C309-EAD5-4705-A80D-D453C1ECBAA0",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "afc06be0033c25985b5f09ea96c35f5b82b88e6d1ea3d7fae9df99d9c71ca5ec"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3743",
   "otherSource": "https://www.openstreetmap.org/way/77899499"

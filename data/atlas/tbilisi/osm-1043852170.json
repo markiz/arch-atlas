@@ -92,16 +92,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.918; реестр 287.6 м², OSM 287.1 м²; перенос центра 0.4 м. IoU 0,918; реестр 287,6 м², OSM 287,1 м²; флагов нет; обведён весь угловой корпус, центроиды в 0,4 м; адресная пара сходится по номеру 9 и второму адресу Леси Украинки, 6.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1043852170/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1043852170/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3958",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75763_E54310E4-9C66-462A-8501-E29F505B9D83",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "92119e50fbff60bc5b00ae79beba15a78a1e47cb90dea858d728b0d0f8c7ea91"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3958",
   "otherSource": "https://www.openstreetmap.org/way/1043852170"

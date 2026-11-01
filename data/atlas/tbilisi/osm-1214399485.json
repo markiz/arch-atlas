@@ -200,16 +200,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.009; реестр 77.7 м², OSM 8379.6 м²; перенос центра 34.3 м. Реестровая «геометрия» здесь — не контур корпуса, а буфер радиусом 5 м вокруг точки (78 м²), поэтому IoU 0,009 и флаг osm_much_larger не показатели. OSM way/1214399485 — замкнутый Polygon площадью 8417 м² с тегом building=office: по локальной выгрузке OSM других отдельных зданий внутри этого полигона нет, то есть обведён сам многочастный комплекс, а не участок. Точка реестра внутри контура, центроид OSM в 34 м.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1214399485/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1214399485/1.webp",
-      "author": "Zviad Avaliani (ზვიად ავალიანი)",
-      "license": "Attribution (свободное использование с указанием автора)",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Georgian_Public_Broadcaster.JPG#Licensing",
-      "source": "https://commons.wikimedia.org/wiki/File:Georgian_Public_Broadcaster.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "комплекс Телецентра, вид с улицы, 31 мая 2015 г."
-    }
+    "4636080fada30c367cd30cfe2505bcd84db7ac710e15612b0dc73e9addaedced"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24686",
   "otherSource": "https://www.openstreetmap.org/way/1214399485"

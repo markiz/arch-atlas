@@ -96,25 +96,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.897; реестр 413.8 м², OSM 432.4 м²; перенос центра 0.5 м. IoU 0,897; реестр 413,8 м², OSM 432,4 м², центроид 0,5 м; флагов нет. Контур way/246787222 обводит весь трёхэтажный корпус, а не участок.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-246787222/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-246787222/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_77.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-246787222/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-246787222/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2727",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74054_730CC5A9-6960-499E-A044-C8D315C405A8",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "19a38ad62918782097389820e38e0ecb9b5fd95967651a1e85c7605438aa8586",
+    "4ad668c70cfb7478655c0041ed3ce2dbb45b46c041a4c4c1f55d721b7f9b2b74"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2727",
   "otherSource": "https://www.openstreetmap.org/way/246787222"

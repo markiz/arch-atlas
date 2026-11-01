@@ -69,33 +69,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/anchiskhati/1.webp",
-      "thumb": "thumbnails/tbilisi/anchiskhati/1.webp",
-      "author": "Gerd Eichmann",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi-86-Anchiskhati_Basilica-2019-gje.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/anchiskhati/2.webp",
-      "thumb": "thumbnails/tbilisi/anchiskhati/2.webp",
-      "author": "Kober",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Anchis-Khati_basilica,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/anchiskhati/3.webp",
-      "thumb": "thumbnails/tbilisi/anchiskhati/3.webp",
-      "author": "takunodaibouken",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Anchiskhati_Basilica._Tbilisi_(takunodaibouken_2012).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "b2fb1a2e240f087a04928c15404bd1b90b09c57ae8b9328aaf445c1970138a9a",
+    "f9b20bd0feda2904f17f9fdb964917f9d6a9662e280314473efa4f2fbbba892d",
+    "9e41333c68e69db31ddc5148b9c596470948a293562b5face2c786a4fda6b190"
   ],
   "source": "https://georgianencyclopedia.ge/en/form_eng/374",
   "googlePlaceId": "ChIJ-wA0IOUMREARoqE9lcQgX-I",

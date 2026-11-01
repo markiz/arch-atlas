@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.855; реестр 54.1 м², OSM 52.4 м²; перенос центра 0.5 м. IoU 0,855; флаг official_point_buffer — реестровая граница (54,1 м²) получена буфером вокруг точки и является приблизительной; OSM way/1204376656 — реальный восьмигранный контур корпуса 52,4 м², центроид в 0,5 м, высота около 7 м по оценке маппера.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1204376656/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1204376656/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4951",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75790_CB1321C2-1200-4BB5-BF8F-5826EE275101",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "823679360f80347b8256d1b8a16dc7a010aa8cee1ba65bb9f7d50a2213d82893"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4951",
   "otherSource": "https://www.openstreetmap.org/way/1204376656"

@@ -115,34 +115,9 @@
   },
   "geometryQuality": "OSM way/1225299270 имеет адрес 44/9 и теги building=hotel, building:levels=5. Точка официальной записи 2671 находится внутри контура; реестровый полигон перекрывает около 99% своей площади, но занимает примерно 37% площади OSM way (IoU около 0,37). Контур показывает нынешнюю гостиничную постройку, которая шире охраняемой границы и не подтверждена как точный исторический footprint дома 1913 года. Идентичность адреса и исторической функции поддерживают официальный архив и нынешний оператор отеля; неопределённость исходного корпуса и расширения сохранена в карточке.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1225299270/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1225299270/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_44.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1225299270/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1225299270/2.webp",
-      "author": "Jonathan Cardy",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Ave,_Tbilisi_(Sept_2012)_44.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1225299270/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-1225299270/3.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2671",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74632_5C9F2DC5-3380-49F2-B753-459B327A6859",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "ce6ffb7b9d50401bd644fa4da5226b539d8a591252bf14f95a2be5e7270dcf6a",
+    "b07499ffb9de93055e2ecfe4304adc98624fb7662d1e1c758d1866a970c7ac4d",
+    "0f27d78e74ede3937ce79534185a7ef4274ec3c5144f7e0254ebc60603e37f3c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2671",
   "otherSource": "https://archive.gov.ge/en/news/aleqsandre-ozerovis-proeqti-kviris-dokumenti"

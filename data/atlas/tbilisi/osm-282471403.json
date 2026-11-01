@@ -161,16 +161,7 @@
   },
   "geometryQuality": "Официальная граница памятника 3219 и OSM way/282471403 совпадают с IoU около 0,84; 94,1% площади OSM-контура лежит внутри границы, граница покрывает 88,1% контура. Официальная граница местами шире контура; адрес 148/117 есть только в OSM, реестр даёт общий 148. С главным корпусом 148 пересечения нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-282471403/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-282471403/1.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_-_148.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-      "description": "фасад корпуса 148/117; свободная лицензия"
-    }
+    "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3219",
   "otherSource": "https://www.openstreetmap.org/way/282471403"

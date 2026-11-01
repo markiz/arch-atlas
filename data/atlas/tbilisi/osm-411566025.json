@@ -98,16 +98,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.86; реестр 827.9 м², OSM 774.7 м²; перенос центра 0.7 м. IoU 0,860; реестр 827,9 м², OSM 774,7 м², центроид в 0,7 м, флагов нет. OSM-контур обводит корпус, но этажность в OSM (6) реестром не подтверждена — число этажей в карточке не указывать.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-411566025/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-411566025/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3008",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74246_66035D01-5D77-427D-B8F5-D3A5033A7923",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "9874f843f541706f4e9f2fbf5fdecadfa16e5df1a442ce95a7202106816129d5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3008",
   "otherSource": "https://www.openstreetmap.org/way/411566025"

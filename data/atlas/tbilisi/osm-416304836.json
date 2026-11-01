@@ -116,16 +116,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.707; реестр 1086.1 м², OSM 1207.9 м²; перенос центра 4.2 м. IoU 0.707, флагов нет; OSM 1208 м² против реестровых 1086 м², покрытие реестра 88 %. Наложение 7 м² с карточкой дома № 8 — касание соседних зданий.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-416304836/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-416304836/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3249",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73795_27FD220C-78BC-4B0A-83CE-C641E53F45F1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "94a103f0ad5647b93930f74b23165c0ebc3e935f3b473756d9068f620ee1130e"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3249",
   "otherSource": "https://www.openstreetmap.org/way/416304836"

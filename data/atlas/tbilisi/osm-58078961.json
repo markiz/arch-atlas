@@ -173,16 +173,7 @@
   },
   "geometryQuality": "Именованный OSM-контур и официальная граница памятника совпадают по месту (IoU около 0,81); источники дают разные адресные варианты",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-58078961/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-58078961/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4192",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75082_C0BA05EC-DF58-41BD-A342-541AA9C6787E",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "ce09333d8684577e558bd78d608ded260256d58a7dbe313e5e572c7ea71393e4"
   ],
   "source": "https://www.heritagesites.ge/uploads/files/5a421dd24854a.pdf",
   "otherSource": "https://orthodoxy.ge/tsnobarebi/tadzrebi/tvereli.htm"

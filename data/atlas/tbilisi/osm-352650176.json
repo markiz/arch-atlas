@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.891; реестр 258.7 м², OSM 253.7 м²; перенос центра 0.6 м. IoU 0,89 с реестровой границей (266 м² против 260 м²), centroid 0,6 м, flags нет; OSM way/352650176 (building=apartments, 2 этажа, 11 вершин) обводит корпус.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-352650176/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-352650176/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=75568_F8487B09-3E22-4821-8A07-F30DA98428D9",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75568_F8487B09-3E22-4821-8A07-F30DA98428D9",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "8ba3517176971856598b64239347af8c5bb6b0b79b9d5b9616a24559fdd49ad1"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3610",
   "otherSource": "https://www.openstreetmap.org/way/352650176"

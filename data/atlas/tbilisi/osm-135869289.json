@@ -87,25 +87,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-135869289/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-135869289/1.webp",
-      "author": "Surprizi",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_State_Silk_Museum.jpg",
-      "modifications": "преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-135869289/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-135869289/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5006",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76159_BFCD44CA-EEC3-419C-BCE6-923BCF32CB8B",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "0d6527ad614a90af4216b1a68897332e568bbe21ab44f7ba8cc28e597d824f05",
+    "b8eba3c33d55209f64cf12e85837ac8f93db1e78e91f3e62157b93417787ad05"
   ],
   "source": "https://www.silkmuseum.ge/en/about/building",
   "otherSource": "https://taa.net.ge/en/archive-geo/silk-museum/"

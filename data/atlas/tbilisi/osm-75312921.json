@@ -83,24 +83,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-75312921/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-75312921/1.webp",
-      "author": "DAVID HOLT from London, England",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:095_Tavisuplebis_sq_Tbilisi_(1540620781).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-75312921/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-75312921/2.webp",
-      "author": "Bärbel Miemietz",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:1979_Tbilisi_City_hall.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "88cec351f851575ae3e4e598a0e9c233d08ce6fae4029c81fd374679d13be199",
+    "297041be2235b212c1ab04379a5aa37cadbdafbd1a7bd19e3105ef51d1afcf44"
   ],
   "source": "https://www.openstreetmap.org/way/75312921",
   "otherSource": "https://www.wikidata.org/wiki/Q42639309",

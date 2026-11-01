@@ -84,16 +84,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.92; реестр 305.0 м², OSM 313.0 м²; перенос центра 0.4 м. IoU 0,92; OSM way/1043852173 — 313 м²; флагов нет. Обведён весь корпус на углу Зичи и Бесики.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1043852173/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1043852173/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4325",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75467_F7081A87-8CBA-41FF-BF24-A9EF30FAF463",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "20c518a49212824913e83a13d92b28404a877be35a3d93c0bf4c9c69cb91bd0a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4325",
   "otherSource": "https://www.openstreetmap.org/way/1043852173"

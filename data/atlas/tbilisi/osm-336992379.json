@@ -91,25 +91,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-336992379/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-336992379/1.webp",
-      "author": "Jonathan Cardy",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Ave,_Tbilisi_(Sept_2012)_49.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-336992379/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-336992379/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3001",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76021_5BA38271-94F3-4963-BD4E-5B4D87197667",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "ed661d0e33e60839dfd9288f545ad40e53704573168ae43a26e2dd6964bee702",
+    "c826ad201113c74302c9718679b2dc230a3f0c91d21478a5beb96fe2d32e93c4"
   ],
   "source": "https://www.openstreetmap.org/way/336992379",
   "otherSource": "https://www.wikidata.org/wiki/Q42645160",

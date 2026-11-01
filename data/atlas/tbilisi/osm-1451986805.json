@@ -67,16 +67,7 @@
   },
   "geometryQuality": "Официальная граница 4185 и OSM way/1451986805 совпадают с IoU около 0,77; 80,3% OSM внутри границы, граница покрыта на 95,3%, смещение 0,28 м. Контур крошечный (9,5–11,3 м²), но это реальный план часовни, а не участка.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1451986805/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1451986805/1.webp",
-      "author": "Sasha India",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Georgia_(27786031394).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "общий вид склепа; свободная лицензия"
-    }
+    "d821a90c1d76b687c54f732846955cfca4c1f6b291621ea348cd7db42cacbe8b"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4185",
   "otherSource": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Georgia_(27786031394).jpg"

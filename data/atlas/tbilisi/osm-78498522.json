@@ -103,15 +103,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78498522/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78498522/1.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_31_-_Khidi_street_2_(3).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "b931eb6ec56e4d9589cf1366b7deeeffd7d9cb2144f78e147b38ba00336d0547"
   ],
   "source": "https://www.openstreetmap.org/way/78498522",
   "otherSource": "https://www.wikidata.org/wiki/Q42620537",

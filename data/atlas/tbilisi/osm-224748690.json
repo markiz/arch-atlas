@@ -101,16 +101,7 @@
   },
   "geometryQuality": "OSM way/224748690 имеет точный адрес 14 и замкнутый корпусный Polygon. Официальная граница 4393 и way совпадают с IoU около 0,70; 71,7% площади way лежит внутри границы, а way покрывает около 95,8% реестрового полигона. Адрес, двухэтажная форма и архитектурное описание подтверждают конкретное здание; пересечения с соседней карточкой Writers House нет. Google API не нашёл адресного Place ID в пределах 5 м; фотографии и права не проверены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-224748690/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-224748690/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4393",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75583_3EFA7590-D1E7-4621-8B4B-FDA6EC2FACD1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "cf043c45931881661298479bc30481e132136e810a933aa1b68ae681f5f8b1b8"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4393",
   "otherSource": "https://www.openstreetmap.org/way/224748690"

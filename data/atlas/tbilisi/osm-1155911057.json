@@ -96,16 +96,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.825; реестр 256.5 м², OSM 228.2 м²; перенос центра 0.9 м. IoU 0,83 с реестровой границей (276 м² против 234 м²), centroid 0,9 м, flags нет; OSM way/1155911057 (building=apartments, 2 этажа, 13 вершин) обводит корпус.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1155911057/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1155911057/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=74553_D5F2580B-9735-4E78-97E3-8157D4ACDFD9",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74553_D5F2580B-9735-4E78-97E3-8157D4ACDFD9",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "e967185bb20c6f3f686f9b69de847d923ca6bd4f04d4a3aa8663bab26ceacf1f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3611",
   "otherSource": "https://www.openstreetmap.org/way/1155911057"

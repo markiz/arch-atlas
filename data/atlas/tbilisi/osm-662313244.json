@@ -88,25 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.966; реестр 453.6 м², OSM 464.1 м²; перенос центра 0.1 м. IoU 0,966; OSM way/662313244 — весь трёхэтажный угловой корпус, флагов нет; пересечений с карточками атласа нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-662313244/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-662313244/1.webp",
-      "author": "FingerWiki",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2026-09-17_2_Rostom_Muskhelishvili_Street,_Tbilisi_-_house.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-662313244/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-662313244/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3895",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74747_C850D781-2E7C-411E-BA21-CAA624F2B073",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "101bf1cb0113363c1a92b5dd64bf18c1534e49f7be1c428d5e135f91acba66ab",
+    "5bdc3059fec55b05b0b6700c123c72962d889ab0fffbac8754647ac6650afcb4"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3895",
   "otherSource": "https://www.openstreetmap.org/way/662313244"

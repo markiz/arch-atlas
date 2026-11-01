@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.961; реестр 551.6 м², OSM 556.3 м²; перенос центра 0.3 м. IoU 0,96 с реестровой границей (566 м² против 571 м²), centroid 0,3 м, flags нет; OSM way/1131162724 (building=apartments, 3 этажа, двускатная крыша, 11 вершин) практически совпадает с реестровым контуром.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1131162724/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1131162724/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=77027_34E1EC2F-A3D7-4996-8749-BF4B8690946E",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77027_34E1EC2F-A3D7-4996-8749-BF4B8690946E",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "2d50ae3761fc0a6a1fadcc35d5db9e868989f29af57cc0faee5478c0fcee95f9"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3571",
   "otherSource": "https://www.openstreetmap.org/way/1131162724"

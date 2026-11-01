@@ -203,24 +203,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78075110/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78075110/1.webp",
-      "author": "ImposterVT from USA",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:River_View.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-78075110/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-78075110/2.webp",
-      "author": "Mostafameraji",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2_Dimitri_Uznadze_Street_in_Tbilisi_-_mostafa_meraji_-_Georgia_Photos_-_Travel_And_Tourism_08.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "d53a0463532d97dce58a8a87e389f8ed7f11f58dc86ff60be7473115416022d8",
+    "e0a8b622a675b9fbd3e75bbdb915386dac74eb1cc9cf07662aea2b69e833f931"
   ],
   "source": "https://www.openstreetmap.org/way/78075110",
   "otherSource": "https://www.wikidata.org/wiki/Q42653417",

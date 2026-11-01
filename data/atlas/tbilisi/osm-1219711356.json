@@ -72,16 +72,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.659; реестр 324.8 м², OSM 383.7 м²; перенос центра 2.0 м. IoU 0,66; реестр 324,8 м², OSM 383,7 м², центроиды в 2,0 м; флагов нет. OSM way/1219711356 (building=commercial, 3 этажа) шире реестровой границы на ~60 м²; реестровая граница покрыта на 86,6 %.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1219711356/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1219711356/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3709",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76326_ADF78EE8-8B4F-4F59-8D2C-51D9C38E5B09",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "8c28074873c60714a6210ea0ff49ee26cf206db7d6a4a53156bbc21841896374"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3709",
   "otherSource": "https://www.openstreetmap.org/way/1219711356"

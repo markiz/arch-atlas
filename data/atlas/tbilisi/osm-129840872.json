@@ -81,16 +81,7 @@
   },
   "geometryQuality": "OSM way/129840872 сопоставлен с адресом и названием источника; IoU с границей официального реестра около 0,94",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-129840872/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-129840872/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4071",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74715_19104E68-60BB-400C-91E3-C318FD8B7872",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "b34e8e9a1d9632830ec210c8819e3adb07cce71287d9efef563ab628780fbe46"
   ],
   "source": "https://www.heritagesites.ge/uploads/files/5aa7c916bd17b.pdf",
   "otherSource": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/sameba2.htm"

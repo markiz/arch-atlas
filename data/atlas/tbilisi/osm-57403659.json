@@ -88,26 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.763; реестр 1704.7 м², OSM 2220.7 м²; перенос центра 3.3 м. IoU 0,763: реестровая граница 1705 м², OSM 2221 м², 99,7% реестрового контура покрыто OSM, центроиды в 3,3 м. Флагов нет; обведён надземный двухэтажный корпус, OSM-контур чуть шире по торцам и включает примыкающую пристройку. Номера дома 14 (реестр) и 16 (OSM) относятся к одному объекту — связь задана тегом heritage:website в OSM.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-57403659/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-57403659/1.webp",
-      "author": "Andrew Milligan sumo",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:16_Tsminda_Ketevan_Dedoplis_Avenue,_Tbilisi,_Georgia_(48814577146).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "главный фасад двухэтажного корпуса с ризалитом и высоким фронтоном, 2019 г."
-    },
-    {
-      "file": "photos/tbilisi/osm-57403659/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-57403659/2.webp",
-      "author": "Andrew Milligan sumo",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:16_Tsminda_Ketevan_Dedoplis_Avenue,_Tbilisi,_Georgia_(48814726077).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "тот же корпус, второй ракурс того же адреса, 2019 г."
-    }
+    "24d3215f23582859b885672539b102797c532b4dae6d955a2debe2dcbb124aab",
+    "e967520aa7e3f1d3eeae96f9346ca8a63ab224f6aa46a6299d059d28dcc49975"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3420",
   "otherSource": "https://www.openstreetmap.org/way/57403659"

@@ -104,34 +104,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.89; реестр 564.2 м², OSM 592.2 м²; перенос центра 0.7 м. IoU 0,890; реестровая площадь 564 м², контур OSM 592 м² (92% OSM внутри реестровой границы). Флагов нет, обведён корпус вместе с треугольным выступом.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-549065876/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-549065876/1.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%95%E1%83%98%E1%83%A2%E1%83%A0%E1%83%90%E1%83%9F%E1%83%94%E1%83%91%E1%83%98%E1%83%90%E1%83%9C%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_%E1%83%91%E1%83%94%E1%83%97%E1%83%9A%E1%83%94%E1%83%9B%E1%83%98%E1%83%A1_3.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-549065876/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-549065876/2.webp",
-      "author": "Tamar kurtanidze",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Betlemi_street_3.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-549065876/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-549065876/3.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4035",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76526_6F50E645-94AA-427C-BD64-0B7EC8FA9D16",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "32718c8b749980d4b39a440293eb570da407a5e5f1470f44bc820ba02fe67f9e",
+    "a8adfac5995ac68c42a7a6e26598a31d9c4132064ebfeeeecc258dc8abd7d5f6",
+    "03a80e7c6bac20d17ad1e04258b755b9e30fadaebd294380265bbbb181e3caba"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4035",
   "otherSource": "https://www.openstreetmap.org/way/549065876"

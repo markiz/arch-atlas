@@ -73,16 +73,7 @@
   },
   "geometryQuality": "Замкнутый семиузловой OSM way/706233174 находится у официальной точки театра и в адресном месте Шавтели, 26. Официальная граница наследия перекрывает около 84% площади way; IoU около 0,47. Совпадение достаточно для отдельной карточки со средней уверенностью, но OSM указывает четыре уровня, а реестр — два этажа и полуподвал. Контур не пересекается с корпусом мастерской на Шавтели, 13 (way/337365207), который находится примерно в 50 м к юго-востоку.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-706233174/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-706233174/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3662",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75094_EF2758DA-5DCD-43EB-9D15-9898AE9684D1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "66aa7ab7f0a7da76e43563b77e08886a35bec16bbe61d50a4192b66f91e064ac"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3662",
   "otherSource": "https://www.matsne.gov.ge/ka/document/view/63112"

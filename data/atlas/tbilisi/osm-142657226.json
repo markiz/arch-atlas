@@ -89,16 +89,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-142657226/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-142657226/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74967_0C30B6F7-1FD5-411D-92EB-E37F1BC5215E",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "673c5e4f6b3c0fbfa7ba4705f5a2ce040165e8eb09e6f617c595821d7b0f43f7"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/356/satesto",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028"

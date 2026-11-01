@@ -69,25 +69,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; сопоставлен с границей реестра, требует редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-549425991/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-549425991/1.webp",
-      "author": "Aleksey Muhranoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Kldisubani_Saint_George_church,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
-      "modifications": "преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-549425991/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-549425991/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75003_FA71693B-51C0-4A57-A198-CB4B6E9F0FA2",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "b8b834e409377116177d81da95120f1b469de2ce989d4f2b79c50d30d9c14254",
+    "0adfa7067311a2484f3352e196b2063d6fc2b3300e2dda4c3adac7523f7a7a60"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626",
   "otherSource": "https://georgianencyclopedia.ge/ka/form/27732"

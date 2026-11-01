@@ -72,25 +72,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.619; реестр 422.4 м², OSM 399.3 м²; перенос центра 3.3 м. IoU 0.619, флагов нет; OSM 399 м² против реестровых 422 м², покрытие реестра 74 % — расхождение по дворовой части/углам, обведён только корпус.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-417136700/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-417136700/1.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%91%E1%83%90%E1%83%A5%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_4.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-417136700/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-417136700/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3241",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73884_9610974D-8936-47BD-93DF-FAD29F5F9581",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "8c62fff2898726277dab678ac23f5ab2fb65c82cba09d9284c0a561f7464a0eb",
+    "8914e22f83ca28cae2b4ba667436dc22cce87ddd5fbbdb85228b35305fa12c6c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3241",
   "otherSource": "https://www.openstreetmap.org/way/417136700"

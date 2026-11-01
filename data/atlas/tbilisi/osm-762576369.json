@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.909; реестр 709.6 м², OSM 659.2 м²; перенос центра 0.2 м. IoU 0,909; реестр 709,6 м², OSM 659,2 м²; флагов нет; обведён весь угловой корпус, центроиды в 0,2 м; пересечение с карточкой «Нишнианидзе, 5» — 1,8 м² общей стены, не дубль.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-762576369/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-762576369/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3951",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75271_8157A7D7-5D1C-4D87-856A-75FF2C1B6D5B",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a9479d3fffe5aafd8d0fb82606e37585f7f18905ea6f5ce07009311fb662f1da"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3951",
   "otherSource": "https://www.openstreetmap.org/way/762576369"

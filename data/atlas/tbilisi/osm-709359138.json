@@ -59,24 +59,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-709359138/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-709359138/1.webp",
-      "author": "Eka Samkharadze",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Neoclassical_style_bell_tower_of_Sioni_Cathedral,_1812.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-709359138/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-709359138/2.webp",
-      "author": "Александр Сигачёв",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_New_Bell_Tower_of_Tbilisi_Sioni_Cathedral_-_2025-10_-_p2.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "4a741c58c06727bce0a1f39104b49911003202cf076caefb4a54b2ddf057e086",
+    "6ec4953a397111a94574e88c50d3f57ffc4b5af1471408cd1e832f3321944cd0"
   ],
   "source": "https://www.openstreetmap.org/way/709359138",
   "otherSource": "https://www.wikidata.org/wiki/Q42651587"

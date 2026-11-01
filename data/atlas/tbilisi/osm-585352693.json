@@ -246,16 +246,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.02; реестр 77.7 м², OSM 3016.3 м²; перенос центра 22.7 м. Реестровая граница — точечный буфер 5 м (77,7 м²), поэтому IoU 0,02 неинформативен; реестровая точка на 77% внутри OSM-way 585352693 (3 050 м², 50 точек) — замкнутый контур надземного объёма собора. Флаг osm_composite_or_plot относится к реестровому буферу, а не к OSM; ансамбль (звонница, монастырь) контуром не охвачен.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-585352693/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-585352693/1.webp",
-      "author": "Marcin Konsek",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Sob%C3%B3r_Tr%C3%B3jcy_%C5%9Awi%C4%99tej_(06).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "Собор Святой Троицы в Тбилиси, общий вид"
-    }
+    "de02ca04655e3dd0e2dc101a07a3b18e3344662eaba27b4373040aa612551f67"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=7981",
   "otherSource": "https://www.openstreetmap.org/way/585352693"

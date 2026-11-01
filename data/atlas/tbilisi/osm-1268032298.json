@@ -63,16 +63,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1268032298/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1268032298/1.webp",
-      "author": "khalampre",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Can_you_find_the_face.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "западная оборонительная башня Ботанического сада; свободная лицензия"
-    }
+    "57dcd016a2d52e606fe3d56e332ea32a023a8dec9eaf346e94f5ed83b24840b8"
   ],
   "source": "https://www.openstreetmap.org/way/1268032298",
   "otherSource": "https://www.wikidata.org/wiki/Q42628249"

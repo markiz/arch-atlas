@@ -213,16 +213,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1234716193/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1234716193/1.webp",
-      "author": "Ekkatterrinna",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Circus.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "здание цирка на площади Героев; свободная лицензия"
-    }
+    "62d1ee23eddb8cfecc7a97808cad02e5a0962bc61f9aeeb1d980b75878101024"
   ],
   "source": "https://circus.ge/about/en",
   "otherSource": "https://www.openstreetmap.org/way/1234716193"

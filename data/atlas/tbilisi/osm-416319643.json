@@ -72,34 +72,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.632; реестр 525.5 м², OSM 438.5 м²; перенос центра 3.2 м. OSM way/416319643, IoU 0,632, флагов нет; контур углового корпуса, реестр покрыт на 71%.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-416319643/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-416319643/1.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98,_%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_157.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-416319643/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-416319643/2.webp",
-      "author": "Ekkatterrinna",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98._%E1%83%91%E1%83%90%E1%83%A5%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_2._%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-416319643/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-416319643/3.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3306",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75796_70B473A5-6DDE-44EA-AA69-40A573125FDE",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "72ce047aa04fe45244255746fe395d0017b8f46b0d44fcdfb563473427cf4697",
+    "6deb72e91964705db2643d994da5d6e0f4e3f2c1efc98983f632c21e6b4a1500",
+    "a810b0a33636c70395db74a5c7d3969187fde370be0aa6850f0cb3dbf7d45af5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3306",
   "otherSource": "https://www.openstreetmap.org/way/416319643"

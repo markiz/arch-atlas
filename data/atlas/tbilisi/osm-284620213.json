@@ -81,15 +81,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-284620213/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-284620213/1.webp",
-      "author": "D.Rovchak",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Norashen_church_in_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "f6f70660247d8cccdbf819a2b9a5385d43df5c273f095ee58dee5d85058195ec"
   ],
   "source": "https://erekle.archive.gov.ge/places/911/norashenis-eklesia",
   "otherSource": "https://armenianchurch.ge/en/churches/well-preserved-and-ruined-inactive-churches/norashen-sourb-astvatsatsin-church-holy-mother-of-god-in-tbilisi"

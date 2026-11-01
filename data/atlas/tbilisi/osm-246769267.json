@@ -137,16 +137,7 @@
   },
   "geometryQuality": "Официальная граница 3049 и OSM way/246769267 совпадают с IoU около 0,83; 86% площади OSM внутри границы, граница покрыта на 96%, смещение центроидов 0,4 м. Разница объясняется притвором и звонницей. OSM даёт №65, реестр и городской список — №69; это вариант нумерации того же углового участка.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-246769267/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-246769267/1.webp",
-      "author": "Aleksey Muhranoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Church,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "храм и часовня; свободная лицензия"
-    }
+    "b739fe58f00631eeb1e8acd3a30395912b32250a0d5a5505ac65ac1c7c89e192"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3049",
   "otherSource": "https://orthodoxy.ge/tsnobarebi/tadzrebi/neveli.htm"

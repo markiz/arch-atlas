@@ -68,16 +68,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.9; реестр 267.2 м², OSM 248.6 м²; перенос центра 0.7 м. IoU 0,900; флагов нет; контур OSM 248,6 м² против реестровых 267,2 м², 98,3 % OSM внутри реестрового контура; расхождение адреса объясняется переименованием переулка.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-281562093/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-281562093/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4481",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=78377_3BF26C7E-7E6B-4C6E-AEBA-C506DA24681F",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "dc7e81e989cbd3772ba8aba242b66784040cb99e46baf90c17499f2eb3e72b46"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4481",
   "otherSource": "https://www.openstreetmap.org/way/281562093"

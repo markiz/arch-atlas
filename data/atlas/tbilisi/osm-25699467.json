@@ -105,16 +105,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-25699467/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-25699467/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4306",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75429_4E33C91C-7AA8-4346-8D88-A323B36696A3",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "7da9dca462e2cc2ae4248d4103922334e404b49a26cd1486dc2e512c41bf1c7b"
   ],
   "source": "https://scantbilisi.ge/en/objects/348/TBILISI--Funicular",
   "otherSource": "https://www.funicular.ge/?lang=en"

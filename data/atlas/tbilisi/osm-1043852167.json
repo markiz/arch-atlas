@@ -68,16 +68,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.923; реестр 197.3 м², OSM 205.7 м²; перенос центра 0.5 м. IoU 0,923; OSM 206 м² против 197 м² реестра; центроид 0,5 м; флагов нет. В OSM адрес — улица Зураба Жвания, 10.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1043852167/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1043852167/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4189",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75060_676780D8-E6E4-4F5E-812B-2CD2EDEC30E0",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "0e094649de402e3d454aa873f49aef986fcd137eb83710d38d3d9699fbfc6032"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4189",
   "otherSource": "https://www.openstreetmap.org/way/1043852167"

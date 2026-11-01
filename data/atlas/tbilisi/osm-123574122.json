@@ -129,16 +129,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-123574122/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-123574122/1.webp",
-      "author": "Ephraim Stillberg",
-      "license": "Public domain",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
-      "source": "https://commons.wikimedia.org/wiki/File:Sachino_palace_(Tbilisi).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "дворец царицы Дареджан «Сачино»; свободная лицензия"
-    }
+    "9afdfab2ae600091c561abde52ce42a2c3689705f12bee434723c7cb33e028f9"
   ],
   "source": "https://georgianencyclopedia.ge/en/form_eng/633",
   "otherSource": "https://georgia.travel/queen-darejan-palace"

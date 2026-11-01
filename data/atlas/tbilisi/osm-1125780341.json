@@ -59,24 +59,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1125780341/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1125780341/1.webp",
-      "author": "Marcin Konsek",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(04).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1125780341/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1125780341/2.webp",
-      "author": "Marcin Konsek",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(01).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "3950c45318e1e06c61c5f434ddde355a788cdff5742e8464c2beeacc589210ab",
+    "5ce6829d3affae57ec7b0ab4193f9fe79dbcc440f3833f757399865ca8fc37c2"
   ],
   "source": "https://www.openstreetmap.org/way/1125780341",
   "otherSource": "https://www.wikidata.org/wiki/Q55753705",

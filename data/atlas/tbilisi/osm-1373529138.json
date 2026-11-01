@@ -154,16 +154,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.456; реестр 2265.9 м², OSM 4956.5 м²; перенос центра 20.4 м. Реестровый полигон — 2265,9 м², 27 вершин, главный корпус вдоль Руставели; он целиком лежит внутри OSM way/1373529138 (4956,5 м², 35 вершин), который обводит весь квартал с двором и поздними крыльями. Отсюда IoU 0,456 и флаг osm_composite_or_plot: для карточки нужен реестровый контур корпуса, а не OSM-полигон квартала.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1373529138/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1373529138/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4157",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75731_D247EDDE-C0E1-4E35-8369-CD6E60311522",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "de06d3b702d4e986a8ee0d2547832f5146037767beb7ef5605c031b34aad4e24"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4157",
   "otherSource": "https://www.openstreetmap.org/way/1373529138"

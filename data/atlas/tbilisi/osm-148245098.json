@@ -123,24 +123,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-148245098/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-148245098/1.webp",
-      "author": "Malkhaz Tchubabria",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Ministry_of_Foreign_Affairs_of_Georgia.png",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-148245098/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-148245098/2.webp",
-      "author": "Malkhaz Tchubabria",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Building_of_Ministry_of_Foreign_Affairs_of_Georgia.png",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "2c6e857718535ed5886a92379f1b5cbbf3a5ee5128e676c4916d524ec63944b8",
+    "5ae061c4c11975a085b2f4b9a67a264372b47f71d3bf8012da1ebf2953bbf920"
   ],
   "source": "https://www.openstreetmap.org/way/148245098",
   "otherSource": "https://www.wikidata.org/wiki/Q42617918",

@@ -64,25 +64,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.626; реестр 168.1 м², OSM 182.2 м²; перенос центра 1.7 м. IoU 0,626; OSM way/1078430926 — замкнутый контур корпуса, флагов нет; OSM building:levels=2 совпадает с реестром.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1078430926/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1078430926/1.webp",
-      "author": "Dor Shabashewitz",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:27_Avlabari_St,_Tbilisi.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1078430926/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1078430926/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3405",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77582_D5CA9884-0248-4B80-9C12-5ACEDAFD4101",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "88c97546b989184e0fcbd596533767b7019679e86b8796e46d911f3962cf8f47",
+    "c3df695b817f27d03f55f85acc799e0cf2efccc3e6702e407a5e49131838586a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3405",
   "otherSource": "https://www.openstreetmap.org/way/1078430926"

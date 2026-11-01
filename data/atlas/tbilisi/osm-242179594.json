@@ -107,16 +107,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-242179594/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-242179594/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4579",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75464_BDB83E1D-2266-4B2D-9C61-ED69892831E4",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "17ab7bf18bc460ef9baee79c0adb6fa0786e3e62c49fbec7cce71b4d95535845"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/238/%E2%80%9Ezaria-vostoka%E2%80%9C-s-Senoba",
   "otherSource": "https://www.scantbilisi.ge/ka/objects/246/16%2C-%C2%A0Rustaveli-Ave"

@@ -104,16 +104,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.836; реестр 956.1 м², OSM 965.6 м²; перенос центра 0.5 м. way/77893810, IoU 0,836: 965,6 м² против 956,1 м² реестра, 91% взаимного перекрытия, смещение центроида 0,5 м; флагов нет. Обведён весь двухэтажный корпус на углу улицы Католикоса и переулка вместе с задней пристройкой к Абесадзе, участок не захвачен. Расхождение адреса (переулок Католикоса, 10 в OSM против Католикоса, 8 в реестре) объясняется угловым положением дома и входом с Абесадзе; координаты фото на Commons (≈41,69216 / 44,80354) указывают на западный, абесадзевский фасад того же корпуса.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-77893810/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-77893810/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3968",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75774_C71F11C8-F01B-4A6D-92EC-461607BF52BD",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "d48ec04199ca3a1b7aaf0afa0fd2bd1f087add19c9de3e17dea35cf71f3ae816"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3968",
   "otherSource": "https://www.openstreetmap.org/way/77893810"

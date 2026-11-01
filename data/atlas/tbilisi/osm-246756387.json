@@ -127,15 +127,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-246756387/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-246756387/1.webp",
-      "author": "Unrecognizablepineapple",
-      "license": "CC0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:Chkheidze_33,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "46e3bab75f78de7d07e6d478f4b1a65786476e5ce5c2e8ac3f74460c0a29e5a4"
   ],
   "source": "https://www.openstreetmap.org/way/246756387",
   "otherSource": "https://www.wikidata.org/wiki/Q134137740",

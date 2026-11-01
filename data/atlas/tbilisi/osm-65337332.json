@@ -147,15 +147,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65337332/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65337332/1.webp",
-      "author": "Annie99o99",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Rustaveliave1.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "8975f4a36216dbede05db8b173b09e659e6ff36c971a93fa909a86f273ad8697"
   ],
   "source": "https://www.openstreetmap.org/way/65337332",
   "otherSource": "https://www.wikidata.org/wiki/Q42650145",

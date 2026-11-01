@@ -135,33 +135,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-416164457/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-416164457/1.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%9B%E1%83%94%E1%83%94%E1%83%A5%E1%83%95%E1%83%A1%E1%83%94_%E1%83%A1%E1%83%90%E1%83%90%E1%83%95%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%9D_%E1%83%A1%E1%83%99%E1%83%9D%E1%83%9A%E1%83%90,_%E1%83%A7%E1%83%9D%E1%83%A4%E1%83%98%E1%83%9A%E1%83%98_%E1%83%99%E1%83%94%E1%83%97%E1%83%98%E1%83%9A%E1%83%A8%E1%83%9D%E1%83%91%E1%83%98%E1%83%9A_%E1%83%A5%E1%83%90%E1%83%9A%E1%83%97%E1%83%90_%E1%83%92%E1%83%94%E1%83%A0%E1%83%9B%E1%83%90%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98_%E1%83%9E%E1%83%90%E1%83%9C%E1%83%A1%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-416164457/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-416164457/2.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_28.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-416164457/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-416164457/3.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_28.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "94a90e3bf86ebe5f6dd905fe352576f7be7e92f6d3a1298806fa9b3c620122e1",
+    "937eb0c8ab72314d85605b5bb10ff80040eb8dd510dde531ea59dd76ca88eb74",
+    "5884649ffeab0fed5d4846e92a14ecae041b2a863038cb2697341c324a3a1342"
   ],
   "source": "https://www.openstreetmap.org/way/416164457",
   "otherSource": "https://www.wikidata.org/wiki/Q42623112",

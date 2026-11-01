@@ -168,16 +168,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.911; реестр 4016.6 м², OSM 3912.0 м²; перенос центра 2.1 м. IoU 0,911 (реестр 4017 м², OSM 3912 м²), флагов нет, центроид в 2,1 м. Обведён весь надземный корпус сложной формы, не участок; в OSM стоит heritage=2.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-56696105/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-56696105/1.webp",
-      "author": "Zviad Avaliani (ზვიად ავალიანი)",
-      "license": "Attribution (свободная лицензия, требуется указание автора)",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stalinka_tbilisi_2.JPG",
-      "source": "https://commons.wikimedia.org/wiki/File:Stalinka_tbilisi_2.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "общий вид жилого дома на левом берегу Куры, ул. Орде Дгебуадзе, 1; снято 24.05.2015"
-    }
+    "9cc712626d05e49a2fb8a9f3584e0c313086843e321c8cf1c6f673a9fd9c5209"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3140",
   "otherSource": "https://www.openstreetmap.org/way/56696105"

@@ -108,16 +108,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.78; реестр 326.8 м², OSM 326.2 м²; перенос центра 2.3 м. IoU 0,78 (пересечение 286,2 м², OSM 326,2 м², реестр 326,8 м²), центроид в 2,3 м; флагов нет. OSM way/1206575065.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206575065/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206575065/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3825",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76146_BE68DF43-8621-4120-911C-301E1E3E0022",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "fb80beeecc90b11c883c00eeb66a9d15db3fe07e9a12031364893678738d5a00"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3825",
   "otherSource": "https://www.openstreetmap.org/way/1206575065"

@@ -87,24 +87,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-188447537/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-188447537/1.webp",
-      "author": "Aleksey Muhranoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Churches_of_St._Andrew_and_of_John_the_Apostle,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-188447537/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-188447537/2.webp",
-      "author": "Jaba1977",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Blue_Monastery_01.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "d9fdd3acd33534e7d8d7f11d68aa8cee6c2340c7d3312a0bb76daae65b9a3780",
+    "e6967e70fa75a78fc74a4f0fbba34ce2228b60dcc11518cb59f758446dd1a72e"
   ],
   "source": "https://www.openstreetmap.org/way/188447537",
   "otherSource": "https://www.wikidata.org/wiki/Q7210949",

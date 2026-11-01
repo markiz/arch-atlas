@@ -87,15 +87,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-168100736/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-168100736/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A0%E1%83%A3%E1%83%A1%E1%83%97%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_19.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "16bed844f78d64e5087f56e3252dbd4f77f09df1c84415e42d546c40a0147938"
   ],
   "source": "https://www.openstreetmap.org/way/168100736",
   "otherSource": "https://www.wikidata.org/wiki/Q42650293",

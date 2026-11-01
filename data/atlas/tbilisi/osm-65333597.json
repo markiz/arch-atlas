@@ -79,15 +79,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65333597/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65333597/1.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_25_(3).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "e0335f8226531f8d366d854d1cf6645dd93c69bd508be44c13dead04d43457c0"
   ],
   "source": "https://www.openstreetmap.org/way/65333597",
   "otherSource": "https://www.wikidata.org/wiki/Q42620358",

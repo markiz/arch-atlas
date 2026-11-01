@@ -75,16 +75,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-372181447/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-372181447/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3781",
-      "source": "https://memkvidreoba.gov.ge:8443/Files?id=585347_aefa0c07-a687-4dfc-9bf3-8fe5c8c3fab3",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "d4cf699d3303140628c8caedc9b13446dce902718c78c88e061ad8d9743ea3a6"
   ],
   "source": "https://www.openstreetmap.org/way/372181447",
   "otherSource": "https://www.wikidata.org/wiki/Q42644607",

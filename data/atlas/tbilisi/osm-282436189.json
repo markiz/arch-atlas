@@ -92,16 +92,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.901; реестр 895.5 м², OSM 882.7 м²; перенос центра 1.2 м. IoU 0,901; флагов нет; контур OSM 882,7 м² против реестровых 895,5 м²; с существующей карточкой «Киачели, 12» пересечение 3 м² (соседний корпус).",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-282436189/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-282436189/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4434",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75671_5EA48AEE-0DE6-4F33-8C81-5827C2123543",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "842ecdbcdb4d5f13ca3fe7eabc28b3cb580da57c5163329d0f1ce124417bb425"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4434",
   "otherSource": "https://www.openstreetmap.org/way/282436189"

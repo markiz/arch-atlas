@@ -84,16 +84,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 480.4 м², OSM 506.5 м²; перенос центра 0.7 м. OSM way/1158550269, building=apartments, building:levels=2; IoU 0,922, центроид 0,7 м, флагов нет. Пересечение с карточкой osm-78509293 (музей Ильи Чавчавадзе, Джавахишвили, 7) всего 4,5 м² — общая брандмауэрная стена, не дубль. Контур обводит только уличный корпус, дворовые галереи в него не входят.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1158550269/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1158550269/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2723",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74136_997A086B-4CEF-42CE-A09A-965763AFE9F1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "1e4ecc9f9863655e57dc984d0a5036fd8fe2a4f9f634d23deeda49424ac6e527"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2723",
   "otherSource": "https://www.openstreetmap.org/way/1158550269"

@@ -154,16 +154,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.819; реестр 1253.6 м², OSM 1296.0 м²; перенос центра 2.1 м. IoU 0,819 (1296 м² OSM против 1253,6 м² реестра), центроид 2,1 м, реестр покрыт на 91,6 %, флагов нет; обведён шестиэтажный корпус, арка-проезд и двор не включены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-462897305/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-462897305/1.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_03.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "фасад дома 147 по проспекту Агмашенебели, снято 14.09.2016; файл лежит в категории, привязанной к OSM way/462897305, точка камеры в 13 м от корпуса"
-    }
+    "1045a458c7323ab051b58e8822c72ececbc5d36dc62e5bbdedd6286baf384234"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3105",
   "otherSource": "https://www.openstreetmap.org/way/462897305"

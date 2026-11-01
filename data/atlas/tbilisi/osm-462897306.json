@@ -157,25 +157,8 @@
   },
   "geometryQuality": "OSM way/462897306 имеет точный номер 148ბ и официальный ref 4172; геометрия совпадает с официальной границей реестра 3310 с IoU около 0,95 (99,0% OSM-контура внутри, граница покрывает 96,2% OSM-контура). Обе геометрии относятся к отдельному замкнутому корпусу; рядом есть другие самостоятельные части ансамбля бывшего Тифлисского военного училища. Категория Commons связана с адресом и охранным ID, но отдельные фото не включены: требуется проверка файла и прав на архитектуру.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-462897306/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-462897306/1.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_-_148.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-462897306/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-462897306/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3310",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73903_9D7E816D-EE87-4C6E-B635-2087F2EEBB92",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
+    "13829c96ec5ec861c02c571e233b4274318e067b220bb6949e1c47e824942339"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3310",
   "otherSource": "https://commons.wikimedia.org/wiki/Category:148b_Davit_Aghmashenebeli_Avenue"

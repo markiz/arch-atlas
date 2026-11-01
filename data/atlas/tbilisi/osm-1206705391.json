@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.775; реестр 355.5 м², OSM 306.0 м²; перенос центра 2.3 м. IoU 0,78; реестр 355,5 м², OSM 306,0 м², центроиды в 2,3 м; флагов нет. OSM way/1206705391 обводит уличный корпус (building=apartments, 2 этажа); дворовое крыло и нижний этаж со стороны двора в контур не входят.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206705391/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206705391/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3629",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75123_16DDC71F-5935-4489-9377-75A5F45EE7BA",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "5229e4d76e27c31e05bed0f764f9fbef69bc72fae71c10f7129ab4089d0e93db"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3629",
   "otherSource": "https://www.openstreetmap.org/way/1206705391"

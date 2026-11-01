@@ -114,16 +114,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.767; реестр 2611.5 м², OSM 2028.5 м²; перенос центра 4.2 м. OSM way/65251744, IoU 0.767 с реестровой границей, флагов нет; обведён надземный корпус по адресу Петриашвили, 1 (2028 м² против 2611 м² реестра — реестр, вероятно, включает небольшое крыло).",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65251744/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65251744/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4838",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76044_0A8C69D9-B17F-41F9-AD48-31238D76E0F8",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "46608cdcc4babe56e0b6949f8d5740a7ff0f382982c59d94a635b7ddf756b499"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4838",
   "otherSource": "https://www.openstreetmap.org/way/65251744"

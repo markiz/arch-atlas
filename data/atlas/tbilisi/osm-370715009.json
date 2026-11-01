@@ -175,26 +175,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.042; реестр 77.7 м², OSM 1839.3 м²; перенос центра 4.3 м. Геометрия карточки — OSM way/370715009, замкнутый Polygon 1839 м², сложная форма из 25+ вершин. Реестровый «полигон» — не контур корпуса, а типовая окружность-буфер 77,7 м² (36 вершин, ~5 м радиус), поэтому IoU 0,042 и флаг osm_much_larger отражают дефект реестровой геометрии, а не расхождение зданий; центроид реестра лежит в 4,3 м от OSM-контура. Флаг osm_composite_or_plot здесь не применим: OSM-объект — сам корпус, а не участок.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-370715009/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-370715009/1.webp",
-      "author": "Mostafameraji",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%81%D9%84%DB%8C%D8%B3_Tbilisi_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_38.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "Дворец на гребне склона: башня с ажурным завершением и арочные объёмы, вид с расстояния; снято в рамках Wiki Loves Monuments 2018 (Tbilisi City)"
-    },
-    {
-      "file": "photos/tbilisi/osm-370715009/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-370715009/2.webp",
-      "author": "Mostafameraji",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%81%D9%84%DB%8C%D8%B3_Tbilisi_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_37.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "Общий вид с реки: дворец читается в центре кадра над застройкой; годится как контекстный кадр, не как основной"
-    }
+    "a54219cda8518dda625ce92d661ae763c6d881466e5037f687f6d7d50dc47288",
+    "ba6b24f054af3235b8a7081eb8bd92cfad5b308520835997ef39940edeb69a06"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24588",
   "otherSource": "https://www.openstreetmap.org/way/370715009"

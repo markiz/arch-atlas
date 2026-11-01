@@ -117,16 +117,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-142656675/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-142656675/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4273",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75177_7D616382-795D-47EE-849D-F5DEBB4E54AB",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "7099d45c231ad156b2e8b8e09cb2499fd5fcad4a698472b44696e06a4d53a15b"
   ],
   "source": "https://georgia.travel/georgian-state-museum-of-literature",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4273"

@@ -142,24 +142,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-506741615/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-506741615/1.webp",
-      "author": "Reda Kerbush",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Juma_Mosque_of_Tbilisi.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-506741615/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-506741615/2.webp",
-      "author": "Reda Kerbush",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Juma_Mosque_of_Tbilisi_from_the_top.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "a78a16b26f6800377641c80c4ed5732e2cb10c75e2af171113b5b0e868c691d0",
+    "ede25707fabcdcb6ae722c132c4b88375e71479f69e4934afed1d761e69056e8"
   ],
   "source": "https://www.openstreetmap.org/way/506741615",
   "otherSource": "https://www.wikidata.org/wiki/Q4453131",

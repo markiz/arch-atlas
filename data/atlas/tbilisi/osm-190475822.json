@@ -91,24 +91,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-190475822/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-190475822/1.webp",
-      "author": "Paata Vardanashvili",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Russian_Orthodox_Church_built_in_honour_of_saint_Theodosios_from_Chernigov.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-190475822/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-190475822/2.webp",
-      "author": "Jaba1977",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Church_of_Teodosi_Chernigovski_(1).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "193517b8e8f4e73e4993d361e347ac375f19a7953feb59f7595329032e0ca66b",
+    "6ef372f842a000c1bed5f0a66c3c3e71408ff2047ea121f563071543445457ff"
   ],
   "source": "https://www.openstreetmap.org/way/190475822",
   "otherSource": "https://www.wikidata.org/wiki/Q12865064",

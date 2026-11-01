@@ -171,16 +171,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.928; реестр 2431.8 м², OSM 2518.8 м²; перенос центра 0.9 м. OSM way/78390490: IoU 0,93, 95 % OSM-контура внутри реестрового, центроиды в 0,9 м; Place ID подобран (ChIJURTobzFzREARzRlfhUoY59k). Обведён главный надземный корпус, двор и малые корпуса не включены. Флагов нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78390490/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78390490/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5047",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=355145_C2B87FDF-6B2C-4AEE-9DED-E65B340107CA",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "f1dc33b87fa58c13bba88faf28a700765ac987d061c83fa9909f35954bbe8607"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5047",
   "otherSource": "https://www.openstreetmap.org/way/78390490"

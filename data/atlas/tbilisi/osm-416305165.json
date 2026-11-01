@@ -90,16 +90,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.823; реестр 318.7 м², OSM 326.8 м²; перенос центра 0.6 м. OSM way/416305165, 326,8 м², 11 вершин; IoU 0,823, центроид в 0,6 м. Реестровый полигон 318,7 м² покрыт на 91,4%; контур чистый, флагов нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-416305165/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-416305165/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3180",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75245_738EDD7D-56BC-464E-8DFA-6B7AD47CC999",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "7c1459bc688d4048b2d2f4348f03c9e2bf1d45e4f551e060eb28971dc74e7ef9"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3180",
   "otherSource": "https://www.openstreetmap.org/way/416305165"

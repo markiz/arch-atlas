@@ -135,33 +135,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206891442/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891442/1.webp",
-      "author": "UlRicH le PapilLoN",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_(3231502008).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1206891442/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891442/2.webp",
-      "author": "Yuri Samoylov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2024-04-23_Dilapidated_stairwell_in_26_Lado_Asatiani_Street.jpg",
-      "modifications": "преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1206891442/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891442/3.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_26.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "33bf625f1f9bf759112adb4f1a54c3d935f7deed47230ecb37498144aaaae2fc",
+    "c9c7af2814bfc3cdeadc1b072fd92d7a03032f484199c1673896b1e01473751b",
+    "fd33c2dcec23074cd73b27c1e0910513fbfc43bf29e39258a31ee4cfdedba639"
   ],
   "source": "https://www.openstreetmap.org/way/1206891442",
   "otherSource": "https://www.wikidata.org/wiki/Q42622996",

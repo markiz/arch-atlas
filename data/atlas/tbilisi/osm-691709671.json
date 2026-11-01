@@ -65,16 +65,7 @@
   },
   "geometryQuality": "Официальная граница объекта 2694 и [OSM way/691709671](https://www.openstreetmap.org/way/691709671) совпадают с IoU около 0,77; около 81,5% контура way лежит в границе, а way покрывает около 93,2% реестровой границы. Реестровая точка совпадает с корпусом. OSM именует его церковью Святого Карапета и указывает номер 6ა, реестр — церковью Всех грузинских святых по адресу 8. Google API не нашёл Place ID в радиусе 5 м; Commons-файлы и права на архитектуру не проверены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-691709671/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-691709671/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2694",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73762_A7AD9B78-80E8-4DE7-9112-256623A3219D",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "5c6d0fca42be68826240b5f49fb1e801e40390ce18dfa4509e1d2be307fd22dc"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2694",
   "otherSource": "https://armenianchurch.ge/en/about-us/the-diocese"

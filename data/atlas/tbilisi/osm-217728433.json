@@ -127,33 +127,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-217728433/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-217728433/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_36.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-217728433/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-217728433/2.webp",
-      "author": "Shuvaev",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Avenue_36,_Tbilisi,_Georgia_01.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-217728433/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-217728433/3.webp",
-      "author": "Shuvaev",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Avenue_36,_Tbilisi,_Georgia_02.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "9c2cfe8881b6969cf47fff1eab4a732a8312c9b865ee7ff61022115269705afe",
+    "fb6bb685fda1b79aa354d6d0393128ceca093baa8a8918fb25df655078e01b30",
+    "476df4455145567229370c6cd841b8bd8275e5ffd955861ace919a7eb30aba3a"
   ],
   "source": "https://www.openstreetmap.org/way/217728433",
   "otherSource": "https://www.wikidata.org/wiki/Q42634766",

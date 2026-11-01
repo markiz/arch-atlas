@@ -140,16 +140,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.683; реестр 402.9 м², OSM 501.6 м²; перенос центра 1.9 м. IoU 0,683; OSM way/1218781736 — замкнутый контур корпуса, флагов нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1218781736/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1218781736/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3459",
-      "source": "https://memkvidreoba.gov.ge:8443/Files?id=75152_E4429677-09A9-43EE-822C-24E0FB290F43",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "5cca53557cd0f94477b17f80a3440529fef8550b06939d5a1cb5db5530ccc58d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3459",
   "otherSource": "https://www.openstreetmap.org/way/1218781736"

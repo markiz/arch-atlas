@@ -81,16 +81,7 @@
   },
   "geometryQuality": "Официальная карточка 16052 и [OSM way/1274260082](https://www.openstreetmap.org/way/1274260082) относятся к башне на Ингороква, 7. OSM Polygon полностью лежит внутри реестровой границы (IoU около 0,42; OSM внутри — 99,8%, граница покрывает — 42,3% OSM-контура). Официальная граница охватывает также крупную искусственную террасу, поэтому выбран более узкий OSM-контур башни. Это отдельный замкнутый Polygon; пересечений с опубликованными карточками рядом не найдено. Google Place ID и лицензированное фото не установлены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1274260082/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1274260082/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16052",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=85456_EF3B347B-0008-4A3A-A1D7-ABADDBEEF0B1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "b71f78218cf06302da6467c7792c7debbbb67e26cd54dfe9e60bc0f368317b5a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16052",
   "otherSource": "https://tenders.procurement.gov.ge/public/?go=637889&lang=ge"

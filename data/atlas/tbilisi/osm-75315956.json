@@ -244,25 +244,8 @@
   },
   "geometryQuality": "Показан реестровый контур основного высотного блока (2676,9 м²). OSM way/75315956 обводит весь комплекс (5409 м², включая дворовые объёмы), поэтому его контур не используется; разница площадей отражена в описании.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-75315956/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-75315956/1.webp",
-      "author": "Paata Vardanashvili",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:State_Chancellery_building.jpg",
-      "modifications": "преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-75315956/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-75315956/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4293",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75182_E217857D-63C6-4798-96F9-D1F9D5118C17",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "3608b32c6e846e38b7e8a8512f1e687172d303ce8c012fd9f041fde151398525",
+    "bc1e2a9ca5e14bb4c2f99631cf7a1c5750297e44b0df26e344dd14c8f455300b"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4293",
   "otherSource": "https://www.openstreetmap.org/way/75315956"

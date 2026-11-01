@@ -104,16 +104,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.811; реестр 651.2 м², OSM 575.7 м²; перенос центра 1.5 м. IoU 0,81; реестр 651,2 м², OSM 575,7 м², центроиды в 1,5 м; флагов нет. OSM way/1206705394 обводит корпус (building=commercial, 2 этажа) — тег функции расходится с жилым использованием, но контур и адрес совпадают.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206705394/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206705394/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3655",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73806_19E2B67D-89A4-490F-AD01-10AF54B98826",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "976d53707adf915aa8bfdc05f370ce3678e63e2b7c22f6ef255d0112d5cdf55a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3655",
   "otherSource": "https://www.openstreetmap.org/way/1206705394"

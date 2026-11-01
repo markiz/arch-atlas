@@ -93,25 +93,8 @@
   },
   "geometryQuality": "Именованный OSM-контур «Баня царицы». OSM-контур находится внутри официальной границы памятника №3819 примерно на 74% своей площади, а покрывает около 88% официальной границы; отдельный контур бани Тамары находится северо-восточнее.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-242191025/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-242191025/1.webp",
-      "author": "AlexandreAssatiani",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:11_Ioseb_Grishashvili_Street_(Tbilisi,_Georgia).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-242191025/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-242191025/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3819",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77341_26ECBD2C-8002-4EA9-A55E-EE7208AE5064",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "49be68ae0ad4d5053f5f65855522db8ea73ccb5540808c2ad825c36071dc9590",
+    "0467d1ea8a4a090eb2d4bbedf31eca696db82f37d36848355edd82e39b756e00"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3819",
   "otherSource": "https://www.db-thueringen.de/servlets/MCRFileNodeServlet/dbt_derivate_00056499/disssparsbrod.pdf"

@@ -91,33 +91,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65333609/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65333609/1.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_27_(2).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-65333609/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-65333609/2.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_27.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-65333609/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-65333609/3.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_%E1%83%90%E1%83%97%E1%83%9D%E1%83%9C%E1%83%94%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_27.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "fdb3d399d87f0e720018d04751adb75a6edbfb3e45bcc6cee018b713c42ed9bb",
+    "4243d831f2e2aa7c694a8ac1fa05864de52cc06903aa69e110e94e1bcf6cf156",
+    "e9acd1b16a1be1410dda4ca60e20e0b43c89496ffd9835760bb4fc544cf5c6b4"
   ],
   "source": "https://www.openstreetmap.org/way/65333609",
   "otherSource": "https://www.wikidata.org/wiki/Q42620385",

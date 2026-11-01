@@ -155,15 +155,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.021; реестр 77.7 м², OSM 3683.6 м²; перенос центра 26.9 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0,02 неинформативен; реестровая точка на 100% внутри OSM-way 1299930496 (3 725 м², 27 точек, без внутренних колец) — контур охватывает башню и стилобат отеля. Флаг osm_composite_or_plot вызван реестровым буфером, а не формой OSM-контура.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1299930496/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1299930496/1.webp",
-      "author": "A. Darmochwal",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Downtown_Tbilisi,_Georgia,_in_the_forefront_Hotel_Iveria,_May_2002.jpg",
-      "modifications": "преобразовано в WebP"
-    }
+    "746c679d73555e0289a31c8e29c3b58cd49bc534bfdbd8acfa0600337398d3a9"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=25111",
   "otherSource": "https://www.openstreetmap.org/way/1299930496"

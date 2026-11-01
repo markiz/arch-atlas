@@ -85,25 +85,8 @@
   },
   "geometryQuality": "Именованный адресный OSM-контур way/462897308 перекрывает около 90% границы официального реестра; профильный источник описывает здание по тому же адресу",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-462897308/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-462897308/1.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_-_148.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-462897308/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-462897308/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3178",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74829_2028A634-4B84-4C91-AEDA-FEB1852571C1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
+    "7c06ff405f8ad79a15ee303d75360539b569d92db7c1f03d471cab441709c0b0"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/236/D.-Agmashenebeli-Avenue--148",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3178"

@@ -80,25 +80,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.704; реестр 1489.5 м², OSM 1404.4 м²; перенос центра 5.0 м. IoU 0,70 с реестровой границей; OSM way/148183332 — самостоятельный замкнутый контур корпуса, флагов нет. OSM building:levels=4 расходится с двумя этажами по реестру (вероятно, учтён цокольный или надстроенный уровень) — уточнить при съёмке.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-148183332/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-148183332/1.webp",
-      "author": "Jonathan Cardy",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Ave,_Tbilisi_(Sept_2012)_40.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-148183332/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-148183332/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2765",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74258_1B19E600-C460-4286-8260-B24780D5812E",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "62569832a621a3e061205274c2ea0985c272cfeb436a48f4ff426425e20e8701",
+    "c96fa6d819c6d7dca04863b85a721470f990509e6b003749840dd66663fbd5fd"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2765",
   "otherSource": "https://www.openstreetmap.org/way/148183332"

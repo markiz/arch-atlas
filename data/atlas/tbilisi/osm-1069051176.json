@@ -84,16 +84,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.923; реестр 616.0 м², OSM 659.3 м²; перенос центра 0.6 м. IoU 0,923; контур way/1069051176 (659 м²) против реестровых 616 м², реестр покрыт на 99,4%, центроид 0,6 м, флагов нет. Обведён надземный корпус; сад с фонтаном и соседние строения в контур не входят.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1069051176/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1069051176/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3033",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73944_13CA8E57-3140-4DA0-9FC3-4E95C9E78240",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "279040af15d45cc37550e20643af4c8f3946c22d97988695b2fbf94735a7c34f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3033",
   "otherSource": "https://www.openstreetmap.org/way/1069051176"

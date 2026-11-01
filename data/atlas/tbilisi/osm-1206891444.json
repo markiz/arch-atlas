@@ -71,24 +71,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206891444/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891444/1.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%97%E1%83%94%E1%83%A8%E1%83%92%E1%83%90,_III-VII_%E1%83%A1%E1%83%90%E1%83%A3%E1%83%99%E1%83%A3%E1%83%9C%E1%83%94%E1%83%94%E1%83%91%E1%83%98%E1%83%A1.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1206891444/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891444/2.webp",
-      "author": "Aleksey Muhranoff",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Ateshga_general_view,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "9e8e0e319ce61a84fa76b3b1edcbdd549cf1cd3566f713c330d9ce9fd46abe52",
+    "f2e116b11638281665bca2f5afe7570cc73c0d27996ec0408d63812fbb46d1ea"
   ],
   "source": "https://www.openstreetmap.org/way/1206891444",
   "otherSource": "https://www.wikidata.org/wiki/Q16364495",

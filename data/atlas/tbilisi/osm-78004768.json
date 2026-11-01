@@ -73,16 +73,7 @@
   },
   "geometryQuality": "OSM way/78004768 имеет адрес Liberty Square 4 и замкнутый Polygon. Официальная граница 4711 и way совпадают с IoU около 0,82; 98,8% OSM-контура находится внутри границы, а OSM покрывает 82,4% официального полигона. Адрес и фасадное описание подтверждают корпус. Google API нашёл обычный адресный дом Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; Place ID добавлен как адресная привязка, не как именованная достопримечательность. Фото с проверенными правами не найдено.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78004768/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78004768/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4711",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75526_D6FF980C-AAC9-4CF5-BF72-634BF59897A1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "50df53210847254d46ce68451b4a14d273f9f12a2ce793b44e1efebb3573b70e"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4711",
   "otherSource": "https://www.scantbilisi.ge/en/objects/307/Liberty-Square",

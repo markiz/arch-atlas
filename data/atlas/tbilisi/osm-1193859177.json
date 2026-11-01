@@ -147,24 +147,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1193859177/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1193859177/1.webp",
-      "author": "Saskia Heijltjes",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Old_part_of_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1193859177/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1193859177/2.webp",
-      "author": "Dor Shabashewitz",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:24_Galaktion_Tabidze_St,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "ee3e7092921210d779a018d80456fa76c5e02622411f411e40fbddf7f963c1c3",
+    "7167d1a3e5e1e7cddf22a72ae58ebcbb4888757bd53e94aedc1a83b9a8026432"
   ],
   "source": "https://www.openstreetmap.org/way/1193859177",
   "otherSource": "https://www.wikidata.org/wiki/Q42629173",

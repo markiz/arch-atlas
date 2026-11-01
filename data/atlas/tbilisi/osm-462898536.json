@@ -133,16 +133,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; имя и адрес совпадают с источниками",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-462898536/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-462898536/1.webp",
-      "author": "Gerd Eichmann",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi-Aghmashenebeli-18-135-2019-gje.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "фасад кинотеатра «Аполло» на проспекте Агмашенебели, 135; свободная лицензия"
-    }
+    "db312262e199168984e9da2d434363752be2957b64f6c634210d9bb7c09bb17c"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/358/old-cinema",
   "otherSource": "https://georgia.travel/agmashenebeli-avenue-in-tbilisi-neu-tiflis"

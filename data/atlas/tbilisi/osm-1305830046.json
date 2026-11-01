@@ -96,16 +96,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.91; реестр 474.0 м², OSM 495.6 м²; перенос центра 0.7 м. IoU 0,91; реестр 474,0 м², OSM 495,6 м² (way/1305830046, 13 вершин, addr: გალაქტიონ ტაბიძის ქუჩა 20, building=residential, 2 этажа). Флагов нет, Place ID совпал. Пересечение с карточкой «Дом Сейлановых» (Табидзе 18) — 5,1 м², это примыкание соседних фасадов, не дубль.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1305830046/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1305830046/1.webp",
-      "author": "Yuri Samoylov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2024-03-24_Entrance_to_Caucasian_House_and_Smirnov_Museum.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "вход в «Кавказский дом» и музей Смирновых, Табидзе 20"
-    }
+    "9c3dba971e8e53ebb138827a91436e7915b79530d26e92484d21437aab76595c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4167",
   "otherSource": "https://www.openstreetmap.org/way/1305830046"

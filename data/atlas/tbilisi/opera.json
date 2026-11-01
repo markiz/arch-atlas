@@ -223,33 +223,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/opera/1.webp",
-      "thumb": "thumbnails/tbilisi/opera/1.webp",
-      "author": "Francisco Anzola",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:National_Opera_House._Tbilisi,_Georgia.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/opera/2.webp",
-      "thumb": "thumbnails/tbilisi/opera/2.webp",
-      "author": "Moreau.henri",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:073_Tbilissi_L%27Op%C3%A9ra_style_orientalisant.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/opera/3.webp",
-      "thumb": "thumbnails/tbilisi/opera/3.webp",
-      "author": "en:User:UltioUltionis",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Opera_and_Ballet_Theatre_at_night.jpg",
-      "modifications": "преобразовано в WebP"
-    }
+    "0835bf45d4135510f979eddb77a94043b8457e1bdead1e062d96cc101288f016",
+    "232207459fedd64f37251d4126e607f056e13fddbd49ef21c323ff42e25082ee",
+    "24f9e8f63b3e6dfcb8094d42738249bffb037b3c0d9692c85acaee9343c05bbe"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/326/BALLET-STATE-THEATRE",
   "googlePlaceId": "ChIJ19TSod0MREARed2iApXUD-M",

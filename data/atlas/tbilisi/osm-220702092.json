@@ -81,16 +81,7 @@
   },
   "geometryQuality": "OSM way/220702092 размечен как New Ejmiadzin Armenian Apostolic Church, адрес Armazi Lane 1. Официальный полигон реестра 3362 и OSM way совпадают по месту (IoU около 0,74; около 74,5% way лежит внутри границы, официальный полигон покрыт контуром way примерно на 99,6%?); номера в источниках расходятся: реестр — Армази 3, OSM — 1, церковный источник — 18. Официальное подробное описание и епархиальная страница связывают место с Эчмиадзином и посвящением Святому Георгию.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-220702092/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-220702092/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3362",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75130_FFE923C3-BF1E-4F14-951E-F2EF87B9F3D3",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "95773b0cf2f608903d3c9a65d08fb2d96ca52ccf84f709e3900eae7a085578fd"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3362",
   "otherSource": "https://armenianchurch.ge/en/churches/dejstvuyushchie-tserkvi-i-chasovni-2/existing-churches-and-chapels/st-etchmiatsin-church"

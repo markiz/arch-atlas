@@ -72,16 +72,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 215.3 м², OSM 218.7 м²; перенос центра 0.4 м. IoU 0,922; реестр 215,3 м², OSM 218,7 м²; флагов нет; обведён весь корпус, центроиды в 0,4 м; пересечение с карточкой «Дюма, 8» — только 6,7 м² общей стены, это разные дома.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1155911047/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1155911047/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3929",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74995_4B6B4DD5-464F-40C5-95F5-BFBB0F2E9C01",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "24c9183a8d43ead20365d58a8fc1eecb623a7605ad163f1202c73afb252c06a5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3929",
   "otherSource": "https://www.openstreetmap.org/way/1155911047"

@@ -91,24 +91,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/kashveti/1.webp",
-      "thumb": "thumbnails/tbilisi/kashveti/1.webp",
-      "author": "Kashveti1.jpg: Paata Vardanashvili\nderivative work: Rabanus Flavus (talk)",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Kashveti1-2.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/kashveti/2.webp",
-      "thumb": "thumbnails/tbilisi/kashveti/2.webp",
-      "author": "Andrei Kalamkarov (www.andreikalamkarov.com)",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Church_in_Tbilisi,_Georgia,_April_2007.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "aa5625fb1a691c68f0de4c86a11bc1134ca1b83a51bf08e016181f7906aeff7a",
+    "4ae0a011e258e413c4a8a7e27f76aff653f548f04b2638a4192f7293b776d08c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4229",
   "googlePlaceId": "ChIJqYYLN-YMREARQ4iJrBAtGX0",

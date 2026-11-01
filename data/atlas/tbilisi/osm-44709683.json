@@ -80,16 +80,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-44709683/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-44709683/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4493",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=78386_A57D5D28-64BC-4C91-9CC2-2616D1660140",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "cd6e2f03ce1872eccdd7c92dcaf49a097914691828457b61050c5e5bd87f230b"
   ],
   "source": "https://telegraphhotel.com/about-hotel/architecture-history/",
   "otherSource": "https://www.georgianencyclopedia.ge/ka/form/22189"

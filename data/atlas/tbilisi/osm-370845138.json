@@ -64,16 +64,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.934; реестр 219.1 м², OSM 220.6 м²; перенос центра 0.3 м. IoU 0,934; OSM way/370845138 — основной двухэтажный корпус с мансардой, флагов нет; пересечений с карточками атласа нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-370845138/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-370845138/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3837",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76139_4143125D-DFCE-4C5C-9F99-0203D3E85A3B",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "39c9272bcbb8d063344b1265a4fead1945d470794a5490ce96fa36c9793d6635"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3837",
   "otherSource": "https://www.openstreetmap.org/way/370845138"

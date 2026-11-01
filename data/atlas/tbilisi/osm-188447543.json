@@ -271,24 +271,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-188447543/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-188447543/1.webp",
-      "author": "Андрей Романенко",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Church_of_St._John_the_Evangelist_in_Tbilisi_02.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-188447543/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-188447543/2.webp",
-      "author": "Goichev",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Gvtis0.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "adb20f780ef6cd1be57caea6a52d79af29295ef9f65c9b3c8e2a9fe997f515fe",
+    "619fcbdde80c4d4689cde185ac68bee010f4a90295a6ca5a00721034c98aca81"
   ],
   "source": "https://www.openstreetmap.org/way/188447543",
   "otherSource": "https://www.wikidata.org/wiki/Q42655179",

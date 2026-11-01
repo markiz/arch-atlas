@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.848; реестр 437.7 м², OSM 439.8 м²; перенос центра 1.1 м. IoU 0.848, флагов нет; OSM 440 м² против реестровых 438 м², покрытие 92 %. Наложение с карточкой кинотеатра «Аполло» — 2.3 м², соседние здания.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-462898535/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-462898535/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3213",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75351_B8ACBA6C-2A63-4D0D-A41D-C462782ED0A1",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "efc6b09137e8f5ff56cc42d70487bea0c36ab3efaa151e28c0f40b0bdcf3b0cf"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3213",
   "otherSource": "https://www.openstreetmap.org/way/462898535"

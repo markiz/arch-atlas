@@ -92,16 +92,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.86; реестр 724.1 м², OSM 782.7 м²; перенос центра 1.0 м. IoU 0,860; контур way/1278166603 (783 м², 3 уровня) против реестровых 724 м², реестр покрыт на 96,2%, центроид 1,0 м, флагов нет. OSM-контур покрывает угловой корпус; в тегах 3 этажа, тогда как по Абашидзе реестр описывает 4 — расхождение отмечено.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1278166603/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1278166603/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3037",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75048_4F326976-4919-4476-8E76-CC98CB8F5203",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "823e80fe1ae53d86cc4676e7e706d7a6d0505aaefb27d7bf266b0262d3434bb5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3037",
   "otherSource": "https://www.openstreetmap.org/way/1278166603"

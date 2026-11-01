@@ -100,16 +100,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.755; реестр 272.2 м², OSM 298.0 м²; перенос центра 1.6 м. IoU 0,755; OSM way/337430167 — самостоятельный замкнутый контур, флагов нет; центроид в 1–2 м от реестрового.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-337430167/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-337430167/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3402",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76005_4396B07A-2B6E-4042-BA51-592F9B6F5F19",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "cd2df50e8d1c6163e8b7a2af659e0ed5c190c33573b7a5f92b9a9679f68b6334"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3402",
   "otherSource": "https://www.openstreetmap.org/way/337430167"

@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.83; реестр 495.0 м², OSM 467.7 м²; перенос центра 0.9 м. IoU 0,83 с реестровой границей (508 м² против 480 м²), centroid 0,9 м, flags нет; OSM way/549425988 (building=apartments, 11 вершин) обводит корпус. Реестровый контур сложный (35 вершин) из-за примыкания к скале, но оба полигона описывают одно здание.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-549425988/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-549425988/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=75914_9E14AEEA-E499-4A20-8AB7-8CC8C8CEA97C",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75914_9E14AEEA-E499-4A20-8AB7-8CC8C8CEA97C",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "45d1793f2817ee54841105eef496300d2ecd5a83ef0f1c92ca27eef168d67f4f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3557",
   "otherSource": "https://www.openstreetmap.org/way/549425988"

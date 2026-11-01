@@ -135,16 +135,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-38326853/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-38326853/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4751",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=355085_BBA428CA-7F64-42C5-AFA5-0E0DCB1F3432",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "9a3c94b04982929916ecc8b6ce1f983c8ddf0662b3e46a27d8a56b1bb83b1b06"
   ],
   "source": "https://scantbilisi.ge/en/objects/390/Cachava-Clinic",
   "otherSource": "https://www.openstreetmap.org/way/38326853"

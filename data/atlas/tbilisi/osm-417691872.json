@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.892; реестр 492.9 м², OSM 481.6 м²; перенос центра 0.4 м. IoU 0,892 (реестр 493 м², OSM 482 м²), флагов нет, центроид в 0,4 м. Обведён надземный корпус; в OSM помечен building=public из-за торговли в первом этаже, что не меняет жилой функции дома.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-417691872/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-417691872/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3142",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73893_AF5A7204-8405-460D-9E23-1ABC1FEA1DD2",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a30feb9b25babe534180c3b9ac87e0eb964e16d6e1eda083d65c620ec3a2c66e"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3142",
   "otherSource": "https://www.openstreetmap.org/way/417691872"

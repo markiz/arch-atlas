@@ -100,16 +100,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.841; реестр 551.2 м², OSM 571.9 м²; перенос центра 1.5 м. IoU 0,84 с реестровой границей (566 м² против 587 м²), centroid 1,5 м, flags нет; OSM way/415939083 (building=yes, 4 этажа, 14 вершин) обводит корпус.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-415939083/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-415939083/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=75512_70F9F101-B1A3-4FFB-81B1-FA9FDFFD317D",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75512_70F9F101-B1A3-4FFB-81B1-FA9FDFFD317D",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "257ae1dcc084ef686b4263f4bcda86596c64d1fbfe95d31ef30eabe3e00f2e99"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3593",
   "otherSource": "https://www.openstreetmap.org/way/415939083"

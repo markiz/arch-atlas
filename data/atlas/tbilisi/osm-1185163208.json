@@ -319,33 +319,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1185163208/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1185163208/1.webp",
-      "author": "Phyrexian",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_-_%E1%83%90%E1%83%96%E1%83%90%E1%83%A0%E1%83%98%E1%83%90%E1%83%9C%E1%83%AA%E1%83%98%E1%83%A1_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_0593.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1185163208/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1185163208/2.webp",
-      "author": "Phyrexian",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_-_%E1%83%90%E1%83%96%E1%83%90%E1%83%A0%E1%83%98%E1%83%90%E1%83%9C%E1%83%AA%E1%83%98%E1%83%A1_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_0610.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1185163208/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-1185163208/3.webp",
-      "author": "Phyrexian",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_-_%E1%83%90%E1%83%96%E1%83%90%E1%83%A0%E1%83%98%E1%83%90%E1%83%9C%E1%83%AA%E1%83%98%E1%83%A1_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_0750.JPG",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "da819ed7cbe6eb2debc231ad4bc1e91c23efc1cc91eae20a6385a3b1122fe30b",
+    "c1c30acb359759be992f732c12f094d9de393cba824dac285e80bca9d7a774f9",
+    "68aa307a66838158a15277bc308ff4d6811add252f06fc3e1b70a82b3d3485b6"
   ],
   "source": "https://www.openstreetmap.org/way/1185163208",
   "otherSource": "https://www.wikidata.org/wiki/Q42650552",

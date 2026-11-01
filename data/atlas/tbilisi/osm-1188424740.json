@@ -89,16 +89,7 @@
   },
   "geometryQuality": "Отдельный замкнутый 11-узловой Polygon way/1188424740 имеет тег building:levels=2. Сопоставление официальной границы и контура даёт IoU около 0,32: около 33% площади OSM-контура лежит в границе, а контур покрывает около 86% границы. Современный фото-гид показывает два разных соседних здания: одноэтажное деревянное кафе и двухэтажный бывший корпус Комитета; их OSM-контуры разнесены примерно на 12 м и не пересекаются. Контур соответствует корпусу с оговоркой о низком IoU и не является геодезическим подтверждением.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1188424740/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1188424740/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3190",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74827_76DB83B9-6633-4F5C-B3EE-4B44583EE4FC",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a8c158549f257284d9f8a9c194785e472fd1c5bbca8b33ae498ef430aa0c7365"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3190",
   "otherSource": "https://www.scantbilisi.ge/en/objects/350/Mushtaidi-Garden"

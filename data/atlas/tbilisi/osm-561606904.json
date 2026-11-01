@@ -96,16 +96,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.809; реестр 776.6 м², OSM 751.4 м²; перенос центра 2.1 м. IoU 0.809, покрытие реестра 88 %, флагов нет; обведён единый корпус дома 82/84. В OSM у этого контура стоит чужой номер 80 (номера 80/82 на отрезке перепутаны).",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-561606904/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-561606904/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3199",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75347_65A14989-8E0A-4DE0-9B4E-3647DC6AD7F3",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "937015a54622f43ad2e51da1ca7e284e7a85d08f2ed9c81af6601e8c8d3fe21d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3199",
   "otherSource": "https://www.openstreetmap.org/way/561606904"

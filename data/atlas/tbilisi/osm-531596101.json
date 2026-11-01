@@ -95,16 +95,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-531596101/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-531596101/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5004",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76177_E01546DA-0DDB-473B-8BFE-9B64627B446A",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "2d50718375dc684b2dde0c19e159e20d396c7c2e6248d9edd09059793683afa6"
   ],
   "source": "https://georgianencyclopedia.ge/ka/form/4431",
   "otherSource": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/gvtismshoblis-didube.htm"

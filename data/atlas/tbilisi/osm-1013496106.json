@@ -84,25 +84,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.779; реестр 436.9 м², OSM 464.2 м²; перенос центра 3.7 м. IoU 0,779; OSM way/1013496106 — замкнутый контур двухэтажного уличного корпуса (центроид 3,7 м, 90,3% реестровой площади). Контур не включает две другие постройки участка (одноэтажную и дворовую), поэтому карточка описывает только уличный дом.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1013496106/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1013496106/1.webp",
-      "author": "Annie99o99",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:109_Agmashenebeli.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-      "description": "Уличный фасад дома 109 по проспекту Агмашенебели; файл загружен в рамках Wiki Loves Monuments 2018, GPS 41,7121/44,7957 совпадает с реестровой точкой"
-    },
-    {
-      "file": "photos/tbilisi/osm-1013496106/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1013496106/2.webp",
-      "author": "Eka Samkharadze",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi._David_Agmashenebeli_avenue.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "8561168fa8d741ad4a67c1012652cf5cc5412b8084fa2ce3de01a9e3e7d55f3e",
+    "a4fc6e24906afda3e23f798d14f6f662d07e4da73cc9d11275b12c4359b38288"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3121",
   "otherSource": "https://www.openstreetmap.org/way/1013496106"

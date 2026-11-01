@@ -85,33 +85,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/synagogue/1.webp",
-      "thumb": "thumbnails/tbilisi/synagogue/1.webp",
-      "author": "Tamar kurtanidze",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%93%E1%83%98%E1%83%93%E1%83%98_%E1%83%A1%E1%83%98%E1%83%9C%E1%83%90%E1%83%92%E1%83%9D%E1%83%92%E1%83%90.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/synagogue/2.webp",
-      "thumb": "thumbnails/tbilisi/synagogue/2.webp",
-      "author": "D.Rovchak",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Big_synagogue_in_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/synagogue/3.webp",
-      "thumb": "thumbnails/tbilisi/synagogue/3.webp",
-      "author": "Ավետիսյան91",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Great_Synagogue_(Tbilisi).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "b72949de1d1260ee3c52c991a78337ad4a95d3ef4bdfcf1b2c4bf586ab5e7c45",
+    "731e19230adece19c571f8c2cf24496461646d1053ab061dc137cac4b130515d",
+    "d1c3d837257d7ec1ddbd89ca5f7a375cf29bf0d4678ab5a36958b4745f2f8680"
   ],
   "source": "https://cja.huji.ac.il/index.php?id=290958&mode=alone",
   "otherSource": "https://dbs.anumuseum.org.il/skn/en/c6/e23552465/",

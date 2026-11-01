@@ -88,16 +88,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.949; реестр 745.5 м², OSM 742.1 м²; перенос центра 0.4 м. IoU 0,949: реестровый полигон 745,5 м² и OSM way/1131162698 (742,1 м², building=yes) накладываются на 97 %, центроид в 0,4 м, флагов нет. OSM-контур обводит надземный корпус целиком, дворовых пристроек не включает.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1131162698/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1131162698/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3186",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74665_3B82AE17-39ED-4F4D-9BA0-B044EEB6CF1A",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "b2068c4163a238e0764c18aebd2d6dbfabefcbb30e14d61e98e3b1572514b23d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3186",
   "otherSource": "https://www.openstreetmap.org/way/1131162698"

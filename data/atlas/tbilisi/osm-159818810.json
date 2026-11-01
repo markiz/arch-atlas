@@ -65,16 +65,7 @@
   },
   "geometryQuality": "Именованный OSM-контур и перекрёсток адресов совпадают с описанием Scan Tbilisi; официальная граница реестра перекрывает около 96% контура",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-159818810/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-159818810/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4442",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75692_CBDE9A34-914E-4617-8291-30120910B072",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "d63fb60a9f01203a0f04dcb1fce7eb571219df5162a3e8923f87b05256d755f9"
   ],
   "source": "https://www.scantbilisi.ge/ka/objects/269/G.kikodze-street",
   "otherSource": "https://iverieli.nplg.gov.ge/bitstream/1234/438646/1/Mesxi_Maia_Disertacia.pdf"

@@ -171,24 +171,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
   "photos": [
-    {
-      "file": "photos/tbilisi/conservatoire/1.webp",
-      "thumb": "thumbnails/tbilisi/conservatoire/1.webp",
-      "author": "Alex Maisuradze",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Conservatoire.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/conservatoire/2.webp",
-      "thumb": "thumbnails/tbilisi/conservatoire/2.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_State_Conservatoire_F7780005.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "dadc095f3165b2475377135011e70197b32e85e79905bf49bac29ec09837f8a9",
+    "556dc682daf9aeea64a4bfddf24996a255a3cb24bff95433f489cdffd381f714"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/314/Tbilisi-State-Conservatoire",
   "googlePlaceId": "ChIJy2qBWd0MREARgFvvvXjG3_c",

@@ -64,16 +64,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.0; реестр 77.7 м², OSM 260.2 м²; перенос центра 15.2 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0 неинформативен; OSM-way 742183462 — замкнутый контур 260 м² (5 точек) с тегами building=transportation, was:aerialway=station, abandoned=yes. Реестровая точка в 15 м от контура, фото Commons — в 20 м; контур обводит павильон станции, а не платформу.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-742183462/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-742183462/1.webp",
-      "author": "Александр Сигачёв",
-      "license": "CC0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Lisi_Lake_cable_car_upper_station_-_2025-10_-_p01.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "Заброшенная верхняя станция канатной дороги у озера Лиси, 2025"
-    }
+    "af13054fb1a18a8e6a2ca8c7d6dc4d8ccda886edc259a8b4e829270d495a79fb"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24776",
   "otherSource": "https://www.openstreetmap.org/way/742183462"

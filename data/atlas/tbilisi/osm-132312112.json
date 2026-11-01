@@ -139,16 +139,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-132312112/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-132312112/1.webp",
-      "author": "Kober",
-      "license": "Public domain",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
-      "source": "https://commons.wikimedia.org/wiki/File:St._Peter_%26_Paul_cathedral,_Tbilisi_(A).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-      "description": "католический собор Святых Петра и Павла; свободная лицензия"
-    }
+    "de2983ca0b0e73663981e114e55640c869ded98359e69be8765bd8b0f439fa9d"
   ],
   "source": "https://georgia.travel/st-peter-and-paul-catholic-church",
   "otherSource": "https://rm.coe.int/168070ce59"

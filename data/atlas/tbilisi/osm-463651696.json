@@ -74,26 +74,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.904; реестр 415.9 м², OSM 395.6 м²; перенос центра 0.4 м. IoU 0,904 (реестр 415,9 м², OSM 395,6 м²), флагов нет, центроид в 0,4 м; обведён двухэтажный корпус с ризалитом, участок не захвачен.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-463651696/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-463651696/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_149_(2).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "дом 149 со двора: двухэтажный кирпичный корпус, зелёные деревянные детали, застеклённые балконы (проверено по превью файла)"
-    },
-    {
-      "file": "photos/tbilisi/osm-463651696/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-463651696/2.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_149_(10).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "дом 149 с улицы: главный фасад, веранда на колоннах с балюстрадой, кирпичный декор (проверено по превью файла)"
-    }
+    "9bf05b8bf930d8703756738bc3d47384b98206552233496000d932c61f20e2a1",
+    "cdaa5a9124f0a6934875ffa25a66565387e95353c6ad58bc2fc853579aeb78f5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3320",
   "otherSource": "https://www.openstreetmap.org/way/463651696"

@@ -91,25 +91,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-641459416/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-641459416/1.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_28.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-641459416/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-641459416/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4064",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74971_FC98F800-5FCB-4B6F-9EB6-102CF976E2A9",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "5884649ffeab0fed5d4846e92a14ecae041b2a863038cb2697341c324a3a1342",
+    "c0c76d5431fd669b2983d636bcfc32fabc466a9fc940bea5263dd47d4794c89a"
   ],
   "source": "https://www.openstreetmap.org/way/641459416",
   "otherSource": "https://www.wikidata.org/wiki/Q42623085",

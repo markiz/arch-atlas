@@ -310,24 +310,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
   "photos": [
-    {
-      "file": "photos/tbilisi/rustaveli/1.webp",
-      "thumb": "thumbnails/tbilisi/rustaveli/1.webp",
-      "author": "DDohler",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_National_Theater_in_Georgia_(Europe),_built_19th_century_in_Rococo_style.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/rustaveli/2.webp",
-      "thumb": "thumbnails/tbilisi/rustaveli/2.webp",
-      "author": "Alsandro",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_Theatre_Facade_(front),_Tbilisi.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "41d687936c8a550d404d7a9e27a377c013ca8d6c726a9e17eacd04f0929e6604",
+    "f729eb78c64dea81114afb2cae71aadb9e12fb938b1cd3e2ed22b736edc9fdb7"
   ],
   "source": "https://scantbilisi.ge/en/objects/268/Rustaveli-National-Theatre-17%2C-Rustaveli-Ave",
   "googlePlaceId": "ChIJc6qzBOYMREAR1-UFqhDaN88",

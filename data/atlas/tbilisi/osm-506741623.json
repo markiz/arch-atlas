@@ -95,33 +95,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-506741623/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-506741623/1.webp",
-      "author": "mcfarlandmo",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:View_of_Tbilisi._August_2022_22.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-506741623/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-506741623/2.webp",
-      "author": "Lasha ge",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_%E1%83%AB%E1%83%95%E1%83%94%E1%83%9A%E1%83%98_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98_%E1%83%90%E1%83%98%E1%83%95%E1%83%9C%E1%83%94%E1%83%91%E1%83%98%E1%83%97_%E1%83%93%E1%83%90_%E1%83%9B%E1%83%93%E1%83%98%E1%83%9C%E1%83%90%E1%83%A0%E1%83%94_%E1%83%AC%E1%83%90%E1%83%95%E1%83%99%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1%E1%83%AC%E1%83%A7%E1%83%90%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%AF%E1%83%94%E1%83%91%E1%83%98%E1%83%A0%E1%83%98_%E1%83%90%E1%83%91%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_23.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-506741623/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-506741623/3.webp",
-      "author": "Александр Сигачёв",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Abano_Street_23_-_2025-10.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "5f84931640e49a00d55b394d52f8325ca217da05184be1664be4415f3e44f153",
+    "0a962726344e95056db8eac9ac3e7e75830b55d6f8a05a285fd5fea6dc3e737d",
+    "188a48bfd523910a38040313f447003b2772b1b894cb0780726f6eedf08fabb7"
   ],
   "source": "https://www.openstreetmap.org/way/506741623",
   "otherSource": "https://www.wikidata.org/wiki/Q42618403",

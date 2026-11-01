@@ -121,16 +121,7 @@
   },
   "geometryQuality": "Официальная граница памятника 4369 и OSM way/1206575093 совпадают с IoU около 0,92; около 95,5% площади OSM-контура и 96,2% официальной границы перекрываются. OSM даёт адрес 11ა, реестр и каталог МОК — 11. Пространственное совпадение и официальный адрес подтверждают корпус. Google API нашёл по координате обычный дом (Place ID ChIJk7RhCPIMREAR8FrkS-Rorn8), а не именованную достопримечательность; ID в карточку не перенесён. Фотография Commons с названием Beria-house не добавлена: её соответствие корпусу и права на изображённую архитектуру отдельно не подтверждены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206575093/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206575093/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4369",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77174_89DEB349-17A1-4132-A8FD-824DB63FB618",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "c453859269e9355aa6ded5740247463abeeaad66f3e5218dc2e5609b2d54d66a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4369",
   "otherSource": "https://www.olympics.com/ioc/georgia"

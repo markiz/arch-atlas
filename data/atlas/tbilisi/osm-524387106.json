@@ -95,33 +95,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-524387106/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-524387106/1.webp",
-      "author": "Malkhaz Tchubabria",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Lado_Asatiani_Str_58.png",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-524387106/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-524387106/2.webp",
-      "author": "Malkhaz Tchubabria",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Lado_Asatiani_58.png",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-524387106/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-524387106/3.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_58.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "aa13764b9f89644423e4eb6d91c3d360f79ffbdb39bdf49548af0eb001e16698",
+    "4f58fc85ef5698a6187e1fea04cca118562803aeb98a18490c36ad119d15440f",
+    "02b0d2d6aab051ddacefcd17a8b8ea83c41da17e104c1c14086c3dd774bbdd3b"
   ],
   "source": "https://www.openstreetmap.org/way/524387106",
   "otherSource": "https://www.wikidata.org/wiki/Q42623847",

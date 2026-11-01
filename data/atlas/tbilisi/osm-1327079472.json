@@ -92,25 +92,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.884; реестр 352.3 м², OSM 373.3 м²; перенос центра 0.7 м. IoU 0,884; флагов нет; контур OSM 373,3 м² против реестровых 352,3 м², 91,2 % реестрового контура покрыто OSM; у OSM-контура нет addr:* — идентификация по вложению точки и совпадению площади.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1327079472/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1327079472/1.webp",
-      "author": "Malkhaz Tchubabria",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Vukol_Beridze_St_1.png",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1327079472/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1327079472/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4404",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75591_720464DF-5ACD-4985-B424-B6C4B62CC1E4",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "43f766d6c6a177bc271e1ee37b7b6eeb49971b8e535e85ac2ea616e68e9d56fc",
+    "2a66606aa806e083ba7b0caf065c0e75544f3e5179b807a53f0d6f00a31e512f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4404",
   "otherSource": "https://www.openstreetmap.org/way/1327079472"

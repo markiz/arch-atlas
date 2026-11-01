@@ -91,24 +91,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-565074603/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-565074603/1.webp",
-      "author": "Mostafameraji",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%AC%E1%83%9B%E1%83%98%E1%83%9C%E1%83%93%E1%83%90_%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%94%E1%83%99%E1%83%9A%E1%83%94%E1%83%A1%E1%83%98%E1%83%90_%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D8%B3%D9%86%D8%AA_%D9%86%DB%8C%D9%86%D9%88_%D8%AF%D8%B1_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_02.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-565074603/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-565074603/2.webp",
-      "author": "Andrew Milligan sumo",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Saint_Nino%27s_Church,_Tbilisi_(50497188641).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "39d1d2097caaac2edcca1a8fe99c272649384a4c858e1cb07a9c5e051221e8f6",
+    "370190c77cb5471a95187210e9805160a7e3384974eff6834b1baf938b6a78ea"
   ],
   "source": "https://www.openstreetmap.org/way/565074603",
   "otherSource": "https://www.wikidata.org/wiki/Q42658484",

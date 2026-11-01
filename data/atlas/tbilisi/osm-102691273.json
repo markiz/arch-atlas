@@ -69,16 +69,7 @@
   },
   "geometryQuality": "Официальная граница памятника 3246 и [OSM way/102691273](https://www.openstreetmap.org/way/102691273) совпадают с IoU около 0,83; 87,2% OSM-контура лежит внутри реестровой границы, которая покрывает около 94,2% way. Это отдельный замкнутый шестиузловой Polygon. Реестр даёт адрес 111, OSM — 111ა; расхождение отмечено. Архитектурная ценность и детали подтверждены официальным описанием. Проверенной лицензированной фотографии нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-102691273/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-102691273/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3246",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73897_DE316392-5165-4B83-B8CB-6B9260565D1F",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "fa526a5547100492486aef39d88a3658239834e915437f454798828c5b36fb63"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3246",
   "otherSource": "https://www.heritagesites.ge/uploads/files/6094395aeb684.pdf"

@@ -81,16 +81,7 @@
   },
   "geometryQuality": "Именованный замкнутый OSM way/555200386 лежит у южного фасада церкви Мама Давити. Официальная граница реестра 4101 и OSM-контур совпадают с IoU около 0,81; около 81,5% way лежит в границе, контур way покрывает около 99,6% официального полигона. Геометрия подтверждает отдельную колокольню, не совпадающую с контуром основной церкви.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-555200386/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-555200386/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4101",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76038_F6837F94-D3A5-4FF8-95B6-50946A432B6F",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "fba3d21c9684a09c9cb534f56ca0e06a38927c4faa677ae9d9a68e2638b0eb2c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4101",
   "otherSource": "https://www.heritagesites.ge/uploads/files/5ae04dca9b51c.pdf"

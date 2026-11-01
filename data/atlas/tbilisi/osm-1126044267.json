@@ -83,15 +83,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1126044267/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1126044267/1.webp",
-      "author": "t.przechlewski",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Unnamed2_-_panoramio_(2148).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "770e394ada8e13e8dacac5ba13859cb9881fa0ba0b41eb146f058170b17993a4"
   ],
   "source": "https://www.openstreetmap.org/way/1126044267",
   "otherSource": "https://www.wikidata.org/wiki/Q136559487",

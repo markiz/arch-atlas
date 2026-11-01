@@ -81,16 +81,7 @@
   },
   "geometryQuality": "Именованный OSM-контур церкви; адрес и историческое название подтверждены Google API, а официальный реестр описывает церковь на этом месте; реестровая граница совпадает по местоположению.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-123574142/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-123574142/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75132_B567F112-A407-49BA-B2DA-DF5F77D53B41",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a1ab289f88bd3455deaccc377961e375184e5ef697ae7b05ac42964656a47174"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
   "otherSource": "https://www.heritagesites.ge/uploads/files/60e836cf86bd8.pdf"

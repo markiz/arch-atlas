@@ -115,33 +115,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1123513785/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1123513785/1.webp",
-      "author": "Santel01",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%99%E1%83%94%E1%83%9A%E1%83%98%E1%83%90_%E1%83%97%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_3%E1%83%90.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1123513785/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1123513785/2.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%99%E1%83%94%E1%83%9A%E1%83%98%E1%83%90_%E1%83%97%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%98%E1%83%A1_3%E1%83%90.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1123513785/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-1123513785/3.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%99%E1%83%94%E1%83%9A%E1%83%98%E1%83%90%E1%83%A1_3%E1%83%90.tif",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "75d763526f3d90b60e1f077ced40048bd0802db2f6bec01e9986c19ad7a37eff",
+    "9be4a10aebf2ea4d78566e85dd5a0b324464e6d3781ba09335872d6c83cdb44e",
+    "243ea7c07f10e08128a0f9fc63a937d240e6a80bb6f0b40e5187c592ffaed8fd"
   ],
   "source": "https://www.openstreetmap.org/way/1123513785",
   "otherSource": "https://www.wikidata.org/wiki/Q42617976",

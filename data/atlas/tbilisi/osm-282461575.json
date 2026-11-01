@@ -76,16 +76,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.59; реестр 556.6 м², OSM 392.9 м²; перенос центра 4.4 м. OSM way/282461575, 392,9 м², 8 вершин; IoU 0,59 с реестровым полигоном 556,6 м², центроид в 4,4 м. OSM-контур на 89,7% лежит внутри реестрового и, вероятно, описывает основной двухэтажный корпус без одноэтажной пристройки по Каргаретели. Флагов нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-282461575/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-282461575/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3154",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74557_8A307CB9-4E34-431F-910E-9E6E537ACA47",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a2da650cb5f1b6128cbdd3b1355f62e5ba0c77cd7874145c4e192b77317aa07e"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3154",
   "otherSource": "https://www.openstreetmap.org/way/282461575"

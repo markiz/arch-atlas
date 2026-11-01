@@ -76,16 +76,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.957; реестр 300.5 м², OSM 291.1 м²; перенос центра 0.0 м. IoU 0.957 — лучшая пара в пачке; флагов нет. Небольшое наложение 4.7 м² с карточкой «Жилой дом на Цинамдзгвришвили, 116» — касание соседних корпусов, не дубль.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1131162691/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1131162691/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3201",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75329_3B8A6E47-4521-4825-8FAA-93BB9E7F6197",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "e8f3ce46294717a911b3522621cb46f90c39bb29c043610fa1b5ef846a724b25"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3201",
   "otherSource": "https://www.openstreetmap.org/way/1131162691"

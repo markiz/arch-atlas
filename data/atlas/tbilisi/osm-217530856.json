@@ -128,16 +128,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.774; реестр 946.4 м², OSM 1158.6 м²; перенос центра 2.4 м. OSM way/217530856: IoU 0,774, 97,1 % реестровой границы лежит внутри OSM; флаг osm_much_larger объясняется тем, что контур OSM (1158,6 м²) включает восточное дворовое крыло/позднюю пристройку помимо реестровых 946,4 м². Обведён надземный корпус, участок не включён.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-217530856/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-217530856/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3239",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74742_72F380B8-1AC6-4925-BBD6-9DD83547D2A6",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "2c45a658c47dfa3bbfe909cd8d234d83f3aa579995909548cf8d9a07aa32e86d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3239",
   "otherSource": "https://www.openstreetmap.org/way/217530856"

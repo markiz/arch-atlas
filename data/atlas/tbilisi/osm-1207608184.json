@@ -97,25 +97,8 @@
   },
   "geometryQuality": "OSM называет церковь Святого Николая в Харпухи; официальная граница наследия перекрывает около 90% контура; адресные варианты источников требуют уточнения",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1207608184/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1207608184/1.webp",
-      "author": "Александр Сигачёв",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Saint_Nicholas_Church_in_Kharpukhi_-_2025-10.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1207608184/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1207608184/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3590",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75508_D2C8CF37-56F1-467D-9606-9EF396A35246",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "be1da6e7237d3dcf5df49ac4ebfd40b995c630dcc88807bc8d5d744767bc39b2",
+    "d3b70fe63bafae0c8a207da6a39e25f6ebaaf0875ae653ddd0df54536cc09b03"
   ],
   "source": "https://karibche.ge/eklesia/tadzrebi-da-monastrebi/671-19-dekemberi-nikolozobaa.html",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3590"

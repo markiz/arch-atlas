@@ -59,24 +59,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-661361748/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-661361748/1.webp",
-      "author": "RaffiKojian",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Raffi_kojian-Surb_Nshan-161445468.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-661361748/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-661361748/2.webp",
-      "author": "Adam Jones from Kelowna, BC, Canada",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Architectural_Detail_-_Old_Town_-_Tbilisi_-_Georgia_-_08_(18528004568)_(2).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "1febca4a5bf4ad13c7a5a7b099a705222c5c8782747ea6aa868ab0be5aab69f4",
+    "910047b8fb80a4dd768cc7455c650404ca6500d3130fae99655ce09384c3ecee"
   ],
   "source": "https://www.openstreetmap.org/way/661361748",
   "otherSource": "https://www.wikidata.org/wiki/Q3653183",

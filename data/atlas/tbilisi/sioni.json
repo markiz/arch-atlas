@@ -157,24 +157,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/sioni/1.webp",
-      "thumb": "thumbnails/tbilisi/sioni/1.webp",
-      "author": "Supanut Arunoprayote",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Sioni_Cathedral_09.23.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/sioni/2.webp",
-      "thumb": "thumbnails/tbilisi/sioni/2.webp",
-      "author": "Ken Zuk",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Sioni_Cathedral_in_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "37e0827048e808dbb2413f18ba2f3151eae5b1b43eff046884ab2f707b88a6c0",
+    "8692f3a65c2b433d8d9eed98e226a2b4535414224b9e8c61931bd45289f843d9"
   ],
   "source": "https://georgia.travel/sioni-cathedral",
   "googlePlaceId": "ChIJPzumeQANREARbWArJ_IYiNY",

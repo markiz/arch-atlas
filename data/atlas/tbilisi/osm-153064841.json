@@ -95,24 +95,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-153064841/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-153064841/1.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Revaz_Tabukashvili_street_42.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-153064841/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-153064841/2.webp",
-      "author": "David1010",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Revaz_Tabukashvili_street_42_(2).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "eba157feb0defdcc7859227110145f37db724b19d1cbdfbdd3574e13049f0cce",
+    "a702a79838eca8a167a4e89fbf13f22c33db1a08649e3e5038384a7e8131baa0"
   ],
   "source": "https://www.openstreetmap.org/way/153064841",
   "otherSource": "https://www.wikidata.org/wiki/Q42639006",

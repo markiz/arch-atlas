@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.695; реестр 195.7 м², OSM 172.6 м²; перенос центра 1.4 м. IoU 0,70 с реестровой границей (201 м² против 177 м²), centroid 1,4 м, flags нет; OSM way/352650181 (building=yes, 9 вершин) обводит корпус. Адрес в OSM — «переулок Декабристов, 3», в реестре — улица и площадь Декабристов, 3: номер и квартал те же.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-352650181/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-352650181/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=78253_02605FE5-07E8-4E3C-BEE8-64651201CEBC",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=78253_02605FE5-07E8-4E3C-BEE8-64651201CEBC",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "5ddd9935ade776ade3e190f866e9c960d9d36cec00861ad3fd738397ba3449b2"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3569",
   "otherSource": "https://www.openstreetmap.org/way/352650181"

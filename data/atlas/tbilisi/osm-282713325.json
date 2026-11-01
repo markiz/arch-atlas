@@ -81,16 +81,7 @@
   },
   "geometryQuality": "Официальная граница 3567 и OSM way/282713325 совпадают с IoU около 0,83; 86,2% OSM внутри границы, граница покрыта на 95,7%, смещение 2,1 м. С соседними домами 121 и 125 контуры только касаются, с домом 127 — разнесены примерно на 51 м; пересечений нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-282713325/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-282713325/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3567",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75960_D68FA031-6726-424D-BF34-BC959076D7BA",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "703216b6c2386b3f8203523f901693cf17a6dbb101aa77eb04672b3105395f2b"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3567",
   "otherSource": "https://www.heritagesites.ge/public/uploads/files/67a089107989e.pdf"

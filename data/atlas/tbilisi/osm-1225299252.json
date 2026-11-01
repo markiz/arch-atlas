@@ -92,16 +92,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.711; реестр 305.9 м², OSM 392.8 м²; перенос центра 2.1 м. IoU 0,711; контур way/1225299252 (392,8 м²) против 305,9 м² реестра, реестр покрыт на 94,9 %, центроид 2,1 м, флагов нет. Обведён корпус целиком; небольшой излишек OSM — вероятно, поздняя пристройка в конце дома.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1225299252/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1225299252/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3081",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74891_F6960595-DB23-4E9F-840A-782A47DBFB89",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "cb5e2cd286aafac67944055a747161adea1c25367ca1bea017d0cf45d30742bd"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3081",
   "otherSource": "https://www.openstreetmap.org/way/1225299252"

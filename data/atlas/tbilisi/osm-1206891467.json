@@ -115,15 +115,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206891467/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206891467/1.webp",
-      "author": "Dor Shabashewitz",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:44_Lado_Asatiani_St,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "b62de6de35e4e745ea7798769419f73634cecf40024de1e38a9f41ce6b3d24cd"
   ],
   "source": "https://www.openstreetmap.org/way/1206891467",
   "otherSource": "https://www.wikidata.org/wiki/Q42623658",

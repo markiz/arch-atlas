@@ -85,16 +85,7 @@
   },
   "geometryQuality": "OSM way/143349273 — замкнутый девятиузловой контур здания по Метехскому подъёму, 1ა. Официальная точка реестра 3377 находится внутри контура; IoU границы и way около 0,68, OSM way покрывает около 98,8% официального полигона. Адресный номер реестра — 1, OSM — 1ა; контур не пересекается с другими карточками атласа.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-143349273/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-143349273/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75539_79C0AF0A-AF6E-48C9-A568-3D0582B53274",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "bf9a16c3af47095c95d8824c412e88bb400fc9c8494f2b592dc0a46c63d1ef6a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377",
   "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/551115/1/Svobodnaia_Gruzia_1999_N131.pdf",

@@ -109,24 +109,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/writers/1.webp",
-      "thumb": "thumbnails/tbilisi/writers/1.webp",
-      "author": "Hundnase",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Writer%27s_House_of_Georgia.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/writers/2.webp",
-      "thumb": "thumbnails/tbilisi/writers/2.webp",
-      "author": "Raymond Zoller from unterwegs. on the road",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:House_of_the_Writers,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "66e886c8b04b57c32a4283f8f2016f9192abdb41873972a20c8326c3b83657c7",
+    "63dc758fab1123dbb14aea32e4ab7af179b25ec9c3e45ab696e75a4386f0d8f0"
   ],
   "source": "https://writershouse.ge/index.php?lng=eng&m=135",
   "googlePlaceId": "ChIJDUaNDvIMREARXkd8THC7se0",

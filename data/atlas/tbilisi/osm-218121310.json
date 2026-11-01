@@ -69,16 +69,7 @@
   },
   "geometryQuality": "Официальная граница 2850 и OSM way/218121310 совпадают с IoU около 0,89; 97,4% OSM внутри границы, граница покрыта на 91,3%, смещение 0,4 м. Адрес реестра — 91, OSM — 91а; это один корпус, а не соседний дом.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-218121310/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-218121310/1.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_91.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-      "description": "фасад дома 91; свободная лицензия"
-    }
+    "7f8773b8731e5243a9c35c054dbc788ec1056f105163f64011c8f643c73b9508"
   ],
   "source": "https://scantbilisi.ge/ka/objects/302",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2850"

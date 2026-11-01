@@ -99,15 +99,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65350538/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65350538/1.webp",
-      "author": "Alix Kroeger from Brussels, Belgium",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Bethlehem_Quarter.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "7941a1307d4ced649cad526aa6d66fc4e6666a4bcccd28b199b280a074e3d6ad"
   ],
   "source": "https://www.openstreetmap.org/way/65350538",
   "otherSource": "https://www.wikidata.org/wiki/Q4156388",

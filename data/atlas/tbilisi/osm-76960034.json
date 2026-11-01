@@ -127,16 +127,7 @@
   },
   "geometryQuality": "Замкнутый контур OSM way/76960034 совпадает с официальной границей памятника 5208 с IoU около 0,83; около 99,3% площади контура лежит внутри неё, реестровая граница шире и покрывает около 83,1% way. OSM тегирует корпус как industrial/video studio, что согласуется с назначением павильона. Официальный адрес — Агмашенебели, 164, текущий адрес OSM — 162; это расхождение отмечено, а не нормализовано.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-76960034/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-76960034/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5208",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77063_3EFD9E05-D873-451B-A8CD-2EFEAD4F7E99",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "c7a44b4d9e730ed125d9c1a399f3c412c9e4c9f2052c3f5b04827023fc057ae4"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5208",
   "otherSource": "https://www.openstreetmap.org/way/76960034"

@@ -84,16 +84,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.804; реестр 456.9 м², OSM 548.9 м²; перенос центра 2.5 м. IoU 0,804; реестр 456,9 м², OSM 548,9 м² (way/1193859179, 10 вершин, addr: შალვა დადიანის ქუჩა 15, building=government). OSM-контур немного шире реестрового (захватывает часть пристройки), но это тот же замкнутый корпус; флагов нет, Place ID совпал.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1193859179/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1193859179/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4033",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76452_F5815C96-3E7F-478A-B348-21256B37A46D",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "edc453ba5c44fd46586fb58c3bca2770111b33dd6aba4cf0018954bce4a16d77"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4033",
   "otherSource": "https://www.openstreetmap.org/way/1193859179"

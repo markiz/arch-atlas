@@ -64,16 +64,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.656; реестр 878.5 м², OSM 744.7 м²; перенос центра 6.1 м. IoU 0,656 с официальной границей 3714: 86,3% OSM внутри реестровой границы, граница покрыта на 73,2%, смещение 6,1 м; флагов нет. Обведён надземный корпус по Коставы, 43; OSM даёт building=commercial и 4 уровня против 3 этажей реестра — это результат перестройки после 2010 года, а не другой дом. Свободного фото в Commons нет; допустим реестровый снимок как fallback с неизвестной лицензией: https://memkvidreoba.gov.ge:60/Files?id=76335_478D55D2-2637-4D2C-89A7-F319FEC4C012.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-278885372/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-278885372/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3714",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76335_478D55D2-2637-4D2C-89A7-F319FEC4C012",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a2495509a44291bace04b18b887b652ec44e978ce7d0b2cb430083ba3924a164"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3714",
   "otherSource": "https://www.openstreetmap.org/way/278885372"

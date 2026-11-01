@@ -84,16 +84,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.936; реестр 401.0 м², OSM 378.2 м²; перенос центра 0.5 м. OSM way/1013499785: IoU 0,936, реестровая граница покрыта на 94,0 %, центроид 0,5 м, флагов нет; обведён именно трёхэтажный корпус с дворовым крылом, участок не включён. Пересечение с опубликованной карточкой «Дом с ордерным фасадом на проспекте Агмашенебели, 111» — 4,6 м² по смежной границе, это не дубль.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1013499785/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1013499785/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3173",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75283_77FDA91B-9DBF-4DA9-BD3B-614946F0F964",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "4c2afc3bc1b77779b16d1f0a2be6db58eaa1cb13e729d95d671158799d1d8c84"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3173",
   "otherSource": "https://www.openstreetmap.org/way/1013499785"

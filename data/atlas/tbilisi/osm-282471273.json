@@ -120,16 +120,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.95; реестр 972.8 м², OSM 1003.6 м²; перенос центра 0.3 м. OSM way/282471273, IoU 0,950, флагов нет; контур корпуса, реестр покрыт на 99%.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-282471273/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-282471273/1.webp",
-      "author": "Ekkatterrinna",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98._%E1%83%A3%E1%83%96%E1%83%9C%E1%83%90%E1%83%AB%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_N_101.%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "главный фасад углового дома на Узнадзе, 101, 2023 год"
-    }
+    "2d6a2cc363c5cf0e039ee7513884d9ed5a82835b7453fb78e2ae3e96709be987"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3288",
   "otherSource": "https://www.openstreetmap.org/way/282471273"

@@ -125,16 +125,7 @@
   },
   "geometryQuality": "Контур OSM way/337269648; название совпадает с реестровой записью, адрес и положение проверены по источникам",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-337269648/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-337269648/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4070",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74696_2F1774CB-30E4-4854-B741-95DADD8E610E",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "440ec7938a29ec51881ac363ff14373c2692dd6a72c6a5318e096ff03c98f89d"
   ],
   "source": "https://georgianencyclopedia.ge/ka/form/29673",
   "otherSource": "https://dspace.nplg.gov.ge/handle/1234/149779"

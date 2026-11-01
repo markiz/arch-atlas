@@ -65,15 +65,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название совпадает с источником",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-591365819/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-591365819/1.webp",
-      "author": "Kober",
-      "license": "Public domain",
-      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
-      "source": "https://commons.wikimedia.org/wiki/File:Jvris-mama_Church_in_Tbilisi.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "041faf51f64db6bd6c64e27a953740435c8e4be256b05bf3066f67b27ba565a7"
   ],
   "source": "https://georgia.travel/jvaris-mama",
   "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/503668/1/IerusalimisJvrisMonastrisMiwatmflobelobaSaqartveloshi_2007.pdf"

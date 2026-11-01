@@ -107,24 +107,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-78067045/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-78067045/1.webp",
-      "author": "Alsandro",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Mardjanishvili_Theatre_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-78067045/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-78067045/2.webp",
-      "author": "Jelger Groeneveld",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Marjanishvili_Theatre_in_Tbilisi,_Georgia,_at_night._2022.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "dc1404a562f8250bdaaa7a74be7126574a22ff6b41bd51cda0551befde32cc4c",
+    "9a64e403d7853594ca19bf19c7d81422b16bfe7f8da72c975f5758d6f121507c"
   ],
   "source": "https://www.openstreetmap.org/way/78067045",
   "otherSource": "https://www.wikidata.org/wiki/Q42645954",

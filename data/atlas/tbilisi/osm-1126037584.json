@@ -104,16 +104,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.874; реестр 432.1 м², OSM 411.9 м²; перенос центра 0.8 м. IoU 0,874; OSM way/1126037584 — замкнутый контур корпуса, флагов нет; OSM building:levels=3 отражает дворовую трёхэтажность.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1126037584/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1126037584/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3458",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75192_62CF0B80-08D3-4360-ABBC-8D39AC03D7C6",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "8426bccb4e6150908f4a1ab3590599e81b1d3302dab4263572b0cebacde839fc"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3458",
   "otherSource": "https://www.openstreetmap.org/way/1126037584"

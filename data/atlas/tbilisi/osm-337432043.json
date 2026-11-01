@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.859; реестр 407.7 м², OSM 362.4 м²; перенос центра 1.3 м. IoU 0,86; реестр 407,7 м², OSM 362,4 м², центроиды в 1,3 м; флагов нет. OSM way/337432043 обводит надземный корпус (building=apartments, 3 уровня, из них 1 подземный).",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-337432043/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-337432043/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3619",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75137_3F69C579-077C-49D5-9D69-00AFB19FAEFC",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "51ce6c955455500d3335f172dcfa107e082b70199325fe25908039401e1018cd"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3619",
   "otherSource": "https://www.openstreetmap.org/way/337432043"

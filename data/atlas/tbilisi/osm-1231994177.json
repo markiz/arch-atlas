@@ -76,16 +76,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.841; реестр 465.3 м², OSM 475.2 м²; перенос центра 1.2 м. IoU 0,841 с реестровой границей, площади 475 и 465 м², покрытие реестра 92,3%, смещение центроида 1,2 м; флагов нет. Обведён двухэтажный корпус по Ниагвари, 4а; двор и соседний пятиэтажный дом №4 в контур не входят.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1231994177/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1231994177/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4162",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=76953_F186CFA7-D656-4498-A877-F399ED26C192",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "05855168536edade4bd39312d3867ca576e2691613693368cf1a83bbf54ccbd4"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4162",
   "otherSource": "https://www.openstreetmap.org/way/1231994177"

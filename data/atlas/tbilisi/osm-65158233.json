@@ -155,16 +155,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; соответствие объекту уточнено по названию и адресу",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-65158233/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-65158233/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2914",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=356687_EF40A1F0-A99B-45CC-824E-0428863EFAD9",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "8e1410746e1b21436af93c935c5283570b3a364392486ed4cc2b85605ec83b1e"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/255/The-building-of-the-former-officers%27-economic-society",
   "otherSource": "https://georgia.travel/agmashenebeli-avenue-in-tbilisi-neu-tiflis"

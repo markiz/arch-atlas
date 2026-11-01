@@ -72,16 +72,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.943; реестр 456.6 м², OSM 462.8 м²; перенос центра 0.4 м. IoU 0,943 с реестровой границей при площади 456,6 / 462,8 м², центроиды в 0,4 м; флагов нет, OSM-полигон обводит надземный корпус целиком (3 этажа, 1 подземный). Фото: Commons-геопоиск по точке дал 0 совпадений, категория Shalva Dadiani street на Commons пустая — нужен снимок фасада, фото пока нет.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-295188423/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-295188423/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3484",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75250_BAA20C36-5AAC-43CE-B612-02C5A20D2284",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "24d78469f20270afd81cdd68bdc7cab7e0ed8b8b63f31eb9e027eb421c591143"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3484",
   "otherSource": "https://www.openstreetmap.org/way/295188423"

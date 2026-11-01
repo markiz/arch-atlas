@@ -73,16 +73,7 @@
   },
   "geometryQuality": "Реальный замкнутый OSM Polygon way/1206434174 назван Anchiskhati Belltower и размечен как башня-колокольня. Официальная граница реестра 3787 и way совпадают с IoU около 0,78; около 85,8% площади way лежит в официальной границе, она покрывает около 90,0% контура. Контур расположен отдельно от базилики и описанного ансамбля; точный адрес реестра — Шавтели, 7. Фото из реестра не добавлено: права на повторное использование не установлены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1206434174/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1206434174/1.webp",
-      "author": "Davit butulashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%9C%E1%83%A9%E1%83%98%E1%83%A1%E1%83%AE%E1%83%90%E1%83%A2%E1%83%98%E1%83%A1_%E1%83%A1%E1%83%90%E1%83%9B%E1%83%A0%E1%83%94%E1%83%99%E1%83%9A%E1%83%9D_01.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "колокольня Анчисхати; свободная лицензия"
-    }
+    "c7e25c00973ee3745c1cb62048894ce10c5c50927a9d0b4baaff1d362ecae489"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3787",
   "otherSource": "https://georgianencyclopedia.ge/en/form_eng/374"

@@ -223,24 +223,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
   "photos": [
-    {
-      "file": "photos/tbilisi/imeli/1.webp",
-      "thumb": "thumbnails/tbilisi/imeli/1.webp",
-      "author": "Alsandro",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:IMEL_Building,_Tbilisi_(2).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/imeli/2.webp",
-      "thumb": "thumbnails/tbilisi/imeli/2.webp",
-      "author": "Gobrona",
-      "license": "CC0",
-      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-      "source": "https://commons.wikimedia.org/wiki/File:IMEL_building_at_night,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "e7cc776855417f3f8056c583816b5f0549cb94259249e8ce3dbe79f396529a7a",
+    "716932336e3ce23a1481125d58aa704bc7d2da91fe07eca6fe43b57d155d294c"
   ],
   "source": "https://www.tbilisiarchitecture.net/imeli-building/"
 }

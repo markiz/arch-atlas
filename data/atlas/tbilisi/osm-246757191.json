@@ -111,24 +111,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-246757191/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-246757191/1.webp",
-      "author": "Yuri Samoylov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:2025-03-26_27_Davit_Aghmashenebeli_Avenue.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-246757191/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-246757191/2.webp",
-      "author": "Shalvabaiashvili",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_27.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    }
+    "8d105546c0fca71746549e30edfc262ba5c82b95e7b830b10fb788f857ef0c84",
+    "e3de116a0e4ed846685979a7696690f5ac44c931d3fe0e0775a3af61c41adb4c"
   ],
   "source": "https://www.openstreetmap.org/way/246757191",
   "otherSource": "https://www.wikidata.org/wiki/Q42634497",

@@ -97,16 +97,7 @@
   },
   "geometryQuality": "OSM way/465566841 — замкнутый адресный Polygon трёхэтажной школы на Узнадзе, 59; геометрическая проверка очереди показывает хорошее совпадение с официальной границей памятника 2755. Муниципальный фонд развития прямо подтверждает памятник и реставрацию с сохранением исторического характера. Google Place ID и проверенное лицензированное фото не найдены.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-465566841/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-465566841/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2755",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74218_CA0CF06C-4AAD-433A-89AA-78A7ACF0B28D",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "a5316488bbc40e4d6578f4a5ba4b59a1458e8a9394e6878253127069020ef2f0"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2755",
   "otherSource": "https://mdf.org.ge/en/media/news/11730-tbilisis-23-sajaro-skolis-reabilitatsia-aqtiurad-mimdinareobs"

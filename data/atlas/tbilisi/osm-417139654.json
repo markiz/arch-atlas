@@ -80,25 +80,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.795; реестр 447.3 м², OSM 439.5 м²; перенос центра 1.4 м. IoU 0.795, флагов нет; OSM 440 м² против реестровых 447 м², покрытие 88 %.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-417139654/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-417139654/1.webp",
-      "author": "Marikuna-115",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%91%E1%83%90%E1%83%A5%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_9.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-417139654/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-417139654/2.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3233",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=73957_645BA441-EEE9-46BB-967C-135762DEB68F",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "39f04132e26b6405d4ab3053987a8af50889e2c55641557b8cc62d2b9618d962",
+    "a531d6ee969a301f6c366ae0afab1f6bb584f7819153e95c906cd02a749ed34e"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3233",
   "otherSource": "https://www.openstreetmap.org/way/417139654"

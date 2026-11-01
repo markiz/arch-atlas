@@ -83,33 +83,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-190599810/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-190599810/1.webp",
-      "author": "Santel01",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5._14.jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-190599810/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-190599810/2.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:3J4A0212%2B.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-190599810/3.webp",
-      "thumb": "thumbnails/tbilisi/osm-190599810/3.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_14.jpg",
-      "modifications": "преобразовано в WebP"
-    }
+    "aae5448e065d7e0c6e1376a639f37206bb47c4353f1dadb2115d252657741874",
+    "caf9585a92018e1d3895799032c84ccfe2059b559d99df2c25a4f92fc18b96de",
+    "24cadbdb53897da41127a480a7dcf8ce6ea393c5973490dd8b0abbea8637a0d3"
   ],
   "source": "https://www.openstreetmap.org/way/190599810",
   "otherSource": "https://www.wikidata.org/wiki/Q42630359",

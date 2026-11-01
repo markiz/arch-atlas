@@ -135,15 +135,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1362020659/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1362020659/1.webp",
-      "author": "Nich marketing",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Gruzugol_building_in_Tbilisi.JPG",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "aa5c2ec711887f786d443fa32a94509aa9e7236baa4308382730d7ce10ca772c"
   ],
   "source": "https://www.openstreetmap.org/way/1362020659",
   "otherSource": "https://www.wikidata.org/wiki/Q42650680",

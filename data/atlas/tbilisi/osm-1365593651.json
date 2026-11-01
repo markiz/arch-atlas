@@ -77,16 +77,7 @@
   },
   "geometryQuality": "OSM way с адресом Чубинашвили, 22 и восемью узлами; официальная граница реестра больше контура дома и охватывает участок/двор. OSM way лежит внутри официальной границы примерно на 94%, а граница покрыта контуром примерно на 70%; музейный источник подтверждает дом-музей по тому же адресу.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1365593651/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1365593651/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2965",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75243_54BEA99A-2A85-4096-B3C0-4BBA6BFCF87C",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "fc99a2f1da8f13d7e276de47a58bbcd535352d4c50b5a8e8e4edd37b3734ba2f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2965",
   "otherSource": "https://tbilisimuseumsunion.ge/en/museums/ilia-chavchavadzis-literaturul-memorialuri-muzeumi/"

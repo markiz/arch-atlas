@@ -80,16 +80,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.787; реестр 150.2 м², OSM 185.8 м²; перенос центра 0.2 м. IoU 0,79 с реестровой границей (150 м² против 186 м² у OSM), centroid 0,2 м, flags нет; OSM way/1061737465 (building=detached, 9 вершин) обводит корпус, небольшая разница — выступ стены. Контур пригоден для карточки.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1061737465/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1061737465/1.webp",
-      "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=74764_675CADB5-4C91-4C84-B437-21307D4688BE",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=74764_675CADB5-4C91-4C84-B437-21307D4688BE",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "реестровое фото объекта"
-    }
+    "9846b2c96d6143a9b7d5f5cfd8100ce1bd455de9f517fdacefa881158ec88777"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3543",
   "otherSource": "https://www.openstreetmap.org/way/1061737465"

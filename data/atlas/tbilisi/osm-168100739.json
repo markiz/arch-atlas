@@ -87,24 +87,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-168100739/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-168100739/1.webp",
-      "author": "Daibo Taku",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi,_Tbilisi,_Georgia_-_panoramio_(74).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-168100739/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-168100739/2.webp",
-      "author": "Mehman Ibragimov",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_26,_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "4979e2d2fd9d9211bf33d65ffbde7efc26b9128c5bcbbffc936a17ae3f15c32a",
+    "5e82c2c10a33690cd6508245767f5328c32c948c1d294b0950191dba62eed870"
   ],
   "source": "https://www.openstreetmap.org/way/168100739",
   "otherSource": "https://www.wikidata.org/wiki/Q42650461",

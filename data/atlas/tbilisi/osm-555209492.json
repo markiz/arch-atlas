@@ -176,16 +176,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.958; реестр 829.9 м², OSM 853.2 м²; перенос центра 0.2 м. IoU 0,958; OSM way/555209492 — 853 м²; флагов нет. Обведён весь трёхэтажный корпус с дворовым крылом.",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-555209492/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-555209492/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4296",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=75176_9FF84A2D-430F-4C14-AA61-0EF0A258C0BE",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "4a773d41e0c1779ede32a04c38bc38cd6c58efe77a5fc0f260121bb830d05e2c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4296",
   "otherSource": "https://www.openstreetmap.org/way/555209492"

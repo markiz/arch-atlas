@@ -165,16 +165,7 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-25699483/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-25699483/1.webp",
-      "author": "Реестр памятников Грузии (автор не указан)",
-      "license": "Не установлена",
-      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4641",
-      "source": "https://memkvidreoba.gov.ge:60/Files?id=77567_7FB6A268-14F5-42FA-91A0-A84B00FDEECE",
-      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
-      "description": "Фото реестра памятников; автор и лицензия не установлены"
-    }
+    "48aacbe1b26cdee03463939e146a8635ad3d2ab03643d4436ac28ba6f1b07502"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/353/3-10%2C-Rustaveli-Ave",
   "otherSource": "https://georgianencyclopedia.ge/en/form_eng/833"

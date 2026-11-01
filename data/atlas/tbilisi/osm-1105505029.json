@@ -87,24 +87,8 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-1105505029/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-1105505029/1.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:3J4A0223%2B.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    },
-    {
-      "file": "photos/tbilisi/osm-1105505029/2.webp",
-      "thumb": "thumbnails/tbilisi/osm-1105505029/2.webp",
-      "author": "Varsika",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:3J4A0234%2B.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
-    }
+    "4c041de69085784d04306932afb6b42dabe9aaf27cd0f5a96224a8db8eb52e9a",
+    "cdef774b0a9cf5e9ef1be8136da08e238da644faab688068b9c6d1d138437e03"
   ],
   "source": "https://www.openstreetmap.org/way/1105505029",
   "otherSource": "https://www.wikidata.org/wiki/Q42628721",

@@ -443,16 +443,7 @@
     }
   ],
   "photos": [
-    {
-      "file": "photos/tbilisi/osm-19630608/1.webp",
-      "thumb": "thumbnails/tbilisi/osm-19630608/1.webp",
-      "author": "Armineaghayan",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Domes_of_Bath_no._5,_ArmAg_(1).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
-      "description": "купола бани №5; свободная лицензия"
-    }
+    "ca230f0cc591f0efbbea806198e37327f2699cfb12d95fb7f5b17373df82002a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3756",
   "otherSource": "https://docs.tbilisi.gov.ge/architect/dzeglebis_sia.pdf"
