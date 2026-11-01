@@ -25,7 +25,7 @@ PHOTOS_DIR = ROOT / 'data/photos'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
-PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_OPTIONAL_FIELDS = ('description', 'rating')
 PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 _PHOTO_LOCK = threading.Lock()
@@ -147,6 +147,11 @@ def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
             raise ValueError('photo metadata field description must be a string')
         if description.strip():
             normalized['description'] = description
+    rating = metadata.get('rating')
+    if rating is not None:
+        if not isinstance(rating, int) or isinstance(rating, bool) or not 0 <= rating <= 100:
+            raise ValueError('photo metadata field rating must be an integer from 0 to 100')
+        normalized['rating'] = rating
     for field in PHOTO_TAG_FIELDS:
         if metadata.get(field) is not None:
             tags = _normalized_tags(metadata[field], field)
@@ -193,6 +198,8 @@ def write_photo_metadata(
                 merged[field] = normalized[field]
             elif field in replace_tag_set:
                 merged.pop(field, None)
+        if 'rating' in normalized:
+            merged['rating'] = normalized['rating']
         merged['width'] = normalized['width']
         merged['height'] = normalized['height']
         if merged == current:

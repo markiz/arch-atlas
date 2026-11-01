@@ -1,0 +1,27 @@
+{
+  "author": "Surovyi",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Metro_Rustaveli.jpg",
+  "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+  "description": "наземный павильон станции метро «Руставели»",
+  "width": 1920,
+  "height": 1280,
+  "sourceTags": [
+    "GFDL",
+    "License migration redundant",
+    "Mkhedruli signs on buildings in Tbilisi",
+    "Rustaveli metro station",
+    "Self-published work",
+    "Taken with Canon EOS 400D"
+  ],
+  "visualTags": [
+    "facade",
+    "street",
+    "fence-wall",
+    "people",
+    "tree",
+    "sign"
+  ],
+  "rating": 86
+}

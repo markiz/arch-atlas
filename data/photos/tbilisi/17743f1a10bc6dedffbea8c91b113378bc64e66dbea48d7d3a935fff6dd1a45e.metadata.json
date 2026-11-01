@@ -1,0 +1,24 @@
+{
+  "author": "Kober",
+  "license": "Public domain",
+  "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+  "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_National_Gallery.JPG",
+  "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+  "width": 1920,
+  "height": 1440,
+  "sourceTags": [
+    "Exterior of the Tbilisi National Gallery",
+    "PD-self",
+    "Self-published work",
+    "Taken with Sony DSC-S600"
+  ],
+  "visualTags": [
+    "facade",
+    "street",
+    "arch",
+    "column",
+    "car",
+    "tree"
+  ],
+  "rating": 95
+}

@@ -20,7 +20,7 @@ const LANGS=['ru','en','ka','uk'];
 const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown']);
 const PHOTO_ID_RE=/^[a-f0-9]{64}$/;
 const PHOTO_METADATA_FIELDS=['author','license','licenseUrl','source','modifications'];
-const PHOTO_OPTIONAL_FIELDS=['description'];
+const PHOTO_OPTIONAL_FIELDS=['description','rating'];
 const PHOTO_TAG_FIELDS=['sourceTags','visualTags'];
 const PHOTO_DIMENSION_FIELDS=['width','height'];
 
@@ -98,6 +98,7 @@ async function loadPhotoMetadata(root,city){
    for(const field of PHOTO_DIMENSION_FIELDS)if(!Number.isInteger(metadata[field])||metadata[field]<=0)fail(file,`${field} must be a positive integer`);
    for(const field of PHOTO_TAG_FIELDS)if(metadata[field]!==undefined)requireTags(file,metadata[field],field);
    if(metadata.description!==undefined)requireString(file,metadata.description,'description');
+   if(metadata.rating!==undefined&&(!Number.isInteger(metadata.rating)||metadata.rating<0||metadata.rating>100))fail(file,'rating must be an integer from 0 to 100');
    const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key)&&!PHOTO_TAG_FIELDS.includes(key)&&!PHOTO_DIMENSION_FIELDS.includes(key));
    if(unknown.length)fail(file,`unknown photo metadata fields: ${unknown.join(', ')}`);
    photos.set(id,metadata);
@@ -120,6 +121,7 @@ function validatePhoto(file,photoId,index,seen,city,metadataById){
   for(const key of PHOTO_DIMENSION_FIELDS)photo[key]=metadata[key];
   for(const key of PHOTO_TAG_FIELDS)if(metadata[key]!==undefined)photo[key]=metadata[key];
   if(metadata.description!==undefined)photo.description=metadata.description;
+  if(metadata.rating!==undefined)photo.rating=metadata.rating;
   return photo;
 }
 

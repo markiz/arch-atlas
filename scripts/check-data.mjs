@@ -53,6 +53,7 @@ for(const b of data){
  for(const p of images){
   for(const k of ['id','file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
   for(const k of ['width','height'])assert(Number.isInteger(p[k])&&p[k]>0,`${b.id}: photo.${k} must be a positive integer`);
+  assert(Number.isInteger(p.rating)&&p.rating>=0&&p.rating<=100,`${b.id}: photo.rating must be an integer from 0 to 100`);
   for(const k of ['sourceTags','visualTags'])if(p[k]!==undefined)assert(Array.isArray(p[k])&&p[k].length>0&&p[k].every(tag=>typeof tag==='string'&&tag.trim())&&new Set(p[k]).size===p[k].length,`${b.id}: photo.${k} must be a non-empty array of unique strings`);
   if(p.visualTags)for(const tag of p.visualTags)assert(visualTagIds.has(tag),`${b.id}: unknown visual tag ${tag}`);
   assert(/^[a-f0-9]{64}$/.test(p.id),`${b.id}: photo id must be a lowercase sha256`);
@@ -70,6 +71,7 @@ for(const b of data){
    const metadata=JSON.parse(await readFile(sidecar,'utf8'));
    for(const k of ['author','license','licenseUrl','source','modifications'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
    for(const k of ['width','height'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
+   assert(metadata.rating===p.rating,`${b.id}: photo metadata rating differs from sidecar`);
    for(const k of ['sourceTags','visualTags'])assert(JSON.stringify(metadata[k])===JSON.stringify(p[k]),`${b.id}: photo metadata ${k} differs from sidecar`);
    assert(metadata.description===p.description,`${b.id}: photo metadata description differs from sidecar`);
    for(const path of [source,published]){

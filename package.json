@@ -9,8 +9,8 @@
     "aux:merge": "node scripts/merge-aux.mjs",
     "layers:build": "node scripts/build-map-layers.mjs",
     "layers:force": "node scripts/build-map-layers.mjs --force",
-    "build": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && node scripts/create-manifest.mjs && tsc -b && vite build",
-    "check": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
+    "build": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && python3 scripts/rate-photos.py && node scripts/assemble-atlas.mjs && node scripts/create-manifest.mjs && tsc -b && vite build",
+    "check": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && python3 scripts/rate-photos.py --check && node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
     "photos:sync": "node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs",
     "photos:dimensions": "python3 scripts/sync-photo-dimensions.py",
     "photos:upgrade": "python3 scripts/upgrade-photo-sources.py",
@@ -21,7 +21,8 @@
     "photos:migrate": "python3 scripts/migrate-photo-ids.py",
     "photos:thumbs": "node scripts/create-photo-thumbs.mjs",
     "test": "node --test tests/*.test.mjs",
-    "verify": "node scripts/verify-dist.mjs"
+    "verify": "node scripts/verify-dist.mjs",
+    "photos:rate": "python3 scripts/rate-photos.py"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

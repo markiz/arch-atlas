@@ -42,7 +42,7 @@ PHOTOS_DIR = ROOT / 'data/photos/tbilisi'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails/tbilisi'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
-PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_OPTIONAL_FIELDS = ('description', 'rating')
 PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 VISUAL_TAXONOMY = ROOT / 'data/photo-visual-tags.json'
@@ -291,6 +291,9 @@ def main() -> int:
                                 not isinstance(metadata['description'], str) or not metadata['description'].strip()
                             ):
                                 errors.append(f'{label}: photo[{index}].description must be a non-empty string')
+                            rating = metadata.get('rating')
+                            if not isinstance(rating, int) or isinstance(rating, bool) or not 0 <= rating <= 100:
+                                errors.append(f'{label}: photo[{index}].rating must be an integer from 0 to 100')
                             for key in PHOTO_DIMENSION_FIELDS:
                                 if not isinstance(metadata.get(key), int) or isinstance(metadata.get(key), bool) or metadata[key] <= 0:
                                     errors.append(f'{label}: photo[{index}].{key} must be a positive integer')
