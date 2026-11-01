@@ -1,0 +1,73 @@
+{
+  "id": "osm-9813665484",
+  "osmId": "node/9813665484",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Николая на аллее Сололаки",
+    "en": "St Nicholas Church on Sololaki Alley",
+    "ka": "წმინდა ნიკოლოზის ეკლესია სოლოლაკის ხეივანზე",
+    "uk": "Церква Святого Миколая на алеї Сололакі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "аллея Сололаки",
+    "en": "Sololaki Alley",
+    "ka": "სოლოლაკის ხეივანი",
+    "uk": "алея Сололакі"
+  },
+  "descriptions": {
+    "ru": "Небольшая церковь Святого Николая на аллее Сололаки, построенная в 1990-х годах на старом фундаменте.",
+    "en": "A small Church of St Nicholas on Sololaki Alley, built in the 1990s on an old foundation.",
+    "ka": "მცირე წმინდა ნიკოლოზის ეკლესია სოლოლაკის ხეივანზე, აგებული 1990-იან წლებში ძველ ნაფუძარზე.",
+    "uk": "Невелика церква Святого Миколая на алеї Сололакі, збудована у 1990-х роках на старому фундаменті."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.799517,
+    41.688753
+  ],
+  "source": "https://ka.wikipedia.org/wiki/სოლოლაკის_ხეივანი",
+  "otherSources": [
+    "https://www.openstreetmap.org/node/9813665484"
+  ],
+  "districtId": "sololaki",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 12,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "приходская церковь",
+      "постройка 1990-х годов"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Идентифицирована по статье о Сололакской аллее: в 1990-х там построена новая церковь Святого Николая; координаты OSM-узла совпадают с аллеей."
+}

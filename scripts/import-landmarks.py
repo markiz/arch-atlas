@@ -3,8 +3,8 @@
 
 This is a bootstrap/import tool, not the everyday editor. It reads the OSM
 extracts, the generated basemap and the existing atlas cards, and writes
-data/landmarks/<city>/osm-<id>.json without overwriting existing cards unless
---force is passed. The assembled bundle is produced by
+data/landmarks/<city>/osm-<id>.json and never overwrites an existing card:
+delete a card to re-import it. The assembled bundle is produced by
 scripts/assemble-landmarks.mjs.
 """
 import argparse
@@ -354,8 +354,7 @@ def empty_labels():
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--force', action='store_true', help='overwrite existing landmark files')
-    args = parser.parse_args()
+    parser.parse_args()
 
     basemap_path = ROOT / 'public' / 'atlas' / 'basemap.geojson'
     if not basemap_path.exists():
@@ -392,7 +391,7 @@ def main():
             continue
         used_ids.add(card_id)
         path = out_dir / f'{card_id}.json'
-        if path.exists() and not args.force:
+        if path.exists():
             skipped += 1
             progress.advance(f'{card_id}: уже есть')
             continue

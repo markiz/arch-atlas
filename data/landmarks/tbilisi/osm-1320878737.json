@@ -1,0 +1,72 @@
+{
+  "id": "osm-1320878737",
+  "osmId": "way/1320878737",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "chapel",
+  "names": {
+    "ru": "Часовня-источник при церкви Святого Иоанна Богослова",
+    "en": "Spring Chapel at the Church of St John the Evangelist",
+    "ka": "წყაროს სამლოცველო წმინდა იოანე ღვთისმეტყველის ეკლესიასთან",
+    "uk": "Каплиця-джерело при церкві Святого Іоанна Богослова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Нико Николадзе",
+    "en": "Niko Nikoladze Street",
+    "ka": "ნიკო ნიკოლაძის ქუჩა",
+    "uk": "вулиця Ніко Ніколадзе"
+  },
+  "descriptions": {
+    "ru": "Небольшая шестигранная часовня-источник у церкви Святого Иоанна Богослова в Вере.",
+    "en": "A small hexagonal spring chapel next to the Church of St John the Evangelist in Vera.",
+    "ka": "მცირე ექვსკუთხა წყაროს სამლოცველო ვერაში, წმინდა იოანე ღვთისმეტყველის ეკლესიის გვერდით.",
+    "uk": "Невелика шестикутна каплиця-джерело біля церкви Святого Іоанна Богослова у Вірі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.788801,
+    41.70774
+  ],
+  "source": "https://commons.wikimedia.org/wiki/File:2024-07-20_Spring_by_the_Saint_John_the_Evangelist_church_in_Tbilisi_(1).jpg",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1320878737"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "часовня при церкви"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Описательное название: в OSM объект без имени; по файлу Commons это шестигранный источник у церкви Святого Иоанна Богослова, рядом с кладбищем."
+}

@@ -100,6 +100,7 @@ for index,(nid,tags) in enumerate(node_tags.items(),1):
  if category:
   props={'kind':'landmark','category':category,'osmId':f'node/{nid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'node/{nid}');name=props['names']['ru']
   if name:props['name']=name
+  if not name:continue
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':nodes[nid]}})
 node_progress.finish()
 for rid,relation in relations.items():
@@ -113,6 +114,7 @@ for rid,relation in relations.items():
   center=[round(sum(p[i] for p in coords)/len(coords),6) for i in (0,1)]
   props={'kind':'landmark','category':category,'osmId':f'relation/{rid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'relation/{rid}');name=props['names']['ru']
   if name:props['name']=name
+  if not name:continue
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':center}})
 way_progress=Progress(len(ways),'scan OSM ways')
 way_progress.start()
@@ -125,6 +127,7 @@ for index,(wid,w) in enumerate(ways.items(),1):
  if category and closed:
   props={'kind':'landmark','category':category,'osmId':f'way/{wid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'way/{wid}');name=props['names']['ru']
   if name:props['name']=name
+  if not name:continue
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Polygon','coordinates':[coords]}})
  if 'building' in tags and closed:
   kind='building'
@@ -183,6 +186,7 @@ if city_extract.exists():
    kind='landmark';props['category']='museum'
    props.update(translated_names(tags));props=apply_landmark_card(props,f'{osm_type}/{osm_id}');name=props['names']['ru']
    if name:props['name']=name
+   if not name:continue
    if 'lon' in element and 'lat' in element:point=[float(element['lon']),float(element['lat'])]
    elif 'bounds' in element:
     bounds=element['bounds'];point=[(bounds['minlon']+bounds['maxlon'])/2,(bounds['minlat']+bounds['maxlat'])/2]

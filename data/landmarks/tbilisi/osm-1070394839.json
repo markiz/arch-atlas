@@ -1,0 +1,74 @@
+{
+  "id": "osm-1070394839",
+  "osmId": "way/1070394839",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Рождества Пресвятой Богородицы в Квемо Кукия",
+    "en": "Church of the Nativity of the Theotokos in Kvemo Kukia",
+    "ka": "ღვთისმშობლის შობის სახელობის ეკლესია ქვემო კუკიაში",
+    "uk": "Церква Різдва Пресвятої Богородиці в Квемо Кукія"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Дмитрия Узнадзе, 58",
+    "en": "58 Dimitri Uznadze Street",
+    "ka": "დიმიტრი უზნაძის ქუჩა, 58",
+    "uk": "вулиця Дмитра Узнадзе, 58"
+  },
+  "descriptions": {
+    "ru": "Действующая церковь Рождества Пресвятой Богородицы в Квемо Кукия, во дворе Второго родильного дома на улице Узнадзе; построена в 2000-х годах.",
+    "en": "An active Church of the Nativity of the Theotokos in Kvemo Kukia, in the courtyard of the Second Maternity Hospital on Uznadze Street; built in the 2000s.",
+    "ka": "მოქმედი ღვთისმშობლის შობის სახელობის ეკლესია ქვემო კუკიაში, უზნაძის ქუჩაზე, მეორე სამშობიარო სახლის ეზოში; აგებულია 2000-იან წლებში.",
+    "uk": "Діюча церква Різдва Пресвятої Богородиці в Квемо Кукія, у дворі Другого пологового будинку на вулиці Узнадзе; збудована у 2000-х роках."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.793398,
+    41.710453
+  ],
+  "source": "https://sobory.ru/article/?object=66136",
+  "otherSources": [
+    "https://1020.ge/business/7p7a/",
+    "https://www.openstreetmap.org/way/1070394839"
+  ],
+  "districtId": "chughureti",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 17,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "приходская церковь",
+      "постройка 2000-х годов"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Церковь во дворе Второго роддома; адрес, датировка и посвящение — по sobory.ru и 1020.ge; OSM-объект был без имени."
+}
