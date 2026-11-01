@@ -1,6 +1,6 @@
 # Исследовательская очередь: следующие 200 объектов Тбилиси (пятая очередь)
 
-**Статус:** разобраны все 200: 100 READY, 83 HOLD, 17 REJECT; 20 интегрировано, 80 ждут перевода. Итоги — в [research-queue-v5-progress.md](research-queue-v5-progress.md).
+**Статус:** разобраны все 200: 100 READY, 83 HOLD, 17 REJECT; 40 интегрировано, 60 ждут перевода. Итоги — в [research-queue-v5-progress.md](research-queue-v5-progress.md).
 
 Предыдущая очередь: [research-next-200-v4.md](research-next-200-v4.md), её итоги — в [research-queue-v4-progress.md](research-queue-v4-progress.md). После закрытия четвёртой очереди именованных объектов в реестре не осталось; очередь состоит из 200 лучших безымянных исторических жилых домов.
 
