@@ -1,7 +1,8 @@
 // Pack one source JSON per atlas object into the single city bundle consumed by
 // the web app. Source files live in data/atlas/<city>/<id>.json and keep
 // translations inline; style, architect, district and construction-label fields
-// stay references into data/building-attribute-translations.json.
+// stay references into the city aux dictionary (aux/<city>/ merged to
+// data/aux/<city>.json).
 //
 // The bundle is what the app loads (public/atlas/buildings.json for Tbilisi).
 // It is generated, never edited by hand, and rebuilt by npm run build and by the
@@ -10,11 +11,11 @@ import {readFile,readdir,writeFile,mkdir,rename} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {Progress} from './lib/progress.mjs';
+import {loadCityAux} from './lib/aux.mjs';
 
 export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export const DEFAULT_CITY='tbilisi';
 export const DEFAULT_OUT=path.join(ROOT,'public','atlas','buildings.json');
-export const ATTRIBUTES_FILE=path.join(ROOT,'data','building-attribute-translations.json');
 const LANGS=['ru','en','ka','uk'];
 const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown']);
 
@@ -189,13 +190,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
 export async function assembleAtlas({city=DEFAULT_CITY,root=ROOT,outFile,quiet=false}={}){
   const destination=outFile??(city===DEFAULT_CITY?DEFAULT_OUT:path.join(root,'public','atlas',`${city}.json`));
   const sourceDir=path.join(root,'data','atlas',city);
-  const attributesPath=path.join(root,'data','building-attribute-translations.json');
-  let attributes;
-  try{attributes=JSON.parse(await readFile(attributesPath,'utf8'));}
-  catch(error){throw new Error(`${path.relative(root,attributesPath)}: ${error.message}`);}
-  for(const table of ['styles','yearLabels','districts','architects']){
-    if(!isPlainObject(attributes[table]))throw new Error(`${path.relative(root,attributesPath)}: missing "${table}" table`);
-  }
+  const attributes=await loadCityAux({root,city});
 
   let files;
   try{files=(await readdir(sourceDir)).filter(name=>name.endsWith('.json')).sort();}

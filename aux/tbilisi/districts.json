@@ -1,0 +1,56 @@
+{
+  "tbilisi": {
+    "source": "Тбилиси",
+    "labels": {
+      "ru": "Тбилиси",
+      "en": "Tbilisi",
+      "ka": "თბილისი",
+      "uk": "Тбілісі"
+    }
+  },
+  "mtatsminda": {
+    "source": "Мтацминда",
+    "labels": {
+      "ru": "Мтацминда",
+      "en": "Mtatsminda",
+      "ka": "მთაწმინდა",
+      "uk": "Мтацмінда"
+    }
+  },
+  "sololaki": {
+    "source": "Сололаки",
+    "labels": {
+      "ru": "Сололаки",
+      "en": "Sololaki",
+      "ka": "სოლოლაკი",
+      "uk": "Сололакі"
+    }
+  },
+  "old-tbilisi": {
+    "source": "Старый Тбилиси",
+    "labels": {
+      "ru": "Старый Тбилиси",
+      "en": "Old Tbilisi",
+      "ka": "ძველი თბილისი",
+      "uk": "Старий Тбілісі"
+    }
+  },
+  "chughureti": {
+    "source": "Чугурети",
+    "labels": {
+      "ru": "Чугурети",
+      "en": "Chughureti",
+      "ka": "ჩუღურეთი",
+      "uk": "Чугуреті"
+    }
+  },
+  "avlabari": {
+    "labels": {
+      "ru": "Авлабари",
+      "en": "Avlabari",
+      "ka": "ავლაბარი",
+      "uk": "Авлабарі"
+    },
+    "source": "Авлабари"
+  }
+}

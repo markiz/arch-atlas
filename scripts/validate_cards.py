@@ -3,7 +3,7 @@
 
 Checks source files, not the built bundle:
   data/atlas/tbilisi/*.json
-  data/building-attribute-translations.json
+  aux/tbilisi/{styles,architects,districts,year-labels}.json
   public/atlas/buildings.json (after scripts/assemble-atlas.mjs)
 
 The script prints errors and warnings and exits non-zero on errors. Warnings can
@@ -28,7 +28,8 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
-ATTRIBUTES = ROOT / 'data/building-attribute-translations.json'
+AUX_DIR = ROOT / 'aux/tbilisi'
+AUX_FILES = {'styles': 'styles.json', 'yearLabels': 'year-labels.json', 'districts': 'districts.json', 'architects': 'architects.json'}
 BUILDINGS = ROOT / 'public/atlas/buildings.json'
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
@@ -88,7 +89,7 @@ def main() -> int:
     warnings: list[str] = []
 
     try:
-        attributes = read_json(ATTRIBUTES)
+        attributes = {key: read_json(AUX_DIR / name) for key, name in AUX_FILES.items()}
         buildings = read_json(BUILDINGS)
     except FileNotFoundError as error:
         print(f'ERROR: missing file: {error}', file=sys.stderr)

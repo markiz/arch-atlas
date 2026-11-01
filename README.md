@@ -27,6 +27,7 @@ npm test
 npm run build
 npm run verify
 npm run dev
+npm run aux:merge
 npm run photos:thumbs
 ```
 
@@ -35,11 +36,12 @@ npm run photos:thumbs
 Переменные окружения для контейнера можно положить в `.env` (образ их не содержит). Файл игнорируется Git и Docker build context. Для собственного файла укажи `ENV_FILE`, например `make codex ENV_FILE=.env.local`; тот же параметр поддержан командами `make dev` и `make build`. Если `.env` не существует, команды запускаются без `--env-file`. `.env.example` содержит шаблон; скопируй его в `.env` и заполни нужные значения.
 
 - `src/` — интерфейс, Leaflet-карта и геопозиция, галерея, локальные поиск и фильтры.
-- `data/atlas/tbilisi/<id>.json` — исходные карточки: по одному pretty-JSON на объект, с переводами, контуром и фотографиями. `styleId`, `architectIds`, `districtId` и `yearLabelId` остаются ссылками в общий словарь `data/building-attribute-translations.json`.
+- `data/atlas/tbilisi/<id>.json` — исходные карточки: по одному pretty-JSON на объект, с переводами, контуром и фотографиями. `styleId`, `architectIds`, `districtId` и `yearLabelId` остаются ссылками в городские справочники, а не дублируются в карточке.
+- `aux/tbilisi/styles.json`, `architects.json`, `districts.json`, `year-labels.json` — редактируемые справочники города: ID, исходная подпись и переводы на четыре языка. `scripts/merge-aux.mjs` склеивает их в `data/aux/tbilisi.json` — единый JSON города для сборки; он генерируется и не публикуется.
 - `data/photos/<city>/<id>/<n>.webp` — полные фотографии по объекту и городу; `<n>-thumb.webp` — превью шириной до 480 px для карточки. Номер соответствует порядку в `photos[]`. В карточке пути записываются как `photos/<city>/<id>/<n>.webp` и `photos/<city>/<id>/<n>-thumb.webp`. `public/atlas/photos/` — сгенерированное зеркало для публикации, его создаёт `scripts/sync-photos.mjs`; вручную его не редактируют.
 - `public/atlas/buildings.json` — общий JSON Тбилиси, который собирает `scripts/assemble-atlas.mjs`. `basemap.geojson`, `building-outlines.geojson` — подложка и контуры обычных зданий; контуры обычных зданий загружаются только при включении слоя «Силуэты зданий».
 - `raw/osm-tbilisi-selected.json` — улицы, парки и музеи; `raw/osm-tbilisi-building-outlines.geojson` — около 121 тыс. контуров зданий по административной границе Тбилиси из локально обработанного регионального PBF.
-- `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` собирает только подложку и контуры зданий; `scripts/assemble-atlas.mjs` упаковывает карточки; `scripts/create-manifest.mjs` считает размеры и SHA-256; `scripts/sync-photos.mjs` публикует фотографии из `data/photos/`; `scripts/create-photo-thumbs.py` создаёт недостающие превью.
+- `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` собирает только подложку и контуры зданий; `scripts/assemble-atlas.mjs` упаковывает карточки; `scripts/create-manifest.mjs` считает размеры и SHA-256; `scripts/sync-photos.mjs` публикует фотографии из `data/photos/`; `scripts/create-photo-thumbs.py` создаёт недостающие превью; `scripts/merge-aux.mjs` собирает городские справочники в единый aux JSON.
 - `scripts/queue_collect.py`, `scripts/queue_report.py` и `scripts/validate_cards.py` — сбор фактов по очереди, отчёт и проверка исходных карточек и собранного JSON; `queue_*` работают с `work/`.
 - `scripts/fetch-selected-photos.py` и `scripts/fetch-fallback-photos.py` — свободные фото Commons и, при их отсутствии, низкокачественные фото реестра с явной пометкой «лицензия не установлена»; они добавляют запись в `data/atlas/tbilisi/` и файл в `data/photos/tbilisi/<id>/`; после этого запустите `npm run photos:thumbs`, чтобы создать превью. Правила — [docs/photo-policy.md](docs/photo-policy.md).
 - `scripts/resolve-geometries.py` обновляет контур в файле объекта и требует Python-пакет Shapely.

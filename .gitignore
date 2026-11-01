@@ -7,6 +7,9 @@ dist/
 # Сгенерированное зеркало фотографий (источник — data/photos)
 public/atlas/photos/
 
+# Сгенерированный единый aux-файл (источник — aux/<city>)
+data/aux/
+
 # Служебные файлы TypeScript
 *.tsbuildinfo
 

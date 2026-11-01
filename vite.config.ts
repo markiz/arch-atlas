@@ -39,14 +39,15 @@ function atlasHotReload():Plugin{
   async configureServer(server){
    await rebuild(server,false);
    const sourceRoot=path.join(PROJECT_ROOT,'data','atlas');
-   const attributesFile=path.join(PROJECT_ROOT,'data','building-attribute-translations.json');
+   const auxRoot=path.join(PROJECT_ROOT,'aux');
    const photosRoot=path.join(PROJECT_ROOT,'data','photos');
-   server.watcher.add([sourceRoot,attributesFile,photosRoot]);
+   server.watcher.add([sourceRoot,auxRoot,photosRoot]);
    const schedule=(file:string)=>{
     const relative=path.relative(PROJECT_ROOT,file).split(path.sep).join('/');
     const isSource=relative.startsWith('data/atlas/')&&relative.endsWith('.json');
     const isPhoto=relative.startsWith('data/photos/');
-    if(!isSource&&!isPhoto&&relative!=='data/building-attribute-translations.json')return;
+    const isAux=relative.startsWith('aux/')&&relative.endsWith('.json');
+    if(!isSource&&!isPhoto&&!isAux)return;
     clearTimeout(timer);
     timer=setTimeout(()=>void rebuild(server,true),120);
    };

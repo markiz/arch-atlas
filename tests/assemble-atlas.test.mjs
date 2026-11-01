@@ -43,8 +43,11 @@ function card(id,overrides={}){
 async function fixture(){
  const root=await mkdtemp(path.join(os.tmpdir(),'atlas-assemble-'));
  await mkdir(path.join(root,'data','atlas','tbilisi'),{recursive:true});
- await mkdir(path.join(root,'data'),{recursive:true});
- await writeFile(path.join(root,'data','building-attribute-translations.json'),JSON.stringify(attributes()));
+ await mkdir(path.join(root,'aux','tbilisi'),{recursive:true});
+ const tables=attributes();
+ for(const [file,table] of [['styles.json','styles'],['architects.json','architects'],['districts.json','districts'],['year-labels.json','yearLabels']]){
+  await writeFile(path.join(root,'aux','tbilisi',file),JSON.stringify(tables[table]));
+ }
  return root;
 }
 

@@ -1,0 +1,353 @@
+{
+  "viktor-shreter": {
+    "source": "Виктор Шрётер",
+    "labels": {
+      "ru": "Виктор Шрётер",
+      "en": "Viktor Schröter",
+      "ka": "ვიქტორ შრეტერი",
+      "uk": "Віктор Шретер"
+    }
+  },
+  "karl-zaar": {
+    "source": "Карл Заар",
+    "labels": {
+      "ru": "Карл Заар",
+      "en": "Karl Zaar",
+      "ka": "კარლ ზაარი",
+      "uk": "Карл Заар"
+    }
+  },
+  "alexander-ozerov": {
+    "source": "Александр Озеров",
+    "labels": {
+      "ru": "Александр Озеров",
+      "en": "Alexander Ozerov",
+      "ka": "ალექსანდრე ოზეროვი",
+      "uk": "Олександр Озеров"
+    }
+  },
+  "korneli-tatishev": {
+    "source": "Корнели Татищев",
+    "labels": {
+      "ru": "Корнели Татищев",
+      "en": "Korneli Tatishev",
+      "ka": "კორნელი ტატიშჩევი",
+      "uk": "Корнелій Татіщев"
+    }
+  },
+  "alexey-shchusev": {
+    "source": "Алексей Щусев",
+    "labels": {
+      "ru": "Алексей Щусев",
+      "en": "Alexey Shchusev",
+      "ka": "ალექსეი შჩუსევი",
+      "uk": "Олексій Щусєв"
+    }
+  },
+  "alexander-shimkevich": {
+    "source": "Александр Шимкевич",
+    "labels": {
+      "ru": "Александр Шимкевич",
+      "en": "Alexander Shimkevich",
+      "ka": "ალექსანდრე შიმკევიჩი",
+      "uk": "Олександр Шимкевич"
+    }
+  },
+  "leopold-bielfeld": {
+    "source": "Леопольд Бильфельд",
+    "labels": {
+      "ru": "Леопольд Бильфельд",
+      "en": "Leopold Bielfeld",
+      "ka": "ლეოპოლდ ბილფელდი",
+      "uk": "Леопольд Більфельд"
+    }
+  },
+  "osmans": {
+    "source": "Османс",
+    "labels": {
+      "ru": "Османс",
+      "en": "Osmans",
+      "ka": "ოსმანსი",
+      "uk": "Османс"
+    }
+  },
+  "giovanni-scudieri": {
+    "source": "Джованни Скудиери",
+    "labels": {
+      "ru": "Джованни Скудиери",
+      "en": "Giovanni Scudieri",
+      "ka": "ჯოვანი სკუდიერი",
+      "uk": "Джованні Скудері"
+    }
+  },
+  "mikheil-kalashnikov": {
+    "source": "Михаил Калашников",
+    "labels": {
+      "ru": "Михаил Калашников",
+      "en": "Mikheil Kalashnikov",
+      "ka": "მიხეილ კალაშნიკოვი",
+      "uk": "Михайло Калашников"
+    }
+  },
+  "alexander-rogoisky": {
+    "source": "Александр Рогойский",
+    "labels": {
+      "ru": "Александр Рогойский",
+      "en": "Alexander Rogoisky",
+      "ka": "ალექსანდრე როგოისკი",
+      "uk": "Олександр Рогойський"
+    }
+  },
+  "paul-friedrich-stern": {
+    "source": "Пауль Фридрих Штерн",
+    "labels": {
+      "ru": "Пауль Фридрих Штерн",
+      "en": "Paul Friedrich Stern",
+      "ka": "პაულ ფრიდრიხ შტერნი",
+      "uk": "Пауль Фрідріх Штерн"
+    }
+  },
+  "albert-salzmann": {
+    "source": "Альберт Зальцман",
+    "labels": {
+      "ru": "Альберт Зальцман",
+      "en": "Albert Salzmann",
+      "ka": "ალბერტ ზალცმანი",
+      "uk": "Альберт Зальцман"
+    }
+  },
+  "vladimir-aleksi-meskhishvili": {
+    "source": "Владимир Алекси-Месхишвили",
+    "labels": {
+      "ru": "Владимир Алекси-Месхишвили",
+      "en": "Vladimir Alexi-Meskhishvili",
+      "ka": "ვლადიმერ ალექსი-მესხიშვილი",
+      "uk": "Володимир Алексі-Месхішвілі"
+    }
+  },
+  "yuri-kasradze": {
+    "source": "Юрий Касрадзе",
+    "labels": {
+      "ru": "Юрий Касрадзе",
+      "en": "Yuri Kasradze",
+      "ka": "იური ქასრაძე",
+      "uk": "Юрій Касрадзе"
+    }
+  },
+  "d-chisliev": {
+    "source": "Давид Числиев",
+    "labels": {
+      "ru": "Давид Числиев",
+      "en": "David Chisliev",
+      "ka": "დავით ჩისლიევი",
+      "uk": "Давид Числієв"
+    }
+  },
+  "research-architect-5004": {
+    "source": "А. Чижов",
+    "labels": {
+      "ru": "А. Чижов",
+      "en": "A. Chizhov",
+      "ka": "ა. ჩიჟოვი",
+      "uk": "А. Чижов"
+    }
+  },
+  "research-architect-3137": {
+    "source": "Г. Тер-Михелов",
+    "labels": {
+      "ru": "Г. Тер-Михелов",
+      "en": "G. Ter-Michelov",
+      "ka": "გ. ტერ-მიხელოვი",
+      "uk": "Г. Тер-Міхелов"
+    }
+  },
+  "funicular-architect-1": {
+    "source": "Захарий Курдиани",
+    "labels": {
+      "ru": "Захарий Курдиани",
+      "en": "Zakaria Kurdiani",
+      "ka": "ზაქარია ქურდიანი",
+      "uk": "Закарія Курдіані"
+    }
+  },
+  "funicular-architect-2": {
+    "source": "Надежда Курдиани",
+    "labels": {
+      "ru": "Надежда Курдиани",
+      "en": "Nadezhda Kurdiani",
+      "ka": "ნადეჟდა ქურდიანი",
+      "uk": "Надія Курдіані"
+    }
+  },
+  "funicular-architect-3": {
+    "source": "А. Валабуев",
+    "labels": {
+      "ru": "А. Валабуев",
+      "en": "A. Valabuev",
+      "ka": "ა. ვალაბუევი",
+      "uk": "А. Валабуєв"
+    }
+  },
+  "teimuraz-mikashavidze": {
+    "source": "Теймураз Микашавидзе",
+    "labels": {
+      "ru": "Теймураз Микашавидзе",
+      "en": "Teimuraz Mikashavidze",
+      "ka": "თეიმურაზ მიქაშავიძე",
+      "uk": "Теймураз Мікашевідзе"
+    }
+  },
+  "ghazar-sarkisian": {
+    "source": "Газар Саркисян",
+    "labels": {
+      "ru": "Газар Саркисян",
+      "en": "Ghazar Sarkisian",
+      "ka": "ღაზარ სარქისიანი",
+      "uk": "Ґазар Саркісян"
+    }
+  },
+  "m-buzogli": {
+    "source": "М. Бузогли",
+    "labels": {
+      "ru": "М. Бузогли",
+      "en": "M. Buzogli",
+      "ka": "მ. ბუზოღლი",
+      "uk": "М. Бузоглі"
+    }
+  },
+  "nikolai-severov": {
+    "source": "Николай Северов",
+    "labels": {
+      "ru": "Николай Северов",
+      "en": "Nikolai Severov",
+      "ka": "ნიკოლოზ სევეროვი",
+      "uk": "Микола Сєверов"
+    }
+  },
+  "otar-kalandarishvili": {
+    "source": "Отар Каландаришвили",
+    "labels": {
+      "ru": "Отар Каландаришвили",
+      "en": "Otar Kalandarishvili",
+      "ka": "ოთარ კალანდარიშვილი",
+      "uk": "Отар Каландарішвілі"
+    }
+  },
+  "levan-janelidze": {
+    "source": "Леван Джанелидзе",
+    "labels": {
+      "ru": "Леван Джанелидзе",
+      "en": "Levan Janelidze",
+      "ka": "ლევან ჯანელიძე",
+      "uk": "Леван Джанелідзе"
+    }
+  },
+  "kristofor-ter-sarkisov-satunts": {
+    "source": "Кристофор Тер-Саркисов-Сатунц",
+    "labels": {
+      "ru": "Кристофор Тер-Саркисов-Сатунц",
+      "en": "Kristofor Ter-Sarkisov-Satunts",
+      "ka": "ქრისტეფორე თერ-სარქისოვ-სატუნცი",
+      "uk": "Кристофор Тер-Саркісов-Сатунц"
+    }
+  },
+  "mikhail-ogandzhanov": {
+    "source": "Михаил Оганджанов",
+    "labels": {
+      "ru": "Михаил Оганджанов",
+      "en": "Mikhail Oghandzhanov",
+      "ka": "მიხეილ ოღაჯანოვი",
+      "uk": "Михайло Оганджанов"
+    }
+  },
+  "giorgi-chakhava": {
+    "source": "Георгий Чахава",
+    "labels": {
+      "ru": "Георгий Чахава",
+      "en": "Giorgi Chakhava",
+      "ka": "გიორგი ჩახავა",
+      "uk": "Георгій Чахава"
+    }
+  },
+  "zurab-djalagonia": {
+    "source": "Зураб Джалагония",
+    "labels": {
+      "ru": "Зураб Джалагония",
+      "en": "Zurab Djalagonia",
+      "ka": "ზურაბ ჯალაღონია",
+      "uk": "Зураб Джалагонія"
+    }
+  },
+  "viktor-dzhorbenadze": {
+    "source": "Виктор Джорбенадзе",
+    "labels": {
+      "ru": "Виктор Джорбенадзе",
+      "en": "Viktor Djorbenadze",
+      "ka": "ვიქტორ ჯორბენაძე",
+      "uk": "Віктор Джорбенадзе"
+    }
+  },
+  "vazha-orbeladze": {
+    "source": "Важа Орбеладзе",
+    "labels": {
+      "ru": "Важа Орбеладзе",
+      "en": "Vazha Orbeladze",
+      "ka": "ვაჟა ორბელაძე",
+      "uk": "Важа Орбеладзе"
+    }
+  },
+  "archil-kurdiani": {
+    "source": "Арчил Курдиани",
+    "labels": {
+      "ru": "Арчил Курдиани",
+      "en": "Archil Kurdiani",
+      "ka": "არჩილ კურდიანი",
+      "uk": "Арчіл Курдіані"
+    }
+  },
+  "ketevan-sokolova-kurdiani": {
+    "source": "Кетеван Соколова-Курдиани",
+    "labels": {
+      "ru": "Кетеван Соколова-Курдиани",
+      "en": "Ketevan Sokolova-Kurdiani",
+      "ka": "ქეთევან სოკოლოვა-კურდიანი",
+      "uk": "Кетеван Соколова-Курдіані"
+    }
+  },
+  "gia-kurdiani": {
+    "source": "Гия Курдиани",
+    "labels": {
+      "ru": "Гия Курдиани",
+      "en": "Gia Kurdiani",
+      "ka": "გია კურდიანი",
+      "uk": "Гія Курдіані"
+    }
+  },
+  "archil-mindiashvili": {
+    "source": "Арчил Миндиашвили",
+    "labels": {
+      "ru": "Арчил Миндиашвили",
+      "en": "Archil Mindiashvili",
+      "ka": "არჩილ მინდიაშვილი",
+      "uk": "Арчіл Міндіашвілі"
+    }
+  },
+  "i-tskhomelidze": {
+    "source": "И. Цхомелидзе",
+    "labels": {
+      "ru": "И. Цхомелидзе",
+      "en": "I. Tskhomelidze",
+      "ka": "ი. ცხომელიძე",
+      "uk": "І. Цхомелідзе"
+    }
+  },
+  "tariel-kiparoidze": {
+    "source": "Тариэль Кипароидзе",
+    "labels": {
+      "ru": "Тариэль Кипароидзе",
+      "en": "Tariel Kiparoidze",
+      "ka": "ტარიელ კიპაროიძე",
+      "uk": "Таріель Кіпароїдзе"
+    }
+  }
+}
