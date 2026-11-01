@@ -12,6 +12,7 @@
     "build": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && node scripts/create-manifest.mjs && tsc -b && vite build",
     "check": "node scripts/build-map-layers.mjs && node scripts/merge-aux.mjs && node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
     "photos:sync": "node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs",
+    "photos:dimensions": "python3 scripts/sync-photo-dimensions.py",
     "photos:migrate": "python3 scripts/migrate-photo-ids.py",
     "photos:thumbs": "node scripts/create-photo-thumbs.mjs",
     "test": "node --test tests/*.test.mjs",

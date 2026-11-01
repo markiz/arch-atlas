@@ -21,6 +21,7 @@ const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underg
 const PHOTO_ID_RE=/^[a-f0-9]{64}$/;
 const PHOTO_METADATA_FIELDS=['author','license','licenseUrl','source','modifications'];
 const PHOTO_OPTIONAL_FIELDS=['description'];
+const PHOTO_DIMENSION_FIELDS=['width','height'];
 
 const silent={write(){}};
 
@@ -86,8 +87,9 @@ async function loadPhotoMetadata(root,city){
    catch(error){fail(file,error.message);}
    if(!isPlainObject(metadata))fail(file,'photo metadata must be an object');
    for(const field of PHOTO_METADATA_FIELDS)requireString(file,metadata[field],field);
+   for(const field of PHOTO_DIMENSION_FIELDS)if(!Number.isInteger(metadata[field])||metadata[field]<=0)fail(file,`${field} must be a positive integer`);
    if(metadata.description!==undefined)requireString(file,metadata.description,'description');
-   const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key));
+   const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key)&&!PHOTO_DIMENSION_FIELDS.includes(key));
    if(unknown.length)fail(file,`unknown photo metadata fields: ${unknown.join(', ')}`);
    photos.set(id,metadata);
  }
@@ -106,6 +108,7 @@ function validatePhoto(file,photoId,index,seen,city,metadataById){
     thumb:`thumbnails/${city}/${photoId}.webp`,
   };
   for(const key of PHOTO_METADATA_FIELDS)photo[key]=metadata[key];
+  for(const key of PHOTO_DIMENSION_FIELDS)photo[key]=metadata[key];
   if(metadata.description!==undefined)photo.description=metadata.description;
   return photo;
 }

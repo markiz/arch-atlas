@@ -23,6 +23,11 @@ from typing import Any
 from progress import Progress
 
 try:
+    from PIL import Image
+except ImportError:
+    sys.exit('This script requires Pillow: python3 -m pip install pillow')
+
+try:
     from shapely.geometry import shape
     from shapely.validation import make_valid
 except ImportError:
@@ -38,6 +43,7 @@ THUMBNAILS_DIR = ROOT / 'data/thumbnails/tbilisi'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_DIMENSION_FIELDS = ('width', 'height')
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
     'above_ground', 'heritage_boundary', 'complex_underground',
@@ -73,6 +79,14 @@ def webp_ok(path: Path) -> bool:
         return False
     data = path.read_bytes()[:12]
     return len(data) >= 12 and data[:4] == b'RIFF' and data[8:12] == b'WEBP'
+
+
+def image_size(path: Path) -> tuple[int, int] | None:
+    try:
+        with Image.open(path) as image:
+            return image.size
+    except Exception:
+        return None
 
 
 def sha256_file(path: Path) -> str:
@@ -246,6 +260,7 @@ def main() -> int:
                     continue
                 verified_photos.add(photo_id)
                 metadata_path = PHOTOS_DIR / f'{photo_id}.metadata.json'
+                metadata = None
                 if not metadata_path.exists():
                     errors.append(f'{label}: photo[{index}] missing {metadata_path.relative_to(ROOT)}')
                 else:
@@ -265,7 +280,10 @@ def main() -> int:
                                 not isinstance(metadata['description'], str) or not metadata['description'].strip()
                             ):
                                 errors.append(f'{label}: photo[{index}].description must be a non-empty string')
-                            unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS)
+                            for key in PHOTO_DIMENSION_FIELDS:
+                                if not isinstance(metadata.get(key), int) or isinstance(metadata.get(key), bool) or metadata[key] <= 0:
+                                    errors.append(f'{label}: photo[{index}].{key} must be a positive integer')
+                            unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS) - set(PHOTO_DIMENSION_FIELDS)
                             if unknown:
                                 errors.append(f'{label}: photo[{index}] unknown metadata fields: {", ".join(sorted(unknown))}')
                 full_path = PHOTOS_DIR / f'{photo_id}.webp'
@@ -273,6 +291,13 @@ def main() -> int:
                     errors.append(f'{label}: photo[{index}] full image is missing or not WebP')
                 elif sha256_file(full_path) != photo_id:
                     errors.append(f'{label}: photo[{index}] content does not match its sha256 name')
+                elif metadata is not None and isinstance(metadata, dict):
+                    size = image_size(full_path)
+                    if size is not None and (metadata.get('width'), metadata.get('height')) != size:
+                        errors.append(
+                            f'{label}: photo[{index}] dimensions {size[0]}x{size[1]} do not match '
+                            f'metadata {metadata.get("width")}x{metadata.get("height")}'
+                        )
                 if not webp_ok(THUMBNAILS_DIR / f'{photo_id}.webp'):
                     errors.append(f'{label}: photo[{index}] preview is missing or not WebP')
         card_progress.advance(label)

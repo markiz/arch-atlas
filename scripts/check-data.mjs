@@ -11,6 +11,20 @@ assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordin
 assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
 const progress=new Progress(data.length,{label:'check atlas cards'});
 const verifiedPhotos=new Set();
+function webpSize(bytes,label){
+ const chunk=bytes.subarray(12,16).toString('ascii');
+ if(chunk==='VP8X')return{width:1+bytes.readUIntLE(24,3),height:1+bytes.readUIntLE(27,3)};
+ if(chunk==='VP8 '){
+  assert(bytes[23]===0x9d&&bytes[24]===0x01&&bytes[25]===0x2a,`${label}: invalid VP8 frame header`);
+  return{width:bytes.readUInt16LE(26)&0x3fff,height:bytes.readUInt16LE(28)&0x3fff};
+ }
+ if(chunk==='VP8L'){
+  assert(bytes[20]===0x2f,`${label}: invalid VP8L header`);
+  const bits=bytes.readUInt32LE(21);
+  return{width:(bits&0x3fff)+1,height:((bits>>14)&0x3fff)+1};
+ }
+ throw new Error(`${label}: unknown WebP chunk ${chunk}`);
+}
 progress.start();
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
@@ -35,6 +49,7 @@ for(const b of data){
  const paths=new Set();
  for(const p of images){
   for(const k of ['id','file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
+  for(const k of ['width','height'])assert(Number.isInteger(p[k])&&p[k]>0,`${b.id}: photo.${k} must be a positive integer`);
   assert(/^[a-f0-9]{64}$/.test(p.id),`${b.id}: photo id must be a lowercase sha256`);
   const expectedFile=`photos/tbilisi/${p.id}.webp`;
   const expectedThumb=`thumbnails/tbilisi/${p.id}.webp`;
@@ -49,11 +64,14 @@ for(const b of data){
    await access(source);await access(published);await access(sidecar);
    const metadata=JSON.parse(await readFile(sidecar,'utf8'));
    for(const k of ['author','license','licenseUrl','source','modifications'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
+   for(const k of ['width','height'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
    assert(metadata.description===p.description,`${b.id}: photo metadata description differs from sidecar`);
    for(const path of [source,published]){
     const bytes=await readFile(path);
     assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${path}`);
     assert(createHash('sha256').update(bytes).digest('hex')===p.id,`${b.id}: photo content does not match its sha256 name ${path}`);
+    const size=webpSize(bytes,path);
+    assert(size.width===p.width&&size.height===p.height,`${b.id}: photo ${path} is ${size.width}x${size.height}, metadata says ${p.width}x${p.height}`);
    }
    const thumb='data/'+p.thumb,thumbPublished='public/atlas/'+p.thumb;
    await access(thumb);await access(thumbPublished);

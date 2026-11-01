@@ -16,6 +16,8 @@ import uuid
 from pathlib import Path
 from typing import Any, Iterable
 
+from PIL import Image
+
 ROOT = Path(__file__).resolve().parent.parent
 CITY = 'tbilisi'
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
@@ -24,6 +26,7 @@ THUMBNAILS_DIR = ROOT / 'data/thumbnails'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_DIMENSION_FIELDS = ('width', 'height')
 _PHOTO_LOCK = threading.Lock()
 
 # Photo width policy: free Commons licenses are published at up to 1920 px;
@@ -110,6 +113,13 @@ def read_photo_metadata(photo_id: str, city: str = CITY) -> dict[str, Any] | Non
     return value
 
 
+def photo_size(photo_id: str, city: str = CITY) -> tuple[int, int]:
+    """Return the pixel size of the stored WebP, not of the upstream original."""
+    path = photo_path(photo_id, city)
+    with Image.open(path) as image:
+        return image.size
+
+
 def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
     normalized: dict[str, Any] = {}
     for field in PHOTO_METADATA_FIELDS:
@@ -135,6 +145,7 @@ def write_photo_metadata(photo_id: str, metadata: dict[str, Any], city: str = CI
     """
     path = photo_metadata_path(photo_id, city)
     normalized = _normalized_metadata(metadata)
+    normalized['width'], normalized['height'] = photo_size(photo_id, city)
     current = read_photo_metadata(photo_id, city)
     if current is not None:
         merged = dict(current)
@@ -147,6 +158,8 @@ def write_photo_metadata(photo_id: str, metadata: dict[str, Any], city: str = CI
             if old_description and old_description != new_description:
                 raise ValueError(f'{path}: conflicting description for the same photo bytes')
             merged['description'] = new_description
+        merged['width'] = normalized['width']
+        merged['height'] = normalized['height']
         if merged == current:
             return False
         normalized = merged

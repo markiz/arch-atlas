@@ -138,7 +138,7 @@ async function writePhoto(root,id,metadata){
 test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
  const root=await fixture();
  const first='a'.repeat(64),second='b'.repeat(64);
- const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized'};
+ const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200};
  try{
   await writePhoto(root,first,metadata);
   await writePhoto(root,second,{...metadata,author:'B',description:'фасад'});
@@ -149,7 +149,14 @@ test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
   assert.equal(cards[0].photos[0].thumb,`thumbnails/tbilisi/${second}.webp`);
   assert.equal(cards[0].photos[0].author,'B');
   assert.equal(cards[0].photos[0].description,'фасад');
+  assert.equal(cards[0].photos[0].width,1600);
+  assert.equal(cards[0].photos[0].height,1200);
 
+  await writePhoto(root,first,{...metadata,width:0});
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[first]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/width must be a positive integer/);
+
+  await writePhoto(root,first,metadata);
   await writeCard(root,'osm-1.json',card('osm-1',{photos:['1']}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/lowercase sha256 photo id/);
   await writeCard(root,'osm-1.json',card('osm-1',{photos:['c'.repeat(64)]}));
