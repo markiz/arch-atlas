@@ -1,5 +1,8 @@
 import {useEffect,useRef,useState} from 'react';
 import type {Building,ManifestFile,Photo} from './types';
+import {rankPhotos} from './photo-ranking.js';
+
+export {rankPhotos} from './photo-ranking.js';
 
 const atlasBase=import.meta.env.BASE_URL+'atlas/';
 
@@ -68,7 +71,7 @@ function startBuildingRun(building:Building,files:ReadonlyMap<string,ManifestFil
  const run:PhotoRun={state:{status:'loading',phase:null,assets:[],total:0,loaded:0},promise:Promise.resolve({status:'loading',phase:null,assets:[],total:0,loaded:0}),listeners:new Set()};
  runs.set(building.id,run);
  run.promise=(async()=>{
-  const photos=building.photos??(building.photo?[building.photo]:[]);
+  const photos=rankPhotos(building.photos??(building.photo?[building.photo]:[])) as Photo[];
   const total=photos.length;
   if(!total){const empty:BuildingPhotos={status:'ready',phase:'gallery',assets:[],total:0,loaded:0};publish(run,empty);return empty}
   const thumbResults=await Promise.allSettled(photos.map(photo=>photo.thumb?loadPhotoFile(photo.thumb,files):Promise.reject(new Error('У фотографии нет уменьшенной версии'))));

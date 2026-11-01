@@ -5,7 +5,7 @@ import type {Building,Data,Filters,Photo} from './types';
 import {filterBuildings,normalize,period,periods,styleEntries} from './domain';
 import MapView from './MapView';
 import {I18nContext,translate,type Language,useI18n} from './i18n';
-import {useBuildingPhotos,useLazyPhoto,useVisibility,type BuildingPhotos} from './photos';
+import {rankPhotos,useBuildingPhotos,useLazyPhoto,useVisibility,type BuildingPhotos} from './photos';
 
 type View='map'|'catalog';
 const initialFilters:Filters={query:'',from:'',to:'',architect:[],style:[]};
@@ -74,7 +74,7 @@ function Loader({onReady}:{onReady:(d:Data)=>void}){
 }
 function CardPhoto({building,photoFiles}:{building:Building;photoFiles:Data['photoFiles']}){
  const {t}=useI18n();
- const photo=(building.photos??(building.photo?[building.photo]:[]))[0];
+ const photo=rankPhotos(building.photos??(building.photo?[building.photo]:[]))[0];
  const {ref,visible}=useVisibility<HTMLSpanElement>();
  const {url,error}=useLazyPhoto(photo?.thumb??photo?.file,photoFiles,visible);
  if(!photo)return <div className="no-photo">{t('Фотографии пока нет')}</div>;
