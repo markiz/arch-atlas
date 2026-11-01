@@ -159,7 +159,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/sioni/1.webp",
-      "thumb": "photos/tbilisi/sioni/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/sioni/1.webp",
       "author": "Supanut Arunoprayote",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -168,7 +168,7 @@
     },
     {
       "file": "photos/tbilisi/sioni/2.webp",
-      "thumb": "photos/tbilisi/sioni/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/sioni/2.webp",
       "author": "Ken Zuk",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

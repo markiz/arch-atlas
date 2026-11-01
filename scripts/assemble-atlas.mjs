@@ -75,7 +75,9 @@ function validatePhoto(file,photo,index,seen,city,id){
     const name=photo.file.slice(prefix.length);
     if(!/^\d+\.webp$/.test(name))fail(file,`photos[${index}].file must be named <number>.webp under ${prefix}`);
     requireString(file,photo.thumb,`photos[${index}].thumb`);
-    if(photo.thumb!==`${prefix}${name.replace(/\.webp$/,'-thumb.webp')}`)fail(file,`photos[${index}].thumb must match ${prefix}<number>-thumb.webp`);
+    if(photo.thumb.includes('..')||photo.thumb.startsWith('/'))fail(file,`photos[${index}].thumb is not a safe relative path`);
+    const thumbPrefix=`thumbnails/${city}/${id}/`;
+    if(photo.thumb!==`${thumbPrefix}${name}`)fail(file,`photos[${index}].thumb must match ${thumbPrefix}<number>.webp`);
   }
   if(seen.has(photo.file))fail(file,`duplicate photo file ${photo.file}`);
   seen.add(photo.file);

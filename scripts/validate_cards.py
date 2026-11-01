@@ -227,8 +227,11 @@ def main() -> int:
                     if not isinstance(photo.get(key), str) or not photo[key].strip():
                         errors.append(f'{label}: photo[{index}].{key} missing')
                 card_id = str(card.get('id', ''))
-                prefix = f'photos/tbilisi/{card_id}/'
-                for field in ('file', 'thumb'):
+                prefixes = {
+                    'file': f'photos/tbilisi/{card_id}/',
+                    'thumb': f'thumbnails/tbilisi/{card_id}/',
+                }
+                for field, prefix in prefixes.items():
                     file_name = photo.get(field)
                     if not isinstance(file_name, str):
                         continue
@@ -244,7 +247,8 @@ def main() -> int:
                 file_name = photo.get('file')
                 thumb_name = photo.get('thumb')
                 if isinstance(file_name, str) and isinstance(thumb_name, str):
-                    expected = f'{file_name[:-5]}-thumb.webp' if file_name.endswith('.webp') else ''
+                    name = file_name.rsplit('/', 1)[-1]
+                    expected = f'thumbnails/tbilisi/{card_id}/{name}' if file_name.endswith('.webp') else ''
                     if thumb_name != expected:
                         errors.append(f'{label}: photo[{index}].thumb does not match file')
         card_progress.advance(label)

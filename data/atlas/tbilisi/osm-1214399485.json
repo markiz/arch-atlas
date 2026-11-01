@@ -202,7 +202,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1214399485/1.webp",
-      "thumb": "photos/tbilisi/osm-1214399485/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-1214399485/1.webp",
       "author": "Zviad Avaliani (ზვიად ავალიანი)",
       "license": "Attribution (свободное использование с указанием автора)",
       "licenseUrl": "https://commons.wikimedia.org/wiki/File:Georgian_Public_Broadcaster.JPG#Licensing",

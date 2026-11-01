@@ -131,7 +131,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-123574122/1.webp",
-      "thumb": "photos/tbilisi/osm-123574122/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-123574122/1.webp",
       "author": "Ephraim Stillberg",
       "license": "Public domain",
       "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",

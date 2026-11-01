@@ -34,9 +34,10 @@ for(const b of data){
  for(const p of images){
   for(const k of ['file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
   const prefix=`photos/tbilisi/${b.id}/`;
+  const thumbPrefix=`thumbnails/tbilisi/${b.id}/`;
   const name=p.file.slice(prefix.length);
   assert(p.file.startsWith(prefix)&&/^\d+\.webp$/.test(name),`${b.id}: photo must live under ${prefix}<number>.webp`);
-  assert(p.thumb===`${prefix}${name.replace(/\.webp$/,'-thumb.webp')}`,`${b.id}: photo preview must match ${prefix}<number>-thumb.webp`);
+  assert(p.thumb===`${thumbPrefix}${name}`,`${b.id}: photo preview must match ${thumbPrefix}<number>.webp`);
   for(const file of [p.file,p.thumb]){
    assert(!file.includes('..')&&!file.startsWith('/')&&!paths.has(file),`${b.id}: invalid or duplicate photo path`);paths.add(file);
    const source='data/'+file;

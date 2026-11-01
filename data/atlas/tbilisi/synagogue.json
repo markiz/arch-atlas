@@ -87,7 +87,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/synagogue/1.webp",
-      "thumb": "photos/tbilisi/synagogue/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/synagogue/1.webp",
       "author": "Tamar kurtanidze",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -96,7 +96,7 @@
     },
     {
       "file": "photos/tbilisi/synagogue/2.webp",
-      "thumb": "photos/tbilisi/synagogue/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/synagogue/2.webp",
       "author": "D.Rovchak",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -105,7 +105,7 @@
     },
     {
       "file": "photos/tbilisi/synagogue/3.webp",
-      "thumb": "photos/tbilisi/synagogue/3-thumb.webp",
+      "thumb": "thumbnails/tbilisi/synagogue/3.webp",
       "author": "Ավետիսյան91",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

@@ -90,7 +90,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-57403659/1.webp",
-      "thumb": "photos/tbilisi/osm-57403659/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-57403659/1.webp",
       "author": "Andrew Milligan sumo",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -100,7 +100,7 @@
     },
     {
       "file": "photos/tbilisi/osm-57403659/2.webp",
-      "thumb": "photos/tbilisi/osm-57403659/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-57403659/2.webp",
       "author": "Andrew Milligan sumo",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

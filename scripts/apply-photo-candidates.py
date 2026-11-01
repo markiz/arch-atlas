@@ -29,7 +29,7 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
-from atlas_source import ROOT, photo_dir, read_cards, write_card
+from atlas_source import ROOT, photo_dir, read_cards, thumb_dir, write_card
 from progress import Progress
 
 CANDIDATES = ROOT / 'work' / 'photo-research' / 'candidates.json'
@@ -130,37 +130,42 @@ def renumber(card: dict) -> None:
     """Rename files so <n>.webp follows the new photos[] order."""
     city = 'tbilisi'
     directory = photo_dir(card['id'], city)
+    previews = thumb_dir(card['id'], city)
+    previews.mkdir(parents=True, exist_ok=True)
     photos = card.get('photos', [])
     if not photos:
         return
     pending = []
     for position, photo in enumerate(photos, start=1):
         old = ROOT / 'data' / photo['file']
-        pending.append((position, photo, old))
+        pending.append((position, photo, old, previews / old.name))
     # Move everything to temporary names first so old and new numbers cannot collide.
-    for position, photo, old in pending:
+    for position, photo, old, old_thumb in pending:
         temp = directory / f'__tmp-{position}.webp'
-        temp_thumb = directory / f'__tmp-{position}-thumb.webp'
+        temp_thumb = previews / f'__tmp-{position}.webp'
         if old.exists():
             old.replace(temp)
-        old_thumb = old.with_name(old.stem + '-thumb.webp')
         if old_thumb.exists():
             old_thumb.replace(temp_thumb)
-    for position, photo, old in pending:
+    for position, photo, _, _ in pending:
         temp = directory / f'__tmp-{position}.webp'
-        temp_thumb = directory / f'__tmp-{position}-thumb.webp'
+        temp_thumb = previews / f'__tmp-{position}.webp'
         full = directory / f'{position}.webp'
-        thumb = directory / f'{position}-thumb.webp'
+        thumb = previews / f'{position}.webp'
         if temp.exists():
             temp.replace(full)
         if temp_thumb.exists():
             temp_thumb.replace(thumb)
         photo['file'] = f'photos/{city}/{card["id"]}/{position}.webp'
-        photo['thumb'] = f'photos/{city}/{card["id"]}/{position}-thumb.webp'
+        photo['thumb'] = f'thumbnails/{city}/{card["id"]}/{position}.webp'
     # Remove stale numbered files beyond the new gallery length.
     keep = {f'{index}.webp' for index in range(1, len(photos) + 1)}
-    keep |= {f'{index}-thumb.webp' for index in range(1, len(photos) + 1)}
     for path in directory.glob('*.webp'):
+        if path.name.startswith('__tmp-'):
+            path.unlink(missing_ok=True)
+        elif path.name not in keep:
+            path.unlink(missing_ok=True)
+    for path in previews.glob('*.webp'):
         if path.name.startswith('__tmp-'):
             path.unlink(missing_ok=True)
         elif path.name not in keep:
@@ -287,12 +292,13 @@ def main() -> int:
             directory = photo_dir(card_id)
             directory.mkdir(parents=True, exist_ok=True)
             index = 1
-            while (directory / f'{index}.webp').exists() or (directory / f'{index}-thumb.webp').exists():
+            while (directory / f'{index}.webp').exists():
                 index += 1
             target = directory / f'{index}.webp'
             image.save(target, 'WEBP', quality=QUALITY, method=4)
             photo = {
                 'file': f'photos/tbilisi/{card_id}/{index}.webp',
+                'thumb': f'thumbnails/tbilisi/{card_id}/{index}.webp',
                 'author': candidate['author'],
                 'license': candidate['license'],
                 'licenseUrl': candidate['licenseUrl'],

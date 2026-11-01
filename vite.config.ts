@@ -4,6 +4,7 @@ import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
 import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
 import { buildMapLayers } from './scripts/build-map-layers.mjs';
 import { createManifest } from './scripts/create-manifest.mjs';
+import { createPhotoThumbs } from './scripts/create-photo-thumbs.mjs';
 import { syncPhotos } from './scripts/sync-photos.mjs';
 
 let manifestRevision='dev';
@@ -23,6 +24,8 @@ function atlasHotReload():Plugin{
   try{
    try{await buildMapLayers({quiet:true});}
    catch(error){server.config.logger.error(`[atlas] map layers: ${error instanceof Error?error.message:String(error)}`);}
+   try{await createPhotoThumbs({quiet:true});}
+   catch(error){server.config.logger.error(`[atlas] photo previews: ${error instanceof Error?error.message:String(error)}`);}
    const result=await assembleAtlas({quiet:true});
    await syncPhotos({quiet:true});
    await createManifest({quiet:true});

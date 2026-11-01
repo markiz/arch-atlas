@@ -95,16 +95,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-242191025/1.webp",
+      "thumb": "thumbnails/tbilisi/osm-242191025/1.webp",
       "author": "AlexandreAssatiani",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:11_Ioseb_Grishashvili_Street_(Tbilisi,_Georgia).jpg",
-      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-      "thumb": "photos/tbilisi/osm-242191025/1-thumb.webp"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     },
     {
       "file": "photos/tbilisi/osm-242191025/2.webp",
-      "thumb": "photos/tbilisi/osm-242191025/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-242191025/2.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3819",

@@ -4,8 +4,12 @@ node_modules/
 # Результат сборки
 dist/
 
-# Сгенерированное зеркало фотографий (источник — data/photos)
+# Сгенерированные превью фотографий (источник — data/photos)
+data/thumbnails/
+
+# Сгенерированные зеркала фотографий и превью (источники — data/photos, data/thumbnails)
 public/atlas/photos/
+public/atlas/thumbnails/
 
 # Сгенерированные бандл, манифест и слои карты (источники — data/atlas, aux, raw)
 public/atlas/buildings.json

@@ -225,7 +225,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/opera/1.webp",
-      "thumb": "photos/tbilisi/opera/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/opera/1.webp",
       "author": "Francisco Anzola",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -234,7 +234,7 @@
     },
     {
       "file": "photos/tbilisi/opera/2.webp",
-      "thumb": "photos/tbilisi/opera/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/opera/2.webp",
       "author": "Moreau.henri",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -243,7 +243,7 @@
     },
     {
       "file": "photos/tbilisi/opera/3.webp",
-      "thumb": "photos/tbilisi/opera/3-thumb.webp",
+      "thumb": "thumbnails/tbilisi/opera/3.webp",
       "author": "en:User:UltioUltionis",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

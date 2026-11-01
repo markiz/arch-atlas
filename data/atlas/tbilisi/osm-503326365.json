@@ -133,7 +133,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-503326365/1.webp",
-      "thumb": "photos/tbilisi/osm-503326365/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-503326365/1.webp",
       "author": "This Photo was taken by Supanut Arunoprayote.",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -142,7 +142,7 @@
     },
     {
       "file": "photos/tbilisi/osm-503326365/2.webp",
-      "thumb": "photos/tbilisi/osm-503326365/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-503326365/2.webp",
       "author": "Unknown",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -151,7 +151,7 @@
     },
     {
       "file": "photos/tbilisi/osm-503326365/3.webp",
-      "thumb": "photos/tbilisi/osm-503326365/3-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-503326365/3.webp",
       "author": "Natia an",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

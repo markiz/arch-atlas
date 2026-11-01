@@ -321,7 +321,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1185163208/1.webp",
-      "thumb": "photos/tbilisi/osm-1185163208/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-1185163208/1.webp",
       "author": "Phyrexian",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -330,7 +330,7 @@
     },
     {
       "file": "photos/tbilisi/osm-1185163208/2.webp",
-      "thumb": "photos/tbilisi/osm-1185163208/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-1185163208/2.webp",
       "author": "Phyrexian",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -339,7 +339,7 @@
     },
     {
       "file": "photos/tbilisi/osm-1185163208/3.webp",
-      "thumb": "photos/tbilisi/osm-1185163208/3-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-1185163208/3.webp",
       "author": "Phyrexian",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

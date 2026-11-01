@@ -93,7 +93,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/kashveti/1.webp",
-      "thumb": "photos/tbilisi/kashveti/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/kashveti/1.webp",
       "author": "Kashveti1.jpg: Paata Vardanashvili\nderivative work: Rabanus Flavus (talk)",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -102,7 +102,7 @@
     },
     {
       "file": "photos/tbilisi/kashveti/2.webp",
-      "thumb": "photos/tbilisi/kashveti/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/kashveti/2.webp",
       "author": "Andrei Kalamkarov (www.andreikalamkarov.com)",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",

@@ -20,7 +20,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import UNKNOWN_PHOTO_WIDTH, fit_width, read_cards, save_photo, write_card
+from atlas_source import UNKNOWN_PHOTO_WIDTH, fit_width, read_cards, save_photo, thumb_relative, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -78,6 +78,7 @@ def main() -> int:
         relative = save_photo(image.convert('RGB'), card_id, quality=72)
         card.setdefault('photos', []).append({
             'file': relative,
+            'thumb': thumb_relative(relative),
             'author': 'Реестр памятников Грузии (автор не указан)',
             'license': 'Не установлена',
             'licenseUrl': candidate['record'],

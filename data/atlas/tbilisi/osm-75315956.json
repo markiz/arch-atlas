@@ -246,16 +246,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-75315956/1.webp",
+      "thumb": "thumbnails/tbilisi/osm-75315956/1.webp",
       "author": "Paata Vardanashvili",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
       "source": "https://commons.wikimedia.org/wiki/File:State_Chancellery_building.jpg",
-      "modifications": "преобразовано в WebP",
-      "thumb": "photos/tbilisi/osm-75315956/1-thumb.webp"
+      "modifications": "преобразовано в WebP"
     },
     {
       "file": "photos/tbilisi/osm-75315956/2.webp",
-      "thumb": "photos/tbilisi/osm-75315956/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-75315956/2.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4293",

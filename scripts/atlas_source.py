@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CITY = 'tbilisi'
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 PHOTOS_DIR = ROOT / 'data/photos'
+THUMBNAILS_DIR = ROOT / 'data/thumbnails'
 _PHOTO_LOCK = threading.Lock()
 
 # Photo width policy: free Commons licenses are published at up to 1920 px;
@@ -70,6 +71,8 @@ def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, 
         if photo.get('source') in existing:
             print('already attached', card_id)
             continue
+        if not photo.get('thumb') and photo.get('file'):
+            photo['thumb'] = thumb_relative(photo['file'])
         card.setdefault('photos', []).append(photo)
         write_card(card)
         added += 1
@@ -78,6 +81,26 @@ def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, 
 
 def photo_dir(card_id: str, city: str = CITY) -> Path:
     return PHOTOS_DIR / city / card_id
+
+
+def thumb_dir(card_id: str, city: str = CITY) -> Path:
+    return THUMBNAILS_DIR / city / card_id
+
+
+def thumb_relative(file: str) -> str:
+    """Map photos/<city>/<id>/<n>.webp to thumbnails/<city>/<id>/<n>.webp."""
+    path = Path(file)
+    if not path.parts or path.parts[0] != 'photos':
+        raise ValueError(f'photo path must start with photos/: {file}')
+    return (Path('thumbnails') / Path(*path.parts[1:])).as_posix()
+
+
+def thumb_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]:
+    """Return the absolute and published-relative path for one preview."""
+    return (
+        thumb_dir(card_id, city) / f'{index}.webp',
+        f'thumbnails/{city}/{card_id}/{index}.webp',
+    )
 
 
 def photo_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]:
@@ -91,7 +114,7 @@ def photo_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]
 def next_photo_index(card_id: str, city: str = CITY) -> int:
     directory = photo_dir(card_id, city)
     index = 1
-    while (directory / f'{index}.webp').exists() or (directory / f'{index}-thumb.webp').exists():
+    while (directory / f'{index}.webp').exists():
         index += 1
     return index
 

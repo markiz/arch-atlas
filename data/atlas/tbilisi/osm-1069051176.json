@@ -86,7 +86,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1069051176/1.webp",
-      "thumb": "photos/tbilisi/osm-1069051176/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-1069051176/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3033",

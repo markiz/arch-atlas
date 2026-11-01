@@ -173,7 +173,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/conservatoire/1.webp",
-      "thumb": "photos/tbilisi/conservatoire/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/conservatoire/1.webp",
       "author": "Alex Maisuradze",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -182,7 +182,7 @@
     },
     {
       "file": "photos/tbilisi/conservatoire/2.webp",
-      "thumb": "photos/tbilisi/conservatoire/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/conservatoire/2.webp",
       "author": "Varsika",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

@@ -61,7 +61,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-709359138/1.webp",
-      "thumb": "photos/tbilisi/osm-709359138/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-709359138/1.webp",
       "author": "Eka Samkharadze",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -70,7 +70,7 @@
     },
     {
       "file": "photos/tbilisi/osm-709359138/2.webp",
-      "thumb": "photos/tbilisi/osm-709359138/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-709359138/2.webp",
       "author": "Александр Сигачёв",
       "license": "CC0",
       "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",

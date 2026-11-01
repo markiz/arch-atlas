@@ -170,7 +170,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-56696105/1.webp",
-      "thumb": "photos/tbilisi/osm-56696105/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-56696105/1.webp",
       "author": "Zviad Avaliani (ზვიად ავალიანი)",
       "license": "Attribution (свободная лицензия, требуется указание автора)",
       "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stalinka_tbilisi_2.JPG",

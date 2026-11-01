@@ -132,14 +132,16 @@ test('hydrateCard keeps an empty history out of the bundle',()=>{
 
 test('accepts photos only under the city and object directory',async()=>{
  const root=await fixture();
- const photo={file:'photos/tbilisi/osm-1/1.webp',thumb:'photos/tbilisi/osm-1/1-thumb.webp',author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized'};
+ const photo={file:'photos/tbilisi/osm-1/1.webp',thumb:'thumbnails/tbilisi/osm-1/1.webp',author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized'};
  try{
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[photo]}));
   const {cards}=await assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true});
   assert.equal(cards[0].photos[0].file,photo.file);
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,file:'photos/osm-1-1.webp'}]}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/must live under photos\/tbilisi\/osm-1\//);
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,thumb:'photos/tbilisi/osm-1/2-thumb.webp'}]}));
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,thumb:'thumbnails/tbilisi/osm-1/2.webp'}]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/thumb must match/);
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,thumb:'photos/tbilisi/osm-1/1-thumb.webp'}]}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/thumb must match/);
   const {thumb,...withoutThumb}=photo;
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[withoutThumb]}));

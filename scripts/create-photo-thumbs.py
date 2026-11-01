@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
-"""Create the small preview version of every atlas photo.
+"""Create the preview version of every atlas photo.
 
-The full photograph remains the gallery image. The preview is width-limited to
-480 px (never upscaled), saved next to the full file as <n>-thumb.webp, and
-referenced from the card as photos/<city>/<object>/<n>-thumb.webp. Browser cards
-show this preview first, while the full gallery files load afterwards.
+The full photograph remains the gallery image. Previews live in a separate
+generated tree and keep the original relative name:
+
+  data/photos/<city>/<id>/<n>.webp -> data/thumbnails/<city>/<id>/<n>.webp
+
+They are width-limited to 720 px, preserve the source aspect ratio, and are
+never upscaled. The card references the preview as
+thumbnails/<city>/<id>/<n>.webp. Browser cards and the inspector show this
+preview, while the full gallery files load afterwards.
+
+The `thumb` field in each card is kept in sync. Existing previews newer than
+their source are left untouched, so repeated builds do not reconvert anything.
+`npm run build`, `npm run check` and `npm run dev` run this script through
+scripts/create-photo-thumbs.mjs.
 
 Usage:
   python3 scripts/create-photo-thumbs.py --dry-run
@@ -20,16 +30,11 @@ from pathlib import Path
 
 from PIL import Image
 
-from atlas_source import ROOT, read_cards, write_card
+from atlas_source import ROOT, THUMBNAILS_DIR, read_cards, thumb_relative, write_card
 from progress import Progress
 
-TARGET_WIDTH = 480
+TARGET_WIDTH = 720
 QUALITY = 75
-
-
-def relative_thumb(file: str) -> str:
-    path = Path(file)
-    return (path.parent / f'{path.stem}-thumb.webp').as_posix()
 
 
 def set_thumb(photo: dict, relative: str) -> bool:
@@ -62,6 +67,27 @@ def make_thumb(source: Path, target: Path) -> None:
         preview.save(target, 'WEBP', quality=QUALITY, method=6)
 
 
+def prune_thumbnails(expected: set[Path]) -> int:
+    """Remove previews that no card references, then empty directories."""
+    if not THUMBNAILS_DIR.exists():
+        return 0
+    removed = 0
+    for path in sorted(THUMBNAILS_DIR.rglob('*')):
+        if path.is_file() and path not in expected:
+            path.unlink()
+            removed += 1
+    for directory in sorted(
+        (path for path in THUMBNAILS_DIR.rglob('*') if path.is_dir()),
+        key=lambda path: len(path.parts),
+        reverse=True,
+    ):
+        try:
+            directory.rmdir()
+        except OSError:
+            pass
+    return removed
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--dry-run', action='store_true')
@@ -71,6 +97,7 @@ def main() -> int:
     cards = read_cards()
     changed_cards: list[dict] = []
     jobs: list[tuple[dict, dict, Path, Path]] = []
+    expected: set[Path] = set()
     for card in cards.values():
         card_changed = False
         for photo in card.get('photos', []):
@@ -79,10 +106,12 @@ def main() -> int:
                 print(f'{card["id"]}: photo without file', file=sys.stderr)
                 continue
             source = ROOT / 'data' / full_relative
-            target_relative = relative_thumb(full_relative)
+            target_relative = thumb_relative(full_relative)
+            target = ROOT / 'data' / target_relative
+            expected.add(target)
             if set_thumb(photo, target_relative):
                 card_changed = True
-            jobs.append((card, photo, source, ROOT / 'data' / target_relative))
+            jobs.append((card, photo, source, target))
         if card_changed:
             changed_cards.append(card)
 
@@ -115,10 +144,15 @@ def main() -> int:
             progress.advance(f'{label}: error')
     progress.finish()
 
+    removed = 0
     if not args.dry_run:
         for card in changed_cards:
             write_card(card)
-    print(f'Preview photos: {created} {"would be " if args.dry_run else ""}created, {skipped} up to date, {errors} errors.')
+        removed = prune_thumbnails(expected)
+    print(
+        f'Preview photos: {created} {"would be " if args.dry_run else ""}created, '
+        f'{skipped} up to date, {removed} stale removed, {errors} errors.'
+    )
     return 1 if errors else 0
 
 

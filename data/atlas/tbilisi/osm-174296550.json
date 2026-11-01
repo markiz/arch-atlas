@@ -145,7 +145,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-174296550/1.webp",
-      "thumb": "photos/tbilisi/osm-174296550/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-174296550/1.webp",
       "author": "Surovyi",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -155,7 +155,7 @@
     },
     {
       "file": "photos/tbilisi/osm-174296550/2.webp",
-      "thumb": "photos/tbilisi/osm-174296550/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-174296550/2.webp",
       "author": "Aleksey Muhranoff",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
@@ -164,7 +164,7 @@
     },
     {
       "file": "photos/tbilisi/osm-174296550/3.webp",
-      "thumb": "photos/tbilisi/osm-174296550/3-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-174296550/3.webp",
       "author": "Levan Gokadze from Tbilisi, Georgia",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",

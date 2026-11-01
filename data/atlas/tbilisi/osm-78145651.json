@@ -68,7 +68,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-78145651/1.webp",
-      "thumb": "photos/tbilisi/osm-78145651/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-78145651/1.webp",
       "author": "Reda Kerbouche",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -78,7 +78,7 @@
     },
     {
       "file": "photos/tbilisi/osm-78145651/2.webp",
-      "thumb": "photos/tbilisi/osm-78145651/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/osm-78145651/2.webp",
       "author": "Mostafameraji",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

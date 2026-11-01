@@ -312,7 +312,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/rustaveli/1.webp",
-      "thumb": "photos/tbilisi/rustaveli/1-thumb.webp",
+      "thumb": "thumbnails/tbilisi/rustaveli/1.webp",
       "author": "DDohler",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -321,7 +321,7 @@
     },
     {
       "file": "photos/tbilisi/rustaveli/2.webp",
-      "thumb": "photos/tbilisi/rustaveli/2-thumb.webp",
+      "thumb": "thumbnails/tbilisi/rustaveli/2.webp",
       "author": "Alsandro",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
