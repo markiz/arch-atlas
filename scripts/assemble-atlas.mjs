@@ -21,6 +21,7 @@ const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underg
 const PHOTO_ID_RE=/^[a-f0-9]{64}$/;
 const PHOTO_METADATA_FIELDS=['author','license','licenseUrl','source','modifications'];
 const PHOTO_OPTIONAL_FIELDS=['description'];
+const PHOTO_TAG_FIELDS=['sourceTags','visualTags'];
 const PHOTO_DIMENSION_FIELDS=['width','height'];
 
 const silent={write(){}};
@@ -41,6 +42,13 @@ function isPlainObject(value){
 
 function requireString(file,value,field,{allowEmpty=false}={}){
   if(typeof value!=='string'||(!allowEmpty&&!value.trim()))fail(file,`${field} must be a ${allowEmpty?'':'non-empty '}string`);
+  return value;
+}
+
+function requireTags(file,value,field){
+  if(!Array.isArray(value))fail(file,`${field} must be an array of strings`);
+  if(new Set(value).size!==value.length)fail(file,`${field} must not contain duplicates`);
+  for(const [index,item] of value.entries())requireString(file,item,`${field}[${index}]`);
   return value;
 }
 
@@ -88,8 +96,9 @@ async function loadPhotoMetadata(root,city){
    if(!isPlainObject(metadata))fail(file,'photo metadata must be an object');
    for(const field of PHOTO_METADATA_FIELDS)requireString(file,metadata[field],field);
    for(const field of PHOTO_DIMENSION_FIELDS)if(!Number.isInteger(metadata[field])||metadata[field]<=0)fail(file,`${field} must be a positive integer`);
+   for(const field of PHOTO_TAG_FIELDS)if(metadata[field]!==undefined)requireTags(file,metadata[field],field);
    if(metadata.description!==undefined)requireString(file,metadata.description,'description');
-   const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key)&&!PHOTO_DIMENSION_FIELDS.includes(key));
+   const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key)&&!PHOTO_TAG_FIELDS.includes(key)&&!PHOTO_DIMENSION_FIELDS.includes(key));
    if(unknown.length)fail(file,`unknown photo metadata fields: ${unknown.join(', ')}`);
    photos.set(id,metadata);
  }
@@ -109,6 +118,7 @@ function validatePhoto(file,photoId,index,seen,city,metadataById){
   };
   for(const key of PHOTO_METADATA_FIELDS)photo[key]=metadata[key];
   for(const key of PHOTO_DIMENSION_FIELDS)photo[key]=metadata[key];
+  for(const key of PHOTO_TAG_FIELDS)if(metadata[key]!==undefined)photo[key]=metadata[key];
   if(metadata.description!==undefined)photo.description=metadata.description;
   return photo;
 }

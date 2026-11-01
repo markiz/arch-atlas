@@ -43,6 +43,7 @@ THUMBNAILS_DIR = ROOT / 'data/thumbnails/tbilisi'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
@@ -283,7 +284,18 @@ def main() -> int:
                             for key in PHOTO_DIMENSION_FIELDS:
                                 if not isinstance(metadata.get(key), int) or isinstance(metadata.get(key), bool) or metadata[key] <= 0:
                                     errors.append(f'{label}: photo[{index}].{key} must be a positive integer')
-                            unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS) - set(PHOTO_DIMENSION_FIELDS)
+                            for key in PHOTO_TAG_FIELDS:
+                                value = metadata.get(key)
+                                if value is None:
+                                    continue
+                                if (
+                                    not isinstance(value, list)
+                                    or not value
+                                    or not all(isinstance(tag, str) and tag.strip() for tag in value)
+                                    or len(set(value)) != len(value)
+                                ):
+                                    errors.append(f'{label}: photo[{index}].{key} must be a non-empty array of unique strings')
+                            unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS) - set(PHOTO_TAG_FIELDS) - set(PHOTO_DIMENSION_FIELDS)
                             if unknown:
                                 errors.append(f'{label}: photo[{index}] unknown metadata fields: {", ".join(sorted(unknown))}')
                 full_path = PHOTOS_DIR / f'{photo_id}.webp'

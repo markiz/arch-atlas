@@ -138,7 +138,7 @@ async function writePhoto(root,id,metadata){
 test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
  const root=await fixture();
  const first='a'.repeat(64),second='b'.repeat(64);
- const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200};
+ const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200,sourceTags:['Facades','Tbilisi'],visualTags:['facade','balcony']};
  try{
   await writePhoto(root,first,metadata);
   await writePhoto(root,second,{...metadata,author:'B',description:'фасад'});
@@ -151,6 +151,12 @@ test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
   assert.equal(cards[0].photos[0].description,'фасад');
   assert.equal(cards[0].photos[0].width,1600);
   assert.equal(cards[0].photos[0].height,1200);
+  assert.deepEqual(cards[0].photos[0].sourceTags,['Facades','Tbilisi']);
+  assert.deepEqual(cards[0].photos[0].visualTags,['facade','balcony']);
+
+  await writePhoto(root,first,{...metadata,visualTags:['facade','facade']});
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[first]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/must not contain duplicates/);
 
   await writePhoto(root,first,{...metadata,width:0});
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[first]}));

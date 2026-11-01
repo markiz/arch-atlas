@@ -26,6 +26,7 @@ THUMBNAILS_DIR = ROOT / 'data/thumbnails'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('description',)
+PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 _PHOTO_LOCK = threading.Lock()
 
@@ -120,6 +121,19 @@ def photo_size(photo_id: str, city: str = CITY) -> tuple[int, int]:
         return image.size
 
 
+def _normalized_tags(value: Any, field: str) -> list[str]:
+    if not isinstance(value, list):
+        raise ValueError(f'photo metadata field {field} must be an array of strings')
+    tags: list[str] = []
+    for item in value:
+        if not isinstance(item, str) or not item.strip():
+            raise ValueError(f'photo metadata field {field} must contain non-empty strings')
+        tag = item.strip()
+        if tag not in tags:
+            tags.append(tag)
+    return tags
+
+
 def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
     normalized: dict[str, Any] = {}
     for field in PHOTO_METADATA_FIELDS:
@@ -133,16 +147,32 @@ def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
             raise ValueError('photo metadata field description must be a string')
         if description.strip():
             normalized['description'] = description
+    for field in PHOTO_TAG_FIELDS:
+        if metadata.get(field) is not None:
+            tags = _normalized_tags(metadata[field], field)
+            if tags:
+                normalized[field] = tags
     return normalized
 
 
-def write_photo_metadata(photo_id: str, metadata: dict[str, Any], city: str = CITY) -> bool:
+def write_photo_metadata(
+    photo_id: str,
+    metadata: dict[str, Any],
+    city: str = CITY,
+    *,
+    replace_tags: Iterable[str] = (),
+) -> bool:
     """Write <sha256>.metadata.json, merging a missing optional description.
 
     The image bytes are the identity of a photo, so two gallery entries that use
     the same file share one canonical sidecar. Conflicting attribution for the
-    same bytes is an error, not a silent overwrite.
+    same bytes is an error, not a silent overwrite. Tag fields are preserved
+    when the caller does not pass them; list a field in ``replace_tags`` to
+    remove an old value.
     """
+    replace_tag_set = set(replace_tags)
+    if not replace_tag_set <= set(PHOTO_TAG_FIELDS):
+        raise ValueError(f'unknown tag fields: {", ".join(sorted(replace_tag_set - set(PHOTO_TAG_FIELDS)))}')
     path = photo_metadata_path(photo_id, city)
     normalized = _normalized_metadata(metadata)
     normalized['width'], normalized['height'] = photo_size(photo_id, city)
@@ -158,6 +188,11 @@ def write_photo_metadata(photo_id: str, metadata: dict[str, Any], city: str = CI
             if old_description and old_description != new_description:
                 raise ValueError(f'{path}: conflicting description for the same photo bytes')
             merged['description'] = new_description
+        for field in PHOTO_TAG_FIELDS:
+            if field in normalized:
+                merged[field] = normalized[field]
+            elif field in replace_tag_set:
+                merged.pop(field, None)
         merged['width'] = normalized['width']
         merged['height'] = normalized['height']
         if merged == current:

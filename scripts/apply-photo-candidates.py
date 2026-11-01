@@ -279,6 +279,13 @@ def main() -> int:
                 'source': candidate['source'],
                 'modifications': modifications(width, candidate['width']),
             }
+            source_tags = sorted({
+                item.strip()
+                for item in (candidate.get('categories') or '').split('|')
+                if item.strip()
+            })
+            if source_tags:
+                metadata['sourceTags'] = source_tags
             try:
                 photo_id = save_photo(image, quality=QUALITY, method=4)
                 write_photo_metadata(photo_id, metadata)
