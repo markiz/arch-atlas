@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
 import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
+import { buildMapLayers } from './scripts/build-map-layers.mjs';
 import { createManifest } from './scripts/create-manifest.mjs';
 import { syncPhotos } from './scripts/sync-photos.mjs';
 
@@ -11,6 +12,7 @@ try{manifestRevision=(JSON.parse(readFileSync('public/atlas/manifest.json','utf8
 // Repack data/atlas/*/*.json into the city bundle and refresh the manifest, then
 // reload the page. Vite watches the source directory; generated files live in
 // public/ and are not watched here, so the rebuild cannot loop on itself.
+// The raw-dependent map layers rebuild only when their input hash changes.
 function atlasHotReload():Plugin{
  let timer:ReturnType<typeof setTimeout>|undefined;
  let running=false;
@@ -19,6 +21,8 @@ function atlasHotReload():Plugin{
   if(running){pending=true;return;}
   running=true;
   try{
+   try{await buildMapLayers({quiet:true});}
+   catch(error){server.config.logger.error(`[atlas] map layers: ${error instanceof Error?error.message:String(error)}`);}
    const result=await assembleAtlas({quiet:true});
    await syncPhotos({quiet:true});
    await createManifest({quiet:true});
@@ -41,13 +45,16 @@ function atlasHotReload():Plugin{
    const sourceRoot=path.join(PROJECT_ROOT,'data','atlas');
    const auxRoot=path.join(PROJECT_ROOT,'aux');
    const photosRoot=path.join(PROJECT_ROOT,'data','photos');
-   server.watcher.add([sourceRoot,auxRoot,photosRoot]);
+   const rawRoot=path.join(PROJECT_ROOT,'raw');
+   server.watcher.add([sourceRoot,auxRoot,photosRoot,rawRoot]);
    const schedule=(file:string)=>{
     const relative=path.relative(PROJECT_ROOT,file).split(path.sep).join('/');
     const isSource=relative.startsWith('data/atlas/')&&relative.endsWith('.json');
     const isPhoto=relative.startsWith('data/photos/');
     const isAux=relative.startsWith('aux/')&&relative.endsWith('.json');
-    if(!isSource&&!isPhoto&&!isAux)return;
+    const isLayerInput=relative.startsWith('raw/')&&/\.(?:xml|json|geojson)$/.test(relative);
+    const isTranslations=relative==='data/landmark-name-translations.json'||relative==='data/basemap-name-translations.json';
+    if(!isSource&&!isPhoto&&!isAux&&!isLayerInput&&!isTranslations)return;
     clearTimeout(timer);
     timer=setTimeout(()=>void rebuild(server,true),120);
    };

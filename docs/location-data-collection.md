@@ -124,11 +124,12 @@ npm run build                   # упаковка карточек, маниф�
 | `data/gallery-sources.json`, `depicts-photos.json`, `category-extra-photos.json`, `specific-fixes.json`, `geometry-variants.json` | Промежуточные результаты отдельных исследований. Сборщик карточек их не читает; источником остаётся `data/atlas/tbilisi/<id>.json` |
 | `scripts/assemble-atlas.mjs` | Упаковывает `data/atlas/<city>/*.json` в общий JSON, проверяет ссылки и подставляет подписи для интерфейса |
 | `scripts/build-data.py` | Собирает только `basemap.geojson` и `building-outlines.geojson`; карточки не создаёт и не меняет |
+| `scripts/build-map-layers.mjs` | Вызывает `build-data.py` из `npm run build`/`check`/dev только при изменении хеша входов (`raw/`, редакционные переводы, сам скрипт); отметка — `.cache/map-layers.json` |
 | `scripts/create-manifest.mjs` | Считает размеры, SHA-256 и ревизию ресурсов |
-| `public/atlas/buildings.json` | Сгенерированный общий JSON Тбилиси; вручную не редактировать |
-| `public/atlas/basemap.geojson`, `building-outlines.geojson` | Сгенерированные слои карты; контуры обычных зданий загружаются отдельно |
+| `public/atlas/buildings.json` | Сгенерированный общий JSON Тбилиси; вручную не редактировать, в Git не хранится |
+| `public/atlas/basemap.geojson`, `building-outlines.geojson` | Сгенерированные слои карты; контуры обычных зданий загружаются отдельно; в Git не хранятся |
 | `public/atlas/photos/<city>/<id>/` | Сгенерированное зеркало фотографий для публикации; создаётся `scripts/sync-photos.mjs` из `data/photos/`, вручную не редактируется |
-| `public/atlas/manifest.json` | Сгенерированные размеры, SHA-256 и ревизия ресурсов |
+| `public/atlas/manifest.json` | Сгенерированные размеры, SHA-256 и ревизия ресурсов; в Git не хранится |
 
 ### Формат исходной карточки
 
@@ -353,12 +354,13 @@ python3 -B -m unittest discover -s tests -p 'test_google_addresses.py'
 Обычная локальная пересборка текущего набора не требует повторного обращения к внешним источникам:
 
 ```sh
-python3 scripts/build-data.py        # подложка и контуры зданий
+npm run layers:build                 # подложка и контуры; сборка только при изменении входов
+npm run layers:force                 # то же с принудительной пересборкой
 python3 scripts/validate_cards.py    # исходные карточки и собранный JSON
 npm run assemble                     # только упаковка карточек в buildings.json
-npm run check                        # упаковка + TypeScript + проверка данных
+npm run check                        # слои + упаковка + TypeScript + проверка данных
 npm test
-npm run build                        # упаковка + манифест + dist/
+npm run build                        # слои + упаковка + манифест + dist/
 npm run verify
 ```
 
@@ -366,7 +368,7 @@ npm run verify
 
 Все длительные загрузчики, сборщики и проверки печатают прогресс в stderr: сколько выполнено из общего числа, процент, прошедшее время, оценку остатка и скорость. Итоговые данные и отчёты остаются в stdout, поэтому перенаправление вывода не ломается. При `--resume` или кэше прогресс показывает, сколько записей уже готово и сколько реально осталось; при неизвестном общем числе ETA не выдумывается. Правила, готовые helper'ы `scripts/progress.py` и `scripts/lib/progress.mjs`, примеры и чек-лист — [long-running-scripts.md](long-running-scripts.md). Новый долгий скрипт без прогресса не принимается.
 
-`build-data.py` формирует только подложку и контуры зданий из сохранённых OSM-источников; карточки он не создаёт. `npm run build` **не запускает** этот генератор, но запускает `assemble-atlas.mjs`, создаёт манифест, проверяет TypeScript и формирует `dist/`. Отдельные `enrich-basemap-*.mjs` исторически правили уже сгенерированный GeoJSON; их функции частично перенесены в Python-сборщик, поэтому не считать их обязательными постшагами без проверки необходимости.
+`build-data.py` формирует только подложку и контуры зданий из сохранённых OSM-источников; карточки он не создаёт. `npm run build` и `npm run check` запускают его через `scripts/build-map-layers.mjs`, который хеширует `raw/osm-grid-*.xml`, `raw/osm-tbilisi-selected.json`, `raw/osm-tbilisi-building-outlines.geojson`, редакционные переводы и сам `build-data.py`. При совпадении хеша и наличии обоих файлов шаг пропускается (около 0,2 с вместо 5 с), иначе слои пересобираются; `npm run layers:force` пересобирает принудительно. Отметка хранится в `.cache/map-layers.json` (игнорируется Git). Если Python 3 нет, а готовые `public/atlas/*.geojson` уже лежат, сборка использует их с предупреждением. Дальше `npm run build` запускает `assemble-atlas.mjs`, создаёт манифест, проверяет TypeScript и формирует `dist/`. Отдельные `enrich-basemap-*.mjs` исторически правили уже сгенерированный GeoJSON; их функции перенесены в Python-сборщик, поэтому не считать их обязательными постшагами без проверки необходимости.
 
 `npm run check` сначала собирает `data/aux/tbilisi.json`, синхронизирует `data/photos/` с публикуемым зеркалом и пересобирает общий JSON из `data/atlas/tbilisi/`, затем проверяет поля, переводы, уникальность ID, диапазон координат, интервалы лет, наличие Polygon/MultiPolygon, пути и сигнатуру WebP полного файла и превью в исходнике и опубликованном файле. Отдельно `npm run aux:merge` только пересобирает городской aux. `npm test` проверяет доменную фильтрацию и связанные сценарии из `tests/*.test.mjs`. `npm run verify` проверяет уже собранный `dist`: ресурсы манифеста, размеры и SHA-256, наличие контуров и отсутствие внешних ассетов в HTML. Эти проверки не устанавливают историческую достоверность, права или совпадение снимка с объектом.
 

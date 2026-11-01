@@ -7,6 +7,15 @@ dist/
 # Сгенерированное зеркало фотографий (источник — data/photos)
 public/atlas/photos/
 
+# Сгенерированные бандл, манифест и слои карты (источники — data/atlas, aux, raw)
+public/atlas/buildings.json
+public/atlas/manifest.json
+public/atlas/basemap.geojson
+public/atlas/building-outlines.geojson
+
+# Отметка входных хешей для пересборки слоёв карты (scripts/build-map-layers.mjs)
+.cache/
+
 # Сгенерированный единый aux-файл (источник — aux/<city>)
 data/aux/
 
