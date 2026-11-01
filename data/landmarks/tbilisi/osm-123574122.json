@@ -1,0 +1,75 @@
+{
+  "id": "osm-123574122",
+  "osmId": "way/123574122",
+  "atlasId": "osm-123574122",
+  "category": "castle",
+  "subcategory": "palace",
+  "names": {
+    "ru": "Дворец царицы Дареджан «Сачино»",
+    "en": "Queen Darejan’s Palace Sachino",
+    "ka": "დარეჯანის სასახლე „საჩინო“",
+    "uk": "Палац цариці Дареджан «Сачіно»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Урбниси, 7",
+    "en": "7 Urbnisi Street",
+    "ka": "ურბნისის ქუჩა 7",
+    "uk": "вулиця Урбнісі, 7"
+  },
+  "descriptions": {
+    "ru": "Дворец «Сачино» с деревянным балконом стоит над Винным подъёмом в Исани.",
+    "en": "Sachino Palace with its wooden balcony stands above Wine Rise in Isani.",
+    "ka": "სასახლე „საჩინო“ ხის აივნით ისანში, ღვინის აღმართის თავზე დგას.",
+    "uk": "Палац «Сачіно» з дерев’яним балконом стоїть над Винним узвозом в Ісані."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8123545,
+    41.691595
+  ],
+  "source": "https://georgianencyclopedia.ge/en/form_eng/633",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/123574122",
+    "https://georgia.travel/queen-darejan-palace"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 40,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-123574122; рейтинг значимости предварительный."
+}

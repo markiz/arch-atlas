@@ -1,0 +1,68 @@
+{
+  "id": "osm-1064347135",
+  "osmId": "way/1064347135",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "monument",
+  "names": {
+    "ru": "Памятник грузинскому алфавиту",
+    "en": "Native Language Monument",
+    "ka": "დედა ენის ძეგლი",
+    "uk": "Пам’ятник грузинському алфавіту"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "парк Деда Эна",
+    "en": "Deda Ena Park",
+    "ka": "დედა ენის ბაღი",
+    "uk": "парк Деда Ена"
+  },
+  "descriptions": {
+    "ru": "Памятник грузинскому алфавиту и письменности в парке Деда Эна.",
+    "en": "The monument to the Georgian alphabet and script in Deda Ena Park.",
+    "ka": "ქართული ანბანისა და დამწერლობის ძეგლი დედა ენის ბაღში.",
+    "uk": "Пам’ятник грузинському алфавіту й письменству в парку Деда Ена."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.804002,
+    41.700566
+  ],
+  "source": "https://www.openstreetmap.org/way/1064347135",
+  "otherSources": [],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

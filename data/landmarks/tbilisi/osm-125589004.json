@@ -1,0 +1,72 @@
+{
+  "id": "osm-125589004",
+  "osmId": "way/125589004",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "bridge",
+  "names": {
+    "ru": "Мост Мира",
+    "en": "Bridge of Peace",
+    "ka": "მშვიდობის ხიდი",
+    "uk": "Міст Миру"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "река Кура",
+    "en": "Kura River",
+    "ka": "მტკვარი",
+    "uk": "річка Кура"
+  },
+  "descriptions": {
+    "ru": "Пешеходный мост через Куру, открытый в 2010 году и соединяющий Старый город с парком Рике.",
+    "en": "A pedestrian bridge over the Kura, opened in 2010 and linking the old city with Rike Park.",
+    "ka": "საფეხმავლო ხიდი მტკვარზე, გახსნილი 2010 წელს და ძველი ქალაქის რიკეს პარკთან დამაკავშირებელი.",
+    "uk": "Пішохідний міст через Куру, відкритий 2010 року і сполучає Старе місто з парком Ріке."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.808268,
+    41.692985
+  ],
+  "source": "https://www.openstreetmap.org/way/125589004",
+  "otherSources": [
+    "https://en.wikipedia.org/wiki/Bridge_of_Peace"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q27574",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Bridge_of_Peace",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Peace_Bridge,_Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 29,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

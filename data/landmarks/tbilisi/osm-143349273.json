@@ -1,0 +1,76 @@
+{
+  "id": "osm-143349273",
+  "osmId": "way/143349273",
+  "atlasId": "osm-143349273",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Дом театра «Старый дом»",
+    "en": "Old House Theatre Building",
+    "ka": "„ძველი სახლის“ თეატრის შენობა",
+    "uk": "Будівля театру «Старий дім»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Метехский подъём, 1 (в OSM: 1ა)",
+    "en": "1 Metekhi Rise (OSM: 1A)",
+    "ka": "მეტეხის აღმართი 1 (OSM: 1ა)",
+    "uk": "Метехський підйом, 1 (в OSM: 1а)"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный кирпичный дом с балконами и лоджиями на склоне Метехи. У основания со стороны набережной сохранились фрагменты старой стены.",
+    "en": "A two-storey brick house with balconies and loggias on the Metekhi slope. Fragments of an older wall survive at its base on the embankment side.",
+    "ka": "მეტეხის ფერდობზე მდებარე ორსართულიანი აგურის სახლი აივნებითა და ლოჯიებით. სანაპიროს მხარეს, შენობის ძირში ძველი კედლის ფრაგმენტებია შემორჩენილი.",
+    "uk": "Двоповерховий цегляний будинок із балконами та лоджіями на схилі Метехі. З боку набережної в основі збереглися фрагменти старої стіни."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8121616,
+    41.6901135
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/143349273",
+    "https://dspace.nplg.gov.ge/bitstream/1234/551115/1/Svobodnaia_Gruzia_1999_N131.pdf"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3377,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-143349273; рейтинг значимости предварительный."
+}

@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "city": "tbilisi",
+  "selectedAt": "2026-11-01",
+  "atlas": [
+    {
+      "id": "metekhi",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-585352693",
+      "category": "church",
+      "subcategory": "cathedral"
+    },
+    {
+      "id": "osm-246769267",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-1207608184",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-78492225",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-73412942",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-531596101",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-220702092",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-123574142",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-1219556099",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-73492672",
+      "category": "church",
+      "subcategory": "church"
+    },
+    {
+      "id": "osm-1204376656",
+      "category": "church",
+      "subcategory": "chapel"
+    },
+    {
+      "id": "osm-62668400",
+      "category": "museum",
+      "subcategory": "museum"
+    },
+    {
+      "id": "osm-198114600",
+      "category": "museum",
+      "subcategory": "house_museum"
+    },
+    {
+      "id": "osm-1217416149",
+      "category": "museum",
+      "subcategory": "house_museum"
+    },
+    {
+      "id": "osm-1365593651",
+      "category": "museum",
+      "subcategory": "house_museum"
+    },
+    {
+      "id": "osm-1188424740",
+      "category": "museum",
+      "subcategory": "museum"
+    },
+    {
+      "id": "opera",
+      "category": "theatre",
+      "subcategory": "opera"
+    },
+    {
+      "id": "rustaveli",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-78067045",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-337365207",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-706233174",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-1234716193",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-143349273",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-1069051421",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-56677926",
+      "category": "theatre",
+      "subcategory": "theatre"
+    },
+    {
+      "id": "osm-65333597",
+      "category": "castle",
+      "subcategory": "palace"
+    },
+    {
+      "id": "osm-123574122",
+      "category": "castle",
+      "subcategory": "palace"
+    },
+    {
+      "id": "osm-77893811",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-372181447",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-75312921",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-503326365",
+      "category": "monument",
+      "subcategory": "bath"
+    },
+    {
+      "id": "osm-19630608",
+      "category": "monument",
+      "subcategory": "bath"
+    },
+    {
+      "id": "osm-58071533",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-34148385",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-370715009",
+      "category": "monument",
+      "subcategory": "historic_building"
+    },
+    {
+      "id": "osm-78357093",
+      "category": "castle",
+      "subcategory": "tower"
+    }
+  ],
+  "external": [
+    {
+      "id": "osm-1063062536",
+      "osmId": "way/1063062536",
+      "category": "monument",
+      "subcategory": "monument"
+    },
+    {
+      "id": "osm-1018836829",
+      "osmId": "way/1018836829",
+      "category": "monument",
+      "subcategory": "monument"
+    },
+    {
+      "id": "osm-437940450",
+      "osmId": "way/437940450",
+      "category": "monument",
+      "subcategory": "tower"
+    },
+    {
+      "id": "osm-9841336",
+      "osmId": "relation/9841336",
+      "category": "monument",
+      "subcategory": "pantheon"
+    },
+    {
+      "id": "osm-1790756",
+      "osmId": "relation/1790756",
+      "category": "monument",
+      "subcategory": "bath"
+    },
+    {
+      "id": "osm-125589004",
+      "osmId": "way/125589004",
+      "category": "monument",
+      "subcategory": "bridge"
+    },
+    {
+      "id": "osm-1064347135",
+      "osmId": "way/1064347135",
+      "category": "monument",
+      "subcategory": "monument"
+    },
+    {
+      "id": "osm-1062990549",
+      "osmId": "way/1062990549",
+      "category": "monument",
+      "subcategory": "monument"
+    }
+  ]
+}

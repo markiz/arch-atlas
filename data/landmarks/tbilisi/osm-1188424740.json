@@ -1,0 +1,75 @@
+{
+  "id": "osm-1188424740",
+  "osmId": "way/1188424740",
+  "atlasId": "osm-1188424740",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Здание администрации парка Муштаид — бывший музей Комитета кустарных промыслов",
+    "en": "Former Caucasian Crafts Committee Museum in Mushtaidi Garden",
+    "ka": "მუშთაიდის პარკის ადმინისტრაციის შენობა — კავკასიის ხალხთა გამოყენებითი ხელოვნების ყოფილი მუზეუმი",
+    "uk": "Будівля адміністрації парку Муштаїд — колишній музей Кавказького комітету кустарних промислів"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 182 (в парке Муштаид)",
+    "en": "182 Davit Aghmashenebeli Avenue (in Mushtaidi Garden)",
+    "ka": "დავით აღმაშენებლის გამზირი 182 (მუშთაიდის ბაღში)",
+    "uk": "проспект Давида Агмашенебелі, 182 (у парку Муштаїд)"
+  },
+  "descriptions": {
+    "ru": "Двухэтажное здание в саду Муштаид, ныне используемое администрацией парка. Ранее здесь находился Музей Комитета кустарных промыслов / Музей прикладного искусства народов Кавказа.",
+    "en": "A two-story building in Mushtaidi Garden, now used by the park administration. It formerly housed the Museum of the Caucasian Crafts Committee, also known as the Museum of the Applied Arts of the Peoples of the Caucasus.",
+    "ka": "მუშთაიდის ბაღში მდებარე ორსართულიანი შენობა, რომელშიც დღეს პარკის ადმინისტრაციაა. აქ ადრე კავკასიის კუსტარული კომიტეტის მუზეუმი, იგივე კავკასიის ხალხთა გამოყენებითი ხელოვნების მუზეუმი, იყო განთავსებული.",
+    "uk": "Двоповерхова будівля в саду Муштаїд, де нині розташована адміністрація парку. Раніше тут містився музей Кавказького комітету кустарних промислів, також відомий як Музей прикладного мистецтва народів Кавказу."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.78657,
+    41.720678
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3190",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1188424740",
+    "https://www.scantbilisi.ge/en/objects/350/Mushtaidi-Garden"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3190,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3190"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 40,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1188424740; рейтинг значимости предварительный."
+}

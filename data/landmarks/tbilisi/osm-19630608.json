@@ -1,0 +1,75 @@
+{
+  "id": "osm-19630608",
+  "osmId": "relation/19630608",
+  "atlasId": "osm-19630608",
+  "category": "monument",
+  "subcategory": "bath",
+  "names": {
+    "ru": "Баня № 5 (Грили абано)",
+    "en": "Bath No. 5 (Grili Abano)",
+    "ka": "აბანო № 5 (გრილი აბანო)",
+    "uk": "Лазня № 5 (Грілі абано)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Вахтанга Горгасали, 3 (в OSM: Абано, 2)",
+    "en": "3 Vakhtang Gorgasali Street (OSM: 2 Abano Street)",
+    "ka": "ვახტანგ გორგასლის ქუჩა, 3 (OSM: აბანოს ქუჩა, 2)",
+    "uk": "вулиця Вахтанга Горгасалі, 3 (в OSM: Абано, 2)"
+  },
+  "descriptions": {
+    "ru": "Комплекс бани № 5 с купольными объёмами; основная часть заглублена примерно на два этажа, над землёй видны купола и выступы. Кладка из старого грузинского кирпича, круглые и криволинейные формы, два типа куполов.",
+    "en": "The Bath No. 5 complex with domed volumes; its main part is about two storeys below ground, with only domes and protrusions visible above. Old Georgian brickwork, circular and curved forms, and two types of domes.",
+    "ka": "აბანო № 5-ის კომპლექსი გუმბათოვანი მოცულობებით; ძირითადი ნაწილი დაახლოებით ორი სართულით მიწისქვეშაა, ზემოთ მხოლოდ გუმბათები და შვერილები ჩანს. ძველი ქართული აგურის წყობა, წრიული და მრუდი ფორმები, ორი ტიპის გუმბათი.",
+    "uk": "Комплекс лазні № 5 з купольними об’ємами; основна частина заглиблена приблизно на два поверхи, над землею видно лише куполи й виступи. Старовинна грузинська цегла, круглі та криволінійні форми, два типи куполів."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.81142004,
+    41.68875564
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3756",
+  "otherSources": [
+    "https://www.openstreetmap.org/relation/19630608",
+    "https://docs.tbilisi.gov.ge/architect/dzeglebis_sia.pdf"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3756,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3756"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 45,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-19630608; рейтинг значимости предварительный."
+}

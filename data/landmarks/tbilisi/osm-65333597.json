@@ -1,0 +1,75 @@
+{
+  "id": "osm-65333597",
+  "osmId": "way/65333597",
+  "atlasId": "osm-65333597",
+  "category": "castle",
+  "subcategory": "palace",
+  "names": {
+    "ru": "Дворец Орбелиани",
+    "en": "Orbeliani Palace",
+    "ka": "ორბელიანების სასახლე",
+    "uk": "Палац Орбеліані"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Афонели, 25",
+    "en": "25 Giorgi Atoneli Street",
+    "ka": "გიორგი ათონელის ქუჩა 25",
+    "uk": "вулиця Георгія Афонелі, 25"
+  },
+  "descriptions": {
+    "ru": "Исторический дворец князей Орбелиани в Старом Тбилиси, ныне часть правительственного комплекса.",
+    "en": "The historic Orbeliani Palace of the Orbeliani princes in Old Tbilisi, now part of the government complex.",
+    "ka": "ორბელიანების თავადების ისტორიული სასახლე ძველ თბილისში, დღეს სამთავრობო კომპლექსის ნაწილი.",
+    "uk": "Історичний палац князів Орбеліані в Старому Тбілісі, нині частина урядового комплексу."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8029727,
+    41.6995483
+  ],
+  "source": "https://www.openstreetmap.org/way/65333597",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42620358"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3555"
+  },
+  "recognition": {
+    "wikidata": "Q42620358",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ათონელის_რეზიდენცია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Orbeliani Palace",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-65333597; рейтинг значимости предварительный."
+}

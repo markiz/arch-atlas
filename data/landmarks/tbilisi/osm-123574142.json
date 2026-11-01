@@ -1,0 +1,76 @@
+{
+  "id": "osm-123574142",
+  "osmId": "way/123574142",
+  "atlasId": "osm-123574142",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Преображения в Авлабари",
+    "en": "Avlabari Transfiguration Church",
+    "ka": "ავლაბრის ფერისცვალების ეკლესია",
+    "uk": "Авлабарська церква Преображення"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Урбниси, 7",
+    "en": "7 Urbnisi Street",
+    "ka": "ურბნისის ქუჩა 7",
+    "uk": "вулиця Урбнісі, 7"
+  },
+  "descriptions": {
+    "ru": "Церковь при дворцовом комплексе царицы Дареджан в Авлабари, позднее ставшая монастырской церковью Преображения.",
+    "en": "A church within Queen Darejan’s palace complex in Avlabari, later rededicated as a Transfiguration monastery church.",
+    "ka": "ავლაბარში დედოფალ დარეჯანის სასახლის კომპლექსთან არსებული ეკლესია, რომელიც მოგვიანებით ფერისცვალების მონასტრის ტაძრად ეკურთხა.",
+    "uk": "Церква в палацовому комплексі цариці Дареджан в Авлабарі, згодом переосвячена як монастирська церква Преображення."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8126931054,
+    41.6916855
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/123574142",
+    "https://www.heritagesites.ge/uploads/files/60e836cf86bd8.pdf"
+  ],
+  "districtId": "avlabari",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3369,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 50,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-123574142; рейтинг значимости предварительный."
+}

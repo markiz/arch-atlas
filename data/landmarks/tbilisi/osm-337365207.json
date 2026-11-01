@@ -1,0 +1,76 @@
+{
+  "id": "osm-337365207",
+  "osmId": "way/337365207",
+  "atlasId": "osm-337365207",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Здание театра-мастерской Резо Габриадзе",
+    "en": "Rezo Gabriadze Theatre Workshop Building",
+    "ka": "რეზო გაბრიაძის თეატრ-სახელოსნოს შენობა",
+    "uk": "Будівля театру-майстерні Резо Габріадзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иоане Шавтели, 13",
+    "en": "13 Ioane Shavteli Street",
+    "ka": "იოანე შავთელის ქუჩა 13",
+    "uk": "вулиця Іоане Шавтелі, 13"
+  },
+  "descriptions": {
+    "ru": "Здание XIX века, половину которого в 1981 году передали театру марионеток Резо Габриадзе; соседняя часть в то время принадлежала ресторану.",
+    "en": "A 19th-century building; half was given to Rezo Gabriadze’s Marionette Theatre in 1981. The other half was occupied by a restaurant at the time.",
+    "ka": "XIX საუკუნის შენობის ნახევარი 1981 წელს რეზო გაბრიაძის მარიონეტების თეატრს გადაეცა; იმ დროს მეორე ნახევარში რესტორანი იყო.",
+    "uk": "Будівля XIX століття; половину її 1981 року передали театру маріонеток Резо Габріадзе, а другу половину тоді займав ресторан."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8066277202,
+    41.695728
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3469",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/337365207",
+    "https://iverieli.nplg.gov.ge/bitstream/1234/328372/5/TbilisisTeatrebiGardamavaliEkonomikisPirobebshi.pdf"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3469,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3469"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-337365207; рейтинг значимости предварительный."
+}

@@ -1,0 +1,68 @@
+{
+  "id": "osm-1790756",
+  "osmId": "relation/1790756",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "bath",
+  "names": {
+    "ru": "Серные бани Тбилиси",
+    "en": "Tbilisi Sulfur Baths",
+    "ka": "აბანოთუბანი",
+    "uk": "Сірчані лазні Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Абанотубани",
+    "en": "Abanotubani",
+    "ka": "აბანოთუბანი",
+    "uk": "Абанотубані"
+  },
+  "descriptions": {
+    "ru": "Исторический квартал серных бань в Абанотубани, известный купольными банями и серными источниками.",
+    "en": "The historic sulfur bath quarter of Abanotubani, known for its domed bathhouses and sulfur springs.",
+    "ka": "გოგირდის აბანოების ისტორიული უბანი აბანოთუბანში, ცნობილი გუმბათიანი აბანოებითა და გოგირდის წყაროებით.",
+    "uk": "Історичний квартал сірчаних лазень в Абанотубані, відомий купольними лазнями та сірчаними джерелами."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.810956,
+    41.687644
+  ],
+  "source": "https://www.openstreetmap.org/relation/1790756",
+  "otherSources": [],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 15,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

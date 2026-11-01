@@ -1,0 +1,72 @@
+{
+  "id": "osm-9841336",
+  "osmId": "relation/9841336",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "pantheon",
+  "names": {
+    "ru": "Пантеон Мтацминда",
+    "en": "Mtatsminda Pantheon",
+    "ka": "მთაწმინდის პანთეონი",
+    "uk": "Пантеон Мтацмінди"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Мтацминда",
+    "en": "Mtatsminda",
+    "ka": "მთაწმინდა",
+    "uk": "Мтацмінда"
+  },
+  "descriptions": {
+    "ru": "Пантеон на склоне Мтацминды, где похоронены писатели и общественные деятели Грузии.",
+    "en": "The pantheon on the slope of Mtatsminda, where Georgian writers and public figures are buried.",
+    "ka": "პანთეონი მთაწმინდის ფერდობზე, სადაც ქართველი მწერლები და საზოგადო მოღვაწეები არიან დაკრძალული.",
+    "uk": "Пантеон на схилі Мтацмінди, де поховані грузинські письменники й громадські діячі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.788946,
+    41.695879
+  ],
+  "source": "https://www.openstreetmap.org/relation/9841336",
+  "otherSources": [
+    "https://ka.wikipedia.org/wiki/მთაწმინდის_პანთეონი"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1195746",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/მთაწმინდის_პანთეონი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Mtatsminda Pantheon",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

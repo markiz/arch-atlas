@@ -1,0 +1,76 @@
+{
+  "id": "opera",
+  "osmId": "way/59151604",
+  "atlasId": "opera",
+  "category": "theatre",
+  "subcategory": "opera",
+  "names": {
+    "ru": "Тбилисский театр оперы и балета",
+    "en": "Tbilisi Opera and Ballet Theatre",
+    "ka": "თბილისის ოპერისა და ბალეტის თეატრი",
+    "uk": "Тбіліський театр опери и балета"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 25",
+    "en": "25 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 25",
+    "uk": "проспект Шота Руставелі, 25"
+  },
+  "descriptions": {
+    "ru": "Полосатые фасады, арки и восточный орнамент делают оперный театр одним из самых узнаваемых зданий проспекта Руставели.",
+    "en": "Striped façades, arches, and eastern ornament make the opera house one of the most recognizable buildings on Rustaveli Avenue.",
+    "ka": "ზოლიანი ფასადები, თაღები და აღმოსავლური ორნამენტი ოპერის თეატრს რუსთაველის გამზირის ერთ-ერთ ყველაზე ცნობილ შენობად აქცევს.",
+    "uk": "Смугасті фасади, арки та східний орнамент роблять оперний театр однією з найвпізнаваніших будівель проспекту Руставелі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.79616667,
+    41.70130556
+  ],
+  "source": "https://www.scantbilisi.ge/en/objects/326/BALLET-STATE-THEATRE",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/59151604"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4282"
+  },
+  "recognition": {
+    "wikidata": "Q2596393",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_ოპერისა_და_ბალეტის_თეატრი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi Opera House",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 74,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа opera; рейтинг значимости предварительный."
+}

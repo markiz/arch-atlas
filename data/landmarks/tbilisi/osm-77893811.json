@@ -1,0 +1,75 @@
+{
+  "id": "osm-77893811",
+  "osmId": "way/77893811",
+  "atlasId": "osm-77893811",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Караван-сарай Арцруни",
+    "en": "Artsruni Caravanserai",
+    "ka": "არწრუნის ქარვასლა",
+    "uk": "Караван-сарай Арцруни"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Караван-сарай Арцруни — историческое торговое здание XIX века в Старом городе.",
+    "en": "The Artzruni Caravanserai, a historic 19th-century trading building in the old city.",
+    "ka": "არწრუნის ქარვასლა — XIX საუკუნის ისტორიული სავაჭრო შენობა ძველ ქალაქში.",
+    "uk": "Караван-сарай Арцруні — історична торгова будівля XIX століття в Старому місті."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8078514,
+    41.6910646
+  ],
+  "source": "https://www.openstreetmap.org/way/77893811",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42651606"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3863"
+  },
+  "recognition": {
+    "wikidata": "Q42651606",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/არწრუნის_ქარვასლა",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Artsruni Caravanserai",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 64,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-77893811; рейтинг значимости предварительный."
+}

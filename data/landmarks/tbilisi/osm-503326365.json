@@ -1,0 +1,74 @@
+{
+  "id": "osm-503326365",
+  "osmId": "way/503326365",
+  "atlasId": "osm-503326365",
+  "category": "monument",
+  "subcategory": "bath",
+  "names": {
+    "ru": "Пёстрая баня",
+    "en": "Chreli Abano",
+    "ka": "ჭრელი აბანო",
+    "uk": "Строката лазня"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Абанотубани, 2",
+    "en": "2 Abano Street",
+    "ka": "აბანოს ქუჩა 2",
+    "uk": "вулиця Абанотубანი, 2"
+  },
+  "descriptions": {
+    "ru": "Пёстрая баня в Абанотубани — историческая городская баня с характерным полосатым фасадом.",
+    "en": "The Pestry Bath in Abanotubani, a historic city bathhouse with a distinctive striped facade.",
+    "ka": "ჭრელი აბანო აბანოთუბანში — ისტორიული საბანაო შენობა დამახასიათებელი ზოლიანი ფასადით.",
+    "uk": "Строката лазня в Абанотубані — історична міська лазня з характерним смугастим фасадом."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8107717,
+    41.6874536
+  ],
+  "source": "https://www.openstreetmap.org/way/503326365",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42618271"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3740"
+  },
+  "recognition": {
+    "wikidata": "Q42618271",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Orbeliani Baths",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 51,
+    "components": {
+      "heritage": 20,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "есть Wikidata",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-503326365; рейтинг значимости предварительный."
+}

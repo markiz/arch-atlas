@@ -1,0 +1,76 @@
+{
+  "id": "osm-1207608184",
+  "osmId": "way/1207608184",
+  "atlasId": "osm-1207608184",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Николая в Харпухи",
+    "en": "Saint Nicholas Church in Kharpukhi",
+    "ka": "ხარფუხის წმინდა ნიკოლოზის ეკლესია",
+    "uk": "Церква Святого Миколая в Харпухі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Николоза Чхеидзе, 1",
+    "en": "1 Nikoloz Chkheidze Street",
+    "ka": "ნიკოლოზ ჩხეიძის ქუჩა 1",
+    "uk": "вулиця Ніколоза Чхеїдзе, 1"
+  },
+  "descriptions": {
+    "ru": "Церковь Святого Николая в историческом районе Харпухи, к югу от центра старого Тбилиси.",
+    "en": "Saint Nicholas Church in the historic Kharpukhi district, south of central Old Tbilisi.",
+    "ka": "წმინდა ნიკოლოზის ეკლესია თბილისის ძველი ცენტრის სამხრეთით, ისტორიულ ხარფუხის უბანში.",
+    "uk": "Церква Святого Миколая в історичному районі Харпухі, на південь від центру Старого Тбілісі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8200228,
+    41.6845913
+  ],
+  "source": "https://karibche.ge/eklesia/tadzrebi-da-monastrebi/671-19-dekemberi-nikolozobaa.html",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1207608184",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3590"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3590,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3590"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1207608184; рейтинг значимости предварительный."
+}

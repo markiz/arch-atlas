@@ -1,0 +1,72 @@
+{
+  "id": "osm-370715009",
+  "atlasId": "osm-370715009",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дворец торжественных обрядов",
+    "en": "Wedding Palace (Palace of Rituals)",
+    "ka": "საზეიმო რიტუალების სასახლე",
+    "uk": "Палац урочистих обрядів"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Бочорма, 26",
+    "en": "26 Bochorma Street",
+    "ka": "ბოჭორმის ქუჩა, 26",
+    "uk": "вулиця Бочорма, 26"
+  },
+  "descriptions": {
+    "ru": "Асимметричная композиция из каскадом спускающихся по склону гладких оштукатуренных объёмов, увенчанная высокой башней с ажурным завершением, повторяющим мотив грузинской колокольни. Нижние ярусы прорезаны аркадами-галереями и полуциркульными проёмами, контрастирующими с почти глухими плоскостями верхних объёмов; террасы и лестницы встроены в рельеф. Постройка соединяет пластику советского модернизма с цитатами из национального средневекового зодчества, из-за чего критика 1980-х оценивала её разноречиво.",
+    "en": "An asymmetrical composition of smooth plastered volumes descending the slope in a cascade, crowned by a tall tower with an openwork termination that repeats the motif of a Georgian bell tower. The lower tiers are pierced by arcade galleries and semicircular openings that contrast with the almost blind planes of the upper volumes; terraces and staircases are built into the terrain. The building combines the plasticity of Soviet modernism with quotations from national medieval architecture, which is why 1980s criticism assessed it in contradictory ways.",
+    "ka": "ასიმეტრიული კომპოზიცია ფერდობზე კასკადურად დაშვებული გლუვი შელესილი მოცულობებისა, რომელსაც აგვირგვინებს მაღალი კოშკი აჟურული დაბოლოებით, ქართული სამრეკლოს მოტივის გამეორებით. ქვედა იარუსები გაჭრილია არკადა-გალერეებითა და ნახევარწრიული ღიობებით, რომლებიც კონტრასტში არიან ზედა მოცულობების თითქმის ყრუ სიბრტყეებთან; ტერასები და კიბეები რელიეფშია ჩაშენებული. ნაგებობა აერთიანებს საბჭოთა მოდერნიზმის პლასტიკას ეროვნული შუა საუკუნეების ხუროთმოძღვრებიდან ციტატებთან, რის გამოც 1980-იანი წლების კრიტიკა მას წინააღმდეგობრივად აფასებდა.",
+    "uk": "Асиметрична композиція з каскадом спущених по схилу гладких потинькованих об'ємів, увінчана високою баштою з ажурним завершенням, що повторює мотив грузинської дзвіниці. Нижні яруси прорізані аркадами-галереями та півциркульними прорізами, що контрастують з майже глухими площинами верхніх об'ємів; тераси й сходи вбудовані в рельєф. Споруда поєднує пластику радянського модернізму з цитатами з національного середньовічного зодчества, через що критика 1980-х оцінювала її суперечливо."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8278422,
+    41.6850126
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24588",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/370715009"
+  ],
+  "districtId": "sololaki",
+  "heritage": {
+    "status": "listed",
+    "registryId": 24588,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24588"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 37,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 2,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-370715009; рейтинг значимости предварительный."
+}

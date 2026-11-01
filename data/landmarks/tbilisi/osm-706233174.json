@@ -1,0 +1,76 @@
+{
+  "id": "osm-706233174",
+  "osmId": "way/706233174",
+  "atlasId": "osm-706233174",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Театр марионеток на Шавтели, 26",
+    "en": "Puppet Theatre at 26 Shavteli Street",
+    "ka": "თოჯინების თეატრი შავთელის ქუჩა 26-ში",
+    "uk": "Театр ляльок на вулиці Шавтелі, 26"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Шавтели, 26",
+    "en": "26 Shavteli Street",
+    "ka": "შავთელის ქუჩა 26",
+    "uk": "вулиця Шавтелі, 26"
+  },
+  "descriptions": {
+    "ru": "Историческое здание театра марионеток: двухэтажный кирпичный корпус с полуподвалом, выступающим крылом, балконами и застеклёнными лоджиями. В реестре отдельно отмечена художественная деревянная дверь.",
+    "en": "Historic building of the Puppet Theatre: a two-storey brick body with a semi-basement, projecting wing, balconies, and glazed loggias. The heritage register also notes its artistically valuable wooden door.",
+    "ka": "თოჯინების თეატრის ისტორიული შენობა: ორსართულიანი აგურის ნაგებობა ნახევარსარდაფით, გამოწეული ფრთით, აივნებითა და შემინული ლოჯიებით. მემკვიდრეობის რეესტრი მხატვრულად ღირებულ ხის კარსაც აღნიშნავს.",
+    "uk": "Історична будівля театру ляльок: двоповерховий цегляний корпус із напівпідвалом, виступним крилом, балконами та заскленими лоджіями. Реєстр спадщини також відзначає художньо цінні дерев’яні двері."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.806314,
+    41.696191
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3662",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/706233174",
+    "https://www.matsne.gov.ge/ka/document/view/63112"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3662,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3662"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-706233174; рейтинг значимости предварительный."
+}

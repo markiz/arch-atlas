@@ -1,0 +1,74 @@
+{
+  "id": "osm-1219556099",
+  "osmId": "way/1219556099",
+  "atlasId": "osm-1219556099",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь святой великомученицы Марины",
+    "en": "Church of the Holy Great Martyr Marina",
+    "ka": "ავლაბრის წმინდა მარინეს ეკლესია",
+    "uk": "Церква святої великомучениці Марини"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Душети, 12",
+    "en": "12 Dusheti Street",
+    "ka": "დუშეთის ქუჩა 12",
+    "uk": "вулиця Душеті, 12"
+  },
+  "descriptions": {
+    "ru": "Церковь Святой Марины находится в глубине жилого квартала Авлабари.",
+    "en": "St Marina Church stands within a residential block in Avlabari.",
+    "ka": "წმინდა მარინეს ეკლესია ავლაბრის საცხოვრებელი კვარტლის სიღრმეში მდებარეობს.",
+    "uk": "Церква Святої Марини розташована в глибині житлового кварталу Авлабарі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8134231,
+    41.693649
+  ],
+  "source": "https://mematiane.ge/product-details.php?id=15327",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1219556099",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3393"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": 15327,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=15327"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 30,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1219556099; рейтинг значимости предварительный."
+}

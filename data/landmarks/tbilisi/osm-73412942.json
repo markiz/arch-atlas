@@ -1,0 +1,75 @@
+{
+  "id": "osm-73412942",
+  "osmId": "way/73412942",
+  "atlasId": "osm-73412942",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святой Нино на Кукийском кладбище",
+    "en": "Kukia Saint Nino Church",
+    "ka": "კუკიის წმინდა ნინოს ეკლესია",
+    "uk": "Церква Святої Ніно на Кукійському цвинтарі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "подъём Норио, 36",
+    "en": "36 Norio Rise",
+    "ka": "ნორიოს აღმართი 36",
+    "uk": "підйом Норіо, 36"
+  },
+  "descriptions": {
+    "ru": "Православная церковь Святой Нино на территории Кукийского кладбища.",
+    "en": "The Orthodox Church of Saint Nino at Kukia Cemetery.",
+    "ka": "წმინდა ნინოს მართლმადიდებლური ეკლესია კუკიის სასაფლაოზე.",
+    "uk": "Православна церква Святої Ніно на території Кукійського цвинтаря."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.811001,
+    41.714483
+  ],
+  "source": "https://mematiane.ge/church.php?id=1716",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/73412942",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4945"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": 1716,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=1716"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 37,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-73412942; рейтинг значимости предварительный."
+}

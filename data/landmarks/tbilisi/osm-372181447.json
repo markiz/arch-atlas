@@ -1,0 +1,75 @@
+{
+  "id": "osm-372181447",
+  "osmId": "way/372181447",
+  "atlasId": "osm-372181447",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Караван-сарай Ходжапарукова и Майсурадзе",
+    "en": "Maisuradze-Khojaparukov Caravanserai",
+    "ka": "მაისურაძე-ხოჯაპარუკოვის ქარვასლა",
+    "uk": "Караван-сарай Ходжапарукова и Майсурадзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 36",
+    "en": "36 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 36",
+    "uk": "вулиця Коте Абхазі, 36"
+  },
+  "descriptions": {
+    "ru": "Караван-сарай Ходжапарукова и Майсурадзе — историческое торговое здание в Старом городе.",
+    "en": "The Khojaparkov and Maisuradze Caravanserai, a historic trading building in the old city.",
+    "ka": "ხოჯაპარუკოვისა და მაისურაძის ქარვასლა — ისტორიული სავაჭრო შენობა ძველ ქალაქში.",
+    "uk": "Караван-сарай Ходжапарукова та Майсурадзе — історична торгова будівля в Старому місті."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8067882,
+    41.6916584
+  ],
+  "source": "https://www.openstreetmap.org/way/372181447",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42644607"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3781"
+  },
+  "recognition": {
+    "wikidata": "Q42644607",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 20,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "есть Wikidata",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-372181447; рейтинг значимости предварительный."
+}

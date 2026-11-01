@@ -1,0 +1,75 @@
+{
+  "id": "osm-75312921",
+  "osmId": "way/75312921",
+  "atlasId": "osm-75312921",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Старая Ратуша",
+    "en": "Old Town Hall",
+    "ka": "თბილისის საკრებულო",
+    "uk": "Старая Ратуша"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Свободы, 2",
+    "en": "2 Freedom Square",
+    "ka": "თავისუფლების მოედანი 2",
+    "uk": "площа Свободи, 2"
+  },
+  "descriptions": {
+    "ru": "Старая ратуша Тбилиси на площади Свободы — историческое общественное здание города.",
+    "en": "Tbilisi’s Old Town Hall on Freedom Square, a historic civic building.",
+    "ka": "თბილისის ძველი მთავრობის სახლი თავისუფლების მოედანზე — ქალაქის ისტორიული საზოგადოებრივი შენობა.",
+    "uk": "Стара ратуша Тбілісі на площі Свободи — історична громадська будівля міста."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8015391,
+    41.6927341
+  ],
+  "source": "https://www.openstreetmap.org/way/75312921",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42639309"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3878"
+  },
+  "recognition": {
+    "wikidata": "Q42639309",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Tbilisi_Assembly_Building",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi city assembly building",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 64,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-75312921; рейтинг значимости предварительный."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "osm-531596101",
+  "osmId": "way/531596101",
+  "atlasId": "osm-531596101",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Дидубийская церковь Рождества Богородицы",
+    "en": "Didube Church of the Nativity of the Virgin",
+    "ka": "დიდუბის ღვთისმშობლის ეკლესია",
+    "uk": "Дідубійська церква Різдва Богородиці"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Акакия Церетели, 44",
+    "en": "44 Akaki Tsereteli Avenue",
+    "ka": "აკაკი წერეთლის გამზირი 44",
+    "uk": "проспект Акакія Церетелі, 44"
+  },
+  "descriptions": {
+    "ru": "Дидубийская церковь посвящена Рождеству Богородицы; здесь хранится особо почитаемая Дидубийская икона Богоматери.",
+    "en": "Didube Church is dedicated to the Nativity of the Virgin and houses the revered Didube icon of the Mother of God.",
+    "ka": "დიდუბის ტაძარი ღვთისმშობლის შობის სახელობისაა; აქ დაბრძანებულია დიდუბის ღვთისმშობლის სასწაულმოქმედი ხატი.",
+    "uk": "Дідубійська церква присвячена Різдву Богородиці; тут зберігається шанована Дідубійська ікона Божої Матері."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7858386,
+    41.729696
+  ],
+  "source": "https://georgianencyclopedia.ge/ka/form/4431",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/531596101",
+    "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/gvtismshoblis-didube.htm"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 37,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-531596101; рейтинг значимости предварительный."
+}

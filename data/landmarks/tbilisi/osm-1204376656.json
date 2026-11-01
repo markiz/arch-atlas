@@ -1,0 +1,73 @@
+{
+  "id": "osm-1204376656",
+  "atlasId": "osm-1204376656",
+  "category": "church",
+  "subcategory": "chapel",
+  "names": {
+    "ru": "Часовня-усыпальница на Верийском кладбище",
+    "en": "Funerary chapel (crypt) at Vere Cemetery",
+    "ka": "სამლოცველო-აკლდამა ვერის სასაფლაოზე",
+    "uk": "Каплиця-усипальниця на Верійському цвинтарі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гурама Рчеулишвили, 12 (Верхнее Вере, Верийское кладбище)",
+    "en": "12 Guram Rcheulishvili Street (Upper Vere, Vere Cemetery)",
+    "ka": "გურამ რჩეულიშვილის ქუჩა 12 (ზემო ვერე, ვერის სასაფლაო)",
+    "uk": "вулиця Гурама Рчеулішвілі, 12 (Верхнє Вере, Верійський цвинтар)"
+  },
+  "descriptions": {
+    "ru": "Небольшая купольная усыпальница-восьмерик: гранёный купол, на каждой грани — ложная ниша, выведенная в кирпичной кладке; по описанию реестра, первоначально здесь предполагалась аркада. Сооружение компактное, с глухими плоскостями стен и единственным проёмом, читается как кладбищенская часовня-склеп, а не как приходской храм.",
+    "en": "A small domed octagonal burial chapel: a faceted dome, on each facet a blind niche built into the brickwork; according to the register's description, an arcade was originally intended here. The structure is compact, with blank wall planes and a single opening, and reads as a cemetery chapel-crypt rather than a parish church.",
+    "ka": "მცირე გუმბათოვანი აკლდამა-რვაწახნაგა: წახნაგოვანი გუმბათი, თითოეულ წახნაგზე — ცრუ ნიში, აგურის წყობაში გამოყვანილი; რეესტრის აღწერის მიხედვით, თავდაპირველად აქ არკადა იყო გათვალისწინებული. ნაგებობა კომპაქტურია, ყრუ კედლის სიბრტყეებითა და ერთადერთი ღიობით, იკითხება როგორც სასაფლაოს სამლოცველო-სამარხი და არა სამრევლო ტაძარი.",
+    "uk": "Невелика купольна усипальниця-восьмерик: гранований купол, на кожній грані — сліпа ніша, виведена в цегляній кладці; за описом реєстру, первісно тут передбачалася аркада. Споруда компактна, з глухими площинами стін і єдиним прорізом, читається як цвинтарна каплиця-склеп, а не як парафіяльний храм."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7797503,
+    41.7028585
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4951",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1204376656"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "listed",
+    "registryId": 4951,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4951"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 42,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1204376656; рейтинг значимости предварительный."
+}

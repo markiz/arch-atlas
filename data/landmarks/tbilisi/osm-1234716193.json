@@ -1,0 +1,73 @@
+{
+  "id": "osm-1234716193",
+  "osmId": "way/1234716193",
+  "atlasId": "osm-1234716193",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Тбилисский цирк",
+    "en": "Tbilisi Circus",
+    "ka": "თბილისის ცირკი",
+    "uk": "Тбіліський цирк"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Героев, 1",
+    "en": "1 Heroes Square",
+    "ka": "გმირთა მოედანი 1",
+    "uk": "площа Героїв, 1"
+  },
+  "descriptions": {
+    "ru": "Круглое здание цирка с портиком возвышается над площадью Героев.",
+    "en": "The circular circus building with a portico stands above Heroes Square.",
+    "ka": "პორტიკიანი ცირკის მრგვალი შენობა გმირთა მოედნის ზემოთ დგას.",
+    "uk": "Кругла будівля цирку з портиком височіє над площею Героїв."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7851221,
+    41.714334
+  ],
+  "source": "https://circus.ge/about/en",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1234716193"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 34,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1234716193; рейтинг значимости предварительный."
+}

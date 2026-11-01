@@ -1,0 +1,74 @@
+{
+  "id": "osm-58071533",
+  "osmId": "way/58071533",
+  "atlasId": "osm-58071533",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Шахматный Дворец им. Ноны Гаприндашвили",
+    "en": "Nona Gaprindashvili Chess Palace",
+    "ka": "ნონა გაფრინდაშვილის სახელობის ჭადრაკის სასახლე",
+    "uk": "Шахматний Палац им. Нони Гаприндашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мераба Костава, 29",
+    "en": "29 Merab Kostava Street",
+    "ka": "მერაბ კოსტავას ქუჩა 29",
+    "uk": "вулиця Мераба Костави, 29"
+  },
+  "descriptions": {
+    "ru": "Шахматный дворец имени Ноны Гаприндашвили — здание 1973 года, один из ярких примеров модернизма Тбилиси.",
+    "en": "The Nona Gaprindashvili Chess Palace, a 1973 building and one of Tbilisi’s notable modernist landmarks.",
+    "ka": "ნონა გაფრინდაშვილის სახელობის ჭადრაკის სასახლე — 1973 წლის შენობა, თბილისის მოდერნიზმის ერთ-ერთი გამორჩეული ნიმუში.",
+    "uk": "Шаховий палац імені Нони Гапріндашвілі — будівля 1973 року, один із яскравих прикладів модернізму Тбілісі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7876875,
+    41.7082008
+  ],
+  "source": "https://www.openstreetmap.org/way/58071533",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q130421043"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16006"
+  },
+  "recognition": {
+    "wikidata": "Q130421043",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Nona Gaprindashvili Chess Palace",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 53,
+    "components": {
+      "heritage": 20,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 2,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "есть Wikidata",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-58071533; рейтинг значимости предварительный."
+}

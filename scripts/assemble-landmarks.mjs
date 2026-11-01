@@ -20,7 +20,7 @@ const SUBCATEGORIES=new Set([
  'church','cathedral','monastery','chapel','synagogue','mosque',
  'fortress','tower','palace',
  'theatre','opera','concert_hall',
- 'monument','memorial','archaeological_site','historic_building',
+ 'monument','memorial','archaeological_site','historic_building','bridge','bath','pantheon','funicular',
 ]);
 const HERITAGE_STATUSES=new Set(['national','local','listed','none','unknown']);
 const STATUSES=new Set(['active','closed','ruined','demolished','unknown']);

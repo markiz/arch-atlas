@@ -1,0 +1,74 @@
+{
+  "id": "rustaveli",
+  "osmId": "relation/19640789",
+  "atlasId": "rustaveli",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Театр имени Шота Руставели",
+    "en": "Rustaveli National Theatre",
+    "ka": "შოთა რუსთაველის თეატრი",
+    "uk": "Театр імені Шота Руставелі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 17",
+    "en": "17 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 17",
+    "uk": "проспект Шота Руставелі, 17"
+  },
+  "descriptions": {
+    "ru": "Театральное здание с богато оформленным фасадом создавалось для Тифлисского артистического общества.",
+    "en": "The theatre, with its richly decorated façade, was built for the Tiflis Artists’ Society.",
+    "ka": "მდიდრულად მორთული ფასადის მქონე თეატრი თბილისის არტისტული საზოგადოებისთვის აშენდა.",
+    "uk": "Театр із багато оздобленим фасадом збудували для Тифліського артистичного товариства."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.79777778,
+    41.69972222
+  ],
+  "source": "https://scantbilisi.ge/en/objects/268/Rustaveli-National-Theatre-17%2C-Rustaveli-Ave",
+  "otherSources": [
+    "https://www.openstreetmap.org/relation/19640789"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1860439",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/რუსთაველის_თეატრი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Rustaveli Theatre",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 46,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа rustaveli; рейтинг значимости предварительный."
+}

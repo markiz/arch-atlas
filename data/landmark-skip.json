@@ -1,0 +1,6 @@
+{
+  "description": "OSM landmark features intentionally excluded from the basemap layer.",
+  "osmIds": [
+    "node/14133709401"
+  ]
+}

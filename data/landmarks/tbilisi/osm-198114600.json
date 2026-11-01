@@ -1,0 +1,72 @@
+{
+  "id": "osm-198114600",
+  "atlasId": "osm-198114600",
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Верико Анджапаридзе и Михаила Чиаурели",
+    "en": "Veriko Anjaparidze and Mikheil Chiaureli House-Museum",
+    "ka": "ვერიკო ანჯაფარიძისა და მიხეილ ჭიაურელის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Веріко Анджапарідзе та Михайла Чіаурелі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Верико Анджапаридзе, 16",
+    "en": "16 Veriko Anjaparidze Street",
+    "ka": "ვერიკო ანჯაფარიძის ქუჩა 16",
+    "uk": "вулиця Веріко Анджапарідзе, 16"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом вытянутого прямоугольного плана, сложенный из «русского» кирпича с добавлением крупного светлого кирпича на третьем этаже; фасады неоштукатурены, кровля жестяная. Главный поперечный фасад на Анджапаридзе асимметричен и приподнят на цокольном этаже: его стена выходит из плоскости узкой ступенью с мелкими лучковыми окнами, арки выложены горизонтальной кирпичной кладкой. Металлическая двустворчатая дверь прорезана у левого края фасада и завершена узким навесом; над ней пара арочных окон, по сторонам — более узкие и высокие. Второй этаж несёт балкон с ажурным металлическим ограждением, интерьеры сохраняют мемориальную планировку.",
+    "en": "A three-storey house of elongated rectangular plan, built of “Russian” brick with an addition of large light-coloured brick on the third storey; the façades are unplastered and the roof is of tin. The main transverse façade on Andzhaparidze Street is asymmetrical and raised on a plinth storey: its wall steps out of the plane in a narrow projection with small segmental-arched windows, and the arches are laid in horizontal brickwork. A two-leaf metal door is cut near the left edge of the façade and is completed by a narrow canopy; above it are a pair of arched windows, and at the sides narrower and taller ones. The second storey carries a balcony with an openwork metal railing, and the interiors retain their memorial layout.",
+    "ka": "სამსართულიანი სახლი გაწელილი მართკუთხა გეგმით, ნაგები „რუსული“ აგურისგან, მესამე სართულზე დამატებული მსხვილი ღია აგურით; ფასადები შეულესავია, სახურავი — თუნუქის. ანჯაფარიძის ქუჩაზე მთავარი განივი ფასადი ასიმეტრიულია და ცოკოლის სართულზეა ამაღლებული: მისი კედელი სიბრტყიდან ვიწრო საფეხურით გამოდის წვრილი ბრტყელი თაღის სარკმლებით, თაღები ჰორიზონტალური აგურის წყობითაა გამოყვანილი. ლითონის ორფრთიანი კარი ფასადის მარცხენა კიდესთანაა ამოჭრილი და ვიწრო ქოლგითაა დაგვირგვინებული; მის ზემოთ წყვილი თაღოვანი სარკმელია, გვერდებზე — უფრო ვიწრო და მაღალი. მეორე სართულს აჟურული ლითონის მოაჯირიანი აივანი აქვს, ინტერიერებს კი მემორიალური დაგეგმარება შენარჩუნებული აქვს.",
+    "uk": "Триповерховий будинок витягнутого прямокутного плану, складений із «російської» цегли з додаванням великої світлої цегли на третьому поверсі; фасади непотиньковані, покрівля жерстяна. Головний поперечний фасад на Анджапарідзе асиметричний і піднятий на цокольному поверсі: його стіна виходить із площини вузьким уступом із дрібними лучковими вікнами, арки викладені горизонтальною цегляною кладкою. Металеві двостулкові двері прорізані біля лівого краю фасаду й завершені вузьким навісом; над ними пара арочних вікон, з боків — вужчі й вищі. Другий поверх несе балкон з ажурною металевою огорожею, інтер'єри зберігають меморіальне планування."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7817668,
+    41.7115317
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4896",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/198114600"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "listed",
+    "registryId": 4896,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4896"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 39,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-198114600; рейтинг значимости предварительный."
+}

@@ -1,0 +1,72 @@
+{
+  "id": "osm-34148385",
+  "osmId": "way/34148385",
+  "atlasId": "osm-34148385",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Тбилисский дворец спорта",
+    "en": "Tbilisi Sports Palace",
+    "ka": "თბილისის სპორტის სასახლე",
+    "uk": "Тбіліський палац спорту"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь 26 Мая, 1",
+    "en": "1 26 May Square",
+    "ka": "26 მაისის მოედანი 1",
+    "uk": "площа 26 Травня, 1"
+  },
+  "descriptions": {
+    "ru": "Спортивный дворец с большим бетонным куполом и арочными галереями на площади 26 Мая.",
+    "en": "A sports palace with a large concrete dome and arched galleries on 26 May Square.",
+    "ka": "სპორტის სასახლე დიდი ბეტონის გუმბათითა და თაღოვანი გალერეებით 26 მაისის მოედანზე.",
+    "uk": "Палац спорту з великим бетонним куполом та арковими галереями на площі 26 Травня."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7795968,
+    41.7195855
+  ],
+  "source": "https://taa.net.ge/en/archive-geo/tbilisi-sports-palace/",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/34148385"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 29,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-34148385; рейтинг значимости предварительный."
+}

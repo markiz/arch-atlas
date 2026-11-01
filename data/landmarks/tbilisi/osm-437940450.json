@@ -1,0 +1,72 @@
+{
+  "id": "osm-437940450",
+  "osmId": "way/437940450",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "tower",
+  "names": {
+    "ru": "Тбилисская телевышка",
+    "en": "Tbilisi TV Broadcasting Tower",
+    "ka": "თბილისის ტელეანძა",
+    "uk": "Тбіліська телевежа"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "гора Мтацминда",
+    "en": "Mtatsminda Mountain",
+    "ka": "მთაწმინდის მთა",
+    "uk": "гора Мтацмінди"
+  },
+  "descriptions": {
+    "ru": "Телевизионная башня на горе Мтацминда, построенная в 1972 году.",
+    "en": "The TV broadcasting tower on Mtatsminda Mountain, built in 1972.",
+    "ka": "სატელევიზიო ტელეანძა მთაწმინდის მთაზე, აშენებული 1972 წელს.",
+    "uk": "Телевізійна вежа на горі Мтацмінди, збудована 1972 року."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.785009,
+    41.695751
+  ],
+  "source": "https://www.openstreetmap.org/way/437940450",
+  "otherSources": [
+    "https://en.wikipedia.org/wiki/Tbilisi_TV_Broadcasting_Tower"
+  ],
+  "districtId": "mtatsminda",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1407344",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Tbilisi_TV_Broadcasting_Tower",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi TV Broadcasting Tower",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 29,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "osm-73492672",
+  "atlasId": "osm-73492672",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святых Петра и Павла",
+    "en": "Church of Saints Peter and Paul",
+    "ka": "პეტრე-პავლეს სახელობის ეკლესია",
+    "uk": "Церква Святих Петра і Павла"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Авлабари, Петропавловское кладбище (за железной дорогой Тбилиси—Баку, район улицы Никифоре Ирбахи)",
+    "en": "Avlabari, Peter and Paul Cemetery (beyond the Tbilisi–Baku railway, in the area of Nikifore Irbakhi Street)",
+    "ka": "ავლაბარი, პეტრე-პავლეს სასაფლაო (თბილისი—ბაქოს რკინიგზის იქით, ნიკიფორე ირბახის ქუჩის მიდამოები)",
+    "uk": "Авлабарі, Петропавлівський цвинтар (за залізницею Тбілісі—Баку, район вулиці Нікіфоре Ірбахі)"
+  },
+  "descriptions": {
+    "ru": "Небольшая зальная (однонефная, без купола) церковь на Петропавловском кладбище в Авлабари. Компактный корпус с полукруглой апсидой, поставленный за железнодорожной линией Тбилиси—Баку, в стороне от основной городской застройки. Точная архитектурная датировка и автор не установлены.",
+    "en": "A small hall church (single-nave, without a dome) in the Peter and Paul cemetery in Avlabari. A compact building with a semicircular apse, set beyond the Tbilisi–Baku railway line, away from the main urban development. Its exact architectural dating and author have not been established.",
+    "ka": "მცირე დარბაზული (ერთნავიანი, უგუმბათო) ეკლესია ავლაბრის პეტრე-პავლეს სასაფლაოზე. კომპაქტური კორპუსი ნახევარწრიული აბსიდით, თბილისი—ბაქოს რკინიგზის ხაზის იქით, ძირითადი ქალაქური განაშენიანებისგან მოშორებით. ზუსტი არქიტექტურული დათარიღება და ავტორი დადგენილი არ არის.",
+    "uk": "Невелика зальна (однонавова, без купола) церква на Петропавлівському цвинтарі в Авлабарі. Компактний корпус із напівкруглою апсидою, поставлений за залізничною лінією Тбілісі—Баку, осторонь основної міської забудови. Точне архітектурне датування та автор не встановлені."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8279201,
+    41.6935518
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24367",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/73492672"
+  ],
+  "districtId": "avlabari",
+  "heritage": {
+    "status": "listed",
+    "registryId": 24367,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24367"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-73492672; рейтинг значимости предварительный."
+}

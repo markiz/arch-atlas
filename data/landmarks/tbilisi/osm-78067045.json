@@ -1,0 +1,75 @@
+{
+  "id": "osm-78067045",
+  "osmId": "way/78067045",
+  "atlasId": "osm-78067045",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Здание театра Марджанишвили",
+    "en": "Marjanishvili Theatre building",
+    "ka": "მარჯანიშვილის თეატრის შენობა",
+    "uk": "Будівля театра Марджанішвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Марджанишвили, 8",
+    "en": "8 Kote Marjanishvili Street",
+    "ka": "კოტე მარჯანიშვილის ქუჩა 8",
+    "uk": "вулиця Коте Марджанішвілі, 8"
+  },
+  "descriptions": {
+    "ru": "Драматический театр имени Котэ Марджанишвили в историческом здании 1909 года на площади Марджанишвили.",
+    "en": "The Kote Marjanishvili Drama Theatre in its historic 1909 building on Marjanishvili Square.",
+    "ka": "კოტე მარჯანიშვილის სახელობის დრამატული თეატრი 1909 წლის ისტორიულ შენობაში, მარჯანიშვილის მოედანზე.",
+    "uk": "Драматичний театр імені Коте Марджанішвілі в історичній будівлі 1909 року на площі Марджанішвілі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.79452,
+    41.7089074
+  ],
+  "source": "https://www.openstreetmap.org/way/78067045",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42645954"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3278"
+  },
+  "recognition": {
+    "wikidata": "Q42645954",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Marjanishvili Theatre building",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 60,
+    "components": {
+      "heritage": 20,
+      "recognition": 6,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "есть Wikidata",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-78067045; рейтинг значимости предварительный."
+}

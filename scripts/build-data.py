@@ -5,12 +5,18 @@ root=pathlib.Path(__file__).resolve().parent.parent
 landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
 curated_name_variants=json.loads((root/'data/basemap-name-translations.json').read_text()) if (root/'data/basemap-name-translations.json').exists() else {}
 landmark_cards={}
+landmark_skips=set()
+landmark_skip_path=root/'data/landmark-skip.json'
+if landmark_skip_path.exists():
+ try: landmark_skips=set(json.loads(landmark_skip_path.read_text()).get('osmIds',[]))
+ except Exception: landmark_skips=set()
 landmark_cards_dir=root/'data/landmarks/tbilisi'
 if landmark_cards_dir.exists():
  for card_path in sorted(landmark_cards_dir.glob('*.json')):
   try: card=json.loads(card_path.read_text())
   except Exception: continue
-  if card.get('osmId') and card.get('names'):landmark_cards[card['osmId']]=card
+  card_key=card.get('osmId') or card.get('id')
+  if card_key and card.get('names'):landmark_cards[card_key]=card
 nodes={};node_tags={};ways={};relations={}
 paths=sorted((root/'raw').glob('osm-grid-*.xml'))
 parse_progress=Progress(len(paths),'parse OSM XML')
@@ -65,6 +71,8 @@ def name_candidates(tags):
 def apply_landmark_card(props,osm_id):
  card=landmark_cards.get(osm_id)
  if not card:return props
+ props['landmarkId']=card.get('id')
+ if card.get('category'):props['category']=card['category']
  names=card.get('names') or {}
  if all(names.get(language) for language in ('ru','en','ka','uk')):
   props['names']={language:names[language] for language in ('ru','en','ka','uk')}
@@ -97,7 +105,7 @@ node_progress.start()
 for index,(nid,tags) in enumerate(node_tags.items(),1):
  if index%1000==0:node_progress.update(index,f'{len(features)} features')
  category=landmark(tags)
- if category:
+ if category and f'node/{nid}' not in landmark_skips:
   props={'kind':'landmark','category':category,'osmId':f'node/{nid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'node/{nid}');name=props['names']['ru']
   if name:props['name']=name
   if not name:continue
@@ -105,7 +113,7 @@ for index,(nid,tags) in enumerate(node_tags.items(),1):
 node_progress.finish()
 for rid,relation in relations.items():
  tags=relation['tags'];category=landmark(tags)
- if not category:continue
+ if not category or f'relation/{rid}' in landmark_skips:continue
  coords=[]
  for member_type,ref,role in relation['members']:
   if member_type=='way' and role in ('','outer') and ref in ways:
@@ -124,7 +132,7 @@ for index,(wid,w) in enumerate(ways.items(),1):
  if len(coords)!=len(w['refs']) or len(coords)<2:continue
  tags=w['tags']; closed=len(coords)>3 and coords[0]==coords[-1]; kind=None
  category=landmark(tags)
- if category and closed:
+ if category and closed and f'way/{wid}' not in landmark_skips:
   props={'kind':'landmark','category':category,'osmId':f'way/{wid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'way/{wid}');name=props['names']['ru']
   if name:props['name']=name
   if not name:continue
@@ -183,6 +191,7 @@ if city_extract.exists():
    if len(coords)<4 or coords[0]!=coords[-1]:continue
    kind='green';geometry={'type':'Polygon','coordinates':[coords]}
   elif (tags.get('tourism')=='museum' or tags.get('amenity')=='museum'):
+   if f'{osm_type}/{osm_id}' in landmark_skips:continue
    kind='landmark';props['category']='museum'
    props.update(translated_names(tags));props=apply_landmark_card(props,f'{osm_type}/{osm_id}');name=props['names']['ru']
    if name:props['name']=name
@@ -219,6 +228,26 @@ if building_extract.exists():
   features.append(feature);local_ids.add(('way',osm_id[4:]));added+=1
  building_progress.finish()
  print('Tbilisi-wide building outlines added',added)
+
+# Curated landmark cards may describe objects outside the OSM extracts (atlas
+# seeds, monuments, theatres). Add those as point landmarks once.
+existing_landmark_ids={f['properties'].get('osmId') for f in features if f['properties'].get('kind')=='landmark'}
+card_landmarks_added=0
+for card in landmark_cards.values():
+ osm_id=card.get('osmId')
+ if osm_id and osm_id in existing_landmark_ids:continue
+ category=card.get('category')
+ if category not in ('museum','church','castle','theatre','monument'):continue
+ if card.get('status') in ('closed','demolished'):continue
+ names=card.get('names') or {}
+ if not all(names.get(language) for language in ('ru','en','ka','uk')):continue
+ point=card.get('coordinates')
+ if not point:continue
+ props={'kind':'landmark','category':category,'landmarkId':card.get('id'),'names':{language:names[language] for language in ('ru','en','ka','uk')},'name':names['ru']}
+ if osm_id:props['osmId']=osm_id
+ features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':[round(float(point[0]),6),round(float(point[1]),6)]}})
+ card_landmarks_added+=1
+print('Curated card-only landmarks added',card_landmarks_added)
 
 # Atlas cards are stored one JSON per object in data/atlas/<city>/ and packed by
 # scripts/assemble-atlas.mjs. This builder owns only the basemap and the

@@ -1,0 +1,72 @@
+{
+  "id": "osm-1062990549",
+  "osmId": "way/1062990549",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "monument",
+  "names": {
+    "ru": "Памятник Вахтангу Горгасали",
+    "en": "Statue of King Vakhtang Gorgasali",
+    "ka": "ვახტანგ გორგასლის ძეგლი",
+    "uk": "Пам’ятник Вахтангу Горгасалі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Метехский мост",
+    "en": "Metekhi Bridge",
+    "ka": "მეტეხის ხიდი",
+    "uk": "Метехський міст"
+  },
+  "descriptions": {
+    "ru": "Конная статуя царя Вахтанга Горгасали у Метехского моста.",
+    "en": "The equestrian statue of King Vakhtang Gorgasali by the Metekhi Bridge.",
+    "ka": "მეფე ვახტანგ გორგასლის ცხენოსანი ძეგლი მეტეხის ხიდთან.",
+    "uk": "Кінна статуя царя Вахтанга Горгасалі біля Метехського мосту."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.810721,
+    41.690314
+  ],
+  "source": "https://www.openstreetmap.org/way/1062990549",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1188006"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1188006",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Vakhtang Gorgasali's statue, Tbilisi",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 16,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

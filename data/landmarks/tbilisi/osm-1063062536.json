@@ -1,0 +1,72 @@
+{
+  "id": "osm-1063062536",
+  "osmId": "way/1063062536",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "monument",
+  "names": {
+    "ru": "Мать Картли",
+    "en": "Kartlis Deda",
+    "ka": "ქართვლის დედა",
+    "uk": "Мати Картлі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Сололакский хребет",
+    "en": "Sololaki Ridge",
+    "ka": "სოლოლაკის ქედი",
+    "uk": "Сололакський хребет"
+  },
+  "descriptions": {
+    "ru": "Аллегорическая статуя женщины с мечом и чашей на Сололакском хребте, один из символов Тбилиси.",
+    "en": "An allegorical statue of a woman with a sword and a cup on the Sololaki ridge, one of Tbilisi’s symbols.",
+    "ka": "ქალის ალეგორული ქანდაკება მახვილითა და თასით სოლოლაკის ქედზე, თბილისის ერთ-ერთი სიმბოლო.",
+    "uk": "Алегорична статуя жінки з мечем і чашею на Сололакському хребті, один із символів Тбілісі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.804611,
+    41.688124
+  ],
+  "source": "https://www.openstreetmap.org/way/1063062536",
+  "otherSources": [
+    "https://en.wikipedia.org/wiki/Kartlis_Deda"
+  ],
+  "districtId": "sololaki",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1147179",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Kartlis_Deda",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Kartlis Deda",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 36,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 4,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

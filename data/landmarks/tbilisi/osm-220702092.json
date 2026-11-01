@@ -1,0 +1,75 @@
+{
+  "id": "osm-220702092",
+  "osmId": "way/220702092",
+  "atlasId": "osm-220702092",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Эчмиадзин в Армази",
+    "en": "Etchmiadzin Church in Armazi",
+    "ka": "არმაზის ეჩმიაძინის ეკლესია",
+    "uk": "Церква Ечміадзин в Армазі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Армази, 3",
+    "en": "3 Armazi Street",
+    "ka": "არმაზის ქუჩა 3",
+    "uk": "вулиця Армазі, 3"
+  },
+  "descriptions": {
+    "ru": "Кирпичная армянская церковь крестово-купольного типа в районе Армази. В планировке и фасадах сочетаются традиционные церковные формы и отдельные классические мотивы.",
+    "en": "A brick Armenian church with a domed cross-in-square plan in the Armazi district. Its layout and façades combine traditional church forms with some Classical influences.",
+    "ka": "არმაზის უბანში მდებარე აგურის სომხური ჯვარ-გუმბათოვანი ეკლესია. მის გეგმასა და ფასადებში ტრადიციული საეკლესიო ფორმები კლასიცისტურ მოტივებს ერწყმის.",
+    "uk": "Цегляна вірменська церква хрестово-купольного типу в районі Армазі. У її плануванні та фасадах поєднано традиційні церковні форми й окремі класицистичні мотиви."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8136741,
+    41.6925826
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3362",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/220702092",
+    "https://armenianchurch.ge/en/churches/dejstvuyushchie-tserkvi-i-chasovni-2/existing-churches-and-chapels/st-etchmiatsin-church"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3362,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3362"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 40,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-220702092; рейтинг значимости предварительный."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "osm-585352693",
+  "atlasId": "osm-585352693",
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Собор Святой Троицы (Самеба)",
+    "en": "Holy Trinity Cathedral of Tbilisi (Sameba)",
+    "ka": "წმინდა სამების საკათედრო ტაძარი",
+    "uk": "Собор Святої Трійці (Самеба)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Самрекело, 19 (Елийская гора, Авлабари)",
+    "en": "19 Samrekelo Street (Elia Hill, Avlabari)",
+    "ka": "სამრეკელოს ქუჩა 19 (ელიას გორა, ავლაბარი)",
+    "uk": "вулиця Самрекело, 19 (Єлійська гора, Авлабарі)"
+  },
+  "descriptions": {
+    "ru": "Крестово-купольный собор с планом около 70×65 м и высотой 86,1 м до вершины креста; купол на восьми опорах, девять приделов, пять из которых вынесены в двухъярусную подземную часть. Фасады облицованы естественным камнем, интерьер дополняют резьба и мозаики; в комплекс входят отдельно стоящая звонница, резиденция патриарха, монастырь и семинария.",
+    "en": "A cross-domed cathedral with a plan of about 70×65 m and a height of 86.1 m to the top of the cross; the dome rests on eight piers, and there are nine chapels, five of which are placed in a two-tier underground part. The façades are faced with natural stone, and the interior is complemented by carving and mosaics; the complex includes a free-standing bell tower, the patriarch's residence, a monastery and a seminary.",
+    "ka": "ჯვარ-გუმბათოვანი საკათედრო ტაძარი, გეგმით დაახლოებით 70×65 მ და სიმაღლით 86,1 მ ჯვრის წვერომდე; გუმბათი რვა საყრდენზეა, ცხრა საკურთხეველია, რომელთაგან ხუთი ორსართულიან მიწისქვეშა ნაწილშია განთავსებული. ფასადები ბუნებრივი ქვითაა მოპირკეთებული, ინტერიერს ავსებს ჩუქურთმა და მოზაიკა; ანსამბლში შედის ცალკე მდგომი სამრეკლო, პატრიარქის რეზიდენცია, მონასტერი და სემინარია.",
+    "uk": "Хрестово-купольний собор із планом близько 70×65 м і висотою 86,1 м до вершини хреста; купол на восьми опорах, дев'ять приділів, п'ять із яких винесені в дворівневу підземну частину. Фасади облицьовані природним каменем, інтер'єр доповнюють різьблення та мозаїки; до комплексу входять окремо розташована дзвіниця, резиденція патріарха, монастир і семінарія."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8165414,
+    41.6975531
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=7981",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/585352693"
+  ],
+  "districtId": "avlabari",
+  "heritage": {
+    "status": "listed",
+    "registryId": 7981,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=7981"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 20,
+      "age": 2,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-585352693; рейтинг значимости предварительный."
+}

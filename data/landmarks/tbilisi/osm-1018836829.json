@@ -1,0 +1,72 @@
+{
+  "id": "osm-1018836829",
+  "osmId": "way/1018836829",
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "monument",
+  "names": {
+    "ru": "Памятник свободы",
+    "en": "Freedom Monument",
+    "ka": "თავისუფლების მონუმენტი",
+    "uk": "Монумент Свободи"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Свободы",
+    "en": "Freedom Square",
+    "ka": "თავისუფლების მოედანი",
+    "uk": "площа Свободи"
+  },
+  "descriptions": {
+    "ru": "Монумент Святого Георгия на площади Свободы, установленный в 2006 году.",
+    "en": "The St George monument on Freedom Square, installed in 2006.",
+    "ka": "წმინდა გიორგის მონუმენტი თავისუფლების მოედანზე, დადგმული 2006 წელს.",
+    "uk": "Монумент Святого Георгія на площі Свободи, встановлений 2006 року."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.801487,
+    41.693396
+  ],
+  "source": "https://www.openstreetmap.org/way/1018836829",
+  "otherSources": [
+    "https://en.wikipedia.org/wiki/Freedom_Monument_(Tbilisi)"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3645634",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Freedom_Monument_(Tbilisi)",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:St George Monument, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 29,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Добавлено из OSM и указанных источников; рейтинг значимости предварительный."
+}

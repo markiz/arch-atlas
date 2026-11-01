@@ -47,7 +47,7 @@ data/landmarks/tbilisi/osm-1064270003.json
 - `church`: `church`, `cathedral`, `monastery`, `chapel`, `synagogue`, `mosque`;
 - `castle`: `fortress`, `tower`, `palace`;
 - `theatre`: `theatre`, `opera`, `concert_hall`;
-- `monument`: `monument`, `memorial`, `archaeological_site`, `historic_building`.
+- `monument`: `monument`, `memorial`, `archaeological_site`, `historic_building`, `bridge`, `bath`, `pantheon`, `funicular`.
 
 `category` управляет иконкой и цветом на карте. `subcategory` хранится отдельно и не обязана иметь отдельную иконку.
 

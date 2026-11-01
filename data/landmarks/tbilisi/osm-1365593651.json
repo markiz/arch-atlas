@@ -1,0 +1,75 @@
+{
+  "id": "osm-1365593651",
+  "osmId": "way/1365593651",
+  "atlasId": "osm-1365593651",
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Ильи Чавчавадзе на улице Чубинашвили",
+    "en": "Ilia Chavchavadze House-Museum on Chubinashvili Street",
+    "ka": "ილია ჭავჭავაძის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Іллі Чавчавадзе на вулиці Чубінашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Чубинашвили, 22",
+    "en": "22 Giorgi Chubinashvili Street",
+    "ka": "გიორგი ჩუბინაშვილის ქუჩა 22",
+    "uk": "вулиця Георгія Чубінашвілі, 22"
+  },
+  "descriptions": {
+    "ru": "Одноэтажный дом-музей с U-образным планом, кирпичным фасадом в стиле модерн и традиционными деревянными балконами во дворе. Реестр отмечает его архитектурную и историческую ценность.",
+    "en": "A one-storey house-museum with a U-shaped plan, a brick Art Nouveau façade, and traditional wooden balconies around the courtyard. The register notes its architectural and historical value.",
+    "ka": "ერთსართულიანი სახლ-მუზეუმი U-ს ფორმის გეგმით, მოდერნის აგურის ფასადითა და ეზოს ტრადიციული ხის აივნებით. რეესტრი აღნიშნავს მის არქიტექტურულ და ისტორიულ ღირებულებას.",
+    "uk": "Одноповерховий будинок-музей із U-подібним планом, цегляним фасадом у стилі модерн і традиційними дерев’яними балконами у дворі. Реєстр відзначає його архітектурну та історичну цінність."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.801928866,
+    41.712381
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2965",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1365593651",
+    "https://tbilisimuseumsunion.ge/en/museums/ilia-chavchavadzis-literaturul-memorialuri-muzeumi/"
+  ],
+  "districtId": "chughureti",
+  "heritage": {
+    "status": "listed",
+    "registryId": 2965,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2965"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 42,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-1365593651; рейтинг значимости предварительный."
+}

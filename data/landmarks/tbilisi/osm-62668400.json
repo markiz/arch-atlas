@@ -1,0 +1,75 @@
+{
+  "id": "osm-62668400",
+  "osmId": "way/62668400",
+  "atlasId": "osm-62668400",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей фольклора",
+    "en": "Folklore Museum",
+    "ka": "ფოლკლორის მუზეუმი",
+    "uk": "Музей фольклору"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей фольклора, посвящённый грузинской народной музыке, песне и обрядовой культуре.",
+    "en": "The Folklore Museum, devoted to Georgian folk music, song and ritual culture.",
+    "ka": "ფოლკლორის მუზეუმი, რომელიც ქართულ ხალხურ მუსიკას, სიმღერასა და რიტუალურ კულტურას ეძღვნება.",
+    "uk": "Музей фольклору, присвячений грузинській народній музиці, пісні та обрядовій культурі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8053917,
+    41.6878962
+  ],
+  "source": "https://www.openstreetmap.org/way/62668400",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42651673"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3579"
+  },
+  "recognition": {
+    "wikidata": "Q42651673",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:11 Sololaki Alley",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 56,
+    "components": {
+      "heritage": 20,
+      "recognition": 6,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "есть Wikidata",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-62668400; рейтинг значимости предварительный."
+}

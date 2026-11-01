@@ -1,0 +1,76 @@
+{
+  "id": "osm-246769267",
+  "osmId": "way/246769267",
+  "atlasId": "osm-246769267",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Александра Невского",
+    "en": "St Alexander Nevsky Church",
+    "ka": "წმინდა ალექსანდრე ნეველის ეკლესია",
+    "uk": "Церква Святого Олександра Невського"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иване Джавахишвили, 69",
+    "en": "69 Ivane Javakhishvili Street",
+    "ka": "ივანე ჯავახიშვილის ქუჩა, 69",
+    "uk": "вулиця Іване Джавахішвілі, 69"
+  },
+  "descriptions": {
+    "ru": "Приходская церковь Святого Александра Невского в русском стиле с классицистическими деталями: кирпичный объём с луковичными главами, звонницей и часовней 1913 года у угла.",
+    "en": "The parish church of St Alexander Nevsky, built in the Russian style with classical details: a brick volume with onion domes, a bell tower and the 1913 chapel at the corner.",
+    "ka": "წმინდა ალექსანდრე ნეველის სამრევლო ეკლესია რუსულ სტილში კლასიცისტური დეტალებით: აგურის ნაგებობა ხახვისებრი გუმბათებით, სამრეკლოთი და 1913 წლის სამლოცველოთი კუთხეში.",
+    "uk": "Приходська церква Святого Олександра Невського у російському стилі з класицистичними деталями: цегляна будівля з цибулястими банями, дзвіницею та каплицею 1913 року на розі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8010406,
+    41.711334
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3049",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/246769267",
+    "https://orthodoxy.ge/tsnobarebi/tadzrebi/neveli.htm"
+  ],
+  "districtId": "chughureti",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3049,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3049"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-246769267; рейтинг значимости предварительный."
+}

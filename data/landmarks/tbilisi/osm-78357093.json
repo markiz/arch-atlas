@@ -1,0 +1,73 @@
+{
+  "id": "osm-78357093",
+  "osmId": "way/78357093",
+  "atlasId": "osm-78357093",
+  "category": "castle",
+  "subcategory": "tower",
+  "names": {
+    "ru": "Колхидская башня (дом Константина и Звиада Гамсахурдиа)",
+    "en": "Colchian Tower (House of Konstantine and Zviad Gamsakhurdia)",
+    "ka": "კოლხური კოშკი (კონსტანტინე და ზვიად გამსახურდიების სახლი)",
+    "uk": "Колхідська вежа (будинок Константіне та Звіада Гамсахурдіа)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гали, 19",
+    "en": "19 Gali Street",
+    "ka": "გალის ქუჩა 19",
+    "uk": "вулиця Галі, 19"
+  },
+  "descriptions": {
+    "ru": "Жилой дом по улице Гали известен как Колхидская башня и связан с семьёй писателя Константина Гамсахурдиа. В OSM контур описан как семейный дом Константина и Звиада Гамсахурдиа.",
+    "en": "The house on Gali Street is known as the Colchian Tower and is associated with the family of writer Konstantine Gamsakhurdia. OSM describes the mapped outline as the family house of Konstantine and Zviad Gamsakhurdia.",
+    "ka": "გალის ქუჩაზე მდებარე საცხოვრებელი სახლი კოლხური კოშკის სახელითაა ცნობილი და მწერალ კონსტანტინე გამსახურდიას ოჯახთან არის დაკავშირებული. OSM-ის კონტურის აღწერაში ის კონსტანტინე და ზვიად გამსახურდიების საოჯახო სახლად არის მოხსენიებული.",
+    "uk": "Житловий будинок на вулиці Галі відомий як Колхідська вежа та пов'язаний із родиною письменника Константіне Гамсахурдіа. В описі контуру OSM його названо родинним будинком Константіне та Звіада Гамсахурдіа."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.7775005,
+    41.7036025
+  ],
+  "source": "https://www.artanuji.ge/book_ge.php?id=362",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/78357093"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": 362,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=362"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 34,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-78357093; рейтинг значимости предварительный."
+}

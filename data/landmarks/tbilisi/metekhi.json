@@ -1,0 +1,74 @@
+{
+  "id": "metekhi",
+  "osmId": "way/1064270003",
+  "atlasId": "metekhi",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Храм Метехи",
+    "en": "Metekhi Church",
+    "ka": "მეტეხის ღვთისმშობლის ეკლესია",
+    "uk": "Храм Метехи"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Метехский подъём",
+    "en": "Metekhi Ascent",
+    "ka": "მეტეხის აღმართი",
+    "uk": "Метехський узвіз"
+  },
+  "descriptions": {
+    "ru": "Храм стоит на скале над Курой, напротив исторического центра Тбилиси.",
+    "en": "The church stands on a cliff above the Kura, opposite Tbilisi’s historic centre.",
+    "ka": "ტაძარი მტკვრის თავზე, კლდეზე დგას, თბილისის ისტორიული ცენტრის მოპირდაპირედ.",
+    "uk": "Храм стоїть на скелі над Курою, навпроти історичного центру Тбілісі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.81125,
+    41.69015
+  ],
+  "source": "https://georgia.travel/metekhi-church",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/1064270003"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 40,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа metekhi; рейтинг значимости предварительный."
+}

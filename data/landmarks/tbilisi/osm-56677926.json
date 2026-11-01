@@ -1,0 +1,75 @@
+{
+  "id": "osm-56677926",
+  "osmId": "way/56677926",
+  "atlasId": "osm-56677926",
+  "category": "theatre",
+  "subcategory": "theatre",
+  "names": {
+    "ru": "Кинотеатр \"Руставели\"",
+    "en": "Rustaveli Cinema",
+    "ka": "კინოთეატრი \"რუსთაველი\"",
+    "uk": "Кінотеатр \"Руставелі\""
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Руставели, 5",
+    "en": "5 Rustaveli Avenue",
+    "ka": "რუსთაველის გამზირი 5",
+    "uk": "проспект Руставелі, 5"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.7998873,
+    41.6968001
+  ],
+  "source": "https://www.openstreetmap.org/way/56677926",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3652403"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3934"
+  },
+  "recognition": {
+    "wikidata": "Q3652403",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/რუსთაველი_(კინოთეატრი)",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Rustaveli cinema, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 66,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Перенесено из карточки атласа osm-56677926; рейтинг значимости предварительный."
+}

@@ -28,6 +28,7 @@ const EXTRA_INPUTS=[
  'raw/osm-tbilisi-building-outlines.geojson',
  'data/landmark-name-translations.json',
  'data/basemap-name-translations.json',
+ 'data/landmark-skip.json',
  SCRIPT,
 ];
 const silent={write(){}};
