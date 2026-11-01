@@ -1,0 +1,95 @@
+{
+  "id": "osm-641459412",
+  "osmId": "way/641459412",
+  "names": {
+    "ru": "Дом Бебутовых",
+    "en": "Bebutovs House",
+    "ka": "ბებუთოვების სახლი",
+    "uk": "Будинок Бебутових"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 24",
+    "en": "24 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 24",
+    "uk": "вулиця Ладо Асატіані, 24"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "neo-baroque",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8027493,
+    41.6895069
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8026904,
+          41.6897025
+        ],
+        [
+          44.8027123,
+          41.6897047
+        ],
+        [
+          44.8028823,
+          41.6897219
+        ],
+        [
+          44.8029099,
+          41.6895683
+        ],
+        [
+          44.8027863,
+          41.6895574
+        ],
+        [
+          44.8028066,
+          41.6894147
+        ],
+        [
+          44.8028034,
+          41.6893716
+        ],
+        [
+          44.8027156,
+          41.6893673
+        ],
+        [
+          44.8027089,
+          41.6894564
+        ],
+        [
+          44.8026904,
+          41.6897025
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-641459412-g1.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_24.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/641459412",
+  "otherSource": "https://www.wikidata.org/wiki/Q42622970",
+  "googlePlaceId": "ChIJu7O5KvIMREARHeZwGTkbnc4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6895069%2C44.8027493&query_place_id=ChIJu7O5KvIMREARHeZwGTkbnc4"
+}

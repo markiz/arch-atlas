@@ -1,0 +1,119 @@
+{
+  "id": "osm-188447908",
+  "osmId": "way/188447908",
+  "names": {
+    "ru": "Историческое здание · ლეო ქიაჩელის ქუჩა 12",
+    "en": "12 Leo Kiacheli Street",
+    "ka": "ლეო ქიაჩელის ქუჩა, 12",
+    "uk": "Историческое будівля · ლეო ქიაჩელის ქუჩა 12"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Лео Киачели, 12",
+    "en": "12 Leo Kiacheli Street",
+    "ka": "ლეო ქიაჩელის ქუჩა 12",
+    "uk": "вулиця Лео Кіачелі, 12"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7905479,
+    41.7057542
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7906114,
+          41.7058498
+        ],
+        [
+          44.7906258,
+          41.7058293
+        ],
+        [
+          44.7906368,
+          41.7058137
+        ],
+        [
+          44.7907287,
+          41.7056829
+        ],
+        [
+          44.7907455,
+          41.7056589
+        ],
+        [
+          44.7905757,
+          41.7055897
+        ],
+        [
+          44.7905153,
+          41.7055644
+        ],
+        [
+          44.790479,
+          41.7056122
+        ],
+        [
+          44.7904783,
+          41.7056249
+        ],
+        [
+          44.7904821,
+          41.705635
+        ],
+        [
+          44.7904963,
+          41.7056447
+        ],
+        [
+          44.7904675,
+          41.7056865
+        ],
+        [
+          44.7902964,
+          41.7056072
+        ],
+        [
+          44.790241,
+          41.7056732
+        ],
+        [
+          44.7902963,
+          41.7056947
+        ],
+        [
+          44.7906114,
+          41.7058498
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-188447908-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A5%E1%83%98%E1%83%90%E1%83%A9%E1%83%94%E1%83%9A%E1%83%98_%E1%83%9A%E1%83%94%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_12.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/188447908",
+  "otherSource": "https://www.wikidata.org/wiki/Q42655117",
+  "googlePlaceId": "ChIJASI4JdoMREARkxa5kR27FkY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=12%20Leo%20Kiacheli%20St&query_place_id=ChIJASI4JdoMREARkxa5kR27FkY"
+}

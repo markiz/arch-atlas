@@ -1,0 +1,88 @@
+{
+  "id": "osm-58071533",
+  "osmId": "way/58071533",
+  "names": {
+    "ru": "Шахматный Дворец им. Ноны Гаприндашвили",
+    "en": "Nona Gaprindashvili Chess Palace",
+    "ka": "ნონა გაფრინდაშვილის სახელობის ჭადრაკის სასახლე",
+    "uk": "Шахматний Палац им. Нони Гаприндашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мераба Костава, 29",
+    "en": "29 Merab Kostava Street",
+    "ka": "მერაბ კოსტავას ქუჩა 29",
+    "uk": "вулиця Мераба Костави, 29"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1973,
+  "maxYear": 1973,
+  "yearLabelId": "year-1973",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7876875,
+    41.7082008
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7875597,
+          41.7083957
+        ],
+        [
+          44.7879133,
+          41.7083379
+        ],
+        [
+          44.7877853,
+          41.7079038
+        ],
+        [
+          44.7874318,
+          41.7079619
+        ],
+        [
+          44.7874586,
+          41.708053
+        ],
+        [
+          44.7874676,
+          41.7080835
+        ],
+        [
+          44.7875368,
+          41.708318
+        ],
+        [
+          44.7875597,
+          41.7083957
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-58071533-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16006",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=85081_0A5D0DB7-CF2E-4B02-84E0-BA7139510E2E",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/58071533",
+  "otherSource": "https://www.wikidata.org/wiki/Q130421043",
+  "googlePlaceId": "EiYyOSBNZXJhYiBLb3N0YXZhIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCU2e6SjRDERAEX5jTCTYmGnkEB0qFAoSCasTwrPWDERAEVqmB3v2jrLR",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=29%20Merab%20Kostava%20St&query_place_id=EiYyOSBNZXJhYiBLb3N0YXZhIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCU2e6SjRDERAEX5jTCTYmGnkEB0qFAoSCasTwrPWDERAEVqmB3v2jrLR"
+}

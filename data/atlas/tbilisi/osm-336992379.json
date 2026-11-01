@@ -1,0 +1,108 @@
+{
+  "id": "osm-336992379",
+  "osmId": "way/336992379",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 49/2",
+    "en": "49/2 David Aghmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 49/2",
+    "uk": "проспект Давида Агмашенебелі, 49/2"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "empire",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8014378,
+    41.7052396
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8008881,
+          41.7051119
+        ],
+        [
+          44.8010054,
+          41.7051641
+        ],
+        [
+          44.8010838,
+          41.7051987
+        ],
+        [
+          44.8012986,
+          41.7050805
+        ],
+        [
+          44.8013974,
+          41.7052806
+        ],
+        [
+          44.801301,
+          41.7053107
+        ],
+        [
+          44.8013812,
+          41.7054768
+        ],
+        [
+          44.8014106,
+          41.7055342
+        ],
+        [
+          44.8015849,
+          41.7054131
+        ],
+        [
+          44.8013339,
+          41.7049096
+        ],
+        [
+          44.801329,
+          41.7048997
+        ],
+        [
+          44.8012854,
+          41.7048905
+        ],
+        [
+          44.8008881,
+          41.7051119
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-336992379-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3001",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76021_5BA38271-94F3-4963-BD4E-5B4D87197667",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/336992379",
+  "otherSource": "https://www.wikidata.org/wiki/Q42645160",
+  "googlePlaceId": "ChIJcXFgcd8MREARNUGQk6VrenE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Davit%20Aghmashenebeli/Giorgi%20Mazniashvili%20Street&query_place_id=ChIJcXFgcd8MREARNUGQk6VrenE"
+}

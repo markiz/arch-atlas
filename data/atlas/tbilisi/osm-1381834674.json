@@ -1,0 +1,124 @@
+{
+  "id": "osm-1381834674",
+  "osmId": "way/1381834674",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Марджанишвили, 18",
+    "en": "18 Kote Marjanishvili Street",
+    "ka": "კოტე მარჯანიშვილის ქუჩა 18",
+    "uk": "вулиця Коте Марджанішвілі, 18"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7961775,
+    41.709414
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7963798,
+          41.7094034
+        ],
+        [
+          44.796357,
+          41.7094339
+        ],
+        [
+          44.7963336,
+          41.7094247
+        ],
+        [
+          44.7962472,
+          41.7093905
+        ],
+        [
+          44.796179,
+          41.7094915
+        ],
+        [
+          44.7962795,
+          41.7095317
+        ],
+        [
+          44.7962289,
+          41.709601
+        ],
+        [
+          44.7962216,
+          41.7096132
+        ],
+        [
+          44.7960334,
+          41.7095405
+        ],
+        [
+          44.7961035,
+          41.709442
+        ],
+        [
+          44.7961812,
+          41.7093343
+        ],
+        [
+          44.7962472,
+          41.7092414
+        ],
+        [
+          44.7962609,
+          41.709222
+        ],
+        [
+          44.7964269,
+          41.7092865
+        ],
+        [
+          44.7964528,
+          41.7092966
+        ],
+        [
+          44.7964394,
+          41.7093156
+        ],
+        [
+          44.7963798,
+          41.7094034
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1381834674-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3053",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74470_5664B5E3-29C5-4447-A80A-FA1F6AA9C96A",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1381834674",
+  "otherSource": "https://www.wikidata.org/wiki/Q42645624",
+  "googlePlaceId": "ChIJryvM8ycNREAR8Ho_8j3fnUE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=18%20Kote%20Marjanishvili%20St&query_place_id=ChIJryvM8ycNREAR8Ho_8j3fnUE"
+}

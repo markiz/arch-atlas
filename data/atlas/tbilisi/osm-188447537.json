@@ -1,0 +1,111 @@
+{
+  "id": "osm-188447537",
+  "osmId": "way/188447537",
+  "names": {
+    "ru": "Синий монастырь",
+    "en": "Blue Monastery",
+    "ka": "ლურჯი მონასტერი",
+    "uk": "Синій монастир"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7889875,
+    41.7079135
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7888905,
+          41.7078534
+        ],
+        [
+          44.7890053,
+          41.7078666
+        ],
+        [
+          44.7890981,
+          41.7078773
+        ],
+        [
+          44.7890919,
+          41.7079072
+        ],
+        [
+          44.7891015,
+          41.7079193
+        ],
+        [
+          44.7891029,
+          41.7079326
+        ],
+        [
+          44.7890966,
+          41.7079455
+        ],
+        [
+          44.7890821,
+          41.7079549
+        ],
+        [
+          44.7890761,
+          41.7079838
+        ],
+        [
+          44.7888685,
+          41.7079599
+        ],
+        [
+          44.7888793,
+          41.7079077
+        ],
+        [
+          44.7888905,
+          41.7078534
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-188447537-g1.webp",
+      "author": "Aleksey Muhranoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Churches_of_St._Andrew_and_of_John_the_Apostle,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-188447537-g2.webp",
+      "author": "Jaba1977",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Blue_Monastery_01.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/188447537",
+  "otherSource": "https://www.wikidata.org/wiki/Q7210949",
+  "googlePlaceId": "ChIJrbVtRtcMREARcfoT6Gn1lw0",
+  "googlePlaceIdSource": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/blue-monastery?to=place.ChIJrbVtRtcMREARcfoT6Gn1lw0"
+}

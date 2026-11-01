@@ -1,0 +1,100 @@
+{
+  "id": "osm-641459408",
+  "osmId": "way/641459408",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 30",
+    "en": "30 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 30",
+    "uk": "вулиця Ладо Асატіані, 30"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8014494,
+    41.6894322
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8016008,
+          41.6896222
+        ],
+        [
+          44.80139,
+          41.6896159
+        ],
+        [
+          44.8013074,
+          41.6896134
+        ],
+        [
+          44.8013221,
+          41.6893836
+        ],
+        [
+          44.8013296,
+          41.689197
+        ],
+        [
+          44.8014306,
+          41.6891992
+        ],
+        [
+          44.8014265,
+          41.6893813
+        ],
+        [
+          44.8015796,
+          41.6893844
+        ],
+        [
+          44.80158,
+          41.6894801
+        ],
+        [
+          44.8016056,
+          41.6894802
+        ],
+        [
+          44.8016008,
+          41.6896222
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-641459408-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4078",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74717_838457E8-98C1-4B62-9FBD-CD4F35A29A0E",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/641459408",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623229",
+  "googlePlaceId": "ChIJyfWLMPIMREAR8OM49aI4KuY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=30%20Lado%20Asatiani%20St&query_place_id=ChIJyfWLMPIMREAR8OM49aI4KuY"
+}

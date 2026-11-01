@@ -1,0 +1,83 @@
+{
+  "id": "osm-1125780341",
+  "osmId": "way/1125780341",
+  "names": {
+    "ru": "Георгиевская надвратная церковь",
+    "en": "Church of St. George Kari",
+    "ka": "წმ.გიორგის სახელობის კარის ეკლესია",
+    "uk": "Георгиевская надвратная церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8065073,
+    41.6946587
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8064288,
+          41.6946806
+        ],
+        [
+          44.8065717,
+          41.6946987
+        ],
+        [
+          44.8065857,
+          41.6946368
+        ],
+        [
+          44.8064428,
+          41.6946188
+        ],
+        [
+          44.8064288,
+          41.6946806
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1125780341-g1.webp",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(04).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1125780341-g2.webp",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(01).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1125780341",
+  "otherSource": "https://www.wikidata.org/wiki/Q55753705",
+  "googlePlaceId": "ChIJlxqoN-UMREARM9uGDwAs9WU",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Kari%20church%20of%20St.%20George&query_place_id=ChIJlxqoN-UMREARM9uGDwAs9WU"
+}

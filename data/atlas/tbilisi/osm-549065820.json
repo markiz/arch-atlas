@@ -1,0 +1,82 @@
+{
+  "id": "osm-549065820",
+  "osmId": "way/549065820",
+  "names": {
+    "ru": "Бывший музей",
+    "en": "Former museum",
+    "ka": "ყოფილი მუზეუმი",
+    "uk": "Колишній музей"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8067947,
+    41.6871421
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8069048,
+          41.6871802
+        ],
+        [
+          44.8069104,
+          41.6871148
+        ],
+        [
+          44.806887,
+          41.6871137
+        ],
+        [
+          44.8066846,
+          41.6871039
+        ],
+        [
+          44.8066789,
+          41.6871693
+        ],
+        [
+          44.8068823,
+          41.6871792
+        ],
+        [
+          44.8069048,
+          41.6871802
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-549065820-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3542",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74273_8F75F37A-494B-49DD-9E2B-DDB327CBB128",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/549065820",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628140"
+}

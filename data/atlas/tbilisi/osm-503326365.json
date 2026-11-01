@@ -1,0 +1,155 @@
+{
+  "id": "osm-503326365",
+  "osmId": "way/503326365",
+  "names": {
+    "ru": "Пёстрая баня",
+    "en": "Chreli Abano",
+    "ka": "ჭრელი აბანო",
+    "uk": "Строката лазня"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Абанотубани, 2",
+    "en": "2 Abano Street",
+    "ka": "აბანოს ქუჩა 2",
+    "uk": "вулиця Абанотубანი, 2"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "neo-moorish",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8107717,
+    41.6874536
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8107883,
+          41.6876189
+        ],
+        [
+          44.81079,
+          41.687615
+        ],
+        [
+          44.8109179,
+          41.6873237
+        ],
+        [
+          44.8109081,
+          41.6873138
+        ],
+        [
+          44.8109326,
+          41.6872496
+        ],
+        [
+          44.8109129,
+          41.6872306
+        ],
+        [
+          44.8109082,
+          41.6872076
+        ],
+        [
+          44.8108994,
+          41.6871943
+        ],
+        [
+          44.810885,
+          41.6871822
+        ],
+        [
+          44.8108696,
+          41.6871791
+        ],
+        [
+          44.8108561,
+          41.6871805
+        ],
+        [
+          44.8107881,
+          41.6871449
+        ],
+        [
+          44.8107668,
+          41.6871731
+        ],
+        [
+          44.8107429,
+          41.687166
+        ],
+        [
+          44.8107181,
+          41.6872059
+        ],
+        [
+          44.8107066,
+          41.6872238
+        ],
+        [
+          44.8107179,
+          41.6872629
+        ],
+        [
+          44.8107153,
+          41.6873032
+        ],
+        [
+          44.8107101,
+          41.6873676
+        ],
+        [
+          44.8106551,
+          41.6875396
+        ],
+        [
+          44.810664,
+          41.6875903
+        ],
+        [
+          44.8107259,
+          41.6876048
+        ],
+        [
+          44.8107883,
+          41.6876189
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-503326365-g1.webp",
+      "author": "This Photo was taken by Supanut Arunoprayote.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Orbeliani_Baths_20230921.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-503326365-g2.webp",
+      "author": "Unknown",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:02_-_Orbeliani_Thermal_Baths_-_Tbilisi_old_town.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/503326365",
+  "otherSource": "https://www.wikidata.org/wiki/Q42618271",
+  "googlePlaceId": "ChIJp1AABfcMREAR-U0SBWHxp0E",
+  "googlePlaceIdSource": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/chreli-abano?to=place.ChIJp1AABfcMREAR-U0SBWHxp0E"
+}

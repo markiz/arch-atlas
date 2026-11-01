@@ -1,0 +1,155 @@
+{
+  "id": "osm-75315573",
+  "osmId": "way/75315573",
+  "names": {
+    "ru": "Бывшая Торговая школа Тифлисского купеческого общества",
+    "en": "Former Trade School of the Tiflis Merchant Society",
+    "ka": "ყოფილი ტფილისის სავაჭრო საზოგადოების სავაჭრო სკოლა",
+    "uk": "Колишня Торгова школа Тифлисского купецького товариства"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 50",
+    "en": "50 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 50",
+    "uk": "вулиця Ладо Асატіані, 50"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1911,
+  "maxYear": 1911,
+  "yearLabelId": "year-1911",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.798247,
+    41.6891052
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7980294,
+          41.6894698
+        ],
+        [
+          44.798045,
+          41.6894703
+        ],
+        [
+          44.7980559,
+          41.6894707
+        ],
+        [
+          44.7981415,
+          41.6894735
+        ],
+        [
+          44.7981405,
+          41.6894905
+        ],
+        [
+          44.7982427,
+          41.6894939
+        ],
+        [
+          44.7983518,
+          41.6894975
+        ],
+        [
+          44.7983528,
+          41.6894804
+        ],
+        [
+          44.7984436,
+          41.6894834
+        ],
+        [
+          44.7984666,
+          41.6894842
+        ],
+        [
+          44.7984772,
+          41.6893052
+        ],
+        [
+          44.7983162,
+          41.6892998
+        ],
+        [
+          44.7983439,
+          41.6888314
+        ],
+        [
+          44.7981308,
+          41.6888244
+        ],
+        [
+          44.7981207,
+          41.6889939
+        ],
+        [
+          44.7981728,
+          41.6889956
+        ],
+        [
+          44.7981596,
+          41.6892174
+        ],
+        [
+          44.7980841,
+          41.6892149
+        ],
+        [
+          44.7980802,
+          41.6892803
+        ],
+        [
+          44.7980755,
+          41.6893587
+        ],
+        [
+          44.7980637,
+          41.6893583
+        ],
+        [
+          44.7980361,
+          41.6893574
+        ],
+        [
+          44.7980294,
+          41.6894698
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-75315573-g1.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:43-%E1%83%94_%E1%83%A1%E1%83%90%E1%83%AF%E1%83%A0%E1%83%9D_%E1%83%A1%E1%83%99%E1%83%9D%E1%83%9A%E1%83%90_01.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-75315573-depicts.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:43-%E1%83%94_%E1%83%A1%E1%83%90%E1%83%AF%E1%83%A0%E1%83%9D_%E1%83%A1%E1%83%99%E1%83%9D%E1%83%9A%E1%83%90_02.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/75315573",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623744",
+  "googlePlaceId": "ChIJeyehYvIMREARlov_54XZI-w",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6891052%2C44.798247&query_place_id=ChIJeyehYvIMREARlov_54XZI-w"
+}

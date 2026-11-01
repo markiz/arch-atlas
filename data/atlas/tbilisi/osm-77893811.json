@@ -1,0 +1,112 @@
+{
+  "id": "osm-77893811",
+  "osmId": "way/77893811",
+  "names": {
+    "ru": "Караван-сарай Арцруни",
+    "en": "Artsruni Caravanserai",
+    "ka": "არწრუნის ქარვასლა",
+    "uk": "Караван-сарай Арцруни"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1818,
+  "maxYear": 1818,
+  "yearLabelId": "year-1818",
+  "styleId": "neoclassicism+art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8078514,
+    41.6910646
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8074745,
+          41.6910412
+        ],
+        [
+          44.8075163,
+          41.6910589
+        ],
+        [
+          44.807505,
+          41.6910739
+        ],
+        [
+          44.8078137,
+          41.6912046
+        ],
+        [
+          44.807825,
+          41.6911896
+        ],
+        [
+          44.8080118,
+          41.6912318
+        ],
+        [
+          44.8081878,
+          41.6913071
+        ],
+        [
+          44.8083102,
+          41.691129
+        ],
+        [
+          44.8082273,
+          41.6910839
+        ],
+        [
+          44.8082003,
+          41.6910703
+        ],
+        [
+          44.8077734,
+          41.6908139
+        ],
+        [
+          44.8076725,
+          41.6908931
+        ],
+        [
+          44.8076007,
+          41.690865
+        ],
+        [
+          44.8074745,
+          41.6910412
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-77893811-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3863",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74095_FA5D37C2-B3DA-442E-A31D-F3168CDD2716",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/77893811",
+  "otherSource": "https://www.wikidata.org/wiki/Q42651606",
+  "googlePlaceId": "ChIJI-qg7PAMREARMfcN62Phwg4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6910646%2C44.8078514&query_place_id=ChIJI-qg7PAMREARMfcN62Phwg4"
+}

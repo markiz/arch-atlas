@@ -1,5 +1,6 @@
 import sys, json, glob, xml.etree.ElementTree as ET
 from pathlib import Path
+from atlas_source import card_path, read_cards, write_card
 from progress import Progress
 sys.path.insert(0, '.deps')
 from shapely.geometry import LineString, mapping
@@ -48,4 +49,12 @@ if metekhi_path.exists():
     print('metekhi', len(c), flush=True)
     resolve_progress.advance('metekhi')
 resolve_progress.finish()
-Path('data/geometry-overrides.json').write_text(json.dumps(result, ensure_ascii=False, separators=(',', ':')))
+cards = read_cards()
+for name, fields in result.items():
+    card = cards.get(name)
+    if card is None:
+        print('missing card, geometry not applied', name, flush=True)
+        continue
+    card.update(fields)
+    write_card(card)
+    print('updated card geometry', name, card_path(name), flush=True)

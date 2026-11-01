@@ -1,0 +1,102 @@
+{
+  "id": "osm-143349273",
+  "osmId": "way/143349273",
+  "names": {
+    "ru": "Дом театра «Старый дом»",
+    "en": "Old House Theatre Building",
+    "ka": "„ძველი სახლის“ თეატრის შენობა",
+    "uk": "Будівля театру «Старий дім»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Метехский подъём, 1 (в OSM: 1ა)",
+    "en": "1 Metekhi Rise (OSM: 1A)",
+    "ka": "მეტეხის აღმართი 1 (OSM: 1ა)",
+    "uk": "Метехський підйом, 1 (в OSM: 1а)"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный кирпичный дом с балконами и лоджиями на склоне Метехи. У основания со стороны набережной сохранились фрагменты старой стены.",
+    "en": "A two-storey brick house with balconies and loggias on the Metekhi slope. Fragments of an older wall survive at its base on the embankment side.",
+    "ka": "მეტეხის ფერდობზე მდებარე ორსართულიანი აგურის სახლი აივნებითა და ლოჯიებით. სანაპიროს მხარეს, შენობის ძირში ძველი კედლის ფრაგმენტებია შემორჩენილი.",
+    "uk": "Двоповерховий цегляний будинок із балконами та лоджіями на схилі Метехі. З боку набережної в основі збереглися фрагменти старої стіни."
+  },
+  "histories": {
+    "ru": "Официальный реестр датирует дом концом XIX века и указывает, что первоначально он был жилым. В 1988 году семья Сандро Мревлишвили приобрела старое административное здание крепости, а в 1992 году открыла здесь частный театр «Старый дом»; в том же здании размещался муниципальный театр «Метехи». Реестр приводит адрес Метехский подъём, 1; OSM указывает 1ა (1A). Точный год постройки, архитектор и стиль не установлены.",
+    "en": "The official register dates the house to the late 19th century and identifies its original function as residential. In 1988 the family of Sandro Mrevlishvili acquired an old administrative building of the fortress and opened the private Old House Theatre there in 1992; the municipal Metekhi Theatre also occupied the building. The register gives the address as 1 Metekhi Rise; OSM uses 1A. The exact construction year, architect, and style are not established.",
+    "ka": "რეესტრის ოფიციალური ჩანაწერი სახლს XIX საუკუნის დასასრულით ათარიღებს და თავდაპირველ ფუნქციად საცხოვრებელს ასახელებს. 1988 წელს სანდრო მრევლიშვილის ოჯახმა ციხის ძველი ადმინისტრაციული შენობა შეიძინა, ხოლო 1992 წელს იქ კერძო თეატრი „ძველი სახლი“ გახსნა; იმავე შენობაში მუნიციპალური თეატრი „მეტეხიც“ იყო განთავსებული. რეესტრის მისამართია მეტეხის აღმართი 1; OSM-ში მითითებულია 1ა. მშენებლობის ზუსტი წელი, არქიტექტორი და სტილი დადგენილი არ არის.",
+    "uk": "Офіційний реєстр датує будинок кінцем XIX століття й визначає його первісне призначення як житлове. У 1988 році родина Сандро Мревлішвілі придбала стару адміністративну будівлю фортеці, а 1992 року відкрила там приватний театр «Старий дім»; у цьому ж будинку містився муніципальний театр «Метехі». У реєстрі вказано адресу Метехський підйом, 1; в OSM — 1а. Точний рік будівництва, архітектор і стиль не встановлені."
+  },
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8121616,
+    41.6901135
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8120545,
+          41.6901692
+        ],
+        [
+          44.8121734,
+          41.6901707
+        ],
+        [
+          44.8121745,
+          41.6901259
+        ],
+        [
+          44.8122668,
+          41.6901271
+        ],
+        [
+          44.8122677,
+          41.6900854
+        ],
+        [
+          44.8122688,
+          41.6900411
+        ],
+        [
+          44.8120312,
+          41.690038
+        ],
+        [
+          44.8120298,
+          41.6901011
+        ],
+        [
+          44.812056,
+          41.6901014
+        ],
+        [
+          44.8120545,
+          41.6901692
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "OSM way/143349273 — замкнутый девятиузловой контур здания по Метехскому подъёму, 1ა. Официальная точка реестра 3377 находится внутри контура; IoU границы и way около 0,68, OSM way покрывает около 98,8% официального полигона. Адресный номер реестра — 1, OSM — 1ა; контур не пересекается с другими карточками атласа.",
+  "photos": [
+    {
+      "file": "photos/osm-143349273-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75539_79C0AF0A-AF6E-48C9-A568-3D0582B53274",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3377",
+  "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/551115/1/Svobodnaia_Gruzia_1999_N131.pdf",
+  "googlePlaceId": "ChIJI6zFYPcMREAR4yGUic5xhXo",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6901135%2C44.8121616&query_place_id=ChIJI6zFYPcMREAR4yGUic5xhXo"
+}

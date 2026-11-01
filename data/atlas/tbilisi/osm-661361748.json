@@ -1,0 +1,83 @@
+{
+  "id": "osm-661361748",
+  "osmId": "way/661361748",
+  "names": {
+    "ru": "Церковь Сурб Ншан",
+    "en": "Surb Nshan",
+    "ka": "სურფნიშანი",
+    "uk": "Церква Сурб Ншан"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": 1711,
+  "maxYear": 1711,
+  "yearLabelId": "year-1711",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8047262,
+    41.6943292
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8048496,
+          41.6944462
+        ],
+        [
+          44.8045271,
+          41.6943376
+        ],
+        [
+          44.8046029,
+          41.6942123
+        ],
+        [
+          44.8049253,
+          41.6943209
+        ],
+        [
+          44.8048496,
+          41.6944462
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-661361748-g1.webp",
+      "author": "RaffiKojian",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Raffi_kojian-Surb_Nshan-161445468.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-661361748-g2.webp",
+      "author": "Adam Jones from Kelowna, BC, Canada",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Architectural_Detail_-_Old_Town_-_Tbilisi_-_Georgia_-_08_(18528004568)_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/661361748",
+  "otherSource": "https://www.wikidata.org/wiki/Q3653183",
+  "googlePlaceId": "ChIJ_bmPXuUMREARfLc4nVUa4mE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Sourp%20Nshan%20Church&query_place_id=ChIJ_bmPXuUMREARfLc4nVUa4mE"
+}

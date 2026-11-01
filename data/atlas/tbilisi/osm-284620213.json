@@ -1,0 +1,95 @@
+{
+  "id": "osm-284620213",
+  "osmId": "way/284620213",
+  "names": {
+    "ru": "Церковь Норашен",
+    "en": "Norashen Church",
+    "ka": "ნორაშენის ეკლესია",
+    "uk": "Церква Норашен"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 41",
+    "en": "41 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 41",
+    "uk": "вулиця Коте Абхазі, 41"
+  },
+  "descriptions": {
+    "ru": "Армянская церковь в Старом Тбилиси стоит рядом с церковью Джварисмама.",
+    "en": "An Armenian church in Old Tbilisi stands beside Jvaris Mama Church.",
+    "ka": "ძველ თბილისში მდებარე სომხური ეკლესია ჯვარის მამის ეკლესიის გვერდით დგას.",
+    "uk": "Вірменська церква у Старому Тбілісі стоїть поруч із церквою Джварісмама."
+  },
+  "histories": {
+    "ru": "По сведениям Национального архива Грузии, существующее здание в основном построено в 1790–1796 годах на месте более ранней церкви.",
+    "en": "According to the National Archives of Georgia, the existing church was built mainly in 1790–1796 on the site of an earlier church.",
+    "ka": "საქართველოს ეროვნული არქივის ცნობით, არსებული ეკლესია ძირითადად 1790–1796 წლებში უფრო ადრინდელი ეკლესიის ადგილზე აშენდა.",
+    "uk": "За відомостями Національного архіву Грузії, наявну церкву переважно спорудили в 1790–1796 роках на місці давнішого храму."
+  },
+  "minYear": 1790,
+  "maxYear": 1796,
+  "yearLabelId": "year-1790-1796",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8065326,
+    41.6909755
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806404,
+          41.690888
+        ],
+        [
+          44.80647,
+          41.690892
+        ],
+        [
+          44.806474,
+          41.69087
+        ],
+        [
+          44.806549,
+          41.690876
+        ],
+        [
+          44.806545,
+          41.6909
+        ],
+        [
+          44.806682,
+          41.690911
+        ],
+        [
+          44.80666,
+          41.691063
+        ],
+        [
+          44.806384,
+          41.69104
+        ],
+        [
+          44.806404,
+          41.690888
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
+  "photos": [
+    {
+      "file": "photos/osm-284620213-rovchak.webp",
+      "author": "D.Rovchak",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Norashen_church_in_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://erekle.archive.gov.ge/places/911/norashenis-eklesia",
+  "otherSource": "https://armenianchurch.ge/en/churches/well-preserved-and-ruined-inactive-churches/norashen-sourb-astvatsatsin-church-holy-mother-of-god-in-tbilisi"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "osm-531596101",
+  "osmId": "way/531596101",
+  "names": {
+    "ru": "Дидубийская церковь Рождества Богородицы",
+    "en": "Didube Church of the Nativity of the Virgin",
+    "ka": "დიდუბის ღვთისმშობლის ეკლესია",
+    "uk": "Дідубійська церква Різдва Богородиці"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Акакия Церетели, 44",
+    "en": "44 Akaki Tsereteli Avenue",
+    "ka": "აკაკი წერეთლის გამზირი 44",
+    "uk": "проспект Акакія Церетелі, 44"
+  },
+  "descriptions": {
+    "ru": "Дидубийская церковь посвящена Рождеству Богородицы; здесь хранится особо почитаемая Дидубийская икона Богоматери.",
+    "en": "Didube Church is dedicated to the Nativity of the Virgin and houses the revered Didube icon of the Mother of God.",
+    "ka": "დიდუბის ტაძარი ღვთისმშობლის შობის სახელობისაა; აქ დაბრძანებულია დიდუბის ღვთისმშობლის სასწაულმოქმედი ხატი.",
+    "uk": "Дідубійська церква присвячена Різдву Богородиці; тут зберігається шанована Дідубійська ікона Божої Матері."
+  },
+  "histories": {
+    "ru": "Строительство нынешней церкви началось в 1874 году, освящение состоялось в 1884 году. Грузинская энциклопедия указывает архитектора А. Чижова.",
+    "en": "Construction of the present church began in 1874; it was consecrated in 1884. The Georgian Encyclopedia names A. Chizhov as the architect.",
+    "ka": "დღევანდელი ეკლესიის მშენებლობა 1874 წელს დაიწყო, ხოლო ტაძარი 1884 წელს აკურთხეს. ქართული ენციკლოპედია არქიტექტორად ა. ჩიჟოვს ასახელებს.",
+    "uk": "Будівництво нинішньої церкви почалося 1874 року, освячення відбулося 1884-го. Грузинська енциклопедія називає архітектором А. Чижова."
+  },
+  "minYear": 1874,
+  "maxYear": 1884,
+  "yearLabelId": "research-5004",
+  "styleId": "undetermined",
+  "architectIds": [
+    "research-architect-5004"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7858386,
+    41.729696
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.785706,
+          41.729717
+        ],
+        [
+          44.78575,
+          41.729721
+        ],
+        [
+          44.785745,
+          41.72975
+        ],
+        [
+          44.785917,
+          41.729767
+        ],
+        [
+          44.78595,
+          41.729747
+        ],
+        [
+          44.785971,
+          41.729714
+        ],
+        [
+          44.785964,
+          41.729678
+        ],
+        [
+          44.785938,
+          41.729649
+        ],
+        [
+          44.785764,
+          41.729632
+        ],
+        [
+          44.785759,
+          41.729657
+        ],
+        [
+          44.785717,
+          41.729653
+        ],
+        [
+          44.785706,
+          41.729717
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-531596101-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5004",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76177_E01546DA-0DDB-473B-8BFE-9B64627B446A",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://georgianencyclopedia.ge/ka/form/4431",
+  "otherSource": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/gvtismshoblis-didube.htm"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "osm-1206434333",
+  "osmId": "way/1206434333",
+  "names": {
+    "ru": "Бани царя Ростома",
+    "en": "King Rostom's Bath",
+    "ka": "როსტომ მეფის აბანო",
+    "uk": "Лазні царя Ростома"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Ираклия II, 2",
+    "en": "2 King Erekle II Square",
+    "ka": "ერეკლე მეორის მოედანი 2",
+    "uk": "площа Іраклія II, 2"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8071757,
+    41.6936952
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8070284,
+          41.6936252
+        ],
+        [
+          44.807042,
+          41.6937634
+        ],
+        [
+          44.8070437,
+          41.693781
+        ],
+        [
+          44.8072218,
+          41.6937684
+        ],
+        [
+          44.8072228,
+          41.6937765
+        ],
+        [
+          44.8073262,
+          41.6937692
+        ],
+        [
+          44.8073066,
+          41.6936247
+        ],
+        [
+          44.8073053,
+          41.6936156
+        ],
+        [
+          44.8073036,
+          41.6936028
+        ],
+        [
+          44.8072907,
+          41.6935978
+        ],
+        [
+          44.8072217,
+          41.6936038
+        ],
+        [
+          44.8072247,
+          41.6936244
+        ],
+        [
+          44.8071951,
+          41.693627
+        ],
+        [
+          44.8071917,
+          41.6936094
+        ],
+        [
+          44.8070284,
+          41.6936252
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206434333-g1.webp",
+      "author": "Marcin Konsek",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Restauracja_Mepetubani.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1206434333-g2.webp",
+      "author": "Yuri Samoylov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-11-06_King_Rostom%27s_Baths_with_plaques.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206434333",
+  "otherSource": "https://www.wikidata.org/wiki/Q12868419",
+  "googlePlaceId": "ChIJ0ZQcuvoMREARmOUlkCPNMxA",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6936952%2C44.8071757&query_place_id=ChIJ0ZQcuvoMREARmOUlkCPNMxA"
+}

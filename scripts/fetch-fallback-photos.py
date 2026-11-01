@@ -20,23 +20,17 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
+from atlas_source import next_photo_name, read_cards, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / 'data/photo-fallbacks.json'
-EXTRA = ROOT / 'data/heritage-extra.json'
 PHOTOS = ROOT / 'public/atlas/photos'
 USER_AGENT = 'TbilisiArchitectureAtlasPhotos/1.0 (editorial research)'
 
 
 def read_json(path: Path):
     return json.loads(path.read_text(encoding='utf-8'))
-
-
-def write_json(path: Path, value) -> None:
-    tmp = path.with_suffix(path.suffix + '.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
-    tmp.replace(path)
 
 
 def fetch(url: str) -> bytes:
@@ -52,11 +46,11 @@ def main() -> int:
     args = parser.parse_args()
 
     candidates = read_json(CANDIDATES)['items']
-    extra = read_json(EXTRA)
-    by_id = {card['id']: card for card in extra}
+    by_id = read_cards()
     wanted = {value.strip() for value in args.only.split(',')} if args.only else set(candidates)
     added = 0
     skipped = 0
+    modified: list[dict] = []
     items = sorted(wanted)
     progress = Progress(len(items), 'attach registry photos')
     progress.start(f'{len(items)} cards')
@@ -80,7 +74,7 @@ def main() -> int:
         image = Image.open(io.BytesIO(fetch(candidate['photo'])))
         image.thumbnail((700, 700))
         PHOTOS.mkdir(parents=True, exist_ok=True)
-        filename = f'{card_id}-1.webp'
+        filename = next_photo_name(card_id)
         image.convert('RGB').save(PHOTOS / filename, 'WEBP', quality=70)
         card.setdefault('photos', []).append({
             'file': f'photos/{filename}',
@@ -91,13 +85,15 @@ def main() -> int:
             'modifications': 'уменьшен размер, преобразовано в WebP; полное качество не используется',
             'description': candidate.get('note', ''),
         })
+        modified.append(card)
         added += 1
         print('added (unknown license, low-res)', card_id)
         progress.advance(f'{card_id}: added')
 
     progress.finish()
-    if not args.dry_run and added:
-        write_json(EXTRA, extra)
+    if not args.dry_run:
+        for card in modified:
+            write_card(card)
     print(f'added: {added}; skipped: {skipped}; dry-run: {args.dry_run}')
     return 0 if added or args.dry_run else 1
 

@@ -1,0 +1,111 @@
+{
+  "id": "osm-1105505029",
+  "osmId": "way/1105505029",
+  "names": {
+    "ru": "Дом князя Васила Габашвили",
+    "en": "Vasil Gabashvili House",
+    "ka": "თავად ვასილ გაბაშვილის სახლი",
+    "uk": "Будинок князя Васила Габашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 54",
+    "en": "54 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 54",
+    "uk": "проспект Шота Руставелі, 54"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7905317,
+    41.7025608
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7905051,
+          41.7027021
+        ],
+        [
+          44.7906779,
+          41.7026069
+        ],
+        [
+          44.7907204,
+          41.7025834
+        ],
+        [
+          44.7905983,
+          41.7024599
+        ],
+        [
+          44.7905589,
+          41.7024817
+        ],
+        [
+          44.7904545,
+          41.7025392
+        ],
+        [
+          44.7903449,
+          41.7024283
+        ],
+        [
+          44.7902734,
+          41.7024677
+        ],
+        [
+          44.7902965,
+          41.7024911
+        ],
+        [
+          44.7903867,
+          41.7025823
+        ],
+        [
+          44.7904224,
+          41.7026184
+        ],
+        [
+          44.7905051,
+          41.7027021
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1105505029-g1.webp",
+      "author": "Varsika",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3J4A0223%2B.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1105505029-g2.webp",
+      "author": "Varsika",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3J4A0234%2B.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1105505029",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628721",
+  "googlePlaceId": "ChIJn0LGpzINREARk3OGD1U-LQY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%94%E1%83%91%E1%83%98%E1%83%A1%20%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98%20%28The%20Gabashvili%20House%29&query_place_id=ChIJn0LGpzINREARk3OGD1U-LQY"
+}

@@ -1,0 +1,144 @@
+{
+  "id": "osm-496798210",
+  "osmId": "way/496798210",
+  "names": {
+    "ru": "Дом Бозарджянца",
+    "en": "Bozarjants House",
+    "ka": "ბოზარჯიანცის სახლი",
+    "uk": "Будинок Бозарджянца"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Даниэля Чонкадзе, 12",
+    "en": "12 Daniel Chonkadze Street",
+    "ka": "დანიელ ჭონქაძის ქუჩა 12",
+    "uk": "вулиця Даніеля Чонкадзе, 12"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7948795,
+    41.6928597
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7950522,
+          41.6929682
+        ],
+        [
+          44.7950552,
+          41.6929511
+        ],
+        [
+          44.7950579,
+          41.6929356
+        ],
+        [
+          44.7950855,
+          41.6927776
+        ],
+        [
+          44.7950976,
+          41.6927081
+        ],
+        [
+          44.7950227,
+          41.6927008
+        ],
+        [
+          44.7948615,
+          41.6926851
+        ],
+        [
+          44.7948501,
+          41.6927503
+        ],
+        [
+          44.7948389,
+          41.6928143
+        ],
+        [
+          44.7946981,
+          41.6928006
+        ],
+        [
+          44.7946799,
+          41.6929051
+        ],
+        [
+          44.7948266,
+          41.6929194
+        ],
+        [
+          44.7948169,
+          41.6929751
+        ],
+        [
+          44.7947986,
+          41.6929734
+        ],
+        [
+          44.7947923,
+          41.6930094
+        ],
+        [
+          44.794791,
+          41.6930168
+        ],
+        [
+          44.794805,
+          41.6930181
+        ],
+        [
+          44.7948499,
+          41.6930225
+        ],
+        [
+          44.7949812,
+          41.6930353
+        ],
+        [
+          44.7949926,
+          41.6930364
+        ],
+        [
+          44.7950053,
+          41.6929637
+        ],
+        [
+          44.7950522,
+          41.6929682
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-496798210-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4495",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=78350_ACBF8B18-D29F-4F21-A4F6-DDF27205E275",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/496798210",
+  "otherSource": "https://www.wikidata.org/wiki/Q42662959",
+  "googlePlaceId": "ChIJycGCGuwMREARO1SgSWr3QTs",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=%E1%83%93%E1%83%90%E1%83%9C%E1%83%98%E1%83%94%E1%83%9A%20%E1%83%AD%E1%83%9D%E1%83%9C%E1%83%A5%E1%83%90%E1%83%AB%E1%83%98%E1%83%A1%20%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90%2C%2029&query_place_id=ChIJycGCGuwMREARO1SgSWr3QTs"
+}

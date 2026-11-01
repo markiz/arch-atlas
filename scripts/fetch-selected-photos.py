@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch selected Commons photos and attach them to heritage-extra cards.
+"""Fetch selected Commons photos and attach them to atlas source cards.
 
 The candidate list lives in data/photo-candidates.json. Only files with a
 clearly free license (CC0/PD/CC BY/CC BY-SA) are accepted here. Files with an
@@ -24,11 +24,11 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
+from atlas_source import next_photo_name, read_cards, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / 'data/photo-candidates.json'
-EXTRA = ROOT / 'data/heritage-extra.json'
 PHOTOS = ROOT / 'public/atlas/photos'
 API = 'https://commons.wikimedia.org/w/api.php'
 USER_AGENT = 'TbilisiArchitectureAtlasPhotos/1.0 (editorial research)'
@@ -40,12 +40,6 @@ def clean(value: str | None) -> str:
 
 def read_json(path: Path):
     return json.loads(path.read_text(encoding='utf-8'))
-
-
-def write_json(path: Path, value) -> None:
-    tmp = path.with_suffix(path.suffix + '.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
-    tmp.replace(path)
 
 
 def fetch(url: str) -> bytes:
@@ -66,8 +60,7 @@ def main() -> int:
     args = parser.parse_args()
 
     candidates = read_json(CANDIDATES)['items']
-    extra = read_json(EXTRA)
-    by_id = {card['id']: card for card in extra}
+    by_id = read_cards()
     wanted = {value.strip() for value in args.only.split(',')} if args.only else set(candidates)
 
     titles = '|'.join(candidates[card_id]['commons'] for card_id in wanted if card_id in candidates)
@@ -81,6 +74,7 @@ def main() -> int:
 
     added = 0
     skipped = 0
+    modified: list[dict] = []
     progress = Progress(len(wanted), 'fetch selected photos')
     progress.start(f'{len(wanted)} cards')
     for card_id in sorted(wanted):
@@ -102,7 +96,7 @@ def main() -> int:
         author = clean(meta.get('Artist', {}).get('value'))[:180]
         # Commons often leaves LicenseUrl empty for public-domain files released by
         # their uploader ("Own work" credit). Link the PD-self template the same way
-        # the existing Public domain entries in data/heritage-extra.json do.
+        # the existing Public domain entries in the per-object source files do.
         credit = clean(meta.get('Credit', {}).get('value'))
         if not license_url and 'public domain' in license_name.lower() and 'own work' in credit.lower():
             license_url = 'https://commons.wikimedia.org/wiki/Template:PD-self'
@@ -134,7 +128,7 @@ def main() -> int:
         image = Image.open(io.BytesIO(fetch(info.get('thumburl') or info['url'])))
         image.thumbnail((1000, 1000))
         PHOTOS.mkdir(parents=True, exist_ok=True)
-        filename = f'{card_id}-1.webp'
+        filename = next_photo_name(card_id)
         image.convert('RGB').save(PHOTOS / filename, 'WEBP', quality=80)
         card.setdefault('photos', []).append({
             'file': f'photos/{filename}',
@@ -145,13 +139,15 @@ def main() -> int:
             'modifications': 'уменьшен размер, преобразовано в WebP',
             'description': candidate.get('note', ''),
         })
+        modified.append(card)
         added += 1
         print('added', card_id, license_name, author)
         progress.advance(f'{card_id}: added')
 
     progress.finish()
-    if not args.dry_run and added:
-        write_json(EXTRA, extra)
+    if not args.dry_run:
+        for card in modified:
+            write_card(card)
     print(f'added: {added}; skipped: {skipped}; dry-run: {args.dry_run}')
     return 0 if added or args.dry_run else 1
 

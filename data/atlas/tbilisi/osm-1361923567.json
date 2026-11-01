@@ -1,0 +1,135 @@
+{
+  "id": "osm-1361923567",
+  "osmId": "way/1361923567",
+  "names": {
+    "ru": "Банк Грузии",
+    "en": "Bank of Georgia",
+    "ka": "„საქართველოს ბანკი“",
+    "uk": "Банк Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Пушкина, 3",
+    "en": "3 Alexander Pushkin Street",
+    "ka": "ალექსანდრე პუშკინის ქუჩა 3",
+    "uk": "вулиця Олександра Пушкіна, 3"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8027759,
+    41.6934086
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8022173,
+          41.6935771
+        ],
+        [
+          44.8021996,
+          41.693506
+        ],
+        [
+          44.8021839,
+          41.6934429
+        ],
+        [
+          44.802388,
+          41.6934153
+        ],
+        [
+          44.8024007,
+          41.6934583
+        ],
+        [
+          44.8024818,
+          41.6934443
+        ],
+        [
+          44.8024924,
+          41.6934194
+        ],
+        [
+          44.8025286,
+          41.6934019
+        ],
+        [
+          44.8025214,
+          41.693371
+        ],
+        [
+          44.8027526,
+          41.6933461
+        ],
+        [
+          44.8027905,
+          41.6932659
+        ],
+        [
+          44.8028001,
+          41.6932417
+        ],
+        [
+          44.8030772,
+          41.6932714
+        ],
+        [
+          44.8030108,
+          41.6934987
+        ],
+        [
+          44.8027956,
+          41.693516
+        ],
+        [
+          44.8027191,
+          41.6935221
+        ],
+        [
+          44.8025001,
+          41.6935469
+        ],
+        [
+          44.8024403,
+          41.6935527
+        ],
+        [
+          44.8022599,
+          41.6935725
+        ],
+        [
+          44.8022173,
+          41.6935771
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1361923567-g1.webp",
+      "author": "Welaskesi",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3_Pushkini_Street,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1361923567",
+  "otherSource": "https://www.wikidata.org/wiki/Q42649991",
+  "googlePlaceId": "ChIJWc0_v-8MREAR5_gsVFyL9uw",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=3%20Aleksandr%20Pushkin%20St&query_place_id=ChIJWc0_v-8MREAR5_gsVFyL9uw"
+}

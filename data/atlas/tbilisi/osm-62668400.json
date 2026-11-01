@@ -1,0 +1,90 @@
+{
+  "id": "osm-62668400",
+  "osmId": "way/62668400",
+  "names": {
+    "ru": "Музей фольклора",
+    "en": "Folklore Museum",
+    "ka": "ფოლკლორის მუზეუმი",
+    "uk": "Музей фольклору"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8053917,
+    41.6878962
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8051089,
+          41.688031
+        ],
+        [
+          44.8057116,
+          41.6879399
+        ],
+        [
+          44.8056715,
+          41.687792
+        ],
+        [
+          44.8056219,
+          41.6877995
+        ],
+        [
+          44.805611,
+          41.6877595
+        ],
+        [
+          44.8050795,
+          41.6878398
+        ],
+        [
+          44.8050943,
+          41.6878946
+        ],
+        [
+          44.8050728,
+          41.6878978
+        ],
+        [
+          44.8051089,
+          41.688031
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-62668400-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3579",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74559_B5A441CF-3B48-4E25-9C2F-20361BBD1B34",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/62668400",
+  "otherSource": "https://www.wikidata.org/wiki/Q42651673"
+}

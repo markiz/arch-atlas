@@ -1,0 +1,77 @@
+{
+  "id": "osm-1268032297",
+  "osmId": "way/1268032297",
+  "names": {
+    "ru": "Башня",
+    "en": "Tower",
+    "ka": "კოშკი",
+    "uk": "Вежа"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8087216,
+    41.6874676
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8087007,
+          41.6874924
+        ],
+        [
+          44.8086877,
+          41.6874528
+        ],
+        [
+          44.8087425,
+          41.6874428
+        ],
+        [
+          44.8087556,
+          41.6874823
+        ],
+        [
+          44.80873,
+          41.687487
+        ],
+        [
+          44.8087007,
+          41.6874924
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1268032297-g1.webp",
+      "author": "Adam Jones from Kelowna, BC, Canada",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Nariqala_Fortress_-_Viewed_from_Botanical_Gardens_-_Old_Town_-_Tbilisi_-_Georgia_-_01_(18059192773)_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1268032297",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628230"
+}

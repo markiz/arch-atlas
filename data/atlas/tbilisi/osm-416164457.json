@@ -1,0 +1,159 @@
+{
+  "id": "osm-416164457",
+  "osmId": "way/416164457",
+  "names": {
+    "ru": "Бывший пансион благородных девиц Ананова",
+    "en": "Former Ananov's Finishing School",
+    "ka": "ყოფილი ანანოვის კეთილშობილ ქალთა პანსიონი",
+    "uk": "Колишній пансіон шляхетних дівчат Ананова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 28",
+    "en": "28 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 28",
+    "uk": "вулиця Ладо Асატіані, 28"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1905,
+  "maxYear": 1905,
+  "yearLabelId": "year-1905",
+  "styleId": "neo-gothic",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8018887,
+    41.6893486
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8024235,
+          41.689411
+        ],
+        [
+          44.8020331,
+          41.6893973
+        ],
+        [
+          44.8020292,
+          41.6894588
+        ],
+        [
+          44.8019641,
+          41.6894565
+        ],
+        [
+          44.8019834,
+          41.6891474
+        ],
+        [
+          44.8017621,
+          41.6891397
+        ],
+        [
+          44.8017522,
+          41.689298
+        ],
+        [
+          44.8018097,
+          41.6893
+        ],
+        [
+          44.801798,
+          41.6894869
+        ],
+        [
+          44.8017751,
+          41.6894861
+        ],
+        [
+          44.8017741,
+          41.6895016
+        ],
+        [
+          44.8017702,
+          41.6895647
+        ],
+        [
+          44.8020944,
+          41.689576
+        ],
+        [
+          44.8020922,
+          41.689611
+        ],
+        [
+          44.8021878,
+          41.689615
+        ],
+        [
+          44.8021846,
+          41.6896382
+        ],
+        [
+          44.802208,
+          41.6896393
+        ],
+        [
+          44.8022343,
+          41.6896405
+        ],
+        [
+          44.8022384,
+          41.6896161
+        ],
+        [
+          44.8023196,
+          41.6896189
+        ],
+        [
+          44.8023206,
+          41.6896026
+        ],
+        [
+          44.8023216,
+          41.6895872
+        ],
+        [
+          44.8024123,
+          41.6895904
+        ],
+        [
+          44.8024235,
+          41.689411
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-416164457-g1.webp",
+      "author": "Lasha ge",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%9B%E1%83%94%E1%83%94%E1%83%A5%E1%83%95%E1%83%A1%E1%83%94_%E1%83%A1%E1%83%90%E1%83%90%E1%83%95%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%9D_%E1%83%A1%E1%83%99%E1%83%9D%E1%83%9A%E1%83%90,_%E1%83%A7%E1%83%9D%E1%83%A4%E1%83%98%E1%83%9A%E1%83%98_%E1%83%99%E1%83%94%E1%83%97%E1%83%98%E1%83%9A%E1%83%A8%E1%83%9D%E1%83%91%E1%83%98%E1%83%9A_%E1%83%A5%E1%83%90%E1%83%9A%E1%83%97%E1%83%90_%E1%83%92%E1%83%94%E1%83%A0%E1%83%9B%E1%83%90%E1%83%9C%E1%83%A3%E1%83%9A%E1%83%98_%E1%83%9E%E1%83%90%E1%83%9C%E1%83%A1%E1%83%98%E1%83%9D%E1%83%9C%E1%83%98.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-416164457-depicts.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_28.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/416164457",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623112",
+  "googlePlaceId": "ChIJ7QQYLPIMREARIa_pdffODXs",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Sixth%20Authorized%20School&query_place_id=ChIJ7QQYLPIMREARIa_pdffODXs"
+}

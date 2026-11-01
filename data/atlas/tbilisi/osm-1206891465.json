@@ -1,0 +1,95 @@
+{
+  "id": "osm-1206891465",
+  "osmId": "way/1206891465",
+  "names": {
+    "ru": "Дом Магакяна",
+    "en": "Maghakyan House",
+    "ka": "მაღაკიანის სახლი",
+    "uk": "Будинок Магакяна"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 38",
+    "en": "38 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 38",
+    "uk": "вулиця Ладо Асატіані, 38"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1914,
+  "maxYear": 1914,
+  "yearLabelId": "year-1914",
+  "styleId": "neoclassicism+art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8001726,
+    41.6894826
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8000545,
+          41.6892853
+        ],
+        [
+          44.8000472,
+          41.6895615
+        ],
+        [
+          44.8000748,
+          41.6895623
+        ],
+        [
+          44.8002532,
+          41.6895675
+        ],
+        [
+          44.8002941,
+          41.6895687
+        ],
+        [
+          44.8002975,
+          41.6894037
+        ],
+        [
+          44.8002576,
+          41.6894036
+        ],
+        [
+          44.800127,
+          41.6894031
+        ],
+        [
+          44.8001235,
+          41.6892825
+        ],
+        [
+          44.8000545,
+          41.6892853
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891465-g1.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_38.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891465",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623400",
+  "googlePlaceId": "ChIJ5Z1PQPIMREARGwmDfRrkb34",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6894826%2C44.8001726&query_place_id=ChIJ5Z1PQPIMREARGwmDfRrkb34"
+}

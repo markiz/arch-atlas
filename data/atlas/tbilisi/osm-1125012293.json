@@ -1,0 +1,88 @@
+{
+  "id": "osm-1125012293",
+  "osmId": "way/1125012293",
+  "names": {
+    "ru": "Союз композиторов",
+    "en": "Composers’ Union",
+    "ka": "კომპოზიტორთა კავშირი",
+    "uk": "Спілка композиторів"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 22",
+    "en": "22 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 22",
+    "uk": "проспект Шота Руставелі, 22"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7961674,
+    41.6999859
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7963604,
+          41.699915
+        ],
+        [
+          44.796195,
+          41.7000503
+        ],
+        [
+          44.7961457,
+          41.7000541
+        ],
+        [
+          44.7959812,
+          41.6999216
+        ],
+        [
+          44.7961109,
+          41.6998334
+        ],
+        [
+          44.796156,
+          41.6998691
+        ],
+        [
+          44.796221,
+          41.699821
+        ],
+        [
+          44.7963604,
+          41.699915
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1125012293-1.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A0%E1%83%A3%E1%83%A1%E1%83%97%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_22.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "дом Союза композиторов на проспекте Руставели, 22; свободная лицензия"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1125012293",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650334",
+  "googlePlaceId": "ChIJo5TgY90MREARi9Amm8haBBU",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=22%20Shota%20Rustaveli%20Ave&query_place_id=ChIJo5TgY90MREARi9Amm8haBBU"
+}

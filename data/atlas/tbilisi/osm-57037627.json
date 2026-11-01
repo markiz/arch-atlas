@@ -1,0 +1,82 @@
+{
+  "id": "osm-57037627",
+  "osmId": "way/57037627",
+  "names": {
+    "ru": "Центр Микеладзе (бывший Дом культуры железнодорожников)",
+    "en": "Mikeladze Center (formerly Railway House)",
+    "ka": "მიქელაძის ცენტრი (ყოფილი რკინიგზელთა კულტურის სახლი)",
+    "uk": "Центр Мікеладзе (колишній Будинок культури залізничників)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 127 (в реестре: 127а)",
+    "en": "127 Davit Aghmashenebeli Avenue (127a in the register)",
+    "ka": "დავით აღმაშენებლის გამზირი 127 (რეესტრში: 127ა)",
+    "uk": "проспект Давида Агмашенебелі, 127 (у реєстрі: 127а)"
+  },
+  "descriptions": {
+    "ru": "Крупный по масштабу Дом культуры железнодорожников сочетает мотивы европейской и грузинской архитектуры.",
+    "en": "The Railway House is notable for its scale and combines motifs of European and Georgian architecture.",
+    "ka": "რკინიგზელთა კულტურის სახლი მასშტაბით გამოირჩევა და ევროპული და ქართული არქიტექტურის მოტივებს აერთიანებს.",
+    "uk": "Будинок культури залізничників вирізняється масштабом і поєднує мотиви європейської та грузинської архітектури."
+  },
+  "histories": {
+    "ru": "Дом железнодорожников построен по проекту Г. Тер-Михелова. Источники расходятся в датировке: Scan Tbilisi указывает 1950 год, реестр памятников — 1952 год.",
+    "en": "The Railway House was designed by G. Ter-Michelov. Sources differ on the date: Scan Tbilisi gives 1950, while the heritage registry gives 1952.",
+    "ka": "რკინიგზელთა სახლი გ. ტერ-მიხელოვის პროექტით აშენდა. თარიღის შესახებ წყაროები განსხვავდება: Scan Tbilisi 1950 წელს მიუთითებს, მემკვიდრეობის რეესტრი კი 1952 წელს.",
+    "uk": "Будинок залізничників спорудили за проєктом Г. Тер-Міхелова. Джерела розходяться в датуванні: Scan Tbilisi вказує 1950 рік, реєстр пам’яток — 1952-й."
+  },
+  "minYear": 1950,
+  "maxYear": 1952,
+  "yearLabelId": "research-3137",
+  "styleId": "undetermined",
+  "architectIds": [
+    "research-architect-3137"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7944942,
+    41.714662
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.793983,
+          41.714614
+        ],
+        [
+          44.794825,
+          41.714956
+        ],
+        [
+          44.795005,
+          41.71471
+        ],
+        [
+          44.794164,
+          41.714367
+        ],
+        [
+          44.793983,
+          41.714614
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-57037627-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3137",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76112_B54377B3-0610-43AC-ACF2-D72BA2D10002",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.scantbilisi.ge/en/objects/397/Vaso-Abashidze-State-New-Theatre",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3137"
+}

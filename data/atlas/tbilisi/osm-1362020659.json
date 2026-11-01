@@ -1,0 +1,151 @@
+{
+  "id": "osm-1362020659",
+  "osmId": "way/1362020659",
+  "names": {
+    "ru": "Президиум Академии наук Грузии",
+    "en": "Presidium of the Georgian Academy of Sciences",
+    "ka": "საქართველოს მეცნიერებათა აკადემიის პრეზიდიუმი",
+    "uk": "Президиум Академии наук Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7902581,
+    41.7031466
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7902915,
+          41.7029096
+        ],
+        [
+          44.790323,
+          41.7029351
+        ],
+        [
+          44.7903656,
+          41.7029757
+        ],
+        [
+          44.790397,
+          41.7030013
+        ],
+        [
+          44.7903983,
+          41.7030024
+        ],
+        [
+          44.7904272,
+          41.7030275
+        ],
+        [
+          44.7903523,
+          41.7030615
+        ],
+        [
+          44.7905065,
+          41.7031917
+        ],
+        [
+          44.7906829,
+          41.7031138
+        ],
+        [
+          44.7909213,
+          41.7030087
+        ],
+        [
+          44.7908084,
+          41.7028583
+        ],
+        [
+          44.7909581,
+          41.7027997
+        ],
+        [
+          44.7910539,
+          41.7029449
+        ],
+        [
+          44.7910814,
+          41.7029365
+        ],
+        [
+          44.791121,
+          41.702984
+        ],
+        [
+          44.7911668,
+          41.7030609
+        ],
+        [
+          44.7907788,
+          41.7032448
+        ],
+        [
+          44.7904987,
+          41.7033704
+        ],
+        [
+          44.7905095,
+          41.7033808
+        ],
+        [
+          44.7903947,
+          41.7034472
+        ],
+        [
+          44.7903056,
+          41.7033614
+        ],
+        [
+          44.7901001,
+          41.7031794
+        ],
+        [
+          44.7899911,
+          41.7030829
+        ],
+        [
+          44.7902915,
+          41.7029096
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1362020659-g1.webp",
+      "author": "Nich marketing",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gruzugol_building_in_Tbilisi.JPG",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1362020659",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650680",
+  "googlePlaceId": "ChIJlVUEetsMREARceSO4a05swk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Georgian%20National%20Academy%20of%20Sciences&query_place_id=ChIJlVUEetsMREARceSO4a05swk"
+}

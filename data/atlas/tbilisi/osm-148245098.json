@@ -1,0 +1,147 @@
+{
+  "id": "osm-148245098",
+  "osmId": "way/148245098",
+  "names": {
+    "ru": "Здание бывшего Закавказского девичьего института",
+    "en": "Former Transcaucasian Institute for Noble Maidens building",
+    "ka": "ყოფილი ამიერკავკასიის კეთილშობილ ქალთა ინსტიტუტის შენობა",
+    "uk": "Будівля бившего Закавказького девичьего института"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Шио Читадзе, 4",
+    "en": "4 Shio Chitadze Street",
+    "ka": "შიო ჩიტაძის ქუჩა 4",
+    "uk": "вулиця Шіо Читадзе, 4"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1890,
+  "maxYear": 1890,
+  "yearLabelId": "year-1890",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7949852,
+    41.6946936
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7949765,
+          41.6947648
+        ],
+        [
+          44.7948399,
+          41.6947173
+        ],
+        [
+          44.7948341,
+          41.6947266
+        ],
+        [
+          44.7947155,
+          41.6946854
+        ],
+        [
+          44.7948276,
+          41.6945055
+        ],
+        [
+          44.7949458,
+          41.6945466
+        ],
+        [
+          44.7949158,
+          41.6945947
+        ],
+        [
+          44.7950588,
+          41.6946444
+        ],
+        [
+          44.795187,
+          41.6944339
+        ],
+        [
+          44.7953565,
+          41.6944927
+        ],
+        [
+          44.7952262,
+          41.6947018
+        ],
+        [
+          44.7954592,
+          41.6947828
+        ],
+        [
+          44.7954889,
+          41.694735
+        ],
+        [
+          44.7955994,
+          41.6947734
+        ],
+        [
+          44.7954892,
+          41.6949503
+        ],
+        [
+          44.7953773,
+          41.6949114
+        ],
+        [
+          44.7953806,
+          41.694906
+        ],
+        [
+          44.7952438,
+          41.6948585
+        ],
+        [
+          44.7951878,
+          41.6949484
+        ],
+        [
+          44.79492,
+          41.6948554
+        ],
+        [
+          44.7949765,
+          41.6947648
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-148245098-g1.webp",
+      "author": "Malkhaz Tchubabria",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ministry_of_Foreign_Affairs_of_Georgia.png",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-148245098-depicts.webp",
+      "author": "Malkhaz Tchubabria",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Building_of_Ministry_of_Foreign_Affairs_of_Georgia.png",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/148245098",
+  "otherSource": "https://www.wikidata.org/wiki/Q42617918",
+  "googlePlaceId": "ChIJL8ZyOOkMREARnPmR7bSFBFI",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6946936%2C44.7949852&query_place_id=ChIJL8ZyOOkMREARnPmR7bSFBFI"
+}

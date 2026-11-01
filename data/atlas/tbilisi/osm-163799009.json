@@ -1,0 +1,83 @@
+{
+  "id": "osm-163799009",
+  "osmId": "way/163799009",
+  "names": {
+    "ru": "Вифлеемская церковь",
+    "en": "Betlemi Church",
+    "ka": "ბეთლემის ეკლესია",
+    "uk": "Вифлеемская церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": 1727,
+  "maxYear": 1727,
+  "yearLabelId": "year-1727",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8045726,
+    41.6888724
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.80441,
+          41.6889371
+        ],
+        [
+          44.8047304,
+          41.6889434
+        ],
+        [
+          44.8047351,
+          41.6888078
+        ],
+        [
+          44.8044148,
+          41.6888016
+        ],
+        [
+          44.80441,
+          41.6889371
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-163799009-g1.webp",
+      "author": "Ian.Climacus",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Holy_Mother_of_God_Church_of_Bethlehem,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-163799009-g2.webp",
+      "author": "Soghomon Matevosyan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Armenian_church_Saint_Bethlehem_in_Tbilisi_(lower_monument_group)_01.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/163799009",
+  "otherSource": "https://www.wikidata.org/wiki/Q5885757",
+  "googlePlaceId": "ChIJbUQYX_EMREAR8qLNIb29COc",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Upper%20Betlemi%20Church&query_place_id=ChIJbUQYX_EMREAR8qLNIb29COc"
+}

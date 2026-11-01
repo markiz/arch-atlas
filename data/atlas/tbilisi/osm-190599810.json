@@ -1,0 +1,107 @@
+{
+  "id": "osm-190599810",
+  "osmId": "way/190599810",
+  "names": {
+    "ru": "Дом Тунебегова",
+    "en": "Tunebegov House",
+    "ka": "ტუნებეგოვის სახლი",
+    "uk": "Будинок Тунебегова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Грибоедова, 14",
+    "en": "14 Alexander Griboedov Street",
+    "ka": "ალექსანდრე გრიბოედოვის ქუჩა 14",
+    "uk": "вулиця Олександра Грибоєдова, 14"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7946142,
+    41.7000539
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7945386,
+          41.7002262
+        ],
+        [
+          44.7943866,
+          41.7001275
+        ],
+        [
+          44.7943118,
+          41.7000844
+        ],
+        [
+          44.794238,
+          41.7000299
+        ],
+        [
+          44.7943328,
+          41.699952
+        ],
+        [
+          44.7943708,
+          41.6999769
+        ],
+        [
+          44.7943422,
+          41.7000012
+        ],
+        [
+          44.7944593,
+          41.7000779
+        ],
+        [
+          44.794644,
+          41.6999207
+        ],
+        [
+          44.7947872,
+          41.7000145
+        ],
+        [
+          44.7945386,
+          41.7002262
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-190599810-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5._14.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-190599810-depicts.webp",
+      "author": "Varsika",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:3J4A0212%2B.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/190599810",
+  "otherSource": "https://www.wikidata.org/wiki/Q42630359",
+  "googlePlaceId": "ChIJSbTXRt0MREARY5GX-OJMdzc",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=14%20Alexander%20Griboedov%20St&query_place_id=ChIJSbTXRt0MREARY5GX-OJMdzc"
+}

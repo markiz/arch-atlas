@@ -1,0 +1,171 @@
+{
+  "id": "osm-1193859177",
+  "osmId": "way/1193859177",
+  "names": {
+    "ru": "Дом Тер-Акоповой",
+    "en": "Ter-Akopova House",
+    "ka": "ტერ-აკოპოვას სახლი",
+    "uk": "Будинок Тер-Акоповой"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1896,
+  "maxYear": 1896,
+  "yearLabelId": "year-1896",
+  "styleId": "neo-baroque",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8014827,
+    41.6898331
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8013673,
+          41.6899409
+        ],
+        [
+          44.8013678,
+          41.6899275
+        ],
+        [
+          44.8013709,
+          41.6898399
+        ],
+        [
+          44.8013726,
+          41.689772
+        ],
+        [
+          44.8013729,
+          41.6897575
+        ],
+        [
+          44.8013805,
+          41.689755
+        ],
+        [
+          44.8013772,
+          41.689749
+        ],
+        [
+          44.8013756,
+          41.6897427
+        ],
+        [
+          44.8013764,
+          41.689736
+        ],
+        [
+          44.8013807,
+          41.6897296
+        ],
+        [
+          44.8013878,
+          41.6897247
+        ],
+        [
+          44.8013959,
+          41.6897221
+        ],
+        [
+          44.8014047,
+          41.689722
+        ],
+        [
+          44.8014136,
+          41.6897237
+        ],
+        [
+          44.8014201,
+          41.6897267
+        ],
+        [
+          44.8014244,
+          41.6897218
+        ],
+        [
+          44.801432,
+          41.689722
+        ],
+        [
+          44.8014468,
+          41.6897225
+        ],
+        [
+          44.8017066,
+          41.6897316
+        ],
+        [
+          44.8017344,
+          41.6897326
+        ],
+        [
+          44.8017333,
+          41.6898264
+        ],
+        [
+          44.8017025,
+          41.6898256
+        ],
+        [
+          44.8015948,
+          41.6898226
+        ],
+        [
+          44.8015923,
+          41.689889
+        ],
+        [
+          44.8017007,
+          41.6898933
+        ],
+        [
+          44.801698,
+          41.6899514
+        ],
+        [
+          44.8013673,
+          41.6899409
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1193859177-g1.webp",
+      "author": "Saskia Heijltjes",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Old_part_of_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1193859177-depicts.webp",
+      "author": "Dor Shabashewitz",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:24_Galaktion_Tabidze_St,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1193859177",
+  "otherSource": "https://www.wikidata.org/wiki/Q42629173",
+  "googlePlaceId": "ChIJRyNBJPIMREARH36Vv3JayWQ",
+  "googlePlaceIdSource": "https://maps.app.goo.gl/F3Jy2i2VbbtY66WV7"
+}

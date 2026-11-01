@@ -1,0 +1,80 @@
+{
+  "id": "osm-78500061",
+  "osmId": "way/78500061",
+  "names": {
+    "ru": "Церковь Святой Нино в Чугурети",
+    "en": "St Nino Church in Chugureti",
+    "ka": "ჩუღურეთის წმინდა ნინოს ეკლესია",
+    "uk": "Церква Святої Ніно в Чугуреті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Нино Чхеидзе, 32",
+    "en": "32 Nino Chkheidze Street",
+    "ka": "ნინო ჩხეიძის ქუჩა 32",
+    "uk": "вулиця Ніно Чхеїдзе, 32"
+  },
+  "descriptions": {
+    "ru": "Кирпичная трёхнефная базилика в Чугурети, посвящённая Святой Нино.",
+    "en": "A three-aisled brick basilica in Chugureti dedicated to Saint Nino.",
+    "ka": "ჩუღურეთში მდებარე აგურით ნაშენი წმინდა ნინოს სამნავიანი ბაზილიკა.",
+    "uk": "Цегляна тринефна базиліка у Чугуреті, присвячена Святій Ніно."
+  },
+  "histories": {
+    "ru": "Время постройки точно не установлено: источники предположительно относят храм к концу XVII–XVIII веку или к середине XIX века. После закрытия и смены назначения церковь вновь освятили в 1991 году.",
+    "en": "The construction date is uncertain: sources tentatively suggest the late 17th–18th century or the mid-19th century. After closure and several other uses, the church was reconsecrated in 1991.",
+    "ka": "აშენების ზუსტი თარიღი უცნობია: წყაროებში სავარაუდოდ XVII საუკუნის ბოლო – XVIII საუკუნე ან XIX საუკუნის შუა პერიოდია მითითებული. დახურვისა და სხვადასხვა დანიშნულებით გამოყენების შემდეგ ეკლესია 1991 წელს ხელახლა აკურთხეს.",
+    "uk": "Точний час спорудження невідомий: джерела припускають кінець XVII–XVIII або середину XIX століття. Після закриття та використання для інших потреб церкву повторно освятили 1991 року."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8091432,
+    41.701118
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.809035,
+          41.701175
+        ],
+        [
+          44.809254,
+          41.701172
+        ],
+        [
+          44.809252,
+          41.701061
+        ],
+        [
+          44.809032,
+          41.701064
+        ],
+        [
+          44.809035,
+          41.701175
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
+  "photos": [
+    {
+      "file": "photos/osm-78500061-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2764",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74432_06AAC77D-5ED4-4221-B578-2C476A990CDF",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/nino2.htm",
+  "otherSource": "https://www.ambioni.ge/wmida-ninos-saxelobis-tadzari"
+}

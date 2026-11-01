@@ -1,0 +1,104 @@
+{
+  "id": "osm-287449109",
+  "osmId": "way/287449109",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Дмитрия Бакрадзе, 10",
+    "en": "10 Dimitri Bakradze Street",
+    "ka": "დიმიტრი ბაქრაძის ქუჩა 10",
+    "uk": "вулиця Дмитра Бакрадзе, 10"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7857617,
+    41.7055101
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7859287,
+          41.7055524
+        ],
+        [
+          44.785818,
+          41.7054368
+        ],
+        [
+          44.7857886,
+          41.7054521
+        ],
+        [
+          44.7857233,
+          41.7054863
+        ],
+        [
+          44.7856458,
+          41.7054091
+        ],
+        [
+          44.7855747,
+          41.7054453
+        ],
+        [
+          44.7856575,
+          41.7055338
+        ],
+        [
+          44.7857553,
+          41.7056382
+        ],
+        [
+          44.785762,
+          41.7056346
+        ],
+        [
+          44.7857834,
+          41.705624
+        ],
+        [
+          44.7859005,
+          41.7055663
+        ],
+        [
+          44.7859287,
+          41.7055524
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-287449109-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4677",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75444_7EB47185-D294-4C8B-8D84-B298E32B3DA5",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/287449109",
+  "otherSource": "https://www.wikidata.org/wiki/Q42626361",
+  "googlePlaceId": "ChIJNcNud9AMREARUVZDA6qzF6c",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=10%20Dimitri%20Bakradze%20St&query_place_id=ChIJNcNud9AMREARUVZDA6qzF6c"
+}

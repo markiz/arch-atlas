@@ -1,0 +1,87 @@
+{
+  "id": "osm-1207148751",
+  "osmId": "way/1207148751",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Абанотубани, 25",
+    "en": "25 Abano Street",
+    "ka": "აბანოს ქუჩა 25",
+    "uk": "вулиця Абанотубანი, 25"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8105582,
+    41.6879625
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8105027,
+          41.6879838
+        ],
+        [
+          44.8104937,
+          41.6879179
+        ],
+        [
+          44.8105623,
+          41.6879306
+        ],
+        [
+          44.8106203,
+          41.6879413
+        ],
+        [
+          44.8106119,
+          41.687989
+        ],
+        [
+          44.8105027,
+          41.6879838
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1207148751-g1.webp",
+      "author": "Lasha ge",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_%E1%83%90%E1%83%91%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_25.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1207148751-depicts.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_25_%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1207148751",
+  "otherSource": "https://www.wikidata.org/wiki/Q42618441",
+  "googlePlaceId": "ChIJQz7aV_YMREARL2WhEM-MPF8",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=25%20Abano%20St&query_place_id=ChIJQz7aV_YMREARL2WhEM-MPF8"
+}

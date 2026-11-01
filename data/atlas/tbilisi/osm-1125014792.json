@@ -1,0 +1,115 @@
+{
+  "id": "osm-1125014792",
+  "osmId": "way/1125014792",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Грибоедова, 27",
+    "en": "27 Alexander Griboedov Street",
+    "ka": "ალექსანდრე გრიბოედოვის ქუჩა 27",
+    "uk": "вулиця Олександра Грибоєдова, 27"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7934197,
+    41.7014542
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7935625,
+          41.7016195
+        ],
+        [
+          44.7934841,
+          41.7015657
+        ],
+        [
+          44.7932573,
+          41.701415
+        ],
+        [
+          44.7934473,
+          41.7012516
+        ],
+        [
+          44.7937414,
+          41.7014403
+        ],
+        [
+          44.7937055,
+          41.7014682
+        ],
+        [
+          44.7937771,
+          41.7015139
+        ],
+        [
+          44.7937114,
+          41.701568
+        ],
+        [
+          44.7936411,
+          41.7015169
+        ],
+        [
+          44.7936728,
+          41.7014904
+        ],
+        [
+          44.7935631,
+          41.701424
+        ],
+        [
+          44.7935004,
+          41.7014714
+        ],
+        [
+          44.7936702,
+          41.7015794
+        ],
+        [
+          44.7935997,
+          41.7016438
+        ],
+        [
+          44.7935625,
+          41.7016195
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1125014792-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5._27.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1125014792",
+  "otherSource": "https://www.wikidata.org/wiki/Q42630642",
+  "googlePlaceId": "ChIJI2eJ5NwMREARQcLwL4Zcig8",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=27%20Alexander%20Griboedov%20St&query_place_id=ChIJI2eJ5NwMREARQcLwL4Zcig8"
+}

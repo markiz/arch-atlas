@@ -1,0 +1,90 @@
+{
+  "id": "osm-78004768",
+  "osmId": "way/78004768",
+  "names": {
+    "ru": "Бывший штаб Кавказского военного округа",
+    "en": "Former Headquarters of the Caucasus Military District",
+    "ka": "კავკასიის სამხედრო ოლქის ყოფილი შტაბი",
+    "uk": "Колишній штаб Кавказького військового округу"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Свободы, 4",
+    "en": "4 Freedom Square",
+    "ka": "თავისუფლების მოედანი 4",
+    "uk": "площа Свободи, 4"
+  },
+  "descriptions": {
+    "ru": "Монументальный трёхэтажный корпус с симметричным фасадом, арками первого этажа, крупным колонным портиком и башней с часами. Здание — один из ранних официальных корпусов Тбилиси.",
+    "en": "A monumental three-story building with a symmetrical façade, ground-floor arches, a large columned portico, and a clock tower. It is one of Tbilisi’s earliest surviving official buildings.",
+    "ka": "მონუმენტური სამსართულიანი შენობაა სიმეტრიული ფასადით, პირველი სართულის თაღებით, დიდი სვეტებიანი პორტიკითა და საათიანი კოშკით. იგი თბილისის ერთ-ერთი უძველესი შემორჩენილი ოფიციალური შენობაა.",
+    "uk": "Монументальна триповерхова будівля із симетричним фасадом, арками першого поверху, великим колонним портиком і вежею з годинником. Це одна з найдавніших збережених офіційних будівель Тбілісі."
+  },
+  "histories": {
+    "ru": "Официальный реестр датирует здание 1824 годом и описывает крупный трёхэтажный симметричный корпус с массивными арочными проездами, рустованным первым этажом, портиком и башней. Scan Tbilisi сообщает, что первоначально здесь размещались органы городского самоуправления («Городской дом»), позднее — штаб Кавказской армии и военная прокуратура; теперь это офисный центр. Источник относит здание к раннему русскому классицизму и называет одним из старейших сохранившихся официальных зданий Тбилиси. Часы на башне установили в 1829 году; дата относится к часам, а не к строительству. Архитектор не установлен.",
+    "en": "The official register dates the building to 1824 and describes a large symmetrical three-story structure with massive arched gates, a rusticated ground floor, a portico, and a tower. Scan Tbilisi reports that municipal government bodies first occupied the building, known as City Hall; it later housed the Caucasus Army headquarters and a military prosecutor’s office, and is now an office center. The source calls it an important example of classicism and one of the oldest surviving official buildings in Tbilisi. The tower clock was installed in 1829; that date applies to the clock, not the building. The architect is unknown.",
+    "ka": "ოფიციალური რეესტრი შენობას 1824 წლით ათარიღებს და აღწერს დიდ სიმეტრიულ სამსართულიან ნაგებობას მასიური თაღოვანი ჭიშკრებით, რუსტირებული პირველი სართულით, პორტიკითა და კოშკით. Scan Tbilisi-ის მიხედვით, თავდაპირველად შენობაში ქალაქის თვითმმართველობა იყო განთავსებული და მას „საქალაქო სახლს“ უწოდებდნენ; მოგვიანებით აქ კავკასიის არმიის შტაბი და სამხედრო პროკურატურა იყო, ახლა კი ოფისების ცენტრია. წყარო მას კლასიციზმის მნიშვნელოვან ნიმუშად და თბილისში შემორჩენილ ერთ-ერთ უძველეს ოფიციალურ შენობად აღწერს. კოშკზე საათი 1829 წელს დამონტაჟდა; ეს თარიღი საათს და არა შენობას ეხება. არქიტექტორი უცნობია.",
+    "uk": "Офіційний реєстр датує будівлю 1824 роком і описує велику симетричну триповерхову споруду з масивними арковими проїздами, рустованим першим поверхом, портиком і вежею. За даними Scan Tbilisi, спочатку тут містилися органи міського самоврядування («Міський дім»), пізніше — штаб Кавказької армії та військова прокуратура; нині це офісний центр. Джерело називає будівлю важливим зразком класицизму й однією з найдавніших збережених офіційних споруд Тбілісі. Годинник на вежі встановили 1829 року; ця дата стосується годинника, а не будівлі. Архітектор невідомий."
+  },
+  "minYear": 1824,
+  "maxYear": 1824,
+  "yearLabelId": "year-1824",
+  "styleId": "neoclassicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.80069125810263,
+    41.693977667038325
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.800456,
+          41.694118
+        ],
+        [
+          44.800665,
+          41.694196
+        ],
+        [
+          44.80092,
+          41.693874
+        ],
+        [
+          44.800936,
+          41.693854
+        ],
+        [
+          44.800696,
+          41.69376
+        ],
+        [
+          44.800685,
+          41.693777
+        ],
+        [
+          44.800456,
+          41.694118
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "OSM way/78004768 имеет адрес Liberty Square 4 и замкнутый Polygon. Официальная граница 4711 и way совпадают с IoU около 0,82; 98,8% OSM-контура находится внутри границы, а OSM покрывает 82,4% официального полигона. Адрес и фасадное описание подтверждают корпус. Google API нашёл обычный адресный дом Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; Place ID добавлен как адресная привязка, не как именованная достопримечательность. Фото с проверенными правами не найдено.",
+  "photos": [
+    {
+      "file": "photos/osm-78004768-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4711",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75526_D6FF980C-AAC9-4CF5-BF72-634BF59897A1",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4711",
+  "otherSource": "https://www.scantbilisi.ge/en/objects/307/Liberty-Square",
+  "googlePlaceId": "ChIJK-PQB-8MREARy3KFjZC7Tkg",
+  "googlePlaceIdSource": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/4-freedom-square?to=place.ChIJK-PQB-8MREARy3KFjZC7Tkg"
+}

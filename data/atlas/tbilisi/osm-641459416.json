@@ -1,0 +1,108 @@
+{
+  "id": "osm-641459416",
+  "osmId": "way/641459416",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 28ა",
+    "en": "28ა Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 28ა",
+    "uk": "вулиця Ладо Асატіані, 28ა"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8023327,
+    41.6891019
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8022047,
+          41.6891315
+        ],
+        [
+          44.8022429,
+          41.689133
+        ],
+        [
+          44.8022337,
+          41.6892127
+        ],
+        [
+          44.8024458,
+          41.6892267
+        ],
+        [
+          44.8024609,
+          41.6890998
+        ],
+        [
+          44.8025234,
+          41.689104
+        ],
+        [
+          44.8025321,
+          41.6890307
+        ],
+        [
+          44.8023408,
+          41.6890158
+        ],
+        [
+          44.8023421,
+          41.6889843
+        ],
+        [
+          44.8021477,
+          41.6889763
+        ],
+        [
+          44.8021443,
+          41.6890439
+        ],
+        [
+          44.8022047,
+          41.6890464
+        ],
+        [
+          44.8022047,
+          41.6891315
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-641459416-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4064",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74971_FC98F800-5FCB-4B6F-9EB6-102CF976E2A9",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/641459416",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623085",
+  "googlePlaceId": "ChIJkVm8zfMMREARop27mh0ggIE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=28%20Lado%20Asatiani%20St&query_place_id=ChIJkVm8zfMMREARop27mh0ggIE"
+}

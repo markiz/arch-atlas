@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""Validate editorial cards before they are merged into public atlas data.
+"""Validate the per-object atlas source before it is packed.
 
 Checks source files, not the built bundle:
-  data/heritage-extra.json
-  data/building-address-translations.json
-  data/building-name-translations.json
-  data/building-text-translations.json
+  data/atlas/tbilisi/*.json
   data/building-attribute-translations.json
-  public/atlas/buildings.json (after build-data.py)
+  public/atlas/buildings.json (after scripts/assemble-atlas.mjs)
 
 The script prints errors and warnings and exits non-zero on errors. Warnings can
 be promoted with --strict. It never modifies files.
@@ -17,7 +14,6 @@ from __future__ import annotations
 import argparse
 import json
 import math
-import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -31,13 +27,14 @@ except ImportError:
     sys.exit('This script requires shapely: python3 -m pip install shapely')
 
 ROOT = Path(__file__).resolve().parent.parent
-EXTRA = ROOT / 'data/heritage-extra.json'
-ADDRESSES = ROOT / 'data/building-address-translations.json'
-NAMES = ROOT / 'data/building-name-translations.json'
-TEXTS = ROOT / 'data/building-text-translations.json'
+SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 ATTRIBUTES = ROOT / 'data/building-attribute-translations.json'
 BUILDINGS = ROOT / 'public/atlas/buildings.json'
 LANGS = ('ru', 'en', 'ka', 'uk')
+GEOMETRY_ROLES = (
+    'above_ground', 'heritage_boundary', 'complex_underground',
+    'neighbor_wrong_candidate', 'historic_plan', 'visible_domes', 'unknown',
+)
 TIFLIS_BBOX = (44.0, 41.3, 45.2, 42.0)
 
 
@@ -70,6 +67,17 @@ def webp_ok(path: Path) -> bool:
     return len(data) >= 12 and data[:4] == b'RIFF' and data[8:12] == b'WEBP'
 
 
+def labels_ok(card: dict[str, Any], field: str, errors: list[str], label: str, *, allow_empty: bool = False) -> dict[str, str] | None:
+    value = card.get(field)
+    if not isinstance(value, dict) or set(value) != set(LANGS):
+        errors.append(f'{label}: {field} must have ru/en/ka/uk')
+        return None
+    for lang in LANGS:
+        if not isinstance(value[lang], str) or (not allow_empty and not value[lang].strip()):
+            errors.append(f'{label}: {field}.{lang} is empty' if allow_empty else f'{label}: {field}.{lang} must be a non-empty string')
+    return value
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--strict', action='store_true', help='treat warnings as errors')
@@ -80,10 +88,6 @@ def main() -> int:
     warnings: list[str] = []
 
     try:
-        extra = read_json(EXTRA)
-        addresses = read_json(ADDRESSES)
-        names = read_json(NAMES)
-        texts = read_json(TEXTS)
         attributes = read_json(ATTRIBUTES)
         buildings = read_json(BUILDINGS)
     except FileNotFoundError as error:
@@ -93,73 +97,78 @@ def main() -> int:
         print(f'ERROR: invalid JSON: {error}', file=sys.stderr)
         return 1
 
-    style_keys = attributes.get('styleIdBySource', {})
-    year_keys = attributes.get('yearLabelIdBySource', {})
-    district_keys = attributes.get('districtIdBySource', {})
-    architect_keys = attributes.get('architectIdBySource', {})
+    tables = {
+        'styleId': attributes.get('styles', {}),
+        'yearLabelId': attributes.get('yearLabels', {}),
+        'districtId': attributes.get('districts', {}),
+    }
+    architects = attributes.get('architects', {})
+    paths = sorted(SOURCE_DIR.glob('*.json'))
+    if not paths:
+        print(f'ERROR: no source cards in {SOURCE_DIR.relative_to(ROOT)}', file=sys.stderr)
+        return 1
 
     ids: set[str] = set()
-    card_progress = Progress(len(extra), 'validate extra cards')
+    card_progress = Progress(len(paths), 'validate atlas source')
     card_progress.start()
-    for card in extra:
+    for path in paths:
+        label = path.stem
+        try:
+            card = read_json(path)
+        except json.JSONDecodeError as error:
+            errors.append(f'{label}: invalid JSON: {error}')
+            card_progress.advance(label)
+            continue
+        if not isinstance(card, dict):
+            errors.append(f'{label}: record must be an object')
+            card_progress.advance(label)
+            continue
+
         card_id = card.get('id')
-        label = card_id or '<missing id>'
         if not isinstance(card_id, str) or not card_id.strip():
             errors.append(f'{label}: missing id')
             card_progress.advance(label)
             continue
+        if card_id != label:
+            errors.append(f'{label}: id {card_id!r} does not match filename')
         if card_id in ids:
-            errors.append(f'{label}: duplicate id in heritage-extra')
+            errors.append(f'{label}: duplicate id')
         ids.add(card_id)
 
-        for field in ('name', 'address', 'district', 'style', 'yearLabel', 'description', 'source'):
+        labels_ok(card, 'names', errors, label)
+        address = labels_ok(card, 'addresses', errors, label, allow_empty=True)
+        if address and any(not value.strip() for value in address.values()):
+            warnings.append(f'{label}: empty address translation (allowed for unknown address)')
+        labels_ok(card, 'descriptions', errors, label)
+        if card.get('histories') is not None:
+            labels_ok(card, 'histories', errors, label)
+
+        for field, table in tables.items():
             value = card.get(field)
-            if not isinstance(value, str) or not value.strip():
-                errors.append(f'{label}: missing {field}')
+            if value not in table:
+                errors.append(f'{label}: unknown {field} reference {value!r}')
+        architect_ids = card.get('architectIds')
+        if not isinstance(architect_ids, list):
+            errors.append(f'{label}: architectIds must be a list')
+        else:
+            for architect_id in architect_ids:
+                if architect_id not in architects:
+                    errors.append(f'{label}: unknown architect reference {architect_id!r}')
+
+        min_year, max_year = card.get('minYear'), card.get('maxYear')
+        if not ((min_year is None and max_year is None) or (
+            isinstance(min_year, int) and isinstance(max_year, int) and min_year <= max_year
+        )):
+            errors.append(f'{label}: minYear/maxYear must both be null or an ordered integer pair')
+
         if not is_http(card.get('source')):
             errors.append(f'{label}: source must be http(s)')
         if card.get('otherSource') and not is_http(card.get('otherSource')):
             warnings.append(f'{label}: otherSource is not http(s)')
-
-        for field, keys, kind in (
-            ('style', style_keys, 'style'),
-            ('yearLabel', year_keys, 'yearLabel'),
-            ('district', district_keys, 'district'),
-        ):
-            value = card.get(field)
-            if isinstance(value, str) and value and value not in keys:
-                errors.append(f'{label}: unknown {kind} key {value!r}')
-        for architect in card.get('architects') or []:
-            if architect not in architect_keys:
-                errors.append(f'{label}: unknown architect key {architect!r}')
-
-        address = addresses.get(card_id)
-        if not isinstance(address, dict) or set(address) != set(LANGS):
-            errors.append(f'{label}: address translations must have ru/en/ka/uk')
-        elif any(not isinstance(address[lang], str) or not address[lang].strip() for lang in LANGS):
-            warnings.append(f'{label}: empty address translation (allowed for unknown address)')
-
-        text = texts.get(card_id)
-        if not isinstance(text, dict) or not isinstance(text.get('descriptions'), dict):
-            errors.append(f'{label}: missing text translations')
-        else:
-            descriptions = text['descriptions']
-            for lang in LANGS:
-                if not isinstance(descriptions.get(lang), str) or not descriptions[lang].strip():
-                    errors.append(f'{label}: empty description.{lang}')
-            histories = text.get('histories')
-            if histories is not None:
-                for lang in LANGS:
-                    if not isinstance(histories.get(lang), str) or not histories[lang].strip():
-                        errors.append(f'{label}: empty history.{lang}')
-
-        if card_id not in names:
-            warnings.append(f'{label}: no name translation entry (fallback to name/nameKa/nameEn)')
-        else:
-            name_translations = names[card_id]
-            for lang in LANGS:
-                if not isinstance(name_translations.get(lang), str) or not name_translations[lang].strip():
-                    warnings.append(f'{label}: empty name.{lang} (fallback used)')
+        if card.get('googlePlaceId') is not None and not isinstance(card.get('googlePlaceId'), str):
+            errors.append(f'{label}: googlePlaceId must be a string')
+        if card.get('googlePlaceIdSource') and not is_http(card.get('googlePlaceIdSource')):
+            warnings.append(f'{label}: googlePlaceIdSource is not http(s)')
 
         geom, geom_error = geometry_ok(card.get('geometry'))
         if geom_error:
@@ -183,7 +192,7 @@ def main() -> int:
 
         role = card.get('geometryRole')
         if role is not None:
-            if role not in ('above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'):
+            if role not in GEOMETRY_ROLES:
                 errors.append(f'{label}: unknown geometryRole {role!r}')
             if role == 'heritage_boundary':
                 variants = card.get('geometryVariants')
@@ -198,7 +207,7 @@ def main() -> int:
                     if not isinstance(variant, dict):
                         errors.append(f'{label}: geometryVariants[{index}] must be an object')
                         continue
-                    if variant.get('role') not in ('above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown'):
+                    if variant.get('role') not in GEOMETRY_ROLES:
                         errors.append(f'{label}: geometryVariants[{index}] has invalid role')
                     _, variant_error = geometry_ok(variant.get('geometry'))
                     if variant_error:
@@ -230,7 +239,7 @@ def main() -> int:
 
     building_ids: set[str] = set()
     building_geometries: list[tuple[str, Any]] = []
-    building_progress = Progress(len(buildings), 'validate atlas buildings')
+    building_progress = Progress(len(buildings), 'validate packed atlas')
     building_progress.start()
     for item in buildings:
         item_id = item.get('id')
@@ -251,6 +260,14 @@ def main() -> int:
                 errors.append(f'buildings.json {item_id}: geometry outside Tbilisi bbox')
         building_progress.advance(item_id)
     building_progress.finish()
+
+    if ids != building_ids:
+        missing = sorted(ids - building_ids)
+        extra = sorted(building_ids - ids)
+        if missing:
+            errors.append(f'buildings.json is stale: missing {len(missing)} source ids, e.g. {", ".join(missing[:3])}')
+        if extra:
+            errors.append(f'buildings.json is stale: {len(extra)} ids without source, e.g. {", ".join(extra[:3])}')
 
     if not args.skip_overlaps:
         scale = 111320.0 * 111320.0 * math.cos(math.radians(41.7))
@@ -281,7 +298,7 @@ def main() -> int:
         print('WARNING:', message)
     for message in errors:
         print('ERROR:', message)
-    print(f'cards checked: {len(extra)}; atlas buildings: {len(buildings)}; errors: {len(errors)}; warnings: {len(warnings)}')
+    print(f'source cards: {len(ids)}; atlas buildings: {len(buildings)}; errors: {len(errors)}; warnings: {len(warnings)}')
     if errors or (args.strict and warnings):
         return 1
     return 0

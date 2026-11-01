@@ -1,0 +1,103 @@
+{
+  "id": "osm-34148385",
+  "osmId": "way/34148385",
+  "names": {
+    "ru": "Тбилисский дворец спорта",
+    "en": "Tbilisi Sports Palace",
+    "ka": "თბილისის სპორტის სასახლე",
+    "uk": "Тбіліський палац спорту"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь 26 Мая, 1",
+    "en": "1 26 May Square",
+    "ka": "26 მაისის მოედანი 1",
+    "uk": "площа 26 Травня, 1"
+  },
+  "descriptions": {
+    "ru": "Спортивный дворец с большим бетонным куполом и арочными галереями на площади 26 Мая.",
+    "en": "A sports palace with a large concrete dome and arched galleries on 26 May Square.",
+    "ka": "სპორტის სასახლე დიდი ბეტონის გუმბათითა და თაღოვანი გალერეებით 26 მაისის მოედანზე.",
+    "uk": "Палац спорту з великим бетонним куполом та арковими галереями на площі 26 Травня."
+  },
+  "histories": {
+    "ru": "Дворец строили в 1957–1961 годах по проекту Владимира Алекси-Месхишвили и Юрия Касрадзе. Конструкцию купола разработал инженер Давид Каджая.",
+    "en": "The palace was built in 1957–1961 to a design by Vladimir Alexi-Meskhishvili and Yuri Kasradze. Structural engineer Davit Kajaia designed the dome.",
+    "ka": "სასახლე 1957–1961 წლებში ვლადიმერ ალექსი-მესხიშვილისა და იური ქასრაძის პროექტით აშენდა. გუმბათის კონსტრუქცია ინჟინერმა დავით ქაჯაიამ შეიმუშავა.",
+    "uk": "Палац спорудили в 1957–1961 роках за проєктом Володимира Алексі-Месхішвілі та Юрія Касрадзе. Конструкцію купола розробив інженер Давид Каджая."
+  },
+  "minYear": 1957,
+  "maxYear": 1961,
+  "yearLabelId": "year-1957-1961",
+  "styleId": "undetermined",
+  "architectIds": [
+    "vladimir-aleksi-meskhishvili",
+    "yuri-kasradze"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7795968,
+    41.7195855
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.779999,
+          41.720096
+        ],
+        [
+          44.780259,
+          41.719258
+        ],
+        [
+          44.779974,
+          41.719209
+        ],
+        [
+          44.77974,
+          41.719169
+        ],
+        [
+          44.77947,
+          41.719122
+        ],
+        [
+          44.779194,
+          41.719075
+        ],
+        [
+          44.778935,
+          41.719913
+        ],
+        [
+          44.779164,
+          41.719952
+        ],
+        [
+          44.779842,
+          41.720069
+        ],
+        [
+          44.779999,
+          41.720096
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
+  "photos": [
+    {
+      "file": "photos/osm-34148385-1.webp",
+      "author": "Otpusk.ru",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sports_Palace_in_Tbilisi_-_panoramio.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "Дворец спорта на площади 26 Мая; свободная лицензия"
+    }
+  ],
+  "source": "https://taa.net.ge/en/archive-geo/tbilisi-sports-palace/",
+  "otherSource": "https://www.openstreetmap.org/way/34148385"
+}

@@ -1,0 +1,107 @@
+{
+  "id": "osm-1327116108",
+  "osmId": "way/1327116108",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 37/23",
+    "en": "37/23 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 37/23",
+    "uk": "вулиця Ладо Асატіані, 37/23"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7970613,
+    41.6896386
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7967749,
+          41.6895556
+        ],
+        [
+          44.7972896,
+          41.6895732
+        ],
+        [
+          44.7972775,
+          41.6897359
+        ],
+        [
+          44.7972761,
+          41.689755
+        ],
+        [
+          44.7971954,
+          41.6897509
+        ],
+        [
+          44.797173,
+          41.6897497
+        ],
+        [
+          44.7971752,
+          41.6897317
+        ],
+        [
+          44.7971769,
+          41.6897134
+        ],
+        [
+          44.7969936,
+          41.6897041
+        ],
+        [
+          44.797062,
+          41.6897978
+        ],
+        [
+          44.7970702,
+          41.689809
+        ],
+        [
+          44.7969939,
+          41.6898441
+        ],
+        [
+          44.7967749,
+          41.6895556
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1327116108-depicts.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_37.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1327116108",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623366",
+  "googlePlaceId": "Ei8yMywgMzcgTGFkbyBBc2F0aWFuaSBTdCwgVCdiaWxpc2kgMDEwNSwgR2VvcmdpYSIeGhwKFgoUChIJd2Avf-0MREARK44BA5JREh8SAjIz",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=23%2C%2037%20Lado%20Asatiani%20St&query_place_id=Ei8yMywgMzcgTGFkbyBBc2F0aWFuaSBTdCwgVCdiaWxpc2kgMDEwNSwgR2VvcmdpYSIeGhwKFgoUChIJd2Avf-0MREARK44BA5JREh8SAjIz"
+}

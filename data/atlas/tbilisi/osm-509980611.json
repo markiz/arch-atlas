@@ -1,0 +1,107 @@
+{
+  "id": "osm-509980611",
+  "osmId": "way/509980611",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 26",
+    "en": "26 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 26",
+    "uk": "проспект Шота Руставелі, 26"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7955584,
+    41.7004403
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7954324,
+          41.7006632
+        ],
+        [
+          44.7954547,
+          41.700643
+        ],
+        [
+          44.7955563,
+          41.7005609
+        ],
+        [
+          44.795566,
+          41.7005531
+        ],
+        [
+          44.7957411,
+          41.7004114
+        ],
+        [
+          44.7954516,
+          41.7002118
+        ],
+        [
+          44.7953987,
+          41.7002545
+        ],
+        [
+          44.7955296,
+          41.7003447
+        ],
+        [
+          44.7953285,
+          41.7005073
+        ],
+        [
+          44.7952732,
+          41.7004692
+        ],
+        [
+          44.7952156,
+          41.7005158
+        ],
+        [
+          44.7952374,
+          41.7005295
+        ],
+        [
+          44.7954324,
+          41.7006632
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-509980611-g1.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A0%E1%83%A3%E1%83%A1%E1%83%97%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_26_(4).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/509980611",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650412",
+  "googlePlaceId": "ChIJg0S1bd0MREARE34Zx0R6oos",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=26%20Shota%20Rustaveli%20Ave&query_place_id=ChIJg0S1bd0MREARE34Zx0R6oos"
+}

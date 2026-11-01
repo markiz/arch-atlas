@@ -1,0 +1,79 @@
+{
+  "id": "osm-1207148777",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Самгебро, 15",
+    "en": "15 Samgebro Street",
+    "ka": "სამგებროს ქუჩა 15",
+    "uk": "вулиця Самгебро, 15"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом с небольшим двором перед фасадом и металлической оградой. Верхние два этажа главного фасада целиком заняты деревянными застеклёнными верандами (шушабандами) с ажурными ограждениями и вертикальным ритмом окон; первый этаж решён проще. Сбоку — наружная зигзагообразная лестница с резными перилами. После реставрации дом окрашен в сине-жёлтые тона.",
+    "en": "A three-storey house with a small courtyard in front of the façade and a metal fence. The upper two floors of the main façade are entirely occupied by wooden glazed verandas (shushabandi) with openwork railings and a vertical rhythm of windows; the ground floor is treated more simply. At the side there is an external zigzag staircase with carved handrails. After restoration the house was painted in blue and yellow tones.",
+    "ka": "სამსართულიანი სახლი ფასადის წინ მცირე ეზოთი და ლითონის ღობით. მთავარი ფასადის ზედა ორი სართული მთლიანად დაკავებულია ხის შემინული ვერანდებით (შუშაბანდებით), აჟურული მოაჯირებითა და სარკმლების ვერტიკალური რიტმით; პირველი სართული უფრო მარტივადაა გადაწყვეტილი. გვერდით — გარე ზიგზაგისებრი კიბე მოჩუქურთმებული მოაჯირით. რესტავრაციის შემდეგ სახლი ლურჯ-ყვითელ ტონებშია შეღებილი.",
+    "uk": "Триповерховий будинок із невеликим двором перед фасадом і металевою огорожею. Верхні два поверхи головного фасаду цілком зайняті дерев'яними заскленими верандами (шушабанди) з ажурними огорожами та вертикальним ритмом вікон; перший поверх вирішено простіше. Збоку — зовнішні зигзагоподібні сходи з різьбленими поручнями. Після реставрації будинок пофарбований у синьо-жовті тони."
+  },
+  "histories": {
+    "ru": "Середина XIX века, городской жилой дом. Реестр фиксирует полную реставрацию и восстановление деревянных веранд. Первоначальная и текущая функция — жильё; архитектор не установлен. Дом формирует исторический облик улицы Самгебро.",
+    "en": "Mid-19th century, an urban residential house. The register records a complete restoration and the reconstruction of the wooden verandas. Both the original and the current function is housing; the architect has not been established. The house shapes the historic appearance of Samgebro Street.",
+    "ka": "XIX საუკუნის შუა ხანები, ქალაქური საცხოვრებელი სახლი. რეესტრი აფიქსირებს სრულ რესტავრაციასა და ხის ვერანდების აღდგენას. თავდაპირველი და ამჟამინდელი ფუნქცია — საცხოვრებელი; არქიტექტორი არ არის დადგენილი. სახლი სამგებროს ქუჩის ისტორიულ იერსახეს ქმნის.",
+    "uk": "Середина XIX століття, міський житловий будинок. Реєстр фіксує повну реставрацію та відновлення дерев'яних веранд. Початкова й теперішня функція — житло; архітектор не встановлений. Будинок формує історичний вигляд вулиці Самгебро."
+  },
+  "minYear": 1840,
+  "maxYear": 1869,
+  "yearLabelId": "mid-19th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.8096711,
+    41.6889325
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8095707,
+          41.6889257
+        ],
+        [
+          44.8096251,
+          41.6889967
+        ],
+        [
+          44.8097709,
+          41.6889344
+        ],
+        [
+          44.8097238,
+          41.6888709
+        ],
+        [
+          44.8095707,
+          41.6889257
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.788; реестр 100.7 м², OSM 119.7 м²; перенос центра 1.0 м. IoU 0,788; OSM way/1207148777 — замкнутый контур корпуса, флагов нет; OSM building:levels=3 совпадает.",
+  "photos": [
+    {
+      "file": "photos/osm-1207148777-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3465",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75304_37E09008-8094-46CC-B632-9BF02C3FBE3A",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3465",
+  "otherSource": "https://www.openstreetmap.org/way/1207148777"
+}

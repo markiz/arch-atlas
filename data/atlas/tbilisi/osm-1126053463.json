@@ -1,0 +1,171 @@
+{
+  "id": "osm-1126053463",
+  "osmId": "way/1126053463",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 17",
+    "en": "17 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 17",
+    "uk": "вулиця Ладо Асატіані, 17"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8023737,
+    41.6898156
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8024328,
+          41.6898671
+        ],
+        [
+          44.80244,
+          41.6898679
+        ],
+        [
+          44.8025931,
+          41.6898771
+        ],
+        [
+          44.8026373,
+          41.6898798
+        ],
+        [
+          44.802654,
+          41.6897828
+        ],
+        [
+          44.802561,
+          41.6897718
+        ],
+        [
+          44.8025564,
+          41.6898053
+        ],
+        [
+          44.8025035,
+          41.6898016
+        ],
+        [
+          44.8024993,
+          41.6898282
+        ],
+        [
+          44.8024619,
+          41.689826
+        ],
+        [
+          44.8024733,
+          41.6897606
+        ],
+        [
+          44.8024616,
+          41.6897594
+        ],
+        [
+          44.8024499,
+          41.6897582
+        ],
+        [
+          44.8023684,
+          41.6897513
+        ],
+        [
+          44.8023691,
+          41.6897448
+        ],
+        [
+          44.8023702,
+          41.6897353
+        ],
+        [
+          44.8023328,
+          41.6897328
+        ],
+        [
+          44.8023179,
+          41.6897345
+        ],
+        [
+          44.8023023,
+          41.6897394
+        ],
+        [
+          44.8022893,
+          41.6897457
+        ],
+        [
+          44.8022768,
+          41.6897555
+        ],
+        [
+          44.802271,
+          41.6897648
+        ],
+        [
+          44.8022665,
+          41.6897769
+        ],
+        [
+          44.8022636,
+          41.6897975
+        ],
+        [
+          44.8022736,
+          41.6897981
+        ],
+        [
+          44.8022857,
+          41.6897988
+        ],
+        [
+          44.8022786,
+          41.6898573
+        ],
+        [
+          44.8022845,
+          41.6898578
+        ],
+        [
+          44.8024328,
+          41.6898671
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1126053463-g1.webp",
+      "author": "Wagon",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:17_Lado_Asatiani_street,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1126053463",
+  "otherSource": "https://www.wikidata.org/wiki/Q42631837",
+  "googlePlaceId": "EiYxNyBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBEqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=17%20Lado%20Asatiani%20St&query_place_id=EiYxNyBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBEqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "osm-1234448346",
+  "osmId": "way/1234448346",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Михаила Зандукели, 1",
+    "en": "1 Mikheil Zandukeli Street",
+    "ka": "მიხეილ ზანდუკელის ქუჩა 1",
+    "uk": "вулиця Михайла Зандукелі, 1"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7891598,
+    41.7039713
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.788931,
+          41.7039972
+        ],
+        [
+          44.7889717,
+          41.7040646
+        ],
+        [
+          44.7890062,
+          41.7040529
+        ],
+        [
+          44.789025,
+          41.7040839
+        ],
+        [
+          44.7891065,
+          41.7040564
+        ],
+        [
+          44.7891724,
+          41.7040342
+        ],
+        [
+          44.7891747,
+          41.7040379
+        ],
+        [
+          44.7892436,
+          41.7040147
+        ],
+        [
+          44.7892376,
+          41.7040049
+        ],
+        [
+          44.7893161,
+          41.7039785
+        ],
+        [
+          44.7893067,
+          41.703963
+        ],
+        [
+          44.7893645,
+          41.7039435
+        ],
+        [
+          44.789377,
+          41.7039641
+        ],
+        [
+          44.7894229,
+          41.7039487
+        ],
+        [
+          44.789364,
+          41.7038513
+        ],
+        [
+          44.788931,
+          41.7039972
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1234448346-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4394",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75585_7344F566-B19F-4D96-9B6B-F6345FFD0C81",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1234448346",
+  "otherSource": "https://www.wikidata.org/wiki/Q42638201",
+  "googlePlaceId": "ChIJy3eTA9sMREARG01VR-r42Gw",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=1%20Mikheil%20Zandukeli%20St&query_place_id=ChIJy3eTA9sMREARG01VR-r42Gw"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "osm-503328572",
+  "osmId": "way/503328572",
+  "names": {
+    "ru": "Баня дочери царя",
+    "en": "King’s Daughter Bath",
+    "ka": "მეფის ასულის აბანო",
+    "uk": "Баня царської доньки"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иосифа Гришашвили, 7 / улица Абано, 2",
+    "en": "7 Ioseb Grishashvili Street / 2 Abano Street",
+    "ka": "იოსებ გრიშაშვილის ქუჩა 7 / აბანოს ქუჩა 2",
+    "uk": "вулиця Йосипа Грішашвілі, 7 / вулиця Абанo, 2"
+  },
+  "descriptions": {
+    "ru": "Историческая серная баня Абанотубани; сегодня работает под коммерческим названием King Erekle’s Bath.",
+    "en": "A historic sulfur bath in Abanotubani, now operating under the commercial name King Erekle’s Bath.",
+    "ka": "აბანოთუბნის ისტორიული გოგირდის აბანო, რომელიც დღეს King Erekle’s Bath-ის კომერციული სახელით მუშაობს.",
+    "uk": "Історична сірчана лазня в Абанотубані, що нині працює під комерційною назвою King Erekle’s Bath."
+  },
+  "histories": {
+    "ru": "Официальная карточка наследия называет объект «Баня дочери царя» и приводит двойной адрес: Гришашвили, 7 / Абано, 2. Текущая редакция реестра датирует его концом XVIII века, ранняя редакция официального перечня — началом XVIII века; поэтому здесь указан только XVIII век. Именованный OSM-контур и сайт оператора используют современное название King Erekle’s Bath; историческую принадлежность царю Ираклию это не доказывает. Официальная геометрия памятника покрывает около 76% площади OSM-контура, а контур включает около 94% официальной границы. Соседняя Royal Bath на Гришашвили, 1 — отдельное здание с непересекающимся контуром. Архитектор и стиль не установлены.",
+    "en": "The official heritage record names the site “King’s Daughter Bath” and gives the dual address 7 Grishashvili Street / 2 Abano Street. The current register dates it to the late 18th century, while an earlier official list says early 18th century, so the card gives only the 18th century. The named OSM outline and operator website use the modern name King Erekle’s Bath; this does not establish historical ownership by King Erekle. The official monument geometry covers about 76% of the OSM outline, while the outline contains about 94% of the official boundary. The neighboring Royal Bath at 1 Grishashvili Street is a separate building with a non-overlapping outline. The architect and style are not established.",
+    "ka": "ოფიციალური მემკვიდრეობის ჩანაწერი ობიექტს „მეფის ასულის აბანოს“ უწოდებს და ორმაგ მისამართს უთითებს: გრიშაშვილის ქუჩა 7 / აბანოს ქუჩა 2. რეესტრის მიმდინარე ვერსია მას XVIII საუკუნის დასასრულით ათარიღებს, ხოლო ძველი ოფიციალური სია — XVIII საუკუნის დასაწყისით; ამიტომ ბარათში მხოლოდ XVIII საუკუნეა მითითებული. OSM-ის მონიშნულ კონტურსა და ოპერატორის ვებსაიტზე თანამედროვე სახელია King Erekle’s Bath; ეს ისტორიულად მეფე ერეკლეს კუთვნილებას არ ადასტურებს. ძეგლის ოფიციალური გეომეტრია OSM-ის კონტურის დაახლოებით 76%-ს ფარავს, ხოლო OSM-ის კონტური ოფიციალური საზღვრის დაახლოებით 94%-ს შეიცავს. მეზობელი Royal Bath გრიშაშვილის ქუჩა 1-ზე ცალკე შენობაა და მისი კონტური არ იკვეთება. არქიტექტორი და სტილი დადგენილი არ არის.",
+    "uk": "Офіційний запис спадщини називає об’єкт «Баня царської доньки» й указує подвійну адресу: вулиця Грішашвілі, 7 / вулиця Абанo, 2. Поточна редакція реєстру датує її кінцем XVIII століття, а попередній офіційний список — початком XVIII століття, тому в картці вказано лише XVIII століття. Іменований контур OSM і сайт оператора використовують сучасну назву King Erekle’s Bath; це не доводить історичної належності царю Іраклію. Офіційна геометрія пам’ятки охоплює приблизно 76% контуру OSM, а контур — близько 94% офіційної межі. Сусідня Royal Bath на вулиці Грішашвілі, 1 — окрема будівля з контуром, що не перетинається. Архітектора й стиль не встановлено."
+  },
+  "minYear": 1700,
+  "maxYear": 1799,
+  "yearLabelId": "century-18",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.8109927964,
+    41.6878345
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.810899,
+          41.68795
+        ],
+        [
+          44.81102,
+          41.687937
+        ],
+        [
+          44.811061,
+          41.687931
+        ],
+        [
+          44.811072,
+          41.687903
+        ],
+        [
+          44.811104,
+          41.6879
+        ],
+        [
+          44.811082,
+          41.687765
+        ],
+        [
+          44.811037,
+          41.687769
+        ],
+        [
+          44.811026,
+          41.687731
+        ],
+        [
+          44.810934,
+          41.687728
+        ],
+        [
+          44.810886,
+          41.687727
+        ],
+        [
+          44.810899,
+          41.68795
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "OSM way размечен как действующая общественная серная баня; официальный реестр даёт двойной адрес. Официальная граница памятника покрывает около 76% контура way, контур покрывает около 94% границы; лишнюю часть полигона необходимо сверить вручную.",
+  "photos": [],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3657",
+  "otherSource": "https://www.heritagesites.ge/uploads/files/680a4ff29f797.pdf"
+}

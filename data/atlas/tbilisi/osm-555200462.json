@@ -1,0 +1,144 @@
+{
+  "id": "osm-555200462",
+  "osmId": "way/555200462",
+  "names": {
+    "ru": "Дом Сейлановых",
+    "en": "Seylanovs House",
+    "ka": "სეილანოვების სახლი",
+    "uk": "Будинок Сейланових"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Галактиона Табидзе, 18",
+    "en": "18 Galaktion Tabidze Street",
+    "ka": "გალაკტიონ ტაბიძის ქუჩა 18",
+    "uk": "вулиця Галактіона Табідзе, 18"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1911,
+  "maxYear": 1911,
+  "yearLabelId": "year-1911",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8014278,
+    41.6905779
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8015746,
+          41.6904189
+        ],
+        [
+          44.8013351,
+          41.6903777
+        ],
+        [
+          44.8013306,
+          41.6904587
+        ],
+        [
+          44.8013299,
+          41.6904759
+        ],
+        [
+          44.801322,
+          41.6906163
+        ],
+        [
+          44.801315,
+          41.6907432
+        ],
+        [
+          44.8013138,
+          41.6907654
+        ],
+        [
+          44.8015403,
+          41.6907746
+        ],
+        [
+          44.8017902,
+          41.6907848
+        ],
+        [
+          44.8017958,
+          41.6906987
+        ],
+        [
+          44.8016276,
+          41.6906926
+        ],
+        [
+          44.8015256,
+          41.6906924
+        ],
+        [
+          44.8015292,
+          41.6906213
+        ],
+        [
+          44.8015334,
+          41.6905395
+        ],
+        [
+          44.8015679,
+          41.6905305
+        ],
+        [
+          44.8015702,
+          41.6904875
+        ],
+        [
+          44.8016643,
+          41.690498
+        ],
+        [
+          44.8016671,
+          41.6904854
+        ],
+        [
+          44.8017457,
+          41.6904959
+        ],
+        [
+          44.801756,
+          41.6904525
+        ],
+        [
+          44.8016652,
+          41.6904367
+        ],
+        [
+          44.8015746,
+          41.6904189
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-555200462-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4468",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75344_2AF0C7AF-579E-41A7-A282-E978905B67D1",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/555200462",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628967",
+  "googlePlaceId": "ChIJE4G37vsNREARPRN0FS-eVxc",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=House%20of%20Seylanov%20brothers&query_place_id=ChIJE4G37vsNREARPRN0FS-eVxc"
+}

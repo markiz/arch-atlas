@@ -1,0 +1,114 @@
+{
+  "id": "kashveti",
+  "osmId": "way/65299828",
+  "names": {
+    "ru": "Церковь Кашвети",
+    "en": "Kashveti Church",
+    "ka": "ქაშვეთის ეკლესია",
+    "uk": "Церква Кашветі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели",
+    "en": "Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი",
+    "uk": "проспект Шота Руставелі"
+  },
+  "descriptions": {
+    "ru": "Храм на проспекте Руставели переосмысляет формы средневековой грузинской церковной архитектуры.",
+    "en": "The church on Rustaveli Avenue reinterprets forms from medieval Georgian church architecture.",
+    "ka": "რუსთაველის გამზირზე მდებარე ტაძარი შუა საუკუნეების ქართული საეკლესიო არქიტექტურის ფორმებს ახლებურად წარმოაჩენს.",
+    "uk": "Храм на проспекті Руставелі переосмислює форми середньовічної грузинської церковної архітектури."
+  },
+  "histories": {
+    "ru": "Нынешнюю церковь построили в 1904–1910 годах по проекту Леопольда Бильфельда на месте более раннего храма. Образцом для проекта послужил собор Самтависи XI века.",
+    "en": "The present church was built in 1904–1910 to a design by Leopold Bielfeld, on the site of an earlier church. The 11th-century Samtavisi Cathedral served as the model.",
+    "ka": "დღევანდელი ეკლესია 1904–1910 წლებში ლეოპოლდ ბილფელდის პროექტით, უფრო ადრინდელი ტაძრის ადგილზე აშენდა. ნიმუშად XI საუკუნის სამთავისის ტაძარი გამოიყენეს.",
+    "uk": "Нинішню церкву збудували у 1904–1910 роках за проєктом Леопольда Більфельда на місці давнішого храму. За взірець узяли Самтавісський собор XI століття."
+  },
+  "minYear": 1910,
+  "maxYear": 1910,
+  "yearLabelId": "period-1904-1910",
+  "styleId": "georgian-revival",
+  "architectIds": [
+    "leopold-bielfeld"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.799324,
+    41.697954
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.799137,
+          41.697865
+        ],
+        [
+          44.799113,
+          41.697906
+        ],
+        [
+          44.799088,
+          41.697943
+        ],
+        [
+          44.799157,
+          41.69797
+        ],
+        [
+          44.799132,
+          41.698008
+        ],
+        [
+          44.799407,
+          41.698107
+        ],
+        [
+          44.79951,
+          41.697953
+        ],
+        [
+          44.799377,
+          41.697903
+        ],
+        [
+          44.799234,
+          41.697851
+        ],
+        [
+          44.799208,
+          41.69789
+        ],
+        [
+          44.799137,
+          41.697865
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "photos": [
+    {
+      "file": "photos/kashveti.webp",
+      "author": "Kashveti1.jpg: Paata Vardanashvili\nderivative work: Rabanus Flavus (talk)",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Kashveti1-2.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/kashveti-curated.webp",
+      "author": "Andrei Kalamkarov (www.andreikalamkarov.com)",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Church_in_Tbilisi,_Georgia,_April_2007.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4229",
+  "googlePlaceId": "ChIJqYYLN-YMREARQ4iJrBAtGX0",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Kashueti%20St.%20George%20Church&query_place_id=ChIJqYYLN-YMREARQ4iJrBAtGX0"
+}

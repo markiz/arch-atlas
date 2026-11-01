@@ -1,0 +1,135 @@
+{
+  "id": "osm-246757191",
+  "osmId": "way/246757191",
+  "names": {
+    "ru": "Бывший доходный дом Манташева",
+    "en": "Former Mantashev's revenue house",
+    "ka": "ყოფილი მანთაშევის საშემოსავლო სახლი",
+    "uk": "Колишній прибутковий будинок Манташева"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 27",
+    "en": "27 David Aghmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 27",
+    "uk": "проспект Давида Агмашенебелі, 27"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8029283,
+    41.7038704
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8032834,
+          41.7040629
+        ],
+        [
+          44.8032431,
+          41.7040139
+        ],
+        [
+          44.8030929,
+          41.7040954
+        ],
+        [
+          44.8030701,
+          41.7040745
+        ],
+        [
+          44.8031285,
+          41.7040469
+        ],
+        [
+          44.8029987,
+          41.7039022
+        ],
+        [
+          44.8031884,
+          41.7037478
+        ],
+        [
+          44.8030652,
+          41.7036113
+        ],
+        [
+          44.8027722,
+          41.7038386
+        ],
+        [
+          44.8029115,
+          41.7039337
+        ],
+        [
+          44.8029378,
+          41.7039506
+        ],
+        [
+          44.8029495,
+          41.7039429
+        ],
+        [
+          44.8029908,
+          41.7039816
+        ],
+        [
+          44.8029521,
+          41.7040079
+        ],
+        [
+          44.8029546,
+          41.7040104
+        ],
+        [
+          44.8030533,
+          41.7041123
+        ],
+        [
+          44.8030997,
+          41.7041627
+        ],
+        [
+          44.8032834,
+          41.7040629
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-246757191-g1.webp",
+      "author": "Yuri Samoylov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2025-03-26_27_Davit_Aghmashenebeli_Avenue.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-246757191-depicts.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_27.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/246757191",
+  "otherSource": "https://www.wikidata.org/wiki/Q42634497",
+  "googlePlaceId": "ChIJp4aNw98MREARWzq9AgDSAmE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7038704%2C44.8029283&query_place_id=ChIJp4aNw98MREARWzq9AgDSAmE"
+}

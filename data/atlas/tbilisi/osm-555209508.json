@@ -1,0 +1,112 @@
+{
+  "id": "osm-555209508",
+  "osmId": "way/555209508",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7993765,
+    41.6890821
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7993387,
+          41.6890455
+        ],
+        [
+          44.7993384,
+          41.6889729
+        ],
+        [
+          44.799383,
+          41.6889712
+        ],
+        [
+          44.7993852,
+          41.6889096
+        ],
+        [
+          44.7995688,
+          41.6889117
+        ],
+        [
+          44.7995733,
+          41.6890454
+        ],
+        [
+          44.7994141,
+          41.6890431
+        ],
+        [
+          44.7994113,
+          41.6891403
+        ],
+        [
+          44.7995778,
+          41.6891396
+        ],
+        [
+          44.79958,
+          41.6891187
+        ],
+        [
+          44.7996521,
+          41.6891202
+        ],
+        [
+          44.7996557,
+          41.6893014
+        ],
+        [
+          44.799348,
+          41.689302
+        ],
+        [
+          44.7993387,
+          41.6890455
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-555209508-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4015",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75560_268513B9-0FA2-4DCA-903B-C6B28F4BFCF3",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/555209508",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623591",
+  "googlePlaceId": "ChIJbb6hXfIMREARrrzTqx7X4Ek",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6890821%2C44.7993765&query_place_id=ChIJbb6hXfIMREARrrzTqx7X4Ek"
+}

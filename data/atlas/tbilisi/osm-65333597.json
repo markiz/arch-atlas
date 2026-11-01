@@ -1,0 +1,95 @@
+{
+  "id": "osm-65333597",
+  "osmId": "way/65333597",
+  "names": {
+    "ru": "Дворец Орбелиани",
+    "en": "Orbeliani Palace",
+    "ka": "ორბელიანების სასახლე",
+    "uk": "Палац Орбеліані"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Афонели, 25",
+    "en": "25 Giorgi Atoneli Street",
+    "ka": "გიორგი ათონელის ქუჩა 25",
+    "uk": "вулиця Георгія Афонелі, 25"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8029727,
+    41.6995483
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8026731,
+          41.6994178
+        ],
+        [
+          44.8026055,
+          41.6994917
+        ],
+        [
+          44.8028272,
+          41.6996048
+        ],
+        [
+          44.8027862,
+          41.6996495
+        ],
+        [
+          44.8030251,
+          41.6997713
+        ],
+        [
+          44.8032823,
+          41.69949
+        ],
+        [
+          44.802922,
+          41.6993063
+        ],
+        [
+          44.8028383,
+          41.6992636
+        ],
+        [
+          44.8026895,
+          41.6994262
+        ],
+        [
+          44.8026731,
+          41.6994178
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-65333597-g1.webp",
+      "author": "David1010",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_25_(3).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/65333597",
+  "otherSource": "https://www.wikidata.org/wiki/Q42620358",
+  "googlePlaceId": "ChIJ22N3D5UNREARK7rOh6OmOQU",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Orbeliani%20Palace&query_place_id=ChIJ22N3D5UNREARK7rOh6OmOQU"
+}

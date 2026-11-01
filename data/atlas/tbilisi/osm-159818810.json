@@ -1,0 +1,80 @@
+{
+  "id": "osm-159818810",
+  "osmId": "way/159818810",
+  "names": {
+    "ru": "Дом Александра Манташева",
+    "en": "Alexander Mantashev House",
+    "ka": "ალექსანდრე მანთაშევის სახლი",
+    "uk": "Будинок Александра Манташева"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Геронти Кикодзе, 8",
+    "en": "8 Geronti Kikodze Street",
+    "ka": "გერონტი ქიქოძის ქუჩა 8",
+    "uk": "вулиця Геронті Кікодзе, 8"
+  },
+  "descriptions": {
+    "ru": "Жилой дом на углу улиц Геронти Кикодзе и Лермонтова. В исследовании улицы отмечены мотивы итальянского Ренессанса и женский профиль на балконной решётке.",
+    "en": "A house at the corner of Geronti Kikodze and Lermontov Streets. A street study notes Italian Renaissance motifs and a female profile on the balcony railing.",
+    "ka": "საცხოვრებელი სახლი გერონტი ქიქოძისა და ლერმონტოვის ქუჩების კუთხეში. ქუჩის კვლევა შენობაზე იტალიური რენესანსის მოტივებსა და აივნის მოაჯირზე ქალის პროფილს აღნიშნავს.",
+    "uk": "Житловий будинок на розі вулиць Геронті Кікодзе та Лермонтова. Дослідження вулиці відзначає мотиви італійського Ренесансу та жіночий профіль на балконній огорожі."
+  },
+  "histories": {
+    "ru": "Scan Tbilisi называет здание бывшим домом Александра Манташева; позднее здесь размещался Дом работников искусств. Официальный реестр также связывает с этим адресом польскую воскресную школу. Эти сведения указывают на несколько функций здания, но точная последовательность пока не установлена. Период конца XIX века приведён в реестре; архитектор не установлен.",
+    "en": "Scan Tbilisi identifies the building as the former house of Alexander Mantashev; it later housed the House of Art Workers. The official register also associates the address with a Polish Sunday school. The building had several functions, but their exact sequence has not been established. The register gives a late 19th-century date; the architect is not established.",
+    "ka": "Scan Tbilisi შენობას ალექსანდრე მანთაშევის ყოფილ სახლად ასახელებს; მოგვიანებით აქ ხელოვნების მუშაკთა სახლი იყო. ოფიციალურ რეესტრში ამ მისამართზე პოლონური საკვირაო სკოლაც არის მითითებული. წყაროები შენობის რამდენიმე ფუნქციას აჩვენებს, თუმცა მათი ზუსტი თანმიმდევრობა დადგენილი არ არის. რეესტრი შენობას XIX საუკუნის დასასრულით ათარიღებს; არქიტექტორი დადგენილი არ არის.",
+    "uk": "Scan Tbilisi називає будівлю колишнім будинком Александра Манташева; пізніше тут містився Будинок працівників мистецтв. Офіційний реєстр також пов’язує з цією адресою польську недільну школу. Дані вказують на кілька функцій будівлі, але їхню точну послідовність не встановлено. Реєстр датує її кінцем XIX століття; архітектора не встановлено."
+  },
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "1890s",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "sololaki",
+  "coordinates": [
+    44.798756,
+    41.6908857
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.79861,
+          41.691075
+        ],
+        [
+          44.798644,
+          41.690684
+        ],
+        [
+          44.798902,
+          41.690697
+        ],
+        [
+          44.798868,
+          41.691087
+        ],
+        [
+          44.79861,
+          41.691075
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Именованный OSM-контур и перекрёсток адресов совпадают с описанием Scan Tbilisi; официальная граница реестра перекрывает около 96% контура",
+  "photos": [
+    {
+      "file": "photos/osm-159818810-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4442",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75692_CBDE9A34-914E-4617-8291-30120910B072",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.scantbilisi.ge/ka/objects/269/G.kikodze-street",
+  "otherSource": "https://iverieli.nplg.gov.ge/bitstream/1234/438646/1/Mesxi_Maia_Disertacia.pdf"
+}

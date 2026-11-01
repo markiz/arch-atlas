@@ -1,0 +1,80 @@
+{
+  "id": "osm-78357093",
+  "osmId": "way/78357093",
+  "names": {
+    "ru": "Колхидская башня (дом Константина и Звиада Гамсахурдиа)",
+    "en": "Colchian Tower (House of Konstantine and Zviad Gamsakhurdia)",
+    "ka": "კოლხური კოშკი (კონსტანტინე და ზვიად გამსახურდიების სახლი)",
+    "uk": "Колхідська вежа (будинок Константіне та Звіада Гамсахурдіа)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гали, 19",
+    "en": "19 Gali Street",
+    "ka": "გალის ქუჩა 19",
+    "uk": "вулиця Галі, 19"
+  },
+  "descriptions": {
+    "ru": "Жилой дом по улице Гали известен как Колхидская башня и связан с семьёй писателя Константина Гамсахурдиа. В OSM контур описан как семейный дом Константина и Звиада Гамсахурдиа.",
+    "en": "The house on Gali Street is known as the Colchian Tower and is associated with the family of writer Konstantine Gamsakhurdia. OSM describes the mapped outline as the family house of Konstantine and Zviad Gamsakhurdia.",
+    "ka": "გალის ქუჩაზე მდებარე საცხოვრებელი სახლი კოლხური კოშკის სახელითაა ცნობილი და მწერალ კონსტანტინე გამსახურდიას ოჯახთან არის დაკავშირებული. OSM-ის კონტურის აღწერაში ის კონსტანტინე და ზვიად გამსახურდიების საოჯახო სახლად არის მოხსენიებული.",
+    "uk": "Житловий будинок на вулиці Галі відомий як Колхідська вежа та пов'язаний із родиною письменника Константіне Гамсахурдіа. В описі контуру OSM його названо родинним будинком Константіне та Звіада Гамсахурдіа."
+  },
+  "histories": {
+    "ru": "Дом писателя Константина Гамсахурдиа, известный как «Колхидская башня», строился в 1947–1958 годах. В реестре памятников указан 1957 год.",
+    "en": "The home of writer Konstantine Gamsakhurdia, known as the Colchian Tower, was built in 1947–1958. The heritage registry gives 1957.",
+    "ka": "მწერალ კონსტანტინე გამსახურდიას სახლი, ცნობილი როგორც „კოლხური კოშკი“, 1947–1958 წლებში შენდებოდა. მემკვიდრეობის რეესტრში 1957 წელია მითითებული.",
+    "uk": "Будинок письменника Константіне Гамсахурдіа, відомий як «Колхідська вежа», будували у 1947–1958 роках. Реєстр пам’яток вказує 1957 рік."
+  },
+  "minYear": 1947,
+  "maxYear": 1958,
+  "yearLabelId": "research-5009",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7775005,
+    41.7036025
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.77738,
+          41.70368
+        ],
+        [
+          44.777653,
+          41.703636
+        ],
+        [
+          44.777621,
+          41.703525
+        ],
+        [
+          44.777348,
+          41.703569
+        ],
+        [
+          44.77738,
+          41.70368
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-78357093-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5009",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=377175_CBABA262-E9B9-474B-AA76-5D1ADF8FC668",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.artanuji.ge/book_ge.php?id=362",
+  "otherSource": "https://www.openstreetmap.org/way/78357093"
+}

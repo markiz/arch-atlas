@@ -1,0 +1,79 @@
+{
+  "id": "osm-1078430926",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential house",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Авлабарская улица, 27 / улица Ростома Мускелишвили, 24",
+    "en": "27 Avlabari Street / 24 Rostom Muskhelishvili Street",
+    "ka": "ავლაბრის ქუჩა 27 / როსტომ მუსხელიშვილის ქუჩა 24",
+    "uk": "Авлабарська вулиця, 27 / вулиця Ростома Мускелішвілі, 24"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный кирпичный дом с П-образным планом, оштукатуренным уличным фасадом и металлическими балконами. Асимметричный фасад с десятью окнами, двумя балконами, пилястрами, рустованными участками, фронтоном и сандриками; в облике соединены черты классицизма и тбилисского балконного дома. Завершают фасад карниз и парапет, со двора — галерея и деревянная лестница.",
+    "en": "A two-storey brick house with a plan in the shape of the Russian letter “П”, a plastered street façade and metal balconies. The asymmetrical façade has ten windows, two balconies, pilasters, rusticated sections, a pediment and hood moulds; its appearance combines features of classicism and of the Tbilisi balcony house. The façade is completed by a cornice and a parapet, and on the courtyard side by a gallery and a wooden staircase.",
+    "ka": "ორსართულიანი აგურის სახლი „П“-ს ფორმის გეგმით, შელესილი ქუჩის ფასადითა და ლითონის აივნებით. ასიმეტრიულ ფასადს ათი ფანჯარა, ორი აივანი, პილასტრები, რუსტირებული ნაწილები, ფრონტონი და სანდრიკები აქვს; იერსახეში კლასიციზმისა და თბილისური აივნიანი სახლის ნიშნებია შერწყმული. ფასადს კარნიზი და პარაპეტი ასრულებს, ეზოს მხრიდან — გალერეა და ხის კიბე.",
+    "uk": "Двоповерховий цегляний будинок із П-подібним планом, потинькованим вуличним фасадом і металевими балконами. Асиметричний фасад із десятьма вікнами, двома балконами, пілястрами, рустованими ділянками, фронтоном і сандриками; у вигляді поєднано риси класицизму й тбіліського балконного будинку. Фасад завершують карниз і парапет, з двору — галерея й дерев'яні сходи."
+  },
+  "histories": {
+    "ru": "Построен в конце XIX века как городское жильё. Реестр фиксирует очень плохое физическое состояние и допускает только разборку с восстановлением первоначального облика. Первоначальная и текущая функция — жилая; архитектор не установлен. В квартале дом поддерживает доминанту.",
+    "en": "Built in the late 19th century as urban housing. The register records a very poor physical condition and permits only dismantling with restoration of the original appearance. The original and the current function is residential; the architect has not been established. In the block the house supports the dominant accent.",
+    "ka": "XIX საუკუნის დასასრულს აიგო როგორც საქალაქო საცხოვრებელი. რეესტრი აფიქსირებს ძალიან ცუდ ფიზიკურ მდგომარეობას და იშვებს მხოლოდ დაშლას თავდაპირველი იერის აღდგენით. თავდაპირველი და მიმდინარე ფუნქცია საცხოვრებელია; არქიტექტორი არ არის დადგენილი. კვარტალში სახლი დომინანტს ამყარებს.",
+    "uk": "Збудований наприкінці XIX століття як міське житло. Реєстр фіксує дуже поганий фізичний стан і допускає лише розбирання з відновленням первісного вигляду. Первісна й поточна функція — житлова; архітектор не встановлений. У кварталі будинок підтримує домінанту."
+  },
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
+  "styleId": "classicism",
+  "architectIds": [],
+  "districtId": "avlabari",
+  "coordinates": [
+    44.8143637,
+    41.6942954
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8144977,
+          41.6942505
+        ],
+        [
+          44.8144717,
+          41.6943327
+        ],
+        [
+          44.8142473,
+          41.6943424
+        ],
+        [
+          44.8142393,
+          41.6942597
+        ],
+        [
+          44.8144977,
+          41.6942505
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.626; реестр 168.1 м², OSM 182.2 м²; перенос центра 1.7 м. IoU 0,626; OSM way/1078430926 — замкнутый контур корпуса, флагов нет; OSM building:levels=2 совпадает с реестром.",
+  "photos": [
+    {
+      "file": "photos/osm-1078430926-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3405",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=77582_D5CA9884-0248-4B80-9C12-5ACEDAFD4101",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3405",
+  "otherSource": "https://www.openstreetmap.org/way/1078430926"
+}

@@ -1,0 +1,119 @@
+{
+  "id": "osm-506741623",
+  "osmId": "way/506741623",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Абанотубани, 23",
+    "en": "23 Abano Street",
+    "ka": "აბანოს ქუჩა 23",
+    "uk": "вулиця Абанотубანი, 23"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.810503,
+    41.6880772
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8103761,
+          41.6881045
+        ],
+        [
+          44.8104128,
+          41.6881068
+        ],
+        [
+          44.8104118,
+          41.6881333
+        ],
+        [
+          44.8104785,
+          41.6881397
+        ],
+        [
+          44.8105094,
+          41.6881422
+        ],
+        [
+          44.8105127,
+          41.6881126
+        ],
+        [
+          44.8106042,
+          41.688119
+        ],
+        [
+          44.8106262,
+          41.6881204
+        ],
+        [
+          44.8106379,
+          41.68805
+        ],
+        [
+          44.8106407,
+          41.6880329
+        ],
+        [
+          44.8105082,
+          41.6880249
+        ],
+        [
+          44.8103738,
+          41.6880167
+        ],
+        [
+          44.8103649,
+          41.6880162
+        ],
+        [
+          44.8103761,
+          41.6881045
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-506741623-g1.webp",
+      "author": "mcfarlandmo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:View_of_Tbilisi._August_2022_22.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-506741623-depicts.webp",
+      "author": "Lasha ge",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98_%E1%83%AB%E1%83%95%E1%83%94%E1%83%9A%E1%83%98_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%A3%E1%83%A0%E1%83%98_%E1%83%90%E1%83%98%E1%83%95%E1%83%9C%E1%83%94%E1%83%91%E1%83%98%E1%83%97_%E1%83%93%E1%83%90_%E1%83%9B%E1%83%93%E1%83%98%E1%83%9C%E1%83%90%E1%83%A0%E1%83%94_%E1%83%AC%E1%83%90%E1%83%95%E1%83%99%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1%E1%83%AC%E1%83%A7%E1%83%90%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%AF%E1%83%94%E1%83%91%E1%83%98%E1%83%A0%E1%83%98_%E1%83%90%E1%83%91%E1%83%90%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_23.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/506741623",
+  "otherSource": "https://www.wikidata.org/wiki/Q42618403",
+  "googlePlaceId": "ChIJx22R-PYMREARPzi3BxwlPjI",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=23%20Abano%20St&query_place_id=ChIJx22R-PYMREARPzi3BxwlPjI"
+}

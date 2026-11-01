@@ -1,0 +1,99 @@
+{
+  "id": "osm-1126044267",
+  "osmId": "way/1126044267",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8042808,
+    41.690067
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8041122,
+          41.6901555
+        ],
+        [
+          44.8041211,
+          41.6901146
+        ],
+        [
+          44.8041438,
+          41.6900093
+        ],
+        [
+          44.8041746,
+          41.6899912
+        ],
+        [
+          44.8044388,
+          41.6900382
+        ],
+        [
+          44.804418,
+          41.6901088
+        ],
+        [
+          44.8043308,
+          41.6900959
+        ],
+        [
+          44.8043134,
+          41.6901385
+        ],
+        [
+          44.8042987,
+          41.690138
+        ],
+        [
+          44.8042873,
+          41.6901725
+        ],
+        [
+          44.8041122,
+          41.6901555
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1126044267-g1.webp",
+      "author": "t.przechlewski",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Unnamed2_-_panoramio_(2148).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1126044267",
+  "otherSource": "https://www.wikidata.org/wiki/Q136559487",
+  "googlePlaceId": "ChIJEzFLdPEMREARTOSW6AQbPsg",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.690067%2C44.8042808&query_place_id=ChIJEzFLdPEMREARTOSW6AQbPsg"
+}

@@ -1,0 +1,143 @@
+{
+  "id": "osm-65254634",
+  "osmId": "way/65254634",
+  "names": {
+    "ru": "Дворец Аршакуни",
+    "en": "Arshakuni Palace",
+    "ka": "არშაკუნის სასახლე",
+    "uk": "Палац Аршакуни"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "neoclassicism+neo-baroque+neo-moorish",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7928919,
+    41.7014051
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7929263,
+          41.7011086
+        ],
+        [
+          44.7927273,
+          41.70127
+        ],
+        [
+          44.7928119,
+          41.7013282
+        ],
+        [
+          44.7926504,
+          41.701459
+        ],
+        [
+          44.7924938,
+          41.7013513
+        ],
+        [
+          44.7923263,
+          41.701487
+        ],
+        [
+          44.7924771,
+          41.7015907
+        ],
+        [
+          44.7924632,
+          41.7016077
+        ],
+        [
+          44.792459,
+          41.7016274
+        ],
+        [
+          44.7924653,
+          41.7016468
+        ],
+        [
+          44.792481,
+          41.7016629
+        ],
+        [
+          44.7925038,
+          41.7016733
+        ],
+        [
+          44.7925302,
+          41.7016764
+        ],
+        [
+          44.7925561,
+          41.7016717
+        ],
+        [
+          44.7925777,
+          41.7016599
+        ],
+        [
+          44.7926743,
+          41.7017264
+        ],
+        [
+          44.7931997,
+          41.7012966
+        ],
+        [
+          44.7931767,
+          41.7012807
+        ],
+        [
+          44.7932056,
+          41.7012573
+        ],
+        [
+          44.7931524,
+          41.7012207
+        ],
+        [
+          44.7931235,
+          41.7012441
+        ],
+        [
+          44.7929263,
+          41.7011086
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-65254634-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_22.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/65254634",
+  "otherSource": "https://www.wikidata.org/wiki/Q42630542",
+  "googlePlaceId": "ChIJEzVn6NwMREARs_OwEpxGuSE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7014051%2C44.7928919&query_place_id=ChIJEzVn6NwMREARs_OwEpxGuSE"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "osm-1206891466",
+  "osmId": "way/1206891466",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7997537,
+    41.6891689
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7997993,
+          41.6892874
+        ],
+        [
+          44.7998033,
+          41.6889165
+        ],
+        [
+          44.7997027,
+          41.6889146
+        ],
+        [
+          44.7997011,
+          41.6889803
+        ],
+        [
+          44.7996693,
+          41.6889791
+        ],
+        [
+          44.799667,
+          41.6890494
+        ],
+        [
+          44.7997068,
+          41.6890504
+        ],
+        [
+          44.7997068,
+          41.6894015
+        ],
+        [
+          44.7995771,
+          41.6893999
+        ],
+        [
+          44.7995714,
+          41.6895446
+        ],
+        [
+          44.7996847,
+          41.6895471
+        ],
+        [
+          44.7997668,
+          41.6895489
+        ],
+        [
+          44.7997922,
+          41.6895495
+        ],
+        [
+          44.7997982,
+          41.689318
+        ],
+        [
+          44.7997993,
+          41.6892874
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891466-depicts.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_42.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891466",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623542",
+  "googlePlaceId": "ChIJQ9kWQ_IMREARDhtfHcQHgM0",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6891689%2C44.7997537&query_place_id=ChIJQ9kWQ_IMREARDhtfHcQHgM0"
+}

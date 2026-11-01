@@ -1,0 +1,139 @@
+{
+  "id": "osm-56677915",
+  "osmId": "way/56677915",
+  "names": {
+    "ru": "Национальная галерея Грузии",
+    "en": "National Gallery of Georgia",
+    "ka": "ცისფერი გალერეა",
+    "uk": "Національна галерея Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 11",
+    "en": "11 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 11",
+    "uk": "проспект Шота Руставелі, 11"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7988204,
+    41.6982994
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7986656,
+          41.698346
+        ],
+        [
+          44.7985364,
+          41.6985349
+        ],
+        [
+          44.7986574,
+          41.6985811
+        ],
+        [
+          44.7986912,
+          41.6985316
+        ],
+        [
+          44.7988059,
+          41.6985754
+        ],
+        [
+          44.7988625,
+          41.6984926
+        ],
+        [
+          44.7989212,
+          41.698515
+        ],
+        [
+          44.7990208,
+          41.6983696
+        ],
+        [
+          44.7989604,
+          41.6983465
+        ],
+        [
+          44.7990829,
+          41.6981676
+        ],
+        [
+          44.7989668,
+          41.6981232
+        ],
+        [
+          44.7989992,
+          41.6980759
+        ],
+        [
+          44.7988936,
+          41.6980355
+        ],
+        [
+          44.7988818,
+          41.698031
+        ],
+        [
+          44.7987516,
+          41.6982212
+        ],
+        [
+          44.798712,
+          41.6982061
+        ],
+        [
+          44.7986699,
+          41.6982677
+        ],
+        [
+          44.7986265,
+          41.6983311
+        ],
+        [
+          44.7986656,
+          41.698346
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/gallery1-curated.webp",
+      "author": "JohnDodelande_Georgie",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:National_Gallery,_Rustaveli_Avenue,_Tbilisi,_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/gallery2-curated.webp",
+      "author": "Vyacheslav Argenberg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Tbilisi_National_Gallery_2,_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/56677915",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650192",
+  "googlePlaceId": "ChIJs4K6yucMREARs7DDurLb3bk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=National%20Gallery&query_place_id=ChIJs4K6yucMREARs7DDurLb3bk"
+}

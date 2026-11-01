@@ -1,0 +1,132 @@
+{
+  "id": "writers",
+  "osmId": "way/163798516",
+  "names": {
+    "ru": "Дом писателей Грузии",
+    "en": "Writers’ House of Georgia",
+    "ka": "მწერალთა სახლი",
+    "uk": "Будинок письменників Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иване Мачабели, 13",
+    "en": "13 Ivane Machabeli Street",
+    "ka": "ივანე მაჩაბლის ქუჩა 13",
+    "uk": "вулиця Іване Мачабелі, 13"
+  },
+  "descriptions": {
+    "ru": "Особняк Давида Сараджишвили — выразительный образец тбилисского модерна с садом и тщательно проработанными интерьерами.",
+    "en": "David Sarajishvili’s mansion is a striking example of Tbilisi Art Nouveau, with a garden and carefully designed interiors.",
+    "ka": "დავით სარაჯიშვილის სასახლე თბილისის მოდერნის გამორჩეული ნიმუშია ბაღითა და საგულდაგულოდ დამუშავებული ინტერიერებით.",
+    "uk": "Особняк Давида Сараджишвілі — виразний зразок тбіліського модерну із садом і ретельно опрацьованими інтер’єрами."
+  },
+  "histories": {
+    "ru": "Дом строился в 1903–1905 годах по проекту Карла Заара при участии Александра Озерова и Корнели Татищева. Позднее он стал важным центром литературной жизни Грузии.",
+    "en": "The house was built in 1903–1905 to a design by Karl Zaar, with contributions from Alexander Ozerov and Korneli Tatishev. It later became an important centre of Georgia’s literary life.",
+    "ka": "სახლი 1903–1905 წლებში კარლ ზაარის პროექტით აშენდა; პროექტში მონაწილეობდნენ ალექსანდრე ოზეროვი და კორნელი ტატიშჩევი. მოგვიანებით ის საქართველოს ლიტერატურული ცხოვრების მნიშვნელოვან ცენტრად იქცა.",
+    "uk": "Будинок звели у 1903–1905 роках за проєктом Карла Заара за участю Олександра Озерова й Корнелія Татіщева. Згодом він став важливим осередком літературного життя Грузії."
+  },
+  "minYear": 1905,
+  "maxYear": 1905,
+  "yearLabelId": "period-1903-1905",
+  "styleId": "art-nouveau",
+  "architectIds": [
+    "karl-zaar",
+    "alexander-ozerov",
+    "korneli-tatishev"
+  ],
+  "districtId": "sololaki",
+  "coordinates": [
+    44.79975,
+    41.69023
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.799666,
+          41.69036
+        ],
+        [
+          44.799842,
+          41.690388
+        ],
+        [
+          44.799843,
+          41.690374
+        ],
+        [
+          44.799844,
+          41.690361
+        ],
+        [
+          44.799851,
+          41.690261
+        ],
+        [
+          44.799861,
+          41.690117
+        ],
+        [
+          44.799681,
+          41.690111
+        ],
+        [
+          44.799628,
+          41.69011
+        ],
+        [
+          44.799624,
+          41.690143
+        ],
+        [
+          44.799508,
+          41.690137
+        ],
+        [
+          44.799498,
+          41.690278
+        ],
+        [
+          44.799537,
+          41.690282
+        ],
+        [
+          44.799536,
+          41.690306
+        ],
+        [
+          44.799534,
+          41.690332
+        ],
+        [
+          44.799666,
+          41.69036
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "photos": [
+    {
+      "file": "photos/writers.webp",
+      "author": "Hundnase",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Writer%27s_House_of_Georgia.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/writers-curated.webp",
+      "author": "Raymond Zoller from unterwegs. on the road",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:House_of_the_Writers,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://writershouse.ge/index.php?lng=eng&m=135",
+  "googlePlaceId": "ChIJDUaNDvIMREARXkd8THC7se0",
+  "googlePlaceIdSource": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/writers-house-of-georgia?to=place.ChIJDUaNDvIMREARXkd8THC7se0"
+}

@@ -1,0 +1,154 @@
+{
+  "id": "osm-282231514",
+  "osmId": "way/282231514",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Антона Пурцеладзе, 12",
+    "en": "12 Anton Purtseladze Street",
+    "ka": "ანტონ ფურცელაძის ქუჩა 12",
+    "uk": "вулиця Антона Пурцеладзе, 12"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8012292,
+    41.697413
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8009791,
+          41.6976535
+        ],
+        [
+          44.8010689,
+          41.6976875
+        ],
+        [
+          44.801087,
+          41.697654
+        ],
+        [
+          44.8011211,
+          41.6976482
+        ],
+        [
+          44.8011888,
+          41.6975607
+        ],
+        [
+          44.8013612,
+          41.697323
+        ],
+        [
+          44.8014509,
+          41.6971983
+        ],
+        [
+          44.8014231,
+          41.697187
+        ],
+        [
+          44.8014043,
+          41.6971794
+        ],
+        [
+          44.8013955,
+          41.6971758
+        ],
+        [
+          44.8013923,
+          41.6971794
+        ],
+        [
+          44.8012281,
+          41.6971175
+        ],
+        [
+          44.8012315,
+          41.6971121
+        ],
+        [
+          44.8012207,
+          41.6971081
+        ],
+        [
+          44.8011971,
+          41.6970994
+        ],
+        [
+          44.801174,
+          41.6970911
+        ],
+        [
+          44.8011621,
+          41.6970863
+        ],
+        [
+          44.8011514,
+          41.6971012
+        ],
+        [
+          44.801033,
+          41.697284
+        ],
+        [
+          44.8010673,
+          41.6972973
+        ],
+        [
+          44.8012037,
+          41.69735
+        ],
+        [
+          44.8010495,
+          41.6975859
+        ],
+        [
+          44.8007909,
+          41.697476
+        ],
+        [
+          44.8007427,
+          41.6975531
+        ],
+        [
+          44.8009791,
+          41.6976535
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-282231514-1.webp",
+      "author": "Kober",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+      "source": "https://commons.wikimedia.org/wiki/File:12_Purtseladze_St.,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "фасад дома 12 по улице Антона Пурцеладзе; свободная лицензия"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/282231514",
+  "otherSource": "https://www.wikidata.org/wiki/Q42654453"
+}

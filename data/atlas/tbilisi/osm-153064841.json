@@ -1,0 +1,119 @@
+{
+  "id": "osm-153064841",
+  "osmId": "way/153064841",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Реваза Табукашвили, 42",
+    "en": "42 Revaz Tabukashvili Street",
+    "ka": "რევაზ თაბუკაშვილის ქუჩა 42",
+    "uk": "вулиця Реваза Табукашвілі, 42"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7968866,
+    41.7015137
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7971031,
+          41.701444
+        ],
+        [
+          44.796915,
+          41.7012734
+        ],
+        [
+          44.7968469,
+          41.7013495
+        ],
+        [
+          44.7968886,
+          41.7013759
+        ],
+        [
+          44.7968989,
+          41.701395
+        ],
+        [
+          44.7968793,
+          41.7014112
+        ],
+        [
+          44.7968467,
+          41.7013888
+        ],
+        [
+          44.7967657,
+          41.701453
+        ],
+        [
+          44.7967979,
+          41.7014782
+        ],
+        [
+          44.7966767,
+          41.7015723
+        ],
+        [
+          44.7966421,
+          41.7015492
+        ],
+        [
+          44.7965815,
+          41.7016057
+        ],
+        [
+          44.7967643,
+          41.7017316
+        ],
+        [
+          44.7971031,
+          41.701444
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-153064841-g1.webp",
+      "author": "David1010",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Revaz_Tabukashvili_street_42.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-153064841-depicts.webp",
+      "author": "David1010",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Revaz_Tabukashvili_street_42_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/153064841",
+  "otherSource": "https://www.wikidata.org/wiki/Q42639006",
+  "googlePlaceId": "ChIJcz-2vd0MREAR1m5tlHyOc7M",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=42%20Revaz%20Tabukashvili%20St&query_place_id=ChIJcz-2vd0MREAR1m5tlHyOc7M"
+}

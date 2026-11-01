@@ -1,0 +1,151 @@
+{
+  "id": "osm-217728433",
+  "osmId": "way/217728433",
+  "names": {
+    "ru": "Дом Эраста Чавчанидзе",
+    "en": "House of Erast Chavchanidze",
+    "ka": "ერასტი ჭავჭანიძის სახლი",
+    "uk": "Будинок Ераста Чавчанідзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 36",
+    "en": "36 David Aghmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 36",
+    "uk": "проспект Давида Агмашенебелі, 36"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1903,
+  "maxYear": 1903,
+  "yearLabelId": "year-1903",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8016778,
+    41.7043926
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8015611,
+          41.7045977
+        ],
+        [
+          44.801359,
+          41.7044202
+        ],
+        [
+          44.801415,
+          41.7043649
+        ],
+        [
+          44.801506,
+          41.7044417
+        ],
+        [
+          44.8015154,
+          41.7044336
+        ],
+        [
+          44.8016258,
+          41.7043559
+        ],
+        [
+          44.8015409,
+          41.7042929
+        ],
+        [
+          44.8014963,
+          41.7043307
+        ],
+        [
+          44.8014637,
+          41.7043143
+        ],
+        [
+          44.8015113,
+          41.7042718
+        ],
+        [
+          44.8015569,
+          41.7042288
+        ],
+        [
+          44.8016802,
+          41.7043188
+        ],
+        [
+          44.8018267,
+          41.704425
+        ],
+        [
+          44.8017808,
+          41.7044556
+        ],
+        [
+          44.8017217,
+          41.7044929
+        ],
+        [
+          44.8017071,
+          41.7045028
+        ],
+        [
+          44.801693,
+          41.7045118
+        ],
+        [
+          44.8016778,
+          41.7045219
+        ],
+        [
+          44.801635,
+          41.7045497
+        ],
+        [
+          44.8015948,
+          41.7045758
+        ],
+        [
+          44.8015776,
+          41.704587
+        ],
+        [
+          44.8015611,
+          41.7045977
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-217728433-g1.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_36.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-217728433-depicts.webp",
+      "author": "Shuvaev",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Avenue_36,_Tbilisi,_Georgia_01.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/217728433",
+  "otherSource": "https://www.wikidata.org/wiki/Q42634766",
+  "googlePlaceId": "ChIJg1HMut8MREARNI78GU5Fn50",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=36%20Davit%20Aghmashenebeli%20Ave&query_place_id=ChIJg1HMut8MREARNI78GU5Fn50"
+}

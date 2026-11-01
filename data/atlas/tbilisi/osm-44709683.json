@@ -1,0 +1,95 @@
+{
+  "id": "osm-44709683",
+  "osmId": "way/44709683",
+  "names": {
+    "ru": "Бывшее здание Центрального телеграфа и почты (отель Telegraph)",
+    "en": "Former Central Telegraph and Post Office Building (Telegraph Hotel)",
+    "ka": "ყოფილი ცენტრალური ტელეგრაფისა და ფოსტის შენობა (სასტუმრო Telegraph)",
+    "uk": "Колишня будівля Центрального телеграфу й пошти (готель Telegraph)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 31",
+    "en": "31 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 31",
+    "uk": "проспект Шота Руставелі, 31"
+  },
+  "descriptions": {
+    "ru": "Монументальное общественное здание на проспекте Руставели было построено для центральной почты и телеграфа. Его фасад облицован болнисским туфом; после реконструкции в здании работает отель Telegraph.",
+    "en": "The monumental public building on Rustaveli Avenue was built for the central post and telegraph office. Its façade is clad in Bolnisi tuff; after redevelopment, it houses the Telegraph Hotel.",
+    "ka": "რუსთაველის გამზირზე მდებარე მონუმენტური საზოგადოებრივი შენობა ცენტრალური ფოსტისა და ტელეგრაფისთვის აიგო. მისი ფასადი ბოლნისის ტუფითაა მოპირკეთებული; რეკონსტრუქციის შემდეგ შენობაში სასტუმრო Telegraph ფუნქციონირებს.",
+    "uk": "Монументальну громадську будівлю на проспекті Руставелі спорудили для центральної пошти й телеграфу. Фасад облицьований болніським туфом; після реконструкції тут працює готель Telegraph."
+  },
+  "histories": {
+    "ru": "Здание для центральной почты и телеграфа спроектировали Владимир Алекси-Месхишвили и Теймураз Микашавидзе. Грузинская энциклопедия указывает 1978 год; после реконструкции в здании открылся отель.",
+    "en": "The central post and telegraph building was designed by Vladimir Alexi-Meskhishvili and Teimuraz Mikashavidze. The Georgian Encyclopedia gives 1978; the building later became a hotel after reconstruction.",
+    "ka": "ცენტრალური ფოსტისა და ტელეგრაფის შენობა ვლადიმერ ალექსი-მესხიშვილმა და თეიმურაზ მიქაშავიძემ დააპროექტეს. ქართული ენციკლოპედია 1978 წელს მიუთითებს; რეკონსტრუქციის შემდეგ შენობაში სასტუმრო გაიხსნა.",
+    "uk": "Будівлю центральної пошти і телеграфу спроєктували Володимир Алексі-Месхішвілі та Теймураз Мікашевідзе. Грузинська енциклопедія вказує 1978 рік; після реконструкції у будівлі відкрився готель."
+  },
+  "minYear": 1970,
+  "maxYear": 1980,
+  "yearLabelId": "year-1970-1980",
+  "styleId": "soviet-modernism",
+  "architectIds": [
+    "vladimir-aleksi-meskhishvili",
+    "teimuraz-mikashavidze"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7937637,
+    41.702953
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.793685,
+          41.703383
+        ],
+        [
+          44.793843,
+          41.703255
+        ],
+        [
+          44.794332,
+          41.70286
+        ],
+        [
+          44.793842,
+          41.702522
+        ],
+        [
+          44.793537,
+          41.702769
+        ],
+        [
+          44.793196,
+          41.703046
+        ],
+        [
+          44.793323,
+          41.703134
+        ],
+        [
+          44.793685,
+          41.703383
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-44709683-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4493",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=78386_A57D5D28-64BC-4C91-9CC2-2616D1660140",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://telegraphhotel.com/about-hotel/architecture-history/",
+  "otherSource": "https://www.georgianencyclopedia.ge/ka/form/22189"
+}

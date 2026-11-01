@@ -1,0 +1,92 @@
+{
+  "id": "osm-372181447",
+  "osmId": "way/372181447",
+  "names": {
+    "ru": "Караван-сарай Ходжапарукова и Майсурадзе",
+    "en": "Maisuradze-Khojaparukov Caravanserai",
+    "ka": "მაისურაძე-ხოჯაპარუკოვის ქარვასლა",
+    "uk": "Караван-сарай Ходжапарукова и Майсурадзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 36",
+    "en": "36 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 36",
+    "uk": "вулиця Коте Абхазі, 36"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1893,
+  "maxYear": 1893,
+  "yearLabelId": "year-1893",
+  "styleId": "neo-moorish",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8067882,
+    41.6916584
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806624,
+          41.6918991
+        ],
+        [
+          44.8066242,
+          41.6918579
+        ],
+        [
+          44.806623,
+          41.6917444
+        ],
+        [
+          44.8067071,
+          41.6914557
+        ],
+        [
+          44.8067595,
+          41.6914606
+        ],
+        [
+          44.8069837,
+          41.6915725
+        ],
+        [
+          44.8067646,
+          41.6919131
+        ],
+        [
+          44.8066809,
+          41.69192
+        ],
+        [
+          44.806624,
+          41.6918991
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-372181447-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3781",
+      "source": "https://memkvidreoba.gov.ge:8443/Files?id=585347_aefa0c07-a687-4dfc-9bf3-8fe5c8c3fab3",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/372181447",
+  "otherSource": "https://www.wikidata.org/wiki/Q42644607",
+  "googlePlaceId": "ChIJ8SYHl1kNREARe4HBfO84aDI",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Qarvasla%20Hotel&query_place_id=ChIJ8SYHl1kNREARe4HBfO84aDI"
+}

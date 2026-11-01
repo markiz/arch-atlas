@@ -1,0 +1,117 @@
+{
+  "id": "osm-159818817",
+  "osmId": "way/159818817",
+  "names": {
+    "ru": "Историческое здание · улица Вукола Беридзе",
+    "en": "Historic building · Vukol Beridze Street",
+    "ka": "შენობა · ვუკოლ ბერიძის ქუჩა",
+    "uk": "Історична будівля · вулиця Вукола Берідзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Вукола Беридзе",
+    "en": "Vukol Beridze Street",
+    "ka": "ვუკოლ ბერიძის ქუჩა",
+    "uk": "вулиця Вукола Берідзе"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7955599,
+    41.6944872
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7954372,
+          41.6943619
+        ],
+        [
+          44.7954519,
+          41.6943383
+        ],
+        [
+          44.7954432,
+          41.6943206
+        ],
+        [
+          44.7953969,
+          41.6943047
+        ],
+        [
+          44.79537,
+          41.6943107
+        ],
+        [
+          44.7953548,
+          41.6943351
+        ],
+        [
+          44.7952672,
+          41.6943048
+        ],
+        [
+          44.795187,
+          41.6944339
+        ],
+        [
+          44.7953565,
+          41.6944927
+        ],
+        [
+          44.7955805,
+          41.6945703
+        ],
+        [
+          44.7955704,
+          41.6945866
+        ],
+        [
+          44.7955475,
+          41.6946235
+        ],
+        [
+          44.7956578,
+          41.6946618
+        ],
+        [
+          44.7956683,
+          41.6946654
+        ],
+        [
+          44.7957825,
+          41.6944817
+        ],
+        [
+          44.7954372,
+          41.6943619
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-159818817-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4291",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75195_4F2DEE97-0864-42F6-85C0-5DD6819BD9FB",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/159818817"
+}

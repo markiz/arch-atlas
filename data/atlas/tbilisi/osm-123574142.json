@@ -1,0 +1,96 @@
+{
+  "id": "osm-123574142",
+  "osmId": "way/123574142",
+  "names": {
+    "ru": "Церковь Преображения в Авлабари",
+    "en": "Avlabari Transfiguration Church",
+    "ka": "ავლაბრის ფერისცვალების ეკლესია",
+    "uk": "Авлабарська церква Преображення"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Урбниси, 7",
+    "en": "7 Urbnisi Street",
+    "ka": "ურბნისის ქუჩა 7",
+    "uk": "вулиця Урбнісі, 7"
+  },
+  "descriptions": {
+    "ru": "Церковь при дворцовом комплексе царицы Дареджан в Авлабари, позднее ставшая монастырской церковью Преображения.",
+    "en": "A church within Queen Darejan’s palace complex in Avlabari, later rededicated as a Transfiguration monastery church.",
+    "ka": "ავლაბარში დედოფალ დარეჯანის სასახლის კომპლექსთან არსებული ეკლესია, რომელიც მოგვიანებით ფერისცვალების მონასტრის ტაძრად ეკურთხა.",
+    "uk": "Церква в палацовому комплексі цариці Дареджан в Авлабарі, згодом переосвячена як монастирська церква Преображення."
+  },
+  "histories": {
+    "ru": "Официальный реестр датирует церковь концом XVIII века и сообщает, что царица Дареджан построила её как придворный храм рядом с летним дворцом «Сачино». Историческая справка Georgian National Tourism Administration приводит приказ 1789 года, связанный со строительством дворцового комплекса и церкви, а исследовательская публикация указывает 1789 год в каталоге как дату сооружения. Храм изначально был освящён во имя Ираклия и Дареджан. Дату повторного освящения источники указывают по-разному: карточка реестра — 1822 год, Georgia Travel и материалы Национальной парламентской библиотеки — 1824 год. Google Geocoding и Places подтвердили адрес «Урбниси, 7» и вернули историческое название «Церковь святой Дарьи». Архитектор и стиль не установлены.",
+    "en": "The official register dates the church to the late 18th century and says Queen Darejan built it as a court church beside the Sachino summer palace. The Georgian National Tourism Administration’s historical account cites a 1789 decree related to construction of the palace complex and church, while a research publication lists 1789 as the church’s construction date. It was first dedicated to Irakli and Darejan. Sources differ on its rededication: the register gives 1822, while Georgia Travel and material from the National Parliamentary Library give 1824. Google Geocoding and Places confirmed the address, 7 Urbnisi Street, and returned the historical name “Church of Saint Daria.” The architect and style are not established.",
+    "ka": "ოფიციალური რეესტრი ეკლესიას XVIII საუკუნის დასასრულით ათარიღებს და წერს, რომ დედოფალმა დარეჯანმა იგი საზაფხულო სასახლე „საჩინოსთან“ კარის ეკლესიად ააგო. საქართველოს ეროვნული ტურიზმის ადმინისტრაციის ისტორიულ ცნობაში მოყვანილია 1789 წლის ბრძანება სასახლის კომპლექსისა და ეკლესიის მშენებლობასთან დაკავშირებით, ხოლო ერთ კვლევით პუბლიკაციაში 1789 წელი ეკლესიის აგების თარიღად არის მითითებული. თავდაპირველად ტაძარი ირაკლისა და დარეჯანის სახელზე იყო ნაკურთხი. ხელახლა კურთხევის თარიღზე წყაროები განსხვავდება: რეესტრი 1822 წელს უთითებს, Georgia Travel და საქართველოს ეროვნული საპარლამენტო ბიბლიოთეკის მასალა კი — 1824 წელს. Google Geocoding-მა და Places-მა დაადასტურა მისამართი — ურბნისის ქუჩა 7 — და დააბრუნა ისტორიული სახელწოდება „წმინდა დარიას ეკლესია“. არქიტექტორი და სტილი დადგენილი არ არის.",
+    "uk": "Офіційний реєстр датує церкву кінцем XVIII століття й повідомляє, що цариця Дареджан збудувала її як придворний храм біля літнього палацу «Сачіно». В історичній довідці Національної адміністрації туризму Грузії наведено указ 1789 року, пов’язаний зі спорудженням палацового комплексу та церкви; дослідницька публікація вказує 1789 рік як дату будівництва церкви. Спочатку храм освятили на честь Іраклія та Дареджан. Джерела по-різному датують повторне освячення: реєстр указує 1822 рік, а Georgia Travel і матеріали Національної парламентської бібліотеки — 1824 рік. Google Geocoding і Places підтвердили адресу: вулиця Урбнісі, 7, та повернули історичну назву «Церква святої Дарії». Архітектора й стиль не встановлено."
+  },
+  "minYear": 1790,
+  "maxYear": 1799,
+  "yearLabelId": "late-18th-century",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "avlabari",
+  "coordinates": [
+    44.8126931054,
+    41.6916855
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.812581,
+          41.691735
+        ],
+        [
+          44.812773,
+          41.69173
+        ],
+        [
+          44.812797,
+          41.691716
+        ],
+        [
+          44.812808,
+          41.691695
+        ],
+        [
+          44.812806,
+          41.691676
+        ],
+        [
+          44.812791,
+          41.691658
+        ],
+        [
+          44.81277,
+          41.691648
+        ],
+        [
+          44.812578,
+          41.691652
+        ],
+        [
+          44.812581,
+          41.691735
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Именованный OSM-контур церкви; адрес и историческое название подтверждены Google API, а официальный реестр описывает церковь на этом месте; реестровая граница совпадает по местоположению.",
+  "photos": [
+    {
+      "file": "photos/osm-123574142-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75132_B567F112-A407-49BA-B2DA-DF5F77D53B41",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
+  "otherSource": "https://www.heritagesites.ge/uploads/files/60e836cf86bd8.pdf"
+}

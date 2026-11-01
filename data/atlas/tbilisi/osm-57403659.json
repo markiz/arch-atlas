@@ -1,0 +1,112 @@
+{
+  "id": "osm-57403659",
+  "names": {
+    "ru": "Авиационный институт — II корпус Грузинского авиационного университета",
+    "en": "Aviation Institute — Building II of the Georgian Aviation University",
+    "ka": "საავიაციო ინსტიტუტი — საქართველოს საავიაციო უნივერსიტეტის II კორპუსი",
+    "uk": "Авіаційний інститут — II корпус Грузинського авіаційного університету"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Кетеван Цамебули, 14",
+    "en": "14 Ketevan Tsamebuli Avenue",
+    "ka": "ქეთევან წამებულის გამზირი 14",
+    "uk": "проспект Кетеван Цамебулі, 14"
+  },
+  "descriptions": {
+    "ru": "Двухэтажное вытянутое в плане здание с симметричной главной фасадной линией. Единственный композиционный акцент — центральный входной ризалит: плоские рустованные пилястры, высокий парапет с фронтоном, арочная ниша над дверью. Остальной фасад решён сдержанно, с регулярным ритмом прямоугольных окон; стены оштукатурены и окрашены в светлый тон.",
+    "en": "A two-storey building, elongated in plan, with a symmetrical line of the main façade. The only compositional accent is the central entrance risalit: flat rusticated pilasters, a high parapet with a pediment, and an arched niche above the door. The rest of the façade is treated in a restrained manner, with a regular rhythm of rectangular windows; the walls are plastered and painted in a light tone.",
+    "ka": "ორსართულიანი, გეგმაში წაგრძელებული შენობა მთავარი ფასადის სიმეტრიული ხაზით. ერთადერთი კომპოზიციური აქცენტია ცენტრალური შესასვლელი რიზალიტი: ბრტყელი რუსტირებული პილასტრები, მაღალი პარაპეტი ფრონტონით, თაღოვანი ნიში კარის ზემოთ. დანარჩენი ფასადი შეკავებულადაა გადაწყვეტილი, მართკუთხა სარკმლების რეგულარული რიტმით; კედლები შელესილია და ღია ტონშია შეღებილი.",
+    "uk": "Двоповерхова, витягнута в плані будівля із симетричною лінією головного фасаду. Єдиний композиційний акцент — центральний вхідний ризаліт: пласкі рустовані пілястри, високий парапет із фронтоном, арочна ніша над дверима. Решта фасаду вирішена стримано, з рівним ритмом прямокутних вікон; стіни потиньковані й пофарбовані у світлий тон."
+  },
+  "histories": {
+    "ru": "Построено в конце XIX века; реестр указывает первоначальную функцию как промышленную, а современную — как техническое учебное заведение. Сегодня в корпусе размещается Грузинский авиационный университет (корпус II). С 2007 года здание числится памятником культурного наследия (охранный документ 3/181, реестровый № 4999). Реестровая опись отмечает хорошее общее состояние постройки.",
+    "en": "Built in the late 19th century; the register indicates an industrial original function and a technical educational institution as the present one. Today the building houses the Georgian Aviation University (Building II). Since 2007 the building has been listed as a cultural heritage monument (protection document 3/181, registry No. 4999). The register inventory notes the good general condition of the building.",
+    "ka": "XIX საუკუნის ბოლოს აშენდა; რეესტრი პირვანდელ ფუნქციად სამრეწველო დანიშნულებას მიუთითებს, თანამედროვეს კი — ტექნიკურ სასწავლებელს. დღეს კორპუსში საქართველოს საავიაციო უნივერსიტეტია (II კორპუსი). 2007 წლიდან შენობა კულტურული მემკვიდრეობის ძეგლად ითვლება (ოქმი 3/181, რეესტრის № 4999). რეესტრის ნუსხა აღნიშნავს შენობის კარგ ზოგად მდგომარეობას.",
+    "uk": "Збудовано наприкінці XIX століття; реєстр указує первісну функцію як промислову, а сучасну — як технічний навчальний заклад. Сьогодні в корпусі розміщується Грузинський авіаційний університет (корпус II). З 2007 року будівля значиться пам'яткою культурної спадщини (охоронний документ 3/181, реєстровий № 4999). Реєстровий опис відзначає добрий загальний стан будівлі."
+  },
+  "minYear": 1880,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
+  "styleId": "classicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8183784,
+    41.6904686
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.817976,
+          41.6908494
+        ],
+        [
+          44.8180722,
+          41.6908013
+        ],
+        [
+          44.8180182,
+          41.690741
+        ],
+        [
+          44.8188142,
+          41.6903434
+        ],
+        [
+          44.8188979,
+          41.6904369
+        ],
+        [
+          44.8189148,
+          41.6904285
+        ],
+        [
+          44.8190091,
+          41.6903814
+        ],
+        [
+          44.8187907,
+          41.6901377
+        ],
+        [
+          44.8182758,
+          41.6903949
+        ],
+        [
+          44.8177874,
+          41.6906389
+        ],
+        [
+          44.817976,
+          41.6908494
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.763; реестр 1704.7 м², OSM 2220.7 м²; перенос центра 3.3 м. IoU 0,763: реестровая граница 1705 м², OSM 2221 м², 99,7% реестрового контура покрыто OSM, центроиды в 3,3 м. Флагов нет; обведён надземный двухэтажный корпус, OSM-контур чуть шире по торцам и включает примыкающую пристройку. Номера дома 14 (реестр) и 16 (OSM) относятся к одному объекту — связь задана тегом heritage:website в OSM.",
+  "photos": [
+    {
+      "file": "photos/osm-57403659-1.webp",
+      "author": "Andrew Milligan sumo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:16_Tsminda_Ketevan_Dedoplis_Avenue,_Tbilisi,_Georgia_(48814577146).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "главный фасад двухэтажного корпуса с ризалитом и высоким фронтоном, 2019 г."
+    },
+    {
+      "file": "photos/osm-57403659-2.webp",
+      "author": "Andrew Milligan sumo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:16_Tsminda_Ketevan_Dedoplis_Avenue,_Tbilisi,_Georgia_(48814726077).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "тот же корпус, второй ракурс того же адреса, 2019 г."
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3420",
+  "otherSource": "https://www.openstreetmap.org/way/57403659"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "osm-370543811",
+  "names": {
+    "ru": "Жилой дом (Паоло Яшвили, 3)",
+    "en": "Residential house at 3 Paolo Iashvili Street",
+    "ka": "საცხოვრებელი სახლი, პაოლო იაშვილის ქუჩა 3",
+    "uk": "Житловий будинок на вулиці Паоло Яшвілі, 3"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Паоло Яшвили, 3",
+    "en": "3 Paolo Iashvili Street",
+    "ka": "პაოლო იაშვილის ქუჩა 3",
+    "uk": "вулиця Паоло Яшвілі, 3"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный кирпичный оштукатуренный дом, вытянутый вдоль улицы, с обильным декором. Асимметричный фасад с центральным ризалитом: арочная деревянная дверь с ажурной решёткой, балкон с тремя арками и металлическим ограждением, парные пилястры с композитными капителями, фриз с медальонами-масками. Третий этаж, по описанию, надстроен позже и решён проще, с каменным ограждением.",
+    "en": "A three-storey plastered brick house, stretched out along the street, with abundant decoration. The asymmetrical façade has a central risalit: an arched wooden door with an openwork grille, a balcony with three arches and a metal railing, paired pilasters with Composite capitals, and a frieze with mask medallions. The third storey was, according to the description, added later and is treated more simply, with a stone parapet.",
+    "ka": "სამსართულიანი აგურის შელესილი სახლი, ქუჩის გასწვრივ გაწელილი, უხვი დეკორით. ასიმეტრიულ ფასადს ცენტრალური რიზალიტი აქვს: თაღოვანი ხის კარი აჟურული ბადით, აივანი სამი თაღითა და ლითონის მოაჯირით, შეწყვილებული პილასტრები კომპოზიტური კაპიტელებით, ფრიზი ნიღბიანი მედალიონებით. მესამე სართული, აღწერის მიხედვით, მოგვიანებითაა მიშენებული და უფრო მარტივადაა გადაწყვეტილი, ქვის მოაჯირით.",
+    "uk": "Триповерховий цегляний потинькований будинок, витягнутий уздовж вулиці, з багатим декором. Асиметричний фасад із центральним ризалітом: арочні дерев'яні двері з ажурними ґратами, балкон із трьома арками та металевим огородженням, здвоєні пілястри з композитними капітелями, фриз із медальйонами-масками. Третій поверх, за описом, надбудовано пізніше, і вирішено його простіше, з кам'яним огородженням."
+  },
+  "histories": {
+    "ru": "Реестр датирует дом концом XIX века. Первоначально двухэтажный, он был надстроен третьим этажом. В декоре фасада — изображение ребёнка в замковом камне и две крылатые женские фигуры по сторонам арки.",
+    "en": "The register dates the house to the end of the 19th century. Originally two-storey, it was later raised by a third storey. In the façade decoration there is an image of a child in the keystone and two winged female figures on either side of the arch.",
+    "ka": "რეესტრი სახლს XIX საუკუნის ბოლოთი ათარიღებს. თავდაპირველად ორსართულიანი, იგი მოგვიანებით მას მესამე სართული დაემატა. ფასადის დეკორში — ბავშვის გამოსახულება სასაკეტე ქვაში და ორი ფრთიანი ქალის ფიგურა თაღის ორივე მხარეს.",
+    "uk": "Реєстр датує будинок кінцем XIX століття. Спочатку двоповерховий, будинок пізніше надбудували третім поверхом. У декорі фасаду — зображення дитини в замковому камені та дві крилаті жіночі фігури обабіч арки."
+  },
+  "minYear": 1870,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "sololaki",
+  "coordinates": [
+    44.7962478,
+    41.6931031
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7961309,
+          41.6932522
+        ],
+        [
+          44.7963648,
+          41.6932503
+        ],
+        [
+          44.7963713,
+          41.692961
+        ],
+        [
+          44.7961266,
+          41.6929533
+        ],
+        [
+          44.7961309,
+          41.6932522
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.938; реестр 653.2 м², OSM 646.9 м²; перенос центра 0.4 м. IoU 0,938; OSM way/370543811 — 647 м²; флагов нет. Обведён весь корпус, включая позднюю надстройку.",
+  "photos": [
+    {
+      "file": "photos/osm-370543811-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4363",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=77123_6596379C-8BED-458D-959F-A35986BE26CB",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4363",
+  "otherSource": "https://www.openstreetmap.org/way/370543811"
+}

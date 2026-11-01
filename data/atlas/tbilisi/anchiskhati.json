@@ -1,0 +1,92 @@
+{
+  "id": "anchiskhati",
+  "osmId": "way/337365208",
+  "names": {
+    "ru": "Базилика Анчисхати",
+    "en": "Anchiskhati Basilica",
+    "ka": "ანჩისხატის ბაზილიკა",
+    "uk": "Базиліка Анчисхаті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иоане Шавтели",
+    "en": "Ioane Shavteli Street",
+    "ka": "იოანე შავთელის ქუჩა",
+    "uk": "вулиця Іоане Шавтелі"
+  },
+  "descriptions": {
+    "ru": "Старинная трехнефная базилика в историческом центре считается древнейшей сохранившейся церковью Тбилиси.",
+    "en": "This ancient three-nave basilica in the historic centre is considered the oldest surviving church in Tbilisi.",
+    "ka": "ისტორიულ ცენტრში მდებარე ეს უძველესი სამნავიანი ბაზილიკა თბილისის დღემდე შემორჩენილ ყველაზე ძველ ეკლესიად მიიჩნევა.",
+    "uk": "Цю давню тринавну базиліку в історичному центрі вважають найстарішою церквою Тбілісі, що збереглася донині."
+  },
+  "histories": {
+    "ru": "Основание храма относят к VI веку. На протяжении веков церковь неоднократно ремонтировали и перестраивали; название связано с иконой, перенесенной из Анчи в XVII веке.",
+    "en": "The church’s foundation is dated to the 6th century. It was repaired and rebuilt many times over the centuries; its name refers to an icon transferred from Ancha in the 17th century.",
+    "ka": "ტაძრის დაარსებას VI საუკუნეს მიაკუთვნებენ. საუკუნეების განმავლობაში ის არაერთხელ შეაკეთეს და გადააკეთეს; მისი სახელწოდება უკავშირდება XVII საუკუნეში ანჩიდან გადმოტანილ ხატს.",
+    "uk": "Заснування храму відносять до VI століття. Протягом віків його неодноразово ремонтували й перебудовували; назва пов’язана з іконою, перенесеною з Анчі у XVII столітті."
+  },
+  "minYear": 501,
+  "maxYear": 600,
+  "yearLabelId": "century-6",
+  "styleId": "early-christian-basilica",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.80694444,
+    41.69555556
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806739,
+          41.695583
+        ],
+        [
+          44.807015,
+          41.695574
+        ],
+        [
+          44.807009,
+          41.695457
+        ],
+        [
+          44.806732,
+          41.695466
+        ],
+        [
+          44.806736,
+          41.695538
+        ],
+        [
+          44.806739,
+          41.695583
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "photos": [
+    {
+      "file": "photos/anchiskhati.webp",
+      "author": "Gerd Eichmann",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi-86-Anchiskhati_Basilica-2019-gje.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/anchiskhati-curated.webp",
+      "author": "Kober",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anchis-Khati_basilica,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://georgianencyclopedia.ge/en/form_eng/374",
+  "googlePlaceId": "ChIJ-wA0IOUMREARoqE9lcQgX-I",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Anchiskhati%20Basilica&query_place_id=ChIJ-wA0IOUMREARoqE9lcQgX-I"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "osm-1219556099",
+  "osmId": "way/1219556099",
+  "names": {
+    "ru": "Церковь святой великомученицы Марины",
+    "en": "Church of the Holy Great Martyr Marina",
+    "ka": "ავლაბრის წმინდა მარინეს ეკლესია",
+    "uk": "Церква святої великомучениці Марини"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Душети, 12",
+    "en": "12 Dusheti Street",
+    "ka": "დუშეთის ქუჩა 12",
+    "uk": "вулиця Душеті, 12"
+  },
+  "descriptions": {
+    "ru": "Церковь Святой Марины находится в глубине жилого квартала Авлабари.",
+    "en": "St Marina Church stands within a residential block in Avlabari.",
+    "ka": "წმინდა მარინეს ეკლესია ავლაბრის საცხოვრებელი კვარტლის სიღრმეში მდებარეობს.",
+    "uk": "Церква Святої Марини розташована в глибині житлового кварталу Авлабарі."
+  },
+  "histories": {
+    "ru": "Надпись над южным входом сообщает о храме 1856 года. История более ранних построек и последующих изменений требует уточнения.",
+    "en": "An inscription above the southern entrance records a church of 1856. The history of earlier structures and subsequent alterations needs further research.",
+    "ka": "სამხრეთ შესასვლელის ზემოთ წარწერა 1856 წლის ეკლესიას იხსენიებს. ადრინდელი ნაგებობებისა და შემდგომი ცვლილებების ისტორია დაზუსტებას საჭიროებს.",
+    "uk": "Напис над південним входом повідомляє про храм 1856 року. Історія давніших споруд і подальших змін потребує уточнення."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8134231,
+    41.693649
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.813286,
+          41.69362
+        ],
+        [
+          44.81335,
+          41.693618
+        ],
+        [
+          44.813348,
+          41.693596
+        ],
+        [
+          44.813553,
+          41.693587
+        ],
+        [
+          44.813561,
+          41.693689
+        ],
+        [
+          44.813356,
+          41.693697
+        ],
+        [
+          44.813354,
+          41.693678
+        ],
+        [
+          44.813291,
+          41.69368
+        ],
+        [
+          44.813286,
+          41.69362
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
+  "photos": [
+    {
+      "file": "photos/osm-1219556099-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3393",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74552_E703369A-8861-434C-AE0F-926B1E2FDB29",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://mematiane.ge/product-details.php?id=15327",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3393"
+}

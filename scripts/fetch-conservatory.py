@@ -1,7 +1,9 @@
 import urllib.request, urllib.parse, json, pathlib, re, html, concurrent.futures, io
 from PIL import Image
+from atlas_source import attach_photos, next_photo_name, read_cards
 from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
+cards = read_cards()
 names = {'conservatoire': 'Tbilisi State Conservatoire F7780005.jpg'}
 # The existing hero may already use a chosen file; duplicates are removed by source URL later.
 params = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': '900', 'titles': '|'.join('File:' + x for x in names.values())})
@@ -19,7 +21,9 @@ def one(item):
         author, lic, licenseurl = v('Artist'), v('LicenseShortName'), v('LicenseUrl')
         if not (author and lic and licenseurl): raise ValueError('missing attribution')
         if len(author) > 180: author = author.split('\n')[0][:180]
-        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); filename = f'{key}-curated.webp'; img.convert('RGB').save(root / 'public/atlas/photos' / filename, 'WEBP', quality=76)
+        if any(p.get('source') == info.get('descriptionurl') for p in cards.get(key, {}).get('photos', [])):
+            return key, None
+        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); filename = next_photo_name(key, '-curated'); img.convert('RGB').save(root / 'public/atlas/photos' / filename, 'WEBP', quality=76)
         return key, {'file': 'photos/' + filename, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
     except Exception as ex:
         print('Error', key, ex, flush=True)
@@ -31,5 +35,5 @@ def tracked(item):
 progress.start(f'{len(names)} files')
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as p: out = dict(p.map(tracked, names.items()))
 progress.finish()
-(root / 'data/curated-conservatory.json').write_text(json.dumps({k: v for k, v in out.items() if v}, ensure_ascii=False, indent=2))
-print('curated photos', sum(v is not None for v in out.values()), flush=True)
+added = attach_photos(cards, out)
+print('curated photos', added, flush=True)

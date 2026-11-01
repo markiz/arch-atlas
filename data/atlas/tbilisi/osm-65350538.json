@@ -1,0 +1,115 @@
+{
+  "id": "osm-65350538",
+  "osmId": "way/65350538",
+  "names": {
+    "ru": "Нижняя Вифлеемская церковь",
+    "en": "Betlemi Lower Church",
+    "ka": "ბეთლემის ქვედა ეკლესია",
+    "uk": "Нижняя Вифлеемская церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": 1868,
+  "maxYear": 1868,
+  "yearLabelId": "year-1868",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8039727,
+    41.689228
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8040531,
+          41.6893101
+        ],
+        [
+          44.8040644,
+          41.689283
+        ],
+        [
+          44.8040651,
+          41.6892814
+        ],
+        [
+          44.8040753,
+          41.6892817
+        ],
+        [
+          44.8040945,
+          41.6892742
+        ],
+        [
+          44.8041061,
+          41.6892605
+        ],
+        [
+          44.804107,
+          41.6892444
+        ],
+        [
+          44.804097,
+          41.6892301
+        ],
+        [
+          44.8040884,
+          41.689226
+        ],
+        [
+          44.8040894,
+          41.6892234
+        ],
+        [
+          44.8041008,
+          41.6891963
+        ],
+        [
+          44.8038869,
+          41.6891462
+        ],
+        [
+          44.8038472,
+          41.689241
+        ],
+        [
+          44.8038391,
+          41.6892601
+        ],
+        [
+          44.8040531,
+          41.6893101
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-65350538-g1.webp",
+      "author": "Alix Kroeger from Brussels, Belgium",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Bethlehem_Quarter.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/65350538",
+  "otherSource": "https://www.wikidata.org/wiki/Q4156388",
+  "googlePlaceId": "ChIJZcmtXwANREARBw8MvduSn-I",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Lower%20Betlemi%20Church&query_place_id=ChIJZcmtXwANREARBw8MvduSn-I"
+}

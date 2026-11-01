@@ -1,0 +1,109 @@
+{
+  "id": "synagogue",
+  "osmId": "way/75311791",
+  "names": {
+    "ru": "Большая синагога Тбилиси",
+    "en": "Great Synagogue of Tbilisi",
+    "ka": "თბილისის დიდი სინაგოგა",
+    "uk": "Большая синагога Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 45–47",
+    "en": "45–47 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 45–47",
+    "uk": "вулиця Коте Абхазі, 45–47"
+  },
+  "descriptions": {
+    "ru": "Кирпичное здание с арочными окнами — исторический центр религиозной жизни еврейской общины Тбилиси.",
+    "en": "The brick building with arched windows has long been a centre of religious life for Tbilisi’s Jewish community.",
+    "ka": "აგურის შენობა თაღოვანი ფანჯრებით თბილისის ებრაული თემის რელიგიური ცხოვრების ისტორიული ცენტრია.",
+    "uk": "Цегляна будівля з арковими вікнами — історичний осередок релігійного життя єврейської громади Тбілісі."
+  },
+  "histories": {
+    "ru": "Синагога связана с общиной выходцев из Ахалцихе. Источники расходятся в датировке: одни указывают 1895–1903, другие — 1904–1913 годы. До уточнения сохранен общий интервал.",
+    "en": "The synagogue is associated with the community from Akhaltsikhe. Sources differ on its date: some give 1895–1903, others 1904–1913. The date is therefore kept as a range.",
+    "ka": "სინაგოგა ახალციხიდან ჩამოსულთა თემს უკავშირდება. წყაროებში თარიღები განსხვავდება: ზოგი 1895–1903 წლებს ასახელებს, ზოგი — 1904–1913 წლებს. ამიტომ მითითებულია ფართო პერიოდული შუალედი.",
+    "uk": "Синагога пов’язана з громадою вихідців з Ахалцихе. Джерела розходяться в датуванні: одні вказують 1895–1903 роки, інші — 1904–1913. Тому залишено широкий часовий проміжок."
+  },
+  "minYear": 1895,
+  "maxYear": 1913,
+  "yearLabelId": "late-19th-early-20th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.80727,
+    41.69
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.807181,
+          41.690094
+        ],
+        [
+          44.807264,
+          41.690087
+        ],
+        [
+          44.807281,
+          41.690086
+        ],
+        [
+          44.807384,
+          41.690078
+        ],
+        [
+          44.807358,
+          41.689893
+        ],
+        [
+          44.807352,
+          41.689852
+        ],
+        [
+          44.807296,
+          41.689856
+        ],
+        [
+          44.807149,
+          41.689868
+        ],
+        [
+          44.807155,
+          41.689908
+        ],
+        [
+          44.807181,
+          41.690094
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "photos": [
+    {
+      "file": "photos/synagogue.webp",
+      "author": "Tamar kurtanidze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%93%E1%83%98%E1%83%93%E1%83%98_%E1%83%A1%E1%83%98%E1%83%9C%E1%83%90%E1%83%92%E1%83%9D%E1%83%92%E1%83%90.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/synagogue-curated.webp",
+      "author": "D.Rovchak",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Big_synagogue_in_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://cja.huji.ac.il/index.php?id=290958&mode=alone",
+  "otherSource": "https://dbs.anumuseum.org.il/skn/en/c6/e23552465/",
+  "googlePlaceId": "ChIJ3YJOvb10REAR8nPTUSY8n3k",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Great%20Synagogue&query_place_id=ChIJ3YJOvb10REAR8nPTUSY8n3k"
+}

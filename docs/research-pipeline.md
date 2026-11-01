@@ -2,6 +2,8 @@
 
 Срез: 1 ноября 2026 года. Это разбор процесса, а не новые исследования. Основа — две волны по 8 кандидатов, разобранные параллельно четырьмя агентами.
 
+Схема хранения карточек обновлена: один pretty-JSON на объект в `data/atlas/tbilisi/<id>.json`, общий bundle собирает `scripts/assemble-atlas.mjs`. Замеры времени ниже относятся к прежнему процессу и не пересчитывались; актуальные пути и контракт полей — в [location-data-collection.md](location-data-collection.md).
+
 ## Где реально уходит время
 
 По журналу волн:
@@ -116,10 +118,10 @@ queue.jsonl
 
 Никакого research. Только:
 
-- карточка в `data/heritage-extra.json`;
+- карточка в `data/atlas/tbilisi/<id>.json`;
 - переводы ru/en/ka/uk (шаблон + проверка);
 - фото: WebP, атрибуция, `licenseUrl`, `modifications`;
-- `card.json` для валидатора.
+- готовый `data/atlas/tbilisi/<id>.json` для `validate_cards.py`.
 
 Дорогую часть — грузинский и украинский текст — можно делать одним пакетом на 5–10 карточек, а не по одной.
 
@@ -129,7 +131,7 @@ queue.jsonl
 - валидность Polygon/MultiPolygon, площадь, самопересечения;
 - пересечения с существующими карточками;
 - `npm run check`, `npm test`, `npm run build`, `npm run verify`;
-- отчёт `validation.json`; при провале карточка не попадает в `data/`.
+- отчёт `validation.json`; при провале карточка не попадает в `data/atlas/tbilisi/`.
 
 ### Этап 6. Integrate — один писатель
 
@@ -152,7 +154,7 @@ queue.jsonl
 
 1. `scripts/queue_collect.py` — реестр, OSM, геометрия, Place ID, Commons, пересечения. Это снимает с агентов самую скучную и повторяемую часть.
 2. `scripts/queue_report.py` — регистр и статистика из JSON, без ручного README.
-3. `scripts/validate_cards.py` — схема, полигоны, пересечения, сборка.
+3. `scripts/validate_cards.py` — схема, ссылки, полигоны, фото, пересечения и свежесть собранного bundle.
 4. Шаблон карточки и переводов — чтобы Edit не изобретал структуру каждый раз.
 
 Что **не** стоит автоматизировать: вердикт `READY/HOLD` и финальную редактуру грузинского/украинского. Это как раз те места, где нужен человек/сильный агент.
@@ -180,7 +182,7 @@ queue.jsonl
 |---|---|---|
 | `scripts/queue_collect.py` | Реестр, OSM way/relation, геометрия, флаги, Place ID, Commons, пересечения | `work/queue/<n>/collect.json`, `work/queue/index.jsonl` |
 | `scripts/queue_report.py` | Сводка по очереди: собрано, IoU, Place ID, ошибки, вердикты | stdout или `--out` |
-| `scripts/validate_cards.py` | Схема карточек, переводы, полигоны, фото, пересечения | только отчёт, exit code |
+| `scripts/validate_cards.py` | Схема карточек, переводы, ссылки, полигоны, фото, пересечения, свежесть bundle | только отчёт, exit code |
 
 `work/` добавлен в `.gitignore`: это локальный кэш и рабочие артефакты, а не публикуемые данные. HTTP-ответы кэшируются в `work/queue/cache/`; повторный запуск не ходит в сеть без `--refresh`.
 
@@ -252,14 +254,14 @@ python3 scripts/queue_collect.py --queue docs/research-next-200-v2.md \
 
 Карта показывает **надземный след здания**, поэтому primary-геометрия карточки — это он. Официальная граница, relation подземного/составного комплекса, старый way и другие варианты — вторичные: их не выбрасываем, но и не выдаём за footprint.
 
-Вторичные контуры хранятся в `data/geometry-variants.json`:
+Вторичные контуры хранятся в `geometryVariants` карточки (`data/atlas/tbilisi/<id>.json`); исследовательский снимок для бани №5 остаётся в `data/geometry-variants.json`:
 
 ```json
 {"schema": 1,
  "objects": {
    "osm-19630608": {
-     "primary": null,
-     "primaryRole": "above_ground_footprint",
+     "primary": "official-3756",
+     "primaryRole": "heritage_boundary",
      "missing": ["above_ground_footprint"],
      "variants": [
        {"id": "official-3756", "role": "heritage_boundary", "areaM2": 930.6, "geometry": {}},
@@ -272,23 +274,23 @@ python3 scripts/queue_collect.py --queue docs/research-next-200-v2.md \
 
 - `primary` — надземный контур, если он есть. Если его нет, допускается fallback `geometryRole=heritage_boundary`: карта рисует охраняемое ядро пунктиром и предупреждает, что это не footprint. Relation подземного комплекса на роль primary не подходит.
 - `variants[].role` фиксирует смысл: `heritage_boundary`, `complex_underground`, `neighbor_wrong_candidate`, `historic_plan`, `visible_domes`.
-- Когда появится обмер куполов, он становится `primary`, а старые варианты остаются в файле.
+- Когда появится обмер куполов, он становится `geometry` карточки, а старые варианты остаются в `geometryVariants`.
 - В данных это поля `geometry` (что рисуется), `geometryRole` (`above_ground` / `heritage_boundary` / …) и `geometryVariants`. `MapView` меняет стиль по роли, инспектор показывает предупреждение.
-- Представление можно перестроить по типу геометрии: карта берёт `primary`, а инспектор/исследование — нужный variant.
+- Представление можно перестроить по типу геометрии: карта берёт `geometry`, а инспектор/исследование — нужный variant.
 
 `queue_report.py` читает `index.jsonl`; если появится `work/queue/<n>/verdict.json`, колонка «Вердикт» подхватит его автоматически.
 
 ### Что ещё не автоматизировано
 
-- `enrich` (независимые источники), `adjudicate` (READY/HOLD/REJECT) и `edit` (переводы и карточка) пока остаются агентскими этапами. Для них нужен формат `sources.json` / `verdict.json` / `card.json`, описанный выше.
-- `validate_cards.py` проверяет источник, но не заменяет `npm run check` и `npm test`: после `build-data.py` всё равно нужны штатные проверки.
+- `enrich` (независимые источники), `adjudicate` (READY/HOLD/REJECT) и `edit` (переводы и карточка) пока остаются агентскими этапами. Для них нужен формат `sources.json` / `verdict.json` и правила записи `data/atlas/tbilisi/<id>.json`, описанные выше.
+- `validate_cards.py` проверяет исходные карточки, но не заменяет `npm run check` и `npm test`: после правки карточек и упаковки `buildings.json` всё равно нужны штатные проверки.
 - Автоматического переноса `verdict.json` в `data/` нет намеренно: это должен делать один интегратор после просмотра.
 
 ## Что уже сделано по этой заметке
 
 - Добавлены `queue_collect.py`, `queue_report.py`, `validate_cards.py`; `work/` исключён из git.
 - Из README убраны счётчики зданий/фото/дат: теперь там описание продукта, а не моментальный снимок.
-- `AGENTS.md` больше не хранит числа, а отправляет за актуальными значениями в `public/atlas/buildings.json` и манифест.
+- `AGENTS.md` больше не хранит числа, а отправляет за актуальными значениями в `data/atlas/tbilisi/*.json`, `public/atlas/buildings.json` и манифест.
 - `docs/status.md` — текущий снимок с датой; его числа не «живой счётчик» и обновляются вместе со статусом.
 
 Первый практический шаг при возвращении к работе: прогнать `queue_collect.py` по всем 126 оставшимся, не запуская LLM. Это даст полную таблицу «что уже известно» и покажет, сколько кандидатов отсеивается по геометрии/адресу до исследования.

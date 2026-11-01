@@ -1,0 +1,132 @@
+{
+  "id": "osm-316656009",
+  "osmId": "way/316656009",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 52ა",
+    "en": "52ა Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 52ა",
+    "uk": "проспект Шота Руставелі, 52ა"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7908252,
+    41.7025535
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7908192,
+          41.7023807
+        ],
+        [
+          44.7907722,
+          41.7023305
+        ],
+        [
+          44.7907036,
+          41.7023624
+        ],
+        [
+          44.7908494,
+          41.7025185
+        ],
+        [
+          44.790793,
+          41.7025405
+        ],
+        [
+          44.7906965,
+          41.7024404
+        ],
+        [
+          44.7907153,
+          41.7024244
+        ],
+        [
+          44.7906697,
+          41.7023703
+        ],
+        [
+          44.7905695,
+          41.7024307
+        ],
+        [
+          44.7905983,
+          41.7024599
+        ],
+        [
+          44.7907204,
+          41.7025834
+        ],
+        [
+          44.7908681,
+          41.7027688
+        ],
+        [
+          44.7909074,
+          41.7027511
+        ],
+        [
+          44.7909155,
+          41.7027691
+        ],
+        [
+          44.7909772,
+          41.7027451
+        ],
+        [
+          44.790954,
+          41.7027248
+        ],
+        [
+          44.7910603,
+          41.702677
+        ],
+        [
+          44.7909701,
+          41.7025666
+        ],
+        [
+          44.7908192,
+          41.7023807
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-316656009-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4521",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75315_CB03EFE6-286B-4381-8D32-A53472A886F1",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/316656009",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650670",
+  "googlePlaceId": "ChIJtel9YdsMREARub8Cqc0EJ1k",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7025535%2C44.7908252&query_place_id=ChIJtel9YdsMREARub8Cqc0EJ1k"
+}

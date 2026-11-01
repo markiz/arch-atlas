@@ -1,0 +1,103 @@
+{
+  "id": "osm-168100736",
+  "osmId": "way/168100736",
+  "names": {
+    "ru": "Театральный институт",
+    "en": "Theatre Institute",
+    "ka": "თეატრალური ინსტიტუტი",
+    "uk": "Театральний інститут"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 19",
+    "en": "19 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 19",
+    "uk": "проспект Шота Руставелі, 19"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau+neo-gothic",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7970798,
+    41.6999501
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7968537,
+          41.700265
+        ],
+        [
+          44.7969764,
+          41.7001466
+        ],
+        [
+          44.7973323,
+          41.699853
+        ],
+        [
+          44.797231,
+          41.6997625
+        ],
+        [
+          44.7972125,
+          41.699746
+        ],
+        [
+          44.7972012,
+          41.6997359
+        ],
+        [
+          44.7970723,
+          41.6998445
+        ],
+        [
+          44.7970255,
+          41.6998839
+        ],
+        [
+          44.7968645,
+          41.7000163
+        ],
+        [
+          44.7968176,
+          41.7000557
+        ],
+        [
+          44.7966838,
+          41.7001656
+        ],
+        [
+          44.7968537,
+          41.700265
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-168100736-depicts.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A0%E1%83%A3%E1%83%A1%E1%83%97%E1%83%90%E1%83%95%E1%83%94%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_19.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/168100736",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650293",
+  "googlePlaceId": "ChIJ2wkFfd0MREARchAmQTxqpAk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=19%20Shota%20Rustaveli%20Ave&query_place_id=ChIJ2wkFfd0MREARchAmQTxqpAk"
+}

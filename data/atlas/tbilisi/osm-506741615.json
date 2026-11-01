@@ -1,0 +1,158 @@
+{
+  "id": "osm-506741615",
+  "osmId": "way/506741615",
+  "names": {
+    "ru": "Джума-мечеть",
+    "en": "Juma Mosque",
+    "ka": "ჯუმა მეჩეთი",
+    "uk": "Джума-мечеть"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Ботаническая улица, 32",
+    "en": "32 Botanical Street",
+    "ka": "ბოტანიკურის ქუჩა 32",
+    "uk": "Ботанічна вулиця, 32"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": 1723,
+  "maxYear": 1723,
+  "yearLabelId": "year-1723",
+  "styleId": "islamic-architecture+neo-gothic",
+  "architectIds": [
+    "osmans",
+    "giovanni-scudieri"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8101463,
+    41.6871719
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8100213,
+          41.6871146
+        ],
+        [
+          44.8100178,
+          41.6871205
+        ],
+        [
+          44.810048,
+          41.6872769
+        ],
+        [
+          44.8100901,
+          41.6872731
+        ],
+        [
+          44.8100952,
+          41.6872979
+        ],
+        [
+          44.8101291,
+          41.6873138
+        ],
+        [
+          44.8101693,
+          41.6873148
+        ],
+        [
+          44.810177,
+          41.6873452
+        ],
+        [
+          44.8102471,
+          41.6873386
+        ],
+        [
+          44.8102535,
+          41.6873379
+        ],
+        [
+          44.8102935,
+          41.6873337
+        ],
+        [
+          44.8102859,
+          41.6872927
+        ],
+        [
+          44.8102525,
+          41.6871014
+        ],
+        [
+          44.8101902,
+          41.6871073
+        ],
+        [
+          44.8101901,
+          41.6870529
+        ],
+        [
+          44.8101412,
+          41.6870443
+        ],
+        [
+          44.8100613,
+          41.6870474
+        ],
+        [
+          44.8100647,
+          41.6870547
+        ],
+        [
+          44.8099977,
+          41.6870767
+        ],
+        [
+          44.8098937,
+          41.6871119
+        ],
+        [
+          44.8099242,
+          41.6871475
+        ],
+        [
+          44.8099775,
+          41.6872112
+        ],
+        [
+          44.8100069,
+          41.6871963
+        ],
+        [
+          44.8099563,
+          41.6871366
+        ],
+        [
+          44.8100213,
+          41.6871146
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-506741615-g1.webp",
+      "author": "Reda Kerbush",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Juma_Mosque_of_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/506741615",
+  "otherSource": "https://www.wikidata.org/wiki/Q4453131",
+  "googlePlaceId": "ChIJS6NQXfYMREAR-bkAjLNnw88",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Tbilisi%20Juma%20Mosque%20%2A&query_place_id=ChIJS6NQXfYMREAR-bkAjLNnw88"
+}

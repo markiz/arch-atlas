@@ -1,0 +1,181 @@
+{
+  "id": "osm-294972638",
+  "osmId": "way/294972638",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Грибоедова, 20",
+    "en": "20 Alexander Griboedov Street",
+    "ka": "ალექსანდრე გრიბოედოვის ქუჩა 20",
+    "uk": "вулиця Олександра Грибоєдова, 20"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [
+    "mikheil-kalashnikov"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7933336,
+    41.7008967
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.793674,
+          41.7008292
+        ],
+        [
+          44.7935233,
+          41.7008317
+        ],
+        [
+          44.7934461,
+          41.700833
+        ],
+        [
+          44.7934256,
+          41.7008485
+        ],
+        [
+          44.7934051,
+          41.700864
+        ],
+        [
+          44.7934067,
+          41.7009267
+        ],
+        [
+          44.7934104,
+          41.7010723
+        ],
+        [
+          44.7934468,
+          41.7010976
+        ],
+        [
+          44.7934284,
+          41.7011121
+        ],
+        [
+          44.7933695,
+          41.7011587
+        ],
+        [
+          44.7933527,
+          41.701172
+        ],
+        [
+          44.7933096,
+          41.7011423
+        ],
+        [
+          44.7932376,
+          41.7010927
+        ],
+        [
+          44.7932551,
+          41.7010767
+        ],
+        [
+          44.7932677,
+          41.7010653
+        ],
+        [
+          44.7932591,
+          41.7008405
+        ],
+        [
+          44.7931809,
+          41.700782
+        ],
+        [
+          44.7932379,
+          41.7007255
+        ],
+        [
+          44.7933,
+          41.7006621
+        ],
+        [
+          44.7933831,
+          41.700723
+        ],
+        [
+          44.7936971,
+          41.700714
+        ],
+        [
+          44.7937088,
+          41.7007047
+        ],
+        [
+          44.7937244,
+          41.7006925
+        ],
+        [
+          44.7938447,
+          41.7007712
+        ],
+        [
+          44.7938278,
+          41.7007851
+        ],
+        [
+          44.7937445,
+          41.7008541
+        ],
+        [
+          44.7937335,
+          41.7008632
+        ],
+        [
+          44.7937293,
+          41.7008668
+        ],
+        [
+          44.793674,
+          41.7008292
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-294972638-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5._20.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-294972638-depicts.webp",
+      "author": "Marikuna-115",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%92%E1%83%A0%E1%83%98%E1%83%91%E1%83%9D%E1%83%94%E1%83%93%E1%83%9D%E1%83%95%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_20.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/294972638",
+  "otherSource": "https://www.wikidata.org/wiki/Q42630515",
+  "googlePlaceId": "ChIJ3fA1IN0MREARvbE9f1byI24",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=20%20Alexander%20Griboedov%20St&query_place_id=ChIJ3fA1IN0MREARvbE9f1byI24"
+}

@@ -1,0 +1,111 @@
+{
+  "id": "osm-246757162",
+  "osmId": "way/246757162",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 29/5",
+    "en": "29/5 David Aghmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 29/5",
+    "uk": "проспект Давида Агмашенебелі, 29/5"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8027227,
+    41.7039757
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8027267,
+          41.7040249
+        ],
+        [
+          44.8027525,
+          41.7040088
+        ],
+        [
+          44.8027586,
+          41.7040144
+        ],
+        [
+          44.8027904,
+          41.7039906
+        ],
+        [
+          44.8028059,
+          41.7040032
+        ],
+        [
+          44.8029115,
+          41.7039337
+        ],
+        [
+          44.8027722,
+          41.7038386
+        ],
+        [
+          44.8026167,
+          41.7039608
+        ],
+        [
+          44.8025729,
+          41.7039952
+        ],
+        [
+          44.8026838,
+          41.704102
+        ],
+        [
+          44.8027598,
+          41.7040506
+        ],
+        [
+          44.8027267,
+          41.7040249
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-246757162-g1.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_29.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-246757162-depicts.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_29_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/246757162",
+  "otherSource": "https://www.wikidata.org/wiki/Q42634557",
+  "googlePlaceId": "ChIJOVa9xt8MREARsXm3e_UqSao",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7039757%2C44.8027227&query_place_id=ChIJOVa9xt8MREARsXm3e_UqSao"
+}

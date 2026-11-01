@@ -1,0 +1,79 @@
+{
+  "id": "osm-742183462",
+  "names": {
+    "ru": "Верхняя станция канатной дороги «Нуцубидзе — Лиси»",
+    "en": "Upper station of the Nutsubidze–Lisi cable car",
+    "ka": "საბაგირო გზის „ნუცუბიძე — ლისი“ ზედა სადგური",
+    "uk": "Верхня станція канатної дороги «Нуцубідзе — Лісі»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Лисское плато, южнее озера Лиси (без номера)",
+    "en": "Lisi Plateau, south of Lisi Lake (no number)",
+    "ka": "ლისის პლატო, ლისის ტბის სამხრეთით (ნომრის გარეშე)",
+    "uk": "Ліське плато, південніше озера Лісі (без номера)"
+  },
+  "descriptions": {
+    "ru": "Компактный транспортный павильон верхней станции с наружной винтовой лестницей. Сооружение заброшено: отделка и заполнение проёмов утрачены, стены покрыты граффити, внутри сохранились следы монтажа несущих конструкций канатной дороги.",
+    "en": "A compact transport pavilion of the upper station with an external spiral staircase. The structure is abandoned: the finishes and the infill of the openings have been lost, the walls are covered with graffiti, and inside there are surviving traces of the installation of the cable car's load-bearing structures.",
+    "ka": "ზედა სადგურის კომპაქტური სატრანსპორტო პავილიონი გარე ხვეული კიბით. ნაგებობა მიტოვებულია: მოპირკეთება და ღიობების შევსება დაკარგულია, კედლები გრაფიტითაა დაფარული, შიგნით შემორჩენილია საბაგიროს მზიდი კონსტრუქციების მონტაჟის კვალი.",
+    "uk": "Компактний транспортний павільйон верхньої станції із зовнішніми гвинтовими сходами. Споруда занедбана: оздоблення та заповнення прорізів втрачені, стіни вкриті графіті, усередині збереглися сліди монтажу несучих конструкцій канатної дороги."
+  },
+  "histories": {
+    "ru": "Канатная дорога от улицы Нуцубидзе к озеру Лиси открылась 4 августа 1978 года: протяжённость 1112 м, три опоры, кабины на 25 человек, поездка занимала 3–4 минуты. Верхняя станция на Лисском плато была конечной точкой маршрута. После закрытия дороги комплекс заброшен и разграблен; сегодня это объект самоосмотра на краю Лисийского плато.",
+    "en": "The cable car from Nutsubidze Street to Lisi Lake opened on 4 August 1978: 1112 m long, three supports, cabins for 25 people, and the trip took 3–4 minutes. The upper station on the Lisi plateau was the end point of the route. After the line closed, the complex was abandoned and looted; today it is a self-guided sight on the edge of the Lisi plateau.",
+    "ka": "საბაგირო გზა ნუცუბიძის ქუჩიდან ლისის ტბამდე 1978 წლის 4 აგვისტოს გაიხსნა: სიგრძე 1112 მ, სამი საყრდენი, 25 კაციანი კაბინები, მგზავრობა 3–4 წუთს გრძელდებოდა. ლისის პლატოზე მდებარე ზედა სადგური მარშრუტის საბოლოო წერტილი იყო. გზის დახურვის შემდეგ კომპლექსი მიტოვებული და გაძარცვულია; დღეს ის ლისის პლატოს კიდეზე თვითდათვალიერების ობიექტია.",
+    "uk": "Канатна дорога від вулиці Нуцубідзе до озера Лісі відкрилася 4 серпня 1978 року: протяжність 1112 м, три опори, кабіни на 25 осіб, поїздка тривала 3–4 хвилини. Верхня станція на Ліському плато була кінцевою точкою маршруту. Після закриття дороги комплекс занедбаний і розграбований; сьогодні це об'єкт самоогляду на краю Ліського плато."
+  },
+  "minYear": 1978,
+  "maxYear": 1978,
+  "yearLabelId": "year-1978",
+  "styleId": "soviet-modernism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7421144,
+    41.7386611
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7421713,
+          41.7387688
+        ],
+        [
+          44.7420356,
+          41.7387609
+        ],
+        [
+          44.7420575,
+          41.7385533
+        ],
+        [
+          44.7421931,
+          41.7385613
+        ],
+        [
+          44.7421713,
+          41.7387688
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.0; реестр 77.7 м², OSM 260.2 м²; перенос центра 15.2 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0 неинформативен; OSM-way 742183462 — замкнутый контур 260 м² (5 точек) с тегами building=transportation, was:aerialway=station, abandoned=yes. Реестровая точка в 15 м от контура, фото Commons — в 20 м; контур обводит павильон станции, а не платформу.",
+  "photos": [
+    {
+      "file": "photos/osm-742183462-1.webp",
+      "author": "Александр Сигачёв",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Lisi_Lake_cable_car_upper_station_-_2025-10_-_p01.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "Заброшенная верхняя станция канатной дороги у озера Лиси, 2025"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24776",
+  "otherSource": "https://www.openstreetmap.org/way/742183462"
+}

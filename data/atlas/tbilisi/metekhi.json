@@ -1,0 +1,156 @@
+{
+  "id": "metekhi",
+  "osmId": "way/1064270003",
+  "names": {
+    "ru": "Храм Метехи",
+    "en": "Metekhi Church",
+    "ka": "მეტეხის ღვთისმშობლის ეკლესია",
+    "uk": "Храм Метехи"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Метехский подъём",
+    "en": "Metekhi Ascent",
+    "ka": "მეტეხის აღმართი",
+    "uk": "Метехський узвіз"
+  },
+  "descriptions": {
+    "ru": "Храм стоит на скале над Курой, напротив исторического центра Тбилиси.",
+    "en": "The church stands on a cliff above the Kura, opposite Tbilisi’s historic centre.",
+    "ka": "ტაძარი მტკვრის თავზე, კლდეზე დგას, თბილისის ისტორიული ცენტრის მოპირდაპირედ.",
+    "uk": "Храм стоїть на скелі над Курою, навпроти історичного центру Тбілісі."
+  },
+  "histories": {
+    "ru": "Сохранившуюся церковь построили в XIII веке при царе Деметре II на месте более раннего храма. Прилегающая крепость позднее была разрушена.",
+    "en": "The surviving church was built in the 13th century under King Demetre II, on the site of an earlier church. The adjoining fortress was later demolished.",
+    "ka": "შემორჩენილი ეკლესია XIII საუკუნეში, მეფე დემეტრე II-ის დროს, უფრო ადრინდელი ტაძრის ადგილზე აშენდა. მიმდებარე ციხე მოგვიანებით დაანგრიეს.",
+    "uk": "Збережену церкву збудували у XIII столітті за царя Деметре II на місці давнішого храму. Прилеглу фортецю згодом зруйнували."
+  },
+  "minYear": 1201,
+  "maxYear": 1300,
+  "yearLabelId": "century-13",
+  "styleId": "medieval-georgian-architecture",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.81125,
+    41.69015
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.811205,
+          41.6902548
+        ],
+        [
+          44.8112798,
+          41.6902499
+        ],
+        [
+          44.8112775,
+          41.69023
+        ],
+        [
+          44.8112744,
+          41.6902032
+        ],
+        [
+          44.8113363,
+          41.6901992
+        ],
+        [
+          44.8113553,
+          41.690193
+        ],
+        [
+          44.8113658,
+          41.6901798
+        ],
+        [
+          44.8113639,
+          41.6901644
+        ],
+        [
+          44.8113548,
+          41.6901568
+        ],
+        [
+          44.8113689,
+          41.6901466
+        ],
+        [
+          44.8113766,
+          41.6901313
+        ],
+        [
+          44.8113746,
+          41.6901151
+        ],
+        [
+          44.8113633,
+          41.690101
+        ],
+        [
+          44.8113481,
+          41.6900935
+        ],
+        [
+          44.811355,
+          41.6900847
+        ],
+        [
+          44.811353,
+          41.6900695
+        ],
+        [
+          44.8113395,
+          41.6900582
+        ],
+        [
+          44.8113196,
+          41.6900549
+        ],
+        [
+          44.811124,
+          41.6900676
+        ],
+        [
+          44.8111407,
+          41.690212
+        ],
+        [
+          44.8111996,
+          41.6902082
+        ],
+        [
+          44.811205,
+          41.6902548
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap по идентификатору объекта; уточняется редактором",
+  "photos": [
+    {
+      "file": "photos/metekhi.webp",
+      "author": "Mikhail Daneliya",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Metekhi_church_Tbilisi_eastern_facade.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/metekhi-curated.webp",
+      "author": "Gerd Eichmann",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi-Metekhi-Kirche-08-2019-gje.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://georgia.travel/metekhi-church",
+  "googlePlaceId": "ChIJrZZTWvcMREARrnw5_7dNJwo",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Metekhi%20church%20of%20the%20Nativity%20of%20the%20Mother%20of%20God&query_place_id=ChIJrZZTWvcMREARrnw5_7dNJwo"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "osm-565074603",
+  "osmId": "way/565074603",
+  "names": {
+    "ru": "Церковь равноапостольной Нины",
+    "en": "Church of Saint Nino",
+    "ka": "წმინდა ნინოს ეკლესია",
+    "uk": "Церква равноапостольной Нини"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Шио Читадзе, 5",
+    "en": "5 Shio Chitadze Street",
+    "ka": "შიო ჩიტაძის ქუჩა 5",
+    "uk": "вулиця Шіо Читадзе, 5"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1884,
+  "maxYear": 1884,
+  "yearLabelId": "year-1884",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7946417,
+    41.6950954
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7946595,
+          41.6951987
+        ],
+        [
+          44.7946756,
+          41.6951746
+        ],
+        [
+          44.7947218,
+          41.6951918
+        ],
+        [
+          44.7947827,
+          41.6951006
+        ],
+        [
+          44.7947298,
+          41.6950809
+        ],
+        [
+          44.7947535,
+          41.6950453
+        ],
+        [
+          44.7946004,
+          41.6949883
+        ],
+        [
+          44.7945616,
+          41.6950464
+        ],
+        [
+          44.7945362,
+          41.695037
+        ],
+        [
+          44.7945007,
+          41.6950902
+        ],
+        [
+          44.7945369,
+          41.6951037
+        ],
+        [
+          44.7945105,
+          41.6951432
+        ],
+        [
+          44.7946595,
+          41.6951987
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-565074603-g1.webp",
+      "author": "Mostafameraji",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%AC%E1%83%9B%E1%83%98%E1%83%9C%E1%83%93%E1%83%90_%E1%83%9C%E1%83%98%E1%83%9C%E1%83%9D%E1%83%A1_%E1%83%94%E1%83%99%E1%83%9A%E1%83%94%E1%83%A1%E1%83%98%E1%83%90_%DA%A9%D9%84%DB%8C%D8%B3%D8%A7%DB%8C_%D8%B3%D9%86%D8%AA_%D9%86%DB%8C%D9%86%D9%88_%D8%AF%D8%B1_%D8%AA%D9%81%D9%84%DB%8C%D8%B3_02.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-565074603-g2.webp",
+      "author": "Andrew Milligan sumo",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Saint_Nino%27s_Church,_Tbilisi_(50497188641).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/565074603",
+  "otherSource": "https://www.wikidata.org/wiki/Q42658484",
+  "googlePlaceId": "ChIJf7LrFOkMREARvnn9fuZCNhM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=St.%20Nino%27s%20Church&query_place_id=ChIJf7LrFOkMREARvnn9fuZCNhM"
+}

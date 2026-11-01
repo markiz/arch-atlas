@@ -1,0 +1,227 @@
+{
+  "id": "osm-78075110",
+  "osmId": "way/78075110",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Дмитрия Узнадзе, 2",
+    "en": "2 Dimitri Uznadze Street",
+    "ka": "დიმიტრი უზნაძის ქუჩა 2",
+    "uk": "вулиця Дмитра Узнадзе, 2"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8000448,
+    41.7038001
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7994639,
+          41.7040215
+        ],
+        [
+          44.7995165,
+          41.7040092
+        ],
+        [
+          44.7995801,
+          41.7039944
+        ],
+        [
+          44.800314,
+          41.7038231
+        ],
+        [
+          44.8005111,
+          41.7037771
+        ],
+        [
+          44.8009746,
+          41.7036689
+        ],
+        [
+          44.8010498,
+          41.7036513
+        ],
+        [
+          44.8011209,
+          41.7036347
+        ],
+        [
+          44.8012133,
+          41.7036131
+        ],
+        [
+          44.8013043,
+          41.7035919
+        ],
+        [
+          44.8013298,
+          41.7036528
+        ],
+        [
+          44.801476,
+          41.7036187
+        ],
+        [
+          44.8015241,
+          41.7036074
+        ],
+        [
+          44.801433,
+          41.7033899
+        ],
+        [
+          44.8012804,
+          41.7034255
+        ],
+        [
+          44.8012712,
+          41.7034277
+        ],
+        [
+          44.8012624,
+          41.7034297
+        ],
+        [
+          44.8012533,
+          41.7034319
+        ],
+        [
+          44.8012442,
+          41.703434
+        ],
+        [
+          44.8012377,
+          41.7034355
+        ],
+        [
+          44.8011492,
+          41.7034562
+        ],
+        [
+          44.8010579,
+          41.7034775
+        ],
+        [
+          44.800988,
+          41.7034939
+        ],
+        [
+          44.8009133,
+          41.7035113
+        ],
+        [
+          44.8004468,
+          41.7036203
+        ],
+        [
+          44.8002308,
+          41.7036707
+        ],
+        [
+          44.7995187,
+          41.7038371
+        ],
+        [
+          44.7994934,
+          41.703843
+        ],
+        [
+          44.7994779,
+          41.7038466
+        ],
+        [
+          44.7994536,
+          41.7038523
+        ],
+        [
+          44.7993169,
+          41.7038842
+        ],
+        [
+          44.7992457,
+          41.7039009
+        ],
+        [
+          44.799271,
+          41.7039613
+        ],
+        [
+          44.799234,
+          41.70397
+        ],
+        [
+          44.7993314,
+          41.7042024
+        ],
+        [
+          44.7993687,
+          41.7041937
+        ],
+        [
+          44.7993941,
+          41.7042544
+        ],
+        [
+          44.7996148,
+          41.7042029
+        ],
+        [
+          44.7995655,
+          41.7040853
+        ],
+        [
+          44.7994973,
+          41.7041013
+        ],
+        [
+          44.7994639,
+          41.7040215
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-78075110-g1.webp",
+      "author": "ImposterVT from USA",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:River_View.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-78075110-category.webp",
+      "author": "Mostafameraji",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2_Dimitri_Uznadze_Street_in_Tbilisi_-_mostafa_meraji_-_Georgia_Photos_-_Travel_And_Tourism_08.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/78075110",
+  "otherSource": "https://www.wikidata.org/wiki/Q42653417",
+  "googlePlaceId": "ChIJ3eP8Tt4MREARsBcVAwvbAIM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=2%20Dimitri%20Uznadze%20St&query_place_id=ChIJ3eP8Tt4MREARsBcVAwvbAIM"
+}

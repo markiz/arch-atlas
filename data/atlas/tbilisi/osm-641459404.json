@@ -1,0 +1,124 @@
+{
+  "id": "osm-641459404",
+  "osmId": "way/641459404",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 34",
+    "en": "34 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 34",
+    "uk": "вулиця Ладо Асატіані, 34"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8008537,
+    41.6894664
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8006918,
+          41.6895247
+        ],
+        [
+          44.8006901,
+          41.6895825
+        ],
+        [
+          44.8007473,
+          41.6895834
+        ],
+        [
+          44.8008502,
+          41.6895851
+        ],
+        [
+          44.8011179,
+          41.6895895
+        ],
+        [
+          44.8011206,
+          41.6894959
+        ],
+        [
+          44.801013,
+          41.6894942
+        ],
+        [
+          44.8010182,
+          41.6893159
+        ],
+        [
+          44.8009145,
+          41.6893142
+        ],
+        [
+          44.8009109,
+          41.6894386
+        ],
+        [
+          44.8007522,
+          41.689436
+        ],
+        [
+          44.8007347,
+          41.6894357
+        ],
+        [
+          44.8007359,
+          41.689396
+        ],
+        [
+          44.8007829,
+          41.6893967
+        ],
+        [
+          44.8007857,
+          41.6893016
+        ],
+        [
+          44.8006984,
+          41.6893001
+        ],
+        [
+          44.8006918,
+          41.6895247
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-641459404-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4134",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76287_8961B61C-5CFE-43B0-8670-D32A7667AF14",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/641459404",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623309",
+  "googlePlaceId": "ChIJXU8MOfIMREAR4iOIK5_arow",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=34%20Lado%20Asatiani%20St&query_place_id=ChIJXU8MOfIMREAR4iOIK5_arow"
+}

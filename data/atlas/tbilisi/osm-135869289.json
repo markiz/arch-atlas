@@ -1,0 +1,102 @@
+{
+  "id": "osm-135869289",
+  "osmId": "way/135869289",
+  "names": {
+    "ru": "Государственный музей шёлка",
+    "en": "State Silk Museum",
+    "ka": "აბრეშუმის სახელმწიფო მუზეუმი",
+    "uk": "Державний музей шовку"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Цабадзе, 6",
+    "en": "6 Giorgi Tsabadze Street",
+    "ka": "გიორგი ცაბაძის ქუჩა 6",
+    "uk": "вулиця Георгія Цабадзе, 6"
+  },
+  "descriptions": {
+    "ru": "Кирпичное здание с портиком построено для Кавказской шелководческой станции и музея шёлка.",
+    "en": "The brick building with a portico was built for the Caucasian Sericulture Station and Silk Museum.",
+    "ka": "აგურის შენობა პორტიკით კავკასიის მეაბრეშუმეობის სადგურისა და აბრეშუმის მუზეუმისთვის აშენდა.",
+    "uk": "Цегляну будівлю з портиком спорудили для Кавказької шовківничої станції та музею шовку."
+  },
+  "histories": {
+    "ru": "Здание по проекту Александра Шимкевича включало музей, библиотеку, лаборатории и служебные помещения. Музей датирует строительство 1890–1892 годами, Tbilisi Architecture Archive — 1889–1891 годами.",
+    "en": "Designed by Alexander Szymkiewicz, the building housed the museum, library, laboratories and offices. The museum dates construction to 1890–1892; Tbilisi Architecture Archive gives 1889–1891.",
+    "ka": "ალექსანდრე შიმკევიჩის პროექტით შექმნილ შენობაში მუზეუმი, ბიბლიოთეკა, ლაბორატორიები და ადმინისტრაციული ოთახები განთავსდა. მუზეუმი მშენებლობას 1890–1892 წლებით, თბილისის არქიტექტურის არქივი კი 1889–1891 წლებით ათარიღებს.",
+    "uk": "У будівлі за проєктом Олександра Шимкевича розмістили музей, бібліотеку, лабораторії та службові приміщення. Музей датує будівництво 1890–1892 роками, Tbilisi Architecture Archive — 1889–1891 роками."
+  },
+  "minYear": 1889,
+  "maxYear": 1892,
+  "yearLabelId": "year-1889-1892",
+  "styleId": "eclecticism",
+  "architectIds": [
+    "alexander-shimkevich"
+  ],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7882046,
+    41.7218825
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.787944,
+          41.721859
+        ],
+        [
+          44.788134,
+          41.721938
+        ],
+        [
+          44.788116,
+          41.721963
+        ],
+        [
+          44.78817,
+          41.721985
+        ],
+        [
+          44.788188,
+          41.721962
+        ],
+        [
+          44.788377,
+          41.722041
+        ],
+        [
+          44.788475,
+          41.72191
+        ],
+        [
+          44.788465,
+          41.721906
+        ],
+        [
+          44.788041,
+          41.721729
+        ],
+        [
+          44.787944,
+          41.721859
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
+  "photos": [
+    {
+      "file": "photos/osm-135869289-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5006",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76159_BFCD44CA-EEC3-419C-BCE6-923BCF32CB8B",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.silkmuseum.ge/en/about/building",
+  "otherSource": "https://taa.net.ge/en/archive-geo/silk-museum/"
+}

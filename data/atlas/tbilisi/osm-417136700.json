@@ -1,0 +1,87 @@
+{
+  "id": "osm-417136700",
+  "names": {
+    "ru": "Жилой дом на улице Баку, 4",
+    "en": "Residential house, 4 Baku Street",
+    "ka": "საცხოვრებელი სახლი, ბაქოს ქუჩა 4",
+    "uk": "Житловий будинок на вулиці Баку, 4"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Баку, 4",
+    "en": "4 Baku Street",
+    "ka": "ბაქოს ქუჩა 4",
+    "uk": "вулиця Баку, 4"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный кирпичный оштукатуренный и окрашенный дом с L-образным планом. По краям главного фасада — слабо выступающие ризалиты с иным декором, чем остальная плоскость; фасад членят профилированные карнизы и ритм проёмов. На первом этаже проёмы в профилированных наличниках с замковыми камнями, на втором — наличники с прямыми сандриками на кронштейнах и каменные профилированные плиты под окнами.",
+    "en": "A two-storey brick house, plastered and painted, with an L-shaped plan. At the edges of the main façade are slightly projecting risalits with decoration different from the rest of the plane; the façade is divided by profiled cornices and the rhythm of the openings. On the ground floor the openings have profiled surrounds with keystones; on the second floor the surrounds carry straight hood moulds on brackets, with profiled stone slabs beneath the windows.",
+    "ka": "ორსართულიანი აგურის სახლი, შელესილი და შეღებილი, L-образური გეგმით. მთავარი ფასადის კიდეებზე სუსტად წამოწეული რიზალიტებია, დანარჩენი სიბრტყისგან განსხვავებული დეკორით; ფასადს ყოფს პროფილირებული კარნიზები და ღიობების რიტმი. პირველ სართულზე ღიობები პროფილირებულ საპირეებშია საკეტი ქვებით, მეორეზე — საპირეები კრონშტეინებზე დაყრდნობილი სწორი სანდრიკებითა და ფანჯრების ქვემოთ ქვის პროფილირებული ფილები.",
+    "uk": "Двоповерховий цегляний будинок, потинькований і пофарбований, з L-подібним планом. По краях головного фасаду — слабо виступні ризаліти з оздобленням, відмінним від решти площини; фасад членують профільовані карнизи й ритм прорізів. На першому поверсі прорізи в профільованих лиштвах із замковими каменями, на другому — лиштви з прямими сандриками на кронштейнах і кам'яні профільовані плити під вікнами."
+  },
+  "histories": {
+    "ru": "Начало XIX века, городской жилой дом. В ризалитной части первого этажа устроен туннель во двор, рядом — вход в подъезд. Дом держит фронт улицы Баку вместе с соседними корпусами.",
+    "en": "Early 19th century, an urban residential house. In the risalit part of the ground floor a tunnel into the courtyard is arranged, with the entrance to the stair hall beside it. The house holds the frontage of Baku Street together with the neighbouring blocks.",
+    "ka": "XIX საუკუნის დასაწყისი, საქალაქო საცხოვრებელი სახლი. პირველი სართულის რიზალიტურ ნაწილში ეზოში გასასვლელი გვირაბია მოწყობილი, გვერდით — სადარბაზოს შესასვლელი. სახლი ბაქოს ქუჩის ფრონტს მეზობელ კორპუსებთან ერთად ინარჩუნებს.",
+    "uk": "Початок XIX століття, міський житловий будинок. У ризалітній частині першого поверху влаштовано тунель у двір, поруч — вхід до під'їзду. Будинок тримає фронт вулиці Баку разом із сусідніми корпусами."
+  },
+  "minYear": 1800,
+  "maxYear": 1825,
+  "yearLabelId": "early-19th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.792261,
+    41.7180243
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7921158,
+          41.7180155
+        ],
+        [
+          44.7922444,
+          41.7180662
+        ],
+        [
+          44.7921754,
+          41.7181638
+        ],
+        [
+          44.7922543,
+          41.7181949
+        ],
+        [
+          44.792413,
+          41.7179707
+        ],
+        [
+          44.7922055,
+          41.7178889
+        ],
+        [
+          44.7921158,
+          41.7180155
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.619; реестр 422.4 м², OSM 399.3 м²; перенос центра 3.3 м. IoU 0.619, флагов нет; OSM 399 м² против реестровых 422 м², покрытие реестра 74 % — расхождение по дворовой части/углам, обведён только корпус.",
+  "photos": [
+    {
+      "file": "photos/osm-417136700-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3241",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=73884_9610974D-8936-47BD-93DF-FAD29F5F9581",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3241",
+  "otherSource": "https://www.openstreetmap.org/way/417136700"
+}

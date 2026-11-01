@@ -1,0 +1,95 @@
+{
+  "id": "osm-1206891444",
+  "osmId": "way/1206891444",
+  "names": {
+    "ru": "Атешга",
+    "en": "Ateshgah",
+    "ka": "ათეშგა",
+    "uk": "Атешга"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гоми, 3ა",
+    "en": "3ა Gomi Street",
+    "ka": "გომის ქუჩა 3ა",
+    "uk": "вулиця Гомі, 3ა"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8055967,
+    41.6888518
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8055365,
+          41.6888946
+        ],
+        [
+          44.8056383,
+          41.688897
+        ],
+        [
+          44.8056379,
+          41.6889044
+        ],
+        [
+          44.8056372,
+          41.6889159
+        ],
+        [
+          44.8056522,
+          41.6889162
+        ],
+        [
+          44.8056566,
+          41.6888091
+        ],
+        [
+          44.8055406,
+          41.6888061
+        ],
+        [
+          44.8055365,
+          41.6888946
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891444-g1.webp",
+      "author": "Lasha ge",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%97%E1%83%94%E1%83%A8%E1%83%92%E1%83%90,_III-VII_%E1%83%A1%E1%83%90%E1%83%A3%E1%83%99%E1%83%A3%E1%83%9C%E1%83%94%E1%83%94%E1%83%91%E1%83%98%E1%83%A1.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1206891444-g2.webp",
+      "author": "Aleksey Muhranoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ateshga_general_view,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891444",
+  "otherSource": "https://www.wikidata.org/wiki/Q16364495",
+  "googlePlaceId": "ChIJV4AAUfEMREARTXqOCmhXuaQ",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Ateshgah%20Zoroastrian%20Temple&query_place_id=ChIJV4AAUfEMREARTXqOCmhXuaQ"
+}

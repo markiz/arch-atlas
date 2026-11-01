@@ -1,0 +1,83 @@
+{
+  "id": "osm-1129861626",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Авлабарская улица, 14 / улица Бачана, 1",
+    "en": "14 Avlabari Street / 1 Bachana Street",
+    "ka": "ავლაბრის ქუჩა 14 / ბაჩანას ქუჩა 1",
+    "uk": "Авлабарська вулиця, 14 / вулиця Бачана, 1"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный угловой дом на старом кирпиче с деревянными балконами и внутренним двором. Симметричный уличный фасад прорезан восемью окнами и двумя дверями, украшен карнизом, парапетом, кронштейнами и сандриками; второй уличный фасад дополнен ризалитами и балконом. Декор — кирпичная кладка, металлические и деревянные ограждения, деревянные галереи со стороны двора.",
+    "en": "A two-storey corner house of old brick with wooden balconies and an inner courtyard. The symmetrical street façade is pierced by eight windows and two doors and adorned with a cornice, a parapet, brackets and hood mouldings; the second street façade is complemented by risalits and a balcony. The decoration consists of brickwork, metal and wooden railings, and wooden galleries on the courtyard side.",
+    "ka": "ორსართულიანი კუთხის სახლი ძველ აგურზე, ხის აივნებითა და შიდა ეზოთი. სიმეტრიული ქუჩის ფასადი რვა ფანჯრითა და ორი კარითაა დაჭრილი, შემკულია კარნიზით, პარაპეტით, კრონშტეინებითა და სანდრიკებით; მეორე ქუჩის ფასადი რიზალიტებითა და აივნითაა შევსებული. დეკორი — აგურის წყობა, ლითონისა და ხის მოაჯირები, ეზოს მხრიდან ხის გალერეები.",
+    "uk": "Двоповерховий кутовий будинок на старій цеглі з дерев’яними балконами та внутрішнім двором. Симетричний вуличний фасад прорізано вісьмома вікнами й двома дверима, прикрашено карнизом, парапетом, кронштейнами та сандриками; другий вуличний фасад доповнено ризалітами й балконом. Декор — цегляна кладка, металеві та дерев’яні огорожі, дерев’яні галереї з боку двору."
+  },
+  "histories": {
+    "ru": "Дом конца XIX века, первоначально и сейчас жилой. Реестр оценивает его архитектурно-художественную ценность как среднюю, а роль в исторической застройке — как рядовую. Отмечена одна поздняя пристройка; автор и заказчик не установлены.",
+    "en": "A house of the late 19th century, originally and still residential. The register assesses its architectural and artistic value as medium and its role in the historic built environment as ordinary. One later extension is noted; the author and the client are not established.",
+    "ka": "XIX საუკუნის ბოლო ხანების სახლი, თავდაპირველადაც და ახლაც საცხოვრებელი. რეესტრი მის არქიტექტურულ-მხატვრულ ღირებულებას საშუალოდ აფასებს, ხოლო როლს ისტორიულ განაშენიანებაში — რიგითად. აღნიშნულია ერთი გვიანი მიშენება; ავტორი და დამკვეთი დადგენილი არ არის.",
+    "uk": "Будинок кінця XIX століття, первісно й тепер житловий. Реєстр оцінює його архітектурно-мистецьку цінність як середню, а роль в історичній забудові — як рядову. Відзначено одну пізню прибудову; автор і замовник не встановлені."
+  },
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "avlabari",
+  "coordinates": [
+    44.813374,
+    41.6945628
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8134715,
+          41.6946162
+        ],
+        [
+          44.8133751,
+          41.6946474
+        ],
+        [
+          44.813269,
+          41.6944988
+        ],
+        [
+          44.8133893,
+          41.6944907
+        ],
+        [
+          44.8134517,
+          41.6945869
+        ],
+        [
+          44.8134715,
+          41.6946162
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.701; реестр 125.1 м², OSM 153.1 м²; перенос центра 1.0 м. IoU 0,701; OSM way/1129861626 — замкнутый контур углового корпуса, флагов нет.",
+  "photos": [
+    {
+      "file": "photos/osm-1129861626-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3404",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76007_12A87B86-CA8E-422F-828B-2D80613ABE14",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3404",
+  "otherSource": "https://www.openstreetmap.org/way/1129861626"
+}

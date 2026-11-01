@@ -1,0 +1,107 @@
+{
+  "id": "osm-1206891469",
+  "osmId": "way/1206891469",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 46",
+    "en": "46 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 46",
+    "uk": "вулиця Ладо Асატіані, 46"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "art-nouveau",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7989894,
+    41.6894321
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7991092,
+          41.6895239
+        ],
+        [
+          44.7990873,
+          41.6895231
+        ],
+        [
+          44.7990633,
+          41.6895223
+        ],
+        [
+          44.7990391,
+          41.6895214
+        ],
+        [
+          44.7989064,
+          41.6895169
+        ],
+        [
+          44.7988597,
+          41.6895153
+        ],
+        [
+          44.7988696,
+          41.6893476
+        ],
+        [
+          44.7989139,
+          41.689348
+        ],
+        [
+          44.7990305,
+          41.6893489
+        ],
+        [
+          44.7990344,
+          41.6892319
+        ],
+        [
+          44.7991232,
+          41.6892328
+        ],
+        [
+          44.7991188,
+          41.6893451
+        ],
+        [
+          44.7991092,
+          41.6895239
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891469-g1.webp",
+      "author": "Davit butulashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9A%E1%83%90%E1%83%93%E1%83%9D_%E1%83%90%E1%83%A1%E1%83%90%E1%83%97%E1%83%98%E1%83%90%E1%83%9C%E1%83%98%E1%83%A1_46.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891469",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623683",
+  "googlePlaceId": "ChIJFT3AZfIMREARYnrtO_4vu88",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=46%20Lado%20Asatiani%20St&query_place_id=ChIJFT3AZfIMREARYnrtO_4vu88"
+}

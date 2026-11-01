@@ -1,0 +1,194 @@
+{
+  "id": "conservatoire",
+  "osmId": "relation/18222383",
+  "names": {
+    "ru": "Тбилисская консерватория",
+    "en": "Tbilisi State Conservatoire",
+    "ka": "თბილისის სახელმწიფო კონსერვატორია",
+    "uk": "Тбіліська консерватория"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Грибоедова, 8–10",
+    "en": "8–10 Alexander Griboedov Street",
+    "ka": "ალექსანდრე გრიბოედოვის ქუჩა 8–10",
+    "uk": "вулиця Олександра Грибоєдова, 8–10"
+  },
+  "descriptions": {
+    "ru": "Здание бывшего музыкального училища на улице Грибоедова соединяет элементы ренессанса и барокко.",
+    "en": "The former music school on Griboedov Street combines Renaissance and Baroque elements.",
+    "ka": "გრიბოედოვის ქუჩაზე მდებარე ყოფილი მუსიკალური სასწავლებლის შენობა რენესანსისა და ბაროკოს ელემენტებს აერთიანებს.",
+    "uk": "Будівля колишнього музичного училища на вулиці Грибоєдова поєднує елементи ренесансу й бароко."
+  },
+  "histories": {
+    "ru": "Музыкальное училище построено в 1901–1904 годах по проекту Александра Шимкевича; торжественное открытие концертного зала состоялось в 1904 году.",
+    "en": "The music school was built in 1901–1904 to a design by Alexander Shimkevich. Its concert hall was ceremonially opened in 1904.",
+    "ka": "მუსიკალური სასწავლებელი 1901–1904 წლებში ალექსანდრე შიმკევიჩის პროექტით აშენდა. საკონცერტო დარბაზი საზეიმოდ 1904 წელს გაიხსნა.",
+    "uk": "Музичне училище збудували у 1901–1904 роках за проєктом Олександра Шимкевича; концертну залу урочисто відкрили 1904 року."
+  },
+  "minYear": 1904,
+  "maxYear": 1904,
+  "yearLabelId": "period-1901-1904",
+  "styleId": "eclecticism",
+  "architectIds": [
+    "alexander-shimkevich"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.79522,
+    41.69953
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7951415,
+          41.6997003
+        ],
+        [
+          44.7954817,
+          41.6994206
+        ],
+        [
+          44.7952739,
+          41.699044
+        ],
+        [
+          44.7951439,
+          41.6990766
+        ],
+        [
+          44.7950828,
+          41.699092
+        ],
+        [
+          44.7950704,
+          41.6990951
+        ],
+        [
+          44.7950961,
+          41.6991452
+        ],
+        [
+          44.7950333,
+          41.6991893
+        ],
+        [
+          44.795146,
+          41.6992781
+        ],
+        [
+          44.7950948,
+          41.6993118
+        ],
+        [
+          44.7949335,
+          41.6992259
+        ],
+        [
+          44.7948598,
+          41.6992805
+        ],
+        [
+          44.7949412,
+          41.6993392
+        ],
+        [
+          44.7947396,
+          41.6995067
+        ],
+        [
+          44.7948311,
+          41.6995717
+        ],
+        [
+          44.7949767,
+          41.6994512
+        ],
+        [
+          44.7950461,
+          41.6994988
+        ],
+        [
+          44.7949452,
+          41.699588
+        ],
+        [
+          44.7949901,
+          41.6996182
+        ],
+        [
+          44.7949761,
+          41.6996309
+        ],
+        [
+          44.7948813,
+          41.6997076
+        ],
+        [
+          44.7947664,
+          41.6996323
+        ],
+        [
+          44.7947551,
+          41.6996411
+        ],
+        [
+          44.794712,
+          41.6996215
+        ],
+        [
+          44.7946344,
+          41.6996972
+        ],
+        [
+          44.794729,
+          41.6997563
+        ],
+        [
+          44.7949206,
+          41.6998818
+        ],
+        [
+          44.7949353,
+          41.6998697
+        ],
+        [
+          44.7949808,
+          41.6998324
+        ],
+        [
+          44.7951261,
+          41.6997128
+        ],
+        [
+          44.7951415,
+          41.6997003
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
+  "photos": [
+    {
+      "file": "photos/conservatoire.webp",
+      "author": "Alex Maisuradze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Conservatoire.JPG",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/conservatoire-curated.webp",
+      "author": "Varsika",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_State_Conservatoire_F7780005.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.scantbilisi.ge/en/objects/314/Tbilisi-State-Conservatoire",
+  "googlePlaceId": "ChIJy2qBWd0MREARgFvvvXjG3_c",
+  "googlePlaceIdSource": "https://www.waze.com/live-map/directions/ge/tbilisi/tbilisi/tbilisi-state-conservatoire?to=place.ChIJy2qBWd0MREARgFvvvXjG3_c"
+}

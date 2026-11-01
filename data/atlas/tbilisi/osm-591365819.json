@@ -1,0 +1,79 @@
+{
+  "id": "osm-591365819",
+  "osmId": "way/591365819",
+  "names": {
+    "ru": "Церковь Джварисмама",
+    "en": "Jvaris Mama Church",
+    "ka": "ჯვარის მამის ეკლესია",
+    "uk": "Церква Джварісмама"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 41",
+    "en": "41 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 41",
+    "uk": "вулиця Коте Абхазі, 41"
+  },
+  "descriptions": {
+    "ru": "Купольная церковь в Старом Тбилиси с кирпичными крестами на фасаде.",
+    "en": "A domed church in Old Tbilisi with brick crosses on its façade.",
+    "ka": "ძველი თბილისის გუმბათოვანი ეკლესია, რომლის ფასადსაც აგურის ჯვრები ამკობს.",
+    "uk": "Купольна церква у Старому Тбілісі з цегляними хрестами на фасаді."
+  },
+  "histories": {
+    "ru": "Существующую церковь относят к XVI веку или рубежу XVI и XVII веков. В 1989 году она вновь открылась после советского периода.",
+    "en": "The existing church is dated to the 16th century or the turn of the 17th century. It reopened in 1989 after the Soviet period.",
+    "ka": "არსებულ ეკლესიას XVI საუკუნით ან XVI–XVII საუკუნეების მიჯნით ათარიღებენ. საბჭოთა პერიოდის შემდეგ იგი 1989 წელს კვლავ გაიხსნა.",
+    "uk": "Наявну церкву датують XVI століттям або межею XVI і XVII століть. У 1989 році її знову відкрили після радянського періоду."
+  },
+  "minYear": 1501,
+  "maxYear": 1700,
+  "yearLabelId": "century-16-17",
+  "styleId": "medieval-georgian-architecture",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.806491,
+    41.690664
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806365,
+          41.690692
+        ],
+        [
+          44.806382,
+          41.690609
+        ],
+        [
+          44.806617,
+          41.690636
+        ],
+        [
+          44.8066,
+          41.69072
+        ],
+        [
+          44.806365,
+          41.690692
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название совпадает с источником",
+  "photos": [
+    {
+      "file": "photos/osm-591365819-kober.webp",
+      "author": "Kober",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
+      "source": "https://commons.wikimedia.org/wiki/File:Jvris-mama_Church_in_Tbilisi.JPG",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://georgia.travel/jvaris-mama",
+  "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/503668/1/IerusalimisJvrisMonastrisMiwatmflobelobaSaqartveloshi_2007.pdf"
+}

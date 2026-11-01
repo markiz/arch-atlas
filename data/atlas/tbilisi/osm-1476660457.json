@@ -1,0 +1,64 @@
+{
+  "id": "osm-1476660457",
+  "osmId": "way/1476660457",
+  "names": {
+    "ru": "Оранжерея",
+    "en": "Greenhouse",
+    "ka": "სათბური",
+    "uk": "Оранжерея"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8074426,
+    41.6870413
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8074038,
+          41.6869952
+        ],
+        [
+          44.8075071,
+          41.687016
+        ],
+        [
+          44.8074813,
+          41.6870875
+        ],
+        [
+          44.807378,
+          41.6870666
+        ],
+        [
+          44.8074038,
+          41.6869952
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/1476660457",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628198"
+}

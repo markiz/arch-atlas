@@ -1,0 +1,84 @@
+{
+  "id": "osm-549425991",
+  "osmId": "way/549425991",
+  "names": {
+    "ru": "Церковь Святого Георгия в Клдисубани",
+    "en": "Kldisubani Church of Saint George",
+    "ka": "კლდისუბნის წმინდა გიორგის ეკლესია",
+    "uk": "Церква Святого Георгія в Клдисубані"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "переулок Бетлеми II, 9",
+    "en": "9 Betlemi II Lane",
+    "ka": "ბეთლემის II ჩიხი 9",
+    "uk": "провулок Бетлемі II, 9"
+  },
+  "descriptions": {
+    "ru": "Церковь представляет собой зальную постройку из кирпича и речного камня. Она примыкает к скальному склону и выделяется кирпичным орнаментом фасада.",
+    "en": "The church is a hall building of brick and river stone. It adjoins a rocky slope and has decorative brickwork on its façades.",
+    "ka": "ეკლესია დარბაზული ნაგებობაა, ნაშენი აგურითა და რიყის ქვით. იგი კლდოვან ფერდობს ებჯინება, ფასადები კი აგურის წყობის დეკორით გამოირჩევა.",
+    "uk": "Церква є зальною спорудою з цегли та річкового каменю. Вона прилягає до скелястого схилу, а її фасади оздоблено цегляним орнаментом."
+  },
+  "histories": {
+    "ru": "Церковь находится в историческом квартале Клдисубани. Источники расходятся в датировке: реестр памятников указывает 1700 год, а Грузинская энциклопедия — 1753 год.",
+    "en": "The church stands in the historic Kldisubani neighbourhood. Sources differ on its date: the heritage registry gives 1700, while the Georgian Encyclopedia gives 1753.",
+    "ka": "ეკლესია ისტორიულ კლდისუბანში მდებარეობს. წყაროებში თარიღი განსხვავდება: მემკვიდრეობის რეესტრი 1700 წელს მიუთითებს, ქართული ენციკლოპედია კი — 1753 წელს.",
+    "uk": "Церква розташована в історичному кварталі Клдісубані. Джерела розходяться в датуванні: реєстр пам’яток вказує 1700 рік, а Грузинська енциклопедія — 1753-й."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8066494,
+    41.688715
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806547,
+          41.688736
+        ],
+        [
+          44.806548,
+          41.688694
+        ],
+        [
+          44.80655,
+          41.688654
+        ],
+        [
+          44.806754,
+          41.68866
+        ],
+        [
+          44.80675,
+          41.688742
+        ],
+        [
+          44.806547,
+          41.688736
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; сопоставлен с границей реестра, требует редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-549425991-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75003_FA71693B-51C0-4A57-A198-CB4B6E9F0FA2",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626",
+  "otherSource": "https://georgianencyclopedia.ge/ka/form/27732"
+}

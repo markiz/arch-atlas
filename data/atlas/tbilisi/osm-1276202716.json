@@ -1,0 +1,96 @@
+{
+  "id": "osm-1276202716",
+  "osmId": "way/1276202716",
+  "names": {
+    "ru": "Лаборатория",
+    "en": "Laboratory",
+    "ka": "ლაბორატორია",
+    "uk": "Лабораторія"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8092177,
+    41.6871297
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8091953,
+          41.6872046
+        ],
+        [
+          44.8091855,
+          41.6871796
+        ],
+        [
+          44.809167,
+          41.687184
+        ],
+        [
+          44.809156,
+          41.6871561
+        ],
+        [
+          44.8091746,
+          41.6871519
+        ],
+        [
+          44.8091572,
+          41.6871076
+        ],
+        [
+          44.8092695,
+          41.6870855
+        ],
+        [
+          44.8092695,
+          41.6871685
+        ],
+        [
+          44.8092053,
+          41.6871996
+        ],
+        [
+          44.8091953,
+          41.6872046
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1276202716-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3640",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75032_6D176073-7FC3-4F51-BCF2-9CADAF75F11C",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1276202716",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628170",
+  "googlePlaceId": "ChIJUbOzfPYMREAR8yh5gMYVBEE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6871297%2C44.8092177&query_place_id=ChIJUbOzfPYMREAR8yh5gMYVBEE"
+}

@@ -1,0 +1,111 @@
+{
+  "id": "osm-35268996",
+  "osmId": "way/35268996",
+  "names": {
+    "ru": "Бывшее здание Тбилисской духовной семинарии",
+    "en": "Former Tbilisi Theological Seminary building",
+    "ka": "საქართველოს სახელმწიფო მუზეუმი",
+    "uk": "Колишня будівля Тбіліської духовної семінарії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Александра Пушкина, 2-4",
+    "en": "2-4 Alexander Pushkin Street",
+    "ka": "ალექსანდრე პუშკინის ქუჩა 2-4",
+    "uk": "вулиця Олександра Пушкіна, 2-4"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1838,
+  "maxYear": 1838,
+  "yearLabelId": "year-1838",
+  "styleId": "neoclassicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8021691,
+    41.6954499
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8018176,
+          41.6954805
+        ],
+        [
+          44.8019681,
+          41.6952882
+        ],
+        [
+          44.802052,
+          41.6952682
+        ],
+        [
+          44.8021378,
+          41.6957568
+        ],
+        [
+          44.8020714,
+          41.6957661
+        ],
+        [
+          44.80208,
+          41.6958879
+        ],
+        [
+          44.8021156,
+          41.6958835
+        ],
+        [
+          44.8023356,
+          41.6958562
+        ],
+        [
+          44.8021881,
+          41.6951188
+        ],
+        [
+          44.8021495,
+          41.6950778
+        ],
+        [
+          44.8020628,
+          41.6950355
+        ],
+        [
+          44.8019098,
+          41.6950502
+        ],
+        [
+          44.8016585,
+          41.6954193
+        ],
+        [
+          44.8018176,
+          41.6954805
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-35268996-g1.webp",
+      "author": "-Born Londoner",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Museum_-_National.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/35268996",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650001",
+  "googlePlaceId": "ChIJ6w-TieUMREARPjxJo_PMdT0",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6954499%2C44.8021691&query_place_id=ChIJ6w-TieUMREARPjxJo_PMdT0"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "osm-680607569",
+  "osmId": "way/680607569",
+  "names": {
+    "ru": "Музей истории грузинских евреев и грузино-еврейских отношений имени Давида Баазова",
+    "en": "David Baazov’s Museum of History of Georgian Jews and Georgian-Jewish Relations",
+    "ka": "დავით ბააზოვის სახელობის საქართველოს ებრაელთა და ქართულ-ებრაულ ურთიერთობათა ისტორიის მუზეუმი",
+    "uk": "Музей історії грузинських євреїв і грузинсько-єврейських відносин імені Давида Баазова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Антона Католикоса, 3",
+    "en": "3 Anton Katalikosi Street",
+    "ka": "ანტონ კათალიკოსის ქუჩა 3",
+    "uk": "вулиця Антона Католикоса, 3"
+  },
+  "descriptions": {
+    "ru": "Музей занимает кирпичное двухэтажное здание с центральным куполом на улице Антона Католикоса, 3.",
+    "en": "The museum occupies a two-storey brick building with a central dome at 3 Anton Katalikosi Street.",
+    "ka": "მუზეუმი განთავსებულია ანტონ კათალიკოსის ქუჩა 3-ზე მდებარე ორსართულიან აგურის შენობაში, რომელსაც ცენტრალური გუმბათი აქვს.",
+    "uk": "Музей розташований у двоповерховій цегляній будівлі з центральним куполом на вулиці Антона Католикоса, 3."
+  },
+  "histories": {
+    "ru": "Музей истории евреев Грузии основан в 1932 году. Купольное здание музея стоит на месте более ранней синагоги; дата постройки нынешнего здания требует уточнения.",
+    "en": "The Museum of the History of Georgian Jews was founded in 1932. Its domed building stands on the site of an earlier synagogue; the date of the present building needs further research.",
+    "ka": "საქართველოს ებრაელთა ისტორიის მუზეუმი 1932 წელს დაარსდა. მუზეუმის გუმბათოვანი შენობა ადრინდელი სინაგოგის ადგილზე დგას; დღევანდელი შენობის თარიღი დაზუსტებას საჭიროებს.",
+    "uk": "Музей історії євреїв Грузії засновано 1932 року. Купольна будівля музею стоїть на місці давнішої синагоги; дата спорудження нинішньої будівлі потребує уточнення."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8044438,
+    41.691847
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.804263,
+          41.6919
+        ],
+        [
+          44.804402,
+          41.691794
+        ],
+        [
+          44.804416,
+          41.691769
+        ],
+        [
+          44.804564,
+          41.691783
+        ],
+        [
+          44.804544,
+          41.691926
+        ],
+        [
+          44.804419,
+          41.692015
+        ],
+        [
+          44.804263,
+          41.6919
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-680607569-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3723",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=76350_5F0ADECE-D9DD-43D2-A45C-C06F3CDE5177",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://georgia.travel/david-baazovs-museum-of-history-of-georgian-jews-and-georgian-jewish-relations",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3723"
+}

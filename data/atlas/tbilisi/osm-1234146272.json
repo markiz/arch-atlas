@@ -1,0 +1,95 @@
+{
+  "id": "osm-1234146272",
+  "osmId": "way/1234146272",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Екатерины Габашвили, 10",
+    "en": "10 Ekaterine Gabashvili Street",
+    "ka": "ეკატერინე გაბაშვილის ქუჩა 10",
+    "uk": "вулиця Катерини Габашвілі, 10"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7901152,
+    41.7027044
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7899961,
+          41.7026556
+        ],
+        [
+          44.7901004,
+          41.7027531
+        ],
+        [
+          44.7902665,
+          41.702654
+        ],
+        [
+          44.7903307,
+          41.7026157
+        ],
+        [
+          44.7902894,
+          41.7025771
+        ],
+        [
+          44.7901959,
+          41.7026328
+        ],
+        [
+          44.7901329,
+          41.702574
+        ],
+        [
+          44.7899961,
+          41.7026556
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1234146272-g1.webp",
+      "author": "ARTISAN",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98._%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98_%E1%83%94%E1%83%99%E1%83%90%E1%83%A2%E1%83%94%E1%83%A0%E1%83%98%E1%83%9C%E1%83%94%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_10.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1234146272-depicts.webp",
+      "author": "ARTISAN",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98._%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98_%E1%83%94%E1%83%99%E1%83%90%E1%83%A2%E1%83%94%E1%83%A0%E1%83%98%E1%83%9C%E1%83%94%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_10_(1).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1234146272",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628697",
+  "googlePlaceId": "ChIJycPoZ9sMREARPFLZwEh1bfY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=10%20Ekaterine%20Gabashvili%20St&query_place_id=ChIJycPoZ9sMREARPFLZwEh1bfY"
+}

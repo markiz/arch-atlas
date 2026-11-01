@@ -1,0 +1,111 @@
+{
+  "id": "osm-168100739",
+  "osmId": "way/168100739",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 28",
+    "en": "28 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 28",
+    "uk": "проспект Шота Руставелі, 28"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.795189,
+    41.7007148
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7952374,
+          41.7005295
+        ],
+        [
+          44.7954324,
+          41.7006632
+        ],
+        [
+          44.7954077,
+          41.7006829
+        ],
+        [
+          44.7953865,
+          41.7007001
+        ],
+        [
+          44.7950973,
+          41.7009356
+        ],
+        [
+          44.7946923,
+          41.7006579
+        ],
+        [
+          44.7948983,
+          41.7004904
+        ],
+        [
+          44.7949825,
+          41.7005481
+        ],
+        [
+          44.7948657,
+          41.7006431
+        ],
+        [
+          44.7949915,
+          41.7007294
+        ],
+        [
+          44.795159,
+          41.7005933
+        ],
+        [
+          44.7952374,
+          41.7005295
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-168100739-g1.webp",
+      "author": "Daibo Taku",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi,_Tbilisi,_Georgia_-_panoramio_(74).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-168100739-depicts.webp",
+      "author": "Mehman Ibragimov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rustaveli_26,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/168100739",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650461",
+  "googlePlaceId": "ChIJ2xVyDt0MREARydw0x4mnApk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=28%20Shota%20Rustaveli%20Ave&query_place_id=ChIJ2xVyDt0MREARydw0x4mnApk"
+}

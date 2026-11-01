@@ -1,0 +1,171 @@
+{
+  "id": "osm-246782186",
+  "osmId": "way/246782186",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 2-8",
+    "en": "2-8 David Aghmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 2-8",
+    "uk": "проспект Давида Агмашенебелі, 2-8"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1936,
+  "maxYear": 1936,
+  "yearLabelId": "year-1936",
+  "styleId": "soviet-neoclassicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8039021,
+    41.7029695
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.804249,
+          41.7029591
+        ],
+        [
+          44.8042172,
+          41.7029119
+        ],
+        [
+          44.8042338,
+          41.7029048
+        ],
+        [
+          44.8042447,
+          41.7029001
+        ],
+        [
+          44.804267,
+          41.7028906
+        ],
+        [
+          44.8042552,
+          41.7028729
+        ],
+        [
+          44.8042364,
+          41.7028443
+        ],
+        [
+          44.8042329,
+          41.702839
+        ],
+        [
+          44.8042191,
+          41.7028182
+        ],
+        [
+          44.8042079,
+          41.7028012
+        ],
+        [
+          44.8041832,
+          41.7028098
+        ],
+        [
+          44.8041828,
+          41.7028099
+        ],
+        [
+          44.8041544,
+          41.7028199
+        ],
+        [
+          44.8041227,
+          41.7027727
+        ],
+        [
+          44.8039933,
+          41.7028201
+        ],
+        [
+          44.8037619,
+          41.702905
+        ],
+        [
+          44.8036252,
+          41.7029516
+        ],
+        [
+          44.8035486,
+          41.70298
+        ],
+        [
+          44.803579,
+          41.7030256
+        ],
+        [
+          44.8036554,
+          41.7029981
+        ],
+        [
+          44.8036772,
+          41.7030302
+        ],
+        [
+          44.8037138,
+          41.703019
+        ],
+        [
+          44.803783,
+          41.7031012
+        ],
+        [
+          44.8038151,
+          41.7030891
+        ],
+        [
+          44.8038517,
+          41.7031517
+        ],
+        [
+          44.8039128,
+          41.7031221
+        ],
+        [
+          44.804249,
+          41.7029591
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-246782186-g1.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_8.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-246782186-depicts.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_8_(2).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/246782186",
+  "otherSource": "https://www.wikidata.org/wiki/Q42635507",
+  "googlePlaceId": "ChIJqRAqe-AMREARhSTMMLGOvdY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=2/8%20Davit%20Aghmashenebeli%20Ave&query_place_id=ChIJqRAqe-AMREARhSTMMLGOvdY"
+}

@@ -1,0 +1,180 @@
+{
+  "id": "sioni",
+  "osmId": "way/77895547",
+  "names": {
+    "ru": "Сионский собор",
+    "en": "Tbilisi Sioni Cathedral",
+    "ka": "სიონის ღვთისმშობლის მიძინების ტაძარი",
+    "uk": "Сионский собор"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Сиони, 4",
+    "en": "4 Sioni Street",
+    "ka": "სიონის ქუჩა 4",
+    "uk": "вулиця Сіоні, 4"
+  },
+  "descriptions": {
+    "ru": "Исторический кафедральный собор стоит на правом берегу Куры в старой части города.",
+    "en": "The historic cathedral stands on the right bank of the Kura in the old part of the city.",
+    "ka": "ისტორიული საკათედრო ტაძარი მტკვრის მარჯვენა ნაპირზე, ქალაქის ძველ ნაწილში დგას.",
+    "uk": "Історичний кафедральний собор стоїть на правому березі Кури в старій частині міста."
+  },
+  "histories": {
+    "ru": "Первый храм на этом месте относят к VI–VII векам. Он неоднократно разрушался и восстанавливался; существующее здание основано на перестройке XIII века с последующими изменениями.",
+    "en": "The first church on this site is dated to the 6th–7th centuries. It was repeatedly destroyed and restored; the present building is based on a 13th-century reconstruction and later alterations.",
+    "ka": "ამ ადგილზე პირველი ტაძარი VI–VII საუკუნეებით თარიღდება. ის არაერთხელ დაინგრა და აღადგინეს; დღევანდელი შენობა XIII საუკუნის გადაკეთებასა და შემდგომ ცვლილებებს ეფუძნება.",
+    "uk": "Перший храм на цьому місці датують VI–VII століттями. Його неодноразово руйнували й відновлювали; нинішня будівля спирається на перебудову XIII століття та пізніші зміни."
+  },
+  "minYear": 1201,
+  "maxYear": 1300,
+  "yearLabelId": "century-13-later-alterations",
+  "styleId": "medieval-georgian-architecture",
+  "architectIds": [],
+  "districtId": "old-tbilisi",
+  "coordinates": [
+    44.8075,
+    41.6914
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.807514,
+          41.691461
+        ],
+        [
+          44.807646,
+          41.691482
+        ],
+        [
+          44.80769,
+          41.69146
+        ],
+        [
+          44.8077,
+          41.691438
+        ],
+        [
+          44.80774,
+          41.691408
+        ],
+        [
+          44.807745,
+          41.691366
+        ],
+        [
+          44.807723,
+          41.691334
+        ],
+        [
+          44.807736,
+          41.691294
+        ],
+        [
+          44.807673,
+          41.691258
+        ],
+        [
+          44.807584,
+          41.691247
+        ],
+        [
+          44.8076,
+          41.691177
+        ],
+        [
+          44.807528,
+          41.691168
+        ],
+        [
+          44.807488,
+          41.691162
+        ],
+        [
+          44.807482,
+          41.691185
+        ],
+        [
+          44.807434,
+          41.691178
+        ],
+        [
+          44.807423,
+          41.691218
+        ],
+        [
+          44.807389,
+          41.691213
+        ],
+        [
+          44.807375,
+          41.691265
+        ],
+        [
+          44.807335,
+          41.691259
+        ],
+        [
+          44.807308,
+          41.691363
+        ],
+        [
+          44.807369,
+          41.691372
+        ],
+        [
+          44.807355,
+          41.691425
+        ],
+        [
+          44.807401,
+          41.691432
+        ],
+        [
+          44.807392,
+          41.691464
+        ],
+        [
+          44.807423,
+          41.691469
+        ],
+        [
+          44.807446,
+          41.691479
+        ],
+        [
+          44.807506,
+          41.691489
+        ],
+        [
+          44.807514,
+          41.691461
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "photos": [
+    {
+      "file": "photos/sioni.webp",
+      "author": "Supanut Arunoprayote",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Sioni_Cathedral_09.23.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/sioni-curated.webp",
+      "author": "Ken Zuk",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Sioni_Cathedral_in_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://georgia.travel/sioni-cathedral",
+  "googlePlaceId": "ChIJPzumeQANREARbWArJ_IYiNY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Sioni%20Church&query_place_id=ChIJPzumeQANREARbWArJ_IYiNY"
+}

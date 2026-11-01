@@ -1,0 +1,119 @@
+{
+  "id": "osm-78498522",
+  "osmId": "way/78498522",
+  "names": {
+    "ru": "Бывший отель «Лондон»",
+    "en": "Former Hotel London",
+    "ka": "ყოფილი სასტუმრო ლონდრა",
+    "uk": "Колишній готель «Лондон»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8019144,
+    41.7001848
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8015487,
+          41.7003221
+        ],
+        [
+          44.8017998,
+          41.700071
+        ],
+        [
+          44.8018774,
+          41.6999934
+        ],
+        [
+          44.8019577,
+          41.6999931
+        ],
+        [
+          44.8021175,
+          41.7001598
+        ],
+        [
+          44.8022491,
+          41.7002898
+        ],
+        [
+          44.8022437,
+          41.7002922
+        ],
+        [
+          44.8021235,
+          41.7003579
+        ],
+        [
+          44.802049,
+          41.7002877
+        ],
+        [
+          44.8020944,
+          41.7002633
+        ],
+        [
+          44.8020412,
+          41.7002099
+        ],
+        [
+          44.8019779,
+          41.7002546
+        ],
+        [
+          44.8018733,
+          41.7002516
+        ],
+        [
+          44.8016674,
+          41.7003942
+        ],
+        [
+          44.8016091,
+          41.7003552
+        ],
+        [
+          44.8015487,
+          41.7003221
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-78498522-g1.webp",
+      "author": "David1010",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Giorgi_Atoneli_street_31_-_Khidi_street_2_(3).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/78498522",
+  "otherSource": "https://www.wikidata.org/wiki/Q42620537",
+  "googlePlaceId": "ChIJq0pLhegNREARnBCkG_hBWI4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Hotel%20London&query_place_id=ChIJq0pLhegNREARnBCkG_hBWI4"
+}

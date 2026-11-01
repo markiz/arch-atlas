@@ -1,0 +1,91 @@
+{
+  "id": "osm-56677926",
+  "osmId": "way/56677926",
+  "names": {
+    "ru": "Кинотеатр \"Руставели\"",
+    "en": "Rustaveli Cinema",
+    "ka": "კინოთეატრი \"რუსთაველი\"",
+    "uk": "Кінотеатр \"Руставелі\""
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Руставели, 5",
+    "en": "5 Rustaveli Avenue",
+    "ka": "რუსთაველის გამზირი 5",
+    "uk": "проспект Руставелі, 5"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1939,
+  "maxYear": 1939,
+  "yearLabelId": "year-1939",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7998873,
+    41.6968001
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7995933,
+          41.6968777
+        ],
+        [
+          44.7999789,
+          41.6970225
+        ],
+        [
+          44.8001835,
+          41.6967224
+        ],
+        [
+          44.7997962,
+          41.6965667
+        ],
+        [
+          44.799721,
+          41.6966819
+        ],
+        [
+          44.7997072,
+          41.6967031
+        ],
+        [
+          44.7995933,
+          41.6968777
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-56677926-g1.webp",
+      "author": "Daibo Taku",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi,_Tbilisi,_Georgia_-_panoramio_(264).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-56677926-g2.webp",
+      "author": "Daibo Taku",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Dzveli_Tbilisi,_Tbilisi,_Georgia_-_panoramio_(267).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/56677926",
+  "otherSource": "https://www.wikidata.org/wiki/Q3652403",
+  "googlePlaceId": "ChIJKxalBOYMREARoXwT5WMyJ-E",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Rustaveli%20National%20Theatre&query_place_id=ChIJKxalBOYMREARoXwT5WMyJ-E"
+}

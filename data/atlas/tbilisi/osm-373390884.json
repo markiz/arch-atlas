@@ -1,0 +1,84 @@
+{
+  "id": "osm-373390884",
+  "osmId": "way/373390884",
+  "names": {
+    "ru": "Сурб Геворг (церковь Святого Георгия)",
+    "en": "Surb Gevorg Cathedral",
+    "ka": "სურბ გევორქის საკათედრო ტაძარი",
+    "uk": "Сурб Геворг (церква Святого Георгія)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Самгебро, 5",
+    "en": "5 Samghebro Street",
+    "ka": "სამღებროს ქუჩა 5",
+    "uk": "вулиця Самгебро, 5"
+  },
+  "descriptions": {
+    "ru": "Сурб Геворг — действующий армянский собор в старом Тбилиси и кафедральный храм епархии Армянской апостольской церкви в Грузии.",
+    "en": "Surb Gevorg is an active Armenian cathedral in Old Tbilisi and the diocesan church of the Armenian Apostolic Diocese in Georgia.",
+    "ka": "სურბ გევორქი ძველი თბილისის მოქმედი სომხური საკათედრო ტაძარი და საქართველოში სომხური სამოციქულო ეკლესიის ეპარქიის კათედრაა.",
+    "uk": "Сурб Геворг — чинний вірменський собор у Старому Тбілісі та кафедральний храм єпархії Вірменської апостольської церкви в Грузії."
+  },
+  "histories": {
+    "ru": "Сурб Геворг — кафедральный храм Армянской апостольской церкви в Грузии. Источники расходятся в датировке основания и истории перестроек.",
+    "en": "Surb Gevorg is the cathedral of the Armenian Apostolic Church in Georgia. Sources differ on its foundation date and subsequent rebuilding.",
+    "ka": "სურბ გევორგი საქართველოში სომხური სამოციქულო ეკლესიის საკათედრო ტაძარია. წყაროები განსხვავდება მისი დაარსებისა და შემდგომი გადაკეთებების დათარიღებისას.",
+    "uk": "Сурб Геворг — кафедральний храм Вірменської апостольської церкви в Грузії. Джерела розходяться в датуванні заснування та подальших перебудов."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.808887,
+    41.689177
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.808807,
+          41.689272
+        ],
+        [
+          44.808743,
+          41.689145
+        ],
+        [
+          44.808883,
+          41.689105
+        ],
+        [
+          44.808967,
+          41.689082
+        ],
+        [
+          44.809031,
+          41.689209
+        ],
+        [
+          44.808807,
+          41.689272
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; название совпадает с источником",
+  "photos": [
+    {
+      "file": "photos/osm-373390884-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3757",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74697_ECC61046-716A-4789-A9F5-AC43F247B9CA",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://armenianchurch.ge/en/churches/dejstvuyushchie-tserkvi-i-chasovni-2/existing-churches-and-chapels/surb-gevorg-leader-church",
+  "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/315309/1/Tbilisisa_Da_Mcxeta_Mtianetis_Kulturis_Dzeglebi.pdf"
+}

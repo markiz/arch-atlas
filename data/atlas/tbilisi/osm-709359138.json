@@ -1,0 +1,73 @@
+{
+  "id": "osm-709359138",
+  "osmId": "way/709359138",
+  "names": {
+    "ru": "Колокольня Сиони",
+    "en": "Sioni Bell Tower",
+    "ka": "სიონის სამრეკლო",
+    "uk": "Дзвіниця Сіоні"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "neoclassicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8071148,
+    41.6912646
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8070389,
+          41.6912892
+        ],
+        [
+          44.8070884,
+          41.691206
+        ],
+        [
+          44.8071899,
+          41.69124
+        ],
+        [
+          44.8071433,
+          41.6913232
+        ],
+        [
+          44.8070389,
+          41.6912892
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-709359138-g1.webp",
+      "author": "Eka Samkharadze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Neoclassical_style_bell_tower_of_Sioni_Cathedral,_1812.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/709359138",
+  "otherSource": "https://www.wikidata.org/wiki/Q42651587"
+}

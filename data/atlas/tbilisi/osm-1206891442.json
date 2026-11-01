@@ -1,0 +1,159 @@
+{
+  "id": "osm-1206891442",
+  "osmId": "way/1206891442",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 26",
+    "en": "26 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 26",
+    "uk": "вулиця Ладо Асატіані, 26"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8026583,
+    41.6894899
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8026904,
+          41.6897025
+        ],
+        [
+          44.8027089,
+          41.6894564
+        ],
+        [
+          44.8027156,
+          41.6893673
+        ],
+        [
+          44.8026562,
+          41.6893649
+        ],
+        [
+          44.8026546,
+          41.6893491
+        ],
+        [
+          44.8027131,
+          41.6893497
+        ],
+        [
+          44.8027156,
+          41.6893248
+        ],
+        [
+          44.8026115,
+          41.6893236
+        ],
+        [
+          44.8026099,
+          41.6892708
+        ],
+        [
+          44.8025391,
+          41.6892696
+        ],
+        [
+          44.8025391,
+          41.6892853
+        ],
+        [
+          44.8024765,
+          41.6892841
+        ],
+        [
+          44.8024725,
+          41.6893916
+        ],
+        [
+          44.8026115,
+          41.6893934
+        ],
+        [
+          44.8026115,
+          41.6894548
+        ],
+        [
+          44.8026088,
+          41.6895339
+        ],
+        [
+          44.802535,
+          41.6895239
+        ],
+        [
+          44.8025339,
+          41.6895312
+        ],
+        [
+          44.8024975,
+          41.6895269
+        ],
+        [
+          44.8024668,
+          41.6895234
+        ],
+        [
+          44.8024546,
+          41.6896691
+        ],
+        [
+          44.8024831,
+          41.6896731
+        ],
+        [
+          44.8026636,
+          41.6896987
+        ],
+        [
+          44.8026904,
+          41.6897025
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891442-g1.webp",
+      "author": "UlRicH le PapilLoN",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_(3231502008).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1206891442-category.webp",
+      "author": "Yuri Samoylov",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2024-04-23_Dilapidated_stairwell_in_26_Lado_Asatiani_Street.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891442",
+  "otherSource": "https://www.wikidata.org/wiki/Q42622996",
+  "googlePlaceId": "EiYyNiBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBoqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=26%20Lado%20Asatiani%20St&query_place_id=EiYyNiBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdEPIRq6fmvpEBoqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+}

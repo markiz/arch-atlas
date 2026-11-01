@@ -1,0 +1,163 @@
+{
+  "id": "osm-65337332",
+  "osmId": "way/65337332",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 1",
+    "en": "1 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 1",
+    "uk": "проспект Шота Руставелі, 1"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1939,
+  "maxYear": 1939,
+  "yearLabelId": "year-1939",
+  "styleId": "soviet-neoclassicism",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8008317,
+    41.6949057
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8012565,
+          41.694419
+        ],
+        [
+          44.8012368,
+          41.6944117
+        ],
+        [
+          44.8012048,
+          41.6943997
+        ],
+        [
+          44.8011063,
+          41.6943629
+        ],
+        [
+          44.8009122,
+          41.6946452
+        ],
+        [
+          44.8008997,
+          41.6946633
+        ],
+        [
+          44.8007877,
+          41.6948262
+        ],
+        [
+          44.8006783,
+          41.6949852
+        ],
+        [
+          44.8005817,
+          41.6951258
+        ],
+        [
+          44.8005697,
+          41.6951432
+        ],
+        [
+          44.8005674,
+          41.6951465
+        ],
+        [
+          44.8005539,
+          41.6951662
+        ],
+        [
+          44.8004766,
+          41.6952786
+        ],
+        [
+          44.8004605,
+          41.695313
+        ],
+        [
+          44.8004583,
+          41.6953459
+        ],
+        [
+          44.8004712,
+          41.6953795
+        ],
+        [
+          44.8004927,
+          41.6954068
+        ],
+        [
+          44.8005259,
+          41.6954308
+        ],
+        [
+          44.8005881,
+          41.6954529
+        ],
+        [
+          44.8006249,
+          41.6954659
+        ],
+        [
+          44.8006568,
+          41.6954773
+        ],
+        [
+          44.8007319,
+          41.6953675
+        ],
+        [
+          44.8006974,
+          41.6953548
+        ],
+        [
+          44.8006428,
+          41.6953347
+        ],
+        [
+          44.8007425,
+          41.695186
+        ],
+        [
+          44.8010911,
+          41.6946658
+        ],
+        [
+          44.8012565,
+          41.694419
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-65337332-g1.webp",
+      "author": "Annie99o99",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Rustaveliave1.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/65337332",
+  "otherSource": "https://www.wikidata.org/wiki/Q42650145",
+  "googlePlaceId": "ChIJWVAOaO8MREARWtnOPW1o1mM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=1%20Shota%20Rustaveli%20Ave&query_place_id=ChIJWVAOaO8MREARWtnOPW1o1mM"
+}

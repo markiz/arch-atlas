@@ -1,0 +1,78 @@
+{
+  "id": "osm-1268032298",
+  "osmId": "way/1268032298",
+  "names": {
+    "ru": "Башня",
+    "en": "Tower",
+    "ka": "კოშკი",
+    "uk": "Вежа"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8081958,
+    41.6874461
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8082214,
+          41.6874788
+        ],
+        [
+          44.8082263,
+          41.6874655
+        ],
+        [
+          44.8082402,
+          41.687428
+        ],
+        [
+          44.8081702,
+          41.6874135
+        ],
+        [
+          44.8081514,
+          41.6874643
+        ],
+        [
+          44.8082214,
+          41.6874788
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1268032298-1.webp",
+      "author": "khalampre",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Can_you_find_the_face.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP",
+      "description": "западная оборонительная башня Ботанического сада; свободная лицензия"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1268032298",
+  "otherSource": "https://www.wikidata.org/wiki/Q42628249"
+}

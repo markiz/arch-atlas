@@ -1,0 +1,131 @@
+{
+  "id": "osm-78067045",
+  "osmId": "way/78067045",
+  "names": {
+    "ru": "Здание театра Марджанишвили",
+    "en": "Marjanishvili Theatre building",
+    "ka": "მარჯანიშვილის თეატრის შენობა",
+    "uk": "Будівля театра Марджанішвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Марджанишвили, 8",
+    "en": "8 Kote Marjanishvili Street",
+    "ka": "კოტე მარჯანიშვილის ქუჩა 8",
+    "uk": "вулиця Коте Марджанішвілі, 8"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1909,
+  "maxYear": 1909,
+  "yearLabelId": "year-1909",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.79452,
+    41.7089074
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7941429,
+          41.7089588
+        ],
+        [
+          44.7946438,
+          41.7091556
+        ],
+        [
+          44.7946782,
+          41.7091068
+        ],
+        [
+          44.7947107,
+          41.70912
+        ],
+        [
+          44.7948972,
+          41.708856
+        ],
+        [
+          44.7949118,
+          41.7088361
+        ],
+        [
+          44.7949247,
+          41.7088169
+        ],
+        [
+          44.7948358,
+          41.7087817
+        ],
+        [
+          44.7948956,
+          41.7086969
+        ],
+        [
+          44.7948515,
+          41.7086796
+        ],
+        [
+          44.7947219,
+          41.7086286
+        ],
+        [
+          44.7945863,
+          41.7085753
+        ],
+        [
+          44.7945466,
+          41.7085597
+        ],
+        [
+          44.7944869,
+          41.7086444
+        ],
+        [
+          44.7943911,
+          41.7086068
+        ],
+        [
+          44.7943157,
+          41.7087138
+        ],
+        [
+          44.7941429,
+          41.7089588
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/theatre1-curated.webp",
+      "author": "Alsandro",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Mardjanishvili_Theatre_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/theatre2-curated.webp",
+      "author": "Jelger Groeneveld",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Marjanishvili_Theatre_in_Tbilisi,_Georgia,_at_night._2022.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/78067045",
+  "otherSource": "https://www.wikidata.org/wiki/Q42645954",
+  "googlePlaceId": "ChIJM0WRENgMREARODV9JeWQbvI",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Kote%20Marjanishvili%20Theater&query_place_id=ChIJM0WRENgMREARODV9JeWQbvI"
+}

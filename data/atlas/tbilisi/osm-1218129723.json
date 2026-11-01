@@ -1,0 +1,95 @@
+{
+  "id": "osm-1218129723",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Гелатская улица, 11",
+    "en": "11 Gelati Street",
+    "ka": "გელათის ქუჩა 11",
+    "uk": "Гелатська вулиця, 11"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом вытянутого прямоугольного плана с балконом вдоль дворового фасада. Уличный фасад сложен из мелких тёсаных камней с добавлением старого кирпича; сохранились вход под балконом, два окна с коваными решётками и деревянными рамами, а на втором этаже — балкон на круглых колоннах с прямоугольными капителями. Здание в тяжёлом состоянии: углы фасада обрушены, кладка нарушена, штукатурка сбита.",
+    "en": "A two-storey house of an elongated rectangular plan with a balcony along the courtyard façade. The street façade is laid of small dressed stones with the addition of old brick; there survive an entrance beneath the balcony, two windows with wrought-iron grilles and wooden frames, and on the second floor a balcony on round columns with rectangular capitals. The building is in a serious condition: the corners of the façade have collapsed, the masonry is disturbed, the plaster has been knocked off.",
+    "ka": "ორსართულიანი სახლი წაგრძელებული მართკუთხა გეგმით, აივნით ეზოს ფასადის გასწვრივ. ქუჩის ფასადი წვრილი თლილი ქვებითაა ნაწყობი ძველი აგურის დამატებით; შემორჩა შესასვლელი აივნის ქვეშ, ორი ფანჯარა ჭედური ცხაურებითა და ხის ჩარჩოებით, ხოლო მეორე სართულზე — აივანი მრგვალ სვეტებზე მართკუთხა კაპიტელებით. შენობა მძიმე მდგომარეობაშია: ფასადის კუთხეები ჩამონგრეულია, წყობა დარღვეულია, ბათქაში ჩამოცლილია.",
+    "uk": "Двоповерховий будинок видовженого прямокутного плану з балконом уздовж дворового фасаду. Вуличний фасад складено з дрібного тесаного каміння з додаванням старої цегли; збереглися вхід під балконом, два вікна з кованими ґратами й дерев’яними рамами, а на другому поверсі — балкон на круглих колонах із прямокутними капітелями. Будівля в тяжкому стані: кути фасаду обвалені, кладка порушена, тиньк збитий."
+  },
+  "histories": {
+    "ru": "Середина XIX века, городской жилой дом. Реестр отмечает аутентичность планировки и столярки, отсутствие поздних перестроек. Кровля металлическая. Автор не установлен. Дом нуждается в противоаварийных работах.",
+    "en": "Mid-19th century, an urban residential house. The register notes the authenticity of the layout and the joinery and the absence of later reconstructions. The roof is metal. The author is not established. The house is in need of emergency works.",
+    "ka": "XIX საუკუნის შუა ხანები, ქალაქური საცხოვრებელი სახლი. რეესტრი აღნიშნავს დაგეგმარებისა და ხუროობის ავთენტურობას, გვიანი გადაკეთებების არარსებობას. სახურავი ლითონისაა. ავტორი დადგენილი არ არის. სახლი ავარიულ სამუშაოებს საჭიროებს.",
+    "uk": "Середина XIX століття, міський житловий будинок. Реєстр відзначає автентичність планування й столярки, відсутність пізніх перебудов. Покрівля металева. Автор не встановлений. Будинок потребує протиаварійних робіт."
+  },
+  "minYear": 1840,
+  "maxYear": 1869,
+  "yearLabelId": "mid-19th-century",
+  "styleId": "eclecticism",
+  "architectIds": [],
+  "districtId": "avlabari",
+  "coordinates": [
+    44.8121955,
+    41.6937157
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8121151,
+          41.6937286
+        ],
+        [
+          44.8121204,
+          41.69375
+        ],
+        [
+          44.8121266,
+          41.6937706
+        ],
+        [
+          44.8123154,
+          41.6937418
+        ],
+        [
+          44.812293,
+          41.6936646
+        ],
+        [
+          44.812112,
+          41.6936855
+        ],
+        [
+          44.812066,
+          41.6936925
+        ],
+        [
+          44.8120665,
+          41.693736
+        ],
+        [
+          44.8121151,
+          41.6937286
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "IoU с реестровой границей 0.687; реестр 135.3 м², OSM 162.9 м²; перенос центра 1.1 м. IoU 0,687; OSM way/1218129723 — замкнутый контур корпуса, флагов нет; OSM building:levels=2 совпадает.",
+  "photos": [
+    {
+      "file": "photos/osm-1218129723-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3422",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=74192_63B04421-1C8A-4DA7-8F71-B3451A102CCF",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3422",
+  "otherSource": "https://www.openstreetmap.org/way/1218129723"
+}

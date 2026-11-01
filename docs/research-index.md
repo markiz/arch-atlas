@@ -31,11 +31,12 @@
 | Третья очередь | [research-next-200-v3.md](research-next-200-v3.md), [разбор](research-queue-v3.md) | 200 новых кандидатов: 55 добавлено, 116 hold, 29 reject |
 | Сводный HOLD | [research-hold-report.md](research-hold-report.md) | 273 HOLD: причины, примеры, диаграммы, план преодоления |
 | Четвёртая очередь | [research-next-200-v4.md](research-next-200-v4.md), [разбор](research-queue-v4-progress.md) | 200 из 200 разобрано: 96 READY, 97 HOLD, 7 REJECT; все 96 интегрированы |
-| Пятая очередь | [research-next-200-v5.md](research-next-200-v5.md), [разбор](research-queue-v5-progress.md) | 200 из 200: 100 READY, 83 HOLD, 17 REJECT; 20 интегрировано |
+| Пятая очередь | [research-next-200-v5.md](research-next-200-v5.md), [разбор](research-queue-v5-progress.md) | 200 из 200: 100 READY, 83 HOLD, 17 REJECT; 40 интегрировано |
 | Разбор геометрии | [Баня №5, реестр 3756](research-bath-5-geometry.md) | Почему way из очереди — не баня, чем отличаются официальная граница, relation и подземный комплекс |
 
 ## Правило обновления
 
 - Исторический файл не переписывается под новые числа. Если вывод изменился, это фиксируется в регистре, новой волне или отдельной заметке.
-- Актуальные счётчики берутся из `public/atlas/buildings.json`, `public/atlas/manifest.json` и регистра очереди, а не из README или старых research-файлов.
+- Актуальные счётчики берутся из `data/atlas/tbilisi/*.json`, собранного `public/atlas/buildings.json`, `public/atlas/manifest.json` и регистра очереди, а не из README или старых research-файлов.
+- Описания пайплайна и путей к данным в датированных отчётах могут относиться к старой схеме (`data/heritage-extra.json`, отдельные translation-файлы). Актуальная схема — в [research-pipeline.md](research-pipeline.md), [location-data-collection.md](location-data-collection.md) и `data/atlas/`.
 - Ссылки на архивные документы ведут в `docs/archive/`; ссылки на исследовательские снимки остаются в `docs/`, потому что на них опирается очередь.

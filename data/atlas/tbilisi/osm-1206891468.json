@@ -1,0 +1,86 @@
+{
+  "id": "osm-1206891468",
+  "osmId": "way/1206891468",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7994174,
+    41.6894725
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.79934,
+          41.6895318
+        ],
+        [
+          44.7993466,
+          41.6893399
+        ],
+        [
+          44.799426,
+          41.6893405
+        ],
+        [
+          44.7994248,
+          41.6894047
+        ],
+        [
+          44.7994922,
+          41.6894133
+        ],
+        [
+          44.7994935,
+          41.6895371
+        ],
+        [
+          44.7993722,
+          41.6895329
+        ],
+        [
+          44.79934,
+          41.6895318
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891468-1.webp",
+      "author": "Реестр памятников Грузии (автор не указан)",
+      "license": "Не установлена",
+      "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4206",
+      "source": "https://memkvidreoba.gov.ge:60/Files?id=75116_CE1371FE-B28A-4313-AB16-2D9EFA7BFAB9",
+      "modifications": "уменьшен размер, преобразовано в WebP; полное качество не используется",
+      "description": "Фото реестра памятников; автор и лицензия не установлены"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891468",
+  "otherSource": "https://www.wikidata.org/wiki/Q42623569"
+}

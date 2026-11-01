@@ -1,0 +1,107 @@
+{
+  "id": "osm-75312921",
+  "osmId": "way/75312921",
+  "names": {
+    "ru": "Старая Ратуша",
+    "en": "Old Town Hall",
+    "ka": "თბილისის საკრებულო",
+    "uk": "Старая Ратуша"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "площадь Свободы, 2",
+    "en": "2 Freedom Square",
+    "ka": "თავისუფლების მოედანი 2",
+    "uk": "площа Свободи, 2"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "neoclassicism+neo-moorish",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8015391,
+    41.6927341
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8011833,
+          41.6928371
+        ],
+        [
+          44.8018791,
+          41.6928635
+        ],
+        [
+          44.8019074,
+          41.692448
+        ],
+        [
+          44.8017613,
+          41.6924424
+        ],
+        [
+          44.8017569,
+          41.6925073
+        ],
+        [
+          44.801426,
+          41.6924947
+        ],
+        [
+          44.8013849,
+          41.6924931
+        ],
+        [
+          44.8013834,
+          41.6925152
+        ],
+        [
+          44.8013755,
+          41.6926311
+        ],
+        [
+          44.8011978,
+          41.6926243
+        ],
+        [
+          44.8011833,
+          41.6928371
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-75312921-g1.webp",
+      "author": "DAVID HOLT from London, England",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:095_Tavisuplebis_sq_Tbilisi_(1540620781).jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-75312921-g2.webp",
+      "author": "Bärbel Miemietz",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:1979_Tbilisi_City_hall.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/75312921",
+  "otherSource": "https://www.wikidata.org/wiki/Q42639309",
+  "googlePlaceId": "ChIJ9-QMNO4MREARgxVdTkJTQCY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6927341%2C44.8015391&query_place_id=ChIJ9-QMNO4MREARgxVdTkJTQCY"
+}

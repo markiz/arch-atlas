@@ -1,8 +1,9 @@
 import json,urllib.parse,urllib.request,re,html,io,time,pathlib,concurrent.futures
 from PIL import Image
+from atlas_source import next_photo_name, read_cards
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
-extra=json.loads((root/'data/heritage-extra.json').read_text());candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};gals=json.loads((root/'data/gallery-sources.json').read_text());head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
+cards=read_cards();candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
 def fetch(url):
  for attempt in range(2):
   try:
@@ -11,8 +12,8 @@ def fetch(url):
    if attempt==1:raise
    time.sleep(2)
 def clean(x):return html.unescape(re.sub('<[^>]*>','',x or '')).strip()
-def go(b):
- key=b['id'];q=qmap.get(key,'');current=gals.get(key,[])
+def go(card):
+ key=card['id'];q=qmap.get(key,'');current=card.get('photos',[])
  if not q or len(current)>=2:return key,None
  params={'action':'query','format':'json','generator':'search','gsrsearch':f'haswbstatement:P180={q}','gsrnamespace':'6','gsrlimit':'8','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'900'}
  try:
@@ -26,11 +27,11 @@ def go(b):
    if not (author and license and licenseurl and url and source and source not in known):continue
    if not (license.startswith('CC BY') or license in ('CC0','Public domain','Public Domain')):continue
    if len(author)>180:author=author.split('\n')[0][:180]
-   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));name=key+'-depicts.webp';img.convert('RGB').save(root/'public/atlas/photos'/name,'WEBP',quality=73,method=4)
+   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));name=next_photo_name(key,'-depicts');img.convert('RGB').save(root/'public/atlas/photos'/name,'WEBP',quality=73,method=4)
    return key,{'file':'photos/'+name,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception:return key,None
  return key,None
-jobs=[b for b in extra if len(gals.get(b['id'],[]))<2]
+jobs=[card for card in cards.values() if len(card.get('photos',[]))<2]
 found={}
 progress=Progress(len(jobs),'search Commons depicts')
 progress.start()

@@ -1,0 +1,139 @@
+{
+  "id": "osm-1123513785",
+  "osmId": "way/1123513785",
+  "names": {
+    "ru": "Жилой дом",
+    "en": "Residential building",
+    "ka": "საცხოვრებელი სახლი",
+    "uk": "Житловий будинок"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Тамары Абакелия, 3ა",
+    "en": "3ა Tamar Abakelia Street",
+    "ka": "თამარ აბაკელიას ქუჩა 3ა",
+    "uk": "вулиця Тамари Абакелія, 3ა"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleId": "undetermined",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.7920647,
+    41.700671
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7921318,
+          41.7007411
+        ],
+        [
+          44.7921037,
+          41.7007665
+        ],
+        [
+          44.7920896,
+          41.7007673
+        ],
+        [
+          44.7920561,
+          41.700744
+        ],
+        [
+          44.7920587,
+          41.7007333
+        ],
+        [
+          44.792001,
+          41.7006985
+        ],
+        [
+          44.7919935,
+          41.7007049
+        ],
+        [
+          44.791982,
+          41.7006975
+        ],
+        [
+          44.7919702,
+          41.7006899
+        ],
+        [
+          44.7919306,
+          41.7006644
+        ],
+        [
+          44.7919375,
+          41.7006579
+        ],
+        [
+          44.7920148,
+          41.7005934
+        ],
+        [
+          44.7920401,
+          41.7005679
+        ],
+        [
+          44.7921003,
+          41.7006
+        ],
+        [
+          44.792086,
+          41.7006148
+        ],
+        [
+          44.792137,
+          41.7006427
+        ],
+        [
+          44.7922006,
+          41.7006775
+        ],
+        [
+          44.7921478,
+          41.7007263
+        ],
+        [
+          44.7921318,
+          41.7007411
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1123513785-g1.webp",
+      "author": "Santel01",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%99%E1%83%94%E1%83%9A%E1%83%98%E1%83%90_%E1%83%97%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%98%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_3%E1%83%90.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/osm-1123513785-depicts.webp",
+      "author": "Marikuna-115",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%91%E1%83%90%E1%83%99%E1%83%94%E1%83%9A%E1%83%98%E1%83%90_%E1%83%97%E1%83%90%E1%83%9B%E1%83%90%E1%83%A0%E1%83%98%E1%83%A1_3%E1%83%90.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1123513785",
+  "otherSource": "https://www.wikidata.org/wiki/Q42617976",
+  "googlePlaceId": "ChIJj3HS0NwMREARhphoFXmIFck",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=3%20Tamar%20Abakelia%20St&query_place_id=ChIJj3HS0NwMREARhphoFXmIFck"
+}

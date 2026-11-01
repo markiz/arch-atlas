@@ -1,0 +1,107 @@
+{
+  "id": "osm-1206891441",
+  "osmId": "way/1206891441",
+  "names": {
+    "ru": "Дом Корнелия Татищева",
+    "en": "Korneliy Tatishchev's House",
+    "ka": "კორნელი ტატიშჩევის სახლი",
+    "uk": "Будинок Корнелия Татіщева"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Асатиани, 18",
+    "en": "18 Lado Asatiani Street",
+    "ka": "ლადო ასათიანის ქუჩა 18",
+    "uk": "вулиця Ладо Асატіані, 18"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "minYear": 1897,
+  "maxYear": 1897,
+  "yearLabelId": "research-year-3058",
+  "styleId": "neo-moorish",
+  "architectIds": [],
+  "districtId": "tbilisi",
+  "coordinates": [
+    44.8033604,
+    41.6896231
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8034406,
+          41.6897238
+        ],
+        [
+          44.8034741,
+          41.6895535
+        ],
+        [
+          44.8033595,
+          41.6895428
+        ],
+        [
+          44.8033785,
+          41.6894538
+        ],
+        [
+          44.803287,
+          41.6894479
+        ],
+        [
+          44.8032481,
+          41.6897042
+        ],
+        [
+          44.8032674,
+          41.6897062
+        ],
+        [
+          44.8032893,
+          41.6897084
+        ],
+        [
+          44.8032908,
+          41.6896927
+        ],
+        [
+          44.8033979,
+          41.6897022
+        ],
+        [
+          44.8033955,
+          41.6897193
+        ],
+        [
+          44.8034165,
+          41.6897214
+        ],
+        [
+          44.8034406,
+          41.6897238
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
+  "photos": [
+    {
+      "file": "photos/osm-1206891441-g1.webp",
+      "author": "Dor Shabashewitz",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:16_18_Lado_Asatiani_St,_Tbilisi.jpg",
+      "modifications": "уменьшен размер, преобразовано в WebP"
+    }
+  ],
+  "source": "https://www.openstreetmap.org/way/1206891441",
+  "otherSource": "https://www.wikidata.org/wiki/Q42622836",
+  "googlePlaceId": "EiYxOCBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdAPIRq6fmvpEBIqFAoSCb-ZIjHyDERAEQ32J6M2LtA2",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=18%20Lado%20Asatiani%20St&query_place_id=EiYxOCBMYWRvIEFzYXRpYW5pIFN0LCBUJ2JpbGlzaSwgR2VvcmdpYSIwEi4KFAoSCbkeaDHyDERAEdAPIRq6fmvpEBIqFAoSCb-ZIjHyDERAEQ32J6M2LtA2"
+}
