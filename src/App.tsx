@@ -1,4 +1,4 @@
-import {Fragment,useEffect,useId,useMemo,useRef,useState} from 'react';
+import {Fragment,useEffect,useId,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 import type {FeatureCollection} from 'geojson';
 import type {Building,Data,Filters,Photo} from './types';
@@ -16,11 +16,24 @@ function Icon({name,size=18}:{name:string;size?:number}){
  return <svg {...common}>{paths[name]}</svg>
 }
 function InfoTip({text,label}:{text:string;label:string}){
- const [open,setOpen]=useState(false),ref=useRef<HTMLSpanElement>(null),id=useId();
- useEffect(()=>{if(!open)return;const close=(event:PointerEvent)=>{if(ref.current&&!ref.current.contains(event.target as Node))setOpen(false)};const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){event.stopPropagation();setOpen(false)}};document.addEventListener('pointerdown',close);document.addEventListener('keydown',key);return()=>{document.removeEventListener('pointerdown',close);document.removeEventListener('keydown',key)}},[open]);
- return <span ref={ref} className="info-tip" onPointerEnter={event=>{if(event.pointerType==='mouse')setOpen(true)}} onPointerLeave={event=>{if(event.pointerType==='mouse')setOpen(false)}}>
-  <button type="button" className="info-tip-button" aria-label={label} aria-expanded={open} aria-describedby={open?id:undefined} onClick={()=>setOpen(value=>!value)}>?</button>
-  {open&&<span className="info-tip-bubble" role="tooltip" id={id}>{text}</span>}
+ const [open,setOpen]=useState(false),ref=useRef<HTMLSpanElement>(null),buttonRef=useRef<HTMLButtonElement>(null),bubbleRef=useRef<HTMLSpanElement>(null),hideTimer=useRef<number|null>(null),id=useId();
+ useLayoutEffect(()=>{
+  if(!open)return;
+  const button=buttonRef.current,bubble=bubbleRef.current;if(!button||!bubble)return;
+  const margin=12,gap=9,rect=button.getBoundingClientRect(),width=bubble.offsetWidth,height=bubble.offsetHeight;
+  const left=Math.max(margin,Math.min(rect.left+rect.width/2-width/2,window.innerWidth-width-margin));
+  let above=rect.top-height-gap,placement:'top'|'bottom'='top';
+  if(above<margin){above=rect.bottom+gap;placement='bottom'}
+  const top=Math.max(margin,Math.min(above,window.innerHeight-height-margin));
+  const arrow=Math.max(12,Math.min(rect.left+rect.width/2-left,width-12));
+  bubble.style.left=`${left}px`;bubble.style.top=`${top}px`;bubble.style.setProperty('--tip-arrow-left',`${arrow}px`);bubble.dataset.placement=placement;bubble.style.visibility='visible';
+ },[open,text]);
+ useEffect(()=>{if(!open)return;const close=()=>setOpen(false);const outside=(event:PointerEvent)=>{if(ref.current&&!ref.current.contains(event.target as Node))setOpen(false)};const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){event.stopPropagation();setOpen(false)}};window.addEventListener('scroll',close,true);window.addEventListener('resize',close);document.addEventListener('pointerdown',outside);document.addEventListener('keydown',key);return()=>{window.removeEventListener('scroll',close,true);window.removeEventListener('resize',close);document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',key)}},[open]);
+ useEffect(()=>()=>{if(hideTimer.current)window.clearTimeout(hideTimer.current)},[]);
+ const show=()=>{if(hideTimer.current)window.clearTimeout(hideTimer.current);setOpen(true)},hide=()=>{if(hideTimer.current)window.clearTimeout(hideTimer.current);hideTimer.current=window.setTimeout(()=>setOpen(false),180)};
+ return <span ref={ref} className="info-tip" onPointerEnter={event=>{if(event.pointerType==='mouse')show()}} onPointerLeave={event=>{if(event.pointerType==='mouse')hide()}}>
+  <button ref={buttonRef} type="button" className="info-tip-button" aria-label={label} aria-expanded={open} aria-describedby={open?id:undefined} onClick={()=>setOpen(value=>!value)}>?</button>
+  {open&&<span ref={bubbleRef} className="info-tip-bubble" role="tooltip" id={id} style={{visibility:'hidden'}}>{text}</span>}
  </span>
 }
 function photoTechnicalNote(modifications:string,t:(value:string)=>string){
