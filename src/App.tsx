@@ -33,7 +33,7 @@ function InfoTip({text,label}:{text:string;label:string}){
  const show=()=>{if(hideTimer.current)window.clearTimeout(hideTimer.current);setOpen(true)},hide=()=>{if(hideTimer.current)window.clearTimeout(hideTimer.current);hideTimer.current=window.setTimeout(()=>setOpen(false),180)};
  return <span ref={ref} className="info-tip" onPointerEnter={event=>{if(event.pointerType==='mouse')show()}} onPointerLeave={event=>{if(event.pointerType==='mouse')hide()}}>
   <button ref={buttonRef} type="button" className="info-tip-button" aria-label={label} aria-expanded={open} aria-describedby={open?id:undefined} onClick={()=>setOpen(value=>!value)}>?</button>
-  {open&&<span ref={bubbleRef} className="info-tip-bubble" role="tooltip" id={id} style={{visibility:'hidden'}}>{text}</span>}
+  {open&&createPortal(<span ref={bubbleRef} className="info-tip-bubble" role="tooltip" id={id} style={{visibility:'hidden'}}>{text}</span>,document.body)}
  </span>
 }
 function photoTechnicalNote(modifications:string,t:(value:string)=>string){
