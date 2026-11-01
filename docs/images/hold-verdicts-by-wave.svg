@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="340" viewBox="0 0 760 340" role="img">
+<rect width="760" height="340" fill="#ffffff"/>
+<style>text{font-family:DejaVu Sans, Arial, sans-serif;fill:#222222} .muted{fill:#666666} .small{font-size:12px} .label{font-size:14px} .title{font-size:18px;font-weight:600}</style>
+<text x="30" y="30" font-size="18" font-weight="600" text-anchor="start" fill="#222222" >Вердикты по трём очередям</text>
+<line x1="70" y1="278.0" x2="725" y2="278.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="60" y="282.0" font-size="12" font-weight="normal" text-anchor="end" fill="#666666" >0</text>
+<line x1="70" y1="223.0" x2="725" y2="223.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="60" y="227.0" font-size="12" font-weight="normal" text-anchor="end" fill="#666666" >50</text>
+<line x1="70" y1="168.0" x2="725" y2="168.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="60" y="172.0" font-size="12" font-weight="normal" text-anchor="end" fill="#666666" >100</text>
+<line x1="70" y1="113.0" x2="725" y2="113.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="60" y="117.0" font-size="12" font-weight="normal" text-anchor="end" fill="#666666" >150</text>
+<line x1="70" y1="58.0" x2="725" y2="58.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="60" y="62.0" font-size="12" font-weight="normal" text-anchor="end" fill="#666666" >200</text>
+<line x1="70" y1="278" x2="725" y2="278" stroke="#999999" stroke-width="1"/>
+<text x="196.0" y="306" font-size="14" font-weight="normal" text-anchor="middle" fill="#222222" >Первая</text>
+<text x="196.0" y="324" font-size="12" font-weight="normal" text-anchor="middle" fill="#666666" >104</text>
+<rect x="115" y="269.2" width="54" height="8.8" rx="2" fill="#a33a32" />
+<rect x="115" y="184.5" width="54" height="84.7" rx="2" fill="#c98a2e" />
+<text x="142.0" y="231.85" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >77</text>
+<rect x="115" y="163.6" width="54" height="20.9" rx="2" fill="#2f7d5b" />
+<text x="142.0" y="179.04999999999998" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >19</text>
+<text x="142.0" y="50" font-size="12" font-weight="600" text-anchor="middle" fill="#2f7d5b" >19</text>
+<text x="396.0" y="306" font-size="14" font-weight="normal" text-anchor="middle" fill="#222222" >Вторая</text>
+<text x="396.0" y="324" font-size="12" font-weight="normal" text-anchor="middle" fill="#666666" >200</text>
+<rect x="315" y="164.7" width="54" height="113.3" rx="2" fill="#a33a32" />
+<text x="342.0" y="226.35" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >103</text>
+<rect x="315" y="76.69999999999999" width="54" height="88.0" rx="2" fill="#c98a2e" />
+<text x="342.0" y="125.69999999999999" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >80</text>
+<rect x="315" y="57.999999999999986" width="54" height="18.700000000000003" rx="2" fill="#2f7d5b" />
+<text x="342.0" y="72.35" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >17</text>
+<text x="342.0" y="50" font-size="12" font-weight="600" text-anchor="middle" fill="#2f7d5b" >17</text>
+<text x="596.0" y="306" font-size="14" font-weight="normal" text-anchor="middle" fill="#222222" >Третья</text>
+<text x="596.0" y="324" font-size="12" font-weight="normal" text-anchor="middle" fill="#666666" >200</text>
+<rect x="515" y="246.1" width="54" height="31.9" rx="2" fill="#a33a32" />
+<text x="542.0" y="267.05" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >29</text>
+<rect x="515" y="118.5" width="54" height="127.6" rx="2" fill="#c98a2e" />
+<text x="542.0" y="187.3" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >116</text>
+<rect x="515" y="57.99999999999999" width="54" height="60.50000000000001" rx="2" fill="#2f7d5b" />
+<text x="542.0" y="93.25" font-size="13" font-weight="600" text-anchor="middle" fill="#ffffff" >55</text>
+<text x="542.0" y="50" font-size="12" font-weight="600" text-anchor="middle" fill="#2f7d5b" >55</text>
+<rect x="520" y="20" width="12" height="12" rx="2" fill="#2f7d5b" />
+<text x="537" y="30" font-size="12" font-weight="normal" text-anchor="start" fill="#666666" >добавлено</text>
+<rect x="590" y="20" width="12" height="12" rx="2" fill="#c98a2e" />
+<text x="607" y="30" font-size="12" font-weight="normal" text-anchor="start" fill="#666666" >HOLD</text>
+<rect x="660" y="20" width="12" height="12" rx="2" fill="#a33a32" />
+<text x="677" y="30" font-size="12" font-weight="normal" text-anchor="start" fill="#666666" >REJECT</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="400" viewBox="0 0 760 400" role="img">
+<rect width="760" height="400" fill="#ffffff"/>
+<style>text{font-family:DejaVu Sans, Arial, sans-serif;fill:#222222} .muted{fill:#666666} .small{font-size:12px} .label{font-size:14px} .title{font-size:18px;font-weight:600}</style>
+<text x="30" y="30" font-size="18" font-weight="600" text-anchor="start" fill="#222222" >Почему объект остался в HOLD (основная причина)</text>
+<text x="30" y="46" font-size="12" font-weight="normal" text-anchor="start" fill="#666666" >273 решения; у объекта может быть несколько причин, здесь — главная</text>
+<text x="214" y="84" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Геометрия</text>
+<rect x="230" y="68" width="410.1538461538462" height="24" rx="2" fill="#4f6d8f" />
+<text x="650.1538461538462" y="86" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >124</text>
+<text x="214" y="132" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Нет источника</text>
+<rect x="230" y="116" width="350.6153846153846" height="24" rx="2" fill="#c98a2e" />
+<text x="590.6153846153845" y="134" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >106</text>
+<text x="214" y="180" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Утрата / руина</text>
+<rect x="230" y="164" width="66.15384615384616" height="24" rx="2" fill="#a33a32" />
+<text x="306.1538461538462" y="182" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >20</text>
+<text x="214" y="228" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Прочее / не разобрано</text>
+<rect x="230" y="212" width="66.15384615384616" height="24" rx="2" fill="#7a7a7a" />
+<text x="306.1538461538462" y="230" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >20</text>
+<text x="214" y="276" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Дубль</text>
+<rect x="230" y="260" width="6.615384615384616" height="24" rx="2" fill="#7a7a7a" />
+<text x="246.6153846153846" y="278" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >2</text>
+<text x="214" y="324" font-size="14" font-weight="normal" text-anchor="end" fill="#222222" >Вне темы</text>
+<rect x="230" y="308" width="3.307692307692308" height="24" rx="2" fill="#7a7a7a" />
+<text x="243.30769230769232" y="326" font-size="14" font-weight="600" text-anchor="start" fill="#222222" >1</text>
+<line x1="230" y1="54" x2="230" y2="340" stroke="#999999" stroke-width="1"/>
+</svg>

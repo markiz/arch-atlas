@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" role="img">
+<rect width="760" height="330" fill="#ffffff"/>
+<style>text{font-family:DejaVu Sans, Arial, sans-serif;fill:#222222} .muted{fill:#666666} .small{font-size:12px} .label{font-size:14px} .title{font-size:18px;font-weight:600}</style>
+<text x="30" y="30" font-size="18" font-weight="600" text-anchor="start" fill="#222222" >Воронка отбора</text>
+<text x="30" y="46" font-size="12" font-weight="normal" text-anchor="start" fill="#666666" >Из реестра — в атлас; счётчики на 1 ноября 2026</text>
+<rect x="90.0" y="80" width="620.0" height="26" rx="3" fill="#4f6d8f" opacity="0.92"/>
+<text x="100.0" y="98" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >2599</text>
+<text x="700.0" y="98" font-size="13" font-weight="600" text-anchor="end" fill="#ffffff" >2599 записей реестра</text>
+<rect x="227.7645248172374" y="120" width="344.4709503655252" height="26" rx="3" fill="#6f8ba8" opacity="0.92"/>
+<text x="237.7645248172374" y="138" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >1444</text>
+<text x="584.2354751827626" y="138" font-size="13" font-weight="normal" text-anchor="start" fill="#222222" >1444 проходят OSM/охват</text>
+<rect x="328.4340130819546" y="160" width="143.13197383609082" height="26" rx="3" fill="#c98a2e" opacity="0.92"/>
+<text x="338.4340130819546" y="178" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >600</text>
+<text x="483.56598691804544" y="178" font-size="13" font-weight="normal" text-anchor="start" fill="#222222" >600 в трёх очередях</text>
+<rect x="339.88457098884186" y="200" width="120.23085802231628" height="26" rx="3" fill="#b07a3a" opacity="0.92"/>
+<text x="349.88457098884186" y="218" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >504</text>
+<text x="472.11542901115814" y="218" font-size="13" font-weight="normal" text-anchor="start" fill="#222222" >504 разобрано</text>
+<rect x="365.0" y="240" width="70" height="26" rx="3" fill="#2f7d5b" opacity="0.92"/>
+<text x="375.0" y="258" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >91</text>
+<text x="447.0" y="258" font-size="13" font-weight="normal" text-anchor="start" fill="#222222" >91 READY</text>
+<rect x="365.0" y="280" width="70" height="26" rx="3" fill="#1f5c43" opacity="0.92"/>
+<text x="375.0" y="298" font-size="13" font-weight="700" text-anchor="start" fill="#ffffff" >267</text>
+<text x="447.0" y="298" font-size="13" font-weight="normal" text-anchor="start" fill="#222222" >267 в атласе</text>
+</svg>
