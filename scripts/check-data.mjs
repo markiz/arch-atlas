@@ -12,6 +12,12 @@ const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.ty
 assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.features.length>0,'Empty building outlines');
 assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
 assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
+for(const feature of geo.features.filter(feature=>feature.properties?.kind==='landmark')){
+ const names=feature.properties?.names??{},filled=['ru','en','ka','uk'].filter(lang=>typeof names[lang]==='string'&&names[lang].trim());
+ if(!filled.length)continue;
+ assert.equal(filled.length,4,`${feature.properties?.osmId}: landmark names must contain ru, en, ka and uk`);
+ for(const lang of ['ru','uk'])assert(names[lang][0]===names[lang][0].toUpperCase(),`${feature.properties?.osmId}: ${lang} landmark name must start with a capital letter`);
+}
 const progress=new Progress(data.length,{label:'check atlas cards'});
 const verifiedPhotos=new Set();
 function webpSize(bytes,label){

@@ -13,7 +13,7 @@ function category(tags){
 }
 function feature(kind,coordinates,tags,geometry){
  const categoryName=category(tags);if(!categoryName)return;
- const sourceName=tags['name:ru']||tags.name||tags['name:ka']||tags['name:en'],properties={kind:'landmark',category:categoryName},name=translations[sourceName]||sourceName;
+ const sourceName=tags['name:ru']||tags.name||tags['name:ka']||tags['name:en'],properties={kind:'landmark',category:categoryName},entry=translations[sourceName],name=typeof entry==='string'?entry:entry?.ru||sourceName;
  if(name)properties.name=name;
  features.push({type:'Feature',properties,geometry:{type:geometry,coordinates}});
 }
