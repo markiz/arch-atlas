@@ -4,6 +4,9 @@ node_modules/
 # Результат сборки
 dist/
 
+# Временные файлы фото-кэша
+data/photos/**/.tmp-*
+
 # Сгенерированные превью фотографий (источник — data/photos)
 data/thumbnails/
 

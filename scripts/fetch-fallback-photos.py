@@ -20,7 +20,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import UNKNOWN_PHOTO_WIDTH, fit_width, read_cards, save_photo, thumb_relative, write_card
+from atlas_source import UNKNOWN_PHOTO_WIDTH, fit_width, read_cards, read_photo_metadata, save_photo, write_card, write_photo_metadata
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -62,7 +62,7 @@ def main() -> int:
             skipped += 1
             progress.advance(f'{card_id}: missing')
             continue
-        if any(photo.get('source') == candidate['photo'] for photo in card.get('photos', [])):
+        if any((read_photo_metadata(photo_id) or {}).get('source') == candidate['photo'] for photo_id in card.get('photos', [])):
             print('already attached', card_id)
             progress.advance(f'{card_id}: already attached')
             continue
@@ -75,10 +75,8 @@ def main() -> int:
         image = fit_width(image, UNKNOWN_PHOTO_WIDTH)
         resized = image.width < original_width
         width = image.width
-        relative = save_photo(image.convert('RGB'), card_id, quality=72)
-        card.setdefault('photos', []).append({
-            'file': relative,
-            'thumb': thumb_relative(relative),
+        photo_id = save_photo(image.convert('RGB'), quality=72)
+        write_photo_metadata(photo_id, {
             'author': 'Реестр памятников Грузии (автор не указан)',
             'license': 'Не установлена',
             'licenseUrl': candidate['record'],
@@ -86,6 +84,7 @@ def main() -> int:
             'modifications': (f'уменьшен размер до {width} px по ширине, преобразовано в WebP; полное качество не используется' if resized else 'преобразовано в WebP; полное качество не используется'),
             'description': candidate.get('note', ''),
         })
+        card.setdefault('photos', []).append(photo_id)
         modified.append(card)
         added += 1
         print('added (unknown license, low-res)', card_id)

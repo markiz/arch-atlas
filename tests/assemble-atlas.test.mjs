@@ -130,22 +130,32 @@ test('hydrateCard keeps an empty history out of the bundle',()=>{
  assert.equal('histories' in out,false);
 });
 
-test('accepts photos only under the city and object directory',async()=>{
+async function writePhoto(root,id,metadata){
+ await mkdir(path.join(root,'data','photos','tbilisi'),{recursive:true});
+ await writeFile(path.join(root,'data','photos','tbilisi',`${id}.metadata.json`),JSON.stringify(metadata));
+}
+
+test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
  const root=await fixture();
- const photo={file:'photos/tbilisi/osm-1/1.webp',thumb:'thumbnails/tbilisi/osm-1/1.webp',author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized'};
+ const first='a'.repeat(64),second='b'.repeat(64);
+ const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized'};
  try{
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[photo]}));
+  await writePhoto(root,first,metadata);
+  await writePhoto(root,second,{...metadata,author:'B',description:'фасад'});
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[second,first]}));
   const {cards}=await assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true});
-  assert.equal(cards[0].photos[0].file,photo.file);
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,file:'photos/osm-1-1.webp'}]}));
-  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/must live under photos\/tbilisi\/osm-1\//);
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,thumb:'thumbnails/tbilisi/osm-1/2.webp'}]}));
-  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/thumb must match/);
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[{...photo,thumb:'photos/tbilisi/osm-1/1-thumb.webp'}]}));
-  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/thumb must match/);
-  const {thumb,...withoutThumb}=photo;
-  await writeCard(root,'osm-1.json',card('osm-1',{photos:[withoutThumb]}));
-  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/thumb must be a non-empty string/);
+  assert.deepEqual(cards[0].photos.map(photo=>photo.id),[second,first]);
+  assert.equal(cards[0].photos[0].file,`photos/tbilisi/${second}.webp`);
+  assert.equal(cards[0].photos[0].thumb,`thumbnails/tbilisi/${second}.webp`);
+  assert.equal(cards[0].photos[0].author,'B');
+  assert.equal(cards[0].photos[0].description,'фасад');
+
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:['1']}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/lowercase sha256 photo id/);
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:['c'.repeat(64)]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/references missing/);
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[first,first]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/duplicate photo/);
  }finally{
   await rm(root,{recursive:true,force:true});
  }

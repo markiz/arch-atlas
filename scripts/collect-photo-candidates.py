@@ -31,6 +31,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from atlas_source import read_photo_metadata
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -495,7 +496,8 @@ def collect() -> None:
         for language in ('ka', 'en'):
             pairs.extend(split_address(card['addresses'].get(language, '')))
         pairs = [pair for pair in pairs if pair['street']]
-        context[card_id] = {'pairs': pairs, 'existing': {photo.get('source') for photo in card.get('photos', [])}, 'existing_titles': {file_title(photo.get('source')) for photo in card.get('photos', [])} - {None}}
+        sources = {(read_photo_metadata(photo_id) or {}).get('source') for photo_id in card.get('photos', [])}
+        context[card_id] = {'pairs': pairs, 'existing': sources, 'existing_titles': {file_title(source) for source in sources} - {None}}
         for pair in pairs:
             if re.search(r'[\u10d0-\u10ff]', pair['street']):
                 base = street_base_ka(pair['street'])
@@ -567,8 +569,8 @@ def collect() -> None:
     # Existing photo sources, needed to upgrade resolutions and avoid duplicates.
     existing_titles = {}
     for card_id, card in cards.items():
-        for photo in card.get('photos', []):
-            title = file_title(photo.get('source'))
+        for photo_id in card.get('photos', []):
+            title = file_title((read_photo_metadata(photo_id) or {}).get('source'))
             if title:
                 existing_titles.setdefault(title, []).append(card_id)
 
@@ -767,8 +769,8 @@ def collect() -> None:
     # Coverage of existing free photos by source metadata (resolution upgrade).
     upgrades = 0
     for card in cards.values():
-        for photo in card.get('photos', []):
-            title = file_title(photo.get('source'))
+        for photo_id in card.get('photos', []):
+            title = file_title((read_photo_metadata(photo_id) or {}).get('source'))
             metadata = info.get(title) if title else None
             if metadata and metadata['width'] > 1000 and metadata['license'] != 'Не установлена':
                 upgrades += 1

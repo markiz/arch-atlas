@@ -10,13 +10,13 @@ import {Progress} from './lib/progress.mjs';
 export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const silent={write(){}};
 
-async function walk(directory,prefix=''){
+async function walk(directory,prefix='',include=()=>true){
  const entries=await readdir(directory,{withFileTypes:true});
  const files=[];
  for(const entry of entries){
   const relative=prefix?`${prefix}/${entry.name}`:entry.name;
-  if(entry.isDirectory())files.push(...await walk(path.join(directory,entry.name),relative));
-  else if(entry.isFile())files.push(relative);
+  if(entry.isDirectory())files.push(...await walk(path.join(directory,entry.name),relative,include));
+  else if(entry.isFile()&&include(entry.name))files.push(relative);
  }
  return files.sort();
 }
@@ -49,7 +49,7 @@ async function syncTree({root,sourceRelative,targetRelative,label,quiet}){
  const source=path.join(root,sourceRelative);
  const destination=path.join(root,targetRelative);
  let files;
- try{files=await walk(source);}
+ try{files=await walk(source,'',name=>name.endsWith('.webp'));}
  catch(error){throw new Error(`${sourceRelative}: ${error.message}`);}
  if(!files.length)throw new Error(`${sourceRelative}: no files found`);
  const progress=new Progress(files.length,{label,stream:quiet?silent:process.stderr});

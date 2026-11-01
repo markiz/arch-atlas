@@ -5,7 +5,9 @@ Reads work/photo-research/candidates.json (produced by
 scripts/collect-photo-candidates.py), re-fetches existing free photos at the
 policy width, adds new photos until an object has at least three where reliable
 candidates exist, drops near-duplicate shots, and writes the cards as pretty
-JSON. Registry fallback photos stay if no free replacement exists.
+JSON. Full images are stored under their SHA-256 in data/photos/<city>/ and
+metadata in the matching .metadata.json sidecars; cards keep only ordered photo
+ids. Registry fallback photos stay if no free replacement exists.
 
 Width policy:
   * free license (Commons: CC0/PD/CC BY/CC BY-SA) - up to 1920 px wide;
@@ -29,7 +31,7 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
-from atlas_source import ROOT, photo_dir, read_cards, thumb_dir, write_card
+from atlas_source import ROOT, photo_path, read_cards, read_photo_metadata, save_photo, write_card, write_photo_metadata
 from progress import Progress
 
 CANDIDATES = ROOT / 'work' / 'photo-research' / 'candidates.json'
@@ -126,50 +128,20 @@ def modifications(width: int, original_width: int) -> str:
     return 'преобразовано в WebP'
 
 
-def renumber(card: dict) -> None:
-    """Rename files so <n>.webp follows the new photos[] order."""
-    city = 'tbilisi'
-    directory = photo_dir(card['id'], city)
-    previews = thumb_dir(card['id'], city)
-    previews.mkdir(parents=True, exist_ok=True)
+def reorder_free_first(card: dict) -> bool:
+    """Put free photos before registry fallback without changing file names."""
     photos = card.get('photos', [])
-    if not photos:
-        return
-    pending = []
-    for position, photo in enumerate(photos, start=1):
-        old = ROOT / 'data' / photo['file']
-        pending.append((position, photo, old, previews / old.name))
-    # Move everything to temporary names first so old and new numbers cannot collide.
-    for position, photo, old, old_thumb in pending:
-        temp = directory / f'__tmp-{position}.webp'
-        temp_thumb = previews / f'__tmp-{position}.webp'
-        if old.exists():
-            old.replace(temp)
-        if old_thumb.exists():
-            old_thumb.replace(temp_thumb)
-    for position, photo, _, _ in pending:
-        temp = directory / f'__tmp-{position}.webp'
-        temp_thumb = previews / f'__tmp-{position}.webp'
-        full = directory / f'{position}.webp'
-        thumb = previews / f'{position}.webp'
-        if temp.exists():
-            temp.replace(full)
-        if temp_thumb.exists():
-            temp_thumb.replace(thumb)
-        photo['file'] = f'photos/{city}/{card["id"]}/{position}.webp'
-        photo['thumb'] = f'thumbnails/{city}/{card["id"]}/{position}.webp'
-    # Remove stale numbered files beyond the new gallery length.
-    keep = {f'{index}.webp' for index in range(1, len(photos) + 1)}
-    for path in directory.glob('*.webp'):
-        if path.name.startswith('__tmp-'):
-            path.unlink(missing_ok=True)
-        elif path.name not in keep:
-            path.unlink(missing_ok=True)
-    for path in previews.glob('*.webp'):
-        if path.name.startswith('__tmp-'):
-            path.unlink(missing_ok=True)
-        elif path.name not in keep:
-            path.unlink(missing_ok=True)
+    metadata = {photo_id: read_photo_metadata(photo_id) or {} for photo_id in photos}
+    if not photos or not any(is_free(metadata[photo_id]) for photo_id in photos):
+        return False
+    if not any(not is_free(metadata[photo_id]) for photo_id in photos):
+        return False
+    ordered = [photo_id for photo_id in photos if is_free(metadata[photo_id])]
+    ordered += [photo_id for photo_id in photos if not is_free(metadata[photo_id])]
+    if ordered == photos:
+        return False
+    card['photos'] = ordered
+    return True
 
 
 def main() -> int:
@@ -189,8 +161,8 @@ def main() -> int:
     # A Commons file should illustrate one atlas object; shared files are ambiguous.
     used_titles = {}
     for card in cards.values():
-        for photo in card.get('photos', []):
-            source = photo.get('source') or ''
+        for photo_id in card.get('photos', []):
+            source = (read_photo_metadata(photo_id) or {}).get('source') or ''
             if '/wiki/File:' in source:
                 used_titles[urllib.parse.unquote(source.split('/wiki/', 1)[1])] = card['id']
 
@@ -211,13 +183,17 @@ def main() -> int:
 
         # 1. Re-fetch existing free photos at up to 1920 px instead of the old 1000 px cap.
         if not args.no_upgrade:
-            for photo in card.get('photos', []):
-                source = photo.get('source') or ''
+            for index, photo_id in enumerate(list(card.get('photos', []))):
+                metadata = read_photo_metadata(photo_id)
+                if not metadata:
+                    entry['skipped'].append(f'upgrade {photo_id}: metadata missing')
+                    continue
+                source = metadata.get('source') or ''
                 title = urllib.parse.unquote(source.split('/wiki/', 1)[1]) if '/wiki/File:' in source else None
                 meta = existing_meta.get(title) if title else None
-                if not meta or not is_free(photo) or meta.get('width', 0) <= 1400:
+                if not meta or not is_free(metadata) or meta.get('width', 0) <= 1400:
                     continue
-                current = ROOT / 'data' / photo['file']
+                current = photo_path(photo_id)
                 try:
                     with Image.open(current) as opened:
                         current_width = opened.width
@@ -236,12 +212,16 @@ def main() -> int:
                         # Commons rejects thumbnail widths outside its allowed list.
                         raw = fetch(meta['url'])
                     image, width = prepare_image(raw, FREE_WIDTH)
-                    image.save(current, 'WEBP', quality=QUALITY, method=4)
-                    photo['modifications'] = modifications(width, meta['width'])
+                    new_metadata = dict(metadata)
+                    new_metadata['modifications'] = modifications(width, meta['width'])
+                    new_id = save_photo(image, quality=QUALITY, method=4)
+                    if new_id != photo_id:
+                        write_photo_metadata(new_id, new_metadata)
+                        card['photos'][index] = new_id
                     entry['upgraded'] += 1
                     upgraded_total += 1
                 except Exception as error:
-                    entry['skipped'].append(f'upgrade {photo["file"]}: {error}')
+                    entry['skipped'].append(f'upgrade {photo_id}: {error}')
                 time.sleep(0.1)
 
         # 2. Add new photos until the gallery reaches TARGET.
@@ -254,8 +234,11 @@ def main() -> int:
                 report['cards'][card_id] = entry
                 continue
         existing_hashes = []
-        for photo in card.get('photos', []):
-            value = load_hash(ROOT / 'data' / photo['file'])
+        existing_sources = set()
+        for photo_id in card.get('photos', []):
+            metadata = read_photo_metadata(photo_id) or {}
+            existing_sources.add(metadata.get('source'))
+            value = load_hash(photo_path(photo_id))
             if value is not None:
                 existing_hashes.append(value)
         new_photos = []
@@ -270,7 +253,7 @@ def main() -> int:
             if title in used_titles and used_titles[title] != card_id and not same_object(card, cards[used_titles[title]]):
                 entry['skipped'].append(f'shared {title}')
                 continue
-            if any(photo.get('source') == candidate.get('source') for photo in card.get('photos', [])):
+            if candidate.get('source') in existing_sources:
                 continue
             url = candidate.get('thumbUrl') or candidate.get('url')
             if not url:
@@ -289,25 +272,23 @@ def main() -> int:
                 existing_hashes.append(value)
                 new_photos.append({'title': title, 'width': width})
                 continue
-            directory = photo_dir(card_id)
-            directory.mkdir(parents=True, exist_ok=True)
-            index = 1
-            while (directory / f'{index}.webp').exists():
-                index += 1
-            target = directory / f'{index}.webp'
-            image.save(target, 'WEBP', quality=QUALITY, method=4)
-            photo = {
-                'file': f'photos/tbilisi/{card_id}/{index}.webp',
-                'thumb': f'thumbnails/tbilisi/{card_id}/{index}.webp',
+            metadata = {
                 'author': candidate['author'],
                 'license': candidate['license'],
                 'licenseUrl': candidate['licenseUrl'],
                 'source': candidate['source'],
                 'modifications': modifications(width, candidate['width']),
             }
-            card.setdefault('photos', []).append(photo)
+            try:
+                photo_id = save_photo(image, quality=QUALITY, method=4)
+                write_photo_metadata(photo_id, metadata)
+            except ValueError as error:
+                entry['skipped'].append(f'attach {title}: {error}')
+                continue
+            card.setdefault('photos', []).append(photo_id)
             existing_hashes.append(value)
-            new_photos.append(photo)
+            existing_sources.add(candidate['source'])
+            new_photos.append(photo_id)
             used_titles[title] = card_id
             entry['added'].append(title)
             added_total += 1
@@ -321,17 +302,10 @@ def main() -> int:
             progress.advance(f'{card_id}: +{len(new_photos)}')
             continue
 
-        # 3. Put free photos before the registry fallback and keep numbering aligned.
-        photos = card.get('photos', [])
-        if photos and any(not is_free(photo) for photo in photos) and any(is_free(photo) for photo in photos):
-            free = [photo for photo in photos if is_free(photo)]
-            fallback = [photo for photo in photos if not is_free(photo)]
-            ordered = free + fallback
-            if ordered != photos:
-                card['photos'] = ordered
-                renumber(card)
+        # 3. Put free photos before the registry fallback; array order is the gallery order.
+        reordered = reorder_free_first(card)
         entry['after'] = len(card.get('photos', []))
-        if entry['added'] or entry['upgraded'] or entry['after'] != before:
+        if entry['added'] or entry['upgraded'] or reordered or entry['after'] != before:
             write_card(card)
             touched.append(card_id)
             report['cards'][card_id] = entry

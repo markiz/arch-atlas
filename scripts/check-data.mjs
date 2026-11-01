@@ -1,4 +1,5 @@
 import {readFile,access} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {Progress} from './lib/progress.mjs';
 const data=JSON.parse(await readFile('public/atlas/buildings.json','utf8'));
@@ -9,6 +10,7 @@ assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.
 assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
 assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
 const progress=new Progress(data.length,{label:'check atlas cards'});
+const verifiedPhotos=new Set();
 progress.start();
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
@@ -32,18 +34,31 @@ for(const b of data){
  const images=b.photos??(b.photo?[b.photo]:[]);assert(Array.isArray(images),`${b.id}: photos`);if(images.length)withPhotos++;if(images.length>1)galleries++;
  const paths=new Set();
  for(const p of images){
-  for(const k of ['file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
-  const prefix=`photos/tbilisi/${b.id}/`;
-  const thumbPrefix=`thumbnails/tbilisi/${b.id}/`;
-  const name=p.file.slice(prefix.length);
-  assert(p.file.startsWith(prefix)&&/^\d+\.webp$/.test(name),`${b.id}: photo must live under ${prefix}<number>.webp`);
-  assert(p.thumb===`${thumbPrefix}${name}`,`${b.id}: photo preview must match ${thumbPrefix}<number>.webp`);
+  for(const k of ['id','file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
+  assert(/^[a-f0-9]{64}$/.test(p.id),`${b.id}: photo id must be a lowercase sha256`);
+  const expectedFile=`photos/tbilisi/${p.id}.webp`;
+  const expectedThumb=`thumbnails/tbilisi/${p.id}.webp`;
+  assert(p.file===expectedFile,`${b.id}: photo file must match ${expectedFile}`);
+  assert(p.thumb===expectedThumb,`${b.id}: photo preview must match ${expectedThumb}`);
   for(const file of [p.file,p.thumb]){
    assert(!file.includes('..')&&!file.startsWith('/')&&!paths.has(file),`${b.id}: invalid or duplicate photo path`);paths.add(file);
-   const source='data/'+file;
-   const published='public/atlas/'+file;
-   await access(source);await access(published);
-   for(const path of [source,published]){const bytes=await readFile(path);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${path}`)}
+  }
+  if(!verifiedPhotos.has(p.id)){
+   const source='data/'+p.file,published='public/atlas/'+p.file;
+   const sidecar=`data/photos/tbilisi/${p.id}.metadata.json`;
+   await access(source);await access(published);await access(sidecar);
+   const metadata=JSON.parse(await readFile(sidecar,'utf8'));
+   for(const k of ['author','license','licenseUrl','source','modifications'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
+   assert(metadata.description===p.description,`${b.id}: photo metadata description differs from sidecar`);
+   for(const path of [source,published]){
+    const bytes=await readFile(path);
+    assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${path}`);
+    assert(createHash('sha256').update(bytes).digest('hex')===p.id,`${b.id}: photo content does not match its sha256 name ${path}`);
+   }
+   const thumb='data/'+p.thumb,thumbPublished='public/atlas/'+p.thumb;
+   await access(thumb);await access(thumbPublished);
+   for(const path of [thumb,thumbPublished]){const bytes=await readFile(path);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo preview ${path}`)}
+   verifiedPhotos.add(p.id);
   }
   photos++;previews++;
  }

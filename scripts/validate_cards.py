@@ -12,8 +12,10 @@ be promoted with --strict. It never modifies files.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -31,6 +33,11 @@ SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 AUX_DIR = ROOT / 'aux/tbilisi'
 AUX_FILES = {'styles': 'styles.json', 'yearLabels': 'year-labels.json', 'districts': 'districts.json', 'architects': 'architects.json'}
 BUILDINGS = ROOT / 'public/atlas/buildings.json'
+PHOTOS_DIR = ROOT / 'data/photos/tbilisi'
+THUMBNAILS_DIR = ROOT / 'data/thumbnails/tbilisi'
+PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
+PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
+PHOTO_OPTIONAL_FIELDS = ('description',)
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
     'above_ground', 'heritage_boundary', 'complex_underground',
@@ -66,6 +73,14 @@ def webp_ok(path: Path) -> bool:
         return False
     data = path.read_bytes()[:12]
     return len(data) >= 12 and data[:4] == b'RIFF' and data[8:12] == b'WEBP'
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open('rb') as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def labels_ok(card: dict[str, Any], field: str, errors: list[str], label: str, *, allow_empty: bool = False) -> dict[str, str] | None:
@@ -110,6 +125,7 @@ def main() -> int:
         return 1
 
     ids: set[str] = set()
+    verified_photos: set[str] = set()
     card_progress = Progress(len(paths), 'validate atlas source')
     card_progress.start()
     for path in paths:
@@ -218,39 +234,47 @@ def main() -> int:
         if not isinstance(photos, list):
             errors.append(f'{label}: photos must be a list')
         else:
-            seen_files: set[str] = set()
-            for index, photo in enumerate(photos):
-                if not isinstance(photo, dict):
-                    errors.append(f'{label}: photo[{index}] must be an object')
+            seen_photos: set[str] = set()
+            for index, photo_id in enumerate(photos):
+                if not isinstance(photo_id, str) or not PHOTO_ID_RE.fullmatch(photo_id):
+                    errors.append(f'{label}: photo[{index}] must be a lowercase sha256 photo id')
                     continue
-                for key in ('file', 'thumb', 'author', 'license', 'licenseUrl', 'source', 'modifications'):
-                    if not isinstance(photo.get(key), str) or not photo[key].strip():
-                        errors.append(f'{label}: photo[{index}].{key} missing')
-                card_id = str(card.get('id', ''))
-                prefixes = {
-                    'file': f'photos/tbilisi/{card_id}/',
-                    'thumb': f'thumbnails/tbilisi/{card_id}/',
-                }
-                for field, prefix in prefixes.items():
-                    file_name = photo.get(field)
-                    if not isinstance(file_name, str):
-                        continue
-                    if '..' in file_name or file_name.startswith('/'):
-                        errors.append(f'{label}: photo[{index}].{field} unsafe path')
-                    if not file_name.startswith(prefix):
-                        errors.append(f'{label}: photo[{index}].{field} must live under {prefix}')
-                    if file_name in seen_files:
-                        errors.append(f'{label}: duplicate photo path {file_name}')
-                    seen_files.add(file_name)
-                    if file_name and not webp_ok(ROOT / 'data' / file_name):
-                        errors.append(f'{label}: photo[{index}].{field} is not a WebP file')
-                file_name = photo.get('file')
-                thumb_name = photo.get('thumb')
-                if isinstance(file_name, str) and isinstance(thumb_name, str):
-                    name = file_name.rsplit('/', 1)[-1]
-                    expected = f'thumbnails/tbilisi/{card_id}/{name}' if file_name.endswith('.webp') else ''
-                    if thumb_name != expected:
-                        errors.append(f'{label}: photo[{index}].thumb does not match file')
+                if photo_id in seen_photos:
+                    errors.append(f'{label}: duplicate photo {photo_id}')
+                seen_photos.add(photo_id)
+                if photo_id in verified_photos:
+                    continue
+                verified_photos.add(photo_id)
+                metadata_path = PHOTOS_DIR / f'{photo_id}.metadata.json'
+                if not metadata_path.exists():
+                    errors.append(f'{label}: photo[{index}] missing {metadata_path.relative_to(ROOT)}')
+                else:
+                    try:
+                        metadata = read_json(metadata_path)
+                    except json.JSONDecodeError as error:
+                        errors.append(f'{label}: photo[{index}] invalid metadata: {error}')
+                        metadata = None
+                    if metadata is not None:
+                        if not isinstance(metadata, dict):
+                            errors.append(f'{label}: photo[{index}] metadata must be an object')
+                        else:
+                            for key in PHOTO_FIELDS:
+                                if not isinstance(metadata.get(key), str) or not metadata[key].strip():
+                                    errors.append(f'{label}: photo[{index}].{key} missing')
+                            if metadata.get('description') is not None and (
+                                not isinstance(metadata['description'], str) or not metadata['description'].strip()
+                            ):
+                                errors.append(f'{label}: photo[{index}].description must be a non-empty string')
+                            unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS)
+                            if unknown:
+                                errors.append(f'{label}: photo[{index}] unknown metadata fields: {", ".join(sorted(unknown))}')
+                full_path = PHOTOS_DIR / f'{photo_id}.webp'
+                if not webp_ok(full_path):
+                    errors.append(f'{label}: photo[{index}] full image is missing or not WebP')
+                elif sha256_file(full_path) != photo_id:
+                    errors.append(f'{label}: photo[{index}] content does not match its sha256 name')
+                if not webp_ok(THUMBNAILS_DIR / f'{photo_id}.webp'):
+                    errors.append(f'{label}: photo[{index}] preview is missing or not WebP')
         card_progress.advance(label)
     card_progress.finish()
 

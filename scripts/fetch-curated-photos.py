@@ -1,6 +1,6 @@
 import urllib.request, urllib.parse, json, pathlib, re, html, concurrent.futures, io
 from PIL import Image
-from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, attach_photos, read_cards, save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, attach_photos, read_cards, read_photo_metadata, save_photo
 from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
 cards = read_cards()
@@ -21,10 +21,10 @@ def one(item):
         author, lic, licenseurl = v('Artist'), v('LicenseShortName'), v('LicenseUrl')
         if not (author and lic and licenseurl): raise ValueError('missing attribution')
         if len(author) > 180: author = author.split('\n')[0][:180]
-        if any(p.get('source') == info.get('descriptionurl') for p in cards.get(key, {}).get('photos', [])):
+        if any((read_photo_metadata(photo_id) or {}).get('source') == info.get('descriptionurl') for photo_id in cards.get(key, {}).get('photos', [])):
             return key, None
-        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img = fit_width(img, FREE_PHOTO_WIDTH); relative = save_photo(img.convert('RGB'), key, quality=PHOTO_QUALITY)
-        return key, {'file': relative, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
+        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img = fit_width(img, FREE_PHOTO_WIDTH); photo_id = save_photo(img.convert('RGB'), quality=PHOTO_QUALITY)
+        return key, {'id': photo_id, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
     except Exception as ex:
         print('Error', key, ex, flush=True)
         return key, None

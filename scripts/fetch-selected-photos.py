@@ -24,7 +24,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, read_cards, save_photo, thumb_relative, write_card
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, read_cards, read_photo_metadata, save_photo, write_card, write_photo_metadata
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -116,7 +116,7 @@ def main() -> int:
             progress.advance(f'{card_id}: missing card')
             continue
         source = info.get('descriptionurl') or info.get('url')
-        if any(photo.get('source') == source for photo in card.get('photos', [])):
+        if any((read_photo_metadata(photo_id) or {}).get('source') == source for photo_id in card.get('photos', [])):
             print('already attached', card_id)
             progress.advance(f'{card_id}: already attached')
             continue
@@ -128,10 +128,8 @@ def main() -> int:
         original_width = image.width
         image = fit_width(image, FREE_PHOTO_WIDTH)
         resized = image.width < original_width
-        relative = save_photo(image.convert('RGB'), card_id, quality=PHOTO_QUALITY)
-        card.setdefault('photos', []).append({
-            'file': relative,
-            'thumb': thumb_relative(relative),
+        photo_id = save_photo(image.convert('RGB'), quality=PHOTO_QUALITY)
+        write_photo_metadata(photo_id, {
             'author': author,
             'license': license_name,
             'licenseUrl': license_url,
@@ -139,6 +137,7 @@ def main() -> int:
             'modifications': (f'уменьшен размер до {image.width} px по ширине, преобразовано в WebP' if resized else 'преобразовано в WebP'),
             'description': candidate.get('note', ''),
         })
+        card.setdefault('photos', []).append(photo_id)
         modified.append(card)
         added += 1
         print('added', card_id, license_name, author)

@@ -18,6 +18,9 @@ export const DEFAULT_CITY='tbilisi';
 export const DEFAULT_OUT=path.join(ROOT,'public','atlas','buildings.json');
 const LANGS=['ru','en','ka','uk'];
 const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown']);
+const PHOTO_ID_RE=/^[a-f0-9]{64}$/;
+const PHOTO_METADATA_FIELDS=['author','license','licenseUrl','source','modifications'];
+const PHOTO_OPTIONAL_FIELDS=['description'];
 
 const silent={write(){}};
 
@@ -65,27 +68,45 @@ function validateGeometry(file,geometry,field){
   return geometry;
 }
 
-function validatePhoto(file,photo,index,seen,city,id){
-  if(!isPlainObject(photo))fail(file,`photos[${index}] must be an object`);
-  for(const key of ['file','author','license','licenseUrl','source','modifications'])requireString(file,photo[key],`photos[${index}].${key}`);
-  if(photo.file.includes('..')||photo.file.startsWith('/'))fail(file,`photos[${index}].file is not a safe relative path`);
-  if(city){
-    const prefix=`photos/${city}/${id}/`;
-    if(!photo.file.startsWith(prefix))fail(file,`photos[${index}].file must live under ${prefix}`);
-    const name=photo.file.slice(prefix.length);
-    if(!/^\d+\.webp$/.test(name))fail(file,`photos[${index}].file must be named <number>.webp under ${prefix}`);
-    requireString(file,photo.thumb,`photos[${index}].thumb`);
-    if(photo.thumb.includes('..')||photo.thumb.startsWith('/'))fail(file,`photos[${index}].thumb is not a safe relative path`);
-    const thumbPrefix=`thumbnails/${city}/${id}/`;
-    if(photo.thumb!==`${thumbPrefix}${name}`)fail(file,`photos[${index}].thumb must match ${thumbPrefix}<number>.webp`);
-  }
-  if(seen.has(photo.file))fail(file,`duplicate photo file ${photo.file}`);
-  seen.add(photo.file);
-  if(city){
-    if(seen.has(photo.thumb))fail(file,`duplicate photo preview ${photo.thumb}`);
-    seen.add(photo.thumb);
-  }
-  if(photo.description!==undefined)requireString(file,photo.description,`photos[${index}].description`,{allowEmpty:true});
+async function loadPhotoMetadata(root,city){
+ const directory=path.join(root,'data','photos',city);
+ let names;
+ try{names=(await readdir(directory)).filter(name=>name.endsWith('.metadata.json')).sort();}
+ catch(error){
+   if(error?.code==='ENOENT')return new Map();
+   throw new Error(`data/photos/${city}: ${error.message}`);
+ }
+ const photos=new Map();
+ for(const name of names){
+   const id=name.slice(0,-'.metadata.json'.length);
+   if(!PHOTO_ID_RE.test(id))fail(name,'photo metadata filename must be <sha256>.metadata.json');
+   const file=path.join(directory,name);
+   let metadata;
+   try{metadata=JSON.parse(await readFile(file,'utf8'));}
+   catch(error){fail(file,error.message);}
+   if(!isPlainObject(metadata))fail(file,'photo metadata must be an object');
+   for(const field of PHOTO_METADATA_FIELDS)requireString(file,metadata[field],field);
+   if(metadata.description!==undefined)requireString(file,metadata.description,'description');
+   const unknown=Object.keys(metadata).filter(key=>!PHOTO_METADATA_FIELDS.includes(key)&&!PHOTO_OPTIONAL_FIELDS.includes(key));
+   if(unknown.length)fail(file,`unknown photo metadata fields: ${unknown.join(', ')}`);
+   photos.set(id,metadata);
+ }
+ return photos;
+}
+
+function validatePhoto(file,photoId,index,seen,city,metadataById){
+  if(typeof photoId!=='string'||!PHOTO_ID_RE.test(photoId))fail(file,`photos[${index}] must be a lowercase sha256 photo id`);
+  if(seen.has(photoId))fail(file,`duplicate photo ${photoId}`);
+  seen.add(photoId);
+  const metadata=metadataById.get(photoId);
+  if(!metadata)fail(file,`photos[${index}] references missing data/photos/${city}/${photoId}.metadata.json`);
+  const photo={
+    id:photoId,
+    file:`photos/${city}/${photoId}.webp`,
+    thumb:`thumbnails/${city}/${photoId}.webp`,
+  };
+  for(const key of PHOTO_METADATA_FIELDS)photo[key]=metadata[key];
+  if(metadata.description!==undefined)photo.description=metadata.description;
   return photo;
 }
 
@@ -94,7 +115,7 @@ function validatePhoto(file,photo,index,seen,city,id){
  * reference fields are resolved here so the browser does not need the shared
  * dictionary.
  */
-export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city){
+export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city,photoMetadata=new Map()){
   if(!isPlainObject(card))fail(file,'record must be an object');
   const id=requireString(file,card.id,'id');
   const names=requireLabels(file,card.names,'names');
@@ -131,7 +152,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
 
   if(!Array.isArray(card.photos))fail(file,'photos must be an array');
   const seenPhotos=new Set();
-  const photos=card.photos.map((photo,index)=>validatePhoto(file,photo,index,seenPhotos,city,id));
+  const photos=card.photos.map((photoId,index)=>validatePhoto(file,photoId,index,seenPhotos,city,photoMetadata));
 
   const styles=referenceLabels(file,attributes.styles,styleId,'style');
   const yearLabels=referenceLabels(file,attributes.yearLabels,yearLabelId,'construction label');
@@ -193,6 +214,7 @@ export async function assembleAtlas({city=DEFAULT_CITY,root=ROOT,outFile,quiet=f
   const destination=outFile??(city===DEFAULT_CITY?DEFAULT_OUT:path.join(root,'public','atlas',`${city}.json`));
   const sourceDir=path.join(root,'data','atlas',city);
   const attributes=await loadCityAux({root,city});
+  const photoMetadata=await loadPhotoMetadata(root,city);
 
   let files;
   try{files=(await readdir(sourceDir)).filter(name=>name.endsWith('.json')).sort();}
@@ -212,7 +234,7 @@ export async function assembleAtlas({city=DEFAULT_CITY,root=ROOT,outFile,quiet=f
     if(card.id!==id)fail(relative,`id "${card.id}" does not match filename "${id}.json"`);
     if(ids.has(id))fail(relative,`duplicate id "${id}"`);
     ids.add(id);
-    cards.push(hydrateCard(card,attributes,relative,city));
+    cards.push(hydrateCard(card,attributes,relative,city,photoMetadata));
     progress.advance(file);
   }
   progress.finish();

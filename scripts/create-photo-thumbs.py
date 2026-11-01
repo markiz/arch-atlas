@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """Create the preview version of every atlas photo.
 
-The full photograph remains the gallery image. Previews live in a separate
-generated tree and keep the original relative name:
+The full photograph remains the gallery image. The source card stores only the
+ordered SHA-256 photo identifiers, and the cache is content-addressed:
 
-  data/photos/<city>/<id>/<n>.webp -> data/thumbnails/<city>/<id>/<n>.webp
+  data/photos/<city>/<sha256>.webp -> data/thumbnails/<city>/<sha256>.webp
 
-They are width-limited to 720 px, preserve the source aspect ratio, and are
-never upscaled. The card references the preview as
-thumbnails/<city>/<id>/<n>.webp. Browser cards and the inspector show this
+Previews are width-limited to 720 px, preserve the source aspect ratio, and are
+never upscaled. The bundle derives the preview path as
+thumbnails/<city>/<sha256>.webp. Browser cards and the inspector show this
 preview, while the full gallery files load afterwards.
 
-The `thumb` field in each card is kept in sync. Existing previews newer than
-their source are left untouched, so repeated builds do not reconvert anything.
-`npm run build`, `npm run check` and `npm run dev` run this script through
-scripts/create-photo-thumbs.mjs.
+Because the source name is already its content hash, a changed image gets a new
+name automatically. Existing previews newer than their source are left
+untouched, so repeated builds do not reconvert anything. Unreferenced previews
+are pruned. `npm run build`, `npm run check` and `npm run dev` run this script
+through scripts/create-photo-thumbs.mjs.
 
 Usage:
   python3 scripts/create-photo-thumbs.py --dry-run
@@ -30,29 +31,11 @@ from pathlib import Path
 
 from PIL import Image
 
-from atlas_source import ROOT, THUMBNAILS_DIR, read_cards, thumb_relative, write_card
+from atlas_source import CITY, PHOTO_ID_RE, THUMBNAILS_DIR, photo_path, read_cards, thumb_path
 from progress import Progress
 
 TARGET_WIDTH = 720
 QUALITY = 75
-
-
-def set_thumb(photo: dict, relative: str) -> bool:
-    """Keep `thumb` next to `file` instead of appending it after all fields."""
-    if photo.get('thumb') == relative:
-        return False
-    ordered: dict = {}
-    for key, value in photo.items():
-        if key == 'thumb':
-            continue
-        ordered[key] = value
-        if key == 'file':
-            ordered['thumb'] = relative
-    if 'thumb' not in ordered:
-        ordered['thumb'] = relative
-    photo.clear()
-    photo.update(ordered)
-    return True
 
 
 def make_thumb(source: Path, target: Path) -> None:
@@ -69,20 +52,21 @@ def make_thumb(source: Path, target: Path) -> None:
 
 def prune_thumbnails(expected: set[Path]) -> int:
     """Remove previews that no card references, then empty directories."""
-    if not THUMBNAILS_DIR.exists():
+    directory = THUMBNAILS_DIR / CITY
+    if not directory.exists():
         return 0
     removed = 0
-    for path in sorted(THUMBNAILS_DIR.rglob('*')):
+    for path in sorted(directory.rglob('*')):
         if path.is_file() and path not in expected:
             path.unlink()
             removed += 1
-    for directory in sorted(
-        (path for path in THUMBNAILS_DIR.rglob('*') if path.is_dir()),
+    for child in sorted(
+        (path for path in directory.rglob('*') if path.is_dir()),
         key=lambda path: len(path.parts),
         reverse=True,
     ):
         try:
-            directory.rmdir()
+            child.rmdir()
         except OSError:
             pass
     return removed
@@ -95,31 +79,27 @@ def main() -> int:
     args = parser.parse_args()
 
     cards = read_cards()
-    changed_cards: list[dict] = []
-    jobs: list[tuple[dict, dict, Path, Path]] = []
+    jobs: dict[str, tuple[Path, Path]] = {}
     expected: set[Path] = set()
+    errors = 0
     for card in cards.values():
-        card_changed = False
-        for photo in card.get('photos', []):
-            full_relative = photo.get('file')
-            if not full_relative:
-                print(f'{card["id"]}: photo without file', file=sys.stderr)
+        for photo_id in card.get('photos', []):
+            if not isinstance(photo_id, str) or not PHOTO_ID_RE.fullmatch(photo_id):
+                print(f'{card["id"]}: invalid photo id {photo_id!r}', file=sys.stderr)
+                errors += 1
                 continue
-            source = ROOT / 'data' / full_relative
-            target_relative = thumb_relative(full_relative)
-            target = ROOT / 'data' / target_relative
+            if photo_id in jobs:
+                continue
+            source = photo_path(photo_id)
+            target = thumb_path(photo_id)
+            jobs[photo_id] = (source, target)
             expected.add(target)
-            if set_thumb(photo, target_relative):
-                card_changed = True
-            jobs.append((card, photo, source, target))
-        if card_changed:
-            changed_cards.append(card)
 
     progress = Progress(len(jobs), 'create photo previews')
-    progress.start(f'{len(jobs)} photos, width <= {TARGET_WIDTH}px')
-    created = skipped = errors = 0
-    for card, photo, source, target in jobs:
-        label = f'{card["id"]}/{Path(photo["file"]).name}'
+    progress.start(f'{len(jobs)} unique photos, width <= {TARGET_WIDTH}px')
+    created = skipped = 0
+    for photo_id, (source, target) in jobs.items():
+        label = photo_id[:12]
         if not source.exists():
             errors += 1
             print(f'{label}: missing source {source}', file=sys.stderr)
@@ -146,8 +126,6 @@ def main() -> int:
 
     removed = 0
     if not args.dry_run:
-        for card in changed_cards:
-            write_card(card)
         removed = prune_thumbnails(expected)
     print(
         f'Preview photos: {created} {"would be " if args.dry_run else ""}created, '

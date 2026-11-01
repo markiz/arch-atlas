@@ -1,13 +1,18 @@
-"""Read and write the one-JSON-per-object atlas source.
+"""Read and write the one-JSON-per-object atlas source and its photo cache.
 
-The atlas source of truth is data/atlas/tbilisi/<id>.json. Research photo
-scripts patch these files directly and write them back as pretty JSON; the packed
-bundle in public/atlas/buildings.json is rebuilt by scripts/assemble-atlas.mjs.
+The atlas source of truth is data/atlas/tbilisi/<id>.json. Photo metadata is
+stored next to the full image in data/photos/<city>/<sha256>.metadata.json;
+the source card keeps only the ordered list of SHA-256 photo identifiers. The
+packed bundle in public/atlas/buildings.json is rebuilt by
+scripts/assemble-atlas.mjs.
 """
 from __future__ import annotations
 
+import hashlib
 import json
+import re
 import threading
+import uuid
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -16,6 +21,9 @@ CITY = 'tbilisi'
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 PHOTOS_DIR = ROOT / 'data/photos'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails'
+PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
+PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
+PHOTO_OPTIONAL_FIELDS = ('description',)
 _PHOTO_LOCK = threading.Lock()
 
 # Photo width policy: free Commons licenses are published at up to 1920 px;
@@ -46,10 +54,13 @@ def card_path(card_id: str) -> Path:
 
 
 def write_card(card: dict[str, Any]) -> None:
-    card_path(card['id']).write_text(
+    path = card_path(card['id'])
+    temporary = path.with_name(f'.{path.name}.{uuid.uuid4().hex}.tmp')
+    temporary.write_text(
         json.dumps(card, ensure_ascii=False, indent=2) + '\n',
         encoding='utf-8',
     )
+    temporary.replace(path)
 
 
 def write_cards(cards: Iterable[dict[str, Any]]) -> None:
@@ -57,74 +68,162 @@ def write_cards(cards: Iterable[dict[str, Any]]) -> None:
         write_card(card)
 
 
+def photo_path(photo_id: str, city: str = CITY) -> Path:
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return PHOTOS_DIR / city / f'{photo_id}.webp'
+
+
+def photo_metadata_path(photo_id: str, city: str = CITY) -> Path:
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return PHOTOS_DIR / city / f'{photo_id}.metadata.json'
+
+
+def thumb_path(photo_id: str, city: str = CITY) -> Path:
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return THUMBNAILS_DIR / city / f'{photo_id}.webp'
+
+
+def photo_relative(photo_id: str, city: str = CITY) -> str:
+    """Return the published-relative path of a full photo."""
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return f'photos/{city}/{photo_id}.webp'
+
+
+def thumb_relative(photo_id: str, city: str = CITY) -> str:
+    """Return the published-relative path of a photo preview."""
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return f'thumbnails/{city}/{photo_id}.webp'
+
+
+def read_photo_metadata(photo_id: str, city: str = CITY) -> dict[str, Any] | None:
+    path = photo_metadata_path(photo_id, city)
+    if not path.exists():
+        return None
+    value = json.loads(path.read_text(encoding='utf-8'))
+    if not isinstance(value, dict):
+        raise ValueError(f'{path}: metadata must be an object')
+    return value
+
+
+def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
+    normalized: dict[str, Any] = {}
+    for field in PHOTO_METADATA_FIELDS:
+        value = metadata.get(field)
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f'photo metadata field {field} must be a non-empty string')
+        normalized[field] = value
+    description = metadata.get('description')
+    if description is not None:
+        if not isinstance(description, str):
+            raise ValueError('photo metadata field description must be a string')
+        if description.strip():
+            normalized['description'] = description
+    return normalized
+
+
+def write_photo_metadata(photo_id: str, metadata: dict[str, Any], city: str = CITY) -> bool:
+    """Write <sha256>.metadata.json, merging a missing optional description.
+
+    The image bytes are the identity of a photo, so two gallery entries that use
+    the same file share one canonical sidecar. Conflicting attribution for the
+    same bytes is an error, not a silent overwrite.
+    """
+    path = photo_metadata_path(photo_id, city)
+    normalized = _normalized_metadata(metadata)
+    current = read_photo_metadata(photo_id, city)
+    if current is not None:
+        merged = dict(current)
+        for field in PHOTO_METADATA_FIELDS:
+            if merged.get(field) != normalized[field]:
+                raise ValueError(f'{path}: conflicting {field} for the same photo bytes')
+        old_description = merged.get('description')
+        new_description = normalized.get('description')
+        if new_description:
+            if old_description and old_description != new_description:
+                raise ValueError(f'{path}: conflicting description for the same photo bytes')
+            merged['description'] = new_description
+        if merged == current:
+            return False
+        normalized = merged
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f'.{path.name}.{uuid.uuid4().hex}.tmp')
+    temporary.write_text(json.dumps(normalized, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    temporary.replace(path)
+    return True
+
+
+def save_photo(image, card_id: str | None = None, city: str = CITY, **save_options) -> str:
+    """Save a WebP under its SHA-256 and return the photo id.
+
+    `card_id` is kept for compatibility with older research scripts and no
+    longer affects the path: the cache is content-addressed by city.
+    """
+    directory = PHOTOS_DIR / city
+    directory.mkdir(parents=True, exist_ok=True)
+    with _PHOTO_LOCK:
+        temporary = directory / f'.tmp-{uuid.uuid4().hex}.webp'
+        try:
+            image.save(temporary, 'WEBP', **save_options)
+            digest = hashlib.sha256(temporary.read_bytes()).hexdigest()
+            target = photo_path(digest, city)
+            if target.exists():
+                temporary.unlink()
+            else:
+                temporary.replace(target)
+            return digest
+        finally:
+            temporary.unlink(missing_ok=True)
+
+
+def save_photo_with_metadata(
+    image,
+    metadata: dict[str, Any],
+    city: str = CITY,
+    **save_options,
+) -> str:
+    photo_id = save_photo(image, city=city, **save_options)
+    write_photo_metadata(photo_id, metadata, city)
+    return photo_id
+
+
+def _record_photo_id(record: dict[str, Any]) -> str:
+    photo_id = record.get('id') or record.get('file')
+    if not isinstance(photo_id, str) or not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError('photo record must carry a sha256 photo id')
+    return photo_id
+
+
 def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, Any] | None]) -> int:
-    """Append new photos to their cards, skipping an already attached source."""
+    """Attach downloaded photos to cards as ordered sha256 identifiers."""
     added = 0
-    for card_id, photo in photos.items():
-        if not photo:
+    for card_id, record in photos.items():
+        if not record:
             continue
         card = cards.get(card_id)
         if card is None:
             print('missing card', card_id)
             continue
-        existing = {item.get('source') for item in card.get('photos', [])}
-        if photo.get('source') in existing:
+        photo_id = _record_photo_id(record)
+        metadata = {field: record.get(field) for field in PHOTO_METADATA_FIELDS + PHOTO_OPTIONAL_FIELDS}
+        write_photo_metadata(photo_id, metadata)
+        current = card.setdefault('photos', [])
+        if photo_id in current:
             print('already attached', card_id)
             continue
-        if not photo.get('thumb') and photo.get('file'):
-            photo['thumb'] = thumb_relative(photo['file'])
-        card.setdefault('photos', []).append(photo)
+        existing_sources = {
+            (read_photo_metadata(item) or {}).get('source')
+            for item in current
+            if isinstance(item, str)
+        }
+        if metadata.get('source') in existing_sources:
+            print('already attached', card_id)
+            continue
+        current.append(photo_id)
         write_card(card)
         added += 1
     return added
-
-
-def photo_dir(card_id: str, city: str = CITY) -> Path:
-    return PHOTOS_DIR / city / card_id
-
-
-def thumb_dir(card_id: str, city: str = CITY) -> Path:
-    return THUMBNAILS_DIR / city / card_id
-
-
-def thumb_relative(file: str) -> str:
-    """Map photos/<city>/<id>/<n>.webp to thumbnails/<city>/<id>/<n>.webp."""
-    path = Path(file)
-    if not path.parts or path.parts[0] != 'photos':
-        raise ValueError(f'photo path must start with photos/: {file}')
-    return (Path('thumbnails') / Path(*path.parts[1:])).as_posix()
-
-
-def thumb_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]:
-    """Return the absolute and published-relative path for one preview."""
-    return (
-        thumb_dir(card_id, city) / f'{index}.webp',
-        f'thumbnails/{city}/{card_id}/{index}.webp',
-    )
-
-
-def photo_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]:
-    """Return the absolute and published-relative path for one photo."""
-    return (
-        photo_dir(card_id, city) / f'{index}.webp',
-        f'photos/{city}/{card_id}/{index}.webp',
-    )
-
-
-def next_photo_index(card_id: str, city: str = CITY) -> int:
-    directory = photo_dir(card_id, city)
-    index = 1
-    while (directory / f'{index}.webp').exists():
-        index += 1
-    return index
-
-
-def save_photo(image, card_id: str, city: str = CITY, **save_options) -> str:
-    """Save a new full-size photo under data/photos and return its card path."""
-    with _PHOTO_LOCK:
-        directory = photo_dir(card_id, city)
-        index = next_photo_index(card_id, city)
-        path, relative = photo_target(card_id, index, city)
-        directory.mkdir(parents=True, exist_ok=True)
-        image.save(path, 'WEBP', **save_options)
-        return relative
