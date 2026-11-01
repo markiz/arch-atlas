@@ -1,4 +1,4 @@
-import {Fragment,useEffect,useMemo,useRef,useState} from 'react';
+import {Fragment,useEffect,useId,useMemo,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 import type {FeatureCollection} from 'geojson';
 import type {Building,Data,Filters,Photo} from './types';
@@ -14,6 +14,27 @@ function Icon({name,size=18}:{name:string;size?:number}){
  const common={width:size,height:size,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.6,strokeLinecap:'round' as const,strokeLinejoin:'round' as const,'aria-hidden':true as const};
  const paths:Record<string,React.ReactNode>={search:<><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 4 4"/></>,map:<><path d="m3 6 6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><path d="M9 4v14M15 6v14"/></>,list:<><path d="M9 6h12M9 12h12M9 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></>,close:<><path d="M5 5l14 14M19 5 5 19"/></>,arrow:<><path d="M5 12h14M13 6l6 6-6 6"/></>,pin:<><path d="M19 10c0 5-7 10-7 10S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2"/></>,sliders:<><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2" fill="currentColor"/><circle cx="16" cy="17" r="2" fill="currentColor"/></>,external:<><path d="M13 5h6v6M19 5 10 14"/><path d="M19 14v5H5V5h5"/></>};
  return <svg {...common}>{paths[name]}</svg>
+}
+function InfoTip({text,label}:{text:string;label:string}){
+ const [open,setOpen]=useState(false),ref=useRef<HTMLSpanElement>(null),id=useId();
+ useEffect(()=>{if(!open)return;const close=(event:PointerEvent)=>{if(ref.current&&!ref.current.contains(event.target as Node))setOpen(false)};const key=(event:KeyboardEvent)=>{if(event.key==='Escape'){event.stopPropagation();setOpen(false)}};document.addEventListener('pointerdown',close);document.addEventListener('keydown',key);return()=>{document.removeEventListener('pointerdown',close);document.removeEventListener('keydown',key)}},[open]);
+ return <span ref={ref} className="info-tip" onPointerEnter={event=>{if(event.pointerType==='mouse')setOpen(true)}} onPointerLeave={event=>{if(event.pointerType==='mouse')setOpen(false)}}>
+  <button type="button" className="info-tip-button" aria-label={label} aria-expanded={open} aria-describedby={open?id:undefined} onClick={()=>setOpen(value=>!value)}>?</button>
+  {open&&<span className="info-tip-bubble" role="tooltip" id={id}>{text}</span>}
+ </span>
+}
+function photoTechnicalNote(modifications:string,t:(value:string)=>string){
+ const clauses=modifications.split(';').map(value=>value.trim()).filter(Boolean).filter(value=>!/полное качество|оригинал.*не (?:использ|сохран)/i.test(value));
+ const clean=clauses.join('; ').replace(/\.$/,'');
+ const width=clean.match(/уменьшен размер до\s+(\d+)\s*px/i);
+ const resized=/уменьшен размер/i.test(clean);
+ const parts:string[]=[];
+ if(width)parts.push(t('Ширина уменьшена до ')+width[1]+' px');
+ else if(resized)parts.push(t('Размер уменьшен'));
+ if(/webp/i.test(clean))parts.push(t('Фото преобразовано в WebP'));
+ const other=clauses.filter(value=>!/уменьшен размер/i.test(value)&&!/webp/i.test(value)).join('; ');
+ if(other)parts.push(other);
+ return parts.length?parts.join(' · '):clean;
 }
 function PeriodChoices({selected,onToggle,onHover,className}:{selected:string[];onToggle:(label:string)=>void;onHover:(label:string|null)=>void;className:string}){
  const {t}=useI18n();
@@ -91,7 +112,7 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
  const district=building.districts?.[language]||building.district;
  const address=building.addresses?.[language]??building.address;
  const architects=building.architectsByLanguage?.[language]||building.architects;
- const [photoIndex,setPhotoIndex]=useState(0),[lightboxOpen,setLightboxOpen]=useState(false);const images=photos.assets;const current=images[photoIndex]??images[0];const credits=current?.photo;const preview=current?.thumb??current?.full;const gallery=current?.full??current?.thumb;
+ const [photoIndex,setPhotoIndex]=useState(0),[lightboxOpen,setLightboxOpen]=useState(false);const images=photos.assets;const current=images[photoIndex]??images[0];const credits=current?.photo;const photoNote=credits?photoTechnicalNote(credits.modifications,t):'';const preview=current?.thumb??current?.full;const gallery=current?.full??current?.thumb;
  const close=useRef<HTMLButtonElement>(null),photoOpener=useRef<HTMLButtonElement>(null);useEffect(()=>{close.current?.focus()},[building.id]);useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!lightboxOpen)onClose()};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[building.id,lightboxOpen]);
  const googleMapsUrl=building.googlePlaceId?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${building.nameEn||building.name}, ${building.addresses?.en||''}, Tbilisi, Georgia`)}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${building.coordinates[1]},${building.coordinates[0]}`)}`;
  function nextPhoto(){setPhotoIndex(i=>images.length?(i+1)%images.length:0)}
@@ -115,7 +136,7 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
     <div className="details"><div><span>{t("ПОСТРОЕНО")}</span><strong>{constructionLabel}</strong></div><div><span>{t("СТИЛЬ")}</span><strong>{individualStyles.map((item,index)=><Fragment key={item.id}>{index>0?', ':''}{item.id!=='undetermined'?<button className="detail-filter" onClick={()=>onFilter('style',item.id)} aria-label={t("Фильтр по стилю: ")+item.label}>{item.label}</button>:item.label}</Fragment>)}</strong></div><div className="full"><span>{t("АРХИТЕКТОР")}</span><strong>{architects.length?architects.map((architect,index)=><Fragment key={building.architectIds[index]||architect}>{index>0?', ':''}<button className="detail-filter" onClick={()=>onFilter('architect',building.architectIds[index]||architect)} aria-label={t("Фильтр по архитектору: ")+architect}>{architect}</button></Fragment>):t('Не установлен')}</strong></div></div>
     {history.trim()&&<><div className="section-rule"/><p className="eyebrow">{t('ИСТОРИЯ ЗДАНИЯ')}</p><p className="history">{history}</p></>}
     <button className="text-link map-link" onClick={onMap}><Icon name="pin" size={15}/> {t('Показать на карте')} <Icon name="arrow" size={16}/></button>
-    <div className="credits"><p>{t('ДАННЫЕ И ФОТОГРАФИЯ')}</p><a href={building.source} target="_blank" rel="noreferrer">{t('Источник сведений')} <Icon name="external" size={12}/></a>{building.otherSource&&<a href={building.otherSource} target="_blank" rel="noreferrer">{t('Дополнительный источник')} <Icon name="external" size={12}/></a>}{credits&&<><a href={credits.source} target="_blank" rel="noreferrer">{t("Фото: ")}{credits.author} · {credits.license} <Icon name="external" size={12}/></a><span>{t(credits.modifications)}. <a href={credits.licenseUrl} target="_blank" rel="noreferrer">{t(credits.license==='Не установлена'?'Источник фото':'Условия лицензии')}</a></span></>}<span>{t(building.geometryQuality)}.</span></div>
+    <div className="credits"><p>{t('ДАННЫЕ И ФОТОГРАФИЯ')}</p><a href={building.source} target="_blank" rel="noreferrer">{t('Источник сведений')} <Icon name="external" size={12}/></a>{building.otherSource&&<a href={building.otherSource} target="_blank" rel="noreferrer">{t('Дополнительный источник')} <Icon name="external" size={12}/></a>}{credits&&<><a href={credits.source} target="_blank" rel="noreferrer">{t("Фото: ")}{credits.author} · {credits.license} <Icon name="external" size={12}/></a><span className="credit-line"><a href={credits.licenseUrl} target="_blank" rel="noreferrer">{t(credits.license==='Не установлена'?'Источник фото':'Условия лицензии')}</a>{photoNote&&<InfoTip text={photoNote} label={t('Технические сведения о фотографии')}/>}</span></>}{building.geometryQuality&&<span className="credit-line credit-contour"><span>{t('Контур')}</span><InfoTip text={building.geometryQuality} label={t('Технические сведения о контуре')}/></span>}</div>
    </div>
   </div>
  </aside>{lightboxOpen&&credits&&gallery&&<PhotoLightbox building={building} src={gallery} index={photoIndex} total={images.length} description={credits.description} credit={credits} onClose={()=>setLightboxOpen(false)} onNext={nextPhoto} onPrevious={previousPhoto} opener={photoOpener}/>}</>

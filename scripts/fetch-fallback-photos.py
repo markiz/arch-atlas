@@ -81,7 +81,7 @@ def main() -> int:
             'license': 'Не установлена',
             'licenseUrl': candidate['record'],
             'source': candidate['photo'],
-            'modifications': (f'уменьшен размер до {width} px по ширине, преобразовано в WebP; полное качество не используется' if resized else 'преобразовано в WebP; полное качество не используется'),
+            'modifications': (f'уменьшен размер до {width} px по ширине, преобразовано в WebP' if resized else 'преобразовано в WebP'),
             'description': candidate.get('note', ''),
         })
         card.setdefault('photos', []).append(photo_id)

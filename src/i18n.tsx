@@ -26,6 +26,9 @@ const extras:Record<Exclude<Language,'ru'>,Record<string,string>>={
 Object.assign(extras.en,{'Найти…':'Search…','Поиск: ':'Search: ','Снять выбор':'Clear selection','Совпадений нет':'No matches'});
 Object.assign(extras.ka,{'Найти…':'ძიება…','Поиск: ':'ძებნა: ','Снять выбор':'მონიშვნის მოხსნა','Совпадений нет':'შედეგები არ არის'});
 Object.assign(extras.uk,{'Найти…':'Пошук…','Поиск: ':'Пошук: ','Снять выбор':'Зняти вибір','Совпадений нет':'Збігів немає'});
+Object.assign(extras.en,{'Ширина уменьшена до ':'Width reduced to ','Размер уменьшен':'Resized','Фото преобразовано в WebP':'Photo converted to WebP','Технические сведения о фотографии':'Photo technical details','Технические сведения о контуре':'Outline technical details','Контур':'Outline'});
+Object.assign(extras.ka,{'Ширина уменьшена до ':'სიგანე შემცირებულია ','Размер уменьшен':'ზომა შემცირდა','Фото преобразовано в WebP':'ფოტო გადაყვანილია WebP ფორმატში','Технические сведения о фотографии':'ტექნიკური ცნობები ფოტოზე','Технические сведения о контуре':'ტექნიკური ცნობები კონტურზე','Контур':'კონტური'});
+Object.assign(extras.uk,{'Ширина уменьшена до ':'Ширину зменшено до ','Размер уменьшен':'Розмір зменшено','Фото преобразовано в WebP':'Фото перетворено у WebP','Технические сведения о фотографии':'Технічні відомості про фото','Технические сведения о контуре':'Технічні відомості про контур','Контур':'Контур'});
 export function translate(value:string,language:Language):string{
  if(language==='ru')return value;
  const direct=messages[language][value]??extras[language][value];if(direct)return direct;
