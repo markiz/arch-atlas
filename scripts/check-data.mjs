@@ -5,6 +5,9 @@ import {Progress} from './lib/progress.mjs';
 const data=JSON.parse(await readFile('public/atlas/buildings.json','utf8'));
 const geo=JSON.parse(await readFile('public/atlas/basemap.geojson','utf8'));
 const buildingOutlines=JSON.parse(await readFile('public/atlas/building-outlines.geojson','utf8'));
+const taxonomy=JSON.parse(await readFile('data/photo-visual-tags.json','utf8'));
+const visualTagIds=new Set(taxonomy.tags.map(tag=>tag.id));
+assert(taxonomy.tags.length<50,`visual tag taxonomy must stay below 50 tags, found ${taxonomy.tags.length}`);
 const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,previews=0,withPhotos=0,galleries=0;
 assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.features.length>0,'Empty building outlines');
 assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
@@ -51,6 +54,7 @@ for(const b of data){
   for(const k of ['id','file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
   for(const k of ['width','height'])assert(Number.isInteger(p[k])&&p[k]>0,`${b.id}: photo.${k} must be a positive integer`);
   for(const k of ['sourceTags','visualTags'])if(p[k]!==undefined)assert(Array.isArray(p[k])&&p[k].length>0&&p[k].every(tag=>typeof tag==='string'&&tag.trim())&&new Set(p[k]).size===p[k].length,`${b.id}: photo.${k} must be a non-empty array of unique strings`);
+  if(p.visualTags)for(const tag of p.visualTags)assert(visualTagIds.has(tag),`${b.id}: unknown visual tag ${tag}`);
   assert(/^[a-f0-9]{64}$/.test(p.id),`${b.id}: photo id must be a lowercase sha256`);
   const expectedFile=`photos/tbilisi/${p.id}.webp`;
   const expectedThumb=`thumbnails/tbilisi/${p.id}.webp`;

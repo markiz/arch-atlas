@@ -38,6 +38,17 @@
 - `scripts/sync-photo-source-tags.py` (`npm run photos:source-tags`) сначала использует кэш `work/photo-research/candidates.json`, недостающие категории запрашивает через Commons API и кэширует в `work/photo-research/source-tags-cache.json`. Для фото реестра тегов нет, поле отсутствует.
 - `apply-photo-candidates.py` записывает `sourceTags` для новых снимков из уже собранного `categories` кандидата, поэтому теги появляются вместе с загрузкой исходника, а не отдельной ручной операцией.
 
+## Визуальные теги
+
+- `visualTags` — необязательный массив стандартизованных оптических тегов. Таксономия — `data/photo-visual-tags.json`: **38 тегов**, меньше лимита в 50. Три группы:
+  - `scene`: `facade`, `interior`, `street`, `courtyard`, `multiple-buildings`, `panorama`, `aerial`;
+  - `object`: `balcony`, `window`, `door`, `roof`, `dome`, `tower`, `arch`, `column`, `staircase`, `fence-wall`, `detail`, `plaque`, `people`, `car`, `tree`, `sky`, `water`, `construction`, `scaffolding`, `ruin`, `graffiti`, `shopfront`, `air-conditioner`, `street-lamp`, `sign`;
+  - `condition`: `nighttime`, `dark`, `blurry`, `tilted`, `snow`, `rain`.
+- Скрипт `scripts/classify-photo-visuals.py` (`npm run photos:visual-tags`) использует локальную квантованную CLIP ViT-B/32 в ONNX. Модель лежит в `.cache/clip` и не коммитится; `--download-model` скачивает её, дополнительные зависимости — `requirements-photo-tags.txt`. Яркость и доля тёмных пикселей уточняют `nighttime`/`dark`, дисперсия лапласиана — `blurry`.
+- Теги пишутся в порядке таксономии. Уже размеченные снимки пропускаются; `--force` переклассифицирует, `--only` и `--dry-run` нужны для проверки. Отчёт — `work/photo-research/visual-tags.json`.
+- Это черновая оптическая разметка, а не замена ручной проверке: CLIP путается на мелких деталях, тенях и нечётких кадрах. Теги не влияют на права, атрибуцию или отбор фотографии; спорные случаи проверяются глазами.
+- Пайплайн: `collect-photo-candidates.py` → `apply-photo-candidates.py` → `npm run photos:source-tags` → `npm run photos:visual-tags`. Для нового батча достаточно `npm run photos:annotate`: source tags и visual tags добавляются после загрузки, уже размеченные фото не пересчитываются.
+
 ## Атрибуция
 
 - Каждый sidecar `<sha256>.metadata.json` обязан содержать `author`, `license`, `licenseUrl`, `source`, `modifications`, `width`, `height`; `description` — по желанию. В собранном `buildings.json` у фотографии появляются ещё `id`, `file` и `thumb`.

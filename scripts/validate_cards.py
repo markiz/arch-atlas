@@ -45,6 +45,7 @@ PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('description',)
 PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
+VISUAL_TAXONOMY = ROOT / 'data/photo-visual-tags.json'
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
     'above_ground', 'heritage_boundary', 'complex_underground',
@@ -117,6 +118,15 @@ def main() -> int:
 
     errors: list[str] = []
     warnings: list[str] = []
+
+    try:
+        taxonomy = read_json(VISUAL_TAXONOMY)
+        visual_tag_ids = {tag['id'] for tag in taxonomy['tags']}
+        if len(visual_tag_ids) >= 50:
+            errors.append(f'data/photo-visual-tags.json: taxonomy must stay below 50 tags, found {len(visual_tag_ids)}')
+    except (OSError, KeyError, TypeError, json.JSONDecodeError) as error:
+        print(f'ERROR: cannot read visual tag taxonomy: {error}', file=sys.stderr)
+        return 1
 
     try:
         attributes = {key: read_json(AUX_DIR / name) for key, name in AUX_FILES.items()}
@@ -295,6 +305,10 @@ def main() -> int:
                                     or len(set(value)) != len(value)
                                 ):
                                     errors.append(f'{label}: photo[{index}].{key} must be a non-empty array of unique strings')
+                                elif key == 'visualTags':
+                                    unknown_visual = sorted(set(value) - visual_tag_ids)
+                                    if unknown_visual:
+                                        errors.append(f'{label}: photo[{index}].visualTags has unknown tags: {", ".join(unknown_visual)}')
                             unknown = set(metadata) - set(PHOTO_FIELDS) - set(PHOTO_OPTIONAL_FIELDS) - set(PHOTO_TAG_FIELDS) - set(PHOTO_DIMENSION_FIELDS)
                             if unknown:
                                 errors.append(f'{label}: photo[{index}] unknown metadata fields: {", ".join(sorted(unknown))}')
