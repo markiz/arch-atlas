@@ -105,7 +105,7 @@
   "geometryQuality": "IoU с реестровой границей 0.93; реестр 466.9 м², OSM 498.3 м²; перенос центра 0.2 м. IoU 0,93; реестр 466,9 м², OSM 498,3 м², центроиды в 0,2 м; флагов нет. OSM way/937316002 обводит корпус (building=apartments, 2 этажа) практически по реестровой границе.",
   "photos": [
     {
-      "file": "photos/osm-937316002-1.webp",
+      "file": "photos/tbilisi/osm-937316002/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3698",

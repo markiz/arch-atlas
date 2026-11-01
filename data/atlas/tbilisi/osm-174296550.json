@@ -144,7 +144,7 @@
   "geometryQuality": "IoU с реестровой границей 0.746; реестр 559.3 м², OSM 523.5 м²; перенос центра 2.7 м. IoU 0,746; реестр 559 м², OSM 523 м², центроид 2,7 м, флагов нет. Контур way/174296550 обводит именно круглый надземный вестибюль (тот же адрес Коставы, 2), подземная часть и платформа в полигон не входят.",
   "photos": [
     {
-      "file": "photos/osm-174296550-1.webp",
+      "file": "photos/tbilisi/osm-174296550/1.webp",
       "author": "Surovyi",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",

@@ -65,7 +65,7 @@
   "geometryQuality": "IoU с реестровой границей 0.0; реестр 77.7 м², OSM 260.2 м²; перенос центра 15.2 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0 неинформативен; OSM-way 742183462 — замкнутый контур 260 м² (5 точек) с тегами building=transportation, was:aerialway=station, abandoned=yes. Реестровая точка в 15 м от контура, фото Commons — в 20 м; контур обводит павильон станции, а не платформу.",
   "photos": [
     {
-      "file": "photos/osm-742183462-1.webp",
+      "file": "photos/tbilisi/osm-742183462/1.webp",
       "author": "Александр Сигачёв",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",

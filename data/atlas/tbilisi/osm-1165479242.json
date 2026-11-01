@@ -65,7 +65,7 @@
   "geometryQuality": "IoU с реестровой границей 0.702; реестр 426.7 м², OSM 340.4 м²; перенос центра 4.1 м. IoU 0,70; реестр 426,7 м², OSM 340,4 м², центроиды в 4,1 м; флагов нет. OSM way/1165479242 обводит уличный корпус (building=apartments, 2 этажа); дворовое крыло в контур не включено.",
   "photos": [
     {
-      "file": "photos/osm-1165479242-1.webp",
+      "file": "photos/tbilisi/osm-1165479242/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3643",

@@ -134,7 +134,7 @@
   "geometryQuality": "Контур OpenStreetMap по идентификатору объекта; уточняется редактором",
   "photos": [
     {
-      "file": "photos/metekhi.webp",
+      "file": "photos/tbilisi/metekhi/1.webp",
       "author": "Mikhail Daneliya",
       "license": "CC0 1.0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -142,7 +142,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/metekhi-curated.webp",
+      "file": "photos/tbilisi/metekhi/2.webp",
       "author": "Gerd Eichmann",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

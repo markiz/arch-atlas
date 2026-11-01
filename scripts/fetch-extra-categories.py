@@ -1,6 +1,7 @@
 import json,urllib.request,urllib.parse,concurrent.futures,io,re,html,time
 from pathlib import Path
 from PIL import Image
+from atlas_source import save_photo
 from progress import Progress
 root=Path(__file__).resolve().parent.parent
 research=json.loads((root/'raw/gallery-research.json').read_text());gals=json.loads((root/'data/gallery-sources.json').read_text());
@@ -37,8 +38,8 @@ def go(job):
    if not (author and license and licenseurl and url and source and source not in old):continue
    if not (license.startswith('CC BY') or license in ('CC0','Public domain','Public Domain')):continue
    if len(author)>180:author=author.split('\n')[0][:180]
-   im=Image.open(io.BytesIO(get(url)));im.thumbnail((1000,1000));name=key+'-category.webp';im.convert('RGB').save(root/'public/atlas/photos'/name,'WEBP',quality=73,method=4)
-   return key,{'file':'photos/'+name,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
+   im=Image.open(io.BytesIO(get(url)));im.thumbnail((1000,1000));relative=save_photo(im.convert('RGB'),key,quality=73,method=4)
+   return key,{'file':relative,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception as e:print('error',key,str(e),flush=True)
  return key,None
 progress=Progress(len(jobs),'fetch Commons categories')

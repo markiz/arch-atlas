@@ -169,7 +169,7 @@
   "geometryQuality": "IoU с реестровой границей 0.911; реестр 4016.6 м², OSM 3912.0 м²; перенос центра 2.1 м. IoU 0,911 (реестр 4017 м², OSM 3912 м²), флагов нет, центроид в 2,1 м. Обведён весь надземный корпус сложной формы, не участок; в OSM стоит heritage=2.",
   "photos": [
     {
-      "file": "photos/osm-56696105-1.webp",
+      "file": "photos/tbilisi/osm-56696105/1.webp",
       "author": "Zviad Avaliani (ზვიად ავალიანი)",
       "license": "Attribution (свободная лицензия, требуется указание автора)",
       "licenseUrl": "https://commons.wikimedia.org/wiki/File:Stalinka_tbilisi_2.JPG",

@@ -88,7 +88,7 @@
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
     {
-      "file": "photos/osm-168100739-g1.webp",
+      "file": "photos/tbilisi/osm-168100739/1.webp",
       "author": "Daibo Taku",
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
@@ -96,7 +96,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/osm-168100739-depicts.webp",
+      "file": "photos/tbilisi/osm-168100739/2.webp",
       "author": "Mehman Ibragimov",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

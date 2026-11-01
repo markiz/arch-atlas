@@ -180,7 +180,7 @@
   "geometryQuality": "IoU с реестровой границей 0.694; реестр 2344.1 м², OSM 2172.3 м²; перенос центра 4.9 м. OSM way/1236448832: IoU 0,69, 85 % OSM-контура внутри реестрового, центроиды в 4,9 м. Обведён надземный корпус (2172 м² против реестровых 2344 м²), участок и подпорные стены не включены. Флагов нет; адрес в реестре (39а) ошибочен.",
   "photos": [
     {
-      "file": "photos/osm-1236448832-1.webp",
+      "file": "photos/tbilisi/osm-1236448832/1.webp",
       "author": "TheadoreTwombly",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

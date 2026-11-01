@@ -92,7 +92,7 @@
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
     {
-      "file": "photos/kashveti.webp",
+      "file": "photos/tbilisi/kashveti/1.webp",
       "author": "Kashveti1.jpg: Paata Vardanashvili\nderivative work: Rabanus Flavus (talk)",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -100,7 +100,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/kashveti-curated.webp",
+      "file": "photos/tbilisi/kashveti/2.webp",
       "author": "Andrei Kalamkarov (www.andreikalamkarov.com)",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",

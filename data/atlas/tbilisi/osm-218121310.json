@@ -70,7 +70,7 @@
   "geometryQuality": "Официальная граница 2850 и OSM way/218121310 совпадают с IoU около 0,89; 97,4% OSM внутри границы, граница покрыта на 91,3%, смещение 0,4 м. Адрес реестра — 91, OSM — 91а; это один корпус, а не соседний дом.",
   "photos": [
     {
-      "file": "photos/osm-218121310-1.webp",
+      "file": "photos/tbilisi/osm-218121310/1.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

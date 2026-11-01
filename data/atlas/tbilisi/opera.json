@@ -224,7 +224,7 @@
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
     {
-      "file": "photos/opera.webp",
+      "file": "photos/tbilisi/opera/1.webp",
       "author": "Francisco Anzola",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -232,7 +232,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/opera-curated.webp",
+      "file": "photos/tbilisi/opera/2.webp",
       "author": "Moreau.henri",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",

@@ -172,7 +172,7 @@
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
   "photos": [
     {
-      "file": "photos/conservatoire.webp",
+      "file": "photos/tbilisi/conservatoire/1.webp",
       "author": "Alex Maisuradze",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -180,7 +180,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/conservatoire-curated.webp",
+      "file": "photos/tbilisi/conservatoire/2.webp",
       "author": "Varsika",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

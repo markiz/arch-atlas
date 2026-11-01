@@ -1,5 +1,6 @@
 import json,pathlib,urllib.parse,urllib.request,time,re,html,concurrent.futures,threading,io
 from PIL import Image
+from atlas_source import save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 rows=json.loads((root/'raw/research-candidates.json').read_text()); entities=json.loads((root/'raw/wikidata-heritage.json').read_text());existing=json.loads((root/'public/atlas/buildings.json').read_text());meta={}; lock=threading.Lock()
@@ -76,13 +77,12 @@ for key,e in entries.items():
  files=e['files'][:(2 if key not in manual else 2)]
  for i,f in enumerate(files):selected.append((key,i,f))
 def download(job):
- key,i,info=job;name=f'{key}-g{i+1}.webp';path=root/'public/atlas/photos'/name
- if path.exists() and path.stat().st_size>64:return(key,i,{'file':'photos/'+name,**{k:v for k,v in info.items() if k not in ('url','title')}})
+ key,i,info=job
  try:
   req=urllib.request.Request(info['url'],headers=headers)
   with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
-  im=Image.open(io.BytesIO(raw));im.thumbnail((1000,1000));im.convert('RGB').save(path,'WEBP',quality=73,method=4)
-  return(key,i,{'file':'photos/'+name,**{k:v for k,v in info.items() if k not in ('url','title')}})
+  im=Image.open(io.BytesIO(raw));im.thumbnail((1000,1000));relative=save_photo(im.convert('RGB'),key,quality=73,method=4)
+  return(key,i,{'file':relative,**{k:v for k,v in info.items() if k not in ('url','title')}})
  except Exception as e:return(key,i,None)
 results={}
 downloads=Progress(len(selected),'download gallery photos')

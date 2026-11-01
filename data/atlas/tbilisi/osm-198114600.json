@@ -85,7 +85,7 @@
   "geometryQuality": "IoU с реестровой границей 0.602; реестр 358.3 м², OSM 339.9 м²; перенос центра 1.6 м. OSM way/198114600: IoU 0,60, 77 % OSM-контура внутри реестрового, центроиды в 1,6 м. Реестровая площадь 358 м², OSM 340 м² — обведён сам дом, без двора. Флагов нет.",
   "photos": [
     {
-      "file": "photos/osm-198114600-1.webp",
+      "file": "photos/tbilisi/osm-198114600/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4896",

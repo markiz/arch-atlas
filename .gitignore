@@ -4,6 +4,9 @@ node_modules/
 # Результат сборки
 dist/
 
+# Сгенерированное зеркало фотографий (источник — data/photos)
+public/atlas/photos/
+
 # Служебные файлы TypeScript
 *.tsbuildinfo
 

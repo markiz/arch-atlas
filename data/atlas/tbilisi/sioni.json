@@ -158,7 +158,7 @@
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
     {
-      "file": "photos/sioni.webp",
+      "file": "photos/tbilisi/sioni/1.webp",
       "author": "Supanut Arunoprayote",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -166,7 +166,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/sioni-curated.webp",
+      "file": "photos/tbilisi/sioni/2.webp",
       "author": "Ken Zuk",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

@@ -86,7 +86,7 @@
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
     {
-      "file": "photos/synagogue.webp",
+      "file": "photos/tbilisi/synagogue/1.webp",
       "author": "Tamar kurtanidze",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -94,7 +94,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/synagogue-curated.webp",
+      "file": "photos/tbilisi/synagogue/2.webp",
       "author": "D.Rovchak",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

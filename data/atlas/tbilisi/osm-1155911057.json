@@ -97,7 +97,7 @@
   "geometryQuality": "IoU с реестровой границей 0.825; реестр 256.5 м², OSM 228.2 м²; перенос центра 0.9 м. IoU 0,83 с реестровой границей (276 м² против 234 м²), centroid 0,9 м, flags нет; OSM way/1155911057 (building=apartments, 2 этажа, 13 вершин) обводит корпус.",
   "photos": [
     {
-      "file": "photos/osm-1155911057-1.webp",
+      "file": "photos/tbilisi/osm-1155911057/1.webp",
       "author": "Национальное агентство охраны культурного наследия Грузии (реестр)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge:60/Files?id=74553_D5F2580B-9735-4E78-97E3-8157D4ACDFD9",

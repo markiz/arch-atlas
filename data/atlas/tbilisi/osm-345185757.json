@@ -117,7 +117,7 @@
   "geometryQuality": "IoU с реестровой границей 0.919; реестр 451.8 м², OSM 450.9 м²; перенос центра 0.7 м. IoU 0,919; OSM way/345185757 — весь двухэтажный корпус между Дюма и Цинцадзе, флагов нет. Пересечения с карточками Цинцадзе, 12 и 16 — по 1,0–1,2 м², примыкание соседних домов.",
   "photos": [
     {
-      "file": "photos/osm-345185757-1.webp",
+      "file": "photos/tbilisi/osm-345185757/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3828",

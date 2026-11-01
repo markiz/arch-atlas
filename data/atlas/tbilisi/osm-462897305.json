@@ -155,7 +155,7 @@
   "geometryQuality": "IoU с реестровой границей 0.819; реестр 1253.6 м², OSM 1296.0 м²; перенос центра 2.1 м. IoU 0,819 (1296 м² OSM против 1253,6 м² реестра), центроид 2,1 м, реестр покрыт на 91,6 %, флагов нет; обведён шестиэтажный корпус, арка-проезд и двор не включены.",
   "photos": [
     {
-      "file": "photos/osm-462897305-1.webp",
+      "file": "photos/tbilisi/osm-462897305/1.webp",
       "author": "Davit butulashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

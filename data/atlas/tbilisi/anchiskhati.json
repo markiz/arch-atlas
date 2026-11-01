@@ -70,7 +70,7 @@
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
   "photos": [
     {
-      "file": "photos/anchiskhati.webp",
+      "file": "photos/tbilisi/anchiskhati/1.webp",
       "author": "Gerd Eichmann",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -78,7 +78,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/anchiskhati-curated.webp",
+      "file": "photos/tbilisi/anchiskhati/2.webp",
       "author": "Kober",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

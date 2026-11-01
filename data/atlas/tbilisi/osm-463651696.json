@@ -75,7 +75,7 @@
   "geometryQuality": "IoU с реестровой границей 0.904; реестр 415.9 м², OSM 395.6 м²; перенос центра 0.4 м. IoU 0,904 (реестр 415,9 м², OSM 395,6 м²), флагов нет, центроид в 0,4 м; обведён двухэтажный корпус с ризалитом, участок не захвачен.",
   "photos": [
     {
-      "file": "photos/osm-463651696-1.webp",
+      "file": "photos/tbilisi/osm-463651696/1.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -84,7 +84,7 @@
       "description": "дом 149 со двора: двухэтажный кирпичный корпус, зелёные деревянные детали, застеклённые балконы (проверено по превью файла)"
     },
     {
-      "file": "photos/osm-463651696-2.webp",
+      "file": "photos/tbilisi/osm-463651696/2.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

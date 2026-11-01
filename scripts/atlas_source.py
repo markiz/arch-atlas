@@ -7,12 +7,15 @@ bundle in public/atlas/buildings.json is rebuilt by scripts/assemble-atlas.mjs.
 from __future__ import annotations
 
 import json
+import threading
 from pathlib import Path
 from typing import Any, Iterable
 
 ROOT = Path(__file__).resolve().parent.parent
+CITY = 'tbilisi'
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
-PHOTOS_DIR = ROOT / 'public/atlas/photos'
+PHOTOS_DIR = ROOT / 'data/photos'
+_PHOTO_LOCK = threading.Lock()
 
 
 def read_cards() -> dict[str, dict[str, Any]]:
@@ -59,11 +62,32 @@ def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, 
     return added
 
 
-def next_photo_name(card_id: str, suffix: str = '') -> str:
-    """Return a free WebP filename for a new photo of this card."""
+def photo_dir(card_id: str, city: str = CITY) -> Path:
+    return PHOTOS_DIR / city / card_id
+
+
+def photo_target(card_id: str, index: int, city: str = CITY) -> tuple[Path, str]:
+    """Return the absolute and published-relative path for one photo."""
+    return (
+        photo_dir(card_id, city) / f'{index}.webp',
+        f'photos/{city}/{card_id}/{index}.webp',
+    )
+
+
+def next_photo_index(card_id: str, city: str = CITY) -> int:
+    directory = photo_dir(card_id, city)
     index = 1
-    while True:
-        name = f'{card_id}-{index}{suffix}.webp'
-        if not (PHOTOS_DIR / name).exists():
-            return name
+    while (directory / f'{index}.webp').exists() or (directory / f'{index}-thumb.webp').exists():
         index += 1
+    return index
+
+
+def save_photo(image, card_id: str, city: str = CITY, **save_options) -> str:
+    """Save a new full-size photo under data/photos and return its card path."""
+    with _PHOTO_LOCK:
+        directory = photo_dir(card_id, city)
+        index = next_photo_index(card_id, city)
+        path, relative = photo_target(card_id, index, city)
+        directory.mkdir(parents=True, exist_ok=True)
+        image.save(path, 'WEBP', **save_options)
+        return relative

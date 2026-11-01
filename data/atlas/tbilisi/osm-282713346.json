@@ -97,7 +97,7 @@
   "geometryQuality": "IoU с реестровой границей 0.65; реестр 734.9 м², OSM 737.7 м²; перенос центра 3.3 м. OSM way/282713346, IoU 0,650, флагов нет; контур совпадает с корпусом, реестр покрыт на 78,9% (часть двора).",
   "photos": [
     {
-      "file": "photos/osm-282713346-1.webp",
+      "file": "photos/tbilisi/osm-282713346/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3280",

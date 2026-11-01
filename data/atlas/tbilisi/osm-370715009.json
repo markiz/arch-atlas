@@ -176,7 +176,7 @@
   "geometryQuality": "IoU с реестровой границей 0.042; реестр 77.7 м², OSM 1839.3 м²; перенос центра 4.3 м. Геометрия карточки — OSM way/370715009, замкнутый Polygon 1839 м², сложная форма из 25+ вершин. Реестровый «полигон» — не контур корпуса, а типовая окружность-буфер 77,7 м² (36 вершин, ~5 м радиус), поэтому IoU 0,042 и флаг osm_much_larger отражают дефект реестровой геометрии, а не расхождение зданий; центроид реестра лежит в 4,3 м от OSM-контура. Флаг osm_composite_or_plot здесь не применим: OSM-объект — сам корпус, а не участок.",
   "photos": [
     {
-      "file": "photos/osm-370715009-1.webp",
+      "file": "photos/tbilisi/osm-370715009/1.webp",
       "author": "Mostafameraji",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -185,7 +185,7 @@
       "description": "Дворец на гребне склона: башня с ажурным завершением и арочные объёмы, вид с расстояния; снято в рамках Wiki Loves Monuments 2018 (Tbilisi City)"
     },
     {
-      "file": "photos/osm-370715009-2.webp",
+      "file": "photos/tbilisi/osm-370715009/2.webp",
       "author": "Mostafameraji",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

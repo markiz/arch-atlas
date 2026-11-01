@@ -121,7 +121,7 @@
   "geometryQuality": "IoU с реестровой границей 0.938; реестр 615.0 м², OSM 616.7 м²; перенос центра 0.3 м. IoU 0,938 (пересечение 596,2 м², OSM 616,7 м², реестр 615,0 м²), центроиды в 0,3 м; флагов нет, обведён весь трёхэтажный корпус. OSM way/283175659.",
   "photos": [
     {
-      "file": "photos/osm-283175659-1.webp",
+      "file": "photos/tbilisi/osm-283175659/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3731",

@@ -311,7 +311,7 @@
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
   "photos": [
     {
-      "file": "photos/rustaveli.webp",
+      "file": "photos/tbilisi/rustaveli/1.webp",
       "author": "DDohler",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -319,7 +319,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/rustaveli-curated.webp",
+      "file": "photos/tbilisi/rustaveli/2.webp",
       "author": "Alsandro",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",

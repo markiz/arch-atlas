@@ -67,7 +67,7 @@
   "geometryQuality": "IoU с реестровой границей 0.741; реестр 436.1 м², OSM 456.3 м²; перенос центра 2.3 м. OSM way/337371256, Polygon, 456,3 м² против реестровых 436,1 м², IoU 0,741, центроиды в 2,3 м, флагов нет — обведён сам двухэтажный корпус на углу, а не участок.",
   "photos": [
     {
-      "file": "photos/osm-337371256-1.webp",
+      "file": "photos/tbilisi/osm-337371256/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2791",

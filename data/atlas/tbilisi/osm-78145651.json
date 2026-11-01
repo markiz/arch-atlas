@@ -67,7 +67,7 @@
   "geometryQuality": "IoU с реестровой границей 0.098; реестр 77.7 м², OSM 259.2 м²; перенос центра 7.6 м. IoU 0.098 при флаге osm_much_larger — расхождение объясняется реестровой геометрией: полигон реестра (77,7 м², 37 вершин, bbox ~10×10 м) это буфер официальной точки, а не контур. Реальный контур — OSM way/78145651, замкнутый прямоугольник 259 м² (≈21×14 м) с тегом building=yes; центроиды в 7,6 м. Для карточки брать OSM-контур, реестровый буфер не использовать.",
   "photos": [
     {
-      "file": "photos/osm-78145651-1.webp",
+      "file": "photos/tbilisi/osm-78145651/1.webp",
       "author": "Reda Kerbouche",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -76,7 +76,7 @@
       "description": "храм Св. Николая в крепости Нарикала, общий вид"
     },
     {
-      "file": "photos/osm-78145651-2.webp",
+      "file": "photos/tbilisi/osm-78145651/2.webp",
       "author": "Mostafameraji",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

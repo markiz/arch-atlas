@@ -89,7 +89,7 @@
   "geometryQuality": "IoU с реестровой границей 0.763; реестр 1704.7 м², OSM 2220.7 м²; перенос центра 3.3 м. IoU 0,763: реестровая граница 1705 м², OSM 2221 м², 99,7% реестрового контура покрыто OSM, центроиды в 3,3 м. Флагов нет; обведён надземный двухэтажный корпус, OSM-контур чуть шире по торцам и включает примыкающую пристройку. Номера дома 14 (реестр) и 16 (OSM) относятся к одному объекту — связь задана тегом heritage:website в OSM.",
   "photos": [
     {
-      "file": "photos/osm-57403659-1.webp",
+      "file": "photos/tbilisi/osm-57403659/1.webp",
       "author": "Andrew Milligan sumo",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -98,7 +98,7 @@
       "description": "главный фасад двухэтажного корпуса с ризалитом и высоким фронтоном, 2019 г."
     },
     {
-      "file": "photos/osm-57403659-2.webp",
+      "file": "photos/tbilisi/osm-57403659/2.webp",
       "author": "Andrew Milligan sumo",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

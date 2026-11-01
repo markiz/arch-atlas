@@ -68,7 +68,7 @@
   "geometryQuality": "Официальная граница 4185 и OSM way/1451986805 совпадают с IoU около 0,77; 80,3% OSM внутри границы, граница покрыта на 95,3%, смещение 0,28 м. Контур крошечный (9,5–11,3 м²), но это реальный план часовни, а не участка.",
   "photos": [
     {
-      "file": "photos/osm-1451986805-1.webp",
+      "file": "photos/tbilisi/osm-1451986805/1.webp",
       "author": "Sasha India",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

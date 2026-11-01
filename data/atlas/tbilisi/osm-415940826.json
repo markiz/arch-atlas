@@ -118,7 +118,7 @@
   "geometryQuality": "Официальная граница 3257 и OSM way/415940826 совпадают с IoU около 0,86; 97,6% OSM внутри границы, граница покрыта на 87,3%, смещение 0,7 м. OSM даёт 4 уровня, реестр — 3 этажа и высокий цоколь; этажность в карточке не указана.",
   "photos": [
     {
-      "file": "photos/osm-415940826-1.webp",
+      "file": "photos/tbilisi/osm-415940826/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3257",

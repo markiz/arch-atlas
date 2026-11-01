@@ -85,7 +85,7 @@
   "geometryQuality": "IoU с реестровой границей 0.83; реестр 643.0 м², OSM 637.0 м²; перенос центра 1.1 м. way/337371712: замкнутый 10-точечный Polygon, 633 м² против 643 м² реестровых, IoU 0,83, центроид в 1,1 м, флагов геометрии нет; контур — только корпус, без двора.",
   "photos": [
     {
-      "file": "photos/osm-337371712-1.webp",
+      "file": "photos/tbilisi/osm-337371712/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2981",

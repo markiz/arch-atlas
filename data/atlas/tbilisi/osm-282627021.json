@@ -133,7 +133,7 @@
   "geometryQuality": "IoU с реестровой границей 0.663; реестр 572.6 м², OSM 740.6 м²; перенос центра 2.7 м. IoU 0,66; реестр 572,6 м², OSM 740,6 м², центроиды в 2,7 м; флагов нет. OSM way/282627021 (building=commercial, 1 этаж) на ~29 % больше реестровой границы — вероятно, включает дворовую часть; реестровая граница покрыта на 91,4 %.",
   "photos": [
     {
-      "file": "photos/osm-282627021-1.webp",
+      "file": "photos/tbilisi/osm-282627021/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3710",

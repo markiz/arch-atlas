@@ -14,7 +14,7 @@ python3 -m http.server 8000 --directory dist
 
 Откройте `http://localhost:8000/`. Для GitHub Pages копируйте содержимое `dist` в корень выбранной публикационной ветки. Атлас также работает в подкаталоге, например `https://username.github.io/repository/`.
 
-`file://` не поддерживается. Для геопозиции и проверки SHA-256 нужен HTTPS или `localhost`. Данные атласа, фотографии и векторная подложка загружаются из локального пакета. Внешние карты и тайловые серверы при просмотре не запрашиваются. Запуск закрытой страницы без сети (PWA) не реализован.
+`file://` не поддерживается. Для геопозиции и проверки SHA-256 нужен HTTPS или `localhost`. Данные атласа и векторная подложка загружаются из локального пакета. Фотографии не входят в начальную загрузку: каталог лениво подгружает превью видимых карточек, а все фото объекта — после клика по нему. Внешние карты и тайловые серверы при просмотре не запрашиваются. Запуск закрытой страницы без сети (PWA) не реализован.
 
 ## Исходники
 
@@ -35,16 +35,17 @@ npm run dev
 
 - `src/` — интерфейс, Leaflet-карта и геопозиция, галерея, локальные поиск и фильтры.
 - `data/atlas/tbilisi/<id>.json` — исходные карточки: по одному pretty-JSON на объект, с переводами, контуром и фотографиями. `styleId`, `architectIds`, `districtId` и `yearLabelId` остаются ссылками в общий словарь `data/building-attribute-translations.json`.
-- `public/atlas/buildings.json` — общий JSON Тбилиси, который собирает `scripts/assemble-atlas.mjs`. `basemap.geojson`, `building-outlines.geojson`, `photos/` — подложка, контуры обычных зданий и медиа; контуры обычных зданий загружаются только при включении слоя «Силуэты зданий».
+- `data/photos/<city>/<id>/<n>.webp` — исходники фотографий по объекту и городу; номер соответствует порядку в `photos[]`. В карточке путь записывается как `photos/<city>/<id>/<n>.webp`. `public/atlas/photos/` — сгенерированное зеркало для публикации, его создаёт `scripts/sync-photos.mjs`; вручную его не редактируют.
+- `public/atlas/buildings.json` — общий JSON Тбилиси, который собирает `scripts/assemble-atlas.mjs`. `basemap.geojson`, `building-outlines.geojson` — подложка и контуры обычных зданий; контуры обычных зданий загружаются только при включении слоя «Силуэты зданий».
 - `raw/osm-tbilisi-selected.json` — улицы, парки и музеи; `raw/osm-tbilisi-building-outlines.geojson` — около 121 тыс. контуров зданий по административной границе Тбилиси из локально обработанного регионального PBF.
-- `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` собирает только подложку и контуры зданий; `scripts/assemble-atlas.mjs` упаковывает карточки; `scripts/create-manifest.mjs` считает размеры и SHA-256.
+- `scripts/extract-tbilisi-building-outlines.py` извлекает городской слой из PBF Geofabrik (нужны PyOsmium и Shapely); `scripts/build-data.py` собирает только подложку и контуры зданий; `scripts/assemble-atlas.mjs` упаковывает карточки; `scripts/create-manifest.mjs` считает размеры и SHA-256; `scripts/sync-photos.mjs` публикует фотографии из `data/photos/`.
 - `scripts/queue_collect.py`, `scripts/queue_report.py` и `scripts/validate_cards.py` — сбор фактов по очереди, отчёт и проверка исходных карточек и собранного JSON; `queue_*` работают с `work/`.
-- `scripts/fetch-selected-photos.py` и `scripts/fetch-fallback-photos.py` — свободные фото Commons и, при их отсутствии, низкокачественные фото реестра с явной пометкой «лицензия не установлена»; они добавляют фото прямо в `data/atlas/tbilisi/`. Правила — [docs/photo-policy.md](docs/photo-policy.md).
+- `scripts/fetch-selected-photos.py` и `scripts/fetch-fallback-photos.py` — свободные фото Commons и, при их отсутствии, низкокачественные фото реестра с явной пометкой «лицензия не установлена»; они добавляют запись в `data/atlas/tbilisi/` и файл в `data/photos/tbilisi/<id>/`. Правила — [docs/photo-policy.md](docs/photo-policy.md).
 - `scripts/resolve-geometries.py` обновляет контур в файле объекта и требует Python-пакет Shapely.
 - `data/photo-candidates.json`, `data/photo-fallbacks.json` и `data/research-next-200-google-place-ids.json` — исследовательские кандидаты и отчёты, а не исходники карточек.
 - Длительные загрузчики, сборщики и проверки печатают прогресс в stderr: сколько выполнено, процент, прошедшее время, ETA и скорость; итоговые данные остаются в stdout. Правила и общие helper'ы — [docs/long-running-scripts.md](docs/long-running-scripts.md).
 
-Чтобы пересоздать данные из приложенных OSM-выгрузок и локальных редакционных файлов, выполните `python3 scripts/build-data.py` (подложка и контуры), затем `npm run build` (упаковка карточек, манифест и `dist/`). При `npm run dev` изменение `data/atlas/**/*.json` автоматически пересобирает общий JSON и перезагружает страницу. Скрипты загрузки предоставлены для исследования и требуют сети; повторная выгрузка внешних источников может изменить исходные данные.
+Чтобы пересоздать данные из приложенных OSM-выгрузок и локальных редакционных файлов, выполните `python3 scripts/build-data.py` (подложка и контуры), затем `npm run build` (упаковка карточек, манифест и `dist/`). При `npm run dev` изменение `data/atlas/**/*.json` или `data/photos/**` автоматически пересобирает общий JSON, публикует фотографии и перезагружает страницу. Скрипты загрузки предоставлены для исследования и требуют сети; повторная выгрузка внешних источников может изменить исходные данные.
 
 Источники, детализация, порядок добавления города и батч адресов/Place ID через Google API описаны в [руководстве по сбору данных](docs/location-data-collection.md). Исторические документы и ранние снимки — в [архиве](docs/archive/README.md).
 

@@ -33,7 +33,14 @@ for(const b of data){
  const paths=new Set();
  for(const p of images){
   for(const k of ['file','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
-  assert(!p.file.includes('..')&&!p.file.startsWith('/')&&!paths.has(p.file),`${b.id}: invalid or duplicate photo path`);paths.add(p.file);await access('public/atlas/'+p.file);const bytes=await readFile('public/atlas/'+p.file);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file`);photos++;
+  assert(!p.file.includes('..')&&!p.file.startsWith('/')&&!paths.has(p.file),`${b.id}: invalid or duplicate photo path`);paths.add(p.file);
+  const prefix=`photos/tbilisi/${b.id}/`;
+  assert(p.file.startsWith(prefix)&&/^\d+\.webp$/.test(p.file.slice(prefix.length)),`${b.id}: photo must live under ${prefix}<number>.webp`);
+  const source='data/'+p.file;
+  const published='public/atlas/'+p.file;
+  await access(source);await access(published);
+  for(const file of [source,published]){const bytes=await readFile(file);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${file}`)}
+  photos++;
  }
  progress.advance(b.id);
 }

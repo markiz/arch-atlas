@@ -132,7 +132,7 @@
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
     {
-      "file": "photos/osm-503326365-g1.webp",
+      "file": "photos/tbilisi/osm-503326365/1.webp",
       "author": "This Photo was taken by Supanut Arunoprayote.",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -140,7 +140,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/osm-503326365-g2.webp",
+      "file": "photos/tbilisi/osm-503326365/2.webp",
       "author": "Unknown",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

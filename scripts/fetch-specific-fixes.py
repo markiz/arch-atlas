@@ -1,5 +1,6 @@
 import urllib.request, urllib.parse, json, pathlib, re, html, concurrent.futures, io
 from PIL import Image
+from atlas_source import save_photo
 from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
 names = {'theatre1': 'Mardjanishvili Theatre Tbilisi.jpg', 'theatre2': 'Marjanishvili Theatre in Tbilisi, Georgia, at night. 2022.jpg', 'gallery1': 'National Gallery, Rustaveli Avenue, Tbilisi, Georgia.jpg', 'gallery2': 'Tbilisi, Tbilisi National Gallery 2, Georgia.jpg'}
@@ -19,8 +20,8 @@ def one(item):
         author, lic, licenseurl = v('Artist'), v('LicenseShortName'), v('LicenseUrl')
         if not (author and lic and licenseurl): raise ValueError('missing attribution')
         if len(author) > 180: author = author.split('\n')[0][:180]
-        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); filename = f'{key}-curated.webp'; img.convert('RGB').save(root / 'public/atlas/photos' / filename, 'WEBP', quality=76)
-        return key, {'file': 'photos/' + filename, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
+        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); relative = save_photo(img.convert('RGB'), key, quality=76)
+        return key, {'file': relative, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
     except Exception as ex:
         print('Error', key, ex, flush=True)
         return key, None

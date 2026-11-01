@@ -85,7 +85,7 @@
   "geometryQuality": "IoU с реестровой границей 0.942; реестр 354.4 м², OSM 352.3 м²; перенос центра 0.5 м. IoU 0,942; флагов нет; контур OSM 352,3 м² против реестровых 354,4 м², 97,3 % реестрового контура покрыто OSM.",
   "photos": [
     {
-      "file": "photos/osm-282436197-1.webp",
+      "file": "photos/tbilisi/osm-282436197/1.webp",
       "author": "Santel01",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

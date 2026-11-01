@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "assemble": "node scripts/assemble-atlas.mjs",
-    "build": "node scripts/assemble-atlas.mjs && node scripts/create-manifest.mjs && tsc -b && vite build",
-    "check": "node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
+    "build": "node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && node scripts/create-manifest.mjs && tsc -b && vite build",
+    "check": "node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
+    "photos:sync": "node scripts/sync-photos.mjs",
+    "photos:migrate": "node scripts/migrate-photo-storage.mjs",
     "test": "node --test tests/*.test.mjs",
     "verify": "node scripts/verify-dist.mjs"
   },

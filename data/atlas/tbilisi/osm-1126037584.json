@@ -105,7 +105,7 @@
   "geometryQuality": "IoU с реестровой границей 0.874; реестр 432.1 м², OSM 411.9 м²; перенос центра 0.8 м. IoU 0,874; OSM way/1126037584 — замкнутый контур корпуса, флагов нет; OSM building:levels=3 отражает дворовую трёхэтажность.",
   "photos": [
     {
-      "file": "photos/osm-1126037584-1.webp",
+      "file": "photos/tbilisi/osm-1126037584/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3458",

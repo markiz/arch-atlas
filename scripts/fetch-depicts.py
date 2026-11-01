@@ -1,6 +1,6 @@
 import json,urllib.parse,urllib.request,re,html,io,time,pathlib,concurrent.futures
 from PIL import Image
-from atlas_source import next_photo_name, read_cards
+from atlas_source import read_cards, save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 cards=read_cards();candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
@@ -27,8 +27,8 @@ def go(card):
    if not (author and license and licenseurl and url and source and source not in known):continue
    if not (license.startswith('CC BY') or license in ('CC0','Public domain','Public Domain')):continue
    if len(author)>180:author=author.split('\n')[0][:180]
-   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));name=next_photo_name(key,'-depicts');img.convert('RGB').save(root/'public/atlas/photos'/name,'WEBP',quality=73,method=4)
-   return key,{'file':'photos/'+name,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
+   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));relative=save_photo(img.convert('RGB'),key,quality=73,method=4)
+   return key,{'file':relative,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception:return key,None
  return key,None
 jobs=[card for card in cards.values() if len(card.get('photos',[]))<2]

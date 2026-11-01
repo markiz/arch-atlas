@@ -97,7 +97,7 @@
   "geometryQuality": "IoU с реестровой границей 0.897; реестр 413.8 м², OSM 432.4 м²; перенос центра 0.5 м. IoU 0,897; реестр 413,8 м², OSM 432,4 м², центроид 0,5 м; флагов нет. Контур way/246787222 обводит весь трёхэтажный корпус, а не участок.",
   "photos": [
     {
-      "file": "photos/osm-246787222-1.webp",
+      "file": "photos/tbilisi/osm-246787222/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2727",

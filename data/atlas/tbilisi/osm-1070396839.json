@@ -102,7 +102,7 @@
   "geometryQuality": "Официальная граница 3108 и OSM way/1070396839 совпадают с IoU около 0,93; 98% OSM внутри границы, граница покрыта на 95%, смещение 0,6 м. OSM даёт адрес 138а, реестр — 138; это тот же корпус, а не соседний жилой дом.",
   "photos": [
     {
-      "file": "photos/osm-1070396839-1.webp",
+      "file": "photos/tbilisi/osm-1070396839/1.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

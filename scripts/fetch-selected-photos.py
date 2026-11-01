@@ -24,12 +24,11 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import next_photo_name, read_cards, write_card
+from atlas_source import read_cards, save_photo, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
 CANDIDATES = ROOT / 'data/photo-candidates.json'
-PHOTOS = ROOT / 'public/atlas/photos'
 API = 'https://commons.wikimedia.org/w/api.php'
 USER_AGENT = 'TbilisiArchitectureAtlasPhotos/1.0 (editorial research)'
 
@@ -127,11 +126,9 @@ def main() -> int:
             continue
         image = Image.open(io.BytesIO(fetch(info.get('thumburl') or info['url'])))
         image.thumbnail((1000, 1000))
-        PHOTOS.mkdir(parents=True, exist_ok=True)
-        filename = next_photo_name(card_id)
-        image.convert('RGB').save(PHOTOS / filename, 'WEBP', quality=80)
+        relative = save_photo(image.convert('RGB'), card_id, quality=80)
         card.setdefault('photos', []).append({
-            'file': f'photos/{filename}',
+            'file': relative,
             'author': author,
             'license': license_name,
             'licenseUrl': license_url,

@@ -84,7 +84,7 @@
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
     {
-      "file": "photos/osm-75312921-g1.webp",
+      "file": "photos/tbilisi/osm-75312921/1.webp",
       "author": "DAVID HOLT from London, England",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
@@ -92,7 +92,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/osm-75312921-g2.webp",
+      "file": "photos/tbilisi/osm-75312921/2.webp",
       "author": "Bärbel Miemietz",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

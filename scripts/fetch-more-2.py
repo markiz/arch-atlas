@@ -1,5 +1,6 @@
 import json, pathlib, urllib.request, urllib.parse, re, html, concurrent.futures, time
 from PIL import Image
+from atlas_source import save_photo
 from progress import Progress
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 HEAD={'User-Agent':'TbilisiArchitectureAtlas/0.1 (personal educational prototype)'}
@@ -29,8 +30,8 @@ def get(item):
   if not license or not artist or not licenseurl:return {'id':key,'error':'license or author missing','coordinates':wiki.get('coordinates'),'title':wiki.get('title'),'photo':filename}
   imgurl=info.get('thumburl',info.get('url'))
   img=read(imgurl); temp=ROOT/'raw'/f'{key}.image';temp.write_bytes(img)
-  im=Image.open(temp);im.thumbnail((1100,1100));im.convert('RGB').save(ROOT/'public'/'atlas'/'photos'/f'{key}.webp','WEBP',quality=78,method=5);temp.unlink()
-  result={'id':key,'title':wiki.get('title'),'coordinates':wiki.get('coordinates'),'wiki':wiki.get('content_urls',{}).get('desktop',{}).get('page'),'photo':{'file':f'photos/{key}.webp','author':artist,'license':license,'licenseUrl':licenseurl,'source':info.get('descriptionurl'),'modifications':'уменьшен размер, преобразовано в WebP'},'extract':wiki.get('extract','')}
+  im=Image.open(temp);im.thumbnail((1100,1100));relative=save_photo(im.convert('RGB'),key,quality=78,method=5);temp.unlink()
+  result={'id':key,'title':wiki.get('title'),'coordinates':wiki.get('coordinates'),'wiki':wiki.get('content_urls',{}).get('desktop',{}).get('page'),'photo':{'file':relative,'author':artist,'license':license,'licenseUrl':licenseurl,'source':info.get('descriptionurl'),'modifications':'уменьшен размер, преобразовано в WebP'},'extract':wiki.get('extract','')}
   return result
  except Exception as e: return {'id':key,'error':str(e)}
 def tracked(item):

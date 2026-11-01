@@ -1,6 +1,6 @@
 import urllib.request, urllib.parse, json, pathlib, re, html, concurrent.futures, io
 from PIL import Image
-from atlas_source import attach_photos, next_photo_name, read_cards
+from atlas_source import attach_photos, read_cards, save_photo
 from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
 cards = read_cards()
@@ -23,8 +23,8 @@ def one(item):
         if len(author) > 180: author = author.split('\n')[0][:180]
         if any(p.get('source') == info.get('descriptionurl') for p in cards.get(key, {}).get('photos', [])):
             return key, None
-        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); filename = next_photo_name(key, '-curated'); img.convert('RGB').save(root / 'public/atlas/photos' / filename, 'WEBP', quality=76)
-        return key, {'file': 'photos/' + filename, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
+        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); relative = save_photo(img.convert('RGB'), key, quality=76)
+        return key, {'file': relative, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
     except Exception as ex:
         print('Error', key, ex, flush=True)
         return key, None

@@ -64,10 +64,15 @@ function validateGeometry(file,geometry,field){
   return geometry;
 }
 
-function validatePhoto(file,photo,index,seen){
+function validatePhoto(file,photo,index,seen,city,id){
   if(!isPlainObject(photo))fail(file,`photos[${index}] must be an object`);
   for(const key of ['file','author','license','licenseUrl','source','modifications'])requireString(file,photo[key],`photos[${index}].${key}`);
   if(photo.file.includes('..')||photo.file.startsWith('/'))fail(file,`photos[${index}].file is not a safe relative path`);
+  if(city){
+    const prefix=`photos/${city}/${id}/`;
+    if(!photo.file.startsWith(prefix))fail(file,`photos[${index}].file must live under ${prefix}`);
+    if(!/^\d+\.webp$/.test(photo.file.slice(prefix.length)))fail(file,`photos[${index}].file must be named <number>.webp under ${prefix}`);
+  }
   if(seen.has(photo.file))fail(file,`duplicate photo file ${photo.file}`);
   seen.add(photo.file);
   if(photo.description!==undefined)requireString(file,photo.description,`photos[${index}].description`,{allowEmpty:true});
@@ -79,7 +84,7 @@ function validatePhoto(file,photo,index,seen){
  * reference fields are resolved here so the browser does not need the shared
  * dictionary.
  */
-export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`){
+export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city){
   if(!isPlainObject(card))fail(file,'record must be an object');
   const id=requireString(file,card.id,'id');
   const names=requireLabels(file,card.names,'names');
@@ -116,7 +121,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`){
 
   if(!Array.isArray(card.photos))fail(file,'photos must be an array');
   const seenPhotos=new Set();
-  const photos=card.photos.map((photo,index)=>validatePhoto(file,photo,index,seenPhotos));
+  const photos=card.photos.map((photo,index)=>validatePhoto(file,photo,index,seenPhotos,city,id));
 
   const styles=referenceLabels(file,attributes.styles,styleId,'style');
   const yearLabels=referenceLabels(file,attributes.yearLabels,yearLabelId,'construction label');
@@ -203,7 +208,7 @@ export async function assembleAtlas({city=DEFAULT_CITY,root=ROOT,outFile,quiet=f
     if(card.id!==id)fail(relative,`id "${card.id}" does not match filename "${id}.json"`);
     if(ids.has(id))fail(relative,`duplicate id "${id}"`);
     ids.add(id);
-    cards.push(hydrateCard(card,attributes,relative));
+    cards.push(hydrateCard(card,attributes,relative,city));
     progress.advance(file);
   }
   progress.finish();

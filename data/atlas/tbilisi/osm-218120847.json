@@ -174,7 +174,7 @@
   "geometryQuality": "OSM way/218120847 имеет точный адрес Узнадзе, 52 и теги historic=building, tourism=attraction. Официальная граница 3082 и Polygon совпадают с IoU около 0,89; 91,4% OSM-контура лежит внутри границы, которая покрывает 96,8% way. Официальная история Министерства и реестровое описание подтверждают отдельный корпус. Google Place ID в радиусе 5 м не найден; фото и права не проверены.",
   "photos": [
     {
-      "file": "photos/osm-218120847-1.webp",
+      "file": "photos/tbilisi/osm-218120847/1.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3082",

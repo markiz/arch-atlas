@@ -85,7 +85,7 @@
   "geometryQuality": "IoU с реестровой границей 0.842; реестр 401.5 м², OSM 381.0 м²; перенос центра 1.5 м. OSM way/246785820, building=yes, addr:street=კიევის ქუჩა, addr:housenumber=8; площадь 381 м² против 401,5 м² в реестре, IoU 0,842, центроиды в 1,5 м друг от друга, флагов нет — обведён именно корпус, а не участок.",
   "photos": [
     {
-      "file": "photos/osm-246785820-1.webp",
+      "file": "photos/tbilisi/osm-246785820/1.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
@@ -94,7 +94,7 @@
       "description": "Дворец учащихся и молодёжи на улице Киева, 8 — фасад трёхэтажного кирпичного корпуса"
     },
     {
-      "file": "photos/osm-246785820-2.webp",
+      "file": "photos/tbilisi/osm-246785820/2.webp",
       "author": "კოლხი",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",

@@ -3,6 +3,7 @@ import path from 'node:path';
 import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
 import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
 import { createManifest } from './scripts/create-manifest.mjs';
+import { syncPhotos } from './scripts/sync-photos.mjs';
 
 let manifestRevision='dev';
 try{manifestRevision=(JSON.parse(readFileSync('public/atlas/manifest.json','utf8')) as {revision?:string}).revision??'dev';}catch{}
@@ -19,6 +20,7 @@ function atlasHotReload():Plugin{
   running=true;
   try{
    const result=await assembleAtlas({quiet:true});
+   await syncPhotos({quiet:true});
    await createManifest({quiet:true});
    if(reload)server.ws.send({type:'full-reload'});
    server.config.logger.info(`[atlas] packed ${result.cards.length} objects from data/atlas/${result.city}/`);
@@ -38,11 +40,13 @@ function atlasHotReload():Plugin{
    await rebuild(server,false);
    const sourceRoot=path.join(PROJECT_ROOT,'data','atlas');
    const attributesFile=path.join(PROJECT_ROOT,'data','building-attribute-translations.json');
-   server.watcher.add([sourceRoot,attributesFile]);
+   const photosRoot=path.join(PROJECT_ROOT,'data','photos');
+   server.watcher.add([sourceRoot,attributesFile,photosRoot]);
    const schedule=(file:string)=>{
     const relative=path.relative(PROJECT_ROOT,file).split(path.sep).join('/');
     const isSource=relative.startsWith('data/atlas/')&&relative.endsWith('.json');
-    if(!isSource&&relative!=='data/building-attribute-translations.json')return;
+    const isPhoto=relative.startsWith('data/photos/');
+    if(!isSource&&!isPhoto&&relative!=='data/building-attribute-translations.json')return;
     clearTimeout(timer);
     timer=setTimeout(()=>void rebuild(server,true),120);
    };

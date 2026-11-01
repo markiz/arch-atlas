@@ -116,7 +116,7 @@
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
     {
-      "file": "photos/gallery1-curated.webp",
+      "file": "photos/tbilisi/osm-56677915/1.webp",
       "author": "JohnDodelande_Georgie",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
@@ -124,7 +124,7 @@
       "modifications": "уменьшен размер, преобразовано в WebP"
     },
     {
-      "file": "photos/gallery2-curated.webp",
+      "file": "photos/tbilisi/osm-56677915/2.webp",
       "author": "Vyacheslav Argenberg",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
