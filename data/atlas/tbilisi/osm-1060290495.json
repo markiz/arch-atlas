@@ -102,7 +102,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1060290495/1.webp",
-      "thumb": "photos/tbilisi/osm-1060290495/1-thumb.webp",
+      "author": "Hanna Petrusevich",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:House_at_the_Junction_of_Giorgi_Mazniashvili_Street_and_Egnate_Ninoshvili_Street_in_Tbilisi.jpg",
+      "modifications": "преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-1060290495/1-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-1060290495/2.webp",
+      "thumb": "photos/tbilisi/osm-1060290495/2-thumb.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3034",

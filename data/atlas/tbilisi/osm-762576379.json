@@ -98,7 +98,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-762576379/1.webp",
-      "thumb": "photos/tbilisi/osm-762576379/1-thumb.webp",
+      "author": "FingerWiki",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:2026-09-17_15-3_Gizo_Nishnianidze_Street,_Tbilisi_-_facade_from_Rostom_Muskhelishvili_Dead-end.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-762576379/1-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-762576379/2.webp",
+      "thumb": "photos/tbilisi/osm-762576379/2-thumb.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4155",

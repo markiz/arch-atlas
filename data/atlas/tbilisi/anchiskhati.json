@@ -86,6 +86,15 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Anchis-Khati_basilica,_Tbilisi.jpg",
       "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/tbilisi/anchiskhati/3.webp",
+      "thumb": "photos/tbilisi/anchiskhati/3-thumb.webp",
+      "author": "takunodaibouken",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Anchiskhati_Basilica._Tbilisi_(takunodaibouken_2012).jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://georgianencyclopedia.ge/en/form_eng/374",

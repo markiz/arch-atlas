@@ -102,6 +102,15 @@
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Big_synagogue_in_Tbilisi.jpg",
       "modifications": "уменьшен размер, преобразовано в WebP"
+    },
+    {
+      "file": "photos/tbilisi/synagogue/3.webp",
+      "thumb": "photos/tbilisi/synagogue/3-thumb.webp",
+      "author": "Ավետիսյան91",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Great_Synagogue_(Tbilisi).jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://cja.huji.ac.il/index.php?id=290958&mode=alone",
