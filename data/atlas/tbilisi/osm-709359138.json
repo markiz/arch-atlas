@@ -2,10 +2,10 @@
   "id": "osm-709359138",
   "osmId": "way/709359138",
   "names": {
-    "ru": "Колокольня Сиони",
-    "en": "Sioni Bell Tower",
-    "ka": "სიონის სამრეკლო",
-    "uk": "Дзвіниця Сіоні"
+    "ru": "Новая колокольня Сиони (1812)",
+    "en": "New Sioni Bell Tower (1812)",
+    "ka": "სიონის ახალი სამრეკლო (1812)",
+    "uk": "Нова дзвіниця Сіоні (1812)"
   },
   "originalLanguage": "ka",
   "addresses": {
@@ -15,14 +15,14 @@
     "uk": ""
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Неоклассическая колокольня 1812 года через улицу от Старой колокольни Сиони.",
+    "en": "A Neoclassical bell tower of 1812, across the street from the Old Sioni Bell Tower.",
+    "ka": "1812 წლის ნეოკლასიკური სამრეკლო, სიონის ძველი სამრეკლოს მოპირდაპირე მხარეს.",
+    "uk": "Неокласична дзвіниця 1812 року через вулицю від Старої дзвіниці Сіоні."
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1812,
+  "maxYear": 1812,
+  "yearLabelId": "year-1812",
   "styleId": "neoclassicism",
   "architectIds": [],
   "districtId": "tbilisi",
