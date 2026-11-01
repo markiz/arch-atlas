@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "note": "Ручной отбор фотографий реестра после просмотра контактных листов; id — photoIds записи memkvidreoba.gov.ge, visualTags назначены в том же проходе.",
+  "items": {
+    "osm-1207173721": {
+      "registryId": 3359,
+      "note": "22 файла записи; 74663 — маленький дубль кадра 309073 (327 px против 640 px), поэтому заменён. Выбраны четыре разных общих вида: переулок, длинный фасад, фасад со стороны площади и угловой вид с площади; кадры деталей и ограды не включены.",
+      "photos": [
+        {
+          "id": 309073,
+          "visualTags": [
+            "facade",
+            "street",
+            "window",
+            "fence-wall",
+            "car",
+            "tree",
+            "low-resolution"
+          ]
+        },
+        {
+          "id": 309080,
+          "visualTags": [
+            "facade",
+            "street",
+            "balcony",
+            "window",
+            "tree",
+            "car",
+            "low-resolution"
+          ]
+        },
+        {
+          "id": 309081,
+          "visualTags": [
+            "facade",
+            "street",
+            "balcony",
+            "window",
+            "people",
+            "car",
+            "low-resolution"
+          ]
+        },
+        {
+          "id": 309085,
+          "visualTags": [
+            "facade",
+            "street",
+            "balcony",
+            "window",
+            "tree",
+            "car",
+            "low-resolution"
+          ]
+        }
+      ]
+    }
+  }
+}

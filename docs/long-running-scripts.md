@@ -147,7 +147,7 @@ const files = await Promise.all(paths.map(async path => {
 
 Прогресс уже добавлен в:
 
-- сетевые загрузчики: `fetch-osm.py`, `fetch-more.py`, `fetch-more-2.py`, `fetch-sources.py`, `fetch-conservatory.py`, `fetch-curated-photos.py`, `fetch-curated-remaining.py`, `fetch-specific-fixes.py`, `fetch-depicts.py`, `fetch-extra-categories.py`, `fetch-fallback-photos.py`, `fetch-galleries.py`, `fetch-selected-photos.py`, `batch-google-addresses.py`;
+- сетевые загрузчики: `fetch-osm.py`, `fetch-more.py`, `fetch-more-2.py`, `fetch-sources.py`, `fetch-conservatory.py`, `fetch-curated-photos.py`, `fetch-curated-remaining.py`, `fetch-specific-fixes.py`, `fetch-depicts.py`, `fetch-extra-categories.py`, `fetch-fallback-photos.py`, `fetch-registry-photos.py`, `fetch-galleries.py`, `fetch-selected-photos.py`, `batch-google-addresses.py`;
 - сбор и очередь: `queue_collect.py`, `queue_report.py`, `create-next-200-report.py`, `research-heritage.py`, `resolve-geometries.py`, `extract-tbilisi-building-outlines.py`, `build-data.py`, `assemble-atlas.mjs`, `validate_cards.py`;
 - сборка и проверка: `create-manifest.mjs`, `enrich-basemap-landmarks.mjs`, `enrich-basemap-names.mjs`, `check-data.mjs`, `verify-dist.mjs`.
 
