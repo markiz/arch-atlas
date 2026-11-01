@@ -44,10 +44,16 @@
   - `scene`: `facade`, `interior`, `street`, `courtyard`, `multiple-buildings`, `panorama`, `aerial`;
   - `object`: `balcony`, `window`, `door`, `roof`, `dome`, `tower`, `arch`, `column`, `staircase`, `fence-wall`, `detail`, `plaque`, `people`, `car`, `tree`, `sky`, `water`, `construction`, `scaffolding`, `ruin`, `graffiti`, `shopfront`, `air-conditioner`, `street-lamp`, `sign`;
   - `condition`: `nighttime`, `dark`, `blurry`, `tilted`, `snow`, `rain`.
-- Скрипт `scripts/classify-photo-visuals.py` (`npm run photos:visual-tags`) использует локальную квантованную CLIP ViT-B/32 в ONNX. Модель лежит в `.cache/clip` и не коммитится; `--download-model` скачивает её, дополнительные зависимости — `requirements-photo-tags.txt`. Яркость и доля тёмных пикселей уточняют `nighttime`/`dark`, дисперсия лапласиана — `blurry`.
-- Теги пишутся в порядке таксономии. Уже размеченные снимки пропускаются; `--force` переклассифицирует, `--only` и `--dry-run` нужны для проверки. Отчёт — `work/photo-research/visual-tags.json`.
-- Это черновая оптическая разметка, а не замена ручной проверке: CLIP путается на мелких деталях, тенях и нечётких кадрах. Теги не влияют на права, атрибуцию или отбор фотографии; спорные случаи проверяются глазами.
-- Пайплайн: `collect-photo-candidates.py` → `apply-photo-candidates.py` → `npm run photos:source-tags` → `npm run photos:visual-tags`. Для нового батча достаточно `npm run photos:annotate`: source tags и visual tags добавляются после загрузки, уже размеченные фото не пересчитываются.
+- **Разметку выполняет модель, а не скрипт-классификатор.** CLIP-конвейер удалён после проверки: на 30 случайных фото precision 0.825, recall 0.322, точных совпадений набора 0/30. Модель смотрит контактные листы, где на одном изображении 6 фотографий с id, и выбирает теги из таксономии.
+- Процесс:
+  1. `npm run photos:review-sheets -- --size 6` — листы и `work/photo-research/review/index.json`;
+  2. модель читает листы и выбирает теги, не подглядывая в старую разметку;
+  3. теги складываются в JSON-батч и применяются `npm run photos:apply-tags -- --file work/photo-research/review/batch-001.json`;
+  4. `npm run photos:review-status` показывает покрытие.
+- Служебный `scripts/photo-visual-review.py` **не классифицирует**: он только нарезает листы, проверяет таксономию и записывает уже принятые моделью теги. Никаких ONNX/CLIP-зависимостей в проекте нет.
+- 6 фото на лист — компромисс между ценой и детализацией. 9–12 фото на лист дешевле, но балконы, окна, люди и таблички на мелких ячейках теряются.
+- Теги не влияют на права, атрибуцию или отбор фотографии; спорные кадры проверяются глазами.
+- Пайплайн: `collect-photo-candidates.py` → `apply-photo-candidates.py` → `npm run photos:source-tags` → `npm run photos:review-sheets` → модель → `npm run photos:apply-tags` → `npm run photos:thumbs`.
 
 ## Атрибуция
 
@@ -99,7 +105,7 @@
 Ранние батчи закрыли 90 из 93 карточек без фотографий: 9 свободных снимков Commons и 81 фото реестра. Без фото осознанно остались оранжерея в Ботаническом саду, дом Анны Мадатовой и баня дочери царя: фото реестра показывают ворота, ограду или уличную стену, а не сам объект.
 
 Проверка маленьких снимков 1 ноября 2026 года: **326 записей ниже лимита** (292 фото реестра и 34 Commons) повторно запрошены у источника. **11 снимков восстановлены** до большего размера — 8 до 1280 px, 1 до 960 px и 2 до 1920 px; затронуто 10 карточек. Ещё 315 кандидатов и 172 снимка, уже стоящих на лимите, остались без изменений; ошибок нет. Реестр отдаёт тот же маленький оригинал (250–640 px), поэтому его фото не увеличились. Скрипт — `scripts/upgrade-photo-sources.py` (`npm run photos:upgrade`), отчёт — `work/photo-research/source-upgrades.json`.
-Все 498 уникальных снимков получили `visualTags` по таксономии из 38 тегов; реально встретились 26. Чаще всего: `facade` — 459, `window` — 164, `balcony` — 78, `courtyard` — 54, `multiple-buildings` — 36, `dome` — 24, `nighttime` — 17. `sourceTags` есть у 206 снимков Commons; у фото реестра источник таких меток не даёт. Классификатор — `scripts/classify-photo-visuals.py` (`npm run photos:visual-tags`); это черновая оптическая разметка, требующая выборочной ручной проверки.
+Старые CLIP-теги удалены: идёт повторная разметка всех 498 снимков по контактным листам по 6. Прогресс — `work/photo-research/review/index.json`, `npm run photos:review-status`. У 206 снимков Commons остаются сырые `sourceTags`; у фото реестра источник таких меток не даёт.
 
 ## Связанные документы
 

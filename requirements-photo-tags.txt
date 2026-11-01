@@ -1,8 +1,0 @@
-# Optional dependencies for scripts/classify-photo-visuals.py (visual tags).
-# The build and data checks do not need them. Install into a local venv:
-#   python3 -m venv work/photo-classify-venv
-#   work/photo-classify-venv/bin/pip install -r requirements-photo-tags.txt
-onnxruntime>=1.20
-tokenizers>=0.20
-pillow>=10
-numpy>=1.24

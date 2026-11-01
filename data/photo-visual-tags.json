@@ -1,391 +1,196 @@
 {
   "version": 1,
-  "model": "Xenova/clip-vit-base-patch32 (ONNX quantized)",
-  "description": "Стандартизованные оптические теги фотографий атласа. Не более 50 тегов; id — kebab-case на английском. scene — сцена/композиция, object — видимый объект, condition — состояние кадра.",
+  "description": "Стандартизованные оптические теги фотографий атласа. Не более 50 тегов; id — kebab-case на английском. scene — сцена/композиция, object — видимый объект, condition — состояние кадра. Теги назначает модель по контактным листам, автоматического классификатора нет.",
   "tags": [
     {
       "id": "facade",
       "kind": "scene",
-      "threshold": 0.22,
-      "description": "Фасад или внешний вид здания",
-      "prompts": [
-        "a photo of the facade of a building",
-        "a photo of a building exterior",
-        "a photo of the front of a historic building"
-      ]
+      "description": "Фасад или внешний вид здания"
     },
     {
       "id": "interior",
       "kind": "scene",
-      "threshold": 0.4,
-      "description": "Внутреннее помещение здания",
-      "prompts": [
-        "a photo of the interior of a building",
-        "a photo of a room inside a building",
-        "an indoor photo of a hallway"
-      ]
+      "description": "Внутреннее помещение здания"
     },
     {
       "id": "street",
       "kind": "scene",
-      "threshold": 0.25,
-      "description": "Улица с застройкой",
-      "prompts": [
-        "a photo of a street with buildings",
-        "a photo of a city street",
-        "a street scene with buildings"
-      ]
+      "description": "Улица с застройкой"
     },
     {
       "id": "courtyard",
       "kind": "scene",
-      "threshold": 0.3,
-      "description": "Внутренний двор",
-      "prompts": [
-        "a photo of a courtyard",
-        "a photo of an inner courtyard between buildings"
-      ]
+      "description": "Внутренний двор"
     },
     {
       "id": "multiple-buildings",
       "kind": "scene",
-      "threshold": 0.18,
-      "description": "В кадре несколько зданий",
-      "prompts": [
-        "a photo of several buildings",
-        "a photo with multiple buildings",
-        "a street lined with buildings"
-      ]
+      "description": "В кадре несколько зданий"
     },
     {
       "id": "panorama",
       "kind": "scene",
-      "threshold": 0.15,
-      "description": "Панорамный или очень широкий вид",
-      "prompts": [
-        "a panoramic view of a city",
-        "a wide view of many buildings"
-      ]
+      "description": "Панорамный или очень широкий вид"
     },
     {
       "id": "aerial",
       "kind": "scene",
-      "threshold": 0.1,
-      "description": "Съёмка сверху",
-      "prompts": [
-        "an aerial photo of buildings",
-        "a drone view of a city"
-      ]
+      "description": "Съёмка сверху"
     },
     {
       "id": "balcony",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Балкон",
-      "prompts": [
-        "a photo of a balcony on a building",
-        "a balcony with a railing"
-      ]
+      "description": "Балкон"
     },
     {
       "id": "window",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Окна",
-      "prompts": [
-        "a photo of windows on a building",
-        "a building with many windows"
-      ]
+      "description": "Окна"
     },
     {
       "id": "door",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Дверь или вход",
-      "prompts": [
-        "a photo of a door",
-        "a doorway of a building"
-      ]
+      "description": "Дверь или вход"
     },
     {
       "id": "roof",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Крыша",
-      "prompts": [
-        "a photo of a roof",
-        "the roof of a building"
-      ]
+      "description": "Крыша"
     },
     {
       "id": "dome",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Купол",
-      "prompts": [
-        "a photo of a dome",
-        "a church dome"
-      ]
+      "description": "Купол"
     },
     {
       "id": "tower",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Башня",
-      "prompts": [
-        "a photo of a tower",
-        "a tall tower"
-      ]
+      "description": "Башня"
     },
     {
       "id": "arch",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Арка или арочный проём",
-      "prompts": [
-        "a photo of an arch",
-        "an arched doorway"
-      ]
+      "description": "Арка или арочный проём"
     },
     {
       "id": "column",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Колонны или пилястры",
-      "prompts": [
-        "a photo of columns",
-        "a building with columns"
-      ]
+      "description": "Колонны или пилястры"
     },
     {
       "id": "staircase",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Лестница",
-      "prompts": [
-        "a photo of a staircase",
-        "stairs"
-      ]
+      "description": "Лестница"
     },
     {
       "id": "fence-wall",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Забор, ограда или стена",
-      "prompts": [
-        "a photo of a fence or wall",
-        "a stone wall"
-      ]
+      "description": "Забор, ограда или стена"
     },
     {
       "id": "detail",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Крупный план архитектурной детали",
-      "prompts": [
-        "a close-up of an architectural detail",
-        "a detail of a building"
-      ]
+      "description": "Крупный план архитектурной детали"
     },
     {
       "id": "plaque",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Табличка или мемориальная доска",
-      "prompts": [
-        "a photo of a plaque or sign on a wall",
-        "a memorial plaque"
-      ]
+      "description": "Табличка или мемориальная доска"
     },
     {
       "id": "people",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Люди в кадре",
-      "prompts": [
-        "a photo with people",
-        "people walking"
-      ]
+      "description": "Люди в кадре"
     },
     {
       "id": "car",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Автомобили",
-      "prompts": [
-        "a photo with cars",
-        "a car on the street"
-      ]
+      "description": "Автомобили"
     },
     {
       "id": "tree",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Деревья или зелень",
-      "prompts": [
-        "a photo with trees",
-        "trees near a building"
-      ]
+      "description": "Деревья или зелень"
     },
     {
       "id": "sky",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Много неба в кадре",
-      "prompts": [
-        "a photo with a lot of sky",
-        "blue sky above a building"
-      ]
+      "description": "Много неба в кадре"
     },
     {
       "id": "water",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Вода: река, фонтан, бассейн",
-      "prompts": [
-        "a photo with water",
-        "a river or fountain"
-      ]
+      "description": "Вода: река, фонтан, бассейн"
     },
     {
       "id": "construction",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Строительные работы",
-      "prompts": [
-        "a photo of construction work",
-        "a building under construction"
-      ]
+      "description": "Строительные работы"
     },
     {
       "id": "scaffolding",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Строительные леса",
-      "prompts": [
-        "a photo with scaffolding",
-        "scaffolding on a building"
-      ]
+      "description": "Строительные леса"
     },
     {
       "id": "ruin",
       "kind": "object",
-      "threshold": 0.38,
-      "description": "Руины или сильно разрушенное здание",
-      "prompts": [
-        "a photo of a ruined building",
-        "a dilapidated building"
-      ]
+      "description": "Руины или сильно разрушенное здание"
     },
     {
       "id": "graffiti",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Граффити",
-      "prompts": [
-        "a photo with graffiti",
-        "graffiti on a wall"
-      ]
+      "description": "Граффити"
     },
     {
       "id": "shopfront",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Витрина или вход в магазин",
-      "prompts": [
-        "a photo of a shopfront",
-        "a store front"
-      ]
+      "description": "Витрина или вход в магазин"
     },
     {
       "id": "air-conditioner",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Кондиционеры на фасаде",
-      "prompts": [
-        "a photo with air conditioners on a facade",
-        "air conditioning units"
-      ]
+      "description": "Кондиционеры на фасаде"
     },
     {
       "id": "street-lamp",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Фонарь или столб освещения",
-      "prompts": [
-        "a photo with a street lamp",
-        "a lamp post"
-      ]
+      "description": "Фонарь или столб освещения"
     },
     {
       "id": "sign",
       "kind": "object",
-      "threshold": 0.3,
-      "description": "Вывеска или указатель",
-      "prompts": [
-        "a photo with a sign",
-        "a street sign"
-      ]
+      "description": "Вывеска или указатель"
     },
     {
       "id": "nighttime",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Ночная или вечерняя съёмка",
-      "prompts": [
-        "a photo taken at night",
-        "a night photo of a building"
-      ]
+      "description": "Ночная или вечерняя съёмка"
     },
     {
       "id": "dark",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Затемнённый или недоэкспонированный кадр",
-      "prompts": [
-        "a very dark underexposed photo",
-        "a photo with little light"
-      ]
+      "description": "Затемнённый или недоэкспонированный кадр"
     },
     {
       "id": "blurry",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Нечёткий или расфокусированный кадр",
-      "prompts": [
-        "a blurry out of focus photo",
-        "a blurred photo"
-      ]
+      "description": "Нечёткий или расфокусированный кадр"
     },
     {
       "id": "tilted",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Заваленный горизонт",
-      "prompts": [
-        "a photo with a tilted horizon",
-        "a crooked photo"
-      ]
+      "description": "Заваленный горизонт"
     },
     {
       "id": "snow",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Снег в кадре",
-      "prompts": [
-        "a photo with snow",
-        "a snowy scene"
-      ]
+      "description": "Снег в кадре"
     },
     {
       "id": "rain",
       "kind": "condition",
-      "threshold": 0.55,
-      "description": "Дождь в кадре",
-      "prompts": [
-        "a photo with rain",
-        "a rainy scene"
-      ]
+      "description": "Дождь в кадре"
     }
   ]
 }
