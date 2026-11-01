@@ -6,7 +6,7 @@ import type {Building,ManifestFile} from './types';
 import {period} from './domain';
 import {useI18n} from './i18n';
 
-type Props={buildings:Building[];allBuildings:Building[];basemap:GeoJSON.FeatureCollection;buildingOutlines:ManifestFile;selected:string|null;onSelect:(id:string)=>void;focus:{id:string;serial:number}|null;reset:number;fit:number;showFit:boolean;onFit:()=>void;highlightedPeriods:string[]};
+type Props={buildings:Building[];allBuildings:Building[];basemap:GeoJSON.FeatureCollection;buildingOutlines:ManifestFile;selected:string|null;onSelect:(id:string)=>void;focus:{id:string;serial:number}|null;reset:number;fit:number;showFit:boolean;onFit:()=>void;selectedPeriods:string[];hoveredPeriod:string|null};
 type SpatialBounds={minX:number;minY:number;maxX:number;maxY:number};
 type OutlineIndexItem=SpatialBounds&{featureIndex:number};
 type OutlineIndexNode=SpatialBounds&{children:(OutlineIndexNode|OutlineIndexItem)[];leaf:boolean};
@@ -52,6 +52,20 @@ function queryOutlineIndex(root:OutlineIndexNode,bounds:SpatialBounds):number[]{
  while(stack.length){const node=stack.pop()!;for(const child of node.children){if(!intersects(child))continue;if(node.leaf)result.push((child as OutlineIndexItem).featureIndex);else stack.push(child as OutlineIndexNode)}}
  return result;
 }
+type AtlasLook={selected:boolean;boundary:boolean;highlighted:boolean;matched:boolean;hovered:boolean;fillColor:string};
+// Outlines are drawn in fixed screen pixels. On overview zooms the white edge
+// is wider than the tiny footprints, so it fades in only from z13.5 and reaches
+// full weight at z17; at the city scale only the period fill should remain.
+function outlineScale(zoom:number){return Math.max(0,Math.min(1,(zoom-13.5)/3.5))}
+function darken(hex:string,amount:number){
+ const value=parseInt(hex.slice(1),16),mix=(channel:number)=>Math.round(channel*(1-amount));
+ return `#${((mix(value>>16&255)<<16)|(mix(value>>8&255)<<8)|mix(value&255)).toString(16).padStart(6,'0')}`;
+}
+function atlasStyle({selected,boundary,highlighted,matched,hovered,fillColor}:AtlasLook,zoom:number):L.PathOptions{
+ const scale=outlineScale(zoom),dimmed=highlighted&&!matched,preview=hovered&&!selected&&!boundary;
+ const weight=selected?1+2*scale:boundary?Math.max(.8,2*scale):1.2*scale;
+ return {color:selected?'#244c3c':boundary?'#8a5a2b':'#ffffff',weight,dashArray:boundary?(scale<.5?'4 3':'6 4'):undefined,fillColor:preview?darken(fillColor,.3):fillColor,fillOpacity:dimmed?.12:boundary?.28:preview?1:.92,opacity:dimmed?.25:1};
+}
 function landmarkIcon(category:string){
  const drawings:Record<string,string>={
   museum:'M4 13h16M6 13v8M10 13v8M14 13v8M18 13v8M3 21h18M12 4 3 10h18L12 4Z',
@@ -69,9 +83,9 @@ function landmarkIcon(category:string){
  glyph.setAttribute('d',drawings[category]||drawings.museum);glyph.setAttribute('transform','translate(6 7) scale(.75)');glyph.setAttribute('fill','none');glyph.setAttribute('stroke','#fffef5');glyph.setAttribute('stroke-width','1.7');glyph.setAttribute('stroke-linecap','round');glyph.setAttribute('stroke-linejoin','round');svg.append(glyph);
  return L.divIcon({className:'landmark-icon',html:svg,iconSize:[30,36],iconAnchor:[15,35],tooltipAnchor:[0,-31]});
 }
-export default function MapView({buildings,allBuildings,basemap,buildingOutlines,selected,onSelect,focus,reset,fit,showFit,onFit,highlightedPeriods}:Props){
+export default function MapView({buildings,allBuildings,basemap,buildingOutlines,selected,onSelect,focus,reset,fit,showFit,onFit,selectedPeriods,hoveredPeriod}:Props){
  const {t,language}=useI18n();
- const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),basemapRenderer=useRef<L.Canvas|null>(null),buildingLayer=useRef<L.LayerGroup|null>(null),buildingData=useRef<Promise<GeoJSON.FeatureCollection>|null>(null),buildingIndex=useRef<OutlineIndexNode|null>(null),buildingLayerCache=useRef<Map<number,L.GeoJSON>>(new Map()),refreshBuildingOutlines=useRef<()=>void>(()=>{}),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{});
+ const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),basemapRenderer=useRef<L.Canvas|null>(null),buildingLayer=useRef<L.LayerGroup|null>(null),buildingData=useRef<Promise<GeoJSON.FeatureCollection>|null>(null),buildingIndex=useRef<OutlineIndexNode|null>(null),buildingLayerCache=useRef<Map<number,L.GeoJSON>>(new Map()),refreshBuildingOutlines=useRef<()=>void>(()=>{}),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{}),restyleAtlas=useRef<()=>void>(()=>{});
  const atlasBounds=useMemo(()=>{const bounds=L.latLngBounds([]);const visit=(coordinates:any):void=>{if(!Array.isArray(coordinates))return;if(typeof coordinates[0]==='number'&&typeof coordinates[1]==='number'){bounds.extend([coordinates[1],coordinates[0]]);return}coordinates.forEach(visit)};const geometry=(g:Geometry|null):void=>{if(!g)return;if(g.type==='GeometryCollection')g.geometries.forEach(geometry);else visit(g.coordinates)};allBuildings.forEach(building=>geometry(building.geometry as Geometry|null));return bounds},[allBuildings]);
  const layerRefs=useRef<{roads:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON}|null>(null);
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false),[buildingLayerLoading,setBuildingLayerLoading]=useState(false),[buildingLayerError,setBuildingLayerError]=useState(false);
@@ -182,6 +196,7 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
    }
   };
   const hideLabels=()=>{labelCanvas.style.display='none'};
+  const applyZoomStyles=()=>restyleAtlas.current();
   let dragOrigin=map.getPixelBounds().min!,dragFrame:number|null=null;
   const finishMove=()=>{dragOrigin=map.getPixelBounds().min!;drawLabels();refreshBuildingOutlines.current()};
   const refreshDuringDrag=()=>{
@@ -196,11 +211,11 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
     drawLabels();refreshBuildingOutlines.current();
    });
   };
-  map.on('drag',refreshDuringDrag);map.on('moveend',finishMove);map.on('zoomstart',hideLabels);
+  map.on('drag',refreshDuringDrag);map.on('moveend',finishMove);map.on('zoomstart',hideLabels);map.on('zoomend',applyZoomStyles);
   redrawLabels.current=drawLabels;
   setLabelsEnabled.current=(enabled)=>{labelsEnabled=enabled;drawLabels()};
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
-  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};refreshBuildingOutlines.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
+  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);map.off('zoomend',applyZoomStyles);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};refreshBuildingOutlines.current=()=>{};restyleAtlas.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
  },[basemap,atlasBounds]);
  useEffect(()=>{redrawLabels.current()},[language]);
  useEffect(()=>{
@@ -247,12 +262,20 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
  },[showBuildings,buildingOutlines]);
  useEffect(()=>{
   const group=objects.current;if(!group)return;group.clearLayers();
+  const activePeriods=hoveredPeriod&&!selectedPeriods.includes(hoveredPeriod)?[...selectedPeriods,hoveredPeriod]:selectedPeriods;
+  const styled:{layer:L.GeoJSON;look:AtlasLook}[]=[];
   for(const b of buildings){
    if(!b.geometry)continue;
-   const buildingPeriod=period(b.minYear,b.maxYear)!,color=buildingPeriod.color,isSelected=b.id===selected,matches=!highlightedPeriods.length||highlightedPeriods.includes(buildingPeriod.label),boundaryFallback=b.geometryRole==='heritage_boundary';
-   L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{renderer:atlasRenderer.current??undefined,noClip:true,style:{color:isSelected?'#244c3c':boundaryFallback?'#8a5a2b':'#ffffff',weight:isSelected?3:boundaryFallback?2:highlightedPeriods.length&&matches?2.8:1.2,dashArray:boundaryFallback?'6 4':undefined,fillColor:color,fillOpacity:highlightedPeriods.length&&!matches ? .12 : boundaryFallback ? .28 : .92,opacity:highlightedPeriods.length&&!matches ? .25 : 1},onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}} as L.GeoJSONOptions & L.PolylineOptions).addTo(group);
+   const buildingPeriod=period(b.minYear,b.maxYear)!,color=buildingPeriod.color,isSelected=b.id===selected,matches=!activePeriods.length||activePeriods.includes(buildingPeriod.label),isHovered=hoveredPeriod===buildingPeriod.label&&!selectedPeriods.includes(buildingPeriod.label),boundaryFallback=b.geometryRole==='heritage_boundary';
+   const look:AtlasLook={selected:isSelected,boundary:boundaryFallback,highlighted:activePeriods.length>0,matched:matches,hovered:isHovered,fillColor:color};
+   const layer=L.geoJSON({type:'Feature',properties:{},geometry:b.geometry as Geometry} as GeoJSON.Feature,{renderer:atlasRenderer.current??undefined,noClip:true,style:atlasStyle(look,mapRef.current?.getZoom()??13),onEachFeature:(_f,l)=>{l.on('click',e=>{L.DomEvent.stopPropagation(e);selectionRef.current(b.id)});const tip=document.createElement('span');tip.textContent=b.names?.[language]||b.name;l.bindTooltip(tip,{direction:'top',sticky:true})}} as L.GeoJSONOptions & L.PolylineOptions) as L.GeoJSON;
+   layer.addTo(group);styled.push({layer,look});
   }
- },[buildings,selected,highlightedPeriods,language]);
+  // Keep screen-pixel strokes in proportion to the zoom level after each zoom step.
+  const restyle=()=>{const zoom=mapRef.current?.getZoom()??13;for(const {layer,look} of styled)layer.setStyle(atlasStyle(look,zoom))};
+  restyleAtlas.current=restyle;
+  return()=>{restyleAtlas.current=()=>{}};
+ },[buildings,selected,selectedPeriods,hoveredPeriod,language]);
  useEffect(()=>{if(focus&&mapRef.current){const b=buildings.find(x=>x.id===focus.id);if(b) mapRef.current.flyTo([b.coordinates[1],b.coordinates[0]],17,{duration:.45})}},[focus]);
  useEffect(()=>{if(fit&&mapRef.current&&buildings.length){const bounds=L.latLngBounds(buildings.map(b=>[b.coordinates[1],b.coordinates[0]]));mapRef.current.fitBounds(bounds.pad(.12),{maxZoom:16})}},[fit]);
  useEffect(()=>{if(reset&&mapRef.current){if(atlasBounds.isValid())mapRef.current.fitBounds(atlasBounds.pad(.08),{animate:true,duration:.45});else mapRef.current.flyTo([41.715,44.800],11.5,{duration:.45})}},[reset,atlasBounds]);
