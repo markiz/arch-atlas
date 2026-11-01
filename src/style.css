@@ -89,3 +89,14 @@
 @media(max-width:650px){.inspector{z-index:1200}}
 
 .map-layers-panel .layer-status{display:block;margin:-2px 0 6px 22px;color:#829386;font:italic 11px/1.35 Georgia,serif}
+.card-photo{display:block;width:100%;height:100%}
+.card-photo img{display:block}
+.photo-skeleton{display:block;width:100%;height:100%;background:linear-gradient(100deg,#e3e8de 30%,#eef1e8 50%,#e3e8de 70%);background-size:220% 100%;animation:photo-shimmer 1.4s ease-in-out infinite}
+.photo-loading,.photo-error{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:18px;text-align:center;background:#e5e9df;color:#738577;font-size:11px;line-height:1.5}
+.photo-error p{margin:0;max-width:260px}
+.photo-error button{text-decoration:underline;color:#47775a;font-size:11px}
+.photo-spinner{width:22px;height:22px;border:2px solid #c6d2c3;border-top-color:#4b7158;border-radius:50%;animation:photo-spin .8s linear infinite}
+.photo-loading-note{position:absolute;left:10px;bottom:12px;padding:4px 7px;background:#fffef5d9;color:#607a66;font-size:9px;letter-spacing:.03em}
+@keyframes photo-shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
+@keyframes photo-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.photo-skeleton,.photo-spinner{animation:none}}
