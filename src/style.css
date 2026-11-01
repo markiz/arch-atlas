@@ -31,7 +31,7 @@
 .period-picker summary>i{width:7px;height:7px;flex:none;border-right:1.5px solid #718675;border-bottom:1.5px solid #718675;transform:rotate(45deg);margin:-4px 2px 0 0}
 .period-picker[open] summary{border-color:#8fa88d;background:#fbfcf8}
 .period-picker[open] summary>i{transform:rotate(225deg);margin:4px 2px 0 0}
-.filter-panel .period-picker-menu{position:absolute;z-index:1000;top:calc(100% + 6px);left:0;width:min(360px,calc(100vw - 52px));max-height:230px;overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:1px;padding:7px;background:#fffef9;border:1px solid #dce2d7;box-shadow:0 5px 18px #30483720;flex:none;min-width:0}
+.filter-panel .period-picker-menu{position:absolute;z-index:1300;top:calc(100% + 6px);left:0;width:min(360px,calc(100vw - 52px));max-height:230px;overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:1px;padding:7px;background:#fffef9;border:1px solid #dce2d7;box-shadow:0 5px 18px #30483720;flex:none;min-width:0}
 .filter-panel .period-picker-menu label{display:flex;flex-direction:row;align-items:center;gap:7px;padding:7px 6px;border-radius:2px;font-size:10px;font-weight:500;color:#526b59;cursor:pointer}
 .filter-panel .period-picker-menu label:hover{background:#eef2e9}
 .filter-panel .period-picker-menu input{width:14px;height:14px;flex:none;margin:0;padding:0;accent-color:#477456}
