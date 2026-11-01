@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.855; реестр 54.1 м², OSM 52.4 м²; перенос центра 0.5 м. IoU 0,855; флаг official_point_buffer — реестровая граница (54,1 м²) получена буфером вокруг точки и является приблизительной; OSM way/1204376656 — реальный восьмигранный контур корпуса 52,4 м², центроид в 0,5 м, высота около 7 м по оценке маппера.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.855; registry 54.1 m², OSM 52.4 m²; centroid offset 0.5 m. IoU 0,855; flag official_point_buffer — the registry boundary (54,1 m²) was obtained by buffering around a point and is approximate; OSM way/1204376656 — the real octagonal outline of the building, 52,4 m², centroid at 0,5 m, height about 7 m according to the mapper's estimate.",
+    "ka": "IoU რეესტრის საზღვართან 0.855; რეესტრი 54.1 მ², OSM 52.4 მ²; ცენტროიდის გადახრა 0.5 მ. IoU 0,855; ფლაგი official_point_buffer — რეესტრის საზღვარი (54,1 მ²) მიღებულია წერტილის გარშემო ბუფერით და მიახლოებითია; OSM way/1204376656 — კორპუსის რეალური რვაკუთხა კონტური 52,4 მ², ცენტროიდი 0,5 მ-ში, სიმაღლე დაახლოებით 7 მ რუკის შემქმნელის შეფასებით.",
+    "uk": "IoU з реєстровою межею 0.855; реєстр 54.1 м², OSM 52.4 м²; зміщення центроїда 0.5 м. IoU 0,855; прапорець official_point_buffer — реєстрову межу (54,1 м²) отримано буфером навколо точки, і вона є приблизною; OSM way/1204376656 — реальний восьмигранний контур корпусу 52,4 м², центроїд за 0,5 м, висота близько 7 м за оцінкою мапера."
+  },
   "photos": [
     "f0088ed0b28bd6743c8648708c8713f43d11837c393d4171791a6f634d66fa7f",
     "92bbc4dcd98ede37bf6ba07413741903c2f28e144f6ae606536aaf54ee022a6e",

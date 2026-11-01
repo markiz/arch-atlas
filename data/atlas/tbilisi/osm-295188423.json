@@ -71,6 +71,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.943; реестр 456.6 м², OSM 462.8 м²; перенос центра 0.4 м. IoU 0,943 с реестровой границей при площади 456,6 / 462,8 м², центроиды в 0,4 м; флагов нет, OSM-полигон обводит надземный корпус целиком (3 этажа, 1 подземный). Фото: Commons-геопоиск по точке дал 0 совпадений, категория Shalva Dadiani street на Commons пустая — нужен снимок фасада, фото пока нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.943; registry 456.6 m², OSM 462.8 m²; centroid offset 0.4 m. IoU 0,943 with the registry boundary at an area of 456,6 / 462,8 m², the centroids are 0,4 m apart; no flags, the OSM polygon traces the above-ground building in full (3 storeys, 1 underground). Photos: a Commons geosearch by the point returned 0 matches, the Commons category Shalva Dadiani street is empty — a façade photo is needed, there are no photos yet.",
+    "ka": "IoU რეესტრის საზღვართან 0.943; რეესტრი 456.6 მ², OSM 462.8 მ²; ცენტროიდის გადახრა 0.4 მ. IoU 0,943 რეესტრის საზღვართან 456,6 / 462,8 მ² ფართობისას, ცენტროიდები 0,4 მ-ში; ფლაგები არ არის, OSM-ის პოლიგონი მთლიანად შემოხაზავს მიწისზედა კორპუსს (3 სართული, 1 მიწისქვეშა). ფოტო: Commons-ის გეოძიებამ წერტილით 0 დამთხვევა მოგვცა, კატეგორია Shalva Dadiani street Commons-ზე ცარიელია — საჭიროა ფასადის სურათი, ფოტო ჯერ არ არის.",
+    "uk": "IoU з реєстровою межею 0.943; реєстр 456.6 м², OSM 462.8 м²; зміщення центроїда 0.4 м. IoU 0,943 з реєстровою межею при площі 456,6 / 462,8 м², центроїди за 0,4 м; прапорців немає, полігон OSM обводить надземний корпус повністю (3 поверхи, 1 підземний). Фото: геопошук Commons за точкою дав 0 збігів, категорія Shalva Dadiani street на Commons порожня — потрібен знімок фасаду, фото поки немає."
+  },
   "photos": [
     "a7ba422bf04a6747f2844f83e373769e5f5772985ef6b57199012ebed1710385",
     "2ba13e261cf4fc7b635295c9d9fbdf568c8a9456f2ea7b1bffa17311ce0acd31"

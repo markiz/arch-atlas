@@ -75,6 +75,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.763; реестр 634.6 м², OSM 679.7 м²; перенос центра 1.8 м. IoU 0,76 с реестровой границей (652 м² против 698 м²), centroid 1,8 м, flags нет; OSM way/282713329 (building=apartments, 3 этажа, 8 вершин) обводит корпус.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.763; registry 634.6 m², OSM 679.7 m²; centroid offset 1.8 m. IoU 0,76 with the registry boundary (652 m² versus 698 m²), centroid 1,8 m, no flags; OSM way/282713329 (building=apartments, 3 storeys, 8 vertices) traces the building.",
+    "ka": "IoU რეესტრის საზღვართან 0.763; რეესტრი 634.6 მ², OSM 679.7 მ²; ცენტროიდის გადახრა 1.8 მ. IoU 0,76 რეესტრის საზღვართან (652 მ² 698 მ²-ის წინააღმდეგ), ცენტროიდი 1,8 მ, ფლაგები არ არის; OSM way/282713329 (building=apartments, 3 სართული, 8 წვერო) შემოხაზავს კორპუსს.",
+    "uk": "IoU з реєстровою межею 0.763; реєстр 634.6 м², OSM 679.7 м²; зміщення центроїда 1.8 м. IoU 0,76 з реєстровою межею (652 м² проти 698 м²), центроїд 1,8 м, прапорців немає; OSM way/282713329 (building=apartments, 3 поверхи, 8 вершин) обводить корпус."
+  },
   "photos": [
     "1bde9f8bd85a765b9b2ee19893c9be8af07751cccdf4b58387b48513a74d3ce0"
   ],

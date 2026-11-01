@@ -80,6 +80,11 @@
     ]
   },
   "geometryQuality": "Именованный замкнутый OSM way/555200386 лежит у южного фасада церкви Мама Давити. Официальная граница реестра 4101 и OSM-контур совпадают с IoU около 0,81; около 81,5% way лежит в границе, контур way покрывает около 99,6% официального полигона. Геометрия подтверждает отдельную колокольню, не совпадающую с контуром основной церкви.",
+  "geometryQualityTranslations": {
+    "en": "The named closed OSM way/555200386 lies by the southern facade of the Mama Daviti church. The official registry boundary 4101 and the OSM outline coincide with an IoU of about 0,81; about 81,5% of the way lies within the boundary, the way's outline covers about 99,6% of the official polygon. The geometry confirms a separate bell tower that does not coincide with the outline of the main church.",
+    "ka": "დასახელებული დახურული OSM way/555200386 მდებარეობს მამა დავითის ეკლესიის სამხრეთ ფასადთან. რეესტრის ოფიციალური საზღვარი 4101 და OSM-ის კონტური ემთხვევა IoU-ით დაახლოებით 0,81; way-ის დაახლოებით 81,5% საზღვარშია, way-ის კონტური ფარავს ოფიციალური პოლიგონის დაახლოებით 99,6%-ს. გეომეტრია ადასტურებს ცალკე სამრეკლოს, რომელიც არ ემთხვევა მთავარი ეკლესიის კონტურს.",
+    "uk": "Іменований замкнений OSM way/555200386 лежить біля південного фасаду церкви Мама Давіті. Офіційна межа реєстру 4101 і OSM-контур збігаються з IoU близько 0,81; близько 81,5% way лежить у межі, контур way покриває близько 99,6% офіційного полігону. Геометрія підтверджує окрему дзвіницю, що не збігається з контуром основної церкви."
+  },
   "photos": [
     "646624dab4a627097dd759aaec28bfbb77d2e5cb1b8ae5a3aa70f861b2240079",
     "28b1fbbea3cd26d6bec26fea43947258a7c1f3db2a828c5c8953da9fb2382492",

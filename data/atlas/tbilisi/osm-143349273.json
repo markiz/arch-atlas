@@ -84,6 +84,11 @@
     ]
   },
   "geometryQuality": "OSM way/143349273 — замкнутый девятиузловой контур здания по Метехскому подъёму, 1ა. Официальная точка реестра 3377 находится внутри контура; IoU границы и way около 0,68, OSM way покрывает около 98,8% официального полигона. Адресный номер реестра — 1, OSM — 1ა; контур не пересекается с другими карточками атласа.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/143349273 — a closed nine-node outline of the building on Metekhi Ascent, 1ა. The official registry point 3377 lies inside the outline; the IoU of the boundary and the way is about 0,68, and the OSM way covers about 98,8% of the official polygon. The registry address number is 1, OSM — 1ა; the outline does not overlap other atlas cards.",
+    "ka": "OSM way/143349273 — მეტეხის აღმართზე მდებარე შენობის დახურული ცხრაკვანძიანი კონტური, 1ა. რეესტრის ოფიციალური წერტილი 3377 კონტურის შიგნითაა; საზღვრისა და way-ის IoU დაახლოებით 0,68-ია, OSM way ფარავს ოფიციალური პოლიგონის დაახლოებით 98,8%-ს. რეესტრის მისამართის ნომერი — 1, OSM — 1ა; კონტური არ იკვეთება ატლასის სხვა ბარათებთან.",
+    "uk": "OSM way/143349273 — замкнений дев'ятивузловий контур будівлі на Метехському узвозі, 1ა. Офіційна реєстрова точка 3377 лежить усередині контуру; IoU межі та way близько 0,68, OSM way покриває близько 98,8% офіційного полігону. Адресний номер реєстру — 1, OSM — 1ა; контур не перетинається з іншими картками атласу."
+  },
   "photos": [
     "dedb67aeed1d1e0a02cc308f98dcdb13a894e288f55c066c627371818cb61448"
   ],

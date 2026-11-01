@@ -76,6 +76,11 @@
     ]
   },
   "geometryQuality": "OSM way имеет адрес Шавтели, 13; реестр наследия даёт тот же адрес, а исследование Национальной парламентской библиотеки связывает здание этого адреса с театром и относит его к XIX веку. Отдельную официальную границу памятника для этого контура не удалось уверенно подтвердить.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way has the address Shavteli, 13; the heritage registry gives the same address, and a study by the National Parliamentary Library links the building at this address with the theatre and dates it to the 19th century. A separate official monument boundary for this outline could not be reliably confirmed.",
+    "ka": "OSM-ის way-ს აქვს მისამართი შავთელი, 13; მემკვიდრეობის რეესტრი იმავე მისამართს იძლევა, ხოლო ეროვნული საპარლამენტო ბიბლიოთეკის კვლევა ამ მისამართის შენობას თეატრთან აკავშირებს და XIX საუკუნეს მიაკუთვნებს. ამ კონტურისთვის ცალკე ოფიციალური ძეგლის საზღვრის დამაჯერებლად დადასტურება ვერ მოხერხდა.",
+    "uk": "OSM way має адресу Шавтелі, 13; реєстр спадщини дає ту саму адресу, а дослідження Національної парламентської бібліотеки пов'язує будівлю цієї адреси з театром і відносить її до XIX століття. Окрему офіційну межу пам'ятки для цього контуру не вдалося впевнено підтвердити."
+  },
   "photos": [
     "598cab993be3a11f03cf5af5949486a1c1ea4f057fb015e48c6ba99f1d9eac30",
     "0e8f30e5de11938a9a9dd899e2b9edfe109d181ea14cf734756036debe5968ce",

@@ -154,6 +154,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; соответствие объекту уточнено по названию и адресу",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; the match to the object was verified by name and address.",
+    "ka": "OpenStreetMap-ის კონტური; ობიექტთან შესაბამისობა დაზუსტებულია სახელისა და მისამართის მიხედვით.",
+    "uk": "Контур OpenStreetMap; відповідність об'єкту уточнено за назвою та адресою."
+  },
   "photos": [
     "f0bfb567eaf2df768cc5f3048e2729ee9ea35ef40e85258aa71e0e710c5ba6d8",
     "64f7b3818916e96517bab3b4eb8abbccccc78d07ea574f889d7485846ff5946e",

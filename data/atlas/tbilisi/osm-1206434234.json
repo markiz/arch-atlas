@@ -71,6 +71,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.69; реестр 173.5 м², OSM 179.4 м²; перенос центра 1.1 м. IoU 0,69 с реестровой границей (197 м² против 184 м²), centroid 1,1 м, flags нет; OSM way/1206434234 (building=yes, 3 этажа) обводит корпус, но без адресных тегов — принадлежность подтверждена геометрией и близостью, не тегом.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.69; registry 173.5 m², OSM 179.4 m²; centroid offset 1.1 m. IoU 0,69 with the registry boundary (197 m² against 184 m²), centroid 1,1 m, no flags; OSM way/1206434234 (building=yes, 3 storeys) traces the building, but without address tags — the attribution is confirmed by geometry and proximity, not by a tag.",
+    "ka": "IoU რეესტრის საზღვართან 0.69; რეესტრი 173.5 მ², OSM 179.4 მ²; ცენტროიდის გადახრა 1.1 მ. IoU 0,69 რეესტრის საზღვართან (197 მ² 184 მ²-ის წინააღმდეგ), ცენტროიდი 1,1 მ, ფლაგები არ არის; OSM way/1206434234 (building=yes, 3 სართული) ხაზავს კორპუსს, მაგრამ მისამართის ტეგების გარეშე — კუთვნილება დადასტურებულია გეომეტრიითა და სიახლოვით და არა ტეგით.",
+    "uk": "IoU з реєстровою межею 0.69; реєстр 173.5 м², OSM 179.4 м²; зміщення центроїда 1.1 м. IoU 0,69 з реєстровою межею (197 м² проти 184 м²), центроїд 1,1 м, прапорців немає; OSM way/1206434234 (building=yes, 3 поверхи) обводить корпус, але без адресних тегів — належність підтверджена геометрією та близькістю, а не тегом."
+  },
   "photos": [
     "5a289036bb3bddf47ccbef635a2d822fb2c05ea813268968f343c13b85956802"
   ],

@@ -91,6 +91,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.828; реестр 608.1 м², OSM 655.1 м²; перенос центра 1.2 м. IoU 0,828 (655,1 м² OSM против 608,1 м² реестра), центроид 1,2 м, реестр покрыт на 94,1 %, флагов нет; OSM: building=apartments, building:levels=4 (включая цоколь), обведён надземный корпус без двора.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.828; registry 608.1 m², OSM 655.1 m²; centroid offset 1.2 m. IoU 0,828 (655,1 m² OSM versus the registry's 608,1 m²), centroid 1,2 m, the registry is covered by 94,1 %, no flags; OSM: building=apartments, building:levels=4 (including the basement storey), the above-ground building is traced without the courtyard.",
+    "ka": "IoU რეესტრის საზღვართან 0.828; რეესტრი 608.1 მ², OSM 655.1 მ²; ცენტროიდის გადახრა 1.2 მ. IoU 0,828 (655,1 მ² OSM რეესტრის 608,1 მ²-ის წინააღმდეგ), ცენტროიდი 1,2 მ, რეესტრი დაფარულია 94,1 %-ით, ფლაგები არ არის; OSM: building=apartments, building:levels=4 (ცოკოლის ჩათვლით), შემოხაზულია მიწისზედა კორპუსი ეზოს გარეშე.",
+    "uk": "IoU з реєстровою межею 0.828; реєстр 608.1 м², OSM 655.1 м²; зміщення центроїда 1.2 м. IoU 0,828 (655,1 м² OSM проти 608,1 м² реєстру), центроїд 1,2 м, реєстр покрито на 94,1 %, прапорців немає; OSM: building=apartments, building:levels=4 (включно з цоколем), обведено надземний корпус без двору."
+  },
   "photos": [
     "d7cd12bc11817c50aed491686bc34a7ba658da6cc4a37779607a218f8e1d83f7",
     "8965a7535cabfca4c2fc0f057789f7ba4a7e08b13da8b4a780e834873d17fea8",

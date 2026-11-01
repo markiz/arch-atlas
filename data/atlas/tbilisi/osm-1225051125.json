@@ -71,6 +71,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.795; реестр 413.1 м², OSM 366.5 м²; перенос центра 1.5 м. IoU 0,795: реестровый полигон 413,1 м² и OSM way/1225051125 (366,5 м², building=apartments) накладываются на 84–94 %; центроид в 1,5 м, флагов нет. Контур обводит надземный корпус без дворовых пристроек.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.795; registry 413.1 m², OSM 366.5 m²; centroid offset 1.5 m. IoU 0,795: the registry polygon of 413,1 m² and OSM way/1225051125 (366,5 m², building=apartments) overlap by 84–94 %; centroid at 1,5 m, no flags. The outline traces the above-ground building without courtyard extensions.",
+    "ka": "IoU რეესტრის საზღვართან 0.795; რეესტრი 413.1 მ², OSM 366.5 მ²; ცენტროიდის გადახრა 1.5 მ. IoU 0,795: რეესტრის პოლიგონი 413,1 მ² და OSM way/1225051125 (366,5 მ², building=apartments) გადაფარავს 84–94 %-ით; ცენტროიდი 1,5 მ-ში, ფლაგები არ არის. კონტური გამოკვეთს მიწისზედა კორპუსს ეზოს მიშენებების გარეშე.",
+    "uk": "IoU з реєстровою межею 0.795; реєстр 413.1 м², OSM 366.5 м²; зміщення центроїда 1.5 м. IoU 0,795: реєстровий полігон 413,1 м² та OSM way/1225051125 (366,5 м², building=apartments) накладаються на 84–94 %; центроїд за 1,5 м, прапорців немає. Контур обводить надземний корпус без дворових прибудов."
+  },
   "photos": [
     "da9ff7f36d7423eb6697a33d46e40b9b8f09e3fca2a320267310d9fb83d013a7",
     "81635aa2c36ca45518411ce6679703e04c4840d1bc0f7a9498b49eb64b68f20c",

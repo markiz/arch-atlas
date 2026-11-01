@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 197.3 м², OSM 205.8 м²; перенос центра 0.2 м. IoU 0,922; OSM way/78492225 (heritage=2, ref:GE:nachpg 4843) обводит весь надземный корпус храма с апсидой и притвором, 205,8 м² против 197,3 м² в реестре, центроид в 0,2 м; флагов нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.922; registry 197.3 m², OSM 205.8 m²; centroid offset 0.2 m. IoU 0,922; OSM way/78492225 (heritage=2, ref:GE:nachpg 4843) outlines the entire above-ground building of the church with the apse and narthex, 205,8 m² versus 197,3 m² in the registry, centroid within 0,2 m; no flags.",
+    "ka": "IoU რეესტრის საზღვართან 0.922; რეესტრი 197.3 მ², OSM 205.8 მ²; ცენტროიდის გადახრა 0.2 მ. IoU 0,922; OSM way/78492225 (heritage=2, ref:GE:nachpg 4843) შემოხაზავს ტაძრის მთელ მიწისზედა კორპუსს აფსიდითა და ნართექსით, 205,8 მ² რეესტრის 197,3 მ²-ის წინააღმდეგ, ცენტროიდი გადახრილია 0,2 მ-ით; ფლაგები არ არის.",
+    "uk": "IoU з реєстровою межею 0.922; реєстр 197.3 м², OSM 205.8 м²; зміщення центроїда 0.2 м. IoU 0,922; OSM way/78492225 (heritage=2, ref:GE:nachpg 4843) обводить весь надземний корпус храму з апсидою й притвором, 205,8 м² проти 197,3 м² у реєстрі, центроїд на відстані 0,2 м; прапорців немає."
+  },
   "photos": [
     "7c030e75fd8d5d026f0fe02f2625995df2423ae04921b3d6d40b8a9fb91a4ac7",
     "af8cd3e7ab020db71c1a68ca9b486cda4e00c767c4dcd5d6b8c09d3da8cc352f",

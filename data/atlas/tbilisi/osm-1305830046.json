@@ -95,6 +95,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.91; реестр 474.0 м², OSM 495.6 м²; перенос центра 0.7 м. IoU 0,91; реестр 474,0 м², OSM 495,6 м² (way/1305830046, 13 вершин, addr: გალაქტიონ ტაბიძის ქუჩა 20, building=residential, 2 этажа). Флагов нет, Place ID совпал. Пересечение с карточкой «Дом Сейлановых» (Табидзе 18) — 5,1 м², это примыкание соседних фасадов, не дубль.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.91; registry 474.0 m², OSM 495.6 m²; centroid offset 0.7 m. IoU 0,91; registry 474,0 m², OSM 495,6 m² (way/1305830046, 13 vertices, addr: გალაქტიონ ტაბიძის ქუჩა 20, building=residential, 2 storeys). No flags, the Place ID matched. The overlap with the card “House of the Seilanovs” (Tabidze 18) — 5,1 m², this is the adjacency of neighbouring façades, not a duplicate.",
+    "ka": "IoU რეესტრის საზღვართან 0.91; რეესტრი 474.0 მ², OSM 495.6 მ²; ცენტროიდის გადახრა 0.7 მ. IoU 0,91; რეესტრი 474,0 მ², OSM 495,6 მ² (way/1305830046, 13 წვერო, addr: გალაქტიონ ტაბიძის ქუჩა 20, building=residential, 2 სართული). ფლაგები არ არის, Place ID დაემთხვა. გადაკვეთა ბარათთან „სეილანოვების სახლი“ (ტაბიძე 18) — 5,1 მ², ეს მეზობელი ფასადების მიმდებარობაა, დუბლიკატი არ არის.",
+    "uk": "IoU з реєстровою межею 0.91; реєстр 474.0 м², OSM 495.6 м²; зміщення центроїда 0.7 м. IoU 0,91; реєстр 474,0 м², OSM 495,6 м² (way/1305830046, 13 вершин, addr: გალაქტიონ ტაბიძის ქუჩა 20, building=residential, 2 поверхи). Прапорців немає, Place ID збігся. Перетин з карткою «Будинок Сейланових» (Табідзе 18) — 5,1 м², це примикання сусідніх фасадів, не дубль."
+  },
   "photos": [
     "9c3dba971e8e53ebb138827a91436e7915b79530d26e92484d21437aab76595c"
   ],

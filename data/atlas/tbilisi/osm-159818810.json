@@ -64,6 +64,11 @@
     ]
   },
   "geometryQuality": "Именованный OSM-контур и перекрёсток адресов совпадают с описанием Scan Tbilisi; официальная граница реестра перекрывает около 96% контура",
+  "geometryQualityTranslations": {
+    "en": "The named OSM outline and the address intersection match the Scan Tbilisi description; the official registry boundary overlaps about 96% of the outline",
+    "ka": "დასახელებული OSM-კონტური და მისამართების გადაკვეთა ემთხვევა Scan Tbilisi-ის აღწერას; რეესტრის ოფიციალური საზღვარი ფარავს კონტურის დაახლოებით 96%-ს",
+    "uk": "Іменований OSM-контур і перехрестя адрес збігаються з описом Scan Tbilisi; офіційна реєстрова межа перекриває близько 96% контуру"
+  },
   "photos": [
     "249369017eb1654a240806068a96f5cb0e49dd9420101ce5dae8a57d90d124b1",
     "e451c029c4d099fad6cb2f686d6a4ef1490a0841a4846f69731b916cecf570a7",

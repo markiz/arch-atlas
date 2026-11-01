@@ -104,6 +104,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес требуют редакционной проверки",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; the name and address require editorial verification",
+    "ka": "OpenStreetMap-ის კონტური; სახელწოდება და მისამართი საჭიროებს რედაქტორულ შემოწმებას",
+    "uk": "Контур OpenStreetMap; назва й адреса потребують редакційної перевірки"
+  },
   "photos": [
     "062b8b1d6a3bfdaa7aefe7dbc0a6e575d1777cf7198a2c6c181a255bab979dd9",
     "48262d6bf91a8d6f5394bf00a5d4c1973766bcb487fbcc803dbffb60b1e05035",

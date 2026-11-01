@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Официальная граница 2850 и OSM way/218121310 совпадают с IoU около 0,89; 97,4% OSM внутри границы, граница покрыта на 91,3%, смещение 0,4 м. Адрес реестра — 91, OSM — 91а; это один корпус, а не соседний дом.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary 2850 and OSM way/218121310 coincide with an IoU of about 0,89; 97,4% of OSM is inside the boundary, the boundary is covered by 91,3%, the offset is 0,4 m. The registry address is 91, OSM — 91a; this is one building, not a neighbouring house.",
+    "ka": "ოფიციალური საზღვარი 2850 და OSM way/218121310 ემთხვევა IoU-ით დაახლოებით 0,89; OSM-ის 97,4% საზღვრის შიგნითაა, საზღვარი დაფარულია 91,3%-ით, გადახრა 0,4 მ. რეესტრის მისამართია 91, OSM — 91ა; ეს ერთი კორპუსია და არა მეზობელი სახლი.",
+    "uk": "Офіційна межа 2850 і OSM way/218121310 збігаються з IoU близько 0,89; 97,4% OSM усередині межі, межу покрито на 91,3%, зміщення 0,4 м. Адреса реєстру — 91, OSM — 91а; це один корпус, а не сусідній будинок."
+  },
   "photos": [
     "7f8773b8731e5243a9c35c054dbc788ec1056f105163f64011c8f643c73b9508"
   ],

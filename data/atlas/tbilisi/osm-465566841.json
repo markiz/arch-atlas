@@ -96,6 +96,11 @@
     ]
   },
   "geometryQuality": "OSM way/465566841 — замкнутый адресный Polygon трёхэтажной школы на Узнадзе, 59; геометрическая проверка очереди показывает хорошее совпадение с официальной границей памятника 2755. Муниципальный фонд развития прямо подтверждает памятник и реставрацию с сохранением исторического характера. Google Place ID и проверенное лицензированное фото не найдены.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/465566841 — a closed addressed Polygon of the three-storey school at Uznadze, 59; the queue's geometry check shows a good match with the official boundary of monument 2755. The municipal development fund directly confirms the monument and the restoration preserving the historic character. No Google Place ID and no verified licensed photo were found.",
+    "ka": "OSM way/465566841 — უზნაძის, 59-ში მდებარე სამსართულიანი სკოლის დახურული მისამართიანი Polygon; რიგის გეომეტრიული შემოწმება აჩვენებს კარგ დამთხვევას 2755 ძეგლის ოფიციალურ საზღვართან. მუნიციპალური განვითარების ფონდი პირდაპირ ადასტურებს ძეგლსა და რესტავრაციას ისტორიული ხასიათის შენარჩუნებით. Google Place ID და შემოწმებული ლიცენზირებული ფოტო ვერ მოიძებნა.",
+    "uk": "OSM way/465566841 — замкнений адресний Polygon триповерхової школи на Узнадзе, 59; геометрична перевірка черги показує добрий збіг з офіційною межею пам'ятки 2755. Муніципальний фонд розвитку прямо підтверджує пам'ятку та реставрацію зі збереженням історичного характеру. Google Place ID і перевірене ліцензійне фото не знайдено."
+  },
   "photos": [
     "10f2e8b753fb4f74963081fadf1669826d5feaebc5fedd9a6c82373c50bf3cbc",
     "38b95f553a22db48d57fdf8a63775235b70e3180774b8fe721bcbbc293776c47",

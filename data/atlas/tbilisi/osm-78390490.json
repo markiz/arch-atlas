@@ -170,6 +170,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.928; реестр 2431.8 м², OSM 2518.8 м²; перенос центра 0.9 м. OSM way/78390490: IoU 0,93, 95 % OSM-контура внутри реестрового, центроиды в 0,9 м; Place ID подобран (ChIJURTobzFzREARzRlfhUoY59k). Обведён главный надземный корпус, двор и малые корпуса не включены. Флагов нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.928; registry 2431.8 m², OSM 2518.8 m²; centroid offset 0.9 m. OSM way/78390490: IoU 0,93, 95 % of the OSM outline inside the registry one, centroids 0,9 m apart; a Place ID was found (ChIJURTobzFzREARzRlfhUoY59k). The main above-ground building is traced, the courtyard and the small buildings are not included. No flags.",
+    "ka": "IoU რეესტრის საზღვართან 0.928; რეესტრი 2431.8 მ², OSM 2518.8 მ²; ცენტროიდის გადახრა 0.9 მ. OSM way/78390490: IoU 0,93, OSM-ის კონტურის 95 % რეესტრის შიგნით, ცენტროიდები 0,9 მ-ში; Place ID მოძიებულია (ChIJURTobzFzREARzRlfhUoY59k). გამოკვეთილია მთავარი მიწისზედა კორპუსი, ეზო და პატარა კორპუსები არ არის ჩართული. ფლაგები არ არის.",
+    "uk": "IoU з реєстровою межею 0.928; реєстр 2431.8 м², OSM 2518.8 м²; зміщення центроїда 0.9 м. OSM way/78390490: IoU 0,93, 95 % OSM-контуру всередині реєстрового, центроїди за 0,9 м; Place ID підібрано (ChIJURTobzFzREARzRlfhUoY59k). Обведено головний надземний корпус, двір і малі корпуси не включені. Прапорців немає."
+  },
   "photos": [
     "dcf7e9e93f536824df87f0435c4cb23d724d32d837a38effdb529c06c74e48fd",
     "8f9d8281b006567206140cb234024fc6ad10fcf70805569575dd0a8c453b909c",

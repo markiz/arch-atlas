@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.842; реестр 401.5 м², OSM 381.0 м²; перенос центра 1.5 м. OSM way/246785820, building=yes, addr:street=კიევის ქუჩა, addr:housenumber=8; площадь 381 м² против 401,5 м² в реестре, IoU 0,842, центроиды в 1,5 м друг от друга, флагов нет — обведён именно корпус, а не участок.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.842; registry 401.5 m², OSM 381.0 m²; centroid offset 1.5 m. OSM way/246785820, building=yes, addr:street=კიევის ქუჩა, addr:housenumber=8; area 381 m² against 401,5 m² in the registry, IoU 0,842, the centroids are 1,5 m apart, no flags — it is the building itself that is traced, not the plot.",
+    "ka": "IoU რეესტრის საზღვართან 0.842; რეესტრი 401.5 მ², OSM 381.0 მ²; ცენტროიდის გადახრა 1.5 მ. OSM way/246785820, building=yes, addr:street=კიევის ქუჩა, addr:housenumber=8; ფართობი 381 მ² რეესტრის 401,5 მ²-ის წინააღმდეგ, IoU 0,842, ცენტროიდები ერთმანეთისგან 1,5 მ-ით არიან დაშორებული, ფლაგები არ არის — შემოხაზულია სწორედ კორპუსი და არა ნაკვეთი.",
+    "uk": "IoU з реєстровою межею 0.842; реєстр 401.5 м², OSM 381.0 м²; зміщення центроїда 1.5 м. OSM way/246785820, building=yes, addr:street=კიევის ქუჩა, addr:housenumber=8; площа 381 м² проти 401,5 м² у реєстрі, IoU 0,842, центроїди за 1,5 м один від одного, прапорців немає — обведено саме корпус, а не ділянку."
+  },
   "photos": [
     "1596c56d5b80d4cdb83cc3c0208dc1d2d0a017aa3a18e0e59d6b3a4f4318c040",
     "8c294af4e85c26f3a853618069e2dcd251d55c1a713d3232d171ae6b8381befb"

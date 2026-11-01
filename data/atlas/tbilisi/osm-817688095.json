@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Официальная граница реестра 3486 и OSM way/817688095 совпадают с IoU около 0,76; около 76,3% контура OSM лежит в границе, а way покрывает 99,4% официального полигона. Название и адрес Гии Абесадзе, 4 совпадают, контур замкнутый и относится к действующему католическому собору. Google Places вернул именованную достопримечательность; Place ID добавлен. Фото Commons не добавлено: точные файлы и права на архитектуру требуют отдельной проверки.",
+  "geometryQualityTranslations": {
+    "en": "The official registry boundary 3486 and OSM way/817688095 match with an IoU of about 0,76; about 76,3% of the OSM outline lies within the boundary, and the way covers 99,4% of the official polygon. The name and the address Gia Abesadze, 4 match, the outline is closed and belongs to the active Catholic cathedral. Google Places returned a named landmark; the Place ID has been added. No Commons photo has been added: the exact files and the rights to the architecture require separate verification.",
+    "ka": "რეესტრის ოფიციალური საზღვარი 3486 და OSM way/817688095 ემთხვევა IoU-ით დაახლოებით 0,76; OSM-ის კონტურის დაახლოებით 76,3% საზღვრის შიგნითაა, ხოლო way ფარავს ოფიციალური პოლიგონის 99,4%-ს. სახელი და მისამართი გია აბესაძის, 4 ემთხვევა, კონტური დახურულია და ეკუთვნის მოქმედ კათოლიკურ ტაძარს. Google Places-მა დააბრუნა დასახელებული ღირსშესანიშნაობა; Place ID დამატებულია. Commons-ის ფოტო არ დამატებულა: ზუსტი ფაილები და არქიტექტურის უფლებები ცალკე შემოწმებას მოითხოვს.",
+    "uk": "Офіційна межа реєстру 3486 і OSM way/817688095 збігаються з IoU близько 0,76; близько 76,3% контуру OSM лежить у межі, а way покриває 99,4% офіційного полігону. Назва й адреса Гії Абесадзе, 4 збігаються, контур замкнений і належить до чинного католицького собору. Google Places повернув іменовану пам'ятку; Place ID додано. Фото Commons не додано: точні файли та права на архітектуру потребують окремої перевірки."
+  },
   "photos": [
     "a2f55f7a914e75f4dad5b3cd50f4d80f3ca515875d63bfad5726efb7c55f072c",
     "2f818e2229f3b95a658a22e4485d99704f9bef7f7c9310cd7e0cbe39850f317f",

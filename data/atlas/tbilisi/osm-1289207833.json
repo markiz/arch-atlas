@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.55; реестр 974.7 м², OSM 802.9 м²; перенос центра 10.5 м. IoU 0,55 (реестр 974,7 м², OSM 802,9 м², пересечение 630,8 м², центроиды 10,5 м), флагов нет. OSM-полигон обводит уличное крыло и часть двора, поэтому контур — реальный надземный объём, но не весь U-образный план; при интеграции сверить, не обрезаны ли дворовые крылья. Фото: Commons-категория Giorgi Chubinashvili Street пуста, фото пока нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.55; registry 974.7 m², OSM 802.9 m²; centroid offset 10.5 m. IoU 0,55 (registry 974,7 m², OSM 802,9 m², intersection 630,8 m², centroids 10,5 m), no flags. The OSM polygon traces the street wing and part of the courtyard, so the outline is a real above-ground volume but not the whole U-shaped plan; during integration, verify whether the courtyard wings have been clipped. Photo: the Commons category Giorgi Chubinashvili Street is empty, there is no photo yet.",
+    "ka": "IoU რეესტრის საზღვართან 0.55; რეესტრი 974.7 მ², OSM 802.9 მ²; ცენტროიდის გადახრა 10.5 მ. IoU 0,55 (რეესტრი 974,7 მ², OSM 802,9 მ², გადაკვეთა 630,8 მ², ცენტროიდები 10,5 მ), ფლაგები არ არის. OSM-პოლიგონი ახაზებს ქუჩის ფრთას და ეზოს ნაწილს, ამიტომ კონტური რეალური მიწისზედა მოცულობაა, მაგრამ არა მთელი U-ფორმის გეგმა; ინტეგრაციისას შემოწმდეს, არ არის თუ არა მოჭრილი ეზოს ფრთები. ფოტო: Commons-კატეგორია Giorgi Chubinashvili Street ცარიელია, ფოტო ჯერ არ არის.",
+    "uk": "IoU з реєстровою межею 0.55; реєстр 974.7 м², OSM 802.9 м²; зміщення центроїда 10.5 м. IoU 0,55 (реєстр 974,7 м², OSM 802,9 м², перетин 630,8 м², центроїди 10,5 м), прапорців немає. OSM-полігон обводить вуличне крило й частину двору, тому контур — реальний надземний об'єм, але не весь U-подібний план; під час інтеграції звірити, чи не обрізано дворові крила. Фото: категорія Commons Giorgi Chubinashvili Street порожня, фото поки немає."
+  },
   "photos": [
     "1af6baf944ef86ca3c29f49164070371bb4b1ebbe3eb2e3b6038f9c11b63bab7",
     "4185c1182804addc3364257703478797e646fe2fc7f1aa41fcd57de3a135f56d",

@@ -95,6 +95,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.926; реестр 668.8 м², OSM 699.0 м²; перенос центра 0.4 м. IoU 0,926; флагов нет; контур OSM 699,0 м² против реестровых 668,8 м², 94,1 % реестрового контура покрыто OSM; у OSM-контура нет addr:* — номер дома в OSM не подтверждён.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.926; registry 668.8 m², OSM 699.0 m²; centroid offset 0.4 m. IoU 0,926; no flags; OSM outline 699,0 m² versus the registry's 668,8 m², 94,1 % of the registry outline is covered by OSM; the OSM outline has no addr:* — the house number is not confirmed in OSM.",
+    "ka": "IoU რეესტრის საზღვართან 0.926; რეესტრი 668.8 მ², OSM 699.0 მ²; ცენტროიდის გადახრა 0.4 მ. IoU 0,926; ფლაგები არ არის; OSM-კონტური 699,0 მ² რეესტრის 668,8 მ²-ის წინააღმდეგ, რეესტრის კონტურის 94,1 % დაფარულია OSM-ით; OSM-კონტურს addr:* არ აქვს — სახლის ნომერი OSM-ში დადასტურებული არ არის.",
+    "uk": "IoU з реєстровою межею 0.926; реєстр 668.8 м², OSM 699.0 м²; зміщення центроїда 0.4 м. IoU 0,926; прапорців немає; контур OSM 699,0 м² проти реєстрових 668,8 м², 94,1 % реєстрового контуру покрито OSM; у OSM-контуру немає addr:* — номер будинку в OSM не підтверджено."
+  },
   "photos": [
     "b44eeb4d6f0d1b1788d19971c088d8905ba522f6ac761040855c99a612ac9df5",
     "3c7ba92855bbe14f84e8c5adc46e5e34c6ebc45181174400e0bead5a1805541b"

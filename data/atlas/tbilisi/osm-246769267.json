@@ -136,6 +136,11 @@
     ]
   },
   "geometryQuality": "Официальная граница 3049 и OSM way/246769267 совпадают с IoU около 0,83; 86% площади OSM внутри границы, граница покрыта на 96%, смещение центроидов 0,4 м. Разница объясняется притвором и звонницей. OSM даёт №65, реестр и городской список — №69; это вариант нумерации того же углового участка.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary 3049 and OSM way/246769267 coincide with an IoU of about 0,83; 86% of the OSM area is inside the boundary, the boundary is covered by 96%, the centroid offset is 0,4 m. The difference is explained by the narthex and the bell tower. OSM gives No. 65, the registry and the city list — No. 69; this is a numbering variant of the same corner plot.",
+    "ka": "ოფიციალური საზღვარი 3049 და OSM way/246769267 ემთხვევა IoU-ით დაახლოებით 0,83; OSM-ის ფართობის 86% საზღვრის შიგნითაა, საზღვარი დაფარულია 96%-ით, ცენტროიდების გადახრა 0,4 მ. სხვაობა აიხსნება ნართექსითა და სამრეკლოთი. OSM იძლევა №65-ს, რეესტრი და ქალაქის სია — №69-ს; ეს იმავე კუთხის ნაკვეთის ნუმერაციის ვარიანტია.",
+    "uk": "Офіційна межа 3049 і OSM way/246769267 збігаються з IoU близько 0,83; 86% площі OSM усередині межі, межу покрито на 96%, зміщення центроїдів 0,4 м. Різниця пояснюється притвором і дзвіницею. OSM дає №65, реєстр і міський список — №69; це варіант нумерації тієї самої кутової ділянки."
+  },
   "photos": [
     "b739fe58f00631eeb1e8acd3a30395912b32250a0d5a5505ac65ac1c7c89e192"
   ],

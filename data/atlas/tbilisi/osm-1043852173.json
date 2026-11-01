@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.92; реестр 305.0 м², OSM 313.0 м²; перенос центра 0.4 м. IoU 0,92; OSM way/1043852173 — 313 м²; флагов нет. Обведён весь корпус на углу Зичи и Бесики.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.92; registry 305.0 m², OSM 313.0 m²; centroid offset 0.4 m. IoU 0,92; OSM way/1043852173 — 313 m²; no flags. The whole building on the corner of Zichi and Besiki is traced.",
+    "ka": "IoU რეესტრის საზღვართან 0.92; რეესტრი 305.0 მ², OSM 313.0 მ²; ცენტროიდის გადახრა 0.4 მ. IoU 0,92; OSM way/1043852173 — 313 მ²; ფლაგები არ არის. შემოხაზულია მთელი კორპუსი ზიჩისა და ბესიკის კუთხეში.",
+    "uk": "IoU з реєстровою межею 0.92; реєстр 305.0 м², OSM 313.0 м²; зміщення центроїда 0.4 м. IoU 0,92; OSM way/1043852173 — 313 м²; прапорців немає. Обведено весь корпус на розі Зічі та Бесікі."
+  },
   "photos": [
     "3363a5679d963470f35cdd1385f876a61fe031e46193c25f116ed65cf40d3efa",
     "82d50583679c52d454a560e4f9bed99a0487bebb8da5aef5b04deae89b1cf33a"

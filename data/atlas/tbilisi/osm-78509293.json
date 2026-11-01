@@ -132,6 +132,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; идентификация по адресу, требуется проверка корпуса",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; identification by address, building verification required.",
+    "ka": "OpenStreetMap-ის კონტური; იდენტიფიკაცია მისამართის მიხედვით, საჭიროა კორპუსის შემოწმება.",
+    "uk": "Контур OpenStreetMap; ідентифікація за адресою, потрібна перевірка корпусу."
+  },
   "photos": [
     "d70e46ad1f06c02efd7af032913f8466f1ad602abd59ca4352bcf312d081a7a8",
     "240eb9ca08db5a21183a080cf82f4d43b2584a99f603a7ad107a24e5a8f9cdeb",

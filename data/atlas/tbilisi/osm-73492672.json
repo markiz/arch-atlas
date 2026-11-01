@@ -95,6 +95,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.481; реестр 77.7 м², OSM 94.2 м²; перенос центра 1.6 м. Реестровая «геометрия» для всех кандидатов партии — буфер радиусом ~5 м вокруг точки (77,7 м²), поэтому IoU 0,48 к ней неинформативен. OSM way/73492672 — замкнутый контур надземного корпуса 94,2 м², центроид в 1,6 м от реестровой точки, флагов geometryFlags нет. Проверено: пересечений с опубликованными карточками в радиусе 120 м нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.481; registry 77.7 m², OSM 94.2 m²; centroid offset 1.6 m. The registry “geometry” for all candidates in the batch is a buffer with a radius of ~5 m around the point (77,7 m²), so an IoU of 0,48 against it is uninformative. OSM way/73492672 is a closed outline of the 94,2 m² above-ground building, the centroid is 1,6 m from the registry point, and the geometryFlags flags are absent. Verified: there are no intersections with published cards within a radius of 120 m.",
+    "ka": "IoU რეესტრის საზღვართან 0.481; რეესტრი 77.7 მ², OSM 94.2 მ²; ცენტროიდის გადახრა 1.6 მ. რეესტრის „გეომეტრია“ პარტიის ყველა კანდიდატისთვის — ~5 მ რადიუსის ბუფერი წერტილის ირგვლივ (77,7 მ²), ამიტომ მის მიმართ IoU 0,48 არაინფორმაციულია. OSM way/73492672 — 94,2 მ² მიწისზედა კორპუსის დახურული კონტური, ცენტროიდი რეესტრის წერტილიდან 1,6 მ-ში, ფლაგები geometryFlags არ არის. შემოწმებულია: 120 მ რადიუსში გამოქვეყნებულ ბარათებთან გადაკვეთები არ არის.",
+    "uk": "IoU з реєстровою межею 0.481; реєстр 77.7 м², OSM 94.2 м²; зміщення центроїда 1.6 м. Реєстрова «геометрія» для всіх кандидатів партії — буфер радіусом ~5 м навколо точки (77,7 м²), тому IoU 0,48 до неї неінформативний. OSM way/73492672 — замкнений контур надземного корпусу 94,2 м², центроїд за 1,6 м від реєстрової точки, прапорців geometryFlags немає. Перевірено: перетинів з опублікованими картками в радіусі 120 м немає."
+  },
   "photos": [
     "cdbe557e063c70513f1c113d4264bd8e2d527b2f74456fd4d99c160056acf015"
   ],

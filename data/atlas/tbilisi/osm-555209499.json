@@ -123,6 +123,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.696; реестр 584.4 м², OSM 805.0 м²; перенос центра 4.8 м. IoU 0,70; реестр 584,4 м², OSM 805,0 м², центроиды в 4,8 м; флагов нет. OSM way/555209499 (building=yes) шире реестровой границы на ~220 м² — вероятно, включает дворовое крыло; реестровая граница покрыта на 97,5 %.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.696; registry 584.4 m², OSM 805.0 m²; centroid offset 4.8 m. IoU 0,70; registry 584,4 m², OSM 805,0 m², centroids 4,8 m apart; no flags. OSM way/555209499 (building=yes) is wider than the registry boundary by ~220 m² — it probably includes the courtyard wing; the registry boundary is covered by 97,5 %.",
+    "ka": "IoU რეესტრის საზღვართან 0.696; რეესტრი 584.4 მ², OSM 805.0 მ²; ცენტროიდის გადახრა 4.8 მ. IoU 0,70; რეესტრი 584,4 მ², OSM 805,0 მ², ცენტროიდები 4,8 მ-ით დაშორებულია; ფლაგები არ არის. OSM way/555209499 (building=yes) ~220 მ²-ით უფრო ფართოა რეესტრის საზღვარზე — სავარაუდოდ, მოიცავს ეზოს ფრთას; რეესტრის საზღვარი დაფარულია 97,5 %-ით.",
+    "uk": "IoU з реєстровою межею 0.696; реєстр 584.4 м², OSM 805.0 м²; зміщення центроїда 4.8 м. IoU 0,70; реєстр 584,4 м², OSM 805,0 м², центроїди за 4,8 м; прапорців немає. OSM way/555209499 (building=yes) ширший за реєстрову межу на ~220 м² — ймовірно, включає дворове крило; реєстрову межу покрито на 97,5 %."
+  },
   "photos": [
     "66b6a5941bd43fefe1d4e61ee18476d9c11b7638c744def35fbe580b1d27dfea",
     "1e1e156f4230d4ed5f4ba2afb2b31bb236c74004e485b2d411a68960a4c00595",

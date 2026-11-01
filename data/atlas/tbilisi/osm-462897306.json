@@ -156,6 +156,11 @@
     ]
   },
   "geometryQuality": "OSM way/462897306 имеет точный номер 148ბ и официальный ref 4172; геометрия совпадает с официальной границей реестра 3310 с IoU около 0,95 (99,0% OSM-контура внутри, граница покрывает 96,2% OSM-контура). Обе геометрии относятся к отдельному замкнутому корпусу; рядом есть другие самостоятельные части ансамбля бывшего Тифлисского военного училища. Категория Commons связана с адресом и охранным ID, но отдельные фото не включены: требуется проверка файла и прав на архитектуру.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/462897306 has the exact number 148ბ and the official ref 4172; the geometry matches the official registry boundary 3310 with an IoU of about 0,95 (99,0% of the OSM outline inside, the boundary covers 96,2% of the OSM outline). Both geometries belong to a separate closed building; nearby there are other independent parts of the ensemble of the former Tiflis military school. The Commons category is linked to the address and the heritage ID, but individual photos are not included: the file and the rights to the architecture need to be verified.",
+    "ka": "OSM way/462897306-ს აქვს ზუსტი ნომერი 148ბ და ოფიციალური ref 4172; გეომეტრია ემთხვევა რეესტრის ოფიციალურ საზღვარს 3310 IoU-ით დაახლოებით 0,95 (OSM-კონტურის 99,0% შიგნით, საზღვარი ფარავს OSM-კონტურის 96,2%-ს). ორივე გეომეტრია ეკუთვნის ცალკე დახურულ კორპუსს; ახლოს არის ყოფილი ტფილისის სამხედრო სასწავლებლის ანსამბლის სხვა დამოუკიდებელი ნაწილები. Commons-ის კატეგორია დაკავშირებულია მისამართთან და დაცვის ID-სთან, მაგრამ ცალკე ფოტოები არ არის ჩართული: საჭიროა ფაილისა და არქიტექტურის უფლებების შემოწმება.",
+    "uk": "OSM way/462897306 має точний номер 148ბ і офіційний ref 4172; геометрія збігається з офіційною межею реєстру 3310 з IoU близько 0,95 (99,0% OSM-контуру всередині, межа покриває 96,2% OSM-контуру). Обидві геометрії належать до окремого замкненого корпусу; поруч є інші самостійні частини ансамблю колишнього Тифліського військового училища. Категорія Commons пов'язана з адресою та охоронним ID, але окремі фото не включені: потрібна перевірка файлу і прав на архітектуру."
+  },
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
     "5f63cf01d61ef6e2d5aa4ff9a0780715c0633da122d534014d790fd0918b8cd7",

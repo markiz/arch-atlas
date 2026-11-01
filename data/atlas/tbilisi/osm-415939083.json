@@ -99,6 +99,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.841; реестр 551.2 м², OSM 571.9 м²; перенос центра 1.5 м. IoU 0,84 с реестровой границей (566 м² против 587 м²), centroid 1,5 м, flags нет; OSM way/415939083 (building=yes, 4 этажа, 14 вершин) обводит корпус.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.841; registry 551.2 m², OSM 571.9 m²; centroid offset 1.5 m. IoU 0,84 with the registry boundary (566 m² versus 587 m²), centroid 1,5 m, no flags; OSM way/415939083 (building=yes, 4 storeys, 14 vertices) traces the building.",
+    "ka": "IoU რეესტრის საზღვართან 0.841; რეესტრი 551.2 მ², OSM 571.9 მ²; ცენტროიდის გადახრა 1.5 მ. IoU 0,84 რეესტრის საზღვართან (566 მ² 587 მ²-ის წინააღმდეგ), ცენტროიდი 1,5 მ, ფლაგები არ არის; OSM way/415939083 (building=yes, 4 სართული, 14 წვერო) შემოხაზავს კორპუსს.",
+    "uk": "IoU з реєстровою межею 0.841; реєстр 551.2 м², OSM 571.9 м²; зміщення центроїда 1.5 м. IoU 0,84 з реєстровою межею (566 м² проти 587 м²), центроїд 1,5 м, прапорців немає; OSM way/415939083 (building=yes, 4 поверхи, 14 вершин) обводить корпус."
+  },
   "photos": [
     "257ae1dcc084ef686b4263f4bcda86596c64d1fbfe95d31ef30eabe3e00f2e99"
   ],

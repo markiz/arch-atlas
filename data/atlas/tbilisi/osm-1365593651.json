@@ -76,6 +76,11 @@
     ]
   },
   "geometryQuality": "OSM way с адресом Чубинашвили, 22 и восемью узлами; официальная граница реестра больше контура дома и охватывает участок/двор. OSM way лежит внутри официальной границы примерно на 94%, а граница покрыта контуром примерно на 70%; музейный источник подтверждает дом-музей по тому же адресу.",
+  "geometryQualityTranslations": {
+    "en": "OSM way with the address Chubinashvili, 22 and eight nodes; the official registry boundary is larger than the house outline and covers the plot/courtyard. The OSM way lies inside the official boundary by about 94%, and the boundary is covered by the outline by about 70%; a museum source confirms a house-museum at the same address.",
+    "ka": "OSM way მისამართით ჩუბინაშვილის, 22 და რვა კვანძით; რეესტრის ოფიციალური საზღვარი უფრო დიდია სახლის კონტურზე და მოიცავს ნაკვეთს/ეზოს. OSM way ოფიციალური საზღვრის შიგნითაა დაახლოებით 94%-ით, ხოლო საზღვარი კონტურით დაფარულია დაახლოებით 70%-ით; მუზეუმის წყარო ადასტურებს სახლ-მუზეუმს იმავე მისამართზე.",
+    "uk": "OSM way з адресою Чубінашвілі, 22 і вісьмома вузлами; офіційна реєстрова межа більша за контур будинку й охоплює ділянку/двір. OSM way лежить усередині офіційної межі приблизно на 94%, а межу покрито контуром приблизно на 70%; музейне джерело підтверджує будинок-музей за тією ж адресою."
+  },
   "photos": [
     "029977cfbc61d6f69e047ad0cf1dd4a2ac74750d07e5565f3b6bcd4c81eee5a4",
     "f63d35399c9ecd741f45bdc5d602a328e399f08d09f921cb23aa53ae70de71ed",

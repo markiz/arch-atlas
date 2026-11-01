@@ -65,6 +65,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.098; реестр 77.7 м², OSM 259.2 м²; перенос центра 7.6 м. IoU 0.098 при флаге osm_much_larger — расхождение объясняется реестровой геометрией: полигон реестра (77,7 м², 37 вершин, bbox ~10×10 м) это буфер официальной точки, а не контур. Реальный контур — OSM way/78145651, замкнутый прямоугольник 259 м² (≈21×14 м) с тегом building=yes; центроиды в 7,6 м. Для карточки брать OSM-контур, реестровый буфер не использовать.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.098; registry 77.7 m², OSM 259.2 m²; centroid offset 7.6 m. IoU 0.098 with the osm_much_larger flag — the discrepancy is explained by the registry geometry: the registry polygon (77,7 m², 37 vertices, bbox ~10×10 m) is a buffer of the official point, not an outline. The real outline is OSM way/78145651, a closed rectangle of 259 m² (≈21×14 m) tagged building=yes; the centroids are 7,6 m apart. For the card, take the OSM outline, do not use the registry buffer.",
+    "ka": "IoU რეესტრის საზღვართან 0.098; რეესტრი 77.7 მ², OSM 259.2 მ²; ცენტროიდის გადახრა 7.6 მ. IoU 0.098 ფლაგით osm_much_larger — შეუსაბამობა აიხსნება რეესტრის გეომეტრიით: რეესტრის პოლიგონი (77,7 მ², 37 წვერო, bbox ~10×10 მ) ოფიციალური წერტილის ბუფერია და არა კონტური. ნამდვილი კონტური — OSM way/78145651, დახურული მართკუთხედი 259 მ² (≈21×14 მ) ტეგით building=yes; ცენტროიდები 7,6 მ-ში. ბარათისთვის OSM-ის კონტური უნდა ავიღოთ, რეესტრის ბუფერი არ გამოვიყენოთ.",
+    "uk": "IoU з реєстровою межею 0.098; реєстр 77.7 м², OSM 259.2 м²; зміщення центроїда 7.6 м. IoU 0.098 за прапорця osm_much_larger — розбіжність пояснюється реєстровою геометрією: полігон реєстру (77,7 м², 37 вершин, bbox ~10×10 м) — це буфер офіційної точки, а не контур. Реальний контур — OSM way/78145651, замкнений прямокутник 259 м² (≈21×14 м) з тегом building=yes; центроїди за 7,6 м. Для картки брати OSM-контур, реєстровий буфер не використовувати."
+  },
   "photos": [
     "6e7cdeabd4f3117422f661ee432f644c06855128fa1263dd2b16e17f4d2300b2",
     "b3acaf4ed9ea2adcd4fbbad9f16bdf51f7139f9c68aefa543f7799f0b2cb8d94"

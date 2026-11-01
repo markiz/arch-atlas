@@ -100,6 +100,11 @@
     ]
   },
   "geometryQuality": "OSM way/224748690 имеет точный адрес 14 и замкнутый корпусный Polygon. Официальная граница 4393 и way совпадают с IoU около 0,70; 71,7% площади way лежит внутри границы, а way покрывает около 95,8% реестрового полигона. Адрес, двухэтажная форма и архитектурное описание подтверждают конкретное здание; пересечения с соседней карточкой Writers House нет. Google API не нашёл адресного Place ID в пределах 5 м; фотографии и права не проверены.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/224748690 has the exact address 14 and a closed building Polygon. The official boundary 4393 and the way coincide with an IoU of about 0,70; 71,7% of the way's area lies inside the boundary, and the way covers about 95,8% of the registry polygon. The address, the two-storey form and the architectural description confirm the specific building; there is no overlap with the neighbouring Writers House card. The Google API found no address Place ID within 5 m; the photographs and the rights have not been verified.",
+    "ka": "OSM way/224748690-ს აქვს ზუსტი მისამართი 14 და დახურული კორპუსის Polygon. ოფიციალური საზღვარი 4393 და way ემთხვევა IoU-ით დაახლოებით 0,70; way-ის ფართობის 71,7% საზღვრის შიგნითაა, ხოლო way ფარავს რეესტრის პოლიგონის დაახლოებით 95,8%-ს. მისამართი, ორსართულიანი ფორმა და არქიტექტურული აღწერა ადასტურებს კონკრეტულ შენობას; გადაკვეთა მეზობელ ბარათთან Writers House არ არის. Google API-მ 5 მ-ის ფარგლებში მისამართის Place ID ვერ იპოვა; ფოტოები და უფლებები არ არის შემოწმებული.",
+    "uk": "OSM way/224748690 має точну адресу 14 і замкнений корпусний Polygon. Офіційна межа 4393 і way збігаються з IoU близько 0,70; 71,7% площі way лежить усередині межі, а way покриває близько 95,8% реєстрового полігону. Адреса, двоповерхова форма й архітектурний опис підтверджують конкретну будівлю; перетину із сусідньою карткою Writers House немає. Google API не знайшов адресного Place ID у межах 5 м; фотографії та права не перевірено."
+  },
   "photos": [
     "6faf11d5206eeb068d29ea260f704cff7c9b855fb1adc4a5c09f78e03d56f115",
     "ee3612e4d19b20cc72f09253dd54836a1b80da1a2cf76a7a437aea10b6a61bd7",

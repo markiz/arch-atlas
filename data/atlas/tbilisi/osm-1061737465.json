@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.787; реестр 150.2 м², OSM 185.8 м²; перенос центра 0.2 м. IoU 0,79 с реестровой границей (150 м² против 186 м² у OSM), centroid 0,2 м, flags нет; OSM way/1061737465 (building=detached, 9 вершин) обводит корпус, небольшая разница — выступ стены. Контур пригоден для карточки.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.787; registry 150.2 m², OSM 185.8 m²; centroid offset 0.2 m. IoU 0,79 with the registry boundary (150 m² versus 186 m² for OSM), centroid 0,2 m, no flags; OSM way/1061737465 (building=detached, 9 vertices) traces the building, the small difference is a wall projection. The outline is suitable for the card.",
+    "ka": "IoU რეესტრის საზღვართან 0.787; რეესტრი 150.2 მ², OSM 185.8 მ²; ცენტროიდის გადახრა 0.2 მ. IoU 0,79 რეესტრის საზღვართან (150 მ² OSM-ის 186 მ²-ის წინააღმდეგ), ცენტროიდი 0,2 მ, ფლაგები არ არის; OSM way/1061737465 (building=detached, 9 წვერო) ხაზავს კორპუსს, მცირე სხვაობა კედლის გამოშვერაა. კონტური ბარათისთვის გამოსადეგია.",
+    "uk": "IoU з реєстровою межею 0.787; реєстр 150.2 м², OSM 185.8 м²; зміщення центроїда 0.2 м. IoU 0,79 з реєстровою межею (150 м² проти 186 м² в OSM), центроїд 0,2 м, прапорців немає; OSM way/1061737465 (building=detached, 9 вершин) обводить корпус, невелика різниця — виступ стіни. Контур придатний для картки."
+  },
   "photos": [
     "9846b2c96d6143a9b7d5f5cfd8100ce1bd455de9f517fdacefa881158ec88777"
   ],

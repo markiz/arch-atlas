@@ -99,6 +99,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.795; реестр 583.4 м², OSM 603.4 м²; перенос центра 1.3 м. IoU 0,795; контур way/1060290495 (603 м², building=apartments, 3 уровня) против реестровых 583 м², реестр покрыт на 90,1%, центроид 1,3 м, флагов нет. Обведён надземный корпус по улице; внутренний двор в контур не входит.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.795; registry 583.4 m², OSM 603.4 m²; centroid offset 1.3 m. IoU 0,795; the outline way/1060290495 (603 m², building=apartments, 3 levels) against the registry's 583 m², the registry is covered by 90,1%, centroid 1,3 m, no flags. The above-ground building along the street is traced; the inner courtyard is not included in the outline.",
+    "ka": "IoU რეესტრის საზღვართან 0.795; რეესტრი 583.4 მ², OSM 603.4 მ²; ცენტროიდის გადახრა 1.3 მ. IoU 0,795; კონტური way/1060290495 (603 მ², building=apartments, 3 დონე) რეესტრის 583 მ²-ის წინააღმდეგ, რეესტრი დაფარულია 90,1%-ით, ცენტროიდი 1,3 მ, ფლაგები არ არის. შემოხაზულია ქუჩის მიწისზედა კორპუსი; შიდა ეზო კონტურში არ შედის.",
+    "uk": "IoU з реєстровою межею 0.795; реєстр 583.4 м², OSM 603.4 м²; зміщення центроїда 1.3 м. IoU 0,795; контур way/1060290495 (603 м², building=apartments, 3 рівні) проти реєстрових 583 м², реєстр покрито на 90,1%, центроїд 1,3 м, прапорців немає. Обведено надземний корпус по вулиці; внутрішній двір до контуру не входить."
+  },
   "photos": [
     "15589282139c966cd93d6d70d7bdc67bc3431f465f6e07c8ad0aded5d5ebab94",
     "2d1e2a4aaa8dda410db095a52631d263258b5abfc2b2019f6aa42242a01f3823",

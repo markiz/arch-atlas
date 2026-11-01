@@ -63,6 +63,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.0; реестр 77.7 м², OSM 260.2 м²; перенос центра 15.2 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0 неинформативен; OSM-way 742183462 — замкнутый контур 260 м² (5 точек) с тегами building=transportation, was:aerialway=station, abandoned=yes. Реестровая точка в 15 м от контура, фото Commons — в 20 м; контур обводит павильон станции, а не платформу.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.0; registry 77.7 m², OSM 260.2 m²; centroid offset 15.2 m. The registry boundary is a 5 m point buffer (77,7 m²), so an IoU of 0 is uninformative; OSM-way 742183462 is a closed outline of 260 m² (5 nodes) tagged building=transportation, was:aerialway=station, abandoned=yes. The registry point is 15 m from the outline, the Commons photo is 20 m away; the outline traces the station pavilion, not the platform.",
+    "ka": "IoU რეესტრის საზღვართან 0.0; რეესტრი 77.7 მ², OSM 260.2 მ²; ცენტროიდის გადახრა 15.2 მ. რეესტრის საზღვარი — 5 მ წერტილოვანი ბუფერი (77,7 მ²), IoU 0 არაინფორმაციულია; OSM-way 742183462 — 260 მ² დახურული კონტური (5 წერტილი) ტეგებით building=transportation, was:aerialway=station, abandoned=yes. რეესტრის წერტილი კონტურიდან 15 მ-შია, Commons-ის ფოტო — 20 მ-ში; კონტური სადგურის პავილიონს გამოსახავს და არა პლატფორმას.",
+    "uk": "IoU з реєстровою межею 0.0; реєстр 77.7 м², OSM 260.2 м²; зміщення центроїда 15.2 м. Реєстрова межа — точковий буфер 5 м (77,7 м²), IoU 0 неінформативний; OSM-way 742183462 — замкнений контур 260 м² (5 точок) з тегами building=transportation, was:aerialway=station, abandoned=yes. Реєстрова точка за 15 м від контуру, фото Commons — за 20 м; контур обводить павільйон станції, а не платформу."
+  },
   "photos": [
     "af13054fb1a18a8e6a2ca8c7d6dc4d8ccda886edc259a8b4e829270d495a79fb"
   ],

@@ -80,6 +80,11 @@
     ]
   },
   "geometryQuality": "Официальная карточка 16052 и [OSM way/1274260082](https://www.openstreetmap.org/way/1274260082) относятся к башне на Ингороква, 7. OSM Polygon полностью лежит внутри реестровой границы (IoU около 0,42; OSM внутри — 99,8%, граница покрывает — 42,3% OSM-контура). Официальная граница охватывает также крупную искусственную террасу, поэтому выбран более узкий OSM-контур башни. Это отдельный замкнутый Polygon; пересечений с опубликованными карточками рядом не найдено. Google Place ID и лицензированное фото не установлены.",
+  "geometryQualityTranslations": {
+    "en": "Official card 16052 and [OSM way/1274260082](https://www.openstreetmap.org/way/1274260082) refer to the tower at 7 Ingorokva. The OSM Polygon lies entirely within the registry boundary (IoU about 0,42; OSM inside — 99,8%, the boundary covers — 42,3% of the OSM outline). The official boundary also covers a large artificial terrace, so the narrower OSM outline of the tower was chosen. This is a separate closed Polygon; no intersections with published cards nearby were found. Google Place ID and a licensed photo have not been established.",
+    "ka": "ოფიციალური ბარათი 16052 და [OSM way/1274260082](https://www.openstreetmap.org/way/1274260082) ეხება ინგოროყვას, 7-ში მდებარე კოშკს. OSM Polygon მთლიანად რეესტრის საზღვრის შიგნითაა (IoU დაახლოებით 0,42; OSM შიგნით — 99,8%, საზღვარი ფარავს — OSM-კონტურის 42,3%). ოფიციალური საზღვარი მოიცავს ასევე დიდ ხელოვნურ ტერასას, ამიტომ არჩეულია კოშკის უფრო ვიწრო OSM-კონტური. ეს ცალკე დახურული Polygon-ია; ახლომდებარე გამოქვეყნებულ ბარათებთან გადაკვეთები არ მოიძებნა. Google Place ID და ლიცენზირებული ფოტო დადგენილი არ არის.",
+    "uk": "Офіційна картка 16052 і [OSM way/1274260082](https://www.openstreetmap.org/way/1274260082) стосуються вежі на Інгороква, 7. OSM Polygon повністю лежить усередині реєстрової межі (IoU близько 0,42; OSM усередині — 99,8%, межа покриває — 42,3% OSM-контуру). Офіційна межа охоплює також велику штучну терасу, тому обрано вужчий OSM-контур вежі. Це окремий замкнений Polygon; перетинів з опублікованими картками поблизу не знайдено. Google Place ID і ліцензоване фото не встановлені."
+  },
   "photos": [
     "ccd1118fb8c7b68c34b271afef80892f36ecd184c044588c2d8f1969ecced6b1",
     "4e3e1d7e4fe39e11e1816402505fa10aac80d944a0397b908c7f467d2fd1fe5c",

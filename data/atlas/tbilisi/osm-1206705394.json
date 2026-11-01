@@ -103,6 +103,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.811; реестр 651.2 м², OSM 575.7 м²; перенос центра 1.5 м. IoU 0,81; реестр 651,2 м², OSM 575,7 м², центроиды в 1,5 м; флагов нет. OSM way/1206705394 обводит корпус (building=commercial, 2 этажа) — тег функции расходится с жилым использованием, но контур и адрес совпадают.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.811; registry 651.2 m², OSM 575.7 m²; centroid offset 1.5 m. IoU 0,81; registry 651,2 m², OSM 575,7 m², centroids at 1,5 m; no flags. OSM way/1206705394 traces the building (building=commercial, 2 storeys) — the function tag differs from the residential use, but the outline and the address match.",
+    "ka": "IoU რეესტრის საზღვართან 0.811; რეესტრი 651.2 მ², OSM 575.7 მ²; ცენტროიდის გადახრა 1.5 მ. IoU 0,81; რეესტრი 651,2 მ², OSM 575,7 მ², ცენტროიდები 1,5 მ-ში; ფლაგები არ არის. OSM way/1206705394 ხაზავს კორპუსს (building=commercial, 2 სართული) — ფუნქციის ტეგი ეწინააღმდეგება საცხოვრებელ გამოყენებას, მაგრამ კონტური და მისამართი ემთხვევა.",
+    "uk": "IoU з реєстровою межею 0.811; реєстр 651.2 м², OSM 575.7 м²; зміщення центроїда 1.5 м. IoU 0,81; реєстр 651,2 м², OSM 575,7 м², центроїди за 1,5 м; прапорців немає. OSM way/1206705394 обводить корпус (building=commercial, 2 поверхи) — тег функції розходиться з житловим використанням, але контур і адреса збігаються."
+  },
   "photos": [
     "0cf16cacfc1566f602c28da85d28111ff73834d0df630e26af0130dcc5dc7e48",
     "e9e2bc87750d040945ecbe6d3e885006ad6cc9ca2b7487649597c7cd3581a204",

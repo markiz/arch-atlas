@@ -100,6 +100,11 @@
     ]
   },
   "geometryQuality": "Именованный действующий OSM-контур по Гришашвили, 1 перекрывает около 94% границы официального объекта №3534",
+  "geometryQualityTranslations": {
+    "en": "The named current OSM outline on Grishashvili, 1 overlaps about 94% of the boundary of official object No. 3534",
+    "ka": "დასახელებული მოქმედი OSM-კონტური გრიშაშვილის ქუჩაზე, 1 ფარავს ოფიციალური ობიექტის №3534 საზღვრის დაახლოებით 94%-ს",
+    "uk": "Іменований чинний OSM-контур по Грішашвілі, 1 перекриває близько 94% межі офіційного об'єкта №3534"
+  },
   "photos": [
     "ddb0d34e32981a9d846d0426ef33bb163315d32ea0915a1fbc7b934bd78b04cc",
     "b947cea202fde823b6dc7d8fdf0ab456daa4610c9688b8c68989ef3a47deb42a",

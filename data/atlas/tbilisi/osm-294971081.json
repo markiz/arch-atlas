@@ -116,6 +116,11 @@
     ]
   },
   "geometryQuality": "OSM way/294971081 совпадает с адресом официального приказа и типом школы; IoU с границей официального реестра около 0,90",
+  "geometryQualityTranslations": {
+    "en": "OSM way/294971081 matches the address in the official order and the school type; IoU with the boundary of the official registry about 0,90",
+    "ka": "OSM way/294971081 ემთხვევა ოფიციალური ბრძანების მისამართსა და სკოლის ტიპს; IoU ოფიციალური რეესტრის საზღვართან დაახლოებით 0,90",
+    "uk": "OSM way/294971081 збігається з адресою офіційного наказу та типом школи; IoU з межею офіційного реєстру близько 0,90"
+  },
   "photos": [
     "848db791f68ecaa19847e98d2d054b172a53a5c41d4ed5c5c1b6816273334948",
     "6faeab5ad8c5805af058e63d761ae8ea020bd27f5e3634a4191cbf03cbcb629b",

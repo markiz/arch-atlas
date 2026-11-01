@@ -100,6 +100,11 @@
     ]
   },
   "geometryQuality": "Официальная граница 3108 и OSM way/1070396839 совпадают с IoU около 0,93; 98% OSM внутри границы, граница покрыта на 95%, смещение 0,6 м. OSM даёт адрес 138а, реестр — 138; это тот же корпус, а не соседний жилой дом.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary 3108 and OSM way/1070396839 coincide with an IoU of about 0,93; 98% of OSM lies inside the boundary, the boundary is covered by 95%, the offset is 0,6 m. OSM gives the address 138a, the registry — 138; this is the same building, not a neighbouring residential house.",
+    "ka": "ოფიციალური საზღვარი 3108 და OSM way/1070396839 ემთხვევა IoU-ით დაახლოებით 0,93; OSM-ის 98% საზღვრის შიგნითაა, საზღვარი დაფარულია 95%-ით, გადახრა 0,6 მ. OSM იძლევა მისამართს 138ა, რეესტრი — 138; ეს იგივე კორპუსია და არა მეზობელი საცხოვრებელი სახლი.",
+    "uk": "Офіційна межа 3108 і OSM way/1070396839 збігаються з IoU близько 0,93; 98% OSM лежить усередині межі, межу покрито на 95%, зміщення 0,6 м. OSM дає адресу 138а, реєстр — 138; це той самий корпус, а не сусідній житловий будинок."
+  },
   "photos": [
     "f12349b6f4d0b582159623d45378a23d6ed1349b4bb8650159244c48b598f578"
   ],

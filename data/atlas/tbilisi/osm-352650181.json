@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.695; реестр 195.7 м², OSM 172.6 м²; перенос центра 1.4 м. IoU 0,70 с реестровой границей (201 м² против 177 м²), centroid 1,4 м, flags нет; OSM way/352650181 (building=yes, 9 вершин) обводит корпус. Адрес в OSM — «переулок Декабристов, 3», в реестре — улица и площадь Декабристов, 3: номер и квартал те же.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.695; registry 195.7 m², OSM 172.6 m²; centroid offset 1.4 m. IoU 0,70 with the registry boundary (201 m² against 177 m²), centroid 1,4 m, no flags; OSM way/352650181 (building=yes, 9 vertices) traces the building. The address in OSM is “Dekabristov Lane, 3”, in the registry — Dekabristov Street and Square, 3: the number and the block are the same.",
+    "ka": "IoU რეესტრის საზღვართან 0.695; რეესტრი 195.7 მ², OSM 172.6 მ²; ცენტროიდის გადახრა 1.4 მ. IoU 0,70 რეესტრის საზღვართან (201 მ² 177 მ²-ის წინააღმდეგ), ცენტროიდი 1,4 მ-ში, ფლაგები არ არის; OSM way/352650181 (building=yes, 9 წვერო) კორპუსს გამოსახავს. მისამართი OSM-ში — „დეკაბრისტების შესახვევი, 3“, რეესტრში — დეკაბრისტების ქუჩა და მოედანი, 3: ნომერი და კვარტალი იგივეა.",
+    "uk": "IoU з реєстровою межею 0.695; реєстр 195.7 м², OSM 172.6 м²; зміщення центроїда 1.4 м. IoU 0,70 з реєстровою межею (201 м² проти 177 м²), центроїд 1,4 м, прапорців немає; OSM way/352650181 (building=yes, 9 вершин) обводить корпус. Адреса в OSM — «провулок Декабристів, 3», у реєстрі — вулиця і площа Декабристів, 3: номер і квартал ті самі."
+  },
   "photos": [
     "5ddd9935ade776ade3e190f866e9c960d9d36cec00861ad3fd738397ba3449b2"
   ],

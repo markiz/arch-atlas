@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Официальная граница памятника 3172 и OSM way/462897307 совпадают с IoU около 0,90; 93,5% площади OSM-контура лежит внутри границы, граница покрывает 95,6% контура. OSM имеет точный адрес 148ა, реестр — общий 148. Контур не пересекается с главным корпусом 148 и другими корпусами комплекса.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary of monument 3172 and OSM way/462897307 coincide with an IoU of about 0,90; 93,5% of the area of the OSM outline lies inside the boundary, the boundary covers 95,6% of the outline. OSM has the exact address 148ა, the registry — the common 148. The outline does not intersect the main building 148 and other buildings of the complex.",
+    "ka": "ძეგლის 3172 ოფიციალური საზღვარი და OSM way/462897307 ემთხვევა IoU-ით დაახლოებით 0,90; OSM-კონტურის ფართობის 93,5% საზღვრის შიგნითაა, საზღვარი ფარავს კონტურის 95,6%-ს. OSM-ს აქვს ზუსტი მისამართი 148ა, რეესტრს — საერთო 148. კონტური არ იკვეთება მთავარ კორპუს 148-თან და კომპლექსის სხვა კორპუსებთან.",
+    "uk": "Офіційна межа пам'ятки 3172 та OSM way/462897307 збігаються з IoU близько 0,90; 93,5% площі OSM-контуру лежить усередині межі, межа покриває 95,6% контуру. OSM має точну адресу 148ა, реєстр — загальну 148. Контур не перетинається з головним корпусом 148 та іншими корпусами комплексу."
+  },
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
     "e4312073c98e0ddb58cbd087361c72c9c0f62b888ec5140125ce1a70b187e1c6",

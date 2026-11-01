@@ -64,6 +64,11 @@
     ]
   },
   "geometryQuality": "Именованный OSM-контур расположен к востоку от церкви Верхнего Бетлеми, как описано Georgia Travel. Официальная запись о колокольне на Бетлемском подъёме, 18 описывает башню комплекса Нижнего Бетлеми к западу; тождество этих двух описаний не подтверждено.",
+  "geometryQualityTranslations": {
+    "en": "The named OSM outline is located east of the Upper Bethlehem church, as described by Georgia Travel. The official record about the bell tower at 18 Betlemi Ascent describes the tower of the Lower Bethlehem complex to the west; the identity of these two descriptions is not confirmed.",
+    "ka": "დასახელებული OSM-კონტური ზემო ბეთლემის ეკლესიის აღმოსავლეთით მდებარეობს, როგორც Georgia Travel აღწერს. ოფიციალური ჩანაწერი ბეთლემის აღმართზე, 18 მდებარე სამრეკლოზე აღწერს ქვემო ბეთლემის კომპლექსის კოშკს დასავლეთით; ამ ორი აღწერის იდენტურობა დადასტურებული არ არის.",
+    "uk": "Іменований OSM-контур розташований на схід від церкви Верхнього Бетлемі, як описано Georgia Travel. Офіційний запис про дзвіницю на Бетлемському узвозі, 18 описує вежу комплексу Нижнього Бетлемі на заході; тотожність цих двох описів не підтверджена."
+  },
   "photos": [
     "df6bf7d500b5b6b99c3e8036b18bb9a55c08edde1b79ba4855affde39356494b",
     "df1ac6a6ac863408c2082d4ac01c4a71c3ea581375ba9e28d899cd8b0b813876",

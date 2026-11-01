@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Замкнутый OSM Polygon way/641462736 имеет имя «бывшее здание гостиницы» и ссылку на официальный реестр 26717. Точка реестра и контур совпадают по положению; IoU около 0,49, 70,1% OSM-контура лежит в границе, контур покрывает около 62,3% официального полигона. Архитектурное описание охватывает исторический гостиничный корпус, но реестровая граница шире отдельного здания, поэтому её нельзя трактовать как точный footprint. Google Place ID не найден, лицензированное фото не проверено.",
+  "geometryQualityTranslations": {
+    "en": "The closed OSM Polygon way/641462736 has the name “former hotel building” and a link to official registry 26717. The registry point and the outline coincide in position; IoU about 0,49, 70,1% of the OSM outline lies within the boundary, the outline covers about 62,3% of the official polygon. The architectural description covers the historic hotel building, but the registry boundary is wider than the individual building, so it cannot be treated as an exact footprint. No Google Place ID was found, the licensed photo has not been verified.",
+    "ka": "დახურულ OSM Polygon way/641462736 აქვს სახელი „ყოფილი სასტუმროს შენობა“ და ბმული ოფიციალურ რეესტრზე 26717. რეესტრის წერტილი და კონტური პოზიციით ემთხვევა; IoU დაახლოებით 0,49, OSM-ის კონტურის 70,1% საზღვარშია, კონტური ფარავს ოფიციალური პოლიგონის დაახლოებით 62,3%-ს. არქიტექტურული აღწერა მოიცავს ისტორიულ სასტუმროს კორპუსს, მაგრამ რეესტრის საზღვარი უფრო ფართოა ვიდრე ცალკე შენობა, ამიტომ მისი ზუსტ კონტურად განხილვა შეუძლებელია. Google Place ID ვერ მოიძებნა, ლიცენზირებული ფოტო არ არის შემოწმებული.",
+    "uk": "Замкнений OSM Polygon way/641462736 має назву «колишня будівля готелю» і посилання на офіційний реєстр 26717. Точка реєстру й контур збігаються за положенням; IoU близько 0,49, 70,1% OSM-контуру лежить у межі, контур покриває близько 62,3% офіційного полігону. Архітектурний опис охоплює історичний готельний корпус, але реєстрова межа ширша за окрему будівлю, тому її не можна трактувати як точний footprint. Google Place ID не знайдено, ліцензійне фото не перевірено."
+  },
   "photos": [
     "1dd5122b738d6d80a35c1241215a5659a530e94031a29926b6fda155b99e729d",
     "e5f04abc5489e6c73f3ed2d7bca1f881b1ff0ddec585f079f58a51a140e51a4e",

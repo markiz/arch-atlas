@@ -72,6 +72,11 @@
     ]
   },
   "geometryQuality": "Реальный замкнутый OSM Polygon way/1206434174 назван Anchiskhati Belltower и размечен как башня-колокольня. Официальная граница реестра 3787 и way совпадают с IoU около 0,78; около 85,8% площади way лежит в официальной границе, она покрывает около 90,0% контура. Контур расположен отдельно от базилики и описанного ансамбля; точный адрес реестра — Шавтели, 7. Фото из реестра не добавлено: права на повторное использование не установлены.",
+  "geometryQualityTranslations": {
+    "en": "The real closed OSM Polygon way/1206434174 is named Anchiskhati Belltower and tagged as a bell tower. The official registry boundary 3787 and the way coincide with an IoU of about 0,78; about 85,8% of the way's area lies inside the official boundary, which covers about 90,0% of the outline. The outline is located separately from the basilica and the described ensemble; the exact registry address is Shavteli, 7. No photo from the registry was added: the rights for reuse are not established.",
+    "ka": "ნამდვილი დახურული OSM Polygon way/1206434174 ეწოდება Anchiskhati Belltower და მონიშნულია სამრეკლო-კოშკად. რეესტრის ოფიციალური საზღვარი 3787 და way ემთხვევა IoU-ით დაახლოებით 0,78; way-ის ფართობის დაახლოებით 85,8% ოფიციალური საზღვრის შიგნითაა, რომელიც კონტურის დაახლოებით 90,0%-ს ფარავს. კონტური ბაზილიკისა და აღწერილი ანსამბლისგან ცალკე მდებარეობს; რეესტრის ზუსტი მისამართია შავთელი, 7. რეესტრიდან ფოტო არ დამატებულა: ხელახალი გამოყენების უფლებები დადგენილი არ არის.",
+    "uk": "Реальний замкнений OSM Polygon way/1206434174 названий Anchiskhati Belltower і позначений як дзвіниця-вежа. Офіційна реєстрова межа 3787 і way збігаються з IoU близько 0,78; близько 85,8% площі way лежить усередині офіційної межі, яка покриває близько 90,0% контуру. Контур розташований окремо від базиліки та описаного ансамблю; точна адреса реєстру — Шавтелі, 7. Фото з реєстру не додано: права на повторне використання не встановлені."
+  },
   "photos": [
     "c7e25c00973ee3745c1cb62048894ce10c5c50927a9d0b4baaff1d362ecae489"
   ],

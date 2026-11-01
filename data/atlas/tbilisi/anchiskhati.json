@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; автоматическое сопоставление по координате, требует ручной проверки",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; automatic matching by coordinate, requires manual verification.",
+    "ka": "OpenStreetMap-ის კონტური; ავტომატური შედარება კოორდინატის მიხედვით, საჭიროებს ხელით შემოწმებას.",
+    "uk": "Контур OpenStreetMap; автоматичне зіставлення за координатою, потребує ручної перевірки."
+  },
   "photos": [
     "b2fb1a2e240f087a04928c15404bd1b90b09c57ae8b9328aaf445c1970138a9a",
     "f9b20bd0feda2904f17f9fdb964917f9d6a9662e280314473efa4f2fbbba892d",

@@ -17,6 +17,7 @@ export const ROOT=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'
 export const DEFAULT_CITY='tbilisi';
 export const DEFAULT_OUT=path.join(ROOT,'public','atlas','buildings.json');
 const LANGS=['ru','en','ka','uk'];
+const GEOMETRY_TRANSLATION_LANGS=['en','ka','uk'];
 const GEOMETRY_ROLES=new Set(['above_ground','heritage_boundary','complex_underground','neighbor_wrong_candidate','historic_plan','visible_domes','unknown']);
 const PHOTO_ID_RE=/^[a-f0-9]{64}$/;
 const PHOTO_METADATA_FIELDS=['author','license','licenseUrl','source','modifications'];
@@ -57,6 +58,13 @@ function requireLabels(file,value,field,{allowEmpty=false}={}){
   if(Object.keys(value).length!==LANGS.length||!LANGS.every(lang=>Object.hasOwn(value,lang)))fail(file,`${field} must contain exactly ru/en/ka/uk`);
   for(const lang of LANGS)requireString(file,value[lang],`${field}.${lang}`,{allowEmpty});
   return {ru:value.ru,en:value.en,ka:value.ka,uk:value.uk};
+}
+
+function requireGeometryQualityTranslations(file,value){
+  if(!isPlainObject(value))fail(file,'geometryQualityTranslations must be an object with en/ka/uk');
+  if(Object.keys(value).length!==GEOMETRY_TRANSLATION_LANGS.length||!GEOMETRY_TRANSLATION_LANGS.every(lang=>Object.hasOwn(value,lang)))fail(file,'geometryQualityTranslations must contain exactly en/ka/uk');
+  for(const lang of GEOMETRY_TRANSLATION_LANGS)requireString(file,value[lang],`geometryQualityTranslations.${lang}`);
+  return {en:value.en,ka:value.ka,uk:value.uk};
 }
 
 function requireReference(file,id,table,kind){
@@ -149,6 +157,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   if(!Array.isArray(card.coordinates)||card.coordinates.length!==2||!card.coordinates.every(value=>Number.isFinite(value)))fail(file,'coordinates must be [longitude, latitude]');
   const geometry=validateGeometry(file,card.geometry,'geometry');
   requireString(file,card.geometryQuality,'geometryQuality');
+  const geometryQualityTranslations=card.geometryQualityTranslations===undefined?null:requireGeometryQualityTranslations(file,card.geometryQualityTranslations);
   requireString(file,card.source,'source');
   if(!/^https?:\/\//.test(card.source))fail(file,'source must be an http(s) URL');
   if(card.otherSource!==undefined&&!/^https?:\/\//.test(requireString(file,card.otherSource,'otherSource')))fail(file,'otherSource must be an http(s) URL');
@@ -211,6 +220,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
     source:card.source,
   };
   if(histories)out.histories=histories;
+  if(geometryQualityTranslations)out.geometryQualityTranslations=geometryQualityTranslations;
   if(card.osmId!==undefined)out.osmId=requireString(file,card.osmId,'osmId');
   if(card.originalLanguage!==undefined)out.originalLanguage=requireString(file,card.originalLanguage,'originalLanguage');
   if(card.otherSource!==undefined)out.otherSource=card.otherSource;

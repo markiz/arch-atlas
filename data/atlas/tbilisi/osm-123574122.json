@@ -128,6 +128,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; the name matches the source.",
+    "ka": "OpenStreetMap-ის კონტური; სახელწოდება ემთხვევა წყაროს.",
+    "uk": "Контур OpenStreetMap; назва збігається з джерелом."
+  },
   "photos": [
     "9afdfab2ae600091c561abde52ce42a2c3689705f12bee434723c7cb33e028f9"
   ],

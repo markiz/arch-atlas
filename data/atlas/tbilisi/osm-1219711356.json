@@ -71,6 +71,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.659; реестр 324.8 м², OSM 383.7 м²; перенос центра 2.0 м. IoU 0,66; реестр 324,8 м², OSM 383,7 м², центроиды в 2,0 м; флагов нет. OSM way/1219711356 (building=commercial, 3 этажа) шире реестровой границы на ~60 м²; реестровая граница покрыта на 86,6 %.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.659; registry 324.8 m², OSM 383.7 m²; centroid offset 2.0 m. IoU 0,66; registry 324,8 m², OSM 383,7 m², centroids at 2,0 m; no flags. OSM way/1219711356 (building=commercial, 3 storeys) is ~60 m² wider than the registry boundary; the registry boundary is covered by 86,6 %.",
+    "ka": "IoU რეესტრის საზღვართან 0.659; რეესტრი 324.8 მ², OSM 383.7 მ²; ცენტროიდის გადახრა 2.0 მ. IoU 0,66; რეესტრი 324,8 მ², OSM 383,7 მ², ცენტროიდები 2,0 მ-ში; ფლაგები არ არის. OSM way/1219711356 (building=commercial, 3 სართული) ~60 მ²-ით ფართოა რეესტრის საზღვარზე; რეესტრის საზღვარი დაფარულია 86,6 %-ით.",
+    "uk": "IoU з реєстровою межею 0.659; реєстр 324.8 м², OSM 383.7 м²; зміщення центроїда 2.0 м. IoU 0,66; реєстр 324,8 м², OSM 383,7 м², центроїди за 2,0 м; прапорців немає. OSM way/1219711356 (building=commercial, 3 поверхи) ширший за реєстрову межу на ~60 м²; реєстрова межа покрита на 86,6 %."
+  },
   "photos": [
     "75ac3157d41d02bcb20645912224d10d2f9bbb290d769863dd9193c40221e4aa",
     "3ed1a4ffd2d0605ec3638f4e28024bedb10a5762b223f88391e646eb8cfdb5f2"

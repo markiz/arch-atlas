@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap; сопоставлен с границей реестра, требует редакционной проверки",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; matched against the registry boundary, requires editorial verification",
+    "ka": "OpenStreetMap-ის კონტური; შედარებულია რეესტრის საზღვართან, საჭიროებს რედაქციულ შემოწმებას",
+    "uk": "Контур OpenStreetMap; зіставлений з реєстровою межею, потребує редакторської перевірки"
+  },
   "photos": [
     "b8b834e409377116177d81da95120f1b469de2ce989d4f2b79c50d30d9c14254",
     "2f2d05f5efe39986e6257a2390b6ede2cf099e23768fb967028537872936ffff",

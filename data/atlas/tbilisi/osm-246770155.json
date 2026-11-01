@@ -127,6 +127,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.682; реестр 531.0 м², OSM 663.7 м²; перенос центра 3.2 м. IoU 0,682: реестровый полигон 531,0 м² и OSM way/246770155 (663,7 м², building=apartments); 91 % реестровой площади внутри OSM, но OSM на 25 % больше и, вероятно, включает боковой дворовый объём — при сборке карточки контур стоит подрезать по корпусу.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.682; registry 531.0 m², OSM 663.7 m²; centroid offset 3.2 m. IoU 0,682: the registry polygon of 531,0 m² and OSM way/246770155 (663,7 m², building=apartments); 91 % of the registry area is inside OSM, but OSM is 25 % larger and probably includes a side courtyard volume — when assembling the card, the outline should be trimmed along the building.",
+    "ka": "IoU რეესტრის საზღვართან 0.682; რეესტრი 531.0 მ², OSM 663.7 მ²; ცენტროიდის გადახრა 3.2 მ. IoU 0,682: რეესტრის პოლიგონი 531,0 მ² და OSM way/246770155 (663,7 მ², building=apartments); რეესტრის ფართობის 91 % OSM-ის შიგნითაა, მაგრამ OSM 25 %-ით დიდია და, სავარაუდოდ, მოიცავს გვერდით ეზოს მოცულობას — ბარათის აწყობისას კონტური კორპუსის გასწვრივ უნდა მოიჭრას.",
+    "uk": "IoU з реєстровою межею 0.682; реєстр 531.0 м², OSM 663.7 м²; зміщення центроїда 3.2 м. IoU 0,682: реєстровий полігон 531,0 м² і OSM way/246770155 (663,7 м², building=apartments); 91 % реєстрової площі всередині OSM, але OSM на 25 % більший і, ймовірно, включає бічний дворовий об'єм — при складанні картки контур варто підрізати по корпусу."
+  },
   "photos": [
     "b4928d0ba0ab4c5de6145b73116304143958d03801237d8ecf030e3341949d76",
     "51876a542e49d2f431dd52d7983d89be42874342bfcbac55480838857a7d3315",

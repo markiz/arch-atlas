@@ -87,6 +87,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.966; реестр 453.6 м², OSM 464.1 м²; перенос центра 0.1 м. IoU 0,966; OSM way/662313244 — весь трёхэтажный угловой корпус, флагов нет; пересечений с карточками атласа нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.966; registry 453.6 m², OSM 464.1 m²; centroid offset 0.1 m. IoU 0,966; OSM way/662313244 — the entire three-storey corner building, no flags; there are no intersections with atlas cards.",
+    "ka": "IoU რეესტრის საზღვართან 0.966; რეესტრი 453.6 მ², OSM 464.1 მ²; ცენტროიდის გადახრა 0.1 მ. IoU 0,966; OSM way/662313244 — მთლიანი სამსართულიანი კუთხის კორპუსი, ფლაგები არ არის; ატლასის ბარათებთან გადაკვეთები არ არის.",
+    "uk": "IoU з реєстровою межею 0.966; реєстр 453.6 м², OSM 464.1 м²; зміщення центроїда 0.1 м. IoU 0,966; OSM way/662313244 — увесь триповерховий кутовий корпус, прапорців немає; перетинів з картками атласу немає."
+  },
   "photos": [
     "101bf1cb0113363c1a92b5dd64bf18c1534e49f7be1c428d5e135f91acba66ab",
     "1dc05a30630ed689fb039eb0d1ef314022dd6c440ae75844dc2bf6f0cb3b5d53"

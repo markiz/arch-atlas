@@ -32,6 +32,7 @@ progress.start();
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
  for(const k of ['name','district','yearLabel','style','description','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
+ if(b.geometryQualityTranslations)assert(['en','ka','uk'].every(lang=>typeof b.geometryQualityTranslations[lang]==='string'&&b.geometryQualityTranslations[lang].trim()),`${b.id}: translated geometry quality`);
  assert(typeof b.address==='string'&&b.address===b.addresses?.ru&&b.addresses&&['ru','en','ka','uk'].every(lang=>typeof b.addresses[lang]==='string'),`${b.id}: translated addresses`);
  assert(['ru','en','ka','uk'].every(lang=>b.addresses[lang]===''||b.addresses[lang].trim()),`${b.id}: invalid empty address`);
  assert(typeof b.history==='string',`${b.id}: history`);

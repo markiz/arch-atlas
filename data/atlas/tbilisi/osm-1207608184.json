@@ -96,6 +96,11 @@
     ]
   },
   "geometryQuality": "OSM называет церковь Святого Николая в Харпухи; официальная граница наследия перекрывает около 90% контура; адресные варианты источников требуют уточнения",
+  "geometryQualityTranslations": {
+    "en": "OSM names it the Church of Saint Nicholas in Kharpukhi; the official heritage boundary overlaps about 90% of the outline; the address variants of the sources require verification.",
+    "ka": "OSM მას უწოდებს წმინდა ნიკოლოზის ეკლესიას ხარფუხში; მემკვიდრეობის ოფიციალური საზღვარი კონტურის დაახლოებით 90%-ს ფარავს; წყაროების მისამართის ვარიანტები დაზუსტებას მოითხოვს.",
+    "uk": "OSM називає її церквою Святого Миколая в Харпухі; офіційна межа спадщини перекриває близько 90% контуру; адресні варіанти джерел потребують уточнення."
+  },
   "photos": [
     "be1da6e7237d3dcf5df49ac4ebfd40b995c630dcc88807bc8d5d744767bc39b2",
     "d3b70fe63bafae0c8a207da6a39e25f6ebaaf0875ae653ddd0df54536cc09b03"

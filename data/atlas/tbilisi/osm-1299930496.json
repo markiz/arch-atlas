@@ -154,6 +154,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.021; реестр 77.7 м², OSM 3683.6 м²; перенос центра 26.9 м. Реестровая граница — точечный буфер 5 м (77,7 м²), IoU 0,02 неинформативен; реестровая точка на 100% внутри OSM-way 1299930496 (3 725 м², 27 точек, без внутренних колец) — контур охватывает башню и стилобат отеля. Флаг osm_composite_or_plot вызван реестровым буфером, а не формой OSM-контура.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.021; registry 77.7 m², OSM 3683.6 m²; centroid offset 26.9 m. The registry boundary is a point buffer of 5 m (77,7 m²), IoU 0,02 is uninformative; the registry point is 100% inside OSM way 1299930496 (3 725 m², 27 points, no inner rings) — the outline covers the tower and the hotel's stylobate. The flag osm_composite_or_plot is caused by the registry buffer, not by the shape of the OSM outline.",
+    "ka": "IoU რეესტრის საზღვართან 0.021; რეესტრი 77.7 მ², OSM 3683.6 მ²; ცენტროიდის გადახრა 26.9 მ. რეესტრის საზღვარი წერტილოვანი 5 მ ბუფერია (77,7 მ²), IoU 0,02 არაინფორმატიულია; რეესტრის წერტილი 100%-ით OSM way 1299930496-ის შიგნითაა (3 725 მ², 27 წერტილი, შიდა რგოლების გარეშე) — კონტური მოიცავს კოშკს და სასტუმროს სტილობატს. ფლაგი osm_composite_or_plot გამოწვეულია რეესტრის ბუფერით და არა OSM-კონტურის ფორმით.",
+    "uk": "IoU з реєстровою межею 0.021; реєстр 77.7 м², OSM 3683.6 м²; зміщення центроїда 26.9 м. Реєстрова межа — точковий буфер 5 м (77,7 м²), IoU 0,02 неінформативний; реєстрова точка на 100% усередині OSM way 1299930496 (3 725 м², 27 точок, без внутрішніх кілець) — контур охоплює вежу та стилобат готелю. Прапорець osm_composite_or_plot спричинений реєстровим буфером, а не формою OSM-контуру."
+  },
   "photos": [
     "746c679d73555e0289a31c8e29c3b58cd49bc534bfdbd8acfa0600337398d3a9"
   ],

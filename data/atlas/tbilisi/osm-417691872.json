@@ -87,6 +87,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.892; реестр 492.9 м², OSM 481.6 м²; перенос центра 0.4 м. IoU 0,892 (реестр 493 м², OSM 482 м²), флагов нет, центроид в 0,4 м. Обведён надземный корпус; в OSM помечен building=public из-за торговли в первом этаже, что не меняет жилой функции дома.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.892; registry 492.9 m², OSM 481.6 m²; centroid offset 0.4 m. IoU 0,892 (registry 493 m², OSM 482 m²), no flags, centroid at 0,4 m. The above-ground building is traced; in OSM it is tagged building=public because of retail on the ground floor, which does not change the residential function of the house.",
+    "ka": "IoU რეესტრის საზღვართან 0.892; რეესტრი 492.9 მ², OSM 481.6 მ²; ცენტროიდის გადახრა 0.4 მ. IoU 0,892 (რეესტრი 493 მ², OSM 482 მ²), ფლაგები არ არის, ცენტროიდი 0,4 მ-ზე. მოხაზულია მიწისზედა კორპუსი; OSM-ში აღნიშნულია building=public პირველ სართულზე ვაჭრობის გამო, რაც არ ცვლის სახლის საცხოვრებელ ფუნქციას.",
+    "uk": "IoU з реєстровою межею 0.892; реєстр 492.9 м², OSM 481.6 м²; зміщення центроїда 0.4 м. IoU 0,892 (реєстр 493 м², OSM 482 м²), прапорців немає, центроїд на 0,4 м. Обведено надземний корпус; в OSM позначено building=public через торгівлю на першому поверсі, що не змінює житлової функції будинку."
+  },
   "photos": [
     "c13e5dcdc3f4e1716aa9777df12d98187e268d66d92932ee8854071e5b2f4106",
     "e70cc25717d1b966fdecafa2d67916ef67d21862369d9870152b87879b049cf3"

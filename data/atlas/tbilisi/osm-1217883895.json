@@ -80,6 +80,11 @@
     ]
   },
   "geometryQuality": "Адресный [OSM way/1217883895](https://www.openstreetmap.org/way/1217883895) совпадает с официальной записью 3347 по улице Джорбенадзе, 9. Замкнутый Polygon двухэтажного жилого корпуса совпадает с официальной границей с IoU около 0,86; 89% OSM-контура лежит внутри реестровой границы, которая покрывает около 96% контура. Пересечений с опубликованными карточками поблизости не найдено. Google API не вернул Place ID в радиусе 5 м; проверенного лицензированного фото нет.",
+  "geometryQualityTranslations": {
+    "en": "The address-carrying [OSM way/1217883895](https://www.openstreetmap.org/way/1217883895) matches the official record 3347 at 9 Jorbenadze Street. The closed Polygon of the two-storey residential building matches the official boundary with an IoU of about 0,86; 89% of the OSM outline lies inside the registry boundary, which covers about 96% of the outline. No intersections with published cards were found nearby. The Google API returned no Place ID within a radius of 5 m; there is no verified licensed photo.",
+    "ka": "მისამართიანი [OSM way/1217883895](https://www.openstreetmap.org/way/1217883895) ემთხვევა ოფიციალურ ჩანაწერს 3347 ჯორბენაძის ქუჩაზე, 9. ორსართულიანი საცხოვრებელი კორპუსის დახურული Polygon ემთხვევა ოფიციალურ საზღვარს IoU-ით დაახლოებით 0,86; OSM-კონტურის 89% რეესტრის საზღვრის შიგნითაა, რომელიც კონტურის დაახლოებით 96%-ს ფარავს. გამოქვეყნებულ ბარათებთან გადაკვეთა ახლოს არ მოიძებნა. Google API-მ Place ID 5 მ რადიუსში არ დააბრუნა; დამოწმებული ლიცენზირებული ფოტო არ არის.",
+    "uk": "Адресний [OSM way/1217883895](https://www.openstreetmap.org/way/1217883895) збігається з офіційним записом 3347 по вулиці Джорбенадзе, 9. Замкнений Polygon двоповерхового житлового корпусу збігається з офіційною межею з IoU близько 0,86; 89% OSM-контуру лежить усередині реєстрової межі, яка покриває близько 96% контуру. Перетинів з опублікованими картками поблизу не знайдено. Google API не повернув Place ID у радіусі 5 м; перевіреного ліцензованого фото немає."
+  },
   "photos": [
     "518dcacc53104cc78b01238827dd8d4f440588c0b839302ffaee6eb4a7550bc4",
     "436f5d8a92fab8b4d768669a200040aae8bb3a93b44395729b27c3afcfb8514a"

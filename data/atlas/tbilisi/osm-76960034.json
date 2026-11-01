@@ -126,6 +126,11 @@
     ]
   },
   "geometryQuality": "Замкнутый контур OSM way/76960034 совпадает с официальной границей памятника 5208 с IoU около 0,83; около 99,3% площади контура лежит внутри неё, реестровая граница шире и покрывает около 83,1% way. OSM тегирует корпус как industrial/video studio, что согласуется с назначением павильона. Официальный адрес — Агмашенебели, 164, текущий адрес OSM — 162; это расхождение отмечено, а не нормализовано.",
+  "geometryQualityTranslations": {
+    "en": "The closed outline of OSM way/76960034 coincides with the official boundary of monument 5208 with an IoU of about 0,83; about 99,3% of the outline's area lies inside it, the registry boundary is wider and covers about 83,1% of the way. OSM tags the building as industrial/video studio, which agrees with the pavilion's function. The official address is Agmashenebeli, 164, the current OSM address is 162; this discrepancy is noted, not normalised.",
+    "ka": "OSM way/76960034-ის დახურული კონტური ემთხვევა 5208 ძეგლის ოფიციალურ საზღვარს IoU-ით დაახლოებით 0,83; კონტურის ფართობის დაახლოებით 99,3% მის შიგნით ძევს, რეესტრის საზღვარი უფრო ფართოა და ფარავს way-ის დაახლოებით 83,1%-ს. OSM კორპუსს ტეგავს როგორც industrial/video studio, რაც პავილიონის დანიშნულებას ეთანხმება. ოფიციალური მისამართი — აღმაშენებელი, 164, OSM-ის მიმდინარე მისამართი — 162; ეს შეუსაბამობა აღნიშნულია და არ არის ნორმალიზებული.",
+    "uk": "Замкнений контур OSM way/76960034 збігається з офіційною межею пам'ятки 5208 з IoU близько 0,83; близько 99,3% площі контуру лежить усередині неї, реєстрова межа ширша й покриває близько 83,1% way. OSM тегує корпус як industrial/video studio, що узгоджується з призначенням павільйону. Офіційна адреса — Агмашенебелі, 164, поточна адреса OSM — 162; ця розбіжність зафіксована, а не нормалізована."
+  },
   "photos": [
     "c7a44b4d9e730ed125d9c1a399f3c412c9e4c9f2052c3f5b04827023fc057ae4"
   ],

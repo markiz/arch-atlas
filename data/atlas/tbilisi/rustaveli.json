@@ -309,6 +309,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap по отношению здания; уточняется редактором",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline based on the building relation; under editorial review.",
+    "ka": "OpenStreetMap-ის კონტური შენობის რელაციის მიხედვით; რედაქტორი აზუსტებს.",
+    "uk": "Контур OpenStreetMap за відношенням будівлі; уточнюється редактором."
+  },
   "photos": [
     "41d687936c8a550d404d7a9e27a377c013ca8d6c726a9e17eacd04f0929e6604",
     "f729eb78c64dea81114afb2cae71aadb9e12fb938b1cd3e2ed22b736edc9fdb7"

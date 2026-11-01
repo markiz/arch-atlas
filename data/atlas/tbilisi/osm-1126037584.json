@@ -103,6 +103,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.874; реестр 432.1 м², OSM 411.9 м²; перенос центра 0.8 м. IoU 0,874; OSM way/1126037584 — замкнутый контур корпуса, флагов нет; OSM building:levels=3 отражает дворовую трёхэтажность.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.874; registry 432.1 m², OSM 411.9 m²; centroid offset 0.8 m. IoU 0,874; OSM way/1126037584 — a closed outline of the building, no flags; OSM building:levels=3 reflects the three storeys on the courtyard side.",
+    "ka": "IoU რეესტრის საზღვართან 0.874; რეესტრი 432.1 მ², OSM 411.9 მ²; ცენტროიდის გადახრა 0.8 მ. IoU 0,874; OSM way/1126037584 — კორპუსის დახურული კონტური, ფლაგები არ არის; OSM building:levels=3 ასახავს ეზოს მხარეს სამსართულიან სიმაღლეს.",
+    "uk": "IoU з реєстровою межею 0.874; реєстр 432.1 м², OSM 411.9 м²; зміщення центроїда 0.8 м. IoU 0,874; OSM way/1126037584 — замкнений контур корпусу, прапорців немає; OSM building:levels=3 відображає триповерховість з боку двору."
+  },
   "photos": [
     "a135003c46931ed5275c6c7e4896a2106cef470af1e070f69f01f0e8943133fa",
     "7db49ead2bd04edf1c69e615711dcdf78e9eed9f39cc34cce85e22823523211a",

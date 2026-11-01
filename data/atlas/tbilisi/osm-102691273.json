@@ -68,6 +68,11 @@
     ]
   },
   "geometryQuality": "Официальная граница памятника 3246 и [OSM way/102691273](https://www.openstreetmap.org/way/102691273) совпадают с IoU около 0,83; 87,2% OSM-контура лежит внутри реестровой границы, которая покрывает около 94,2% way. Это отдельный замкнутый шестиузловой Polygon. Реестр даёт адрес 111, OSM — 111ა; расхождение отмечено. Архитектурная ценность и детали подтверждены официальным описанием. Проверенной лицензированной фотографии нет.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary of heritage monument 3246 and [OSM way/102691273](https://www.openstreetmap.org/way/102691273) coincide with an IoU of about 0,83; 87,2% of the OSM outline lies inside the registry boundary, which covers about 94,2% of the way. This is a separate closed six-node Polygon. The registry gives the address 111, OSM — 111ა; the discrepancy is noted. The architectural value and the details are confirmed by the official description. There is no verified licensed photograph.",
+    "ka": "ძეგლი 3246-ის ოფიციალური საზღვარი და [OSM way/102691273](https://www.openstreetmap.org/way/102691273) ემთხვევა IoU-ით დაახლოებით 0,83; OSM-კონტურის 87,2% რეესტრის საზღვრის შიგნითაა, რომელიც way-ს დაახლოებით 94,2%-ს ფარავს. ეს ცალკე დახურული ექვსკვანძიანი Polygon-ია. რეესტრი აძლევს მისამართს 111, OSM — 111ა; განსხვავება აღნიშნულია. არქიტექტურული ღირებულება და დეტალები დადასტურებულია ოფიციალური აღწერით. დამოწმებული ლიცენზირებული ფოტო არ არსებობს.",
+    "uk": "Офіційна межа пам'ятки 3246 і [OSM way/102691273](https://www.openstreetmap.org/way/102691273) збігаються з IoU близько 0,83; 87,2% OSM-контуру лежить усередині реєстрової межі, яка покриває близько 94,2% way. Це окремий замкнений шестивузловий Polygon. Реєстр дає адресу 111, OSM — 111ა; розбіжність позначено. Архітектурну цінність і деталі підтверджено офіційним описом. Перевіреного ліцензованого фото немає."
+  },
   "photos": [
     "0ddf9f1f374ca55dc77bdd887d3c7151fd055c5b29485443282c4283a6ffc37f",
     "06d9571fcee48a0b227ed6fc64cbbfce788056b591a56c4c22011a9d3bdae1e2",

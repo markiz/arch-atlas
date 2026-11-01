@@ -103,6 +103,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.89; реестр 564.2 м², OSM 592.2 м²; перенос центра 0.7 м. IoU 0,890; реестровая площадь 564 м², контур OSM 592 м² (92% OSM внутри реестровой границы). Флагов нет, обведён корпус вместе с треугольным выступом.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.89; registry 564.2 m², OSM 592.2 m²; centroid offset 0.7 m. IoU 0,890; registry area 564 m², OSM outline 592 m² (92% of OSM inside the registry boundary). No flags, the building is outlined together with the triangular projection.",
+    "ka": "IoU რეესტრის საზღვართან 0.89; რეესტრი 564.2 მ², OSM 592.2 მ²; ცენტროიდის გადახრა 0.7 მ. IoU 0,890; რეესტრის ფართობი 564 მ², OSM-ის კონტური 592 მ² (OSM-ის 92% რეესტრის საზღვრის შიგნით). ფლაგები არ არის, შემოხაზულია კორპუსი სამკუთხა გამონაზარდთან ერთად.",
+    "uk": "IoU з реєстровою межею 0.89; реєстр 564.2 м², OSM 592.2 м²; зміщення центроїда 0.7 м. IoU 0,890; реєстрова площа 564 м², контур OSM 592 м² (92% OSM усередині реєстрової межі). Прапорців немає, обведено корпус разом із трикутним виступом."
+  },
   "photos": [
     "32718c8b749980d4b39a440293eb570da407a5e5f1470f44bc820ba02fe67f9e",
     "a8adfac5995ac68c42a7a6e26598a31d9c4132064ebfeeeecc258dc8abd7d5f6",

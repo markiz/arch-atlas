@@ -124,6 +124,11 @@
     ]
   },
   "geometryQuality": "Контур OSM way/337269648; название совпадает с реестровой записью, адрес и положение проверены по источникам",
+  "geometryQualityTranslations": {
+    "en": "OSM outline way/337269648; the name matches the registry record, the address and position have been verified against sources",
+    "ka": "OSM-ის კონტური way/337269648; დასახელება ემთხვევა რეესტრის ჩანაწერს, მისამართი და მდებარეობა შემოწმებულია წყაროებით",
+    "uk": "Контур OSM way/337269648; назва збігається з реєстровим записом, адресу й положення перевірено за джерелами"
+  },
   "photos": [
     "caaf1d4e3a080d9f3b532a5d0dbb462e451b0ceae4f2f46f6b51adce68687a34"
   ],

@@ -72,6 +72,11 @@
     ]
   },
   "geometryQuality": "OSM way/78004768 имеет адрес Liberty Square 4 и замкнутый Polygon. Официальная граница 4711 и way совпадают с IoU около 0,82; 98,8% OSM-контура находится внутри границы, а OSM покрывает 82,4% официального полигона. Адрес и фасадное описание подтверждают корпус. Google API нашёл обычный адресный дом Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; Place ID добавлен как адресная привязка, не как именованная достопримечательность. Фото с проверенными правами не найдено.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/78004768 has the address Liberty Square 4 and a closed Polygon. The official boundary 4711 and the way coincide with an IoU of about 0,82; 98,8% of the OSM outline is inside the boundary, and OSM covers 82,4% of the official polygon. The address and the façade description confirm the building. The Google API found an ordinary addressed house, Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; the Place ID is added as an address anchor, not as a named landmark. No photo with verified rights was found.",
+    "ka": "OSM way/78004768-ს აქვს მისამართი Liberty Square 4 და დახურული Polygon. ოფიციალური საზღვარი 4711 და way ემთხვევა IoU-ით დაახლოებით 0,82; OSM-ის კონტურის 98,8% საზღვრის შიგნითაა, ხოლო OSM ფარავს ოფიციალური პოლიგონის 82,4%-ს. მისამართი და ფასადის აღწერა კორპუსს ადასტურებს. Google API-მ იპოვა ჩვეულებრივი მისამართიანი სახლი Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; Place ID დამატებულია როგორც მისამართის მიმაგრება და არა როგორც დასახელებული ღირსშესანიშნაობა. დადასტურებული უფლებების მქონე ფოტო არ მოიძებნა.",
+    "uk": "OSM way/78004768 має адресу Liberty Square 4 і замкнений Polygon. Офіційна межа 4711 і way збігаються з IoU близько 0,82; 98,8% OSM-контуру перебуває всередині межі, а OSM покриває 82,4% офіційного полігону. Адреса й опис фасаду підтверджують корпус. Google API знайшов звичайний адресний будинок Place ID ChIJK-PQB-8MREARy3KFjZC7Tkg; Place ID додано як адресну прив'язку, а не як іменовану пам'ятку. Фото з перевіреними правами не знайдено."
+  },
   "photos": [
     "3881f9ec9b0293a7be0e435de76da6775fe942fe220e0dea24050fc59109d620",
     "e418e33d138c4b6c9434621fcd301dcf4bfe59d1f30ec956bdd46a3c74df97ea",

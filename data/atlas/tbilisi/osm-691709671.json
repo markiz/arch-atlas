@@ -64,6 +64,11 @@
     ]
   },
   "geometryQuality": "Официальная граница объекта 2694 и [OSM way/691709671](https://www.openstreetmap.org/way/691709671) совпадают с IoU около 0,77; около 81,5% контура way лежит в границе, а way покрывает около 93,2% реестровой границы. Реестровая точка совпадает с корпусом. OSM именует его церковью Святого Карапета и указывает номер 6ა, реестр — церковью Всех грузинских святых по адресу 8. Google API не нашёл Place ID в радиусе 5 м; Commons-файлы и права на архитектуру не проверены.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary of object 2694 and [OSM way/691709671](https://www.openstreetmap.org/way/691709671) coincide with an IoU of about 0,77; about 81,5% of the way's outline lies within the boundary, and the way covers about 93,2% of the registry boundary. The registry point coincides with the building. OSM names it the Church of Saint Karapet and gives the number 6ა, while the registry lists it as the Church of All Georgian Saints at address 8. The Google API found no Place ID within a radius of 5 m; the Commons files and the rights to the architecture have not been checked.",
+    "ka": "ობიექტ 2694-ის ოფიციალური საზღვარი და [OSM way/691709671](https://www.openstreetmap.org/way/691709671) ემთხვევა IoU-ით დაახლოებით 0,77; way-ის კონტურის დაახლოებით 81,5% საზღვარში ძევს, ხოლო way ფარავს რეესტრის საზღვრის დაახლოებით 93,2%-ს. რეესტრის წერტილი კორპუსს ემთხვევა. OSM მას წმინდა კარაპეტის ეკლესიად მოიხსენიებს და ნომერ 6ა-ს მიუთითებს, რეესტრი — ყველა ქართველი წმინდანის ეკლესიად მისამართზე 8. Google API-მ Place ID 5 მ-ის რადიუსში ვერ იპოვა; Commons-ის ფაილები და არქიტექტურაზე უფლებები არ არის შემოწმებული.",
+    "uk": "Офіційна межа об'єкта 2694 і [OSM way/691709671](https://www.openstreetmap.org/way/691709671) збігаються з IoU близько 0,77; близько 81,5% контуру way лежить у межі, а way покриває близько 93,2% реєстрової межі. Реєстрова точка збігається з корпусом. OSM називає його церквою Святого Карапета і вказує номер 6ა, реєстр — церквою Всіх грузинських святих за адресою 8. Google API не знайшов Place ID у радіусі 5 м; файли Commons і права на архітектуру не перевірені."
+  },
   "photos": [
     "5c6d0fca42be68826240b5f49fb1e801e40390ce18dfa4509e1d2be307fd22dc"
   ],

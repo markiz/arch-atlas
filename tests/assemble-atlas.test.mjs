@@ -124,6 +124,17 @@ test('rejects missing translations and invalid geometry',async()=>{
  }
 });
 
+test('hydrates translated geometry quality notes',()=>{
+ const translations={en:'Test outline',ka:'სატესტო კონტური',uk:'Тестовий контур'};
+ const out=hydrateCard(card('osm-2',{geometryQualityTranslations:translations}),attributes());
+ assert.deepEqual(out.geometryQualityTranslations,translations);
+ assert.equal(out.geometryQuality,'тестовый контур');
+});
+
+test('rejects incomplete geometry quality translations',()=>{
+ assert.throws(()=>hydrateCard(card('osm-2',{geometryQualityTranslations:{en:'Test outline'}}),attributes()),/geometryQualityTranslations must contain exactly en\/ka\/uk/);
+});
+
 test('hydrateCard keeps an empty history out of the bundle',()=>{
  const out=hydrateCard(card('osm-3',{histories:undefined}),attributes());
  assert.equal(out.history,'');

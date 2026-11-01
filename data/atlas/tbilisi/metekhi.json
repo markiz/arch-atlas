@@ -132,6 +132,11 @@
     ]
   },
   "geometryQuality": "Контур OpenStreetMap по идентификатору объекта; уточняется редактором",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline by the object identifier; under editorial review.",
+    "ka": "OpenStreetMap-ის კონტური ობიექტის იდენტიფიკატორის მიხედვით; რედაქტორი აზუსტებს.",
+    "uk": "Контур OpenStreetMap за ідентифікатором об'єкта; уточнюється редактором."
+  },
   "photos": [
     "0babe5ecffd05768ed498284649a5707b9a8d8baf0e991d50ade2e89ad7fcacc",
     "7c95e958b2217cb536ebd441badccf33eceff4da30febabbc86083bca76a0fdc"

@@ -87,6 +87,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.763; реестр 1704.7 м², OSM 2220.7 м²; перенос центра 3.3 м. IoU 0,763: реестровая граница 1705 м², OSM 2221 м², 99,7% реестрового контура покрыто OSM, центроиды в 3,3 м. Флагов нет; обведён надземный двухэтажный корпус, OSM-контур чуть шире по торцам и включает примыкающую пристройку. Номера дома 14 (реестр) и 16 (OSM) относятся к одному объекту — связь задана тегом heritage:website в OSM.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.763; registry 1704.7 m², OSM 2220.7 m²; centroid offset 3.3 m. IoU 0,763: registry boundary 1705 m², OSM 2221 m², 99,7% of the registry outline is covered by OSM, centroids 3,3 m apart. No flags; the above-ground two-storey building is outlined, the OSM outline is slightly wider at the end walls and includes the adjoining extension. House numbers 14 (registry) and 16 (OSM) refer to one object — the link is set by the heritage:website tag in OSM.",
+    "ka": "IoU რეესტრის საზღვართან 0.763; რეესტრი 1704.7 მ², OSM 2220.7 მ²; ცენტროიდის გადახრა 3.3 მ. IoU 0,763: რეესტრის საზღვარი 1705 მ², OSM 2221 მ², რეესტრის კონტურის 99,7% დაფარულია OSM-ით, ცენტროიდები 3,3 მ-ით დაშორებულია. ფლაგები არ არის; შემოხაზულია მიწისზედა ორსართულიანი კორპუსი, OSM-ის კონტური ცოტათი უფრო ფართოა ბოლო კედლებთან და მოიცავს მიმდებარე მიშენებას. სახლის ნომრები 14 (რეესტრი) და 16 (OSM) ერთ ობიექტს განეკუთვნება — კავშირი მოცემულია OSM-ში heritage:website ტეგით.",
+    "uk": "IoU з реєстровою межею 0.763; реєстр 1704.7 м², OSM 2220.7 м²; зміщення центроїда 3.3 м. IoU 0,763: реєстрова межа 1705 м², OSM 2221 м², 99,7% реєстрового контуру покрито OSM, центроїди за 3,3 м. Прапорців немає; обведено надземний двоповерховий корпус, OSM-контур трохи ширший за торцями й включає прилеглу прибудову. Номери будинку 14 (реєстр) і 16 (OSM) стосуються одного об'єкта — зв'язок задано тегом heritage:website в OSM."
+  },
   "photos": [
     "24d3215f23582859b885672539b102797c532b4dae6d955a2debe2dcbb124aab",
     "e967520aa7e3f1d3eeae96f9346ca8a63ab224f6aa46a6299d059d28dcc49975"

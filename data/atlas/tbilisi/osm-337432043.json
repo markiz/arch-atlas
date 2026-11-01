@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.859; реестр 407.7 м², OSM 362.4 м²; перенос центра 1.3 м. IoU 0,86; реестр 407,7 м², OSM 362,4 м², центроиды в 1,3 м; флагов нет. OSM way/337432043 обводит надземный корпус (building=apartments, 3 уровня, из них 1 подземный).",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.859; registry 407.7 m², OSM 362.4 m²; centroid offset 1.3 m. IoU 0,86; registry 407,7 m², OSM 362,4 m², centroids 1,3 m apart; no flags. OSM way/337432043 traces the above-ground building (building=apartments, 3 levels, 1 of them underground).",
+    "ka": "IoU რეესტრის საზღვართან 0.859; რეესტრი 407.7 მ², OSM 362.4 მ²; ცენტროიდის გადახრა 1.3 მ. IoU 0,86; რეესტრი 407,7 მ², OSM 362,4 მ², ცენტროიდები 1,3 მ-ში; ფლაგები არ არის. OSM way/337432043 მიწისზედა კორპუსს გამოსახავს (building=apartments, 3 დონე, მათგან 1 მიწისქვეშა).",
+    "uk": "IoU з реєстровою межею 0.859; реєстр 407.7 м², OSM 362.4 м²; зміщення центроїда 1.3 м. IoU 0,86; реєстр 407,7 м², OSM 362,4 м², центроїди за 1,3 м; прапорців немає. OSM way/337432043 обводить надземний корпус (building=apartments, 3 рівні, з них 1 підземний)."
+  },
   "photos": [
     "d09aaa4c3b90d0a2b02fea5db0b137d91ec2899e2d14faddd8465366af28c0a4",
     "f220d50d5cb95f4ed0e6be71b5d576d1f2050c39b6f5ef1917b618fa3a3581bc",

@@ -103,6 +103,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.93; реестр 466.9 м², OSM 498.3 м²; перенос центра 0.2 м. IoU 0,93; реестр 466,9 м², OSM 498,3 м², центроиды в 0,2 м; флагов нет. OSM way/937316002 обводит корпус (building=apartments, 2 этажа) практически по реестровой границе.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.93; registry 466.9 m², OSM 498.3 m²; centroid offset 0.2 m. IoU 0,93; registry 466,9 m², OSM 498,3 m², centroids offset by 0,2 m; no flags. OSM way/937316002 outlines the building (building=apartments, 2 storeys) almost exactly along the registry boundary.",
+    "ka": "IoU რეესტრის საზღვართან 0.93; რეესტრი 466.9 მ², OSM 498.3 მ²; ცენტროიდის გადახრა 0.2 მ. IoU 0,93; რეესტრი 466,9 მ², OSM 498,3 მ², ცენტროიდები გადახრილია 0,2 მ-ით; ფლაგები არ არის. OSM way/937316002 შემოხაზავს კორპუსს (building=apartments, 2 სართული) პრაქტიკულად რეესტრის საზღვრის გასწვრივ.",
+    "uk": "IoU з реєстровою межею 0.93; реєстр 466.9 м², OSM 498.3 м²; зміщення центроїда 0.2 м. IoU 0,93; реєстр 466,9 м², OSM 498,3 м², центроїди зміщені на 0,2 м; прапорців немає. OSM way/937316002 обводить корпус (building=apartments, 2 поверхи) практично по реєстровій межі."
+  },
   "photos": [
     "8421f934964584a4a08de6db6c58e29fc66b6c75c27b4d78490051a5700b55b6",
     "c8bb0b650d0fe92fe6bf9ecb846f3f0e1ee14e544563072ac294cc64d84c331a"

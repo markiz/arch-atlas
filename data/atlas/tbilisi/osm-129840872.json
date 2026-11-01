@@ -80,6 +80,11 @@
     ]
   },
   "geometryQuality": "OSM way/129840872 сопоставлен с адресом и названием источника; IoU с границей официального реестра около 0,94",
+  "geometryQualityTranslations": {
+    "en": "OSM way/129840872 is matched to the address and the name of the source; IoU with the official registry boundary about 0,94",
+    "ka": "OSM way/129840872 შედარებულია მისამართთან და წყაროს სახელწოდებასთან; IoU ოფიციალური რეესტრის საზღვართან დაახლოებით 0,94",
+    "uk": "OSM way/129840872 зіставлено з адресою та назвою джерела; IoU з межею офіційного реєстру близько 0,94"
+  },
   "photos": [
     "b34e8e9a1d9632830ec210c8819e3adb07cce71287d9efef563ab628780fbe46"
   ],

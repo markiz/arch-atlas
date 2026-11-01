@@ -172,6 +172,11 @@
     ]
   },
   "geometryQuality": "OSM way/218120847 имеет точный адрес Узнадзе, 52 и теги historic=building, tourism=attraction. Официальная граница 3082 и Polygon совпадают с IoU около 0,89; 91,4% OSM-контура лежит внутри границы, которая покрывает 96,8% way. Официальная история Министерства и реестровое описание подтверждают отдельный корпус. Google Place ID в радиусе 5 м не найден; фото и права не проверены.",
+  "geometryQualityTranslations": {
+    "en": "OSM way/218120847 has the exact address Uznadze, 52 and the tags historic=building, tourism=attraction. The official boundary 3082 and the Polygon coincide with an IoU of about 0,89; 91,4% of the OSM outline lies inside the boundary, which covers 96,8% of the way. The official history of the Ministry and the registry description confirm a separate building. No Google Place ID was found within a 5 m radius; the photos and the rights have not been verified.",
+    "ka": "OSM way/218120847-ს აქვს ზუსტი მისამართი უზნაძე, 52 და ტეგები historic=building, tourism=attraction. ოფიციალური საზღვარი 3082 და Polygon ემთხვევა IoU-ით დაახლოებით 0,89; OSM-კონტურის 91,4% საზღვრის შიგნითაა, რომელიც way-ს 96,8%-ს ფარავს. სამინისტროს ოფიციალური ისტორია და რეესტრის აღწერა ადასტურებს ცალკე კორპუსს. Google Place ID 5 მ რადიუსში არ მოიძებნა; ფოტოები და უფლებები არ არის შემოწმებული.",
+    "uk": "OSM way/218120847 має точну адресу Узнадзе, 52 і теги historic=building, tourism=attraction. Офіційна межа 3082 і Polygon збігаються з IoU близько 0,89; 91,4% OSM-контуру лежить усередині межі, яка покриває 96,8% way. Офіційна історія Міністерства та реєстровий опис підтверджують окремий корпус. Google Place ID у радіусі 5 м не знайдено; фото та права не перевірено."
+  },
   "photos": [
     "7c7c623180afab2ab683f17981a21d012ed35318c0b207301d75debb0bef0684",
     "1a0340f729b58b3e7fc6f3e5be390ca145dd1bd9a75507412a68595028f379b0",

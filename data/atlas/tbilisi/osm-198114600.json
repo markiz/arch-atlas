@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.602; реестр 358.3 м², OSM 339.9 м²; перенос центра 1.6 м. OSM way/198114600: IoU 0,60, 77 % OSM-контура внутри реестрового, центроиды в 1,6 м. Реестровая площадь 358 м², OSM 340 м² — обведён сам дом, без двора. Флагов нет.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.602; registry 358.3 m², OSM 339.9 m²; centroid offset 1.6 m. OSM way/198114600: IoU 0,60, 77 % of the OSM outline inside the registry one, the centroids 1,6 m apart. The registry area is 358 m², OSM 340 m² — the house itself is traced, without the courtyard. No flags.",
+    "ka": "IoU რეესტრის საზღვართან 0.602; რეესტრი 358.3 მ², OSM 339.9 მ²; ცენტროიდის გადახრა 1.6 მ. OSM way/198114600: IoU 0,60, OSM-კონტურის 77 % რეესტრის შიგნით, ცენტროიდები 1,6 მ-ით დაშორებული. რეესტრის ფართობი 358 მ², OSM 340 მ² — შემოხაზულია თავად სახლი, ეზოს გარეშე. ფლაგები არ არის.",
+    "uk": "IoU з реєстровою межею 0.602; реєстр 358.3 м², OSM 339.9 м²; зміщення центроїда 1.6 м. OSM way/198114600: IoU 0,60, 77 % OSM-контуру всередині реєстрового, центроїди за 1,6 м. Реєстрова площа 358 м², OSM 340 м² — обведено сам будинок, без двору. Прапорців немає."
+  },
   "photos": [
     "665dcdb1395575e3ab7f05e9922c34837c618275cd018f7dc9ef6112f0899a32",
     "36f3363a3621d686a030dadb7e5a8e156a92d004a04dda2ee7d0877b00770faf"

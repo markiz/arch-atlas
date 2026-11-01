@@ -86,6 +86,11 @@
     ]
   },
   "geometryQuality": "Замкнутый контур OSM way/337364751 имеет адрес Бамбис Риги, 12. Официальная граница наследия для записи 3690 пересекается с ним с IoU около 0,90; около 98,6% площади контура находится внутри границы. Официальное описание выделяет корпус на углу Шардени и Бамбис Риги; контур не включает весь ансамбль из двух зданий и не касается контура караван-сарая Арцруни.",
+  "geometryQualityTranslations": {
+    "en": "The closed OSM outline way/337364751 has the address Bambis Rigi, 12. The official heritage boundary for record 3690 intersects it with an IoU of about 0,90; about 98,6% of the outline's area lies inside the boundary. The official description singles out the building on the corner of Shardeni and Bambis Rigi; the outline does not include the whole ensemble of two buildings and does not touch the outline of the Artsruni caravanserai.",
+    "ka": "ჩაკეტილ OSM-ის კონტურს way/337364751 აქვს მისამართი ბამბის რიგი, 12. 3690 ჩანაწერისთვის ოფიციალური მემკვიდრეობის საზღვარი მას კვეთს IoU-ით დაახლოებით 0,90; კონტურის ფართობის დაახლოებით 98,6% საზღვრის შიგნითაა. ოფიციალური აღწერა გამოყოფს კორპუსს შარდენისა და ბამბის რიგის კუთხეში; კონტური არ მოიცავს ორი შენობის მთელ ანსამბლს და არ ეხება არწრუნის ქარვანსარაის კონტურს.",
+    "uk": "Замкнений контур OSM way/337364751 має адресу Бамбіс Рігі, 12. Офіційна межа спадщини для запису 3690 перетинається з ним з IoU близько 0,90; близько 98,6% площі контуру лежить усередині межі. Офіційний опис виокремлює корпус на розі Шардені та Бамбіс Рігі; контур не охоплює весь ансамбль із двох будівель і не торкається контуру караван-сараю Арцруні."
+  },
   "photos": [
     "5357baeddebf5b6aa94b889dff4ef5fba88978eb4df5b01c646004b96a9c9b18",
     "e0a0ec0924725fa9f332afcf71456006668549995f96d6af5b626ae76819c2b5",

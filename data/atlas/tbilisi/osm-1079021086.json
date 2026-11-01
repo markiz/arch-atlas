@@ -75,6 +75,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.644; реестр 228.3 м², OSM 169.1 м²; перенос центра 2.2 м. IoU 0,64; реестр 228,3 м², OSM 169,1 м², центроиды в 2,2 м; флагов нет. OSM way/1079021086 обводит уличный корпус (building=apartments, 2 этажа), реестровая граница шире — вероятно, включает дворовое крыло.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.644; registry 228.3 m², OSM 169.1 m²; centroid offset 2.2 m. IoU 0,64; registry 228,3 m², OSM 169,1 m², the centroids at 2,2 m; no flags. OSM way/1079021086 traces the street building (building=apartments, 2 storeys), the registry boundary is wider — probably includes a courtyard wing.",
+    "ka": "IoU რეესტრის საზღვართან 0.644; რეესტრი 228.3 მ², OSM 169.1 მ²; ცენტროიდის გადახრა 2.2 მ. IoU 0,64; რეესტრი 228,3 მ², OSM 169,1 მ², ცენტროიდები 2,2 მ-ში; ფლაგები არ არის. OSM way/1079021086 ხაზავს ქუჩის კორპუსს (building=apartments, 2 სართული), რეესტრის საზღვარი უფრო ფართოა — სავარაუდოდ, მოიცავს ეზოს ფრთას.",
+    "uk": "IoU з реєстровою межею 0.644; реєстр 228.3 м², OSM 169.1 м²; зміщення центроїда 2.2 м. IoU 0,64; реєстр 228,3 м², OSM 169,1 м², центроїди за 2,2 м; прапорців немає. OSM way/1079021086 обводить вуличний корпус (building=apartments, 2 поверхи), реєстрова межа ширша — ймовірно, включає дворове крило."
+  },
   "photos": [
     "55ce3758f65b9b8886aaa58191b5eeafc26f21a7047354608ca98345d19c8322",
     "611149f362ad9398335a0948551ed4809fa3b9df58d49fc7cae472b4fb02efdc"

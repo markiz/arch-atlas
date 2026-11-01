@@ -75,6 +75,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.685; реестр 315.7 м², OSM 231.9 м²; перенос центра 4.6 м. IoU 0,685: реестровый полигон 315,7 м² и OSM way/246757150 (231,9 м², building=yes) накладываются на 96 % площади OSM; центроид в 4,6 м. Флагов нет. OSM-контур, вероятно, обводит только уличный корпус, реестровая граница захватывает часть двора — при публикации подрезать по линии корпуса.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.685; registry 315.7 m², OSM 231.9 m²; centroid offset 4.6 m. IoU 0,685: the registry polygon of 315,7 m² and OSM way/246757150 (231,9 m², building=yes) overlap by 96 % of the OSM area; the centroid is at 4,6 m. No flags. The OSM outline probably traces only the street building, while the registry boundary captures part of the courtyard — when publishing, trim along the line of the building.",
+    "ka": "IoU რეესტრის საზღვართან 0.685; რეესტრი 315.7 მ², OSM 231.9 მ²; ცენტროიდის გადახრა 4.6 მ. IoU 0,685: რეესტრის პოლიგონი 315,7 მ² და OSM way/246757150 (231,9 მ², building=yes) ერთმანეთს ემთხვევა OSM-ის ფართობის 96 %-ით; ცენტროიდი 4,6 მ-ში. ფლაგები არ არის. OSM-კონტური, სავარაუდოდ, მხოლოდ ქუჩის კორპუსს ხაზავს, რეესტრის საზღვარი ეზოს ნაწილს მოიცავს — გამოქვეყნებისას უნდა მოიჭრას კორპუსის ხაზის გასწვრივ.",
+    "uk": "IoU з реєстровою межею 0.685; реєстр 315.7 м², OSM 231.9 м²; зміщення центроїда 4.6 м. IoU 0,685: реєстровий полігон 315,7 м² і OSM way/246757150 (231,9 м², building=yes) накладаються на 96 % площі OSM; центроїд за 4,6 м. Прапорців немає. OSM-контур, ймовірно, обводить лише вуличний корпус, реєстрова межа захоплює частину двору — при публікації підрізати по лінії корпусу."
+  },
   "photos": [
     "704a1918fefb4311f59a0a89f6a64225a1e6e2527dcdb570fa4504caa4e0b3ca",
     "f71d529e4a1a368915718e4099494779c601a7bdb23313f2f9a74529c8a10b1d",

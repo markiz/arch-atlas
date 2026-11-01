@@ -175,6 +175,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.958; реестр 829.9 м², OSM 853.2 м²; перенос центра 0.2 м. IoU 0,958; OSM way/555209492 — 853 м²; флагов нет. Обведён весь трёхэтажный корпус с дворовым крылом.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.958; registry 829.9 m², OSM 853.2 m²; centroid offset 0.2 m. IoU 0,958; OSM way/555209492 — 853 m²; no flags. The entire three-storey building with the courtyard wing is outlined.",
+    "ka": "IoU რეესტრის საზღვართან 0.958; რეესტრი 829.9 მ², OSM 853.2 მ²; ცენტროიდის გადახრა 0.2 მ. IoU 0,958; OSM way/555209492 — 853 მ²; ფლაგები არ არის. შემოხაზულია მთელი სამსართულიანი კორპუსი ეზოს ფრთით.",
+    "uk": "IoU з реєстровою межею 0.958; реєстр 829.9 м², OSM 853.2 м²; зміщення центроїда 0.2 м. IoU 0,958; OSM way/555209492 — 853 м²; прапорців немає. Обведено весь триповерховий корпус із дворовим крилом."
+  },
   "photos": [
     "1be79ca082e209182fa41c1cc09b264a1c230468b33abd50b218bf9231854c2a",
     "80d5cda0dc3688e21209f60f4dffe853e6b6f6c02a767d7cea3cd3f7eb471e2b",

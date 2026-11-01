@@ -172,6 +172,11 @@
     ]
   },
   "geometryQuality": "Именованный OSM-контур и официальная граница памятника совпадают по месту (IoU около 0,81); источники дают разные адресные варианты",
+  "geometryQualityTranslations": {
+    "en": "The named OSM outline and the official monument boundary coincide in place (IoU about 0,81); the sources give different address variants",
+    "ka": "დასახელებული OSM-ის კონტური და ძეგლის ოფიციალური საზღვარი ადგილზე ემთხვევა (IoU დაახლოებით 0,81); წყაროები სხვადასხვა მისამართის ვარიანტს იძლევა",
+    "uk": "Іменований OSM-контур і офіційна межа пам'ятки збігаються за місцем (IoU близько 0,81); джерела дають різні адресні варіанти"
+  },
   "photos": [
     "41e57fbf8cb735abd284ef0226152fb741902564927e61054685b7f53830aec8",
     "a3eb2ea7f83ad7dc02977ac480319e33427918bfe591a9087d3ff3fa68d9cd03",

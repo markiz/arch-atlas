@@ -87,6 +87,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.83; реестр 495.0 м², OSM 467.7 м²; перенос центра 0.9 м. IoU 0,83 с реестровой границей (508 м² против 480 м²), centroid 0,9 м, flags нет; OSM way/549425988 (building=apartments, 11 вершин) обводит корпус. Реестровый контур сложный (35 вершин) из-за примыкания к скале, но оба полигона описывают одно здание.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.83; registry 495.0 m², OSM 467.7 m²; centroid offset 0.9 m. IoU 0,83 with the registry boundary (508 m² against 480 m²), centroid 0,9 m, no flags; OSM way/549425988 (building=apartments, 11 vertices) outlines the building. The registry outline is complex (35 vertices) because of the adjacency to the rock, but both polygons describe one building.",
+    "ka": "IoU რეესტრის საზღვართან 0.83; რეესტრი 495.0 მ², OSM 467.7 მ²; ცენტროიდის გადახრა 0.9 მ. IoU 0,83 რეესტრის საზღვართან (508 მ² 480 მ²-ის წინააღმდეგ), ცენტროიდი 0,9 მ, ფლაგები არ არის; OSM way/549425988 (building=apartments, 11 წვერო) შემოხაზავს კორპუსს. რეესტრის კონტური რთულია (35 წვერო) კლდესთან მიმდებარეობის გამო, მაგრამ ორივე პოლიგონი ერთ შენობას აღწერს.",
+    "uk": "IoU з реєстровою межею 0.83; реєстр 495.0 м², OSM 467.7 м²; зміщення центроїда 0.9 м. IoU 0,83 з реєстровою межею (508 м² проти 480 м²), центроїд 0,9 м, прапорців немає; OSM way/549425988 (building=apartments, 11 вершин) обводить корпус. Реєстровий контур складний (35 вершин) через примикання до скелі, але обидва полігони описують одну будівлю."
+  },
   "photos": [
     "45d1793f2817ee54841105eef496300d2ecd5a83ef0f1c92ca27eef168d67f4f"
   ],

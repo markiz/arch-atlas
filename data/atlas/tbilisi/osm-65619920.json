@@ -179,6 +179,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.023; реестр 77.7 м², OSM 3413.8 м²; перенос центра 32.0 м. Реестровая «граница» — круг 77,7 м² (37 вершин) вокруг точки, а не обмер: IoU 0,023 и «покрытие 2,3%» недействительны. OSM way/65619920 (3413,8 м², 3 этажа) обводит исторический корпус; реестровая точка внутри, центроид в 32 м. Флаг osm_composite_or_plot требует проверки: контур может включать дворовые крылья кампуса — перед публикацией убедиться, что в полигон не попал двор.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.023; registry 77.7 m², OSM 3413.8 m²; centroid offset 32.0 m. The registry “boundary” is a circle of 77,7 m² (37 vertices) around the point, not a survey: IoU 0,023 and “coverage 2,3%” are invalid. OSM way/65619920 (3413,8 m², 3 storeys) traces the historic building; the registry point is inside, the centroid 32 m away. The osm_composite_or_plot flag requires verification: the outline may include the campus courtyard wings — before publication, make sure no courtyard has fallen inside the polygon.",
+    "ka": "IoU რეესტრის საზღვართან 0.023; რეესტრი 77.7 მ², OSM 3413.8 მ²; ცენტროიდის გადახრა 32.0 მ. რეესტრის „საზღვარი“ — წერტილის ირგვლივ 77,7 მ²-ის წრე (37 წვერო) და არა აზომვა: IoU 0,023 და „დაფარვა 2,3%“ არასწორია. OSM way/65619920 (3413,8 მ², 3 სართული) ისტორიულ კორპუსს გამოსახავს; რეესტრის წერტილი შიგნითაა, ცენტროიდი 32 მ-ში. ფლაგი osm_composite_or_plot შემოწმებას მოითხოვს: კონტური შეიძლება მოიცავდეს კამპუსის ეზოს ფრთებს — პუბლიკაციამდე დარწმუნდით, რომ პოლიგონში ეზო არ მოხვდა.",
+    "uk": "IoU з реєстровою межею 0.023; реєстр 77.7 м², OSM 3413.8 м²; зміщення центроїда 32.0 м. Реєстрова «межа» — це круг 77,7 м² (37 вершин) навколо точки, а не обмір: IoU 0,023 і «покриття 2,3%» недійсні. OSM way/65619920 (3413,8 м², 3 поверхи) обводить історичний корпус; реєстрова точка всередині, центроїд за 32 м. Прапорець osm_composite_or_plot потребує перевірки: контур може включати дворові крила кампусу — перед публікацією переконатися, що до полігону не потрапив двір."
+  },
   "photos": [],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=24773",
   "otherSource": "https://www.openstreetmap.org/way/65619920"

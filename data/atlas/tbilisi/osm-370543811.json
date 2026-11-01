@@ -63,6 +63,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.938; реестр 653.2 м², OSM 646.9 м²; перенос центра 0.4 м. IoU 0,938; OSM way/370543811 — 647 м²; флагов нет. Обведён весь корпус, включая позднюю надстройку.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.938; registry 653.2 m², OSM 646.9 m²; centroid offset 0.4 m. IoU 0,938; OSM way/370543811 — 647 m²; no flags. The whole building is traced, including the later upper storey.",
+    "ka": "IoU რეესტრის საზღვართან 0.938; რეესტრი 653.2 მ², OSM 646.9 მ²; ცენტროიდის გადახრა 0.4 მ. IoU 0,938; OSM way/370543811 — 647 მ²; ფლაგები არ არის. გამოსახულია მთელი კორპუსი, გვიანი ზედნაშენის ჩათვლით.",
+    "uk": "IoU з реєстровою межею 0.938; реєстр 653.2 м², OSM 646.9 м²; зміщення центроїда 0.4 м. IoU 0,938; OSM way/370543811 — 647 м²; прапорців немає. Обведено весь корпус, включно з пізнішою надбудовою."
+  },
   "photos": [
     "9fcdbe1b6f0c94d26cbd45eaf09b16f6f20270ddf5bc3b550b96abed7abbedea",
     "6408d9379a516b8e7912b4032b72d9394f9f8d876ed87cf0b20d52b15b04a55a",

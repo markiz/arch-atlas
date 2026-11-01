@@ -153,6 +153,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.456; реестр 2265.9 м², OSM 4956.5 м²; перенос центра 20.4 м. Реестровый полигон — 2265,9 м², 27 вершин, главный корпус вдоль Руставели; он целиком лежит внутри OSM way/1373529138 (4956,5 м², 35 вершин), который обводит весь квартал с двором и поздними крыльями. Отсюда IoU 0,456 и флаг osm_composite_or_plot: для карточки нужен реестровый контур корпуса, а не OSM-полигон квартала.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.456; registry 2265.9 m², OSM 4956.5 m²; centroid offset 20.4 m. The registry polygon is 2265,9 m², 27 vertices, the main building along Rustaveli; it lies entirely inside OSM way/1373529138 (4956,5 m², 35 vertices), which traces the whole block with the courtyard and later wings. Hence IoU 0,456 and the flag osm_composite_or_plot: the card needs the registry outline of the building, not the OSM block polygon.",
+    "ka": "IoU რეესტრის საზღვართან 0.456; რეესტრი 2265.9 მ², OSM 4956.5 მ²; ცენტროიდის გადახრა 20.4 მ. რეესტრის პოლიგონი — 2265,9 მ², 27 წვერო, მთავარი კორპუსი რუსთაველის გასწვრივ; ის მთლიანად OSM way/1373529138-ის შიგნითაა (4956,5 მ², 35 წვერო), რომელიც ხაზავს მთელ კვარტალს ეზოთი და გვიანდელი ფრთებით. აქედან IoU 0,456 და ფლაგი osm_composite_or_plot: ბარათისთვის საჭიროა კორპუსის რეესტრის კონტური და არა კვარტალის OSM-პოლიგონი.",
+    "uk": "IoU з реєстровою межею 0.456; реєстр 2265.9 м², OSM 4956.5 м²; зміщення центроїда 20.4 м. Реєстровий полігон — 2265,9 м², 27 вершин, головний корпус уздовж Руставелі; він повністю лежить усередині OSM way/1373529138 (4956,5 м², 35 вершин), який обводить увесь квартал із двором і пізніми крилами. Звідси IoU 0,456 і прапорець osm_composite_or_plot: для картки потрібен реєстровий контур корпусу, а не OSM-полігон кварталу."
+  },
   "photos": [
     "d6934909682714d7725bdcbdf16ce34e26d4377daa0094339e93b32c1b346b0a",
     "6d4c8f4e080b970e0301ee118fbd91c73e96f1d75aaa99c0cf8d6fff39ae130e",

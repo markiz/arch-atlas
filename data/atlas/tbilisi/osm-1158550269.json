@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 480.4 м², OSM 506.5 м²; перенос центра 0.7 м. OSM way/1158550269, building=apartments, building:levels=2; IoU 0,922, центроид 0,7 м, флагов нет. Пересечение с карточкой osm-78509293 (музей Ильи Чавчавадзе, Джавахишвили, 7) всего 4,5 м² — общая брандмауэрная стена, не дубль. Контур обводит только уличный корпус, дворовые галереи в него не входят.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.922; registry 480.4 m², OSM 506.5 m²; centroid offset 0.7 m. OSM way/1158550269, building=apartments, building:levels=2; IoU 0,922, centroid 0,7 m, no flags. The overlap with the card osm-78509293 (Ilia Chavchavadze Museum, 7 Javakhishvili) is only 4,5 m² — a shared party wall, not a duplicate. The outline traces only the street building; the courtyard galleries are not included in it.",
+    "ka": "IoU რეესტრის საზღვართან 0.922; რეესტრი 480.4 მ², OSM 506.5 მ²; ცენტროიდის გადახრა 0.7 მ. OSM way/1158550269, building=apartments, building:levels=2; IoU 0,922, ცენტროიდი 0,7 მ, ფლაგები არ არის. გადაკვეთა ბარათთან osm-78509293 (ილია ჭავჭავაძის მუზეუმი, ჯავახიშვილის, 7) — სულ 4,5 მ² — საერთო ბრანდმაუერის კედელი, არ არის დუბლიკატი. კონტური ხაზავს მხოლოდ ქუჩის კორპუსს, ეზოს გალერეები მასში არ შედის.",
+    "uk": "IoU з реєстровою межею 0.922; реєстр 480.4 м², OSM 506.5 м²; зміщення центроїда 0.7 м. OSM way/1158550269, building=apartments, building:levels=2; IoU 0,922, центроїд 0,7 м, прапорців немає. Перетин з карткою osm-78509293 (музей Іллі Чавчавадзе, Джавахішвілі, 7) — лише 4,5 м² — спільна брандмауерна стіна, не дубль. Контур обводить лише вуличний корпус, дворові галереї до нього не входять."
+  },
   "photos": [
     "20a7ba0330d38bf7e769acd50a8aaf3e55d881e3e6b727791f4f5fa15254cb83",
     "df48bd43f74738f9327bee66ce1eab8ab80355223bcafd09eabd0cc0ba0f6eeb"

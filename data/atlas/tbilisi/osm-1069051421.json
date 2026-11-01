@@ -79,6 +79,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.812; реестр 987.3 м², OSM 1138.2 м²; перенос центра 1.1 м. OSM way/1069051421: building=yes, addr 136, площадь 1138,2 м² против 987,3 м² в реестре, IoU 0,812, центроиды в 1,1 м, флагов нет — обведён корпус, а не участок.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.812; registry 987.3 m², OSM 1138.2 m²; centroid offset 1.1 m. OSM way/1069051421: building=yes, addr 136, area 1138,2 m² against 987,3 m² in the registry, IoU 0,812, centroids at 1,1 m, no flags — the building is traced, not the plot.",
+    "ka": "IoU რეესტრის საზღვართან 0.812; რეესტრი 987.3 მ², OSM 1138.2 მ²; ცენტროიდის გადახრა 1.1 მ. OSM way/1069051421: building=yes, addr 136, ფართობი 1138,2 მ² რეესტრის 987,3 მ²-ის წინააღმდეგ, IoU 0,812, ცენტროიდები 1,1 მ-ში, ფლაგები არ არის — შემოხაზულია კორპუსი და არა ნაკვეთი.",
+    "uk": "IoU з реєстровою межею 0.812; реєстр 987.3 м², OSM 1138.2 м²; зміщення центроїда 1.1 м. OSM way/1069051421: building=yes, addr 136, площа 1138,2 м² проти 987,3 м² у реєстрі, IoU 0,812, центроїди за 1,1 м, прапорців немає — обведено корпус, а не ділянку."
+  },
   "photos": [
     "e14f803b8405680a6999aeda3a7c6cdd152e3947e5e20a019a061d14fce28de8",
     "c5fad17c8a64991d242c950eaf0d1e079faeb880f63d776b7ef9f0c240740960"

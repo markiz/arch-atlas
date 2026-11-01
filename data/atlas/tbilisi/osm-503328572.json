@@ -88,6 +88,11 @@
     ]
   },
   "geometryQuality": "OSM way размечен как действующая общественная серная баня; официальный реестр даёт двойной адрес. Официальная граница памятника покрывает около 76% контура way, контур покрывает около 94% границы; лишнюю часть полигона необходимо сверить вручную.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way is tagged as an operating public sulphur bath; the official registry gives a double address. The official monument boundary covers about 76% of the way's outline, the outline covers about 94% of the boundary; the excess part of the polygon must be verified manually.",
+    "ka": "OSM way მონიშნულია როგორც მოქმედი საზოგადო გოგირდის აბანო; ოფიციალური რეესტრი იძლევა ორმაგ მისამართს. ძეგლის ოფიციალური საზღვარი ფარავს way-ის კონტურის დაახლოებით 76%-ს, კონტური ფარავს საზღვრის დაახლოებით 94%-ს; პოლიგონის ზედმეტი ნაწილი ხელით უნდა შემოწმდეს.",
+    "uk": "OSM way позначено як чинна громадська сірчана лазня; офіційний реєстр дає подвійну адресу. Офіційна межа пам'ятки покриває близько 76% контуру way, контур покриває близько 94% межі; зайву частину полігону необхідно звірити вручну."
+  },
   "photos": [],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3657",
   "otherSource": "https://www.heritagesites.ge/uploads/files/680a4ff29f797.pdf"

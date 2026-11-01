@@ -64,6 +64,11 @@
     ]
   },
   "geometryQuality": "OSM way имеет адрес Каспи, 7 и один этаж; Национальная парламентская библиотека подтверждает по этому адресу одноэтажный дом-музей. Официальная граница памятника описывает более широкий участок с двором и отдельным музейным зданием; IoU с OSM way около 0,37, около 41% площади way внутри реестровой границы и около 81% границы покрыто way. В карточке оставлен контур именно дома, не всего музейного участка.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way has the address Kaspi, 7 and one storey; the National Parliamentary Library confirms a one-storey house-museum at this address. The official monument boundary describes a wider plot with a courtyard and a separate museum building; IoU with the OSM way is about 0,37, about 41% of the way's area lies inside the registry boundary and about 81% of the boundary is covered by the way. The card keeps the outline of the house itself, not of the whole museum plot.",
+    "ka": "OSM way-ს აქვს მისამართი კასპი, 7 და ერთი სართული; ეროვნული საპარლამენტო ბიბლიოთეკა ამ მისამართზე ადასტურებს ერთსართულიან სახლ-მუზეუმს. ძეგლის ოფიციალური საზღვარი აღწერს უფრო ფართო ნაკვეთს ეზოთი და ცალკე მუზეუმის შენობით; IoU OSM way-სთან დაახლოებით 0,37, way-ის ფართობის დაახლოებით 41% რეესტრის საზღვრის შიგნითაა და საზღვრის დაახლოებით 81% დაფარულია way-ით. ბარათში დატოვებულია სწორედ სახლის კონტური და არა მთელი მუზეუმის ნაკვეთის.",
+    "uk": "OSM way має адресу Каспі, 7 та один поверх; Національна парламентська бібліотека підтверджує за цією адресою одноповерховий будинок-музей. Офіційна межа пам'ятки описує ширшу ділянку з двором і окремою музейною будівлею; IoU з OSM way близько 0,37, близько 41% площі way усередині реєстрової межі та близько 81% межі покрито way. У картці залишено контур саме будинку, а не всієї музейної ділянки."
+  },
   "photos": [
     "c0cf2225273fb8a1de28b9f5b068f51ed34546a8db1e1da4613333b9b3af62e1",
     "3b8ebbfe1fcd3ad0decaf1eb256d1a3f1b2ef2ee332d21aef68ca90a38d7239c",

@@ -80,6 +80,11 @@
     ]
   },
   "geometryQuality": "Именованный OSM-контур церкви; адрес и историческое название подтверждены Google API, а официальный реестр описывает церковь на этом месте; реестровая граница совпадает по местоположению.",
+  "geometryQualityTranslations": {
+    "en": "Named OSM outline of the church; the address and the historical name are confirmed by the Google API, and the official registry describes a church at this place; the registry boundary matches in location.",
+    "ka": "ეკლესიის დასახელებული OSM-კონტური; მისამართი და ისტორიული სახელწოდება დადასტურებულია Google API-ით, ხოლო ოფიციალური რეესტრი ამ ადგილას ეკლესიას აღწერს; რეესტრის საზღვარი მდებარეობით ემთხვევა.",
+    "uk": "Іменований OSM-контур церкви; адресу та історичну назву підтверджено Google API, а офіційний реєстр описує церкву на цьому місці; реєстрова межа збігається за місцем розташування."
+  },
   "photos": [
     "dbbd67177a4da21005a1071bc68d6511523386bce6369ae7d2c2564f9f1d0010",
     "15f2e4dcd631116dbee8b120fc4995577bf384053fea0804278a167e899c3549"

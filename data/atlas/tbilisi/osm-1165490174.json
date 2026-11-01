@@ -83,6 +83,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.927; реестр 464.7 м², OSM 474.4 м²; перенос центра 0.5 м. IoU 0,93 с реестровой границей (477 м² против 487 м²), centroid 0,5 м, flags нет; OSM way/1165490174 (building=apartments, 2 этажа, 10 вершин) обводит корпус. Разница адресов объясняется переименованием: Коджорская улица получила имя Гизо Нишнианидзе 30 октября 2015 года.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.927; registry 464.7 m², OSM 474.4 m²; centroid offset 0.5 m. IoU 0,93 with the registry boundary (477 m² versus 487 m²), centroid 0,5 m, no flags; OSM way/1165490174 (building=apartments, 2 storeys, 10 vertices) traces the building. The difference in addresses is explained by a renaming: Kodzhori Street received the name Gizo Nishnianidze on 30 October 2015.",
+    "ka": "IoU რეესტრის საზღვართან 0.927; რეესტრი 464.7 მ², OSM 474.4 მ²; ცენტროიდის გადახრა 0.5 მ. IoU 0,93 რეესტრის საზღვართან (477 მ² 487 მ²-ის წინააღმდეგ), ცენტროიდი 0,5 მ, ფლაგები არ არის; OSM way/1165490174 (building=apartments, 2 სართული, 10 წვერო) ხაზავს კორპუსს. მისამართების სხვაობა აიხსნება გადარქმევით: კოჯორის ქუჩამ გიზო ნიშნიანიძის სახელი მიიღო 2015 წლის 30 ოქტომბერს.",
+    "uk": "IoU з реєстровою межею 0.927; реєстр 464.7 м², OSM 474.4 м²; зміщення центроїда 0.5 м. IoU 0,93 з реєстровою межею (477 м² проти 487 м²), центроїд 0,5 м, прапорців немає; OSM way/1165490174 (building=apartments, 2 поверхи, 10 вершин) обводить корпус. Різниця адрес пояснюється перейменуванням: Коджорська вулиця отримала ім'я Гізо Нішніанідзе 30 жовтня 2015 року."
+  },
   "photos": [
     "4b826594bc89e19d01f1ae866d5ffe765f9c31c430fc89375349a51f9613e72e",
     "d8f686f8a0ba9bb4214ff030d25ad29aa512870d00d29444b1cceb9ac2ba4693",

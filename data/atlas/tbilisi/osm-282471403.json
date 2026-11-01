@@ -160,6 +160,11 @@
     ]
   },
   "geometryQuality": "Официальная граница памятника 3219 и OSM way/282471403 совпадают с IoU около 0,84; 94,1% площади OSM-контура лежит внутри границы, граница покрывает 88,1% контура. Официальная граница местами шире контура; адрес 148/117 есть только в OSM, реестр даёт общий 148. С главным корпусом 148 пересечения нет.",
+  "geometryQualityTranslations": {
+    "en": "The official boundary of monument 3219 and OSM way/282471403 coincide with an IoU of about 0,84; 94,1% of the area of the OSM outline lies inside the boundary, the boundary covers 88,1% of the outline. The official boundary is in places wider than the outline; the address 148/117 exists only in OSM, the registry gives the common 148. There is no overlap with the main building at 148.",
+    "ka": "ძეგლის 3219 ოფიციალური საზღვარი და OSM way/282471403 ემთხვევა IoU-ით დაახლოებით 0,84; OSM-ის კონტურის ფართობის 94,1% საზღვრის შიგნითაა, საზღვარი ფარავს კონტურის 88,1%-ს. ოფიციალური საზღვარი ადგილებში უფრო ფართოა, ვიდრე კონტური; მისამართი 148/117 მხოლოდ OSM-შია, რეესტრი იძლევა საერთო 148-ს. მთავარ კორპუსთან 148 გადაკვეთა არ არის.",
+    "uk": "Офіційна межа пам'ятки 3219 та OSM way/282471403 збігаються з IoU близько 0,84; 94,1% площі контуру OSM лежить усередині межі, межа покриває 88,1% контуру. Офіційна межа подекуди ширша за контур; адреса 148/117 є лише в OSM, реєстр дає спільну 148. З головним корпусом 148 перетину немає."
+  },
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0"
   ],

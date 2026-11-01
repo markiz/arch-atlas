@@ -203,6 +203,16 @@ def main() -> int:
         )):
             errors.append(f'{label}: minYear/maxYear must both be null or an ordered integer pair')
 
+        quality_translations = card.get('geometryQualityTranslations')
+        if quality_translations is None:
+            warnings.append(f'{label}: missing geometryQualityTranslations')
+        elif not isinstance(quality_translations, dict) or set(quality_translations) != {'en', 'ka', 'uk'}:
+            errors.append(f'{label}: geometryQualityTranslations must have en/ka/uk')
+        else:
+            for lang in ('en', 'ka', 'uk'):
+                if not isinstance(quality_translations[lang], str) or not quality_translations[lang].strip():
+                    errors.append(f'{label}: geometryQualityTranslations.{lang} must be a non-empty string')
+
         if not is_http(card.get('source')):
             errors.append(f'{label}: source must be http(s)')
         if card.get('otherSource') and not is_http(card.get('otherSource')):

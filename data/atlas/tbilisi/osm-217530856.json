@@ -127,6 +127,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.774; реестр 946.4 м², OSM 1158.6 м²; перенос центра 2.4 м. OSM way/217530856: IoU 0,774, 97,1 % реестровой границы лежит внутри OSM; флаг osm_much_larger объясняется тем, что контур OSM (1158,6 м²) включает восточное дворовое крыло/позднюю пристройку помимо реестровых 946,4 м². Обведён надземный корпус, участок не включён.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.774; registry 946.4 m², OSM 1158.6 m²; centroid offset 2.4 m. OSM way/217530856: IoU 0,774, 97,1 % of the registry boundary lies inside OSM; the osm_much_larger flag is explained by the fact that the OSM outline (1158,6 m²) includes an eastern courtyard wing/a later extension in addition to the registry's 946,4 m². The above-ground building is traced, the plot is not included.",
+    "ka": "IoU რეესტრის საზღვართან 0.774; რეესტრი 946.4 მ², OSM 1158.6 მ²; ცენტროიდის გადახრა 2.4 მ. OSM way/217530856: IoU 0,774, რეესტრის საზღვრის 97,1 % OSM-ის შიგნითაა; ფლაგი osm_much_larger აიხსნება იმით, რომ OSM-ის კონტური (1158,6 მ²) მოიცავს აღმოსავლეთ ეზოს ფრთას/გვიან მიშენებას რეესტრის 946,4 მ²-ის გარდა. შემოხაზულია მიწისზედა კორპუსი, ნაკვეთი არ შედის.",
+    "uk": "IoU з реєстровою межею 0.774; реєстр 946.4 м², OSM 1158.6 м²; зміщення центроїда 2.4 м. OSM way/217530856: IoU 0,774, 97,1 % реєстрової межі лежить усередині OSM; прапорець osm_much_larger пояснюється тим, що контур OSM (1158,6 м²) включає східне дворове крило/пізню прибудову крім реєстрових 946,4 м². Обведено надземний корпус, ділянку не включено."
+  },
   "photos": [
     "d4a459386175763c006a74dd499987f5b9812bd3813c5223d48118ce8614cfbf",
     "24e33b2113313f482451e1b0365f1b02c966a2eadf7d621465b5966fc25e1ad6",

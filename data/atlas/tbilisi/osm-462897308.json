@@ -84,6 +84,11 @@
     ]
   },
   "geometryQuality": "Именованный адресный OSM-контур way/462897308 перекрывает около 90% границы официального реестра; профильный источник описывает здание по тому же адресу",
+  "geometryQualityTranslations": {
+    "en": "The named address OSM outline way/462897308 overlaps about 90% of the boundary of the official registry; a specialised source describes the building at the same address",
+    "ka": "დასახელებული მისამართიანი OSM-კონტური way/462897308 ფარავს ოფიციალური რეესტრის საზღვრის დაახლოებით 90%-ს; პროფილური წყარო აღწერს შენობას იმავე მისამართზე",
+    "uk": "Іменований адресний OSM-контур way/462897308 перекриває близько 90% межі офіційного реєстру; профільне джерело описує будівлю за тією ж адресою"
+  },
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
     "b83e0c37630e29b80a33f8bbda50ac4c3fe13198db23aa24094d77dd7b388f0f",

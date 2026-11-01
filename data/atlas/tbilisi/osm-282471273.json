@@ -119,6 +119,11 @@
     ]
   },
   "geometryQuality": "IoU с реестровой границей 0.95; реестр 972.8 м², OSM 1003.6 м²; перенос центра 0.3 м. OSM way/282471273, IoU 0,950, флагов нет; контур корпуса, реестр покрыт на 99%.",
+  "geometryQualityTranslations": {
+    "en": "IoU with the registry boundary 0.95; registry 972.8 m², OSM 1003.6 m²; centroid offset 0.3 m. OSM way/282471273, IoU 0,950, no flags; the outline is the building, the registry is covered by 99%.",
+    "ka": "IoU რეესტრის საზღვართან 0.95; რეესტრი 972.8 მ², OSM 1003.6 მ²; ცენტროიდის გადახრა 0.3 მ. OSM way/282471273, IoU 0,950, ფლაგები არ არის; კონტური კორპუსია, რეესტრი დაფარულია 99%-ით.",
+    "uk": "IoU з реєстровою межею 0.95; реєстр 972.8 м², OSM 1003.6 м²; зміщення центроїда 0.3 м. OSM way/282471273, IoU 0,950, прапорців немає; контур корпусу, реєстр покрито на 99%."
+  },
   "photos": [
     "5e311f5b24d37e20f81d3946081ec4d914a7d728c47bfbcfbe8cf291b521fd95"
   ],
