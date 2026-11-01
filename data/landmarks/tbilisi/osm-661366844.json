@@ -1,0 +1,71 @@
+{
+  "id": "osm-661366844",
+  "osmId": "way/661366844",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Колокольня Ванкского собора",
+    "en": "Vank Cathedral Bell Tower",
+    "ka": "ვანქის ტაძრის სამრეკლო",
+    "uk": "Дзвіниця Ванкського собору"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Колокольня Ванкского собора в Тбилиси.",
+    "en": "Vank Cathedral Bell Tower in Tbilisi.",
+    "ka": "ტაძარი ვანქის ტაძრის სამრეკლო თბილისში.",
+    "uk": "Дзвіниця Ванкського собору у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.8055,
+    41.697161
+  ],
+  "source": "https://www.openstreetmap.org/way/661366844",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q4793165",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Vank_Monastery,_Tbilisi",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Armenian monastery of Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 32,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

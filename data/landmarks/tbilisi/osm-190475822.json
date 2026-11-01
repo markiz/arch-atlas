@@ -1,0 +1,75 @@
+{
+  "id": "osm-190475822",
+  "osmId": "way/190475822",
+  "atlasId": "osm-190475822",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Бывшая церковь Феодосия Черниговского",
+    "en": "Former Church of Theodosius of Chernigov",
+    "ka": "ყოფილი თეოდოსი ჩერნიგოველის ეკლესია",
+    "uk": "Колишня церква Феодосія Чернігівського"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Вано Сараджишвили, 34/48",
+    "en": "34/48 Vano Sarajishvili Street",
+    "ka": "ვანო სარაჯიშვილის ქუჩა 34/48",
+    "uk": "вулиця Вано Сараджишвілі, 34/48"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.791771,
+    41.70259
+  ],
+  "source": "https://www.openstreetmap.org/way/190475822",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q12865064"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4920"
+  },
+  "recognition": {
+    "wikidata": "Q12865064",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თეოდოსი_ჩერნიგოველის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Church of Teodosi Chernigovski, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

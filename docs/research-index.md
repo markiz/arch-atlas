@@ -15,6 +15,7 @@
 - [research-queue-v5-progress.md](research-queue-v5-progress.md) — пятая очередь: 100 READY, 83 HOLD, 17 REJECT; 40 интегрировано, 60 ждут перевода;
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила;
 - [landmark-expansion.md](landmark-expansion.md) — процедура расширения слоя достопримечательностей и отбора топ-100;
+- [landmark-schema.md](landmark-schema.md) — схема карточки ориентира `data/landmarks/tbilisi/*.json`;
 - [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс и helper'ы для длительных скриптов;
 - [archive/README.md](archive/README.md) — исходный план и ранние снимки.
 

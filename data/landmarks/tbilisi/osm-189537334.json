@@ -1,0 +1,71 @@
+{
+  "id": "osm-189537334",
+  "osmId": "way/189537334",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Евангелическо-лютеранская церковь Примирения",
+    "en": "Evangelical Lutheran Church of Reconciliation",
+    "ka": "ევანგელურ-ლუთერანული შერიგების ეკლესია",
+    "uk": "Євангельсько-лютеранська церква Примирення"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Евангелическо-лютеранская церковь Примирения в Тбилиси.",
+    "en": "Evangelical Lutheran Church of Reconciliation in Tbilisi.",
+    "ka": "ევანგელურ-ლუთერანული შერიგების ეკლესია თბილისში.",
+    "uk": "Євангельсько-лютеранська церква Примирення у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.806584,
+    41.710012
+  ],
+  "source": "https://www.openstreetmap.org/way/189537334",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q12864968",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_შერიგების_ლუთერანული_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi new Lutheran church",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

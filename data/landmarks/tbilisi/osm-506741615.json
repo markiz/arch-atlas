@@ -1,0 +1,75 @@
+{
+  "id": "osm-506741615",
+  "osmId": "way/506741615",
+  "atlasId": "osm-506741615",
+  "category": "church",
+  "subcategory": "mosque",
+  "names": {
+    "ru": "Джума-мечеть",
+    "en": "Juma Mosque",
+    "ka": "ჯუმა მეჩეთი",
+    "uk": "Джума-мечеть"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "Ботаническая улица, 32",
+    "en": "32 Botanical Street",
+    "ka": "ბოტანიკურის ქუჩა 32",
+    "uk": "Ботанічна вулиця, 32"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.810146,
+    41.687172
+  ],
+  "source": "https://www.openstreetmap.org/way/506741615",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q4453131"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q4453131",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_მეჩეთი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Juma Mosque, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

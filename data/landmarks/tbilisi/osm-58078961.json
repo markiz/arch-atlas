@@ -1,0 +1,76 @@
+{
+  "id": "osm-58078961",
+  "osmId": "way/58078961",
+  "atlasId": "osm-58078961",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Михаила Тверского",
+    "en": "Church of Saint Michael of Tver",
+    "ka": "წმინდა მიქაელ ტვერელის სახელობის ეკლესია",
+    "uk": "Церква Святого Михаїла Тверського"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Залдастанишвили, 36",
+    "en": "36 Zaldastanishvili Street",
+    "ka": "ზალდასტანიშვილის ქუჩა 36",
+    "uk": "вулиця Залдастанішвілі, 36"
+  },
+  "descriptions": {
+    "ru": "Православный храм на склоне Мтацминды; в начале XX века его строительство поддержали члены семьи Воронцовых-Дашковых и великий князь Михаил Романов.",
+    "en": "An Orthodox church on the slope of Mtatsminda, built with support from the Vorontsov-Dashkov family and Grand Duke Mikhail Romanov in the early 20th century.",
+    "ka": "მართლმადიდებლური ტაძარი მთაწმინდის ფერდობზე, რომლის მშენებლობასაც XX საუკუნის დასაწყისში ვორონცოვ-დაშკოვების ოჯახის წევრები და დიდი მთავარი მიხეილ რომანოვი დაეხმარნენ.",
+    "uk": "Православний храм на схилі Мтацмінди; на початку XX століття його будівництво підтримали члени родини Воронцова-Дашкова та великий князь Михайло Романов."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.789018,
+    41.700675
+  ],
+  "source": "https://www.heritagesites.ge/uploads/files/5a421dd24854a.pdf",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/58078961",
+    "https://orthodoxy.ge/tsnobarebi/tadzrebi/tvereli.htm"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 4192,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4192"
+  },
+  "recognition": {
+    "wikidata": "Q59310559",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_წმინდა_მიხეილ_ტვერელის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Mikhail Tverskoy church, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 56,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

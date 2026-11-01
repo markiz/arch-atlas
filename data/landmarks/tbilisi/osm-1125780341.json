@@ -1,0 +1,74 @@
+{
+  "id": "osm-1125780341",
+  "osmId": "way/1125780341",
+  "atlasId": "osm-1125780341",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Георгиевская надвратная церковь",
+    "en": "Church of St. George Kari",
+    "ka": "წმ.გიორგის სახელობის კარის ეკლესია",
+    "uk": "Георгіївська надбрамна церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.806507,
+    41.694659
+  ],
+  "source": "https://www.openstreetmap.org/way/1125780341",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q55753705"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q55753705",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_წმინდა_გიორგის_კარის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Kari Saint George church",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 42,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

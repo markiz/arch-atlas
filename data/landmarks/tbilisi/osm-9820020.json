@@ -1,0 +1,72 @@
+{
+  "id": "osm-9820020",
+  "osmId": "relation/9820020",
+  "atlasId": null,
+  "category": "castle",
+  "subcategory": "fortress",
+  "names": {
+    "ru": "Нарикала",
+    "en": "Narikala",
+    "ka": "ნარიყალა",
+    "uk": "Нарікала"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Крепость Нарикала в Тбилиси.",
+    "en": "Fortress Narikala in Tbilisi.",
+    "ka": "ციხესიმაგრე ნარიყალა თბილისში.",
+    "uk": "Фортеця Нарікала у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.808945,
+    41.687863
+  ],
+  "source": "https://www.openstreetmap.org/relation/9820020",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3616"
+  },
+  "recognition": {
+    "wikidata": "Q155453",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ნარიყალა",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Narikala",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "ruined",
+  "access": "exterior",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

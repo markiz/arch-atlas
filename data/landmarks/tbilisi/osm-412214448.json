@@ -1,0 +1,71 @@
+{
+  "id": "osm-412214448",
+  "osmId": "node/412214448",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Грузинский национальный музей",
+    "en": "Georgian National Museum",
+    "ka": "საქართველოს ეროვნული მუზეუმი",
+    "uk": "Грузинський національний музей"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Грузинский национальный музей в Тбилиси.",
+    "en": "Georgian National Museum in Tbilisi.",
+    "ka": "საქართველოს ეროვნული მუზეუმი თბილისში.",
+    "uk": "Грузинський національний музей у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.800221,
+    41.696043
+  ],
+  "source": "https://www.openstreetmap.org/node/412214448",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2586798",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/საქართველოს_ეროვნული_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Georgian National Museum",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

@@ -14,8 +14,9 @@ data/thumbnails/
 public/atlas/photos/
 public/atlas/thumbnails/
 
-# Сгенерированные бандл, манифест и слои карты (источники — data/atlas, aux, raw)
+# Сгенерированные бандлы, манифест и слои карты (источники — data/atlas, data/landmarks, aux, raw)
 public/atlas/buildings.json
+public/atlas/landmarks.json
 public/atlas/manifest.json
 public/atlas/basemap.geojson
 public/atlas/building-outlines.geojson

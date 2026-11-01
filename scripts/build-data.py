@@ -4,6 +4,13 @@ from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
 curated_name_variants=json.loads((root/'data/basemap-name-translations.json').read_text()) if (root/'data/basemap-name-translations.json').exists() else {}
+landmark_cards={}
+landmark_cards_dir=root/'data/landmarks/tbilisi'
+if landmark_cards_dir.exists():
+ for card_path in sorted(landmark_cards_dir.glob('*.json')):
+  try: card=json.loads(card_path.read_text())
+  except Exception: continue
+  if card.get('osmId') and card.get('names'):landmark_cards[card['osmId']]=card
 nodes={};node_tags={};ways={};relations={}
 paths=sorted((root/'raw').glob('osm-grid-*.xml'))
 parse_progress=Progress(len(paths),'parse OSM XML')
@@ -55,6 +62,14 @@ def name_candidates(tags):
   value=tags.get(key)
   if value and value not in values:values.append(value)
  return values
+def apply_landmark_card(props,osm_id):
+ card=landmark_cards.get(osm_id)
+ if not card:return props
+ names=card.get('names') or {}
+ if all(names.get(language) for language in ('ru','en','ka','uk')):
+  props['names']={language:names[language] for language in ('ru','en','ka','uk')}
+  props['name']=props['names']['ru']
+ return props
 def translated_names(tags):
  candidates=name_candidates(tags)
  for source in candidates:
@@ -83,7 +98,7 @@ for index,(nid,tags) in enumerate(node_tags.items(),1):
  if index%1000==0:node_progress.update(index,f'{len(features)} features')
  category=landmark(tags)
  if category:
-  props={'kind':'landmark','category':category,'osmId':f'node/{nid}'};props.update(translated_names(tags));name=props['names']['ru']
+  props={'kind':'landmark','category':category,'osmId':f'node/{nid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'node/{nid}');name=props['names']['ru']
   if name:props['name']=name
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':nodes[nid]}})
 node_progress.finish()
@@ -96,7 +111,7 @@ for rid,relation in relations.items():
    coords.extend(nodes[n] for n in ways[ref]['refs'] if n in nodes)
  if coords:
   center=[round(sum(p[i] for p in coords)/len(coords),6) for i in (0,1)]
-  props={'kind':'landmark','category':category,'osmId':f'relation/{rid}'};props.update(translated_names(tags));name=props['names']['ru']
+  props={'kind':'landmark','category':category,'osmId':f'relation/{rid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'relation/{rid}');name=props['names']['ru']
   if name:props['name']=name
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':center}})
 way_progress=Progress(len(ways),'scan OSM ways')
@@ -108,7 +123,7 @@ for index,(wid,w) in enumerate(ways.items(),1):
  tags=w['tags']; closed=len(coords)>3 and coords[0]==coords[-1]; kind=None
  category=landmark(tags)
  if category and closed:
-  props={'kind':'landmark','category':category,'osmId':f'way/{wid}'};props.update(translated_names(tags));name=props['names']['ru']
+  props={'kind':'landmark','category':category,'osmId':f'way/{wid}'};props.update(translated_names(tags));props=apply_landmark_card(props,f'way/{wid}');name=props['names']['ru']
   if name:props['name']=name
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Polygon','coordinates':[coords]}})
  if 'building' in tags and closed:
@@ -166,7 +181,7 @@ if city_extract.exists():
    kind='green';geometry={'type':'Polygon','coordinates':[coords]}
   elif (tags.get('tourism')=='museum' or tags.get('amenity')=='museum'):
    kind='landmark';props['category']='museum'
-   props.update(translated_names(tags));name=props['names']['ru']
+   props.update(translated_names(tags));props=apply_landmark_card(props,f'{osm_type}/{osm_id}');name=props['names']['ru']
    if name:props['name']=name
    if 'lon' in element and 'lat' in element:point=[float(element['lon']),float(element['lat'])]
    elif 'bounds' in element:

@@ -1,0 +1,76 @@
+{
+  "id": "osm-78500061",
+  "osmId": "way/78500061",
+  "atlasId": "osm-78500061",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святой Нино в Чугурети",
+    "en": "St Nino Church in Chugureti",
+    "ka": "ჩუღურეთის წმინდა ნინოს ეკლესია",
+    "uk": "Церква Святої Ніно в Чугуреті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Нино Чхеидзе, 32",
+    "en": "32 Nino Chkheidze Street",
+    "ka": "ნინო ჩხეიძის ქუჩა 32",
+    "uk": "вулиця Ніно Чхеїдзе, 32"
+  },
+  "descriptions": {
+    "ru": "Кирпичная трёхнефная базилика в Чугурети, посвящённая Святой Нино.",
+    "en": "A three-aisled brick basilica in Chugureti dedicated to Saint Nino.",
+    "ka": "ჩუღურეთში მდებარე აგურით ნაშენი წმინდა ნინოს სამნავიანი ბაზილიკა.",
+    "uk": "Цегляна тринефна базиліка у Чугуреті, присвячена Святій Ніно."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.809143,
+    41.701118
+  ],
+  "source": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/nino2.htm",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/78500061",
+    "https://www.ambioni.ge/wmida-ninos-saxelobis-tadzari"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 2764,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2764"
+  },
+  "recognition": {
+    "wikidata": "Q124462897",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ჩუღურეთის_წმინდა_ნინოს_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

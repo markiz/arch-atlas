@@ -1,0 +1,76 @@
+{
+  "id": "osm-75311791",
+  "osmId": "way/75311791",
+  "atlasId": "synagogue",
+  "category": "church",
+  "subcategory": "synagogue",
+  "names": {
+    "ru": "Большая синагога Тбилиси",
+    "en": "Great Synagogue of Tbilisi",
+    "ka": "თბილისის დიდი სინაგოგა",
+    "uk": "Велика синагога Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 45–47",
+    "en": "45–47 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 45–47",
+    "uk": "вулиця Коте Абхазі, 45–47"
+  },
+  "descriptions": {
+    "ru": "Кирпичное здание с арочными окнами — исторический центр религиозной жизни еврейской общины Тбилиси.",
+    "en": "The brick building with arched windows has long been a centre of religious life for Tbilisi’s Jewish community.",
+    "ka": "აგურის შენობა თაღოვანი ფანჯრებით თბილისის ებრაული თემის რელიგიური ცხოვრების ისტორიული ცენტრია.",
+    "uk": "Цегляна будівля з арковими вікнами — історичний осередок релігійного життя єврейської громади Тбілісі."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.80727,
+    41.69
+  ],
+  "source": "https://cja.huji.ac.il/index.php?id=290958&mode=alone",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/75311791",
+    "https://dbs.anumuseum.org.il/skn/en/c6/e23552465/"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": 290958,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=290958"
+  },
+  "recognition": {
+    "wikidata": "Q550451",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Great_Synagogue_(Tbilisi)",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 49,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

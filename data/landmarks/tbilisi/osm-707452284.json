@@ -1,0 +1,71 @@
+{
+  "id": "osm-707452284",
+  "osmId": "way/707452284",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Сорока Мучеников",
+    "en": "Church of the Forty Martyrs of Sebastia",
+    "ka": "ორმოცი სებასტიელი მოწამის ტაძარი",
+    "uk": "Церква Сорока Мучеників"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Церковь Сорока Мучеников в Тбилиси.",
+    "en": "Church of the Forty Martyrs of Sebastia in Tbilisi.",
+    "ka": "ორმოცი სებასტიელი მოწამის ტაძარი თბილისში.",
+    "uk": "Церква Сорока Мучеників у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.80995,
+    41.688692
+  ],
+  "source": "https://www.openstreetmap.org/way/707452284",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q55664456",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Церковь_Сорока_Мучеников_(Тбилиси)",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Holy Forty Martyrs Church, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

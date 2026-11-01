@@ -1,0 +1,76 @@
+{
+  "id": "osm-373390884",
+  "osmId": "way/373390884",
+  "atlasId": "osm-373390884",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Сурб Геворг (церковь Святого Георгия)",
+    "en": "Surb Gevorg Cathedral",
+    "ka": "სურბ გევორქის საკათედრო ტაძარი",
+    "uk": "Сурб Геворг (церква Святого Георгія)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Самгебро, 5",
+    "en": "5 Samghebro Street",
+    "ka": "სამღებროს ქუჩა 5",
+    "uk": "вулиця Самгебро, 5"
+  },
+  "descriptions": {
+    "ru": "Сурб Геворг — действующий армянский собор в старом Тбилиси и кафедральный храм епархии Армянской апостольской церкви в Грузии.",
+    "en": "Surb Gevorg is an active Armenian cathedral in Old Tbilisi and the diocesan church of the Armenian Apostolic Diocese in Georgia.",
+    "ka": "სურბ გევორქი ძველი თბილისის მოქმედი სომხური საკათედრო ტაძარი და საქართველოში სომხური სამოციქულო ეკლესიის ეპარქიის კათედრაა.",
+    "uk": "Сурб Геворг — чинний вірменський собор у Старому Тбілісі та кафедральний храм єпархії Вірменської апостольської церкви в Грузії."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.808887,
+    41.689177
+  ],
+  "source": "https://armenianchurch.ge/en/churches/dejstvuyushchie-tserkvi-i-chasovni-2/existing-churches-and-chapels/surb-gevorg-leader-church",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/373390884",
+    "https://dspace.nplg.gov.ge/bitstream/1234/315309/1/Tbilisisa_Da_Mcxeta_Mtianetis_Kulturis_Dzeglebi.pdf"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3757,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3757"
+  },
+  "recognition": {
+    "wikidata": "Q3653178",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/სურბ_გევორქის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Saint Gevorg Armenian Church, Old Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

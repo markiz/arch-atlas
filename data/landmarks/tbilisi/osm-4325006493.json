@@ -1,0 +1,70 @@
+{
+  "id": "osm-4325006493",
+  "osmId": "node/4325006493",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей истории Тбилиси",
+    "en": "Tbilisi History Museum",
+    "ka": "თბილისის ისტორიულ-ეთნოგრაფიული მუზეუმი",
+    "uk": "Музей історії Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей истории Тбилиси в Тбилиси.",
+    "en": "Tbilisi History Museum in Tbilisi.",
+    "ka": "თბილისის ისტორიულ-ეთნოგრაფიული მუზეუმი თბილისში.",
+    "uk": "Музей історії Тбілісі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.807549,
+    41.690965
+  ],
+  "source": "https://www.openstreetmap.org/node/4325006493",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q16370686",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_ისტორიულ-ეთნოგრაფიული_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi History Museum",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

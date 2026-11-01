@@ -45,7 +45,17 @@ async function inputPaths(){
   .filter(name=>name.startsWith('osm-grid-')&&name.endsWith('.xml'))
   .sort()
   .map(name=>`raw/${name}`);
- return [...grid,...EXTRA_INPUTS];
+ let landmarks=[];
+ try{
+  const landmarkNames=await readdir(path.join(ROOT,'data','landmarks','tbilisi'));
+  landmarks=landmarkNames
+   .filter(name=>name.endsWith('.json'))
+   .sort()
+   .map(name=>`data/landmarks/tbilisi/${name}`);
+ }catch(error){
+  if(error?.code!=='ENOENT')throw error;
+ }
+ return [...grid,...landmarks,...EXTRA_INPUTS];
 }
 
 /** SHA-256 over every input path and its content; mtime alone is not trusted. */

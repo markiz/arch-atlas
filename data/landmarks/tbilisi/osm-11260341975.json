@@ -1,0 +1,68 @@
+{
+  "id": "osm-11260341975",
+  "osmId": "node/11260341975",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Мосе Тоидзе",
+    "en": "Mose Toidze House-Museum",
+    "ka": "მოსე თოიძის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Мосе Тоїдзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Дом-музей Мосе Тоидзе в Тбилиси.",
+    "en": "Mose Toidze House-Museum in Tbilisi.",
+    "ka": "მოსე თოიძის სახლ-მუზეუმი თბილისში.",
+    "uk": "Будинок-музей Мосе Тоїдзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.795758,
+    41.699943
+  ],
+  "source": "https://www.openstreetmap.org/node/11260341975",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

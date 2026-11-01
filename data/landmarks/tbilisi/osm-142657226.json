@@ -1,0 +1,75 @@
+{
+  "id": "osm-142657226",
+  "osmId": "way/142657226",
+  "atlasId": "osm-142657226",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей современного искусства Зураба Церетели (бывший кадетский корпус)",
+    "en": "Zurab Tsereteli Museum of Modern Art (Former Cadet Corps)",
+    "ka": "ზურაბ წერეთლის თანამედროვე ხელოვნების მუზეუმი (ყოფილი კადეტთა კორპუსი)",
+    "uk": "Музей сучасного мистецтва Зураба Церетелі (колишній кадетський корпус)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 27",
+    "en": "27 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 27",
+    "uk": "проспект Шота Руставелі, 27"
+  },
+  "descriptions": {
+    "ru": "Музей современного искусства занимает историческое здание кадетского корпуса на проспекте Руставели. Сдержанный фасад с чётким делением на горизонтальные и вертикальные оси отражает псевдоклассическую архитектуру здания.",
+    "en": "The Museum of Modern Art occupies the historic Cadet Corps building on Rustaveli Avenue. Its restrained façade, divided by clear horizontal and vertical axes, reflects the building’s pseudoclassical architecture.",
+    "ka": "თანამედროვე ხელოვნების მუზეუმი რუსთაველის გამზირზე მდებარე ისტორიულ კადეტთა კორპუსის შენობაშია განთავსებული. თავშეკავებული ფასადი, მკაფიო ჰორიზონტალური და ვერტიკალური ღერძებით, შენობის ფსევდოკლასიკურ არქიტექტურას ასახავს.",
+    "uk": "Музей сучасного мистецтва розташований в історичній будівлі кадетського корпусу на проспекті Руставелі. Стриманий фасад із чітким поділом на горизонтальні й вертикальні осі відображає псевдокласичну архітектуру споруди."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.795254,
+    41.70156
+  ],
+  "source": "https://www.scantbilisi.ge/en/objects/356/satesto",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/142657226",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 4028,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028"
+  },
+  "recognition": {
+    "wikidata": "Q117123340",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ზურაბ_წერეთლის_თანამედროვე_ხელოვნების_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Zurab Tsereteli Museum Of Modern Art",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

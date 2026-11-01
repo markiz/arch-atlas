@@ -1,0 +1,77 @@
+{
+  "id": "osm-132312112",
+  "osmId": "way/132312112",
+  "atlasId": "osm-132312112",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Католическая церковь Святых Петра и Павла",
+    "en": "St Peter and St Paul Catholic Church",
+    "ka": "წმინდა პეტრესა და პავლეს კათოლიკური ეკლესია",
+    "uk": "Католицька церква Святих Петра і Павла"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иване Джавахишвили, 55",
+    "en": "55 Ivane Javakhishvili Street",
+    "ka": "ივანე ჯავახიშვილის ქუჩა 55",
+    "uk": "вулиця Іване Джавахішвілі, 55"
+  },
+  "descriptions": {
+    "ru": "Католическая церковь на улице Джавахишвили построена по проекту Альберта Зальцмана.",
+    "en": "The Catholic church on Javakhishvili Street was designed by Albert Salzmann.",
+    "ka": "ჯავახიშვილის ქუჩაზე მდებარე კათოლიკური ეკლესია ალბერტ ზალცმანის პროექტით აშენდა.",
+    "uk": "Католицьку церкву на вулиці Джавахішвілі спорудили за проєктом Альберта Зальцмана."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.801834,
+    41.709949
+  ],
+  "source": "https://georgia.travel/st-peter-and-paul-catholic-church",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/132312112",
+    "https://rm.coe.int/168070ce59"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3005,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3005"
+  },
+  "recognition": {
+    "wikidata": "Q12864965",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_პეტრე_და_პავლე_მოციქულთა_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Saints Peter and Paul Catholic Church, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

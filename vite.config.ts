@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
 import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
+import { assembleLandmarks } from './scripts/assemble-landmarks.mjs';
 import { buildMapLayers } from './scripts/build-map-layers.mjs';
 import { createManifest } from './scripts/create-manifest.mjs';
 import { createPhotoThumbs } from './scripts/create-photo-thumbs.mjs';
@@ -27,10 +28,11 @@ function atlasHotReload():Plugin{
    try{await createPhotoThumbs({quiet:true});}
    catch(error){server.config.logger.error(`[atlas] photo previews: ${error instanceof Error?error.message:String(error)}`);}
    const result=await assembleAtlas({quiet:true});
+   const landmarks=await assembleLandmarks({quiet:true});
    await syncPhotos({quiet:true});
    await createManifest({quiet:true});
    if(reload)server.ws.send({type:'full-reload'});
-   server.config.logger.info(`[atlas] packed ${result.cards.length} objects from data/atlas/${result.city}/`);
+   server.config.logger.info(`[atlas] packed ${result.cards.length} objects and ${landmarks.landmarks.length} landmarks`);
   }catch(error){
    const message=error instanceof Error?error.message:String(error);
    server.config.logger.error(`[atlas] ${message}`);
@@ -46,18 +48,20 @@ function atlasHotReload():Plugin{
   async configureServer(server){
    await rebuild(server,false);
    const sourceRoot=path.join(PROJECT_ROOT,'data','atlas');
+   const landmarksRoot=path.join(PROJECT_ROOT,'data','landmarks');
    const auxRoot=path.join(PROJECT_ROOT,'aux');
    const photosRoot=path.join(PROJECT_ROOT,'data','photos');
    const rawRoot=path.join(PROJECT_ROOT,'raw');
-   server.watcher.add([sourceRoot,auxRoot,photosRoot,rawRoot]);
+   server.watcher.add([sourceRoot,landmarksRoot,auxRoot,photosRoot,rawRoot]);
    const schedule=(file:string)=>{
     const relative=path.relative(PROJECT_ROOT,file).split(path.sep).join('/');
     const isSource=relative.startsWith('data/atlas/')&&relative.endsWith('.json');
+    const isLandmark=relative.startsWith('data/landmarks/')&&relative.endsWith('.json');
     const isPhoto=relative.startsWith('data/photos/');
     const isAux=relative.startsWith('aux/')&&relative.endsWith('.json');
     const isLayerInput=relative.startsWith('raw/')&&/\.(?:xml|json|geojson)$/.test(relative);
     const isTranslations=relative==='data/landmark-name-translations.json'||relative==='data/basemap-name-translations.json';
-    if(!isSource&&!isPhoto&&!isAux&&!isLayerInput&&!isTranslations)return;
+    if(!isSource&&!isLandmark&&!isPhoto&&!isAux&&!isLayerInput&&!isTranslations)return;
     clearTimeout(timer);
     timer=setTimeout(()=>void rebuild(server,true),120);
    };

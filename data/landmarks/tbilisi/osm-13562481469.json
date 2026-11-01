@@ -1,0 +1,70 @@
+{
+  "id": "osm-13562481469",
+  "osmId": "node/13562481469",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Мераба Коставы",
+    "en": "Merab Kostava House Museum",
+    "ka": "მერაბ კოსტავას სახლ-მუზეუმი",
+    "uk": "Будинок-музей Мераба Костави"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Дом-музей Мераба Коставы в Тбилиси.",
+    "en": "Merab Kostava House Museum in Tbilisi.",
+    "ka": "მერაბ კოსტავას სახლ-მუზეუმი თბილისში.",
+    "uk": "Будинок-музей Мераба Костави у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.789096,
+    41.70403
+  ],
+  "source": "https://www.openstreetmap.org/node/13562481469",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q108504324",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ზაქარია_ფალიაშვილის_სახლ-მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Merab Kostava House-Museum",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 24,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

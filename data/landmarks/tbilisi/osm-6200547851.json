@@ -1,0 +1,70 @@
+{
+  "id": "osm-6200547851",
+  "osmId": "node/6200547851",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Научно-культурный центр «Дом Ованеса Туманяна»",
+    "en": "Hovhannes Tumanyan House Scientific and Cultural Center",
+    "ka": "„ჰოვანეს თუმანიანის სახლი“ სამეცნიერო-კულტურული ცენტრი",
+    "uk": "Науково-культурний центр «Дім Ованеса Туманяна»"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей Научно-культурный центр «Дом Ованеса Туманяна» в Тбилиси.",
+    "en": "Museum Hovhannes Tumanyan House Scientific and Cultural Center in Tbilisi.",
+    "ka": "მუზეუმი „ჰოვანეს თუმანიანის სახლი“ სამეცნიერო-კულტურული ცენტრი თბილისში.",
+    "uk": "Музей Науково-культурний центр «Дім Ованеса Туманяна» у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.793817,
+    41.689712
+  ],
+  "source": "https://www.openstreetmap.org/node/6200547851",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q124653567",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 16,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

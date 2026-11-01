@@ -1,0 +1,68 @@
+{
+  "id": "osm-11584155943",
+  "osmId": "node/11584155943",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей медицины",
+    "en": "Museum of Medicine",
+    "ka": "მედიცინის მუზეუმი",
+    "uk": "Музей медицини"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей медицины в Тбилиси.",
+    "en": "Museum of Medicine in Tbilisi.",
+    "ka": "მედიცინის მუზეუმი თბილისში.",
+    "uk": "Музей медицини у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.797195,
+    41.70641
+  ],
+  "source": "https://www.openstreetmap.org/node/11584155943",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

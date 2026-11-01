@@ -1,0 +1,70 @@
+{
+  "id": "osm-9890728875",
+  "osmId": "node/9890728875",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Якоба Николадзе",
+    "en": "Iakob Nikoladze House Museum",
+    "ka": "იაკობ ნიკოლაძის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Якоба Ніколадзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Дом-музей Якоба Николадзе в Тбилиси.",
+    "en": "Iakob Nikoladze House Museum in Tbilisi.",
+    "ka": "იაკობ ნიკოლაძის სახლ-მუზეუმი თბილისში.",
+    "uk": "Будинок-музей Якоба Ніколадзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.782131,
+    41.709044
+  ],
+  "source": "https://www.openstreetmap.org/node/9890728875",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q16370308",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/იაკობ_ნიკოლაძის_სახლ-მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 26,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 4,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

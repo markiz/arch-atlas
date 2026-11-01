@@ -1,0 +1,75 @@
+{
+  "id": "osm-337365208",
+  "osmId": "way/337365208",
+  "atlasId": "anchiskhati",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Базилика Анчисхати",
+    "en": "Anchiskhati Basilica",
+    "ka": "ანჩისხატის ბაზილიკა",
+    "uk": "Базиліка Анчисхаті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иоане Шавтели",
+    "en": "Ioane Shavteli Street",
+    "ka": "იოანე შავთელის ქუჩა",
+    "uk": "вулиця Іоане Шавтелі"
+  },
+  "descriptions": {
+    "ru": "Старинная трехнефная базилика в историческом центре считается древнейшей сохранившейся церковью Тбилиси.",
+    "en": "This ancient three-nave basilica in the historic centre is considered the oldest surviving church in Tbilisi.",
+    "ka": "ისტორიულ ცენტრში მდებარე ეს უძველესი სამნავიანი ბაზილიკა თბილისის დღემდე შემორჩენილ ყველაზე ძველ ეკლესიად მიიჩნევა.",
+    "uk": "Цю давню тринавну базиліку в історичному центрі вважають найстарішою церквою Тбілісі, що збереглася донині."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.806944,
+    41.695556
+  ],
+  "source": "https://georgianencyclopedia.ge/en/form_eng/374",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/337365208"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q609419",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ანჩისხატი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Anchiskhati Basilica",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

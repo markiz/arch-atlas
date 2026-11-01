@@ -1,0 +1,70 @@
+{
+  "id": "osm-6162064485",
+  "osmId": "node/6162064485",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей изобразительных искусств Грузии",
+    "en": "Georgian Museum of Fine Arts",
+    "ka": "ქართული სახვითი ხელოვნების მუზეუმი",
+    "uk": "Музей образотворчих мистецтв Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей изобразительных искусств Грузии в Тбилиси.",
+    "en": "Georgian Museum of Fine Arts in Tbilisi.",
+    "ka": "ქართული სახვითი ხელოვნების მუზეუმი თბილისში.",
+    "uk": "Музей образотворчих мистецтв Грузії у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.799551,
+    41.697208
+  ],
+  "source": "https://www.openstreetmap.org/node/6162064485",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q60550826",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Georgian_Museum_of_Fine_Arts",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Georgian Museum of Fine Arts",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

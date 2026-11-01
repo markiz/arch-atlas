@@ -1,0 +1,77 @@
+{
+  "id": "osm-337269648",
+  "osmId": "way/337269648",
+  "atlasId": "osm-337269648",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Мама Давити",
+    "en": "Mamadaviti Church",
+    "ka": "მთაწმინდის მამადავითის ეკლესია",
+    "uk": "Церква Мама Давіті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мтацминда, 16",
+    "en": "16 Mtatsminda Street",
+    "ka": "მთაწმინდის ქუჩა 16",
+    "uk": "вулиця Мтацмінда, 16"
+  },
+  "descriptions": {
+    "ru": "Купольная церковь на склоне горы Мтацминда; в её архитектуре использованы формы грузинской церковной традиции.",
+    "en": "A domed church on the slope of Mount Mtatsminda, using forms from the Georgian ecclesiastical tradition.",
+    "ka": "გუმბათოვანი ეკლესია მთაწმინდის ფერდობზე, რომლის არქიტექტურაშიც ქართული საეკლესიო ტრადიციის ფორმებია გამოყენებული.",
+    "uk": "Купольна церква на схилі гори Мтацмінда, в архітектурі якої використані форми грузинської церковної традиції."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.788893,
+    41.695829
+  ],
+  "source": "https://georgianencyclopedia.ge/ka/form/29673",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/337269648",
+    "https://dspace.nplg.gov.ge/handle/1234/149779"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 4070,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4070"
+  },
+  "recognition": {
+    "wikidata": "Q12866896",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/მთაწმინდის_მამადავითის_სახელობის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Church of St. David, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "osm-65350538",
+  "osmId": "way/65350538",
+  "atlasId": "osm-65350538",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Нижняя Вифлеемская церковь",
+    "en": "Betlemi Lower Church",
+    "ka": "ბეთლემის ქვედა ეკლესია",
+    "uk": "Нижня Віфлеємська церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.803973,
+    41.689228
+  ],
+  "source": "https://www.openstreetmap.org/way/65350538",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q4156388"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q4156388",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Lower_Bethlehemi_Church",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Church of Saint Stepanos of the Holy Virgins",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 49,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

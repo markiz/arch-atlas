@@ -1,0 +1,71 @@
+{
+  "id": "osm-1561059942",
+  "osmId": "node/1561059942",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Государственный музей грузинской литературы имени Георгия Леонидзе",
+    "en": "Giorgi Leonidze State Museum of Georgian Literature",
+    "ka": "გიორგი ლეონიძის სახელობის ქართული ლიტერატურის სახელმწიფო მუზეუმი",
+    "uk": "Державний музей грузинської літератури імені Георгія Леонідзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Государственный музей грузинской литературы имени Георгия Леонидзе в Тбилиси.",
+    "en": "Giorgi Leonidze State Museum of Georgian Literature in Tbilisi.",
+    "ka": "გიორგი ლეონიძის სახელობის ქართული ლიტერატურის სახელმწიფო მუზეუმი თბილისში.",
+    "uk": "Державний музей грузинської літератури імені Георгія Леонідзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.799184,
+    41.699388
+  ],
+  "source": "https://www.openstreetmap.org/node/1561059942",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q5563436",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/საქართველოს_გიორგი_ლეონიძის_სახელობის_ქართული_ლიტერატურის_სახელმწიფო_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Giorgi Leonidze State Museum of Literature",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

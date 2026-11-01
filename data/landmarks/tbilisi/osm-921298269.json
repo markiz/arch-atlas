@@ -1,0 +1,70 @@
+{
+  "id": "osm-921298269",
+  "osmId": "node/921298269",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "memorial_museum",
+  "names": {
+    "ru": "Литературно-мемориальный музей Ильи Чавчавадзе",
+    "en": "Ilia Chavchavadze Literary-Memorial Museum",
+    "ka": "ილია ჭავჭავაძის ლიტერატურულ-მემორიალური მუზეუმი",
+    "uk": "Літературно-меморіальний музей Іллі Чавчавадзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Литературно-мемориальный музей Ильи Чавчавадзе в Тбилиси.",
+    "en": "Ilia Chavchavadze Literary-Memorial Museum in Tbilisi.",
+    "ka": "ილია ჭავჭავაძის ლიტერატურულ-მემორიალური მუზეუმი თბილისში.",
+    "uk": "Літературно-меморіальний музей Іллі Чавчавадзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.806091,
+    41.704007
+  ],
+  "source": "https://www.openstreetmap.org/node/921298269",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q129172230",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Literary-Memorial Museum of Ilia Chavchavadze",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 16,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

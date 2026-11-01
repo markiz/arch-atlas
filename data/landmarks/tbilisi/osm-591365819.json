@@ -1,0 +1,77 @@
+{
+  "id": "osm-591365819",
+  "osmId": "way/591365819",
+  "atlasId": "osm-591365819",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Джварис Мама",
+    "en": "Jvaris Mama Church",
+    "ka": "ჯვარის მამის ეკლესია",
+    "uk": "Церква Джваріс Мама"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 41",
+    "en": "41 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 41",
+    "uk": "вулиця Коте Абхазі, 41"
+  },
+  "descriptions": {
+    "ru": "Купольная церковь в Старом Тбилиси с кирпичными крестами на фасаде.",
+    "en": "A domed church in Old Tbilisi with brick crosses on its façade.",
+    "ka": "ძველი თბილისის გუმბათოვანი ეკლესია, რომლის ფასადსაც აგურის ჯვრები ამკობს.",
+    "uk": "Купольна церква у Старому Тбілісі з цегляними хрестами на фасаді."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.806491,
+    41.690664
+  ],
+  "source": "https://georgia.travel/jvaris-mama",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/591365819",
+    "https://dspace.nplg.gov.ge/bitstream/1234/503668/1/IerusalimisJvrisMonastrisMiwatmflobelobaSaqartveloshi_2007.pdf"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3735,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3735"
+  },
+  "recognition": {
+    "wikidata": "Q12864967",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_ჯვარის_მამის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Jvaris Mama church, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

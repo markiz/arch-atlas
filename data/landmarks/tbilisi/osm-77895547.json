@@ -1,0 +1,75 @@
+{
+  "id": "osm-77895547",
+  "osmId": "way/77895547",
+  "atlasId": "sioni",
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Сионский собор",
+    "en": "Tbilisi Sioni Cathedral",
+    "ka": "სიონის ღვთისმშობლის მიძინების ტაძარი",
+    "uk": "Сіонський собор"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Сиони, 4",
+    "en": "4 Sioni Street",
+    "ka": "სიონის ქუჩა 4",
+    "uk": "вулиця Сіоні, 4"
+  },
+  "descriptions": {
+    "ru": "Исторический кафедральный собор стоит на правом берегу Куры в старой части города.",
+    "en": "The historic cathedral stands on the right bank of the Kura in the old part of the city.",
+    "ka": "ისტორიული საკათედრო ტაძარი მტკვრის მარჯვენა ნაპირზე, ქალაქის ძველ ნაწილში დგას.",
+    "uk": "Історичний кафедральний собор стоїть на правому березі Кури в старій частині міста."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.8075,
+    41.6914
+  ],
+  "source": "https://georgia.travel/sioni-cathedral",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/77895547"
+  ],
+  "districtId": "old-tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q248050",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/სიონის_ტაძარი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Sioni Cathedral, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 57,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

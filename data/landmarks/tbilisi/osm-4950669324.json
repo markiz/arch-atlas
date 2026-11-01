@@ -1,0 +1,68 @@
+{
+  "id": "osm-4950669324",
+  "osmId": "node/4950669324",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Автомобильный музей",
+    "en": "Tbilisi Auto Museum",
+    "ka": "თბილისის ავტომუზეუმი",
+    "uk": "Автомобільний музей"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Автомобильный музей в Тбилиси.",
+    "en": "Tbilisi Auto Museum in Tbilisi.",
+    "ka": "თბილისის ავტომუზეუმი თბილისში.",
+    "uk": "Автомобільний музей у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.902219,
+    41.677091
+  ],
+  "source": "https://www.openstreetmap.org/node/4950669324",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

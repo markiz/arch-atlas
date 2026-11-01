@@ -1,0 +1,77 @@
+{
+  "id": "osm-135869289",
+  "osmId": "way/135869289",
+  "atlasId": "osm-135869289",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Государственный музей шёлка",
+    "en": "State Silk Museum",
+    "ka": "აბრეშუმის სახელმწიფო მუზეუმი",
+    "uk": "Державний музей шовку"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Цабадзе, 6",
+    "en": "6 Giorgi Tsabadze Street",
+    "ka": "გიორგი ცაბაძის ქუჩა 6",
+    "uk": "вулиця Георгія Цабадзе, 6"
+  },
+  "descriptions": {
+    "ru": "Кирпичное здание с портиком построено для Кавказской шелководческой станции и музея шёлка.",
+    "en": "The brick building with a portico was built for the Caucasian Sericulture Station and Silk Museum.",
+    "ka": "აგურის შენობა პორტიკით კავკასიის მეაბრეშუმეობის სადგურისა და აბრეშუმის მუზეუმისთვის აშენდა.",
+    "uk": "Цегляну будівлю з портиком спорудили для Кавказької шовківничої станції та музею шовку."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.788205,
+    41.721882
+  ],
+  "source": "https://www.silkmuseum.ge/en/about/building",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/135869289",
+    "https://taa.net.ge/en/archive-geo/silk-museum/"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 5006,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5006"
+  },
+  "recognition": {
+    "wikidata": "Q20570861",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/აბრეშუმის_სახელმწიფო_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Georgia State Silk Museum",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

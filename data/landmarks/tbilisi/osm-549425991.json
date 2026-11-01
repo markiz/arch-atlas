@@ -1,0 +1,76 @@
+{
+  "id": "osm-549425991",
+  "osmId": "way/549425991",
+  "atlasId": "osm-549425991",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Георгия в Клдисубани",
+    "en": "Kldisubani Church of Saint George",
+    "ka": "კლდისუბნის წმინდა გიორგის ეკლესია",
+    "uk": "Церква Святого Георгія в Клдисубані"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "переулок Бетлеми II, 9",
+    "en": "9 Betlemi II Lane",
+    "ka": "ბეთლემის II ჩიხი 9",
+    "uk": "провулок Бетлемі II, 9"
+  },
+  "descriptions": {
+    "ru": "Церковь представляет собой зальную постройку из кирпича и речного камня. Она примыкает к скальному склону и выделяется кирпичным орнаментом фасада.",
+    "en": "The church is a hall building of brick and river stone. It adjoins a rocky slope and has decorative brickwork on its façades.",
+    "ka": "ეკლესია დარბაზული ნაგებობაა, ნაშენი აგურითა და რიყის ქვით. იგი კლდოვან ფერდობს ებჯინება, ფასადები კი აგურის წყობის დეკორით გამოირჩევა.",
+    "uk": "Церква є зальною спорудою з цегли та річкового каменю. Вона прилягає до скелястого схилу, а її фасади оздоблено цегляним орнаментом."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.806649,
+    41.688715
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/549425991",
+    "https://georgianencyclopedia.ge/ka/form/27732"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3626,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3626"
+  },
+  "recognition": {
+    "wikidata": "Q2082869",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Church_of_Saint_George_(Kldisubani)",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Kldisubani St. George church",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

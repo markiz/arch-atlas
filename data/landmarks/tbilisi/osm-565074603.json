@@ -1,0 +1,76 @@
+{
+  "id": "osm-565074603",
+  "osmId": "way/565074603",
+  "atlasId": "osm-565074603",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь равноапостольной Нины",
+    "en": "Church of Saint Nino",
+    "ka": "წმინდა ნინოს ეკლესია",
+    "uk": "Церква равноапостольной Нини"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Шио Читадзе, 5",
+    "en": "5 Shio Chitadze Street",
+    "ka": "შიო ჩიტაძის ქუჩა 5",
+    "uk": "вулиця Шіо Читадзе, 5"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.794642,
+    41.695095
+  ],
+  "source": "https://www.openstreetmap.org/way/565074603",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42658484"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3880"
+  },
+  "recognition": {
+    "wikidata": "Q42658484",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/მთაწმინდის_წმინდა_ნინოს_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Church of Saint Nino in Mtatsminda",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 69,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

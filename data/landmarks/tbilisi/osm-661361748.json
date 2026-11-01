@@ -1,0 +1,75 @@
+{
+  "id": "osm-661361748",
+  "osmId": "way/661361748",
+  "atlasId": "osm-661361748",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Сурб Ншан",
+    "en": "Surb Nshan",
+    "ka": "სურფნიშანი",
+    "uk": "Церква Сурб Ншан"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.804726,
+    41.694329
+  ],
+  "source": "https://www.openstreetmap.org/way/661361748",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3653183"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3653183",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Surb_Nshan_Church,_Tbilisi",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Saint Nshan Armenian church, Old Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "closed",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

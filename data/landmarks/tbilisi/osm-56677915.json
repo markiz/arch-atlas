@@ -1,0 +1,75 @@
+{
+  "id": "osm-56677915",
+  "osmId": "way/56677915",
+  "atlasId": "osm-56677915",
+  "category": "museum",
+  "subcategory": "gallery",
+  "names": {
+    "ru": "Национальная галерея Грузии",
+    "en": "National Gallery of Georgia",
+    "ka": "საქართველოს ეროვნული გალერეა",
+    "uk": "Національна галерея Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 11",
+    "en": "11 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 11",
+    "uk": "проспект Шота Руставелі, 11"
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.79882,
+    41.698299
+  ],
+  "source": "https://www.openstreetmap.org/way/56677915",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42650192"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4720"
+  },
+  "recognition": {
+    "wikidata": "Q42650192",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/საქართველოს_ეროვნული_გალერეა",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Tbilisi National Gallery",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "osm-246757401",
+  "osmId": "way/246757401",
+  "atlasId": "osm-246757401",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Николая в Чугурети",
+    "en": "St Nicholas Church in Chugureti",
+    "ka": "ჩუღურეთის წმინდა ნიკოლოზის ეკლესია",
+    "uk": "Церква Святого Миколая в Чугуреті"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коста Хетагурова, 7",
+    "en": "7 Kosta Khetagurov Street",
+    "ka": "კოსტა ხეთაგუროვის ქუჩა 7",
+    "uk": "вулиця Коста Хетагурова, 7"
+  },
+  "descriptions": {
+    "ru": "Купольная базилика с позднейшими пристройками на улице Хетагурова.",
+    "en": "A domed basilica with later additions on Khetagurov Street.",
+    "ka": "გუმბათოვანი ბაზილიკა გვიანდელი მინაშენებით ხეთაგუროვის ქუჩაზე.",
+    "uk": "Купольна базиліка з пізнішими прибудовами на вулиці Хетагурова."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.807068,
+    41.701499
+  ],
+  "source": "https://www.orthodoxy.ge/tsnobarebi/tadzrebi/nikoloz3.htm",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/246757401",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2841"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 2841,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2841"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

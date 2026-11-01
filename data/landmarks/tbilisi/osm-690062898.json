@@ -1,0 +1,71 @@
+{
+  "id": "osm-690062898",
+  "osmId": "way/690062898",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Мугни Сурб Геворг",
+    "en": "Saint Gevorg of Mughni Church",
+    "ka": "წმინდა გიორგის მუღნის ეკლესია",
+    "uk": "Церква Мугні Сурб Геворг"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Церковь Мугни Сурб Геворг в Тбилиси.",
+    "en": "Saint Gevorg of Mughni Church in Tbilisi.",
+    "ka": "წმინდა გიორგის მუღნის ეკლესია თბილისში.",
+    "uk": "Церква Мугні Сурб Геворг у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.804223,
+    41.690318
+  ],
+  "source": "https://www.openstreetmap.org/way/690062898",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3653195",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/მოღნისის_წმინდა_გიორგის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Saint Gevorg of Mughni Armenian Church, Old Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "ruined",
+  "access": "exterior",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

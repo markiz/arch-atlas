@@ -1,0 +1,75 @@
+{
+  "id": "osm-680607569",
+  "osmId": "way/680607569",
+  "atlasId": "osm-680607569",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей истории грузинских евреев и грузино-еврейских отношений имени Давида Баазова",
+    "en": "David Baazov’s Museum of History of Georgian Jews and Georgian-Jewish Relations",
+    "ka": "დავით ბააზოვის სახელობის საქართველოს ებრაელთა და ქართულ-ებრაულ ურთიერთობათა ისტორიის მუზეუმი",
+    "uk": "Музей історії грузинських євреїв і грузинсько-єврейських відносин імені Давида Баазова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Антона Католикоса, 3",
+    "en": "3 Anton Katalikosi Street",
+    "ka": "ანტონ კათალიკოსის ქუჩა 3",
+    "uk": "вулиця Антона Католикоса, 3"
+  },
+  "descriptions": {
+    "ru": "Музей занимает кирпичное двухэтажное здание с центральным куполом на улице Антона Католикоса, 3.",
+    "en": "The museum occupies a two-storey brick building with a central dome at 3 Anton Katalikosi Street.",
+    "ka": "მუზეუმი განთავსებულია ანტონ კათალიკოსის ქუჩა 3-ზე მდებარე ორსართულიან აგურის შენობაში, რომელსაც ცენტრალური გუმბათი აქვს.",
+    "uk": "Музей розташований у двоповерховій цегляній будівлі з центральним куполом на вулиці Антона Католикоса, 3."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.804444,
+    41.691847
+  ],
+  "source": "https://georgia.travel/david-baazovs-museum-of-history-of-georgian-jews-and-georgian-jewish-relations",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/680607569",
+    "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3723"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3723,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3723"
+  },
+  "recognition": {
+    "wikidata": "Q5231015",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/საქართველოს_ებრაელთა_ისტორიის_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Museum of the History of the Jews of Georgia",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

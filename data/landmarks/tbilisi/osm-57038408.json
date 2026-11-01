@@ -1,0 +1,74 @@
+{
+  "id": "osm-57038408",
+  "osmId": "way/57038408",
+  "atlasId": "osm-57038408",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Дворец искусств Грузии",
+    "en": "Art Palace of Georgia",
+    "ka": "საქართველოს ხელოვნების სასახლე",
+    "uk": "Палац мистецтв Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иа Каргаретели, 6",
+    "en": "6 Ia Kargareteli Street",
+    "ka": "ია კარგარეთელის ქუჩა 6",
+    "uk": "вулиця Іа Каргаретелі, 6"
+  },
+  "descriptions": {
+    "ru": "Особняк с башней, высокими фронтонами и открытой террасой занимает музей истории культуры.",
+    "en": "A mansion with a tower, high gables and an open terrace houses the Museum of Cultural History.",
+    "ka": "კოშკიანი სასახლე მაღალი ფრონტონებითა და ღია ტერასით კულტურის ისტორიის მუზეუმს მასპინძლობს.",
+    "uk": "Особняк із вежею, високими фронтонами та відкритою терасою займає Музей історії культури."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.794276,
+    41.715862
+  ],
+  "source": "https://www.artpalace.ge/blank-9",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/57038408"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3016,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3016"
+  },
+  "recognition": {
+    "wikidata": "Q5548057",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/საქართველოს_ხელოვნების_სასახლე_–_კულტურის_ისტორიის_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Art Palace, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 47,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

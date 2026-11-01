@@ -1,0 +1,72 @@
+{
+  "id": "osm-202263649",
+  "osmId": "way/202263649",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "synagogue",
+  "names": {
+    "ru": "Бейт Рахель",
+    "en": "Beit Rachel Synagogue",
+    "ka": "ბეით რახელ",
+    "uk": "Бейт Рахель"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Синагога Бейт Рахель в Тбилиси.",
+    "en": "Beit Rachel Synagogue in Tbilisi.",
+    "ka": "სინაგოგა ბეით რახელ თბილისში.",
+    "uk": "Синагога Бейт Рахель у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.806261,
+    41.69266
+  ],
+  "source": "https://www.openstreetmap.org/way/202263649",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q118875703",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 28,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata",
+      "значимая архитектурно-городская роль",
+      "историческая постройка"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

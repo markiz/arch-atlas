@@ -1,0 +1,70 @@
+{
+  "id": "osm-6612890685",
+  "osmId": "node/6612890685",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей азербайджанской культуры имени Мирзы Фатали Ахундзаде",
+    "en": "Museum of Azerbaijani Culture Named after Mirza Fatali Akhundzade",
+    "ka": "მირზა ფათალი ახუნდოვის სახელობის აზერბაიჯანული კულტურის მუზეუმი",
+    "uk": "Музей азербайджанської культури імені Мірзи Фаталі Ахундзаде"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей азербайджанской культуры имени Мирзы Фатали Ахундзаде в Тбилиси.",
+    "en": "Museum of Azerbaijani Culture Named after Mirza Fatali Akhundzade in Tbilisi.",
+    "ka": "მირზა ფათალი ახუნდოვის სახელობის აზერბაიჯანული კულტურის მუზეუმი თბილისში.",
+    "uk": "Музей азербайджанської культури імені Мірзи Фаталі Ахундзаде у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.816098,
+    41.68842
+  ],
+  "source": "https://www.openstreetmap.org/node/6612890685",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q26703927",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Музей_азербайджанской_культуры_имени_Мирзы_Фатали_Ахундова",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Akhundov House - Museum of Azerbaijani Culture in Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "osm-217728421",
+  "osmId": "way/217728421",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Тандоянц Сурб Аствацацин",
+    "en": "Tandoyants Surb Astvatsatsin Church",
+    "ka": "თანდოიანცის სურბ ასტვაცაცინ ეკლესია",
+    "uk": "Церква Тандоянц Сурб Аствацацин"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Церковь Тандоянц Сурб Аствацацин в Тбилиси.",
+    "en": "Tandoyants Surb Astvatsatsin Church in Tbilisi.",
+    "ka": "თანდოიანცის სურბ ასტვაცაცინ ეკლესია თბილისში.",
+    "uk": "Церква Тандоянц Сурб Аствацацин у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.801094,
+    41.704451
+  ],
+  "source": "https://www.openstreetmap.org/way/217728421",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 0
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль",
+      "историческая постройка"
+    ],
+    "status": "provisional"
+  },
+  "status": "closed",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

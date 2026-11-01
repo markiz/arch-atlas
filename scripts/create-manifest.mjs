@@ -14,11 +14,11 @@ async function writeFileAtomic(file,contents){
  await rename(temporary,file);
 }
 
-/** Hash the packed city bundle, basemap, outlines and every referenced photo. */
+/** Hash the packed city and landmark bundles, basemap, outlines and every referenced photo. */
 export async function createManifest({root=ATLAS_ROOT,quiet=false}={}){
   const bundlePath=path.join(root,'buildings.json');
   const buildings=JSON.parse(await readFile(bundlePath,'utf8'));
-  const paths=['buildings.json','basemap.geojson','building-outlines.geojson',...new Set(buildings.flatMap(item=>(item.photos??(item.photo?[item.photo]:[])).flatMap(photo=>[photo.file,photo.thumb].filter(Boolean))))];
+  const paths=['buildings.json','landmarks.json','basemap.geojson','building-outlines.geojson',...new Set(buildings.flatMap(item=>(item.photos??(item.photo?[item.photo]:[])).flatMap(photo=>[photo.file,photo.thumb].filter(Boolean))))];
   const progress=new Progress(paths.length,{label:'hash atlas files',stream:quiet?silent:process.stderr});
   progress.start();
   const files=await Promise.all(paths.map(async relative=>{

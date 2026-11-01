@@ -1,0 +1,77 @@
+{
+  "id": "osm-691709671",
+  "osmId": "way/691709671",
+  "atlasId": "osm-691709671",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Всех грузинских святых (церковь Святого Карапета)",
+    "en": "Church of All Georgian Saints (Saint Karapet Church)",
+    "ka": "ყოველთა ქართველთა წმინდათა ეკლესია (წმინდა კარაპეტის ეკლესია)",
+    "uk": "Церква Всіх грузинських святих (церква Святого Карапета)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "подъём Елены Ахвледиани, 8 (в OSM: 6ა)",
+    "en": "8 Elene Akhvlediani Ascent (OSM: 6a)",
+    "ka": "ელენე ახვლედიანის აღმართი 8 (OSM: 6ა)",
+    "uk": "підйом Елене Ахвледіані, 8 (в OSM: 6ა)"
+  },
+  "descriptions": {
+    "ru": "Кирпичный купольный храм XIX века типа вписанного креста. В официальном реестре церковь названа храмом Всех грузинских святых; OSM и армянские источники используют имя Святого Карапета.",
+    "en": "A domed 19th-century brick church with an inscribed-cross plan. The official register calls it the Church of All Georgian Saints; OSM and Armenian sources use the name Saint Karapet Church.",
+    "ka": "გუმბათიანი, XIX საუკუნის აგურის ტაძარია ჩახაზული ჯვრის ტიპის გეგმით. ოფიციალური რეესტრი მას ყოველთა ქართველთა წმინდათა ეკლესიას უწოდებს; OSM და სომხური წყაროები წმინდა კარაპეტის ეკლესიად მოიხსენიებენ.",
+    "uk": "Цегляна банна церква XIX століття з планом вписаного хреста. Офіційний реєстр називає її церквою Всіх грузинських святих; OSM та вірменські джерела використовують назву церкви Святого Карапета."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.810081,
+    41.698165
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2694",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/691709671",
+    "https://armenianchurch.ge/en/about-us/the-diocese"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 2694,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2694"
+  },
+  "recognition": {
+    "wikidata": "Q4505060",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Saint_Karapet_Church,_Tbilisi",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Saint Karapet Armenian church, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

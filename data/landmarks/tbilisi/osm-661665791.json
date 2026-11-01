@@ -1,0 +1,70 @@
+{
+  "id": "osm-661665791",
+  "osmId": "way/661665791",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Деметре Тавдадебули",
+    "en": "Demetre Tavdadebuli Church",
+    "ka": "დემეტრე თავდადებულის სახელობის ეკლესია",
+    "uk": "Церква Деметре Тавдадебулі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Церковь Деметре Тавдадебули в Тбилиси.",
+    "en": "Demetre Tavdadebuli Church in Tbilisi.",
+    "ka": "დემეტრე თავდადებულის სახელობის ეკლესია თბილისში.",
+    "uk": "Церква Деметре Тавдадебулі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.80857,
+    41.709449
+  ],
+  "source": "https://www.openstreetmap.org/way/661665791",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 15,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

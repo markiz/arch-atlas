@@ -1,0 +1,70 @@
+{
+  "id": "osm-14141290",
+  "osmId": "relation/14141290",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Тбилисский этнографический музей",
+    "en": "Tbilisi Open Air Museum of Ethnography",
+    "ka": "სახელმწიფო ეთნოგრაფიული მუზეუმი",
+    "uk": "Тбіліський етнографічний музей просто неба"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Тбилисский этнографический музей в Тбилиси.",
+    "en": "Tbilisi Open Air Museum of Ethnography in Tbilisi.",
+    "ka": "სახელმწიფო ეთნოგრაფიული მუზეუმი თბილისში.",
+    "uk": "Тбіліський етнографічний музей просто неба у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.743692,
+    41.701824
+  ],
+  "source": "https://www.openstreetmap.org/relation/14141290",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2920430",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Tbilisi_Open_Air_Museum_of_Ethnography",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Ethnographic_museum,_Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 24,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 2,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

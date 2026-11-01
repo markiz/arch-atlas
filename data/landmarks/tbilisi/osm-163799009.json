@@ -1,0 +1,75 @@
+{
+  "id": "osm-163799009",
+  "osmId": "way/163799009",
+  "atlasId": "osm-163799009",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Верхняя Вифлеемская церковь",
+    "en": "Upper Betlemi Church of Nativity",
+    "ka": "ზემო ბეთლემის მაცხოვრის შობის ეკლესია",
+    "uk": "Верхня Віфлеємська церква"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как историческое здание.",
+    "en": "OpenStreetMap marks this building as a historic building.",
+    "ka": "OpenStreetMap-ში ეს შენობა ისტორიულ შენობად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як історичну."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.804573,
+    41.688872
+  ],
+  "source": "https://www.openstreetmap.org/way/163799009",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q5885757"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q5885757",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ბეთლემის_მაცხოვრის_შობის_ზედა_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Holy Mother of God Church of Bethlehem, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

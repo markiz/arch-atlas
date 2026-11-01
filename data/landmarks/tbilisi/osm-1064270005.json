@@ -1,0 +1,70 @@
+{
+  "id": "osm-1064270005",
+  "osmId": "way/1064270005",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "chapel",
+  "names": {
+    "ru": "Часовня Або Тбилисского",
+    "en": "Chapel of Abo of Tbilisi",
+    "ka": "თბილისელი აბოს სამლოცველო",
+    "uk": "Каплиця Або Тбіліського"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Часовня Або Тбилисского в Тбилиси.",
+    "en": "Chapel of Abo of Tbilisi in Tbilisi.",
+    "ka": "თბილისელი აბოს სამლოცველო თბილისში.",
+    "uk": "Каплиця Або Тбіліського у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.810878,
+    41.690681
+  ],
+  "source": "https://www.openstreetmap.org/way/1064270005",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q16364343",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 16,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

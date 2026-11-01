@@ -1,0 +1,68 @@
+{
+  "id": "osm-11389824514",
+  "osmId": "node/11389824514",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Цифровой музей",
+    "en": "Digital Museum",
+    "ka": "ციფრული მუზეუმი",
+    "uk": "Цифровий музей"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Цифровой музей в Тбилиси.",
+    "en": "Digital Museum in Tbilisi.",
+    "ka": "ციფრული მუზეუმი თბილისში.",
+    "uk": "Цифровий музей у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.797074,
+    41.699284
+  ],
+  "source": "https://www.openstreetmap.org/node/11389824514",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

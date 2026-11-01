@@ -1,0 +1,68 @@
+{
+  "id": "osm-13974753001",
+  "osmId": "node/13974753001",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей вина Тбилиси",
+    "en": "Tbilisi Wine Museum",
+    "ka": "თბილისის ღვინის მუზეუმი",
+    "uk": "Музей вина Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей вина Тбилиси в Тбилиси.",
+    "en": "Tbilisi Wine Museum in Tbilisi.",
+    "ka": "თბილისის ღვინის მუზეუმი თბილისში.",
+    "uk": "Музей вина Тбілісі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.807678,
+    41.691056
+  ],
+  "source": "https://www.openstreetmap.org/node/13974753001",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

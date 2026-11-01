@@ -1,0 +1,70 @@
+{
+  "id": "osm-10229103217",
+  "osmId": "node/10229103217",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Учи Джапаридзе",
+    "en": "Ucha Japaridze House Museum",
+    "ka": "უჩა ჯაფარიძის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Учі Джапарідзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Дом-музей Учи Джапаридзе в Тбилиси.",
+    "en": "Ucha Japaridze House Museum in Tbilisi.",
+    "ka": "უჩა ჯაფარიძის სახლ-მუზეუმი თბილისში.",
+    "uk": "Будинок-музей Учі Джапарідзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.782424,
+    41.710482
+  ],
+  "source": "https://www.openstreetmap.org/node/10229103217",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q12869830",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/უჩა_ჯაფარიძის_სახლ-მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

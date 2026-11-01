@@ -1,0 +1,77 @@
+{
+  "id": "osm-284620213",
+  "osmId": "way/284620213",
+  "atlasId": "osm-284620213",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Норашен",
+    "en": "Norashen Church",
+    "ka": "ნორაშენის ეკლესია",
+    "uk": "Церква Норашен"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Коте Абхази, 41",
+    "en": "41 Kote Abkhazi Street",
+    "ka": "კოტე აფხაზის ქუჩა 41",
+    "uk": "вулиця Коте Абхазі, 41"
+  },
+  "descriptions": {
+    "ru": "Армянская церковь в Старом Тбилиси стоит рядом с церковью Джварисмама.",
+    "en": "An Armenian church in Old Tbilisi stands beside Jvaris Mama Church.",
+    "ka": "ძველ თბილისში მდებარე სომხური ეკლესია ჯვარის მამის ეკლესიის გვერდით დგას.",
+    "uk": "Вірменська церква у Старому Тбілісі стоїть поруч із церквою Джварісмама."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.806533,
+    41.690976
+  ],
+  "source": "https://erekle.archive.gov.ge/places/911/norashenis-eklesia",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/284620213",
+    "https://armenianchurch.ge/en/churches/well-preserved-and-ruined-inactive-churches/norashen-sourb-astvatsatsin-church-holy-mother-of-god-in-tbilisi"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3742,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3742"
+  },
+  "recognition": {
+    "wikidata": "Q2046924",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ნორაშენი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Norashen Holy Mother of God Armenian Church",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

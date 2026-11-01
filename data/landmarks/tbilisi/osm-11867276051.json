@@ -1,0 +1,70 @@
+{
+  "id": "osm-11867276051",
+  "osmId": "node/11867276051",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Искупленная христианская церковь Божья",
+    "en": "The Redeemed Christian Church of God",
+    "ka": "გამოსყიდული ქრისტიანული ღმერთის ეკლესია",
+    "uk": "Спокутна християнська церква Божа"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Искупленная христианская церковь Божья в Тбилиси.",
+    "en": "The Redeemed Christian Church of God in Tbilisi.",
+    "ka": "გამოსყიდული ქრისტიანული ღმერთის ეკლესია თბილისში.",
+    "uk": "Спокутна християнська церква Божа у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.804713,
+    41.708769
+  ],
+  "source": "https://www.openstreetmap.org/node/11867276051",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 15,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

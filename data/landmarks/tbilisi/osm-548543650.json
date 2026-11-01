@@ -1,0 +1,70 @@
+{
+  "id": "osm-548543650",
+  "osmId": "way/548543650",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Вознесения",
+    "en": "Ascension Church",
+    "ka": "ამაღლების ეკლესია",
+    "uk": "Церква Вознесіння"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Церковь Вознесения в Тбилиси.",
+    "en": "Ascension Church in Tbilisi.",
+    "ka": "ამაღლების ეკლესია თბილისში.",
+    "uk": "Церква Вознесіння у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.792427,
+    41.689266
+  ],
+  "source": "https://www.openstreetmap.org/way/548543650",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 15,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

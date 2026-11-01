@@ -1,0 +1,68 @@
+{
+  "id": "osm-13227277068",
+  "osmId": "node/13227277068",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Зал грузинской письменности",
+    "en": "Georgian Alphabet Hall",
+    "ka": "ქართული დამწერლობის დარბაზი",
+    "uk": "Зал грузинської писемності"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей Зал грузинской письменности в Тбилиси.",
+    "en": "Museum Georgian Alphabet Hall in Tbilisi.",
+    "ka": "მუზეუმი ქართული დამწერლობის დარბაზი თბილისში.",
+    "uk": "Музей Зал грузинської писемності у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.801328,
+    41.696228
+  ],
+  "source": "https://www.openstreetmap.org/node/13227277068",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "osm-2891332680",
+  "osmId": "node/2891332680",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "house_museum",
+  "names": {
+    "ru": "Дом-музей Елены Ахвледиани",
+    "en": "Elene Akhvlediani House Museum",
+    "ka": "ელენე ახვლედიანის სახლ-მუზეუმი",
+    "uk": "Будинок-музей Єлени Ахвледіані"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Дом-музей Елены Ахвледиани в Тбилиси.",
+    "en": "Elene Akhvlediani House Museum in Tbilisi.",
+    "ka": "ელენე ახვლედიანის სახლ-მუზეუმი თბილისში.",
+    "uk": "Будинок-музей Єлени Ахвледіані у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.790596,
+    41.705794
+  ],
+  "source": "https://www.openstreetmap.org/node/2891332680",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q131151969",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Elene Akhvlediani House Museum, Tbilisi",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 16,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

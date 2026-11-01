@@ -1,0 +1,71 @@
+{
+  "id": "osm-637763969",
+  "osmId": "node/637763969",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Государственный музей искусств Грузии имени Шалвы Амиранашвили",
+    "en": "Shalva Amiranashvili State Museum of Arts of Georgia",
+    "ka": "შალვა ამირანაშვილის სახელობის საქართველოს ხელოვნების სახელმწიფო მუზეუმი",
+    "uk": "Державний музей мистецтв Грузії імені Шалви Аміранашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Государственный музей искусств Грузии имени Шалвы Амиранашвили в Тбилиси.",
+    "en": "Shalva Amiranashvili State Museum of Arts of Georgia in Tbilisi.",
+    "ka": "შალვა ამირანაშვილის სახელობის საქართველოს ხელოვნების სახელმწიფო მუზეუმი თბილისში.",
+    "uk": "Державний музей мистецтв Грузії імені Шалви Аміранашвілі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.801747,
+    41.695493
+  ],
+  "source": "https://www.openstreetmap.org/node/637763969",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2028327",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ხელოვნების_სახელმწიფო_მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Art Museum of Georgia",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 27,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

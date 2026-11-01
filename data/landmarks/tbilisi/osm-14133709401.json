@@ -1,0 +1,68 @@
+{
+  "id": "osm-14133709401",
+  "osmId": "node/14133709401",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "chapel",
+  "names": {
+    "ru": "Часовня Святого Або",
+    "en": "Chapel of Saint Abo",
+    "ka": "წმინდა აბოს სამლოცველო",
+    "uk": "Каплиця Святого Або"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Часовня Святого Або в Тбилиси.",
+    "en": "Chapel of Saint Abo in Tbilisi.",
+    "ka": "წმინდა აბოს სამლოცველო თბილისში.",
+    "uk": "Каплиця Святого Або у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.810562,
+    41.690398
+  ],
+  "source": "https://www.openstreetmap.org/node/14133709401",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

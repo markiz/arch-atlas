@@ -1,0 +1,72 @@
+{
+  "id": "osm-14069191",
+  "osmId": "relation/14069191",
+  "atlasId": null,
+  "category": "castle",
+  "subcategory": "palace",
+  "names": {
+    "ru": "Национальный дворец молодёжи и детей Тбилиси",
+    "en": "Tbilisi Youth and Children's Palace",
+    "ka": "თბილისის მოსწავლე ახალგაზრდობის ეროვნული სასახლე",
+    "uk": "Національний палац молоді та дітей Тбілісі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Национальный дворец молодёжи и детей Тбилиси в Тбилиси.",
+    "en": "Tbilisi Youth and Children's Palace in Tbilisi.",
+    "ka": "თბილისის მოსწავლე ახალგაზრდობის ეროვნული სასახლე თბილისში.",
+    "uk": "Національний палац молоді та дітей Тбілісі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.799049,
+    41.69592
+  ],
+  "source": "https://www.openstreetmap.org/relation/14069191",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q16374230",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/პიონერთა_სასახლე",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Youth Palace, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 34,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 7,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

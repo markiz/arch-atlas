@@ -1,0 +1,71 @@
+{
+  "id": "osm-1551655810",
+  "osmId": "node/1551655810",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Государственный музей Нико Пиросманашвили",
+    "en": "State Museum of Niko Pirosmanashvili",
+    "ka": "ნიკო ფიროსმანაშვილის სახელმწიფო მუზეუმი",
+    "uk": "Державний музей Ніко Піросманашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Государственный музей Нико Пиросманашвили в Тбилиси.",
+    "en": "State Museum of Niko Pirosmanashvili in Tbilisi.",
+    "ka": "ნიკო ფიროსმანაშვილის სახელმწიფო მუზეუმი თბილისში.",
+    "uk": "Державний музей Ніко Піросманашвілі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.800327,
+    41.718666
+  ],
+  "source": "https://www.openstreetmap.org/node/1551655810",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q120706199",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Niko Pirosmani House Museum, Tbilisi",
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 21,
+    "components": {
+      "heritage": 0,
+      "recognition": 6,
+      "architecturalRole": 15,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "есть Wikidata",
+      "значимая архитектурно-городская роль"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

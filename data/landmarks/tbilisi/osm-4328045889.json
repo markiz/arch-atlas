@@ -1,0 +1,68 @@
+{
+  "id": "osm-4328045889",
+  "osmId": "node/4328045889",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "gallery",
+  "names": {
+    "ru": "Галерея имени Ладо Гудиашвили",
+    "en": "Lado Gudiashvili Gallery",
+    "ka": "ლადო გუდიაშვილის სახელობის გალერეა",
+    "uk": "Галерея імені Ладо Гудіашвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Галерея имени Ладо Гудиашвили в Тбилиси.",
+    "en": "Lado Gudiashvili Gallery in Tbilisi.",
+    "ka": "ლადო გუდიაშვილის სახელობის გალერეა თბილისში.",
+    "uk": "Галерея імені Ладо Гудіашвілі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.800209,
+    41.697584
+  ],
+  "source": "https://www.openstreetmap.org/node/4328045889",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

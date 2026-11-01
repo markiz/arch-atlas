@@ -1,0 +1,70 @@
+{
+  "id": "osm-12193291534",
+  "osmId": "node/12193291534",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "memorial_museum",
+  "names": {
+    "ru": "Мемориальная квартира Тициана Табидзе",
+    "en": "Titsian Tabidze Memorial Apartment",
+    "ka": "ტიციან ტაბიძის ბინა-მემორიალი",
+    "uk": "Меморіальна квартира Тиціана Табідзе"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Мемориальный музей Мемориальная квартира Тициана Табидзе в Тбилиси.",
+    "en": "Memorial Museum Titsian Tabidze Memorial Apartment in Tbilisi.",
+    "ka": "მემორიალური მუზეუმი ტიციან ტაბიძის ბინა-მემორიალი თბილისში.",
+    "uk": "Меморіальний музей Меморіальна квартира Тиціана Табідзе у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.793897,
+    41.700628
+  ],
+  "source": "https://www.openstreetmap.org/node/12193291534",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/ტიციან_ტაბიძის_სახლ-მუზეუმი",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 22,
+    "components": {
+      "heritage": 0,
+      "recognition": 12,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [
+      "Wikipedia: 1 яз."
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

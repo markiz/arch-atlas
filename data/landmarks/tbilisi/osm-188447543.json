@@ -1,0 +1,75 @@
+{
+  "id": "osm-188447543",
+  "osmId": "way/188447543",
+  "atlasId": "osm-188447543",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого апостола и евангелиста Иоанна Богослова",
+    "en": "Church of the Holy Apostle and Evangelist John the Theologian",
+    "ka": "წმინდა იოანე ღვთისმეტყველის სახელობის რუსული ეკლესია",
+    "uk": "Церква Святого апостола і євангелиста Іоанна Богослова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
+    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
+    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
+    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.788873,
+    41.707684
+  ],
+  "source": "https://www.openstreetmap.org/way/188447543",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q42655179"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": "2",
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4718"
+  },
+  "recognition": {
+    "wikidata": "Q42655179",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_იოანე_ღვთისმეტყველის_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Church of John the Apostle, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 66,
+    "components": {
+      "heritage": 20,
+      "recognition": 12,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}

@@ -1,0 +1,77 @@
+{
+  "id": "osm-817688095",
+  "osmId": "way/817688095",
+  "atlasId": "osm-817688095",
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Католический собор Успения Девы Марии",
+    "en": "Cathedral of the Assumption of the Blessed Virgin Mary",
+    "ka": "ყოვლადწმიდა მარიამის ზეცად აღყვანების კათოლიკური საკათედრო ტაძარი",
+    "uk": "Католицький кафедральний собор Успіння Діви Марії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гии Абесадзе, 4",
+    "en": "4 Gia Abesadze Street",
+    "ka": "გია აბესაძის ქუჩა 4",
+    "uk": "вулиця Гії Абесадзе, 4"
+  },
+  "descriptions": {
+    "ru": "Католический кафедральный собор в исторической части Тбилиси. Нынешний облик сочетает неоготические элементы с более ранними формами здания.",
+    "en": "A Catholic cathedral in historic Tbilisi. Its present appearance combines Neo-Gothic elements with earlier forms of the building.",
+    "ka": "ისტორიულ თბილისში მდებარე კათოლიკური საკათედრო ტაძარია. მისი დღევანდელი სახე ნეოგოთიკურ ელემენტებს შენობის უფრო ადრეულ ფორმებთან აერთიანებს.",
+    "uk": "Католицький кафедральний собор в історичній частині Тбілісі. Нинішній вигляд поєднує неоготичні елементи з раннішими формами споруди."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    44.803573,
+    41.692787
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3486",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/817688095",
+    "https://vaticange.org/en/latin-rite"
+  ],
+  "districtId": "tbilisi",
+  "heritage": {
+    "status": "listed",
+    "registryId": 3486,
+    "osm": null,
+    "url": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3486"
+  },
+  "recognition": {
+    "wikidata": "Q12864969",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "https://ka.wikipedia.org/wiki/თბილისის_ღვთისმშობლის_ამაღლების_კათოლიკური_ეკლესია",
+      "uk": ""
+    },
+    "commonsCategory": "Category:Catholic Cathedral of the Assumption of the Holy Virgin Mary, Tbilisi",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 64,
+    "components": {
+      "heritage": 10,
+      "recognition": 12,
+      "architecturalRole": 20,
+      "age": 7,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: listed",
+      "Wikipedia: 1 яз.",
+      "значимая архитектурно-городская роль",
+      "историческая постройка",
+      "есть проверенная карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный."
+}

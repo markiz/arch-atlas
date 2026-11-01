@@ -1,0 +1,68 @@
+{
+  "id": "osm-13266677502",
+  "osmId": "node/13266677502",
+  "atlasId": null,
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Зал Форакишвили",
+    "en": "Porakishvili Hall",
+    "ka": "ფორაქიშვილების დარბაზი",
+    "uk": "Зал Форакішвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "",
+    "en": "",
+    "ka": "",
+    "uk": ""
+  },
+  "descriptions": {
+    "ru": "Музей Зал Форакишвили в Тбилиси.",
+    "en": "Museum Porakishvili Hall in Tbilisi.",
+    "ka": "მუზეუმი ფორაქიშვილების დარბაზი თბილისში.",
+    "uk": "Музей Зал Форакішвілі у Тбілісі."
+  },
+  "descriptionStatus": "draft",
+  "coordinates": [
+    44.812768,
+    41.690772
+  ],
+  "source": "https://www.openstreetmap.org/node/13266677502",
+  "otherSources": [],
+  "districtId": null,
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "ka": "",
+      "uk": ""
+    },
+    "commonsCategory": null,
+    "languageCount": 0
+  },
+  "significance": {
+    "score": 10,
+    "components": {
+      "heritage": 0,
+      "recognition": 0,
+      "architecturalRole": 10,
+      "age": 0,
+      "editorial": 0
+    },
+    "reasons": [],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-01",
+  "notes": "Первичная миграция из слоя подложки; рейтинг значимости предварительный. Описание черновое: тип и название без проверенной исторической справки."
+}
