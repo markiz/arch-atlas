@@ -40,20 +40,22 @@
 
 ## Визуальные теги
 
-- `visualTags` — необязательный массив стандартизованных оптических тегов. Таксономия — `data/photo-visual-tags.json`: **38 тегов**, меньше лимита в 50. Три группы:
+- `visualTags` — необязательный массив стандартизованных оптических тегов. Таксономия — `data/photo-visual-tags.json`: **43 тега**, меньше лимита в 50. Четыре группы:
   - `scene`: `facade`, `interior`, `street`, `courtyard`, `multiple-buildings`, `panorama`, `aerial`;
   - `object`: `balcony`, `window`, `door`, `roof`, `dome`, `tower`, `arch`, `column`, `staircase`, `fence-wall`, `detail`, `plaque`, `people`, `car`, `tree`, `sky`, `water`, `construction`, `scaffolding`, `ruin`, `graffiti`, `shopfront`, `air-conditioner`, `street-lamp`, `sign`;
-  - `condition`: `nighttime`, `dark`, `blurry`, `tilted`, `snow`, `rain`.
-- **Разметку выполняет модель, а не скрипт-классификатор.** CLIP-конвейер удалён после проверки: на 30 случайных фото precision 0.825, recall 0.322, точных совпадений набора 0/30. Модель смотрит контактные листы, где на одном изображении 6 фотографий с id, и выбирает теги из таксономии.
+  - `condition`: `nighttime`, `snow`, `rain`;
+  - `quality`: `foreground-distraction`, `subject-far`, `occluded`, `cluttered`, `tilted`, `blurry`, `dark`, `low-resolution`.
+- **Разметку выполняет модель одним проходом, а не скрипт-классификатор.** CLIP-конвейер удалён после проверки: на 30 случайных фото precision 0.825, recall 0.322, точных совпадений набора 0/30.
+- Один проход: модель читает контактный лист один раз, сначала назначает content-теги всем шести кадрам, затем по тем же кадрам — quality-теги. Это не два отдельных чтения изображения. Полный чеклист — [photo-review-checklist.md](photo-review-checklist.md).
 - Процесс:
   1. `npm run photos:review-sheets -- --size 6` — листы и `work/photo-research/review/index.json`;
-  2. модель читает листы и выбирает теги, не подглядывая в старую разметку;
+  2. модель читает листы один раз и выбирает content- и quality-теги, не подглядывая в старую разметку;
   3. теги складываются в JSON-батч и применяются `npm run photos:apply-tags -- --file work/photo-research/review/batch-001.json`;
   4. `npm run photos:review-status` показывает покрытие.
 - Служебный `scripts/photo-visual-review.py` **не классифицирует**: он только нарезает листы, проверяет таксономию и записывает уже принятые моделью теги. Никаких ONNX/CLIP-зависимостей в проекте нет.
 - 6 фото на лист — компромисс между ценой и детализацией. 9–12 фото на лист дешевле, но балконы, окна, люди и таблички на мелких ячейках теряются.
-- Теги не влияют на права, атрибуцию или отбор фотографии; спорные кадры проверяются глазами.
-- Пайплайн: `collect-photo-candidates.py` → `apply-photo-candidates.py` → `npm run photos:source-tags` → `npm run photos:review-sheets` → модель → `npm run photos:apply-tags` → `npm run photos:thumbs`.
+- Quality-теги не отменяют content-теги: кадр может быть `facade` и одновременно `tilted` или `subject-far`. Они не влияют на права, атрибуцию или обязательный отбор; это слой для поиска, сортировки и выборочной проверки.
+- Пайплайн: `collect-photo-candidates.py` → `apply-photo-candidates.py` → `npm run photos:source-tags` → `npm run photos:review-sheets` → модель (один проход) → `npm run photos:apply-tags` → `npm run photos:thumbs`.
 
 ## Атрибуция
 
@@ -105,7 +107,7 @@
 Ранние батчи закрыли 90 из 93 карточек без фотографий: 9 свободных снимков Commons и 81 фото реестра. Без фото осознанно остались оранжерея в Ботаническом саду, дом Анны Мадатовой и баня дочери царя: фото реестра показывают ворота, ограду или уличную стену, а не сам объект.
 
 Проверка маленьких снимков 1 ноября 2026 года: **326 записей ниже лимита** (292 фото реестра и 34 Commons) повторно запрошены у источника. **11 снимков восстановлены** до большего размера — 8 до 1280 px, 1 до 960 px и 2 до 1920 px; затронуто 10 карточек. Ещё 315 кандидатов и 172 снимка, уже стоящих на лимите, остались без изменений; ошибок нет. Реестр отдаёт тот же маленький оригинал (250–640 px), поэтому его фото не увеличились. Скрипт — `scripts/upgrade-photo-sources.py` (`npm run photos:upgrade`), отчёт — `work/photo-research/source-upgrades.json`.
-Старые CLIP-теги удалены, все **498 уникальных снимков** размечены моделью по контактным листам по 6. Использовано **33 тега из 38**; чаще всего `facade` (478), `tree` (341), `street` (339), `window` (336), `balcony` (271), `car` (138), `arch` (93), `fence-wall` (80), `people` (62), `multiple-buildings` (61). У 206 снимков Commons есть сырые `sourceTags`; у фото реестра источник таких меток не даёт.
+Старые CLIP-теги удалены, все **498 уникальных снимков** размечены моделью по контактным листам по 6. Content-слой использует 33 тега из 43; чаще всего `facade` (478), `tree` (341), `street` (339), `window` (336), `balcony` (271), `car` (138), `arch` (93), `fence-wall` (80), `people` (62), `multiple-buildings` (61). Quality-теги добавлены в таксономию; их применение проверяется отдельным пилотным проходом. У 206 снимков Commons есть сырые `sourceTags`; у фото реестра источник таких меток не даёт.
 
 ## Связанные документы
 

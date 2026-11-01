@@ -99,6 +99,7 @@ def cmd_sheets(args: argparse.Namespace) -> int:
             source = ROOT / 'data' / 'photos' / CITY / f'{photo_id}.webp'
             with Image.open(source) as opened:
                 image = opened.convert('RGB')
+                image_width, image_height = image.size
             image.thumbnail((CELL_W - 8, CELL_H - LABEL_H - 8), Image.Resampling.LANCZOS)
             column = index % columns
             row = index // columns
@@ -107,7 +108,13 @@ def cmd_sheets(args: argparse.Namespace) -> int:
             sheet.paste(image, (x + (CELL_W - image.width) // 2, y + (CELL_H - LABEL_H - image.height) // 2))
             label = f'{number:03d}.{index + 1}  {photo_id[:8]}'
             draw.text((x + 5, y + CELL_H - LABEL_H + 5), label, fill='red')
-            entries.append({'position': index + 1, 'id': photo_id, 'prefix': photo_id[:8]})
+            entries.append({
+                'position': index + 1,
+                'id': photo_id,
+                'prefix': photo_id[:8],
+                'width': image_width,
+                'height': image_height,
+            })
         target = out_dir / name
         sheet.save(target, 'JPEG', quality=88)
         sheets.append({'sheet': f'{number:03d}', 'file': name, 'photos': entries})
