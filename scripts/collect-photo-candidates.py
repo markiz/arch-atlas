@@ -642,16 +642,20 @@ def collect() -> None:
             name_en = card['names'].get('en', '')
             name_tokens = significant(norm_tokens(name_en), GENERIC_NAME)
             if len(name_tokens) >= 2:
-                for title in search_titles(f'"{name_en}" Tbilisi', refresh=args.refresh, limit=50):
+                for title in search_titles(f'{name_en} Tbilisi', refresh=args.refresh, limit=50):
                     if title in existing:
                         continue
                     if token_overlap(name_tokens, norm_tokens(title), 0.8) < 2:
                         continue
                     if context[card_id]['pairs']:
                         match = title_match(title, card, context[card_id]['pairs'])
-                        if not match:
-                            continue
-                        plan(card_id, title, match['score'], match['reason'])
+                        if match:
+                            plan(card_id, title, match['score'], match['reason'])
+                        else:
+                            # The file may name the building without repeating the
+                            # street or "Tbilisi"; categories are checked in the
+                            # final pass before it is accepted.
+                            plan(card_id, title, 55, 'название объекта в Commons')
                     else:
                         plan(card_id, title, 55, 'название объекта в Commons')
         progress.advance(f'{card_id}: {len(plans.get(card_id, {}))}')
@@ -729,9 +733,10 @@ def collect() -> None:
             if meta['reason'].startswith(('Commons depicts', 'изображение Wikidata')):
                 if not match and signal <= 0 and name_signal <= 0:
                     continue
-            elif not match:
-                # Address/name/OSM/geosearch candidates must be confirmed by their
-                # file title; a category alone often describes the whole street.
+            elif not match and not (meta['reason'].startswith('название') and name_signal > 0):
+                # Address/OSM/geosearch candidates must be confirmed by their file
+                # title. A name-search hit may still pass when a category names the
+                # building, even if the file title does not repeat "Tbilisi".
                 continue
             score = meta['score']
             if match:
