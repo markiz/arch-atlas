@@ -29,7 +29,7 @@
 | Вторая очередь | [research-next-200-v2.md](research-next-200-v2.md), [разбор](research-queue-v2.md) | 200 новых кандидатов: 17 добавлено, 80 hold, 103 reject |
 | Третья очередь | [research-next-200-v3.md](research-next-200-v3.md), [разбор](research-queue-v3.md) | 200 новых кандидатов: 55 добавлено, 116 hold, 29 reject |
 | Сводный HOLD | [research-hold-report.md](research-hold-report.md) | 273 HOLD: причины, примеры, диаграммы, план преодоления |
-| Четвёртая очередь | [research-next-200-v4.md](research-next-200-v4.md), [разбор](research-queue-v4-progress.md) | 200 из 200 разобрано: 96 READY, 97 HOLD, 7 REJECT; 12 интегрировано |
+| Четвёртая очередь | [research-next-200-v4.md](research-next-200-v4.md), [разбор](research-queue-v4-progress.md) | 200 из 200 разобрано: 96 READY, 97 HOLD, 7 REJECT; 32 интегрировано |
 | Разбор геометрии | [Баня №5, реестр 3756](research-bath-5-geometry.md) | Почему way из очереди — не баня, чем отличаются официальная граница, relation и подземный комплекс |
 
 ## Правило обновления

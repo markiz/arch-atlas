@@ -1279,6 +1279,24 @@
         "ka": "1850",
         "uk": "1850"
       }
+    },
+    "last-quarter-19th-century": {
+      "source": "Последняя четверть XIX века",
+      "labels": {
+        "ru": "Последняя четверть XIX века",
+        "en": "Last quarter of the 19th century",
+        "ka": "XIX საუკუნის ბოლო მეოთხედი",
+        "uk": "Остання чверть XIX століття"
+      }
+    },
+    "year-1891": {
+      "source": "1891",
+      "labels": {
+        "ru": "1891",
+        "en": "1891",
+        "ka": "1891",
+        "uk": "1891"
+      }
     }
   },
   "yearLabelIdBySource": {
@@ -1395,7 +1413,9 @@
     "1881": "year-1881",
     "1889": "year-1889",
     "1860": "year-1860",
-    "1850": "year-1850"
+    "1850": "year-1850",
+    "Последняя четверть XIX века": "last-quarter-19th-century",
+    "1891": "year-1891"
   },
   "districts": {
     "tbilisi": {
