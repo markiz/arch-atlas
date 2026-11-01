@@ -11,6 +11,7 @@
 - [research-queue-v2.md](research-queue-v2.md) — разбор второй очереди: 17 добавлено, 80 hold, 103 reject;
 - [research-queue-v3.md](research-queue-v3.md) — разбор третьей очереди: 55 добавлено, 116 hold, 29 reject;
 - [research-hold-report.md](research-hold-report.md) — сводный разбор причин HOLD, примеры, диаграммы и план преодоления;
+- [research-queue-v4-progress.md](research-queue-v4-progress.md) — четвёртая очередь: 150 из 200 разобрано, 71 READY, 74 HOLD, 5 REJECT;
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила;
 - [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс и helper'ы для длительных скриптов;
 - [archive/README.md](archive/README.md) — исходный план и ранние снимки.
@@ -28,7 +29,7 @@
 | Вторая очередь | [research-next-200-v2.md](research-next-200-v2.md), [разбор](research-queue-v2.md) | 200 новых кандидатов: 17 добавлено, 80 hold, 103 reject |
 | Третья очередь | [research-next-200-v3.md](research-next-200-v3.md), [разбор](research-queue-v3.md) | 200 новых кандидатов: 55 добавлено, 116 hold, 29 reject |
 | Сводный HOLD | [research-hold-report.md](research-hold-report.md) | 273 HOLD: причины, примеры, диаграммы, план преодоления |
-| Четвёртая очередь | [research-next-200-v4.md](research-next-200-v4.md) | 200 лучших оставшихся жилых домов; факты собраны, идёт разбор |
+| Четвёртая очередь | [research-next-200-v4.md](research-next-200-v4.md), [разбор](research-queue-v4-progress.md) | 150 из 200 разобрано: 71 READY, 74 HOLD, 5 REJECT |
 | Разбор геометрии | [Баня №5, реестр 3756](research-bath-5-geometry.md) | Почему way из очереди — не баня, чем отличаются официальная граница, relation и подземный комплекс |
 
 ## Правило обновления

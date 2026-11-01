@@ -36,4 +36,4 @@
 
 Исторические документы и ранние снимки состояния сохранены в [архиве](archive/README.md); карта research-файлов — в [research-index.md](research-index.md); исходный план проекта больше не является действующим контрактом.
 
-Сводный разбор причин HOLD и план их преодоления — [research-hold-report.md](research-hold-report.md).
+Сводный разбор причин HOLD и план их преодоления — [research-hold-report.md](research-hold-report.md). Четвёртая очередь разобрана на 150 из 200: 71 READY, 74 HOLD, 5 REJECT; карточки ещё не интегрированы — [research-queue-v4-progress.md](research-queue-v4-progress.md).
