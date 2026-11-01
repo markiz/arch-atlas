@@ -117,7 +117,9 @@
   },
   "geometryQuality": "OSM way/294971081 совпадает с адресом официального приказа и типом школы; IoU с границей официального реестра около 0,90",
   "photos": [
-    "4c037981d3bbbdeaff27c0c4d68d4f570566c850576f2a56f558eb5efe691595"
+    "848db791f68ecaa19847e98d2d054b172a53a5c41d4ed5c5c1b6816273334948",
+    "6faeab5ad8c5805af058e63d761ae8ea020bd27f5e3634a4191cbf03cbcb629b",
+    "af98af746f338d42433865086e0e4f6714a12d00785804c06ada73f17da8d887"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3821",
   "otherSource": "https://www.moi.gov.ge/ka/press-center/siakhleebi-ghonisdziebebi/tbilisis-n50-sajaro-skolis-reabilitatsia-aktiur-fazashia"

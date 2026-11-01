@@ -88,7 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.947; реестр 580.7 м², OSM 586.1 м²; перенос центра 0.4 м. IoU 0,947 (пересечение 567,5 м², OSM 586,1 м², реестр 580,7 м²), центроид в 0,4 м; флагов нет. OSM way/310519024 обводит весь корпус.",
   "photos": [
-    "23cf09762727876dbace71c67d5bb2a0b21c01874f3f678473b44ff1f1572b79"
+    "41474d294f77f5097760ec62ba7ac15c59af85373446c7a8f6e37b85afb35f1b",
+    "c52a56901a474681cdc1a04b3a518976b7566c79e791f3f089123052882c8450"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3761",
   "otherSource": "https://www.openstreetmap.org/way/310519024"

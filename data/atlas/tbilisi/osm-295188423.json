@@ -72,7 +72,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.943; реестр 456.6 м², OSM 462.8 м²; перенос центра 0.4 м. IoU 0,943 с реестровой границей при площади 456,6 / 462,8 м², центроиды в 0,4 м; флагов нет, OSM-полигон обводит надземный корпус целиком (3 этажа, 1 подземный). Фото: Commons-геопоиск по точке дал 0 совпадений, категория Shalva Dadiani street на Commons пустая — нужен снимок фасада, фото пока нет.",
   "photos": [
-    "24d78469f20270afd81cdd68bdc7cab7e0ed8b8b63f31eb9e027eb421c591143"
+    "a7ba422bf04a6747f2844f83e373769e5f5772985ef6b57199012ebed1710385",
+    "2ba13e261cf4fc7b635295c9d9fbdf568c8a9456f2ea7b1bffa17311ce0acd31"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3484",
   "otherSource": "https://www.openstreetmap.org/way/295188423"

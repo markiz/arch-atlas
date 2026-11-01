@@ -80,7 +80,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.859; реестр 407.7 м², OSM 362.4 м²; перенос центра 1.3 м. IoU 0,86; реестр 407,7 м², OSM 362,4 м², центроиды в 1,3 м; флагов нет. OSM way/337432043 обводит надземный корпус (building=apartments, 3 уровня, из них 1 подземный).",
   "photos": [
-    "51ce6c955455500d3335f172dcfa107e082b70199325fe25908039401e1018cd"
+    "d09aaa4c3b90d0a2b02fea5db0b137d91ec2899e2d14faddd8465366af28c0a4",
+    "f220d50d5cb95f4ed0e6be71b5d576d1f2050c39b6f5ef1917b618fa3a3581bc",
+    "91393565b4568aee3bf8f85c3cf2c32d86f39322029badcefeaef4fc5eef6c78"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3619",
   "otherSource": "https://www.openstreetmap.org/way/337432043"

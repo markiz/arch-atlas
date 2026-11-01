@@ -116,7 +116,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.801; реестр 275.5 м², OSM 320.9 м²; перенос центра 0.8 м. IoU 0,801; OSM way/1126037623 — замкнутый контур корпуса, флагов нет; OSM building:levels=2 совпадает.",
   "photos": [
-    "0174b472ccb35d9389ee19cf9e2dcca5d13452461fddec9426768fe94a20350c"
+    "92f3bb9f1460e9d789c3e0c05b491be8180dd2f70d8f0a7a6c0f3443932c487e",
+    "a8b2dde0091335cd0371d80bfc0572c735bc22591f5f0dfa77a42f8ee573b759",
+    "e2ed0626e9a3a9f13553aa5d93deeacc1a47bcd9618335bcfdeb5f116ff72977"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3470",
   "otherSource": "https://www.openstreetmap.org/way/1126037623"

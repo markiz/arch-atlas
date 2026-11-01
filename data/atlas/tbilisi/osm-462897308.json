@@ -86,7 +86,9 @@
   "geometryQuality": "Именованный адресный OSM-контур way/462897308 перекрывает около 90% границы официального реестра; профильный источник описывает здание по тому же адресу",
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
-    "7c06ff405f8ad79a15ee303d75360539b569d92db7c1f03d471cab441709c0b0"
+    "b83e0c37630e29b80a33f8bbda50ac4c3fe13198db23aa24094d77dd7b388f0f",
+    "3c5283f68f9138d66ea4d8c171171a8640b0eb73931545df90e33ebaf5bc5093",
+    "3f6707f45bb50b97da5d6acaad8195964b2eb0da8c04e1cf938c98d98d1f3232"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/236/D.-Agmashenebeli-Avenue--148",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3178"

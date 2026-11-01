@@ -124,7 +124,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.696; реестр 584.4 м², OSM 805.0 м²; перенос центра 4.8 м. IoU 0,70; реестр 584,4 м², OSM 805,0 м², центроиды в 4,8 м; флагов нет. OSM way/555209499 (building=yes) шире реестровой границы на ~220 м² — вероятно, включает дворовое крыло; реестровая граница покрыта на 97,5 %.",
   "photos": [
-    "89904c5489025d2ef3961106370c6efa2b8c5ef7caea86f90fbc8b28af201494"
+    "66b6a5941bd43fefe1d4e61ee18476d9c11b7638c744def35fbe580b1d27dfea",
+    "1e1e156f4230d4ed5f4ba2afb2b31bb236c74004e485b2d411a68960a4c00595",
+    "4f154dcc539baf6b5f1f53feaba6cfd08b8d94d7ac13dac1d89803ebae31d3bd",
+    "2a15c294a10b03c8cbe978657127890d8d29befd9101baa197413688da4dd575"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3695",
   "otherSource": "https://www.openstreetmap.org/way/555209499"

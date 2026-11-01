@@ -76,7 +76,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.644; реестр 228.3 м², OSM 169.1 м²; перенос центра 2.2 м. IoU 0,64; реестр 228,3 м², OSM 169,1 м², центроиды в 2,2 м; флагов нет. OSM way/1079021086 обводит уличный корпус (building=apartments, 2 этажа), реестровая граница шире — вероятно, включает дворовое крыло.",
   "photos": [
-    "7454e92c965e2d2dc0369003a6aeeba992c85adfa007558546acdb388aceb467"
+    "55ce3758f65b9b8886aaa58191b5eeafc26f21a7047354608ca98345d19c8322",
+    "611149f362ad9398335a0948551ed4809fa3b9df58d49fc7cae472b4fb02efdc"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3689",
   "otherSource": "https://www.openstreetmap.org/way/1079021086"

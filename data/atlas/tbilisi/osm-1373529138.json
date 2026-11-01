@@ -154,7 +154,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.456; реестр 2265.9 м², OSM 4956.5 м²; перенос центра 20.4 м. Реестровый полигон — 2265,9 м², 27 вершин, главный корпус вдоль Руставели; он целиком лежит внутри OSM way/1373529138 (4956,5 м², 35 вершин), который обводит весь квартал с двором и поздними крыльями. Отсюда IoU 0,456 и флаг osm_composite_or_plot: для карточки нужен реестровый контур корпуса, а не OSM-полигон квартала.",
   "photos": [
-    "de06d3b702d4e986a8ee0d2547832f5146037767beb7ef5605c031b34aad4e24"
+    "d6934909682714d7725bdcbdf16ce34e26d4377daa0094339e93b32c1b346b0a",
+    "6d4c8f4e080b970e0301ee118fbd91c73e96f1d75aaa99c0cf8d6fff39ae130e",
+    "e3176093c2c28a79164c0a7ee43afec138daf3dcca0a533207ddfbcc55a7cd22"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4157",
   "otherSource": "https://www.openstreetmap.org/way/1373529138"

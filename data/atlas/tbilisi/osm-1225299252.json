@@ -92,7 +92,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.711; реестр 305.9 м², OSM 392.8 м²; перенос центра 2.1 м. IoU 0,711; контур way/1225299252 (392,8 м²) против 305,9 м² реестра, реестр покрыт на 94,9 %, центроид 2,1 м, флагов нет. Обведён корпус целиком; небольшой излишек OSM — вероятно, поздняя пристройка в конце дома.",
   "photos": [
-    "cb5e2cd286aafac67944055a747161adea1c25367ca1bea017d0cf45d30742bd"
+    "f46371b92d09c07c6f1c95f6debfd93ece4834e7a834971e42ad43c081ed39be",
+    "fcdff6b4faedf4d783ffaf5a6e98a9987c51b42802853e1ec2e638e3d5a240c2"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3081",
   "otherSource": "https://www.openstreetmap.org/way/1225299252"

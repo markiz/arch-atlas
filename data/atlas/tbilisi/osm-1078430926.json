@@ -65,7 +65,9 @@
   "geometryQuality": "IoU с реестровой границей 0.626; реестр 168.1 м², OSM 182.2 м²; перенос центра 1.7 м. IoU 0,626; OSM way/1078430926 — замкнутый контур корпуса, флагов нет; OSM building:levels=2 совпадает с реестром.",
   "photos": [
     "88c97546b989184e0fcbd596533767b7019679e86b8796e46d911f3962cf8f47",
-    "c3df695b817f27d03f55f85acc799e0cf2efccc3e6702e407a5e49131838586a"
+    "21866e0e70d6b4ae846bed810f8eca182f901cb9f546c90dd26f212eea54bb24",
+    "1d250903f7e84cf919441cfeef396e85f80ced4288ab2986d3c882e87ee16c5f",
+    "f42544dfa8df91340418a2ca0c5beed689b9c2a740b1b7d0aa85c8c8b130a8ac"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3405",
   "otherSource": "https://www.openstreetmap.org/way/1078430926"

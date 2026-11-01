@@ -84,7 +84,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.55; реестр 974.7 м², OSM 802.9 м²; перенос центра 10.5 м. IoU 0,55 (реестр 974,7 м², OSM 802,9 м², пересечение 630,8 м², центроиды 10,5 м), флагов нет. OSM-полигон обводит уличное крыло и часть двора, поэтому контур — реальный надземный объём, но не весь U-образный план; при интеграции сверить, не обрезаны ли дворовые крылья. Фото: Commons-категория Giorgi Chubinashvili Street пуста, фото пока нет.",
   "photos": [
-    "069a52fd2731d76429db62588156f9c1a8a45fa54b22085f3b077297cfbc5be0"
+    "1af6baf944ef86ca3c29f49164070371bb4b1ebbe3eb2e3b6038f9c11b63bab7",
+    "4185c1182804addc3364257703478797e646fe2fc7f1aa41fcd57de3a135f56d",
+    "05694d8916541f028cb19365cfd63740a76293d216266f14c17cc32bfcd5614d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3099",
   "otherSource": "https://www.openstreetmap.org/way/1289207833"

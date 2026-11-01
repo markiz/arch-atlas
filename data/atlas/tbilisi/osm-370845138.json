@@ -64,7 +64,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.934; реестр 219.1 м², OSM 220.6 м²; перенос центра 0.3 м. IoU 0,934; OSM way/370845138 — основной двухэтажный корпус с мансардой, флагов нет; пересечений с карточками атласа нет.",
   "photos": [
-    "39c9272bcbb8d063344b1265a4fead1945d470794a5490ce96fa36c9793d6635"
+    "c1f8a3d87acf1e703586c20c75434146384a049468780a3a11dcb676fa112919",
+    "aa2f35795263252fcadeb12e19a4086d493208eeb5d45a660a1f569293c4b3ec",
+    "cd18b47b0cae4c0b2912f5aa28fdc37b3594f246fbd21c5506e1b0404e2bcaed",
+    "cde7cad86c685d0411b203648bec02091640d149d5acfd5ad5367758f7a8c6ac"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3837",
   "otherSource": "https://www.openstreetmap.org/way/370845138"

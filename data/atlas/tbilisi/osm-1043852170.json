@@ -92,7 +92,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.918; реестр 287.6 м², OSM 287.1 м²; перенос центра 0.4 м. IoU 0,918; реестр 287,6 м², OSM 287,1 м²; флагов нет; обведён весь угловой корпус, центроиды в 0,4 м; адресная пара сходится по номеру 9 и второму адресу Леси Украинки, 6.",
   "photos": [
-    "92119e50fbff60bc5b00ae79beba15a78a1e47cb90dea858d728b0d0f8c7ea91"
+    "d7947bdcbdd2dc5f4f928b568ccf4c725c2b8542844629827527d4a4ea046d5f",
+    "7b042c8a12430f21019024a67f1f6188e337cfac8384da485cceb8b1d645dfe2",
+    "56a1288d3c70dfadf6c73c499aed45c5a5f4c026285d58ec5e4b3a6e30f0b9eb"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3958",
   "otherSource": "https://www.openstreetmap.org/way/1043852170"

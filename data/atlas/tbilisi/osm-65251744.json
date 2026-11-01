@@ -114,7 +114,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.767; реестр 2611.5 м², OSM 2028.5 м²; перенос центра 4.2 м. OSM way/65251744, IoU 0.767 с реестровой границей, флагов нет; обведён надземный корпус по адресу Петриашвили, 1 (2028 м² против 2611 м² реестра — реестр, вероятно, включает небольшое крыло).",
   "photos": [
-    "46608cdcc4babe56e0b6949f8d5740a7ff0f382982c59d94a635b7ddf756b499"
+    "1a37f320810b1c2b986eaed80e556a161087a347e8670d606559db1fabfc31e5",
+    "ea6592f02c8e9ce6ce7321eb5be86f4ac0b589f7cf76353a8e1126b6aa66c31e",
+    "f42ba7a9c41a5fd2e2492558b624466d2291684f3da742c0579f84624d967f85",
+    "b6ae408a639362f0b5738ce53ee9318b4f3392d4c8d00ad5c446b503371a37ee"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4838",
   "otherSource": "https://www.openstreetmap.org/way/65251744"

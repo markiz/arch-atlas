@@ -88,7 +88,9 @@
   "geometryQuality": "Контур OpenStreetMap; имя совпадает с источником",
   "photos": [
     "0d6527ad614a90af4216b1a68897332e568bbe21ab44f7ba8cc28e597d824f05",
-    "b8eba3c33d55209f64cf12e85837ac8f93db1e78e91f3e62157b93417787ad05"
+    "d7593b6751b799afbc4ec33b8a0a38aa465b60d3ca87157c89fd0fe1572916fb",
+    "3575da5f38fbd45b292c02c828eb7ed8682ff902fda6b10e6006f1901d625357",
+    "8498a6166b9b7ab8f896a627704daf19d41c6af9b59c201d5e0fdd9d25c633f5"
   ],
   "source": "https://www.silkmuseum.ge/en/about/building",
   "otherSource": "https://taa.net.ge/en/archive-geo/silk-museum/"

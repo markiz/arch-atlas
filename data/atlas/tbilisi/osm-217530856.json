@@ -128,7 +128,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.774; реестр 946.4 м², OSM 1158.6 м²; перенос центра 2.4 м. OSM way/217530856: IoU 0,774, 97,1 % реестровой границы лежит внутри OSM; флаг osm_much_larger объясняется тем, что контур OSM (1158,6 м²) включает восточное дворовое крыло/позднюю пристройку помимо реестровых 946,4 м². Обведён надземный корпус, участок не включён.",
   "photos": [
-    "2c45a658c47dfa3bbfe909cd8d234d83f3aa579995909548cf8d9a07aa32e86d"
+    "d4a459386175763c006a74dd499987f5b9812bd3813c5223d48118ce8614cfbf",
+    "24e33b2113313f482451e1b0365f1b02c966a2eadf7d621465b5966fc25e1ad6",
+    "84350914fc703bd2a2099888287504cddcf84065480196cd0f9c32968bf9da97"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3239",
   "otherSource": "https://www.openstreetmap.org/way/217530856"

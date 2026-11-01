@@ -92,7 +92,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.86; реестр 724.1 м², OSM 782.7 м²; перенос центра 1.0 м. IoU 0,860; контур way/1278166603 (783 м², 3 уровня) против реестровых 724 м², реестр покрыт на 96,2%, центроид 1,0 м, флагов нет. OSM-контур покрывает угловой корпус; в тегах 3 этажа, тогда как по Абашидзе реестр описывает 4 — расхождение отмечено.",
   "photos": [
-    "823e80fe1ae53d86cc4676e7e706d7a6d0505aaefb27d7bf266b0262d3434bb5"
+    "9b0a326282d6071ec38104b97be7b2c9e4e6cc9529136d65f17fc53ea807f22a",
+    "412da5df45cc3db9c0e45a20e97474e8b216d8e003c8a269ebebb54537379876"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3037",
   "otherSource": "https://www.openstreetmap.org/way/1278166603"

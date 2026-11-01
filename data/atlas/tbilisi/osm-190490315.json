@@ -92,7 +92,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.879; реестр 454.3 м², OSM 422.2 м²; перенос центра 0.9 м. IoU 0,88; OSM way/190490315, 422 м² против 454 м² реестра, смещение 0,9 м; флагов нет.",
   "photos": [
-    "54f98ae4f0cba76db527468e2580bff624fa257cda14afceabe45b7159a57462"
+    "6f4179e9bcb6e599bc440896455823cdace34d6ed55d3e267a91b7f96411af3b",
+    "f0821243dd0a91b5b050d5244679f94dfca72bfa9523b9cb103c0e495f6dc37e",
+    "c7fc8130e22eda03fe97889640bfc424b465757e9b249f5d441f097afd2a3c8c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4255",
   "otherSource": "https://www.openstreetmap.org/way/190490315"

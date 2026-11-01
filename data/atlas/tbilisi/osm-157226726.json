@@ -84,7 +84,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.782; реестр 1005.5 м², OSM 1079.4 м²; перенос центра 3.2 м. IoU 0,782; OSM way/157226726 — замкнутый контур двухэтажного корпуса, центроид 3,2 м; 84,8% площади OSM внутри реестровой границы, остальное — расхождение трассировки по кромкам, а не отдельный объём. Флагов участка/подземности нет.",
   "photos": [
-    "3c362457f65f5100f3a4c29c9783e9ab71c670aec1890ee2e0740e459f6661b9"
+    "a41b6722a79a85a5595324e6c3f2a8294069d1e9058b1421d3fa4a2f5adb6264",
+    "cd0711ae1a6e7bcb930ea47c4e235c6762f0a5f94647f08aab5c29feb4877b85",
+    "c9e33e2ded419cd328ed9af8d7d941df9a9e20abde7e03d0597f7b267ef5fb53"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3114",
   "otherSource": "https://www.openstreetmap.org/way/157226726"

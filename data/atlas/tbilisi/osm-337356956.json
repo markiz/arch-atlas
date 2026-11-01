@@ -76,7 +76,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.882; реестр 521.1 м², OSM 562.1 м²; перенос центра 1.5 м. IoU 0,882; OSM way/337356956 — двухэтажный угловой корпус, флагов нет; пересечений с карточками атласа нет.",
   "photos": [
-    "018dfa50296810970e3d8a1c8b4d42ff3df8f6d24e02e509f14d8fd44bf254e3"
+    "7a88e49ec440354a345ddf1332b256960bcd4209d0e3feb25ced458aa3cb79e0",
+    "ef74ce62c1797489e63cced5d2a27df05583648ca1b9235367c5f4c85e9576e0",
+    "1e9a136f8f9ceffbaa4ed7ac6ca01a4e39ef0f41564cb0520df1c8b21b831ef8"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3850",
   "otherSource": "https://www.openstreetmap.org/way/337356956"

@@ -81,7 +81,9 @@
   },
   "geometryQuality": "Официальная граница 3567 и OSM way/282713325 совпадают с IoU около 0,83; 86,2% OSM внутри границы, граница покрыта на 95,7%, смещение 2,1 м. С соседними домами 121 и 125 контуры только касаются, с домом 127 — разнесены примерно на 51 м; пересечений нет.",
   "photos": [
-    "703216b6c2386b3f8203523f901693cf17a6dbb101aa77eb04672b3105395f2b"
+    "d287d552cc79052d4de75b77413d0fbc6117fcd958f57327366d36aea0fd0950",
+    "b90d1404da9cf70be2aa19efc36fae632464dd3d299847e1777c6074dee5e32e",
+    "a5754fbb8ad1a214d6f8801a704d9ae2e886d35fed28fb9b06ad1ea69d2b821f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3567",
   "otherSource": "https://www.heritagesites.ge/public/uploads/files/67a089107989e.pdf"

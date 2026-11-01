@@ -76,7 +76,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.59; реестр 556.6 м², OSM 392.9 м²; перенос центра 4.4 м. OSM way/282461575, 392,9 м², 8 вершин; IoU 0,59 с реестровым полигоном 556,6 м², центроид в 4,4 м. OSM-контур на 89,7% лежит внутри реестрового и, вероятно, описывает основной двухэтажный корпус без одноэтажной пристройки по Каргаретели. Флагов нет.",
   "photos": [
-    "a2da650cb5f1b6128cbdd3b1355f62e5ba0c77cd7874145c4e192b77317aa07e"
+    "02bb141f1c6eb374e662ec3c1f7d2b25008e2fbc2ce0ae46781878bdf22cadc4",
+    "6a26dfbc40344b20050123cbf72a61bd3638c1c45b2156d11ca8e97203177c01",
+    "1bbb17948bbf265f1b30dbab80b1f80c3eb9eda8a022959498609cd3ebe38adc"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3154",
   "otherSource": "https://www.openstreetmap.org/way/282461575"

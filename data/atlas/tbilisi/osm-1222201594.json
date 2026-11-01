@@ -64,7 +64,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.791; реестр 151.1 м², OSM 154.6 м²; перенос центра 1.1 м. IoU 0,791 (реестр 151,1 м², OSM 154,6 м²), флагов нет, центроид в 1,1 м; обведён одноэтажный корпус с антресолями.",
   "photos": [
-    "2bad6d80de74e093f962d165119af30c5897c34af0d2f7732fb94dcd1bb01bbb"
+    "d071da4607cb2b279148ee4b71f38dca2c992c31aaae5a06147fb24b43c3aa16",
+    "bdc3df6e78f3c0e441b6389c2c57d3ff4e5f48089f01c5ce6c3c21ea9584deb7",
+    "6c2de32bd662182142b8806d91e41673ec988774fe03cc19845f2b3b289a087a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3357",
   "otherSource": "https://www.openstreetmap.org/way/1222201594"

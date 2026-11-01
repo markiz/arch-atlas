@@ -69,7 +69,9 @@
   },
   "geometryQuality": "Официальная граница памятника 3246 и [OSM way/102691273](https://www.openstreetmap.org/way/102691273) совпадают с IoU около 0,83; 87,2% OSM-контура лежит внутри реестровой границы, которая покрывает около 94,2% way. Это отдельный замкнутый шестиузловой Polygon. Реестр даёт адрес 111, OSM — 111ა; расхождение отмечено. Архитектурная ценность и детали подтверждены официальным описанием. Проверенной лицензированной фотографии нет.",
   "photos": [
-    "fa526a5547100492486aef39d88a3658239834e915437f454798828c5b36fb63"
+    "0ddf9f1f374ca55dc77bdd887d3c7151fd055c5b29485443282c4283a6ffc37f",
+    "06d9571fcee48a0b227ed6fc64cbbfce788056b591a56c4c22011a9d3bdae1e2",
+    "fd8d326ace21505b5d2a32351e18af4a99e1581a3e834e7f0346826cc930c4b6"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3246",
   "otherSource": "https://www.heritagesites.ge/uploads/files/6094395aeb684.pdf"

@@ -93,7 +93,9 @@
   "geometryQuality": "IoU с реестровой границей 0.884; реестр 352.3 м², OSM 373.3 м²; перенос центра 0.7 м. IoU 0,884; флагов нет; контур OSM 373,3 м² против реестровых 352,3 м², 91,2 % реестрового контура покрыто OSM; у OSM-контура нет addr:* — идентификация по вложению точки и совпадению площади.",
   "photos": [
     "43f766d6c6a177bc271e1ee37b7b6eeb49971b8e535e85ac2ea616e68e9d56fc",
-    "2a66606aa806e083ba7b0caf065c0e75544f3e5179b807a53f0d6f00a31e512f"
+    "27c32ce59c048f43a2f262ac6b88eb790e67339de92c403ef4a43bd85d1971f9",
+    "55c3e14c5495f3f9bf5b28e04caadbb54d07683600d2c39d8834cd83888733fd",
+    "98640fd9ee8095ef12c73113da3c6252b132cce7b92331ae0b02746410de5006"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4404",
   "otherSource": "https://www.openstreetmap.org/way/1327079472"

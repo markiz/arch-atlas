@@ -96,7 +96,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.65; реестр 734.9 м², OSM 737.7 м²; перенос центра 3.3 м. OSM way/282713346, IoU 0,650, флагов нет; контур совпадает с корпусом, реестр покрыт на 78,9% (часть двора).",
   "photos": [
-    "901f5dcaaeb79c92b3d13fcaeaf9b204e7686578c007f5d78e184ae5ec1c25c1"
+    "9620c64eea81a816e3f3dfd805030c6738c97ae3e5edee40965d4b1360fd5ee8",
+    "a576227f5900f674a63704534640e01c5d9c0fae7c56a666abfcd3b06e7a4f9d",
+    "c85cf4baf55873aafe612a9dc3360ceca6c19a7ff7896a7d90fdc55c64be12e4"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3280",
   "otherSource": "https://www.openstreetmap.org/way/282713346"

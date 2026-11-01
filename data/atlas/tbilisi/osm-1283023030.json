@@ -88,7 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.683; реестр 437.6 м², OSM 494.7 м²; перенос центра 2.0 м. IoU 0,683; контур way/1283023030 (494,7 м²) против 437,6 м² реестра, реестр покрыт на 86,5 %, центроид 2,0 м, флагов нет. Обведён надземный корпус; излишек площади — вероятно, дворовые пристройки.",
   "photos": [
-    "1d708998cb0938553d9e4f85c924aedd1f79b0930db57519848eec62f330634d"
+    "7f160a0e8df148b2b4bd6f510267fe6240ff5f889fa4fc4f29fef0add4239f5b",
+    "b372a7e13934f406481f6940fc03496240be81ce5a8b8e682852f468d9f7cf16"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3088",
   "otherSource": "https://www.openstreetmap.org/way/1283023030"

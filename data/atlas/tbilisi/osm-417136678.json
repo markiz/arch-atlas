@@ -80,7 +80,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.587; реестр 376.9 м², OSM 360.4 м²; перенос центра 3.6 м. OSM way/417136678, 360,4 м², 9 вершин; IoU 0,587, центроид в 3,6 м. Реестровый полигон 376,9 м² покрыт на 72,3%, OSM лежит внутри реестрового на 75,7%; форма L совпадает, контуры смещены на 3–4 м. Флагов нет.",
   "photos": [
-    "59da165c07f2108df92defa193965a02958290f41ad3e42ae4ef7373c940849a"
+    "9ed6ced3fc125f20d6b06b52b7d1f382f2e77f341feb1b878fb659e3f32a773d",
+    "3871fba93a0602bb42c7485c17572dcb012801fa7fcb4cb9bfee99445467e083"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3171",
   "otherSource": "https://www.openstreetmap.org/way/417136678"

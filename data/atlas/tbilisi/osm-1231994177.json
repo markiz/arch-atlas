@@ -76,7 +76,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.841; реестр 465.3 м², OSM 475.2 м²; перенос центра 1.2 м. IoU 0,841 с реестровой границей, площади 475 и 465 м², покрытие реестра 92,3%, смещение центроида 1,2 м; флагов нет. Обведён двухэтажный корпус по Ниагвари, 4а; двор и соседний пятиэтажный дом №4 в контур не входят.",
   "photos": [
-    "05855168536edade4bd39312d3867ca576e2691613693368cf1a83bbf54ccbd4"
+    "e8bc305f2025f201d73d304b4c564c1244c8823a25375e8943638be150abb777",
+    "f4ad68a6808e39c0baae9d942b1b6088dcdc357d195fc405b2b930d9020f6dcc",
+    "9f3e13decb3296b45e06f4bd20b28df91ed9349c3f952eb16577b774c86bb62a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4162",
   "otherSource": "https://www.openstreetmap.org/way/1231994177"

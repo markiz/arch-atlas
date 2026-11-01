@@ -173,7 +173,10 @@
   },
   "geometryQuality": "Именованный OSM-контур и официальная граница памятника совпадают по месту (IoU около 0,81); источники дают разные адресные варианты",
   "photos": [
-    "ce09333d8684577e558bd78d608ded260256d58a7dbe313e5e572c7ea71393e4"
+    "41e57fbf8cb735abd284ef0226152fb741902564927e61054685b7f53830aec8",
+    "a3eb2ea7f83ad7dc02977ac480319e33427918bfe591a9087d3ff3fa68d9cd03",
+    "dda9bcf33825a1f0f82e5919c4b1f4f359715807387939bd4cbf5c2ccc168add",
+    "f48a942d0f7ecc4e9698eefd8850884f4e2045b07a76e1f5ceb041b8db5faed5"
   ],
   "source": "https://www.heritagesites.ge/uploads/files/5a421dd24854a.pdf",
   "otherSource": "https://orthodoxy.ge/tsnobarebi/tadzrebi/tvereli.htm"

@@ -80,7 +80,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.795; реестр 480.6 м², OSM 429.8 м²; перенос центра 1.4 м. IoU 0,795; OSM way/416306402 — замкнутый контур корпуса (2 этажа + мансарда), центроид 1,4 м от реестровой границы; расхождение трассировки по южной и западной кромке в 2–3 м. Флагов участка/подземности нет.",
   "photos": [
-    "e32dc4967f9b41c462a1876a28f34b7199aaac7ca7d23b2c1341934cd4c9c35c"
+    "7857e02bc3418dd81d2aee43799fcc4d052b4821634dd874a2c507e275dbb909",
+    "5e574f99a2a374218f471ebe71fdace6f4debfb092d58f1cfc6833a22b2bb9b8",
+    "f04d7e24e89a92fd46fc80641fc6a21c11c282e406e4687e26ad5cdc48f9adeb"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3112",
   "otherSource": "https://www.openstreetmap.org/way/416306402"

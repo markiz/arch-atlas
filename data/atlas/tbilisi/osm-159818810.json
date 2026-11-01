@@ -65,7 +65,9 @@
   },
   "geometryQuality": "Именованный OSM-контур и перекрёсток адресов совпадают с описанием Scan Tbilisi; официальная граница реестра перекрывает около 96% контура",
   "photos": [
-    "d63fb60a9f01203a0f04dcb1fce7eb571219df5162a3e8923f87b05256d755f9"
+    "249369017eb1654a240806068a96f5cb0e49dd9420101ce5dae8a57d90d124b1",
+    "e451c029c4d099fad6cb2f686d6a4ef1490a0841a4846f69731b916cecf570a7",
+    "ae1f647e35dba634390f9fab7d8134656c887fa3ed37d39046893fa492b13a3d"
   ],
   "source": "https://www.scantbilisi.ge/ka/objects/269/G.kikodze-street",
   "otherSource": "https://iverieli.nplg.gov.ge/bitstream/1234/438646/1/Mesxi_Maia_Disertacia.pdf"

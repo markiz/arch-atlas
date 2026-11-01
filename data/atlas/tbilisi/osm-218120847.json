@@ -173,7 +173,9 @@
   },
   "geometryQuality": "OSM way/218120847 имеет точный адрес Узнадзе, 52 и теги historic=building, tourism=attraction. Официальная граница 3082 и Polygon совпадают с IoU около 0,89; 91,4% OSM-контура лежит внутри границы, которая покрывает 96,8% way. Официальная история Министерства и реестровое описание подтверждают отдельный корпус. Google Place ID в радиусе 5 м не найден; фото и права не проверены.",
   "photos": [
-    "7b878e4e8c3b3485aa0779e8db28f06f02db6898f2e3c9b3aa51880247d568b4"
+    "7c7c623180afab2ab683f17981a21d012ed35318c0b207301d75debb0bef0684",
+    "1a0340f729b58b3e7fc6f3e5be390ca145dd1bd9a75507412a68595028f379b0",
+    "354d10128bb3cffcb2a74966504de91b59a7a00404e7943eebbd7aa7228653ba"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3082",
   "otherSource": "https://mesy.gov.ge/ka/gverdi/3"

@@ -158,7 +158,9 @@
   "geometryQuality": "OSM way/462897306 имеет точный номер 148ბ и официальный ref 4172; геометрия совпадает с официальной границей реестра 3310 с IoU около 0,95 (99,0% OSM-контура внутри, граница покрывает 96,2% OSM-контура). Обе геометрии относятся к отдельному замкнутому корпусу; рядом есть другие самостоятельные части ансамбля бывшего Тифлисского военного училища. Категория Commons связана с адресом и охранным ID, но отдельные фото не включены: требуется проверка файла и прав на архитектуру.",
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
-    "13829c96ec5ec861c02c571e233b4274318e067b220bb6949e1c47e824942339"
+    "5f63cf01d61ef6e2d5aa4ff9a0780715c0633da122d534014d790fd0918b8cd7",
+    "42deec9ed33e2a5beee93e6c895a8b1b7a7e2af03a45c6c5553507e7ce3dc3b2",
+    "745e66ec7558b5dae6e07867ab97a16942d172511d21c7cda804787851bf7d5f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3310",
   "otherSource": "https://commons.wikimedia.org/wiki/Category:148b_Davit_Aghmashenebeli_Avenue"

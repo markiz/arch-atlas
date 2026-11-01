@@ -88,7 +88,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.774; реестр 384.8 м², OSM 421.4 м²; перенос центра 1.6 м. IoU 0,774; контур way/1288791331 (421 м²) против 385 м² реестра, реестр покрыт на 91,4 %, центроид 1,6 м, флагов нет. Обведён уличный корпус с ризалитами; дворовая галерея не включена.",
   "photos": [
-    "86117f12b23064486db22ac951d544da0ca4e90fb0aed47fafb2d112d678cd70"
+    "f38e96e9c5d036c31782e4eebef96f044bddac5fcb34d3ef7f5e391aa2f561d7",
+    "04fd3e0436303840b1b1df9548cb02f9627573967bc3ac74b96b70713f4404f7",
+    "f95ef84fb6e1cef0bdb56b74a6d84f98485a1750d99202a3d29a01c244be83ad"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2901",
   "otherSource": "https://www.openstreetmap.org/way/1288791331"

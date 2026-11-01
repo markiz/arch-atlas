@@ -84,7 +84,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.83; реестр 643.0 м², OSM 637.0 м²; перенос центра 1.1 м. way/337371712: замкнутый 10-точечный Polygon, 633 м² против 643 м² реестровых, IoU 0,83, центроид в 1,1 м, флагов геометрии нет; контур — только корпус, без двора.",
   "photos": [
-    "4acbbc7cb296e4df24390e4e1ed5970a0aac2e38f219eba8add2467a0d1e04fb"
+    "0b3b85bf488753b4f9f48c61f18bd467a6d6df771533214a51031cf6cb106e98",
+    "aa567b3dd5222468158ab9c5ad566a43ba26a116472064a4bcf472aac731b92d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2981",
   "otherSource": "https://www.openstreetmap.org/way/337371712"

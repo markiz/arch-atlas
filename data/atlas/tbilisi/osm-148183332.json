@@ -81,7 +81,9 @@
   "geometryQuality": "IoU с реестровой границей 0.704; реестр 1489.5 м², OSM 1404.4 м²; перенос центра 5.0 м. IoU 0,70 с реестровой границей; OSM way/148183332 — самостоятельный замкнутый контур корпуса, флагов нет. OSM building:levels=4 расходится с двумя этажами по реестру (вероятно, учтён цокольный или надстроенный уровень) — уточнить при съёмке.",
   "photos": [
     "62569832a621a3e061205274c2ea0985c272cfeb436a48f4ff426425e20e8701",
-    "c96fa6d819c6d7dca04863b85a721470f990509e6b003749840dd66663fbd5fd"
+    "8f3b0016da0b0e73a722d7e6f99baf224dabdf9b0002fbbd778c30fffe7ecf20",
+    "58e23e5b1ec4253e515a4fe2d1ae133f375881389da77d3d9e7e5637414aca49",
+    "249d0f9631637087998b8b161275bc5d95daac00f9f3941bd1df05200db242bf"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2765",
   "otherSource": "https://www.openstreetmap.org/way/148183332"

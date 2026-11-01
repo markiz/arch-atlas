@@ -97,7 +97,8 @@
   "geometryQuality": "IoU с реестровой границей 0.897; реестр 413.8 м², OSM 432.4 м²; перенос центра 0.5 м. IoU 0,897; реестр 413,8 м², OSM 432,4 м², центроид 0,5 м; флагов нет. Контур way/246787222 обводит весь трёхэтажный корпус, а не участок.",
   "photos": [
     "19a38ad62918782097389820e38e0ecb9b5fd95967651a1e85c7605438aa8586",
-    "4ad668c70cfb7478655c0041ed3ce2dbb45b46c041a4c4c1f55d721b7f9b2b74"
+    "514721e9afec11d9090e3b9946dd5eb9cf50def543ef17e21f49e500e058bfc0",
+    "68e6cc4c9c79319cce48f1bfbeb856da5ed9f478e11894b71194f3312b7e8b4c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2727",
   "otherSource": "https://www.openstreetmap.org/way/246787222"

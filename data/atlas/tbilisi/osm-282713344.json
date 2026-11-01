@@ -96,7 +96,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.648; реестр 483.3 м², OSM 681.4 м²; перенос центра 2.8 м. OSM way/282713344, IoU 0,648, флагов нет; обведён корпус с небольшой частью двора, реестр покрыт на 94,8%.",
   "photos": [
-    "19acb11fe4afd9ed993c46fb10f59c66a7fce922aeb40a980c2e2e0473368c18"
+    "9c8ac09cd17540e16d838ecc06c5df28773ffecea24b0b2463153ffc02d2935b",
+    "8f329805cb20cff14b601c1acdc716743b8f12fdedd88aa2e6e50d442b39473c",
+    "90b2d3e0963eb57d6fc07bd6e93b3c67cfe585f46a894e573c0035e69929aaf7"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3264",
   "otherSource": "https://www.openstreetmap.org/way/282713344"

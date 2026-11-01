@@ -88,7 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.676; реестр 256.8 м², OSM 306.5 м²; перенос центра 2.3 м. IoU 0,676: реестровый полигон 256,8 м² и OSM way/337253399 (306,5 м², building=yes), реестр покрыт OSM на 88,5 %, центроид в 2,3 м. Флагов нет; контур обводит надземный корпус, разница площадей объясняется дворовой пристройкой в OSM.",
   "photos": [
-    "791894cb5962b11cf37e733e0d74c8d406e57789ed3b6e0679735d17ebf086ae"
+    "3462bb71ce1d0fc4757fd6c466442e50dc95cf80a84f837134ee67a23809f872",
+    "e80ea87bc59fc1e21bd151e683a8d8def7c5febbb0178c7bc13e64cb5c4739ef"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2836",
   "otherSource": "https://www.openstreetmap.org/way/337253399"

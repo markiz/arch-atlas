@@ -87,7 +87,10 @@
   },
   "geometryQuality": "Замкнутый контур OSM way/337364751 имеет адрес Бамбис Риги, 12. Официальная граница наследия для записи 3690 пересекается с ним с IoU около 0,90; около 98,6% площади контура находится внутри границы. Официальное описание выделяет корпус на углу Шардени и Бамбис Риги; контур не включает весь ансамбль из двух зданий и не касается контура караван-сарая Арцруни.",
   "photos": [
-    "ea0397674fbfeefe086e14ea995a4f9310e5e010ba26fd77fb592513c6dd7d4d"
+    "5357baeddebf5b6aa94b889dff4ef5fba88978eb4df5b01c646004b96a9c9b18",
+    "e0a0ec0924725fa9f332afcf71456006668549995f96d6af5b626ae76819c2b5",
+    "8e7602cd1071cd8837c411933fee8d01c7bfd1df3ba387ae5b3f993bc584332b",
+    "6059299a1a11edcbf106f4b3c08973853b6d32a6e0d593f815bdff049672e7ea"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3690",
   "otherSource": "https://www.scantbilisi.ge/en/objects/404/Cotton-Row-st."

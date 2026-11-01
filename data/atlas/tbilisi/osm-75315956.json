@@ -245,7 +245,9 @@
   "geometryQuality": "Показан реестровый контур основного высотного блока (2676,9 м²). OSM way/75315956 обводит весь комплекс (5409 м², включая дворовые объёмы), поэтому его контур не используется; разница площадей отражена в описании.",
   "photos": [
     "3608b32c6e846e38b7e8a8512f1e687172d303ce8c012fd9f041fde151398525",
-    "bc1e2a9ca5e14bb4c2f99631cf7a1c5750297e44b0df26e344dd14c8f455300b"
+    "6652ea02ef3ff07098e9b98d9b18ceb23ace6a564dda840584a4cb6509d480c0",
+    "7bab477d3c5032d5ad79764e1e26586632e828f1cd13c8bbeddc9d5ca91dc864",
+    "b5925fe7e281b5b35e61a509023ee588385b9b702da37eeb2fc502acef85cd50"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4293",
   "otherSource": "https://www.openstreetmap.org/way/75315956"

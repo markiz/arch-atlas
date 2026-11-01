@@ -67,7 +67,9 @@
   },
   "geometryQuality": "Контур OpenStreetMap; данные требуют редакционной проверки",
   "photos": [
-    "cee5496e57da585b26e02e41c81a9fa679583113fb02486c92101a7d86a37888"
+    "1f47397e0ea63f52a3a15c10967721c5ce0e27e42945811d09d745c9cd54556d",
+    "095b133bd6c1a099e58078cc886821bcb1f317e8536908fadb709da195a85a89",
+    "e2774883adc1e8f2f10d90b98191f46832ffe1f8d065d1ed1c53b77191ad2c56"
   ],
   "source": "https://www.openstreetmap.org/way/549065820",
   "otherSource": "https://www.wikidata.org/wiki/Q42628140"

@@ -94,7 +94,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.854; реестр 1274.0 м², OSM 1263.6 м²; перенос центра 1.3 м. OSM way/192201132, IoU 0,854, центроиды в 1,3 м, площадь 1263,6 м² против 1273,9 м² у реестра; флагов нет. Контур обводит угловой корпус целиком, но OSM ставит номер 101 вместо реестрового 103.",
   "photos": [
-    "a2fd118e69f691ffd868d47480f8ba82b0bcf14b3072b74f08179fa4126e2c40"
+    "5458d1aa67e226e60212b9cf831407e3f57b90a4d694ea0dc5bd93327f0b5036",
+    "0dd129f52a05193787c75b74f75b996d619183cfbd3e2647059f35445b8f9f80",
+    "926a758e36587d36f2a9ba005d5c1fd44aa45d8e216a1cad46100ad3cf4a3fa6"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3244",
   "otherSource": "https://www.openstreetmap.org/way/192201132"

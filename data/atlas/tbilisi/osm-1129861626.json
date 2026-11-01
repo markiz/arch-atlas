@@ -68,7 +68,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.701; реестр 125.1 м², OSM 153.1 м²; перенос центра 1.0 м. IoU 0,701; OSM way/1129861626 — замкнутый контур углового корпуса, флагов нет.",
   "photos": [
-    "344ead05136521846522bf570905809790decc5f0fb6a65987d5b89cc443e457"
+    "9be7b7c01dfbf6b05b9f26d9db1098fd5bc676e7b4eca1f54900170e55adf6e7",
+    "80f506449f39bc4cd25cf13df7108af741d405446432bdbea4a333a5b6e0f01d",
+    "a3e7f9e0d98f97a54c80cfa9064169750175ed07492896d3598cc95c2b44e576"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3404",
   "otherSource": "https://www.openstreetmap.org/way/1129861626"

@@ -76,7 +76,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.859; реестр 290.1 м², OSM 290.5 м²; перенос центра 1.0 м. IoU 0,859; OSM 291 м² против 290 м² реестра; центроид 1,0 м; флагов нет. В OSM адрес — улица Зураба Жвания, 22.",
   "photos": [
-    "777fd5db67535110ad9844efc2352c1787c8319d9f0d71dc5feba83a10b2a778"
+    "23f92b40ae1cca1e55721e525ccf976379d1ec5cde58d3a11c451daff13c1e0a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4161",
   "otherSource": "https://www.openstreetmap.org/way/281627275"

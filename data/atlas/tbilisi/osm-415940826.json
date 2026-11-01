@@ -117,7 +117,7 @@
   },
   "geometryQuality": "Официальная граница 3257 и OSM way/415940826 совпадают с IoU около 0,86; 97,6% OSM внутри границы, граница покрыта на 87,3%, смещение 0,7 м. OSM даёт 4 уровня, реестр — 3 этажа и высокий цоколь; этажность в карточке не указана.",
   "photos": [
-    "785f83a20140b69c22f81835d9e0e90202a5242965480cf216bd6c81d3b7c324"
+    "545d65748585a35dd61a48802d299cc72843549a42977968366e2d0b09c115a2"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3257",
   "otherSource": "https://www.wikidata.org/wiki/Q42633761"

@@ -80,7 +80,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 197.3 м², OSM 205.8 м²; перенос центра 0.2 м. IoU 0,922; OSM way/78492225 (heritage=2, ref:GE:nachpg 4843) обводит весь надземный корпус храма с апсидой и притвором, 205,8 м² против 197,3 м² в реестре, центроид в 0,2 м; флагов нет.",
   "photos": [
-    "62af57effad0e753c0dedff417c3a16bacfaa3fa638cc9ef61613228dcac4c6e"
+    "7c030e75fd8d5d026f0fe02f2625995df2423ae04921b3d6d40b8a9fb91a4ac7",
+    "af8cd3e7ab020db71c1a68ca9b486cda4e00c767c4dcd5d6b8c09d3da8cc352f",
+    "3b911f7475db2a7c05c22cf902b319bcc71b1c5521e18a1c49d7563c61919405"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4653",
   "otherSource": "https://www.openstreetmap.org/way/78492225"

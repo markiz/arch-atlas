@@ -116,7 +116,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.707; реестр 1086.1 м², OSM 1207.9 м²; перенос центра 4.2 м. IoU 0.707, флагов нет; OSM 1208 м² против реестровых 1086 м², покрытие реестра 88 %. Наложение 7 м² с карточкой дома № 8 — касание соседних зданий.",
   "photos": [
-    "94a103f0ad5647b93930f74b23165c0ebc3e935f3b473756d9068f620ee1130e"
+    "b5507afb2153921a1914530f5b75df4b938b86dd6ea9d460b6364cdfa6e51bf3",
+    "f3565bbb7448366ac1eb3c5195cc2d41715266474af777808b1dbeddfefa937d",
+    "3d740095c32d1dfb68f423549ad8d0767dc68972eb5763631d4702df27cf5c66"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3249",
   "otherSource": "https://www.openstreetmap.org/way/416304836"

@@ -88,7 +88,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.87; реестр 616.2 м², OSM 685.5 м²; перенос центра 0.6 м. IoU 0.870, флагов нет; OSM 686 м² против реестровых 616 м², покрытие 98 %.",
   "photos": [
-    "3d5044bc69cfc8ab6d64dfdc61f4adc7427cfdba1eaa18a1f76cee1ba8909003"
+    "d1441947464659af1e87e77bb266d3a424b728bfb00a03db6543affb71954c35",
+    "5a2da805b0b89b41dc5d9e35fb4f7beb74264f3547e61a42002015ac77757933"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3222",
   "otherSource": "https://www.openstreetmap.org/way/1131162704"

@@ -104,7 +104,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.811; реестр 651.2 м², OSM 575.7 м²; перенос центра 1.5 м. IoU 0,81; реестр 651,2 м², OSM 575,7 м², центроиды в 1,5 м; флагов нет. OSM way/1206705394 обводит корпус (building=commercial, 2 этажа) — тег функции расходится с жилым использованием, но контур и адрес совпадают.",
   "photos": [
-    "976d53707adf915aa8bfdc05f370ce3678e63e2b7c22f6ef255d0112d5cdf55a"
+    "0cf16cacfc1566f602c28da85d28111ff73834d0df630e26af0130dcc5dc7e48",
+    "e9e2bc87750d040945ecbe6d3e885006ad6cc9ca2b7487649597c7cd3581a204",
+    "683a215ad463360696b8d5ffc5885ff4ebc7d9f2c1ef560703b91c73f8ae58a1",
+    "b5295d90412df06380041e5b86621ee6d6bd7e5d720daa243137ef5227f75288"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3655",
   "otherSource": "https://www.openstreetmap.org/way/1206705394"

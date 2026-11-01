@@ -68,7 +68,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.923; реестр 197.3 м², OSM 205.7 м²; перенос центра 0.5 м. IoU 0,923; OSM 206 м² против 197 м² реестра; центроид 0,5 м; флагов нет. В OSM адрес — улица Зураба Жвания, 10.",
   "photos": [
-    "0e094649de402e3d454aa873f49aef986fcd137eb83710d38d3d9699fbfc6032"
+    "13877af97d4c6287ded132c9e43129890eac076aa0da2e23f3cf6cdcc604f1da",
+    "f2a9d6719c9802064273b6d9b1cb7b4dbb318a42bd27c8efc926d48df6e1c087",
+    "ef06ef1c2b96fe4c0b0e88b45cf6b4b1e973428d03848aabbea63022a634fc54"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4189",
   "otherSource": "https://www.openstreetmap.org/way/1043852167"

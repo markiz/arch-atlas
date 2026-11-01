@@ -104,7 +104,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.93; реестр 466.9 м², OSM 498.3 м²; перенос центра 0.2 м. IoU 0,93; реестр 466,9 м², OSM 498,3 м², центроиды в 0,2 м; флагов нет. OSM way/937316002 обводит корпус (building=apartments, 2 этажа) практически по реестровой границе.",
   "photos": [
-    "70090e2991843ec7a9afe03d4c5e4b43eadf5d6b722cf54b07d93b6c41a0507c"
+    "8421f934964584a4a08de6db6c58e29fc66b6c75c27b4d78490051a5700b55b6",
+    "c8bb0b650d0fe92fe6bf9ecb846f3f0e1ee14e544563072ac294cc64d84c331a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3698",
   "otherSource": "https://www.openstreetmap.org/way/937316002"

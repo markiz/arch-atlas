@@ -1,0 +1,20 @@
+{
+  "author": "Реестр памятников Грузии (автор не указан)",
+  "license": "Не установлена",
+  "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3001",
+  "source": "https://memkvidreoba.gov.ge:8443/Files?id=338410_DEDC7E0B-9CE2-4D93-B0F5-4F749894CEB5",
+  "modifications": "преобразовано в WebP; полное качество не используется",
+  "description": "Фото реестра памятников; автор и лицензия не установлены",
+  "visualTags": [
+    "facade",
+    "street",
+    "balcony",
+    "window",
+    "people",
+    "car",
+    "low-resolution"
+  ],
+  "width": 640,
+  "height": 480,
+  "rating": 66
+}

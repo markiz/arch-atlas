@@ -104,7 +104,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.874; реестр 432.1 м², OSM 411.9 м²; перенос центра 0.8 м. IoU 0,874; OSM way/1126037584 — замкнутый контур корпуса, флагов нет; OSM building:levels=3 отражает дворовую трёхэтажность.",
   "photos": [
-    "8426bccb4e6150908f4a1ab3590599e81b1d3302dab4263572b0cebacde839fc"
+    "a135003c46931ed5275c6c7e4896a2106cef470af1e070f69f01f0e8943133fa",
+    "7db49ead2bd04edf1c69e615711dcdf78e9eed9f39cc34cce85e22823523211a",
+    "dd822b284d1e00aff340acdadf18d1faf10072ab2a3139185cfce53205541029"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3458",
   "otherSource": "https://www.openstreetmap.org/way/1126037584"

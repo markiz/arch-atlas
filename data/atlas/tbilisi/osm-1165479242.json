@@ -64,7 +64,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.702; реестр 426.7 м², OSM 340.4 м²; перенос центра 4.1 м. IoU 0,70; реестр 426,7 м², OSM 340,4 м², центроиды в 4,1 м; флагов нет. OSM way/1165479242 обводит уличный корпус (building=apartments, 2 этажа); дворовое крыло в контур не включено.",
   "photos": [
-    "ceee0b4e5e7705e668030312aea1c70d8da362c500a165c8ebe4102bad7009e1"
+    "85dab269accdcaeffa2023b8792c36791ded5180e0c11eb1bc2cbc76c9e911fd",
+    "36e4716cb7a5588dc2742cbb2dd79bcc90763e91fcc81c1748ecea44d8d996a1",
+    "1dabc15d3e574d4a8294450713dfd97213177c107d286e5cf18a9dda3f7c5731"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3643",
   "otherSource": "https://www.openstreetmap.org/way/1165479242"

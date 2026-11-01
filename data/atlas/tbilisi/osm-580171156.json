@@ -88,7 +88,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.91; реестр 391.3 м², OSM 372.8 м²; перенос центра 0.1 м. IoU 0,91; OSM way/580171156 — 373 м²; флагов нет. Обведён весь двухэтажный корпус.",
   "photos": [
-    "09f9bbd1c1581a3600dee6c9e6c2a9639902cbe247a6fafec9bfbfcc15999497"
+    "28a67bbc355881f929fae616ef4b7fb47420e642068170b0546f942c44000e4d",
+    "4f9b5eaa5e34ba60aabda19241201db4a749aaadc2d3b461d87cbf9a36896430",
+    "3fec6f4c2a1f1be397a068a491db1a0c941c2b2f9fe96bce8305b9710bedd9e3"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4377",
   "otherSource": "https://www.openstreetmap.org/way/580171156"

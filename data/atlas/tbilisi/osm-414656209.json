@@ -82,7 +82,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.892; реестр 616.1 м², OSM 637.0 м²; перенос центра 0.7 м. OSM way/414656209, IoU 0,892, флагов нет; обведён корпус, реестр покрыт на 95,9%.",
   "photos": [
-    "690268eb8ccf3cb3f4224b37d688a768b8423c536732ea5e670f60ed2f2a54b6"
+    "3a87104325e655e494b573970ba1657b517df23e50571aecc38c870828e2d26f",
+    "8840270c6a1cc9592dcc4528cbb0d8773caaa97b12f2807e4972d79a3c0bf565"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3294",
   "otherSource": "https://www.openstreetmap.org/way/414656209"

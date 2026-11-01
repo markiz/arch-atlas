@@ -80,7 +80,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.847; реестр 385.5 м², OSM 441.8 м²; перенос центра 0.6 м. IoU 0,847; контур way/464257619 (442 м², 2 уровня) против реестровых 385,5 м², реестр покрыт на 98,4%, центроид 0,6 м, флагов нет. Обведён надземный корпус вдоль улицы; двор и ворота слева в контур не входят.",
   "photos": [
-    "cfefe571d239f410580445a4779f5760e65c3e2a26fa43668069b947e2725216"
+    "816dcd4feee17e4bb4f91d0cedd988f26872142bbace160dad921928e21a208f",
+    "3ac274b47d7c7abe9b8696d3847bb6971e17b69042f81e2ca0a993ca2b433c0c",
+    "3826a94e069a238d16f26ebf9faf7b75506eb6d2e4d55c7425d3ff4ae303e5d8",
+    "902992e4e4c277c91316de61885621ebac6d39c4bdb4f9b403d3a5157a79ace5"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3038",
   "otherSource": "https://www.openstreetmap.org/way/464257619"

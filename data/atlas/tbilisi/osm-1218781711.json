@@ -104,7 +104,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.604; реестр 411.6 м², OSM 595.0 м²; перенос центра 3.5 м. IoU 0,604; OSM way/1218781711 — замкнутый контур корпуса, флагов нет, но его площадь на ~45% больше реестровой (595 против 412 м²), вероятно за счёт дворовых пристроек. Центроид в 0,7 м от реестрового.",
   "photos": [
-    "d07612b884b3401c06272f1d030125609f77c1143fa8cfc5b486d25adae01fa9"
+    "84a4bba0d572599e3d3c215ae3b095484bc5340b11c9007bad9a9acea5403ea4",
+    "3fd4d566288c30e48b1f4138d0be147a17b55a71ad9e9f6207d2094b112970d6"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3395",
   "otherSource": "https://www.openstreetmap.org/way/1218781711"

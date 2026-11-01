@@ -76,7 +76,7 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.912; реестр 539.6 м², OSM 523.6 м²; перенос центра 1.2 м. IoU 0,912; контур way/414653510 (523,6 м²) против 539,6 м² реестра, реестр покрыт на 94,0 %, центроид 1,2 м, флагов нет. Обведён весь пятиэтажный корпус; в OSM он подписан «Цабадзе, 7», хотя нумерация соседних домов показывает перестановку 5 и 7.",
   "photos": [
-    "c8018be2e84df1148d992ba20dc0f35b07b78be3d4d5c15c02f517f135629907"
+    "8aa9aff003f577e488010aa89ca94a4b7adeb0f8fbd3070ab8b63cb6598a5754"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3090",
   "otherSource": "https://www.openstreetmap.org/way/414653510"

@@ -72,7 +72,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.922; реестр 215.3 м², OSM 218.7 м²; перенос центра 0.4 м. IoU 0,922; реестр 215,3 м², OSM 218,7 м²; флагов нет; обведён весь корпус, центроиды в 0,4 м; пересечение с карточкой «Дюма, 8» — только 6,7 м² общей стены, это разные дома.",
   "photos": [
-    "24c9183a8d43ead20365d58a8fc1eecb623a7605ad163f1202c73afb252c06a5"
+    "f559d36fa677c24e5a2af43565fcc3559f65a4bb77184035b5de82aa273044fd",
+    "6b35c3cf0d893b253e24a23e4bfa5151299306f540429f1d6ca101d1c1326cea"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3929",
   "otherSource": "https://www.openstreetmap.org/way/1155911047"

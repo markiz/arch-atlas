@@ -84,7 +84,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.804; реестр 456.9 м², OSM 548.9 м²; перенос центра 2.5 м. IoU 0,804; реестр 456,9 м², OSM 548,9 м² (way/1193859179, 10 вершин, addr: შალვა დადიანის ქუჩა 15, building=government). OSM-контур немного шире реестрового (захватывает часть пристройки), но это тот же замкнутый корпус; флагов нет, Place ID совпал.",
   "photos": [
-    "edc453ba5c44fd46586fb58c3bca2770111b33dd6aba4cf0018954bce4a16d77"
+    "edafc3b9587a75456c6aa671bfe82c315f3164a54beba87578d96a82904c9e0b",
+    "6d55377d9539720679a4ba7e1354118e46d98de7e04356ed5ddc95d99092136d",
+    "9a6cb31e78180f60a798b58d52a11d3c47da63d31ace073b8c21636a5dcb2640"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4033",
   "otherSource": "https://www.openstreetmap.org/way/1193859179"

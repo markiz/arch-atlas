@@ -82,7 +82,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.786; реестр 471.7 м², OSM 486.2 м²; перенос центра 0.9 м. IoU 0,786; OSM way/1113609522, тег layer=1 (контур нарисован поверх соседнего объекта, подземных признаков нет), центроид 0,9 м; контур на ~14 м² шире реестровой границы с востока — вероятно, включена пристройка.",
   "photos": [
-    "96a4dbe6ec0f0827ab5979c399532f47f82fd6006e9cadbde580ada2a4571590"
+    "c52d302ca125a12ea8684e4511c3dc00b5aff893d6f58fdcad8fb68799b30d7b",
+    "acc4980ae423c514e578db510c65578f16974153f09ab27c66b5aeb87141796f",
+    "2c4def9f24b9953f2bb977a236efecc936aa94266dc7a75ee16ddb78e669c0a6"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3136",
   "otherSource": "https://www.openstreetmap.org/way/1113609522"

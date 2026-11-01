@@ -80,7 +80,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.894; реестр 231.9 м², OSM 224.3 м²; перенос центра 0.5 м. IoU 0.894 с реестровой границей; OSM way/1126037579, площадь 224.3 м² против реестровых 231.9 м²; флагов нет; обведён надземный корпус.",
   "photos": [
-    "afc721cd3790b6bdd922fbc9e74d4f7ae488e2182fdeafce318cc6ddbab18848"
+    "1b15b8cfb2a334e0b14dd9474908eaa86bf046a165ed0860d420062f988871be",
+    "68b41768fed15fdba3eff47826aa8170fd9e61d919d4a013e9be37cf979f9ac1"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3483",
   "otherSource": "https://www.openstreetmap.org/way/1126037579"

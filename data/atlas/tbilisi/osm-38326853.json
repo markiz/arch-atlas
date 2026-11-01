@@ -135,7 +135,10 @@
   },
   "geometryQuality": "Контур OpenStreetMap; название и адрес совпадают с источником",
   "photos": [
-    "9a3c94b04982929916ecc8b6ce1f983c8ddf0662b3e46a27d8a56b1bb83b1b06"
+    "c90762262eea023476ed6e2eaa3ad6b3e6bcb824e003ee2634cbbb837f9b3cd8",
+    "3307f154aabd3c0928b855faad0191f1953e921a7c8d56631ac5f0c0b795e563",
+    "94e5934b7c4dba1fe017ee7621027a048950568fdcd5128966ecb9f0cdc0ad1a",
+    "842d598f94ed3c2077479989cb98ed4ffaa7a1e14fb9b170c07acf51be50c772"
   ],
   "source": "https://scantbilisi.ge/en/objects/390/Cachava-Clinic",
   "otherSource": "https://www.openstreetmap.org/way/38326853"

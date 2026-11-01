@@ -80,7 +80,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.855; реестр 54.1 м², OSM 52.4 м²; перенос центра 0.5 м. IoU 0,855; флаг official_point_buffer — реестровая граница (54,1 м²) получена буфером вокруг точки и является приблизительной; OSM way/1204376656 — реальный восьмигранный контур корпуса 52,4 м², центроид в 0,5 м, высота около 7 м по оценке маппера.",
   "photos": [
-    "823679360f80347b8256d1b8a16dc7a010aa8cee1ba65bb9f7d50a2213d82893"
+    "f0088ed0b28bd6743c8648708c8713f43d11837c393d4171791a6f634d66fa7f",
+    "92bbc4dcd98ede37bf6ba07413741903c2f28e144f6ae606536aaf54ee022a6e",
+    "323d8688c2b10c73ed1f54e2caf25debfb2eb982f6389d69f35444a53e3b3d99"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4951",
   "otherSource": "https://www.openstreetmap.org/way/1204376656"

@@ -319,7 +319,28 @@ def review_card(card: dict, registry_id: int, refresh: bool, progress: Progress 
     return index
 
 
-def load_selection() -> dict[str, Any]:
+def load_selection(selection_dir: Path | None = None) -> dict[str, Any]:
+    if selection_dir is not None:
+        files = sorted(selection_dir.glob('*.json'))
+        if not files:
+            raise SystemExit(f'{selection_dir.relative_to(ROOT)}: no selection JSON files')
+        items: dict[str, Any] = {}
+        for path in files:
+            payload = read_json(path)
+            if not isinstance(payload, dict):
+                raise SystemExit(f'{path.relative_to(ROOT)}: expected an object')
+            if isinstance(payload.get('items'), dict):
+                candidates = payload['items']
+            else:
+                card_id = payload.get('cardId') or payload.get('id')
+                if not isinstance(card_id, str):
+                    raise SystemExit(f'{path.relative_to(ROOT)}: missing cardId')
+                candidates = {card_id: payload}
+            for card_id, entry in candidates.items():
+                if card_id in items:
+                    raise SystemExit(f'{path.relative_to(ROOT)}: duplicate selection for {card_id}')
+                items[card_id] = entry
+        return items
     if not SELECTION.exists():
         raise SystemExit(f'{SELECTION.relative_to(ROOT)} does not exist; add a reviewed selection first')
     payload = read_json(SELECTION)
@@ -377,6 +398,33 @@ def is_registry_photo(photo_id: str, record: str) -> bool:
     return metadata.get('author') == REGISTRY_AUTHOR and 'memkvidreoba.gov.ge' in source
 
 
+def batch_index_for(card_id: str, selected_ids: set[int]) -> dict | None:
+    """Use the shortlist from batch-registry-review.py when it covers the picks."""
+    path = ROOT / 'work' / 'registry-batch' / card_id / 'index.json'
+    if not path.exists():
+        return None
+    batch = read_json(path)
+    photos = batch.get('photos') or []
+    if not selected_ids <= {int(photo['id']) for photo in photos}:
+        return None
+    urls: dict[int, str] = {}
+    object_file = object_path(card_id)
+    if object_file.exists():
+        payload = read_json(object_file)
+        urls = {
+            int(photo['id']): photo.get('docFile')
+            for photo in payload.get('photoIds') or []
+            if photo.get('id') is not None and photo.get('docFile')
+        }
+    resolved = []
+    for photo in photos:
+        url = photo.get('url') or urls.get(int(photo['id']))
+        if not url:
+            return None
+        resolved.append({**photo, 'url': url})
+    return {**batch, 'photos': resolved}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group()
@@ -387,6 +435,7 @@ def main() -> int:
     parser.add_argument('--dry-run', action='store_true', help='validate --apply without writing cards or files')
     parser.add_argument('--allow-fewer', action='store_true', help='allow fewer than three photos')
     parser.add_argument('--limit', type=int, help='review at most this many cards')
+    parser.add_argument('--selection-dir', type=Path, help='merge per-card selection JSON files from this directory')
     args = parser.parse_args()
 
     cards = read_cards()
@@ -451,7 +500,7 @@ def review_all(cards: dict[str, dict], fallbacks: dict[str, dict], selected: set
 
 
 def apply_selection(cards: dict[str, dict], fallbacks: dict[str, dict], selected: set[str] | None, args: argparse.Namespace) -> int:
-    items = load_selection()
+    items = load_selection(args.selection_dir)
     if selected is None:
         selected = set(items)
     unknown = sorted(selected - set(cards))
@@ -500,7 +549,10 @@ def apply_selection(cards: dict[str, dict], fallbacks: dict[str, dict], selected
             progress.advance(f'{card_id}: registry mismatch')
             continue
 
-        index = read_json(index_path(card_id)) if index_path(card_id).exists() else review_card(card, registry_id, args.refresh)
+        selected_ids = {photo['id'] for photo in photos}
+        index = batch_index_for(card_id, selected_ids) if args.selection_dir is not None else None
+        if index is None:
+            index = read_json(index_path(card_id)) if index_path(card_id).exists() else review_card(card, registry_id, args.refresh)
         by_id = {int(photo['id']): photo for photo in index['photos']}
         chosen: list[dict] = []
         chosen_tags: dict[int, list[str]] = {}
@@ -581,6 +633,9 @@ def apply_selection(cards: dict[str, dict], fallbacks: dict[str, dict], selected
         for photo_id in kept + new_ids:
             if photo_id not in ordered:
                 ordered.append(photo_id)
+        # The gallery cap is for the whole card, not only for registry picks:
+        # free photos stay first and any overflow is dropped from the tail.
+        ordered = ordered[:MAX_PHOTOS]
         before = len(card.get('photos', []))
         if args.dry_run:
             print(f'would set {card_id}: {before} -> {len(ordered)} photos (drop {len(old_registry)} old registry photos)')

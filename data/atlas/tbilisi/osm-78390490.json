@@ -171,7 +171,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.928; реестр 2431.8 м², OSM 2518.8 м²; перенос центра 0.9 м. OSM way/78390490: IoU 0,93, 95 % OSM-контура внутри реестрового, центроиды в 0,9 м; Place ID подобран (ChIJURTobzFzREARzRlfhUoY59k). Обведён главный надземный корпус, двор и малые корпуса не включены. Флагов нет.",
   "photos": [
-    "f1dc33b87fa58c13bba88faf28a700765ac987d061c83fa9909f35954bbe8607"
+    "dcf7e9e93f536824df87f0435c4cb23d724d32d837a38effdb529c06c74e48fd",
+    "8f9d8281b006567206140cb234024fc6ad10fcf70805569575dd0a8c453b909c",
+    "e0595de9b8b606bb9a493eec1b593b182eae1cc0f6951809b26c6df88b4884c2",
+    "df14c68eb82c5d00625f04a9c545ea4d2387e443fad7089f56daaefc1f8e630f"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=5047",
   "otherSource": "https://www.openstreetmap.org/way/78390490"

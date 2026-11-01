@@ -84,7 +84,8 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.92; реестр 305.0 м², OSM 313.0 м²; перенос центра 0.4 м. IoU 0,92; OSM way/1043852173 — 313 м²; флагов нет. Обведён весь корпус на углу Зичи и Бесики.",
   "photos": [
-    "20c518a49212824913e83a13d92b28404a877be35a3d93c0bf4c9c69cb91bd0a"
+    "3363a5679d963470f35cdd1385f876a61fe031e46193c25f116ed65cf40d3efa",
+    "82d50583679c52d454a560e4f9bed99a0487bebb8da5aef5b04deae89b1cf33a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4325",
   "otherSource": "https://www.openstreetmap.org/way/1043852173"

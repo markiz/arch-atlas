@@ -70,7 +70,9 @@
   "geometryQuality": "Официальная граница памятника 3172 и OSM way/462897307 совпадают с IoU около 0,90; 93,5% площади OSM-контура лежит внутри границы, граница покрывает 95,6% контура. OSM имеет точный адрес 148ა, реестр — общий 148. Контур не пересекается с главным корпусом 148 и другими корпусами комплекса.",
   "photos": [
     "ecd72ef2ffb145665fcc91cafc2fcaf2ec008efddd17984d32e8fb8f982140c0",
-    "6dbe06ab84aa5151a136b2b8622a1eec785610e16e7d4de714d232cee202fa97"
+    "e4312073c98e0ddb58cbd087361c72c9c0f62b888ec5140125ce1a70b187e1c6",
+    "6732f3cb792cbfd406407f2a2b0725b551178355ec0cc4bb497b9e93dcc2f59e",
+    "47b0c5a2cdb3ebf4d7be34997f48eef2755c1bb0bc67b9e37f1d51e7d3beb5d0"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3172",
   "otherSource": "https://www.openstreetmap.org/way/462897307"

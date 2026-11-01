@@ -118,7 +118,10 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.727; реестр 809.0 м², OSM 668.7 м²; перенос центра 2.6 м. OSM way/414655001, IoU 0,727, флагов нет; контур корпуса, реестр покрыт на 76,9% (реестровая граница захватывает часть двора).",
   "photos": [
-    "73d8f17db959ce13f312d1e59b5d45de7afce105c10686b879d9b9f7a2af44cd"
+    "c7cd3df0b3ad74473f2dd11f4f4428bb0d2e9f37673e1dcc737348d0991669b4",
+    "55483fe51591dd0c8f857b9f57e55dc7894b27875adde64ca6fab7d6834f4546",
+    "570a6f09c55be306c636c7c8a76539d649a945d5f4fbbbdf0b7593e557863182",
+    "caf5d4f6049f84ce8dd1466cf0f79a92c1debe205a65684baf440a641fccd207"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3298",
   "otherSource": "https://www.openstreetmap.org/way/414655001"

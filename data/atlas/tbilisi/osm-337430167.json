@@ -100,7 +100,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.755; реестр 272.2 м², OSM 298.0 м²; перенос центра 1.6 м. IoU 0,755; OSM way/337430167 — самостоятельный замкнутый контур, флагов нет; центроид в 1–2 м от реестрового.",
   "photos": [
-    "cd2df50e8d1c6163e8b7a2af659e0ed5c190c33573b7a5f92b9a9679f68b6334"
+    "3b09ba40c5f989c3dbd844414eaa8c20be1f4b92b38a2667f4bd5bbd46d43c20",
+    "b5067e4df7528ae7f8daa935f89861cfb0571ce906c11be1c1f7b03f58ef76ef",
+    "c3f4e6cde6e1a6487522fc3f3ffe92b859bd5981f84205675476fc08a465a5d4"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3402",
   "otherSource": "https://www.openstreetmap.org/way/337430167"

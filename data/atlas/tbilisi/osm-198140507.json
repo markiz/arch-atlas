@@ -101,7 +101,9 @@
   },
   "geometryQuality": "Именованный действующий OSM-контур по Гришашвили, 1 перекрывает около 94% границы официального объекта №3534",
   "photos": [
-    "3c2f24cfee3d1305031d4d535b15b4a0a30188013de6086b8e589d18dbe047c3"
+    "ddb0d34e32981a9d846d0426ef33bb163315d32ea0915a1fbc7b934bd78b04cc",
+    "b947cea202fde823b6dc7d8fdf0ab456daa4610c9688b8c68989ef3a47deb42a",
+    "04fc0d7e4434c014f4543865b80c79ced3ba3be0abf05ff367e10dabc09f0738"
   ],
   "source": "https://scantbilisi.ge/en/objects/249/gogirdis-samefo-abano",
   "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3534"

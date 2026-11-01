@@ -88,7 +88,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.629; реестр 737.5 м², OSM 515.3 м²; перенос центра 8.1 м. IoU 0,629 (пересечение 483,7 м², OSM 515,3 м², реестр 737,5 м²), центроид в 8,1 м; флагов нет. OSM way/555209503 обводит корпус, реестровая граница частично захватывает двор.",
   "photos": [
-    "2b5fd0c5c1bf0e748748c6398bd4b2ce4eabe041410b9e446fbf58df703f0356"
+    "88a96b6e1512c029d650e945deea41bfdc5ff617ceac43f02f52e4873660d4af",
+    "922e04d29e76db8024e50b1ae859888e91805bb2567354a79b1094859b7a1c5a",
+    "0e44d9619f72726188bf09ba3a49b6b1900144f1a31a20d2c6b8eed1afc193f0"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3737",
   "otherSource": "https://www.openstreetmap.org/way/555209503"

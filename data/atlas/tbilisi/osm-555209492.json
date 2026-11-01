@@ -176,7 +176,9 @@
   },
   "geometryQuality": "IoU с реестровой границей 0.958; реестр 829.9 м², OSM 853.2 м²; перенос центра 0.2 м. IoU 0,958; OSM way/555209492 — 853 м²; флагов нет. Обведён весь трёхэтажный корпус с дворовым крылом.",
   "photos": [
-    "4a773d41e0c1779ede32a04c38bc38cd6c58efe77a5fc0f260121bb830d05e2c"
+    "1be79ca082e209182fa41c1cc09b264a1c230468b33abd50b218bf9231854c2a",
+    "80d5cda0dc3688e21209f60f4dffe853e6b6f6c02a767d7cea3cd3f7eb471e2b",
+    "4562cb7d3ec4687ce28672638aa3352269cd21dc682b904284db3403e845f380"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4296",
   "otherSource": "https://www.openstreetmap.org/way/555209492"
