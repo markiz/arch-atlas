@@ -79,8 +79,9 @@ function startBuildingRun(building:Building,files:ReadonlyMap<string,ManifestFil
   const fullResults=await Promise.allSettled(photos.map(photo=>loadPhotoFile(photo.file,files)));
   const assets=photos.map((photo,index)=>{const result=fullResults[index];return {photo,thumb:previewAssets[index].thumb,full:result.status==='fulfilled'?result.value:undefined}});
   const failures=fullResults.filter(result=>result.status==='rejected').length;
-  if(failures===total)throw new Error(errorText(fullResults.find(result=>result.status==='rejected')?.reason));
-  const ready:BuildingPhotos={status:'ready',phase:'gallery',assets,total,loaded:total-failures,error:failures?'Часть фотографий не загрузилась.':undefined};
+  const noImages=assets.every(asset=>!asset.thumb&&!asset.full);
+  if(failures===total&&noImages)throw new Error(errorText(fullResults.find(result=>result.status==='rejected')?.reason));
+  const ready:BuildingPhotos={status:noImages?'error':'ready',phase:'gallery',assets,total,loaded:total-failures,error:failures?(failures===total?'Полные фотографии не загрузились.':'Часть фотографий не загрузилась.'):undefined};
   publish(run,ready);
   return ready;
  })().catch(error=>{

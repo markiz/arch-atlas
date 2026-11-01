@@ -225,6 +225,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/imeli/1.webp",
+      "thumb": "photos/tbilisi/imeli/1-thumb.webp",
       "author": "Alsandro",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -233,6 +234,7 @@
     },
     {
       "file": "photos/tbilisi/imeli/2.webp",
+      "thumb": "photos/tbilisi/imeli/2-thumb.webp",
       "author": "Gobrona",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",

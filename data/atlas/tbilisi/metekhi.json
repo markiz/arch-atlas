@@ -135,6 +135,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/metekhi/1.webp",
+      "thumb": "photos/tbilisi/metekhi/1-thumb.webp",
       "author": "Mikhail Daneliya",
       "license": "CC0 1.0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
@@ -143,6 +144,7 @@
     },
     {
       "file": "photos/tbilisi/metekhi/2.webp",
+      "thumb": "photos/tbilisi/metekhi/2-thumb.webp",
       "author": "Gerd Eichmann",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

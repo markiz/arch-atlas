@@ -101,6 +101,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1206434333/1.webp",
+      "thumb": "photos/tbilisi/osm-1206434333/1-thumb.webp",
       "author": "Marcin Konsek",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -109,6 +110,7 @@
     },
     {
       "file": "photos/tbilisi/osm-1206434333/2.webp",
+      "thumb": "photos/tbilisi/osm-1206434333/2-thumb.webp",
       "author": "Yuri Samoylov",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

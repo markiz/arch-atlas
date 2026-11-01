@@ -61,6 +61,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-661361748/1.webp",
+      "thumb": "photos/tbilisi/osm-661361748/1-thumb.webp",
       "author": "RaffiKojian",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
@@ -69,6 +70,7 @@
     },
     {
       "file": "photos/tbilisi/osm-661361748/2.webp",
+      "thumb": "photos/tbilisi/osm-661361748/2-thumb.webp",
       "author": "Adam Jones from Kelowna, BC, Canada",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",

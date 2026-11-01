@@ -225,6 +225,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/opera/1.webp",
+      "thumb": "photos/tbilisi/opera/1-thumb.webp",
       "author": "Francisco Anzola",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -233,6 +234,7 @@
     },
     {
       "file": "photos/tbilisi/opera/2.webp",
+      "thumb": "photos/tbilisi/opera/2-thumb.webp",
       "author": "Moreau.henri",
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",

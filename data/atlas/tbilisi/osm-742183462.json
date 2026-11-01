@@ -66,6 +66,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-742183462/1.webp",
+      "thumb": "photos/tbilisi/osm-742183462/1-thumb.webp",
       "author": "Александр Сигачёв",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",

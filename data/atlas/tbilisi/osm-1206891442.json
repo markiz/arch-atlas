@@ -137,6 +137,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1206891442/1.webp",
+      "thumb": "photos/tbilisi/osm-1206891442/1-thumb.webp",
       "author": "UlRicH le PapilLoN",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
@@ -145,6 +146,7 @@
     },
     {
       "file": "photos/tbilisi/osm-1206891442/2.webp",
+      "thumb": "photos/tbilisi/osm-1206891442/2-thumb.webp",
       "author": "Yuri Samoylov",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

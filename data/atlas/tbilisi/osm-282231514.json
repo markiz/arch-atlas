@@ -141,6 +141,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-282231514/1.webp",
+      "thumb": "photos/tbilisi/osm-282231514/1-thumb.webp",
       "author": "Kober",
       "license": "Public domain",
       "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",

@@ -137,6 +137,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-416164457/1.webp",
+      "thumb": "photos/tbilisi/osm-416164457/1-thumb.webp",
       "author": "Lasha ge",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -145,6 +146,7 @@
     },
     {
       "file": "photos/tbilisi/osm-416164457/2.webp",
+      "thumb": "photos/tbilisi/osm-416164457/2-thumb.webp",
       "author": "Davit butulashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

@@ -129,6 +129,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-217728433/1.webp",
+      "thumb": "photos/tbilisi/osm-217728433/1-thumb.webp",
       "author": "Shalvabaiashvili",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -137,6 +138,7 @@
     },
     {
       "file": "photos/tbilisi/osm-217728433/2.webp",
+      "thumb": "photos/tbilisi/osm-217728433/2-thumb.webp",
       "author": "Shuvaev",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

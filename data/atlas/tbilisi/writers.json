@@ -111,6 +111,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/writers/1.webp",
+      "thumb": "photos/tbilisi/writers/1-thumb.webp",
       "author": "Hundnase",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -119,6 +120,7 @@
     },
     {
       "file": "photos/tbilisi/writers/2.webp",
+      "thumb": "photos/tbilisi/writers/2-thumb.webp",
       "author": "Raymond Zoller from unterwegs. on the road",
       "license": "CC BY-SA 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",

@@ -11,6 +11,6 @@ const buildings=JSON.parse(await readFile(root+'buildings.json','utf8'));assert(
 assert(paths.has('building-outlines.geojson'),'optional building outlines missing from manifest');
 const basemap=JSON.parse(await readFile(root+'basemap.geojson','utf8'));assert(basemap.features.every(feature=>feature.properties?.kind!=='building'),'ordinary buildings leaked into the initial basemap');
 const outlines=JSON.parse(await readFile(root+'building-outlines.geojson','utf8'));assert(outlines.features.length>0&&outlines.features.every(feature=>feature.properties?.kind==='building'),'invalid optional building outlines');
-for(const b of buildings){assert(b.geometry,`${b.id} missing outline`);for(const photo of b.photos??[])assert(paths.has(photo.file),`${b.id} photo not in manifest`)}
+for(const b of buildings){assert(b.geometry,`${b.id} missing outline`);for(const photo of b.photos??[]){assert(paths.has(photo.file),`${b.id} photo not in manifest`);assert(photo.thumb&&paths.has(photo.thumb),`${b.id} photo preview not in manifest`)}}
 const html=await readFile('dist/index.html','utf8');assert(!/\b(?:src|href)="https?:\/\//i.test(html),'external asset in HTML');
 console.log(`Verified dist: ${buildings.length} buildings, ${manifest.files.length} local resources and their SHA-256 hashes.`);

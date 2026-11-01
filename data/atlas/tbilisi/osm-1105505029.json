@@ -89,6 +89,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1105505029/1.webp",
+      "thumb": "photos/tbilisi/osm-1105505029/1-thumb.webp",
       "author": "Varsika",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -97,6 +98,7 @@
     },
     {
       "file": "photos/tbilisi/osm-1105505029/2.webp",
+      "thumb": "photos/tbilisi/osm-1105505029/2-thumb.webp",
       "author": "Varsika",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

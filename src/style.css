@@ -100,3 +100,4 @@
 @keyframes photo-shimmer{0%{background-position:100% 0}100%{background-position:-100% 0}}
 @keyframes photo-spin{to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.photo-skeleton,.photo-spinner{animation:none}}
+.photo-unavailable{height:100%;display:flex;align-items:center;justify-content:center;background:#e5e9df;color:#829184;font-size:12px}

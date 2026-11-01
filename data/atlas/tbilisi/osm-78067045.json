@@ -109,6 +109,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-78067045/1.webp",
+      "thumb": "photos/tbilisi/osm-78067045/1-thumb.webp",
       "author": "Alsandro",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -117,6 +118,7 @@
     },
     {
       "file": "photos/tbilisi/osm-78067045/2.webp",
+      "thumb": "photos/tbilisi/osm-78067045/2-thumb.webp",
       "author": "Jelger Groeneveld",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",

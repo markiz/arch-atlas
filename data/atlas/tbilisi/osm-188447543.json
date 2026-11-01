@@ -273,6 +273,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-188447543/1.webp",
+      "thumb": "photos/tbilisi/osm-188447543/1-thumb.webp",
       "author": "Андрей Романенко",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -281,6 +282,7 @@
     },
     {
       "file": "photos/tbilisi/osm-188447543/2.webp",
+      "thumb": "photos/tbilisi/osm-188447543/2-thumb.webp",
       "author": "Goichev",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

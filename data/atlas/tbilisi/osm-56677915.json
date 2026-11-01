@@ -117,6 +117,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-56677915/1.webp",
+      "thumb": "photos/tbilisi/osm-56677915/1-thumb.webp",
       "author": "JohnDodelande_Georgie",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
@@ -125,6 +126,7 @@
     },
     {
       "file": "photos/tbilisi/osm-56677915/2.webp",
+      "thumb": "photos/tbilisi/osm-56677915/2-thumb.webp",
       "author": "Vyacheslav Argenberg",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",

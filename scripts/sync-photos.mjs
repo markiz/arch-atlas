@@ -69,5 +69,5 @@ export async function syncPhotos({root=ROOT,quiet=false}={}){
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const result=await syncPhotos();
- console.log(`Published ${result.files} photos: ${result.copied} copied, ${result.kept} unchanged, ${result.removed} stale removed.`);
+ console.log(`Published ${result.files} photo files: ${result.copied} copied, ${result.kept} unchanged, ${result.removed} stale removed.`);
 }

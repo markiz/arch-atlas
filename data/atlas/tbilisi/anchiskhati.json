@@ -71,6 +71,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/anchiskhati/1.webp",
+      "thumb": "photos/tbilisi/anchiskhati/1-thumb.webp",
       "author": "Gerd Eichmann",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
@@ -79,6 +80,7 @@
     },
     {
       "file": "photos/tbilisi/anchiskhati/2.webp",
+      "thumb": "photos/tbilisi/anchiskhati/2-thumb.webp",
       "author": "Kober",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",

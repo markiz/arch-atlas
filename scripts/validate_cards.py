@@ -222,18 +222,30 @@ def main() -> int:
                 if not isinstance(photo, dict):
                     errors.append(f'{label}: photo[{index}] must be an object')
                     continue
-                for key in ('file', 'author', 'license', 'licenseUrl', 'source', 'modifications'):
+                for key in ('file', 'thumb', 'author', 'license', 'licenseUrl', 'source', 'modifications'):
                     if not isinstance(photo.get(key), str) or not photo[key].strip():
                         errors.append(f'{label}: photo[{index}].{key} missing')
-                file_name = photo.get('file')
-                if isinstance(file_name, str):
+                card_id = str(card.get('id', ''))
+                prefix = f'photos/tbilisi/{card_id}/'
+                for field in ('file', 'thumb'):
+                    file_name = photo.get(field)
+                    if not isinstance(file_name, str):
+                        continue
                     if '..' in file_name or file_name.startswith('/'):
-                        errors.append(f'{label}: photo[{index}] unsafe path')
+                        errors.append(f'{label}: photo[{index}].{field} unsafe path')
+                    if not file_name.startswith(prefix):
+                        errors.append(f'{label}: photo[{index}].{field} must live under {prefix}')
                     if file_name in seen_files:
-                        errors.append(f'{label}: duplicate photo file {file_name}')
+                        errors.append(f'{label}: duplicate photo path {file_name}')
                     seen_files.add(file_name)
-                    if file_name and not webp_ok(ROOT / 'public/atlas' / file_name):
-                        errors.append(f'{label}: photo[{index}] is not a WebP file')
+                    if file_name and not webp_ok(ROOT / 'data' / file_name):
+                        errors.append(f'{label}: photo[{index}].{field} is not a WebP file')
+                file_name = photo.get('file')
+                thumb_name = photo.get('thumb')
+                if isinstance(file_name, str) and isinstance(thumb_name, str):
+                    expected = f'{file_name[:-5]}-thumb.webp' if file_name.endswith('.webp') else ''
+                    if thumb_name != expected:
+                        errors.append(f'{label}: photo[{index}].thumb does not match file')
         card_progress.advance(label)
     card_progress.finish()
 

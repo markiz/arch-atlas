@@ -157,6 +157,7 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1126053463/1.webp",
+      "thumb": "photos/tbilisi/osm-1126053463/1-thumb.webp",
       "author": "Wagon",
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",

@@ -10,6 +10,7 @@
     "check": "node scripts/sync-photos.mjs && node scripts/assemble-atlas.mjs && tsc --noEmit && node scripts/check-data.mjs",
     "photos:sync": "node scripts/sync-photos.mjs",
     "photos:migrate": "node scripts/migrate-photo-storage.mjs",
+    "photos:thumbs": "python3 scripts/create-photo-thumbs.py",
     "test": "node --test tests/*.test.mjs",
     "verify": "node scripts/verify-dist.mjs"
   },

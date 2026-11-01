@@ -67,7 +67,7 @@ function Loader({onReady}:{onReady:(d:Data)=>void}){
   }};await Promise.all(Array.from({length:Math.min(6,initialFiles.length)},loadNext));
   const decode=(path:string)=>{const bytes=files.get(path);if(!bytes)throw new Error(`В пакете нет ${path}`);return JSON.parse(new TextDecoder().decode(bytes))};
   const buildings:Building[]=decode('buildings.json'),basemap:FeatureCollection=decode('basemap.geojson');
-  for(const item of buildings)for(const photo of item.photos??(item.photo?[item.photo]:[]))if(!photoFiles.has(photo.file))throw new Error(`В пакете нет фото ${item.name}`);
+  for(const item of buildings)for(const photo of item.photos??(item.photo?[item.photo]:[]))if(!photoFiles.has(photo.file)||!photoFiles.has(photo.thumb))throw new Error(`В пакете нет фото ${item.name}`);
   if(!cancelled){handedOff=true;onReady({buildings,basemap,buildingOutlines:optionalOutlines,photoFiles})}
  }catch(e){controller.abort();if(!cancelled)setError(e instanceof Error?e.message:'Ошибка загрузки')}}run();return()=>{cancelled=true;controller.abort()}},[attempt]);
  return <div className="loading"><div className="loading-mark">ა<span>•</span></div><p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p><h1>{t('Атлас Тбилиси')}</h1><div className="loader-line"/><p>{error||t(status)}</p>{error&&<button className="primary-button" onClick={()=>setAttempt(x=>x+1)}>{t('Попробовать снова')}</button>}</div>
@@ -76,7 +76,7 @@ function CardPhoto({building,photoFiles}:{building:Building;photoFiles:Data['pho
  const {t}=useI18n();
  const photo=(building.photos??(building.photo?[building.photo]:[]))[0];
  const {ref,visible}=useVisibility<HTMLSpanElement>();
- const {url,error}=useLazyPhoto(photo?.file,photoFiles,visible);
+ const {url,error}=useLazyPhoto(photo?.thumb??photo?.file,photoFiles,visible);
  if(!photo)return <div className="no-photo">{t('Фотографии пока нет')}</div>;
  return <span ref={ref} className="card-photo">{url?<img src={url} alt=""/>:error?<div className="no-photo">{t('Фото недоступно')}</div>:<span className="photo-skeleton" aria-hidden="true"/>}</span>
 }
@@ -101,12 +101,12 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
   <div className="inspect-top"><span>{t("ОБЪЕКТ АТЛАСА")} <span className="index-no">/ {building.id.toUpperCase()}</span></span><button ref={close} className="icon-btn" onClick={onClose} aria-label={t("Закрыть карточку")}><Icon name="close"/></button></div>
   <div className="inspect-scroll">
    <div className="photo-wrap">
-    {images.length&&preview?<>
+    {images.length?preview?<>
      <button ref={photoOpener} className="photo-open" onClick={()=>setLightboxOpen(true)} aria-label={t("Открыть фотографию ")+`${photoIndex+1}`+t(" на весь экран")}><img src={preview} alt={`${name}, фотография ${photoIndex+1}`}/></button>
      {images.length>1&&<><button className="photo-prev" aria-label={t("Предыдущая фотография")} onClick={previousPhoto}>‹</button><button className="photo-next" aria-label={t("Следующая фотография")} onClick={nextPhoto}>›</button></>}
      <span className="photo-number">{String(photoIndex+1).padStart(2,"0")} / {String(images.length).padStart(2,"0")}</span>
      {photos.phase==='preview'&&<span className="photo-loading-note">{t('Галерея загружается…')}</span>}
-    </>:photos.status==='error'?<div className="photo-error"><p>{photos.error||t('Не удалось загрузить фотографии')}</p><button onClick={photos.retry}>{t('Попробовать снова')}</button></div>:images.length||photos.status==='loading'?<div className="photo-loading"><span className="photo-spinner" aria-hidden="true"/><span>{t('Загружаем фотографии…')}</span></div>:<div className="no-photo">{t('Фотографии пока нет')}</div>}
+    </>:photos.status==='error'?<div className="photo-error"><p>{photos.error||t('Не удалось загрузить фотографии')}</p><button onClick={photos.retry}>{t('Попробовать снова')}</button></div>:photos.phase==='preview'?<div className="photo-loading"><span className="photo-spinner" aria-hidden="true"/><span>{t('Загружаем фотографии…')}</span></div>:<div className="photo-unavailable"><span>{t('Фото недоступно')}</span>{images.length>1&&<><button className="photo-prev" aria-label={t("Предыдущая фотография")} onClick={previousPhoto}>‹</button><button className="photo-next" aria-label={t("Следующая фотография")} onClick={nextPhoto}>›</button></>}<span className="photo-number">{String(photoIndex+1).padStart(2,"0")} / {String(images.length).padStart(2,"0")}</span></div>:photos.status==='loading'?<div className="photo-loading"><span className="photo-spinner" aria-hidden="true"/><span>{t('Загружаем фотографии…')}</span></div>:<div className="no-photo">{t('Фотографии пока нет')}</div>}
    </div>
    <div className="inspect-body"><div className="inspect-meta"><span><span className="period-dot" style={{background:p.color}}/>{t(p.label)}</span><span>{district}</span></div>
     <h2>{name}</h2><p className="georgian">{building.nameKa}</p><a className="address address-link" href={googleMapsUrl} target="_blank" rel="noopener noreferrer" aria-label={t("Открыть адрес «")+(address||t('Адрес не установлен'))+t("» в Google Картах")}><Icon name="pin" size={15}/>{address||t('Адрес не установлен')}<Icon name="external" size={12}/></a>

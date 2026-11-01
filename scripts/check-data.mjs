@@ -4,7 +4,7 @@ import {Progress} from './lib/progress.mjs';
 const data=JSON.parse(await readFile('public/atlas/buildings.json','utf8'));
 const geo=JSON.parse(await readFile('public/atlas/basemap.geojson','utf8'));
 const buildingOutlines=JSON.parse(await readFile('public/atlas/building-outlines.geojson','utf8'));
-const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,withPhotos=0,galleries=0;
+const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,previews=0,withPhotos=0,galleries=0;
 assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.features.length>0,'Empty building outlines');
 assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
 assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
@@ -32,17 +32,21 @@ for(const b of data){
  const images=b.photos??(b.photo?[b.photo]:[]);assert(Array.isArray(images),`${b.id}: photos`);if(images.length)withPhotos++;if(images.length>1)galleries++;
  const paths=new Set();
  for(const p of images){
-  for(const k of ['file','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
-  assert(!p.file.includes('..')&&!p.file.startsWith('/')&&!paths.has(p.file),`${b.id}: invalid or duplicate photo path`);paths.add(p.file);
+  for(const k of ['file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
   const prefix=`photos/tbilisi/${b.id}/`;
-  assert(p.file.startsWith(prefix)&&/^\d+\.webp$/.test(p.file.slice(prefix.length)),`${b.id}: photo must live under ${prefix}<number>.webp`);
-  const source='data/'+p.file;
-  const published='public/atlas/'+p.file;
-  await access(source);await access(published);
-  for(const file of [source,published]){const bytes=await readFile(file);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${file}`)}
-  photos++;
+  const name=p.file.slice(prefix.length);
+  assert(p.file.startsWith(prefix)&&/^\d+\.webp$/.test(name),`${b.id}: photo must live under ${prefix}<number>.webp`);
+  assert(p.thumb===`${prefix}${name.replace(/\.webp$/,'-thumb.webp')}`,`${b.id}: photo preview must match ${prefix}<number>-thumb.webp`);
+  for(const file of [p.file,p.thumb]){
+   assert(!file.includes('..')&&!file.startsWith('/')&&!paths.has(file),`${b.id}: invalid or duplicate photo path`);paths.add(file);
+   const source='data/'+file;
+   const published='public/atlas/'+file;
+   await access(source);await access(published);
+   for(const path of [source,published]){const bytes=await readFile(path);assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${path}`)}
+  }
+  photos++;previews++;
  }
  progress.advance(b.id);
 }
 progress.finish();
-console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos, ${withPhotos} buildings with photos, ${galleries} with multiple photos; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`);
+console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos (${previews} previews), ${withPhotos} buildings with photos, ${galleries} with multiple photos; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`);

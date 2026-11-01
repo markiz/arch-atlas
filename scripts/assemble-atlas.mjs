@@ -71,10 +71,17 @@ function validatePhoto(file,photo,index,seen,city,id){
   if(city){
     const prefix=`photos/${city}/${id}/`;
     if(!photo.file.startsWith(prefix))fail(file,`photos[${index}].file must live under ${prefix}`);
-    if(!/^\d+\.webp$/.test(photo.file.slice(prefix.length)))fail(file,`photos[${index}].file must be named <number>.webp under ${prefix}`);
+    const name=photo.file.slice(prefix.length);
+    if(!/^\d+\.webp$/.test(name))fail(file,`photos[${index}].file must be named <number>.webp under ${prefix}`);
+    requireString(file,photo.thumb,`photos[${index}].thumb`);
+    if(photo.thumb!==`${prefix}${name.replace(/\.webp$/,'-thumb.webp')}`)fail(file,`photos[${index}].thumb must match ${prefix}<number>-thumb.webp`);
   }
   if(seen.has(photo.file))fail(file,`duplicate photo file ${photo.file}`);
   seen.add(photo.file);
+  if(city){
+    if(seen.has(photo.thumb))fail(file,`duplicate photo preview ${photo.thumb}`);
+    seen.add(photo.thumb);
+  }
   if(photo.description!==undefined)requireString(file,photo.description,`photos[${index}].description`,{allowEmpty:true});
   return photo;
 }
