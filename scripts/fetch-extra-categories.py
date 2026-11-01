@@ -1,7 +1,7 @@
 import json,urllib.request,urllib.parse,concurrent.futures,io,re,html,time
 from pathlib import Path
 from PIL import Image
-from atlas_source import save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 root=Path(__file__).resolve().parent.parent
 research=json.loads((root/'raw/gallery-research.json').read_text());gals=json.loads((root/'data/gallery-sources.json').read_text());
@@ -28,7 +28,7 @@ def clean(v):return html.unescape(re.sub('<[^>]*>','',v or '')).strip()
 def go(job):
  key,category=job
  try:
-  p={'action':'query','format':'json','generator':'categorymembers','gcmtitle':'Category:'+category,'gcmtype':'file','gcmlimit':'15','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'900'}
+  p={'action':'query','format':'json','generator':'categorymembers','gcmtitle':'Category:'+category,'gcmtype':'file','gcmlimit':'15','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'1920'}
   j=json.loads(get('https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(p)))
   old={x['source'] for x in gals.get(key,[])}
   for page in j.get('query',{}).get('pages',{}).values():
@@ -38,7 +38,7 @@ def go(job):
    if not (author and license and licenseurl and url and source and source not in old):continue
    if not (license.startswith('CC BY') or license in ('CC0','Public domain','Public Domain')):continue
    if len(author)>180:author=author.split('\n')[0][:180]
-   im=Image.open(io.BytesIO(get(url)));im.thumbnail((1000,1000));relative=save_photo(im.convert('RGB'),key,quality=73,method=4)
+   im=Image.open(io.BytesIO(get(url)));im=fit_width(im, FREE_PHOTO_WIDTH);relative=save_photo(im.convert('RGB'),key,quality=PHOTO_QUALITY,method=4)
    return key,{'file':relative,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception as e:print('error',key,str(e),flush=True)
  return key,None

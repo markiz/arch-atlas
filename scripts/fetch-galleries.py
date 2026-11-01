@@ -1,6 +1,6 @@
 import json,pathlib,urllib.parse,urllib.request,time,re,html,concurrent.futures,threading,io
 from PIL import Image
-from atlas_source import save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 rows=json.loads((root/'raw/research-candidates.json').read_text()); entities=json.loads((root/'raw/wikidata-heritage.json').read_text());existing=json.loads((root/'public/atlas/buildings.json').read_text());meta={}; lock=threading.Lock()
@@ -33,7 +33,7 @@ for r in rows:
  entries['osm-'+r['osmId']]={'p18':im[0] if im else None,'category':cat[0] if cat else None,'files':[]}
 manual={'opera':'Tbilisi Opera House','writers':"Writers' House of Georgia",'imeli':'IMEL Building, Tbilisi','rustaveli':'Rustaveli Theatre','kashveti':'Kashveti Church','anchiskhati':'Anchiskhati Basilica','sioni':'Sioni Cathedral of Tbilisi','metekhi':'Metekhi church','synagogue':'Great Synagogue of Tbilisi','conservatoire':'Tbilisi State Conservatoire'}
 for b in existing:entries[b['id']]={'p18':None,'category':manual[b['id']],'files':[]}
-base={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'900'}
+base={'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'1920'}
 # Resolve all first images in batches. Keep the exact original title from Wikidata.
 first=[('osm-'+r['osmId'],claims(r['qid'],'P18')[0]) for r in rows if claims(r['qid'],'P18')]
 primary=Progress(len(first),'Wikimedia primary images')
@@ -81,7 +81,7 @@ def download(job):
  try:
   req=urllib.request.Request(info['url'],headers=headers)
   with urllib.request.urlopen(req,timeout=45) as r:raw=r.read()
-  im=Image.open(io.BytesIO(raw));im.thumbnail((1000,1000));relative=save_photo(im.convert('RGB'),key,quality=73,method=4)
+  im=Image.open(io.BytesIO(raw));im=fit_width(im, FREE_PHOTO_WIDTH);relative=save_photo(im.convert('RGB'),key,quality=PHOTO_QUALITY,method=4)
   return(key,i,{'file':relative,**{k:v for k,v in info.items() if k not in ('url','title')}})
  except Exception as e:return(key,i,None)
 results={}

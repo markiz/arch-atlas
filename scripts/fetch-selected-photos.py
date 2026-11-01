@@ -24,7 +24,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import read_cards, save_photo, write_card
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, read_cards, save_photo, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -66,7 +66,7 @@ def main() -> int:
     print(f'Requesting Commons metadata for {len(wanted)} cards...', file=sys.stderr, flush=True)
     params = urllib.parse.urlencode({
         'action': 'query', 'format': 'json', 'prop': 'imageinfo',
-        'iiprop': 'url|extmetadata', 'iiurlwidth': '1200', 'titles': titles,
+        'iiprop': 'url|extmetadata', 'iiurlwidth': '1920', 'titles': titles,
     })
     response = json.loads(fetch(API + '?' + params).decode('utf-8'))
     pages = {page['title']: page for page in response.get('query', {}).get('pages', {}).values()}
@@ -125,15 +125,17 @@ def main() -> int:
             progress.advance(f'{card_id}: would add')
             continue
         image = Image.open(io.BytesIO(fetch(info.get('thumburl') or info['url'])))
-        image.thumbnail((1000, 1000))
-        relative = save_photo(image.convert('RGB'), card_id, quality=80)
+        original_width = image.width
+        image = fit_width(image, FREE_PHOTO_WIDTH)
+        resized = image.width < original_width
+        relative = save_photo(image.convert('RGB'), card_id, quality=PHOTO_QUALITY)
         card.setdefault('photos', []).append({
             'file': relative,
             'author': author,
             'license': license_name,
             'licenseUrl': license_url,
             'source': source,
-            'modifications': 'уменьшен размер, преобразовано в WebP',
+            'modifications': (f'уменьшен размер до {image.width} px по ширине, преобразовано в WebP' if resized else 'преобразовано в WebP'),
             'description': candidate.get('note', ''),
         })
         modified.append(card)

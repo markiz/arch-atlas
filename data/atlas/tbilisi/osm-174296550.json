@@ -150,8 +150,26 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Metro_Rustaveli.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
       "description": "наземный павильон станции метро «Руставели»"
+    },
+    {
+      "file": "photos/tbilisi/osm-174296550/2.webp",
+      "thumb": "photos/tbilisi/osm-174296550/2-thumb.webp",
+      "author": "Aleksey Muhranoff",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Metro_station_%27Rustaveli%27,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
+      "modifications": "преобразовано в WebP"
+    },
+    {
+      "file": "photos/tbilisi/osm-174296550/3.webp",
+      "thumb": "photos/tbilisi/osm-174296550/3-thumb.webp",
+      "author": "Levan Gokadze from Tbilisi, Georgia",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi,_Rustaveli_Metro_Station_(9713585515).jpg",
+      "modifications": "преобразовано в WebP"
     }
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4209",

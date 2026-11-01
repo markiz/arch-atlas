@@ -149,7 +149,16 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Juma_Mosque_of_Tbilisi.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
+    },
+    {
+      "file": "photos/tbilisi/osm-506741615/2.webp",
+      "thumb": "photos/tbilisi/osm-506741615/2-thumb.webp",
+      "author": "Reda Kerbush",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Juma_Mosque_of_Tbilisi_from_the_top.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://www.openstreetmap.org/way/506741615",

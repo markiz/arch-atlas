@@ -1,12 +1,12 @@
 import urllib.request, urllib.parse, json, pathlib, re, html, concurrent.futures, io
 from PIL import Image
-from atlas_source import attach_photos, read_cards, save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, attach_photos, read_cards, save_photo
 from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
 cards = read_cards()
 names = {'conservatoire': 'Tbilisi State Conservatoire F7780005.jpg'}
 # The existing hero may already use a chosen file; duplicates are removed by source URL later.
-params = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': '900', 'titles': '|'.join('File:' + x for x in names.values())})
+params = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'prop': 'imageinfo', 'iiprop': 'url|extmetadata', 'iiurlwidth': '1920', 'titles': '|'.join('File:' + x for x in names.values())})
 h = {'User-Agent': 'TbilisiAtlasResearch/0.2 (educational architecture atlas)'}
 def fetch(url):
     with urllib.request.urlopen(urllib.request.Request(url, headers=h), timeout=45) as r: return r.read()
@@ -23,7 +23,7 @@ def one(item):
         if len(author) > 180: author = author.split('\n')[0][:180]
         if any(p.get('source') == info.get('descriptionurl') for p in cards.get(key, {}).get('photos', [])):
             return key, None
-        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img.thumbnail((1000, 1000)); relative = save_photo(img.convert('RGB'), key, quality=76)
+        b = fetch(info.get('thumburl') or info['url']); img = Image.open(io.BytesIO(b)); img = fit_width(img, FREE_PHOTO_WIDTH); relative = save_photo(img.convert('RGB'), key, quality=PHOTO_QUALITY)
         return key, {'file': relative, 'author': author, 'license': lic, 'licenseUrl': licenseurl, 'source': info['descriptionurl'], 'modifications': 'уменьшен размер, преобразовано в WebP'}
     except Exception as ex:
         print('Error', key, ex, flush=True)

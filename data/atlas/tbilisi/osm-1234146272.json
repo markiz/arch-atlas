@@ -78,7 +78,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98._%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98_%E1%83%94%E1%83%99%E1%83%90%E1%83%A2%E1%83%94%E1%83%A0%E1%83%98%E1%83%9C%E1%83%94%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_10.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     },
     {
       "file": "photos/tbilisi/osm-1234146272/2.webp",
@@ -87,7 +87,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:%E1%83%A1%E1%83%90%E1%83%AA%E1%83%AE%E1%83%9D%E1%83%95%E1%83%A0%E1%83%94%E1%83%91%E1%83%94%E1%83%9A%E1%83%98_%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%98._%E1%83%92%E1%83%90%E1%83%91%E1%83%90%E1%83%A8%E1%83%95%E1%83%98%E1%83%9A%E1%83%98_%E1%83%94%E1%83%99%E1%83%90%E1%83%A2%E1%83%94%E1%83%A0%E1%83%98%E1%83%9C%E1%83%94%E1%83%A1_%E1%83%A5%E1%83%A3%E1%83%A9%E1%83%90_10_(1).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://www.openstreetmap.org/way/1234146272",

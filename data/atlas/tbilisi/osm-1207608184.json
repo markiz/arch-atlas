@@ -99,7 +99,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1207608184/1.webp",
-      "thumb": "photos/tbilisi/osm-1207608184/1-thumb.webp",
+      "author": "Александр Сигачёв",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_-_Saint_Nicholas_Church_in_Kharpukhi_-_2025-10.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-1207608184/1-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-1207608184/2.webp",
+      "thumb": "photos/tbilisi/osm-1207608184/2-thumb.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3590",

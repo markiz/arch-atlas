@@ -20,7 +20,7 @@ import urllib.request
 from pathlib import Path
 
 from PIL import Image
-from atlas_source import read_cards, save_photo, write_card
+from atlas_source import UNKNOWN_PHOTO_WIDTH, fit_width, read_cards, save_photo, write_card
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -71,15 +71,18 @@ def main() -> int:
             progress.advance(f'{card_id}: would add')
             continue
         image = Image.open(io.BytesIO(fetch(candidate['photo'])))
-        image.thumbnail((700, 700))
-        relative = save_photo(image.convert('RGB'), card_id, quality=70)
+        original_width = image.width
+        image = fit_width(image, UNKNOWN_PHOTO_WIDTH)
+        resized = image.width < original_width
+        width = image.width
+        relative = save_photo(image.convert('RGB'), card_id, quality=72)
         card.setdefault('photos', []).append({
             'file': relative,
             'author': 'Реестр памятников Грузии (автор не указан)',
             'license': 'Не установлена',
             'licenseUrl': candidate['record'],
             'source': candidate['photo'],
-            'modifications': 'уменьшен размер, преобразовано в WebP; полное качество не используется',
+            'modifications': (f'уменьшен размер до {width} px по ширине, преобразовано в WebP; полное качество не используется' if resized else 'преобразовано в WebP; полное качество не используется'),
             'description': candidate.get('note', ''),
         })
         modified.append(card)

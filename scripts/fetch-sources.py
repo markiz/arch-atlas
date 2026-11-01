@@ -1,6 +1,6 @@
 import json, pathlib, urllib.request, urllib.parse, re, html, concurrent.futures, time
 from PIL import Image
-from atlas_source import save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 HEAD={'User-Agent':'TbilisiArchitectureAtlas/0.1 (personal educational prototype)'}
@@ -36,7 +36,7 @@ def get(item):
   # The source contains the original Commons filename before the generated thumbnail name.
   parts=urllib.parse.urlparse(thumb).path.split('/')
   filename=urllib.parse.unquote(parts[-2] if 'thumb' in parts else parts[-1])
-  params=urllib.parse.urlencode({'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'1000','titles':'File:'+filename})
+  params=urllib.parse.urlencode({'action':'query','format':'json','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'1920','titles':'File:'+filename})
   commons=json.loads(read('https://commons.wikimedia.org/w/api.php?'+params))
   page=next(iter(commons['query']['pages'].values())); info=page['imageinfo'][0]; meta=info.get('extmetadata',{})
   val=lambda k:clean(meta.get(k,{}).get('value',''))
@@ -44,7 +44,7 @@ def get(item):
   if not license or not artist or not licenseurl:return {'id':key,'error':'license or author missing','coordinates':wiki.get('coordinates'),'title':wiki.get('title'),'photo':filename}
   imgurl=info.get('thumburl',info.get('url'))
   img=read(imgurl); temp=ROOT/'raw'/f'{key}.image';temp.write_bytes(img)
-  im=Image.open(temp);im.thumbnail((1100,1100));relative=save_photo(im.convert('RGB'),key,quality=78,method=5);temp.unlink()
+  im=Image.open(temp);im=fit_width(im, FREE_PHOTO_WIDTH);relative=save_photo(im.convert('RGB'),key,quality=PHOTO_QUALITY,method=5);temp.unlink()
   result={'id':key,'title':wiki.get('title'),'coordinates':wiki.get('coordinates'),'wiki':wiki.get('content_urls',{}).get('desktop',{}).get('page'),'photo':{'file':relative,'author':artist,'license':license,'licenseUrl':licenseurl,'source':info.get('descriptionurl'),'modifications':'уменьшен размер, преобразовано в WebP'},'extract':wiki.get('extract','')}
   return result
  except Exception as e: return {'id':key,'error':str(e)}

@@ -17,6 +17,20 @@ SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 PHOTOS_DIR = ROOT / 'data/photos'
 _PHOTO_LOCK = threading.Lock()
 
+# Photo width policy: free Commons licenses are published at up to 1920 px;
+# unknown/commercial sources stay at 1200 px and are never upscaled.
+FREE_PHOTO_WIDTH = 1920
+UNKNOWN_PHOTO_WIDTH = 1200
+PHOTO_QUALITY = 82
+
+
+def fit_width(image, width: int = FREE_PHOTO_WIDTH):
+    """Downscale to the given width, preserving aspect and never upscaling."""
+    if image.width <= width:
+        return image
+    height = max(1, round(image.height * width / image.width))
+    return image.resize((width, height))
+
 
 def read_cards() -> dict[str, dict[str, Any]]:
     cards: dict[str, dict[str, Any]] = {}

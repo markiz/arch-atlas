@@ -91,8 +91,17 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:109_Agmashenebeli.jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
       "description": "Уличный фасад дома 109 по проспекту Агмашенебели; файл загружен в рамках Wiki Loves Monuments 2018, GPS 41,7121/44,7957 совпадает с реестровой точкой"
+    },
+    {
+      "file": "photos/tbilisi/osm-1013496106/2.webp",
+      "thumb": "photos/tbilisi/osm-1013496106/2-thumb.webp",
+      "author": "Eka Samkharadze",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi._David_Agmashenebeli_avenue.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3121",

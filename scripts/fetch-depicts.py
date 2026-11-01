@@ -1,6 +1,6 @@
 import json,urllib.parse,urllib.request,re,html,io,time,pathlib,concurrent.futures
 from PIL import Image
-from atlas_source import read_cards, save_photo
+from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, read_cards, save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
 cards=read_cards();candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
@@ -15,7 +15,7 @@ def clean(x):return html.unescape(re.sub('<[^>]*>','',x or '')).strip()
 def go(card):
  key=card['id'];q=qmap.get(key,'');current=card.get('photos',[])
  if not q or len(current)>=2:return key,None
- params={'action':'query','format':'json','generator':'search','gsrsearch':f'haswbstatement:P180={q}','gsrnamespace':'6','gsrlimit':'8','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'900'}
+ params={'action':'query','format':'json','generator':'search','gsrsearch':f'haswbstatement:P180={q}','gsrnamespace':'6','gsrlimit':'8','prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'1920'}
  try:
   j=json.loads(fetch('https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(params)))
   known={p['source'] for p in current}
@@ -27,7 +27,7 @@ def go(card):
    if not (author and license and licenseurl and url and source and source not in known):continue
    if not (license.startswith('CC BY') or license in ('CC0','Public domain','Public Domain')):continue
    if len(author)>180:author=author.split('\n')[0][:180]
-   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));relative=save_photo(img.convert('RGB'),key,quality=73,method=4)
+   raw=fetch(url);img=Image.open(io.BytesIO(raw));img.thumbnail((1000,1000));relative=save_photo(img.convert('RGB'),key,quality=PHOTO_QUALITY,method=4)
    return key,{'file':relative,'author':author,'license':license,'licenseUrl':licenseurl,'source':source,'modifications':'уменьшен размер, преобразовано в WebP'}
  except Exception:return key,None
  return key,None

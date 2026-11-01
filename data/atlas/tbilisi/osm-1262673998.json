@@ -67,7 +67,16 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1262673998/1.webp",
-      "thumb": "photos/tbilisi/osm-1262673998/1-thumb.webp",
+      "author": "Jaba1977",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tbilisi%27s_Sioni_(4).jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-1262673998/1-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-1262673998/2.webp",
+      "thumb": "photos/tbilisi/osm-1262673998/2-thumb.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3447",

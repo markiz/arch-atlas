@@ -117,7 +117,25 @@
   "photos": [
     {
       "file": "photos/tbilisi/osm-1225299270/1.webp",
-      "thumb": "photos/tbilisi/osm-1225299270/1-thumb.webp",
+      "author": "Shalvabaiashvili",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:%E1%83%93%E1%83%90%E1%83%95%E1%83%98%E1%83%97_%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_44.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-1225299270/1-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-1225299270/2.webp",
+      "author": "Jonathan Cardy",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:David_Agmashenebeli_Ave,_Tbilisi_(Sept_2012)_44.jpg",
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+      "thumb": "photos/tbilisi/osm-1225299270/2-thumb.webp"
+    },
+    {
+      "file": "photos/tbilisi/osm-1225299270/3.webp",
+      "thumb": "photos/tbilisi/osm-1225299270/3-thumb.webp",
       "author": "Реестр памятников Грузии (автор не указан)",
       "license": "Не установлена",
       "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2671",

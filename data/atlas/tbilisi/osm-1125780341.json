@@ -66,7 +66,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(04).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     },
     {
       "file": "photos/tbilisi/osm-1125780341/2.webp",
@@ -75,7 +75,7 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:2014_Tbilisi,_Cerkiew_na_ulicy_Ioane_Szawteli_(01).jpg",
-      "modifications": "уменьшен размер, преобразовано в WebP"
+      "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP"
     }
   ],
   "source": "https://www.openstreetmap.org/way/1125780341",
