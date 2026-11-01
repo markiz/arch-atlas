@@ -42,14 +42,21 @@ FACADE_MAX = 35
 LIGHTING_MAX = 25
 FRAMING_MAX = 10
 BASE_MAX = RESOLUTION_MAX + FACADE_MAX + LIGHTING_MAX + FRAMING_MAX
+# A separate smooth penalty replaces the binary low-resolution tag weight:
+# at 800 px and wider there is no penalty; below 800 px the final score keeps
+# a linearly growing share, down to 50% at width 0.
+LOW_RESOLUTION_THRESHOLD = 800
+LOW_RESOLUTION_MAX_PENALTY = 0.5
 
 # Multiplicative penalties. They are deliberately larger than ordinary
 # composition differences: a photo with several technical defects should not
 # reach the top of a gallery merely because it is large.
+# `low-resolution` stays in the taxonomy for search/filtering but has an empty
+# weight; resolution is handled by `resolution_factor` instead.
 PENALTIES: dict[str, float] = {
     'blurry': 0.35,
     'dark': 0.35,
-    'low-resolution': 0.45,
+    'low-resolution': 0.0,
     'subject-far': 0.22,
     'tilted': 0.18,
     'foreground-distraction': 0.18,
@@ -216,12 +223,18 @@ def framing_score(width: int, height: int) -> int:
     return 2
 
 
-def quality_factor(tags: set[str], width: int) -> tuple[float, float]:
+def quality_factor(tags: set[str]) -> tuple[float, float]:
     penalty = sum(value for tag, value in PENALTIES.items() if tag in tags)
-    if width < 800 and 'low-resolution' not in tags:
-        penalty += PENALTIES['low-resolution']
     penalty = min(penalty, 0.85)
     return max(0.15, 1.0 - penalty), penalty
+
+
+def resolution_factor(width: int) -> float:
+    """Linear resolution factor: 1.0 at >=800 px, 0.5 at width 0."""
+    if width >= LOW_RESOLUTION_THRESHOLD:
+        return 1.0
+    fraction = max(0.0, width / LOW_RESOLUTION_THRESHOLD)
+    return 1.0 - LOW_RESOLUTION_MAX_PENALTY * (1.0 - fraction)
 
 
 def visibility_cap(
@@ -274,14 +287,15 @@ def rate_photo(
     )
     framing = framing_score(width, height)
     base = resolution + facade + lighting + framing
-    factor, penalty = quality_factor(tags, width)
+    factor, penalty = quality_factor(tags)
+    size_factor = resolution_factor(width)
     cap = visibility_cap(
         mean,
         p90,
         nighttime='nighttime' in tags,
         dark='dark' in tags,
     )
-    rating = min(BASE_MAX, round_half_up(base * factor), cap)
+    rating = min(BASE_MAX, round_half_up(base * factor * size_factor), cap)
     breakdown = {
         'resolution': resolution,
         'facade': facade,
@@ -290,6 +304,7 @@ def rate_photo(
         'base': base,
         'penalty': round(penalty, 2),
         'qualityFactor': round(factor, 2),
+        'resolutionFactor': round(size_factor, 3),
         'cap': cap,
         'mean': round(mean, 1),
         'stdDev': round(standard_deviation, 1),
