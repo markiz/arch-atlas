@@ -28,7 +28,7 @@ except ImportError:
     sys.exit('This script requires Pillow: python3 -m pip install pillow')
 
 try:
-    from shapely.geometry import shape
+    from shapely.geometry import Point, shape
     from shapely.validation import make_valid
 except ImportError:
     sys.exit('This script requires shapely: python3 -m pip install shapely')
@@ -143,6 +143,17 @@ def main() -> int:
         'yearLabelId': attributes.get('yearLabels', {}),
         'districtId': attributes.get('districts', {}),
     }
+    district_shapes: dict[str, Any] = {}
+    for district_id, entry in tables['districtId'].items():
+        if not isinstance(entry, dict) or entry.get('geometry') is None:
+            continue
+        try:
+            district_geometry = shape(entry['geometry'])
+            if not district_geometry.is_valid:
+                district_geometry = make_valid(district_geometry)
+            district_shapes[district_id] = district_geometry
+        except Exception as error:
+            errors.append(f'aux/tbilisi/districts.json: {district_id}.geometry cannot be parsed: {error}')
     architects = attributes.get('architects', {})
     paths = sorted(SOURCE_DIR.glob('*.json'))
     if not paths:
@@ -189,6 +200,15 @@ def main() -> int:
             value = card.get(field)
             if value not in table:
                 errors.append(f'{label}: unknown {field} reference {value!r}')
+        district_id = card.get('districtId')
+        district_shape = district_shapes.get(district_id)
+        coordinates = card.get('coordinates')
+        if district_shape is not None and isinstance(coordinates, list) and len(coordinates) == 2 and all(
+            isinstance(value, (int, float)) for value in coordinates
+        ):
+            point = Point(coordinates[0], coordinates[1])
+            if not (district_shape.contains(point) or district_shape.touches(point)):
+                errors.append(f'{label}: coordinates are outside district polygon {district_id!r}')
         architect_ids = card.get('architectIds')
         if not isinstance(architect_ids, list):
             errors.append(f'{label}: architectIds must be a list')

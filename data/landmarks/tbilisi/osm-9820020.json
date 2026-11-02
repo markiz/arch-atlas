@@ -30,7 +30,7 @@
   ],
   "source": "https://www.openstreetmap.org/relation/9820020",
   "otherSources": [],
-  "districtId": null,
+  "districtId": "kala",
   "heritage": {
     "status": "local",
     "registryId": null,

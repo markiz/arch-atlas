@@ -31,7 +31,7 @@ data/landmarks/tbilisi/osm-1064270003.json
 | `coordinates` | да | `[lon, lat]` | Точка входа/здания, 6 знаков после запятой |
 | `source` | да | URL | Основной источник сведений |
 | `otherSources` | нет | URL[] | Дополнительные источники |
-| `districtId` | нет | string | Район из `aux/tbilisi/districts.json`, если известен |
+| `districtId` | нет | string | Канонический район из `aux/tbilisi/districts.json`; `tbilisi` и `old-tbilisi` запрещены. Правила — [district-attribution.md](district-attribution.md) |
 | `heritage` | да | object | Охранный статус и ссылка на реестр |
 | `recognition` | да | object | Wikidata, Wikipedia, Commons |
 | `significance` | да | object | Балл, компоненты и причины |
@@ -40,6 +40,8 @@ data/landmarks/tbilisi/osm-1064270003.json
 | `reviewStatus` | да | enum | `draft` или `reviewed` |
 | `updatedAt` | да | date | Дата последней правки, `YYYY-MM-DD` |
 | `notes` | нет | string | Редакционная пометка, а не описание |
+
+`districtId` у ориентира должен совпадать с районом связанной карточки атласа (`atlasId`) или ближайшего здания с тем же адресом. Если ориентир находится в историческом ядре, используйте `kala`, а не «Старый Тбилиси». Полный список районов, микротопонимы и пограничные случаи — [district-attribution.md](district-attribution.md).
 
 ### `category` и `subcategory`
 

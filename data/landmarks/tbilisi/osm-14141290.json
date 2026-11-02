@@ -30,7 +30,7 @@
   ],
   "source": "https://www.openstreetmap.org/relation/14141290",
   "otherSources": [],
-  "districtId": null,
+  "districtId": "vake",
   "heritage": {
     "status": "unknown",
     "registryId": null,

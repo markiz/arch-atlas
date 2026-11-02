@@ -16,6 +16,7 @@
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила;
 - [landmark-expansion.md](landmark-expansion.md) — процедура расширения слоя достопримечательностей и отбора топ-100;
 - [landmark-schema.md](landmark-schema.md) — схема карточки ориентира `data/landmarks/tbilisi/*.json`;
+- [district-attribution.md](district-attribution.md) — канонические районы, микротопонимы и правила атрибуции;
 - [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс и helper'ы для длительных скриптов;
 - [archive/README.md](archive/README.md) — исходный план и ранние снимки.
 
