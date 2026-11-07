@@ -1,6 +1,6 @@
 // Per-city auxiliary dictionaries: styles, architects, districts and date
-// labels. Humans edit the small files under aux/<city>/; the build merges them
-// into data/aux/<city>.json, the single JSON consumed by assemble-atlas.mjs.
+// labels. Humans edit the small files under data/aux/<city>/; the build merges
+// them into data/aux/<city>.json, the single JSON consumed by assemble-atlas.mjs.
 import {mkdir,readFile,rename,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -47,13 +47,12 @@ function validateTable(file,table){
  return table;
 }
 
-/** Read aux/<city>/*.json and return the merged city dictionary. */
+/** Read data/aux/<city>/*.json and return the merged city dictionary. */
 export async function readCityAux({root=ROOT,city='tbilisi'}={}){
  if(!/^[a-z0-9-]+$/.test(city))throw new Error(`invalid city "${city}"`);
- const directory=path.join(root,'aux',city);
  const aux={version:1,city};
  for(const {key,file,label} of AUX_TABLES){
-  const relative=path.join('aux',city,file);
+  const relative=path.join('data','aux',city,file);
   let parsed;
   try{parsed=JSON.parse(await readFile(path.join(root,relative),'utf8'));}
   catch(error){throw new Error(`${relative}: ${error.message}`);}
@@ -69,7 +68,7 @@ async function atomicWrite(file,contents){
 }
 
 /**
- * Merge aux/<city>/*.json into data/aux/<city>.json. The merged file is a build
+ * Merge data/aux/<city>/*.json into data/aux/<city>.json. The merged file is a build
  * artifact, not a published resource and not a hand-edited source.
  */
 export async function ensureMergedAux({root=ROOT,city='tbilisi'}={}){

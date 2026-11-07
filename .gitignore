@@ -14,7 +14,7 @@ data/thumbnails/
 public/atlas/photos/
 public/atlas/thumbnails/
 
-# Сгенерированные бандлы, манифест и слои карты (источники — data/atlas, data/landmarks, aux, raw)
+# Сгенерированные бандлы, манифест и слои карты (источники — data/atlas, data/landmarks, data/aux, raw)
 public/atlas/buildings.json
 public/atlas/landmarks.json
 public/atlas/manifest.json
@@ -24,8 +24,8 @@ public/atlas/building-outlines.geojson
 # Отметка входных хешей для пересборки слоёв карты (scripts/build-map-layers.mjs)
 .cache/
 
-# Сгенерированный единый aux-файл (источник — aux/<city>)
-data/aux/
+# Сгенерированный единый aux-файл (источник — data/aux/<city>)
+data/aux/*.json
 
 # Служебные файлы TypeScript
 *.tsbuildinfo
@@ -52,3 +52,6 @@ work/
 # Python cache
 __pycache__/
 *.pyc
+
+# Временные папки
+.tmp

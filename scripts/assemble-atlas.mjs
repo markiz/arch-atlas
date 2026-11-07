@@ -1,7 +1,7 @@
 // Pack one source JSON per atlas object into the single city bundle consumed by
 // the web app. Source files live in data/atlas/<city>/<id>.json and keep
 // translations inline; style, architect, district and construction-label fields
-// stay references into the city aux dictionary (aux/<city>/ merged to
+// stay references into the city aux dictionary (data/aux/<city>/ merged to
 // data/aux/<city>.json).
 //
 // The bundle is what the app loads (public/atlas/buildings.json for Tbilisi).

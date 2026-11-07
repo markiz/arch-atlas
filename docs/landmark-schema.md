@@ -31,7 +31,7 @@ data/landmarks/tbilisi/osm-1064270003.json
 | `coordinates` | да | `[lon, lat]` | Точка входа/здания, 6 знаков после запятой |
 | `source` | да | URL | Основной источник сведений |
 | `otherSources` | нет | URL[] | Дополнительные источники |
-| `districtId` | нет | string | Канонический район из `aux/tbilisi/districts.json`; `tbilisi` и `old-tbilisi` запрещены. Правила — [district-attribution.md](district-attribution.md) |
+| `districtId` | нет | string | Канонический район из `data/aux/tbilisi/districts.json`; `tbilisi` и `old-tbilisi` запрещены. Правила — [district-attribution.md](district-attribution.md) |
 | `heritage` | да | object | Охранный статус и ссылка на реестр |
 | `recognition` | да | object | Wikidata, Wikipedia, Commons |
 | `significance` | да | object | Балл, компоненты и причины |

@@ -9,7 +9,7 @@ const labels=(ru,en,ka,uk)=>({ru,en,ka,uk});
 
 async function fixture(){
  const root=await mkdtemp(path.join(os.tmpdir(),'atlas-aux-'));
- const dir=path.join(root,'aux','tbilisi');
+ const dir=path.join(root,'data','aux','tbilisi');
  await mkdir(dir,{recursive:true});
  const tables={
   'styles.json':{empire:{source:'Ампир',labels:labels('Ампир','Empire','ამპირი','Ампір')}},
@@ -45,7 +45,7 @@ test('merges the four city dictionaries into one build artifact',async()=>{
 test('rejects incomplete labels and unsafe city names',async()=>{
  const root=await fixture();
  try{
-  await writeFile(path.join(root,'aux','tbilisi','styles.json'),JSON.stringify({broken:{labels:{ru:'Стиль',en:'Style'}}}));
+  await writeFile(path.join(root,'data','aux','tbilisi','styles.json'),JSON.stringify({broken:{labels:{ru:'Стиль',en:'Style'}}}));
   await assert.rejects(()=>readCityAux({root}),/must contain exactly ru\/en\/ka\/uk/);
   await assert.rejects(()=>readCityAux({root,city:'../etc'}),/invalid city/);
  }finally{

@@ -1,4 +1,4 @@
-// Merge the small per-city dictionaries from aux/<city>/ into the single
+// Merge the small per-city dictionaries from data/aux/<city>/ into the single
 // build artifact data/aux/<city>.json consumed by assemble-atlas.mjs.
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';

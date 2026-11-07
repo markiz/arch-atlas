@@ -3,7 +3,7 @@
 
 Checks source files, not the built bundle:
   data/atlas/tbilisi/*.json
-  aux/tbilisi/{styles,architects,districts,year-labels}.json
+  data/aux/tbilisi/{styles,architects,districts,year-labels}.json
   public/atlas/buildings.json (after scripts/assemble-atlas.mjs)
 
 The script prints errors and warnings and exits non-zero on errors. Warnings can
@@ -35,7 +35,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
-AUX_DIR = ROOT / 'aux/tbilisi'
+AUX_DIR = ROOT / 'data/aux/tbilisi'
 AUX_FILES = {'styles': 'styles.json', 'yearLabels': 'year-labels.json', 'districts': 'districts.json', 'architects': 'architects.json'}
 BUILDINGS = ROOT / 'public/atlas/buildings.json'
 PHOTOS_DIR = ROOT / 'data/photos/tbilisi'
@@ -153,7 +153,7 @@ def main() -> int:
                 district_geometry = make_valid(district_geometry)
             district_shapes[district_id] = district_geometry
         except Exception as error:
-            errors.append(f'aux/tbilisi/districts.json: {district_id}.geometry cannot be parsed: {error}')
+            errors.append(f'data/aux/tbilisi/districts.json: {district_id}.geometry cannot be parsed: {error}')
     architects = attributes.get('architects', {})
     paths = sorted(SOURCE_DIR.glob('*.json'))
     if not paths:
