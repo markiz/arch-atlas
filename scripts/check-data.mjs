@@ -8,7 +8,7 @@ const buildingOutlines=JSON.parse(await readFile('public/atlas/building-outlines
 const taxonomy=JSON.parse(await readFile('data/photo-visual-tags.json','utf8'));
 const visualTagIds=new Set(taxonomy.tags.map(tag=>tag.id));
 assert(taxonomy.tags.length<50,`visual tag taxonomy must stay below 50 tags, found ${taxonomy.tags.length}`);
-const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,previews=0,withPhotos=0,galleries=0;
+const ids=new Set();assert(data.length>0,'Empty collection');assert.equal(geo.type,'FeatureCollection');assert(geo.features.length>0,'Empty basemap');let photos=0,previews=0,withPhotos=0,galleries=0,withPlaceId=0;
 assert.equal(buildingOutlines.type,'FeatureCollection');assert(buildingOutlines.features.length>0,'Empty building outlines');
 assert(geo.features.every(feature=>feature.properties?.kind!=='building'),'Ordinary buildings must be separate from basemap');
 assert(buildingOutlines.features.every(feature=>feature.properties?.kind==='building'),'Building outlines file contains another feature kind');
@@ -41,6 +41,12 @@ for(const b of data){
  if(b.geometryQualityTranslations)assert(['en','ka','uk'].every(lang=>typeof b.geometryQualityTranslations[lang]==='string'&&b.geometryQualityTranslations[lang].trim()),`${b.id}: translated geometry quality`);
  assert(typeof b.address==='string'&&b.address===b.addresses?.ru&&b.addresses&&['ru','en','ka','uk'].every(lang=>typeof b.addresses[lang]==='string'),`${b.id}: translated addresses`);
  assert(['ru','en','ka','uk'].every(lang=>b.addresses[lang]===''||b.addresses[lang].trim()),`${b.id}: invalid empty address`);
+ if(b.googlePlaceId){
+  assert(typeof b.googlePlaceId==='string'&&/^[A-Za-z0-9_-]{10,}$/.test(b.googlePlaceId),`${b.id}: invalid googlePlaceId`);
+  withPlaceId++;
+ }else{
+  assert(typeof b.addresses?.en==='string'&&b.addresses.en.trim(),`${b.id}: needs googlePlaceId or a non-empty English address for the Google Maps link`);
+ }
  assert(typeof b.history==='string',`${b.id}: history`);
  assert(Array.isArray(b.styleIds)&&b.styleIds.length>0&&b.styleIds.every(id=>typeof id==='string'&&id.trim())&&b.styles&&['ru','en','ka','uk'].every(lang=>typeof b.styles[lang]==='string'&&b.styles[lang].trim()),`${b.id}: translated style`);
  assert(typeof b.districtId==='string'&&b.districts&&['ru','en','ka','uk'].every(lang=>typeof b.districts[lang]==='string'&&b.districts[lang].trim()),`${b.id}: translated district`);
@@ -98,4 +104,4 @@ for(const b of data){
  progress.advance(b.id);
 }
 progress.finish();
-console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos (${previews} previews), ${withPhotos} buildings with photos, ${galleries} with multiple photos; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`);
+console.log(`Validated ${ids.size} buildings with outlines; ${photos} photos (${previews} previews), ${withPhotos} buildings with photos, ${galleries} with multiple photos; Google Place ID: ${withPlaceId}/${ids.size}, ${ids.size-withPlaceId} by address search; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`);
