@@ -3,6 +3,8 @@ from progress import Progress
 root = pathlib.Path(__file__).resolve().parent.parent
 (root / 'raw' / 'research').mkdir(parents=True, exist_ok=True)
 nodes = {}; ways = {}; relations = {}
+# Legacy pass: central XML grid only. The full-city public/government pool is
+# built from raw/osm/osm-tbilisi-building-outlines.geojson.
 paths = sorted((root / 'raw' / 'osm' / 'grid').glob('osm-grid-*.xml'))
 parse_progress = Progress(len(paths), 'parse OSM grid')
 parse_progress.start()
@@ -24,7 +26,10 @@ parse_progress.finish()
 def candidate(wid, w):
     t = w['tags']; coords = [nodes[x] for x in w['refs'] if x in nodes]
     if not t.get('building') or len(coords) < 4 or coords[0] != coords[-1] or len(coords) != len(w['refs']): return None
-    if t.get('heritage') not in ('1', '2', '3') and not (t.get('historic') in ('house', 'building', 'church', 'castle', 'caravanserai', 'hotel', 'monastery') and (t.get('wikidata') or t.get('name:ru'))): return None
+    historic = t.get('historic') in ('house', 'building', 'church', 'castle', 'caravanserai', 'hotel', 'monastery') and (t.get('wikidata') or t.get('name:ru'))
+    # Public and government buildings are mandatory candidates regardless of heritage tags.
+    public = t.get('building') in ('public', 'government', 'civic') or t.get('office') == 'government' or bool(t.get('government'))
+    if t.get('heritage') not in ('1', '2', '3') and not historic and not public: return None
     if t.get('building') in ('roof', 'construction', 'garage'): return None
     # Discard minor additions and interior fragments.
     if t.get('building:part') and t.get('building') == 'part': return None

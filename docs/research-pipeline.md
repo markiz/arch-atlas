@@ -64,6 +64,8 @@ queue.jsonl
  "stage": "collect", "lease_until": null, "attempts": 0}
 ```
 
+Вход в очередь не один: официальный реестр, OSM-объекты с `heritage`/`historic`, **обязательный пул публичных и правительственных зданий** (`building=public`, `building=government`, `building=civic`, `office=government`, `government=*`) и редакционные кандидаты. Публичные и правительственные здания не отсеиваются из-за отсутствия охранного тега: их значимость оценивается на этапе adjudicate, а не на входе. Правило и границы пула — в [location-data-collection.md](location-data-collection.md#обязательный-пул-публичных-и-правительственных-зданий).
+
 Правила:
 
 - статус меняется только через очередь: `todo → collecting → enriching → adjudicating → editing → namechecking → validating → done / hold / reject`;
