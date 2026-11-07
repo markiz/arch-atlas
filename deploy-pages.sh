@@ -83,14 +83,19 @@ cp -R "$tmp_dir/project/dist/." "$tmp_dir/site/"
 : > "$tmp_dir/site/.nojekyll"
 git_dir="$(git rev-parse --absolute-git-dir)"
 export GIT_INDEX_FILE="$tmp_dir/index"
-# Start from the selected branch and add generated files. Existing files not
-# present in the new build, including CNAME, are left alone.
-if [[ -n "$parent" ]]; then
-  git --git-dir="$git_dir" read-tree "$parent"
+# Build the tree from scratch so the branch mirrors the current build exactly:
+# assets that disappeared from the build (old bundles, removed photos) must
+# disappear from the branch too, otherwise every deploy keeps them forever and
+# the branch grows without bound. Only CNAME is carried over from the previous
+# tree.
+rm -f "$GIT_INDEX_FILE"
+git --git-dir="$git_dir" read-tree --empty
+if [[ -n "$parent" ]] && git --git-dir="$git_dir" cat-file -e "$parent:CNAME" 2>/dev/null; then
+  git --git-dir="$git_dir" show "$parent:CNAME" > "$tmp_dir/site/CNAME"
 fi
 (
   cd "$tmp_dir/site"
-  git --git-dir="$git_dir" --work-tree="$tmp_dir/site" add --ignore-removal --force -- .
+  git --git-dir="$git_dir" --work-tree="$tmp_dir/site" add --force -- .
 )
 tree="$(git --git-dir="$git_dir" write-tree)"
 if [[ -n "$parent" ]] && [[ "$tree" == "$(git rev-parse "$parent^{tree}")" ]]; then

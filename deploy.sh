@@ -88,15 +88,20 @@ cp -R "$tmp_dir/project/dist/." "$tmp_dir/site/"
 git_dir="$(git rev-parse --absolute-git-dir)"
 export GIT_INDEX_FILE="$tmp_dir/index"
 
-# Файлы, которых нет в новой сборке, остаются в ветке публикации.
-if [[ -n "$parent" ]]; then
-  git --git-dir="$git_dir" read-tree "$parent"
+# Дерево ветки собирается заново из текущей сборки: устаревшие ассеты
+# (старые бандлы, удалённые фотографии) должны исчезать из ветки, иначе она
+# растёт без ограничений. Из прошлого дерева переносится только CNAME.
+rm -f "$GIT_INDEX_FILE"
+git --git-dir="$git_dir" read-tree --empty
+
+if [[ -n "$parent" ]] && git --git-dir="$git_dir" cat-file -e "$parent:CNAME" 2>/dev/null; then
+  git --git-dir="$git_dir" show "$parent:CNAME" > "$tmp_dir/site/CNAME"
 fi
 
 (
   cd "$tmp_dir/site"
   git --git-dir="$git_dir" --work-tree="$tmp_dir/site" \
-    add --ignore-removal --force -- .
+    add --force -- .
 )
 
 tree="$(git --git-dir="$git_dir" write-tree)"
