@@ -107,7 +107,8 @@
     "uk": "IoU з реєстровою межею 0.841; реєстр 551.2 м², OSM 571.9 м²; зміщення центроїда 1.5 м. IoU 0,84 з реєстровою межею (566 м² проти 587 м²), центроїд 1,5 м, прапорців немає; OSM way/415939083 (building=yes, 4 поверхи, 14 вершин) обводить корпус."
   },
   "photos": [
-    "257ae1dcc084ef686b4263f4bcda86596c64d1fbfe95d31ef30eabe3e00f2e99"
+    "257ae1dcc084ef686b4263f4bcda86596c64d1fbfe95d31ef30eabe3e00f2e99",
+    "fdc3274b9c8b2c5ae177e5b295a9cbb94716403d7b15fe94cb6bf47e310afeac"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3593",
   "otherSource": "https://www.openstreetmap.org/way/415939083",

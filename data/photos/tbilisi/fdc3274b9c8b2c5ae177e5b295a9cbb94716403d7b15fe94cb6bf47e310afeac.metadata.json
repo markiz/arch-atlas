@@ -1,0 +1,22 @@
+{
+  "author": "Нино Зедгинидзе / Silknet",
+  "license": "Не установлена",
+  "licenseUrl": "https://scantbilisi.ge/en/objects/385",
+  "source": "https://scantbilisi.ge/en/objects/385",
+  "modifications": "ширина сохранена (1200 px), преобразовано в WebP (quality 82); полное качество не используется",
+  "description": "Жилой дом на Агмашенебели, 176: фасад. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "visualTags": [
+    "facade",
+    "street",
+    "tree",
+    "window",
+    "balcony",
+    "shopfront",
+    "sign",
+    "street-lamp",
+    "occluded"
+  ],
+  "width": 1200,
+  "height": 799,
+  "rating": 70
+}

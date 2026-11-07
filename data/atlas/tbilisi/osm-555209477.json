@@ -331,7 +331,9 @@
     "ka": "OpenStreetMap-ის კონტური; მონაცემები საჭიროებს რედაქციულ შემოწმებას",
     "uk": "Контур OpenStreetMap; дані потребують редакційної перевірки"
   },
-  "photos": [],
+  "photos": [
+    "55f96d5ed75e93129a2b141a510d39b3db23e9237be079097e151294e4c61496"
+  ],
   "source": "https://www.openstreetmap.org/way/555209477",
   "otherSource": "https://www.wikidata.org/wiki/Q42663091",
   "googlePlaceId": "ChIJSb4mpu0MREARM1N4EGbqXiA",

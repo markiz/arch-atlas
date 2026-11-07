@@ -124,7 +124,8 @@
     "uk": "Офіційна межа 3257 та OSM way/415940826 збігаються з IoU близько 0,86; 97,6% OSM усередині межі, межу покрито на 87,3%, зміщення 0,7 м. OSM дає 4 рівні, реєстр — 3 поверхи і високий цоколь; поверховість у картці не вказана."
   },
   "photos": [
-    "545d65748585a35dd61a48802d299cc72843549a42977968366e2d0b09c115a2"
+    "545d65748585a35dd61a48802d299cc72843549a42977968366e2d0b09c115a2",
+    "a4235f9276b353eaf7803fa1c67c0cb07262dec9e68736d9b1ba6eb0f54f3e61"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3257",
   "otherSource": "https://www.wikidata.org/wiki/Q42633761",

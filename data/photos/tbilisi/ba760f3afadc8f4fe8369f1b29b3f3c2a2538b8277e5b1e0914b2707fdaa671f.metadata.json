@@ -1,0 +1,22 @@
+{
+  "author": "Нино Зедгинидзе / Silknet",
+  "license": "Не установлена",
+  "licenseUrl": "https://scantbilisi.ge/en/objects/356",
+  "source": "https://scantbilisi.ge/en/objects/356",
+  "modifications": "ширина сохранена (1200 px), преобразовано в WebP (quality 82); полное качество не используется",
+  "description": "Музей современного искусства Зураба Церетели: фасад. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "visualTags": [
+    "facade",
+    "arch",
+    "window",
+    "door",
+    "sign",
+    "tree",
+    "street-lamp",
+    "street",
+    "occluded"
+  ],
+  "width": 1200,
+  "height": 799,
+  "rating": 70
+}
