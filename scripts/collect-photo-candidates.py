@@ -772,7 +772,7 @@ def collect() -> None:
         for photo_id in card.get('photos', []):
             title = file_title((read_photo_metadata(photo_id) or {}).get('source'))
             metadata = info.get(title) if title else None
-            if metadata and metadata['width'] > 1000 and metadata['license'] != 'Не установлена':
+            if metadata and metadata['width'] > 1000 and metadata['license']:
                 upgrades += 1
     report['existing_upgradable'] = upgrades
     report['existing_total'] = sum(len(card.get('photos', [])) for card in cards.values())

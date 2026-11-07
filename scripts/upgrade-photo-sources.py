@@ -55,7 +55,7 @@ from atlas_source import (
 from progress import Progress
 
 COMMONS_API = 'https://commons.wikimedia.org/w/api.php'
-UNKNOWN_LICENSE = 'Не установлена'
+UNKNOWN_LICENSE = ''
 USER_AGENT = 'TbilisiArchitectureAtlasPhotos/1.2 (educational atlas research)'
 REPORT = ROOT / 'work' / 'photo-research' / 'source-upgrades.json'
 COMMONS_BATCH = 40
@@ -208,8 +208,8 @@ def lookup_commons(info_by_title: dict[str, dict], normalized: dict[str, str], t
 
 def metadata_for(metadata: dict, original_width: int, width: int) -> dict:
     updated = {key: metadata[key] for key in ('author', 'license', 'licenseUrl', 'source')}
-    if metadata.get('description'):
-        updated['description'] = metadata['description']
+    if metadata.get('descriptions'):
+        updated['descriptions'] = metadata['descriptions']
     updated['modifications'] = modifications(width, original_width, is_free(metadata))
     return updated
 

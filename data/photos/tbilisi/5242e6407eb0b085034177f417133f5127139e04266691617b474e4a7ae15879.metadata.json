@@ -1,10 +1,15 @@
 {
-  "author": "Нино Зедгинидзе / Silknet",
-  "license": "Не установлена",
+  "author": "Nino Zedginidze / Silknet",
+  "license": "",
   "licenseUrl": "https://scantbilisi.ge/en/objects/231",
   "source": "https://scantbilisi.ge/en/objects/231",
   "modifications": "ширина сохранена (1200 px), преобразовано в WebP (quality 82); полное качество не используется",
-  "description": "Бывшая редакция «Зари Востока»: угловой вид. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "descriptions": {
+    "ru": "Угловой вид",
+    "en": "Corner view",
+    "ka": "კუთხის ხედი",
+    "uk": "Кутовий вигляд"
+  },
   "visualTags": [
     "facade",
     "window",

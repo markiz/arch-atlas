@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Domes_of_Bath_no._5,_ArmAg_(1).jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "купола бани №5; свободная лицензия",
+  "descriptions": {
+    "ru": "Купола бани",
+    "en": "Domes of the bathhouse",
+    "ka": "აბანოს გუმბათები",
+    "uk": "Купали лазні"
+  },
   "width": 1920,
   "height": 1440,
   "sourceTags": [

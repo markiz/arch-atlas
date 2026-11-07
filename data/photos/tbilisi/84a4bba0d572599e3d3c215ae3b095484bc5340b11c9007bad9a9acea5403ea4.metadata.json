@@ -1,10 +1,9 @@
 {
-  "author": "Реестр памятников Грузии (автор не указан)",
-  "license": "Не установлена",
+  "author": "",
+  "license": "",
   "licenseUrl": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3395",
   "source": "https://memkvidreoba.gov.ge:8443/Files?id=315688_BF8F594B-51EA-4519-9738-8E677D6A096B",
   "modifications": "преобразовано в WebP; полное качество не используется",
-  "description": "Фото реестра памятников; автор и лицензия не установлены",
   "visualTags": [
     "facade",
     "street",

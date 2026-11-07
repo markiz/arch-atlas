@@ -2,7 +2,7 @@
 
 Это датированные рабочие журналы, а не текущее состояние проекта. Числа, статусы «добавлено/hold» и ссылки в них относятся к дате среза; задним числом они не переписываются.
 
-Очереди 1–4 завершены и перенесены сюда. Пятая очередь ещё не полностью интегрирована, поэтому её документы остаются в корне `docs/`. Общая структура архива — в [../README.md](../README.md).
+Очереди 1–4 и кампания публичных зданий завершены и перенесены сюда. Пятая очередь ещё не полностью интегрирована, поэтому её документы остаются в корне `docs/`. Общая структура архива — в [../README.md](../README.md).
 
 ## Что сейчас актуально
 
@@ -13,7 +13,7 @@
 - [research-queue-v5-progress.md](../../research-queue-v5-progress.md) — разбор пятой очереди: 40 интегрировано, 60 READY ждут перевода.
 - [research-hold-report.md](../../research-hold-report.md) — причины HOLD по первым трём очередям и план их преодоления.
 
-## Очереди
+## Очереди и кампании
 
 | Папка | Материалы | Итог |
 |---|---|---|
@@ -21,6 +21,7 @@
 | [queue-2-heritage-200/](queue-2-heritage-200/) | [выборка](queue-2-heritage-200/research-next-200-v2.md), [разбор](queue-2-heritage-200/research-queue-v2.md) | 17 добавлено, 80 hold, 103 reject |
 | [queue-3-heritage-200/](queue-3-heritage-200/) | [выборка](queue-3-heritage-200/research-next-200-v3.md), [разбор](queue-3-heritage-200/research-queue-v3.md) | 55 добавлено, 116 hold, 29 reject |
 | [queue-4-unnamed-200/](queue-4-unnamed-200/) | [выборка](queue-4-unnamed-200/research-next-200-v4.md), [разбор](queue-4-unnamed-200/research-queue-v4-progress.md) | 96 READY, 97 HOLD, 7 REJECT; все 96 интегрированы |
+| [public-buildings/](public-buildings/) | [отчёт](public-buildings/research-public-buildings.md), [реестр](public-buildings/research-public-buildings.csv) | 202 контура; 4 READY добавлены, из HOLD добавлены ещё 2 |
 
 ### Первая очередь: стадии
 

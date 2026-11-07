@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Petros_Adamian_Tbilisi_State_Armenian_Drama_Theatre._Avlabar,_Tbilisi,_Georgia.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Тбилисский армянский драматический театр на проспекте Царицы Кетеван; главный фасад с портиком.",
+  "descriptions": {
+    "ru": "Главный фасад с портиком",
+    "en": "Main facade with a portico",
+    "ka": "მთავარი ფასადი პორტიკით",
+    "uk": "Головний фасад з портиком"
+  },
   "visualTags": [
     "facade",
     "window",

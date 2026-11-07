@@ -135,7 +135,6 @@ def main() -> int:
             'licenseUrl': license_url,
             'source': source,
             'modifications': (f'уменьшен размер до {image.width} px по ширине, преобразовано в WebP' if resized else 'преобразовано в WebP'),
-            'description': candidate.get('note', ''),
         })
         card.setdefault('photos', []).append(photo_id)
         modified.append(card)

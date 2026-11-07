@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_(30203392892).jpg",
   "modifications": "кадрировано (выделен корпус отеля и площадь), преобразовано в WebP",
-  "description": "Radisson Blu Iveria (слева) на площади Первой Республики, 2016",
+  "descriptions": {
+    "ru": "Radisson Blu Iveria слева, площадь Первой Республики, 2016",
+    "en": "Radisson Blu Iveria on the left, First Republic Square, 2016",
+    "ka": "Radisson Blu Iveria მარცხნივ, პირველი რესპუბლიკის მოედანი, 2016",
+    "uk": "Radisson Blu Iveria ліворуч, площа Першої Республіки, 2016"
+  },
   "sourceTags": [
     "2016 in Tbilisi",
     "Buildings in Georgia (country) photographed in 2016",

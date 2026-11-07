@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:Public_Service_Hall_(34559549093).jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Дом юстиции на набережной Звиада Гамсахурдиа; вид с площади перед входом.",
+  "descriptions": {
+    "ru": "Вид с площади перед входом",
+    "en": "View from the square in front of the entrance",
+    "ka": "ხედი შესასვლელის წინ მოედნიდან",
+    "uk": "Вигляд з площі перед входом"
+  },
   "visualTags": [
     "facade",
     "window",

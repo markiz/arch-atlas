@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Presidential_Palace_IMG_8977_1920.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Дворец государственных церемоний в Авлабари; вид с Нарикалы.",
+  "descriptions": {
+    "ru": "Вид с Нарикалы",
+    "en": "View from Narikala",
+    "ka": "ხედი ნარიყალიდან",
+    "uk": "Вигляд з Нарікали"
+  },
   "visualTags": [
     "aerial",
     "facade",

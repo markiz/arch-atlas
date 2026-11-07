@@ -1,10 +1,15 @@
 {
-  "author": "Нино Зедгинидзе / Silknet",
-  "license": "Не установлена",
+  "author": "Nino Zedginidze / Silknet",
+  "license": "",
   "licenseUrl": "https://scantbilisi.ge/en/objects/323",
   "source": "https://scantbilisi.ge/en/objects/323",
   "modifications": "ширина сохранена (800 px), преобразовано в WebP (quality 82); полное качество не используется",
-  "description": "Гостиница «Мажестик» (Tbilisi Marriott): вид с проспекта. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "descriptions": {
+    "ru": "Вид с проспекта",
+    "en": "View from the avenue",
+    "ka": "ხედი გამზირიდან",
+    "uk": "Вигляд з проспекту"
+  },
   "visualTags": [
     "facade",
     "street",

@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:16_Tsminda_Ketevan_Dedoplis_Avenue,_Tbilisi,_Georgia_(48814577146).jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "главный фасад двухэтажного корпуса с ризалитом и высоким фронтоном, 2019 г.",
+  "descriptions": {
+    "ru": "Главный фасад двухэтажного корпуса с ризалитом и высоким фронтоном, 2019",
+    "en": "Main facade of the two-storey wing with a risalit and a tall pediment, 2019",
+    "ka": "ორსართულიანი კორპუსის მთავარი ფასადი რიზალიტითა და მაღალი ფრონტონით, 2019",
+    "uk": "Головний фасад двоповерхового корпусу з ризалітом і високим фронтоном, 2019"
+  },
   "width": 1920,
   "height": 1280,
   "sourceTags": [

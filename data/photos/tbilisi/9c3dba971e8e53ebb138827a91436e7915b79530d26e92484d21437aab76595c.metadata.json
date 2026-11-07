@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:2024-03-24_Entrance_to_Caucasian_House_and_Smirnov_Museum.jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "вход в «Кавказский дом» и музей Смирновых, Табидзе 20",
+  "descriptions": {
+    "ru": "Вход в «Кавказский дом» и музей Смирновых",
+    "en": "Entrance to the Caucasian House and the Smirnov Museum",
+    "ka": "შესასვლელი „კავკასიის სახლში“ და სმირნოვების მუზეუმში",
+    "uk": "Вхід до «Кавказького дому» і музею Смирнових"
+  },
   "width": 1920,
   "height": 1080,
   "sourceTags": [

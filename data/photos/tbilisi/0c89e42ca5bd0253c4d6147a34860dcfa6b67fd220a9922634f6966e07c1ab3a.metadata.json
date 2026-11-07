@@ -1,10 +1,15 @@
 {
-  "author": "Zviad Avaliani (ზვიად ავალიანი)",
-  "license": "Attribution (свободное использование с указанием автора)",
+  "author": "Zviad Avaliani",
+  "license": "Attribution (free use, attribution required)",
   "licenseUrl": "https://commons.wikimedia.org/wiki/File:Georgian_Public_Broadcaster.JPG#Licensing",
   "source": "https://commons.wikimedia.org/wiki/File:Georgian_Public_Broadcaster.JPG",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "комплекс Телецентра, вид с улицы, 31 мая 2015 г.",
+  "descriptions": {
+    "ru": "Вид с улицы, 31 мая 2015 года",
+    "en": "View from the street, 31 May 2015",
+    "ka": "ხედი ქუჩიდან, 2015 წლის 31 მაისი",
+    "uk": "Вигляд з вулиці, 31 травня 2015 року"
+  },
   "width": 1920,
   "height": 1285,
   "sourceTags": [

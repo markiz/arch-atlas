@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%81%D9%84%DB%8C%D8%B3_Tbilisi_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_38.jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "Дворец на гребне склона: башня с ажурным завершением и арочные объёмы, вид с расстояния; снято в рамках Wiki Loves Monuments 2018 (Tbilisi City)",
+  "descriptions": {
+    "ru": "Вид с расстояния: башня с ажурным завершением и арочные объёмы",
+    "en": "Distant view: the tower with an openwork crown and arched volumes",
+    "ka": "ხედი მანძილიდან: კოშკი აჟურული დაგვირგვინებითა და თაღოვანი მოცულობებით",
+    "uk": "Вигляд з відстані: вежа з ажурним завершенням та арочні об'єми"
+  },
   "width": 1920,
   "height": 1080,
   "sourceTags": [

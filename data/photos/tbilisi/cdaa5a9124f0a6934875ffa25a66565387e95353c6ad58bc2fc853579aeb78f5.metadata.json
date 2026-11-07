@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "https://commons.wikimedia.org/wiki/File:%E1%83%90%E1%83%A6%E1%83%9B%E1%83%90%E1%83%A8%E1%83%94%E1%83%9C%E1%83%94%E1%83%91%E1%83%9A%E1%83%98%E1%83%A1_%E1%83%92%E1%83%90%E1%83%9B%E1%83%96%E1%83%98%E1%83%A0%E1%83%98_149_(10).jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "дом 149 с улицы: главный фасад, веранда на колоннах с балюстрадой, кирпичный декор (проверено по превью файла)",
+  "descriptions": {
+    "ru": "С улицы: веранда на колоннах с балюстрадой, кирпичный декор",
+    "en": "From the street: a colonnade veranda with a balustrade, brick decoration",
+    "ka": "ქუჩიდან: სვეტებიანი ვერანდა ბალუსტრადით, აგურის დეკორი",
+    "uk": "З вулиці: веранда на колонах з балюстрадою, цегляний декор"
+  },
   "width": 1920,
   "height": 1440,
   "sourceTags": [

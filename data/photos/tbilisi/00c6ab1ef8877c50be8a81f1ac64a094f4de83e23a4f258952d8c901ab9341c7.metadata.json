@@ -1,10 +1,15 @@
 {
-  "author": "Нино Зедгинидзе / Silknet",
-  "license": "Не установлена",
+  "author": "Nino Zedginidze / Silknet",
+  "license": "",
   "licenseUrl": "https://scantbilisi.ge/en/objects/223",
   "source": "https://scantbilisi.ge/en/objects/223",
   "modifications": "ширина сохранена (800 px), преобразовано в WebP (quality 82); полное качество не используется",
-  "description": "Дом Эристави — Меликова: центральная часть фасада. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "descriptions": {
+    "ru": "Центральная часть фасада",
+    "en": "Central part of the facade",
+    "ka": "ფასადის ცენტრალური ნაწილი",
+    "uk": "Центральна частина фасаду"
+  },
   "visualTags": [
     "facade",
     "window",

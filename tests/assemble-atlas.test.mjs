@@ -162,14 +162,14 @@ test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
  const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200,rating:87,sourceTags:['Facades','Tbilisi'],visualTags:['facade','balcony']};
  try{
   await writePhoto(root,first,metadata);
-  await writePhoto(root,second,{...metadata,author:'B',description:'фасад'});
+  await writePhoto(root,second,{...metadata,author:'B',descriptions:labels('фасад','facade','ფასადი','фасад')});
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[second,first]}));
   const {cards}=await assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true});
   assert.deepEqual(cards[0].photos.map(photo=>photo.id),[second,first]);
   assert.equal(cards[0].photos[0].file,`photos/tbilisi/${second}.webp`);
   assert.equal(cards[0].photos[0].thumb,`thumbnails/tbilisi/${second}.webp`);
   assert.equal(cards[0].photos[0].author,'B');
-  assert.equal(cards[0].photos[0].description,'фасад');
+  assert.deepEqual(cards[0].photos[0].descriptions,labels('фасад','facade','ფასადი','фасад'));
   assert.equal(cards[0].photos[0].width,1600);
   assert.equal(cards[0].photos[0].height,1200);
   assert.equal(cards[0].photos[0].rating,87);
@@ -195,6 +195,42 @@ test('hydrates ordered sha256 photo ids from metadata sidecars',async()=>{
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/references missing/);
   await writeCard(root,'osm-1.json',card('osm-1',{photos:[first,first]}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/duplicate photo/);
+ }finally{
+  await rm(root,{recursive:true,force:true});
+ }
+});
+
+test('allows empty attribution and rejects non-Latin text',async()=>{
+ const root=await fixture();
+ const id='e'.repeat(64);
+ const metadata={author:'',license:'',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200,rating:87};
+ try{
+  await writePhoto(root,id,metadata);
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[id]}));
+  const {cards}=await assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true});
+  assert.equal(cards[0].photos[0].author,'');
+  assert.equal(cards[0].photos[0].license,'');
+  await writePhoto(root,id,{...metadata,author:'Реестр памятников Грузии (автор не указан)'});
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/author must be Latin script/);
+  await writePhoto(root,id,{...metadata,license:'Не установлена'});
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/license must be Latin script/);
+ }finally{
+  await rm(root,{recursive:true,force:true});
+ }
+});
+
+test('requires photo captions in all four languages and rejects the legacy field',async()=>{
+ const root=await fixture();
+ const id='d'.repeat(64);
+ const metadata={author:'A',license:'CC BY 4.0',licenseUrl:'https://example.com/license',source:'https://example.com/photo',modifications:'resized',width:1600,height:1200,rating:87};
+ try{
+  await writePhoto(root,id,{...metadata,descriptions:{ru:'фасад',en:'facade',ka:'ფასადი'}});
+  await writeCard(root,'osm-1.json',card('osm-1',{photos:[id]}));
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/descriptions must contain exactly ru\/en\/ka\/uk/);
+  await writePhoto(root,id,{...metadata,descriptions:{ru:'фасад',en:'',ka:'ფასადი',uk:'фасад'}});
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/descriptions\.en/);
+  await writePhoto(root,id,{...metadata,description:'фасад'});
+  await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/unknown photo metadata fields: description/);
  }finally{
   await rm(root,{recursive:true,force:true});
  }

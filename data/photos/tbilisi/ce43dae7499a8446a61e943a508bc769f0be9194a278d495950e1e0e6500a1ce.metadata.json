@@ -1,10 +1,15 @@
 {
-  "author": "Нино Зедгинидзе / Silknet",
-  "license": "Не установлена",
+  "author": "Nino Zedginidze / Silknet",
+  "license": "",
   "licenseUrl": "https://scantbilisi.ge/en/objects/228",
   "source": "https://scantbilisi.ge/en/objects/228",
   "modifications": "ширина сохранена (1200 px), преобразовано в WebP (quality 82); полное качество не используется",
-  "description": "Первый корпус Тбилисского университета: главный фасад. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "descriptions": {
+    "ru": "Главный фасад",
+    "en": "Main facade",
+    "ka": "მთავარი ფასადი",
+    "uk": "Головний фасад"
+  },
   "visualTags": [
     "facade",
     "window",

@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "https://commons.wikimedia.org/wiki/File:%E1%83%9B%E1%83%9D%E1%83%A1%E1%83%AC%E1%83%90%E1%83%95%E1%83%9A%E1%83%94-%E1%83%90%E1%83%AE%E1%83%90%E1%83%9A%E1%83%92%E1%83%90%E1%83%96%E1%83%A0%E1%83%93%E1%83%9D%E1%83%91%E1%83%98%E1%83%A1_%E1%83%A1%E1%83%90%E1%83%A1%E1%83%90%E1%83%AE%E1%83%9A%E1%83%94_16.jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "Дворец учащихся и молодёжи на улице Киева, 8 — фасад трёхэтажного кирпичного корпуса",
+  "descriptions": {
+    "ru": "Фасад трёхэтажного кирпичного корпуса",
+    "en": "Facade of the three-storey brick wing",
+    "ka": "სამსართულიანი აგურის კორპუსის ფასადი",
+    "uk": "Фасад триповерхового цегляного корпусу"
+  },
   "width": 1920,
   "height": 1080,
   "sourceTags": [

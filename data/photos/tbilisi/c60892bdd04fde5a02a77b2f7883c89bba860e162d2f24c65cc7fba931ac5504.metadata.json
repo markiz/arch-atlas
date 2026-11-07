@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Patrol_Police_Department.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Департамент патрульной полиции: стеклянный фасад над искусственным рвом.",
+  "descriptions": {
+    "ru": "Стеклянный фасад над искусственным рвом",
+    "en": "Glass facade above an artificial moat",
+    "ka": "მინის ფასადი ხელოვნურ თხრილზე",
+    "uk": "Скляний фасад над штучним ровом"
+  },
   "visualTags": [
     "facade",
     "window",

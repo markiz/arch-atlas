@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Tbilisi_Public_Service_Hall_Building_IMG_8999_1920.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Дом юстиции с высоты Нарикалы; в кадре старый город и река.",
+  "descriptions": {
+    "ru": "С высоты Нарикалы: в кадре старый город и река",
+    "en": "From the height of Narikala: the old town and the river in the frame",
+    "ka": "ნარიყალის სიმაღლიდან: კადრში ძველი ქალაქი და მდინარე",
+    "uk": "З висоти Нарікали: у кадрі старе місто та річка"
+  },
   "visualTags": [
     "aerial",
     "facade",

@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "source": "https://commons.wikimedia.org/wiki/File:National_Archives_of_Georgia_Building.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Национальный архив Грузии на проспекте Важа-Пшавела; монументальная башня с керамическими рельефами.",
+  "descriptions": {
+    "ru": "Монументальная башня с керамическими рельефами",
+    "en": "Monumental tower with ceramic reliefs",
+    "ka": "მონუმენტური კოშკი კერამიკული რელიეფებით",
+    "uk": "Монументальна вежа з керамічними рельєфами"
+  },
   "visualTags": [
     "facade",
     "tower",

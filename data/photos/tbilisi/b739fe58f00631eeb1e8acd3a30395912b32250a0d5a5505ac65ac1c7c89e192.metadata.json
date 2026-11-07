@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Church,_Tbilisi_(Photo_A._Muhranoff,_2011).jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "храм и часовня; свободная лицензия",
+  "descriptions": {
+    "ru": "Храм и часовня",
+    "en": "Church and chapel",
+    "ka": "ტაძარი და სამლოცველო",
+    "uk": "Храм і каплиця"
+  },
   "width": 1000,
   "height": 811,
   "sourceTags": [

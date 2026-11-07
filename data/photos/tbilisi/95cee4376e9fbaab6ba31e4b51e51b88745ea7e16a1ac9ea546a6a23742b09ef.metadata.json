@@ -4,7 +4,12 @@
   "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-self",
   "source": "https://commons.wikimedia.org/wiki/File:Rike_and_the_Presidential_Palace_in_Tbilisi_2010.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Дворец и собор Самеба с левого берега Куры.",
+  "descriptions": {
+    "ru": "С левого берега Куры: дворец и собор Самеба",
+    "en": "From the left bank of the Kura: the palace and Sameba Cathedral",
+    "ka": "მტკვრის მარცხენა ნაპირიდან: სასახლე და სამების ტაძარი",
+    "uk": "З лівого берега Кури: палац і собор Самеба"
+  },
   "visualTags": [
     "water",
     "dome",

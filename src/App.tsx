@@ -40,14 +40,22 @@ function photoTechnicalNote(modifications:string,t:(value:string)=>string){
  const clauses=modifications.split(';').map(value=>value.trim()).filter(Boolean).filter(value=>!/полное качество|оригинал.*не (?:использ|сохран)/i.test(value));
  const clean=clauses.join('; ').replace(/\.$/,'');
  const width=clean.match(/уменьшен размер до\s+(\d+)\s*px/i);
+ const kept=clean.match(/ширина сохранена\s*\((\d+)\s*px\)/i);
  const resized=/уменьшен размер/i.test(clean);
  const parts:string[]=[];
  if(width)parts.push(t('Ширина уменьшена до ')+width[1]+' px');
+ else if(kept)parts.push(t('Ширина сохранена: ')+kept[1]+' px');
  else if(resized)parts.push(t('Размер уменьшен'));
  if(/webp/i.test(clean))parts.push(t('Фото преобразовано в WebP'));
- const other=clauses.filter(value=>!/уменьшен размер/i.test(value)&&!/webp/i.test(value)).join('; ');
+ const other=clauses.filter(value=>!/уменьшен размер/i.test(value)&&!/webp/i.test(value)&&!/ширина сохранена/i.test(value)).join('; ');
  if(other)parts.push(other);
  return parts.length?parts.join(' · '):clean;
+}
+function photoCreditText(photo:Photo,t:(value:string)=>string){
+ const author=(photo.author||'').trim(),license=(photo.license||'').trim();
+ if(author&&license)return `${t('Фото: ')}${author} · ${license}`;
+ if(author)return `${t('Фото: ')}${author}`;
+ return license;
 }
 function PeriodChoices({selected,onToggle,onHover,className}:{selected:string[];onToggle:(label:string)=>void;onHover:(label:string|null)=>void;className:string}){
  const {t}=useI18n();
@@ -74,12 +82,13 @@ function PhotoLightbox({building,src,index,total,description,credit,onClose,onNe
  const {t,language}=useI18n();
  const name=building.names?.[language]||building.name;
  const sourceHost=credit?photoSourceHost(credit.source):'';
+ const creditText=credit?photoCreditText(credit,t):'';
  const viewRef=useRef<HTMLDivElement>(null),imgRef=useRef<HTMLImageElement>(null),badgeRef=useRef<HTMLAnchorElement>(null);
  const placeBadge=()=>{const view=viewRef.current,img=imgRef.current,badge=badgeRef.current;if(!view||!img||!badge||!img.complete||(src&&!img.currentSrc.endsWith(src)))return;const v=view.getBoundingClientRect(),r=img.getBoundingClientRect();if(!r.width||!r.height)return;const inset=window.matchMedia('(max-width: 650px)').matches?6:10;badge.style.left=`${Math.round(r.right-v.left-inset)}px`;badge.style.top=`${Math.round(r.bottom-v.top-inset)}px`;badge.style.visibility='visible'};
  useLayoutEffect(()=>{if(badgeRef.current)badgeRef.current.style.visibility='hidden';placeBadge();const resize=()=>placeBadge();window.addEventListener('resize',resize);return()=>window.removeEventListener('resize',resize)},[src]);
  const closeButton=useRef<HTMLButtonElement>(null);
  useEffect(()=>{const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';closeButton.current?.focus();const key=(event:KeyboardEvent)=>{if(event.key==='Escape')onClose();else if(event.key==='ArrowRight')onNext();else if(event.key==='ArrowLeft')onPrevious()};window.addEventListener('keydown',key);return()=>{window.removeEventListener('keydown',key);document.body.style.overflow=previousOverflow;opener.current?.focus()}},[]);
- return createPortal(<div className="lightbox-backdrop" role="dialog" aria-modal="true" aria-label={t("Фотографии: ")+name} onClick={event=>{if(event.target===event.currentTarget)onClose()}}><div className="lightbox" onClick={event=>{if(event.target===event.currentTarget)onClose()}}><div className="lightbox-top"><span>{String(index+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span><button ref={closeButton} className="lightbox-close" onClick={onClose} aria-label={t("Закрыть фотографию")}><Icon name="close" size={22}/></button></div><div className="lightbox-view" ref={viewRef} onClick={event=>{if(event.target===event.currentTarget)onClose()}}>{total>1&&<button className="lightbox-nav previous" onClick={onPrevious} aria-label={t("Предыдущая фотография")}>‹</button>}<img ref={imgRef} src={src} alt={`${name}, фотография ${index+1}`} onLoad={placeBadge}/>{credit&&sourceHost&&<a ref={badgeRef} className="lightbox-source" href={credit.source} target="_blank" rel="noreferrer" onClick={event=>event.stopPropagation()} aria-label={`${t('Источник фото')}: ${sourceHost}`}>{sourceHost}</a>}{total>1&&<button className="lightbox-nav next" onClick={onNext} aria-label={t("Следующая фотография")}>›</button>}</div><div className="lightbox-caption"><strong>{name}</strong>{description&&<p>{description}</p>}{credit&&<p className="photo-credit"><a href={credit.source} target="_blank" rel="noreferrer">{t("Фото: ")}{credit.author} · {credit.license}</a><span> · </span><a href={credit.licenseUrl} target="_blank" rel="noreferrer">{t(credit.license==='Не установлена'?'Источник фото':'Условия лицензии')}</a></p>}</div></div></div>,document.body);
+ return createPortal(<div className="lightbox-backdrop" role="dialog" aria-modal="true" aria-label={t("Фотографии: ")+name} onClick={event=>{if(event.target===event.currentTarget)onClose()}}><div className="lightbox" onClick={event=>{if(event.target===event.currentTarget)onClose()}}><div className="lightbox-top"><span>{String(index+1).padStart(2,'0')} / {String(total).padStart(2,'0')}</span><button ref={closeButton} className="lightbox-close" onClick={onClose} aria-label={t("Закрыть фотографию")}><Icon name="close" size={22}/></button></div><div className="lightbox-view" ref={viewRef} onClick={event=>{if(event.target===event.currentTarget)onClose()}}>{total>1&&<button className="lightbox-nav previous" onClick={onPrevious} aria-label={t("Предыдущая фотография")}>‹</button>}<img ref={imgRef} src={src} alt={`${name}, ${t('фотография ')}${index+1}`} onLoad={placeBadge}/>{credit&&sourceHost&&<a ref={badgeRef} className="lightbox-source" href={credit.source} target="_blank" rel="noreferrer" onClick={event=>event.stopPropagation()} aria-label={`${t('Источник фото')}: ${sourceHost}`}>{sourceHost}</a>}{total>1&&<button className="lightbox-nav next" onClick={onNext} aria-label={t("Следующая фотография")}>›</button>}</div><div className="lightbox-caption"><strong>{name}</strong>{description&&<p>{description}</p>}{credit&&<p className="photo-credit">{creditText&&<><a href={credit.source} target="_blank" rel="noreferrer">{creditText}</a><span> · </span></>}<a href={credit.licenseUrl} target="_blank" rel="noreferrer">{t(credit.license?'Условия лицензии':'Источник фото')}</a></p>}</div></div></div>,document.body);
 }
 function parseHash(){const p=new URLSearchParams(location.hash.slice(1));return {view:p.get('view')==='catalog'?'catalog' as View:'map' as View,id:p.get('building'),language:isLanguage(p.get('lang'))?p.get('lang') as Language:null}}
 function Loader({onReady}:{onReady:(d:Data)=>void}){
@@ -131,7 +140,7 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
  const address=building.addresses?.[language]??building.address;
  const geometryQuality=language==='ru'?building.geometryQuality:building.geometryQualityTranslations?.[language]||building.geometryQuality;
  const architects=building.architectsByLanguage?.[language]||building.architects;
- const [photoIndex,setPhotoIndex]=useState(0),[lightboxOpen,setLightboxOpen]=useState(false);const images=photos.assets;const current=images[photoIndex]??images[0];const credits=current?.photo;const photoNote=credits?photoTechnicalNote(credits.modifications,t):'';const preview=current?.thumb??current?.full;const gallery=current?.full??current?.thumb;
+ const [photoIndex,setPhotoIndex]=useState(0),[lightboxOpen,setLightboxOpen]=useState(false);const images=photos.assets;const current=images[photoIndex]??images[0];const credits=current?.photo;const photoNote=credits?photoTechnicalNote(credits.modifications,t):'';const creditText=credits?photoCreditText(credits,t):'';const preview=current?.thumb??current?.full;const gallery=current?.full??current?.thumb;
  const close=useRef<HTMLButtonElement>(null),photoOpener=useRef<HTMLButtonElement>(null);useEffect(()=>{close.current?.focus()},[building.id]);useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!lightboxOpen)onClose()};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[building.id,lightboxOpen]);
  const googleMapsQuery=encodeURIComponent(`${building.nameEn||building.name}, ${building.addresses?.en||''}, Tbilisi, Georgia`);
  const googleMapsUrl=building.googlePlaceId?`https://www.google.com/maps/search/?api=1&query=${googleMapsQuery}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`:`https://www.google.com/maps/search/?api=1&query=${building.addresses?.en?googleMapsQuery:encodeURIComponent(`${building.coordinates[1]},${building.coordinates[0]}`)}`;
@@ -143,7 +152,7 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
   <div className="inspect-scroll">
    <div className="photo-wrap">
     {images.length?preview?<>
-     <button ref={photoOpener} className="photo-open" onClick={()=>setLightboxOpen(true)} aria-label={t("Открыть фотографию ")+`${photoIndex+1}`+t(" на весь экран")}><img src={preview} alt={`${name}, фотография ${photoIndex+1}`}/></button>
+     <button ref={photoOpener} className="photo-open" onClick={()=>setLightboxOpen(true)} aria-label={t("Открыть фотографию ")+`${photoIndex+1}`+t(" на весь экран")}><img src={preview} alt={`${name}, ${t('фотография ')}${photoIndex+1}`}/></button>
      {images.length>1&&<><button className="photo-prev" aria-label={t("Предыдущая фотография")} onClick={previousPhoto}>‹</button><button className="photo-next" aria-label={t("Следующая фотография")} onClick={nextPhoto}>›</button></>}
      <span className="photo-number">{String(photoIndex+1).padStart(2,"0")} / {String(images.length).padStart(2,"0")}</span>
      {photos.phase==='preview'&&<span className="photo-loading-note">{t('Галерея загружается…')}</span>}
@@ -156,10 +165,10 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
     <div className="details"><div><span>{t("ПОСТРОЕНО")}</span><strong>{constructionLabel}</strong></div><div><span>{t("СТИЛЬ")}</span><strong>{individualStyles.map((item,index)=><Fragment key={item.id}>{index>0?', ':''}{item.id!=='undetermined'?<button className="detail-filter" onClick={()=>onFilter('style',item.id)} aria-label={t("Фильтр по стилю: ")+item.label}>{item.label}</button>:item.label}</Fragment>)}</strong></div><div className="full"><span>{t("АРХИТЕКТОР")}</span><strong>{architects.length?architects.map((architect,index)=><Fragment key={building.architectIds[index]||architect}>{index>0?', ':''}<button className="detail-filter" onClick={()=>onFilter('architect',building.architectIds[index]||architect)} aria-label={t("Фильтр по архитектору: ")+architect}>{architect}</button></Fragment>):t('Не установлен')}</strong></div></div>
     {history.trim()&&<><div className="section-rule"/><p className="eyebrow">{t('ИСТОРИЯ ЗДАНИЯ')}</p><p className="history">{history}</p></>}
     <button className="text-link map-link" onClick={onMap}><Icon name="pin" size={15}/> {t('Показать на карте')} <Icon name="arrow" size={16}/></button>
-    <div className="credits"><p>{t('ДАННЫЕ И ФОТОГРАФИЯ')}</p><a href={building.source} target="_blank" rel="noreferrer">{t('Источник сведений')} <Icon name="external" size={12}/></a>{building.otherSource&&<a href={building.otherSource} target="_blank" rel="noreferrer">{t('Дополнительный источник')} <Icon name="external" size={12}/></a>}{credits&&<><a href={credits.source} target="_blank" rel="noreferrer">{t("Фото: ")}{credits.author} · {credits.license} <Icon name="external" size={12}/></a><span className="credit-line"><a href={credits.licenseUrl} target="_blank" rel="noreferrer">{t(credits.license==='Не установлена'?'Источник фото':'Условия лицензии')}</a>{photoNote&&<InfoTip text={photoNote} label={t('Технические сведения о фотографии')}/>}</span></>}{building.geometryQuality&&<span className="credit-line credit-contour"><span>{t('Контур')}</span><InfoTip text={geometryQuality} label={t('Технические сведения о контуре')}/></span>}</div>
+    <div className="credits"><p>{t('ДАННЫЕ И ФОТОГРАФИЯ')}</p><a href={building.source} target="_blank" rel="noreferrer">{t('Источник сведений')} <Icon name="external" size={12}/></a>{building.otherSource&&<a href={building.otherSource} target="_blank" rel="noreferrer">{t('Дополнительный источник')} <Icon name="external" size={12}/></a>}{credits&&<>{creditText&&<a href={credits.source} target="_blank" rel="noreferrer">{creditText} <Icon name="external" size={12}/></a>}<span className="credit-line"><a href={credits.licenseUrl} target="_blank" rel="noreferrer">{t(credits.license?'Условия лицензии':'Источник фото')}</a>{photoNote&&<InfoTip text={photoNote} label={t('Технические сведения о фотографии')}/>}</span></>}{building.geometryQuality&&<span className="credit-line credit-contour"><span>{t('Контур')}</span><InfoTip text={geometryQuality} label={t('Технические сведения о контуре')}/></span>}</div>
    </div>
   </div>
- </aside>{lightboxOpen&&credits&&gallery&&<PhotoLightbox building={building} src={gallery} index={photoIndex} total={images.length} description={credits.description} credit={credits} onClose={()=>setLightboxOpen(false)} onNext={nextPhoto} onPrevious={previousPhoto} opener={photoOpener}/>}</>
+ </aside>{lightboxOpen&&credits&&gallery&&<PhotoLightbox building={building} src={gallery} index={photoIndex} total={images.length} description={credits.descriptions?.[language]} credit={credits} onClose={()=>setLightboxOpen(false)} onNext={nextPhoto} onPrevious={previousPhoto} opener={photoOpener}/>}</>
 }
 function AppContent({data}:{data:Data}){
  const {language,t,setLanguage}=useI18n();

@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "https://commons.wikimedia.org/wiki/File:%D8%AA%D9%81%D9%84%DB%8C%D8%B3_Tbilisi_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98_37.jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "Общий вид с реки: дворец читается в центре кадра над застройкой; годится как контекстный кадр, не как основной",
+  "descriptions": {
+    "ru": "Вид с реки: дворец в центре кадра над застройкой",
+    "en": "View from the river: the palace stands at the centre of the frame above the rooftops",
+    "ka": "ხედი მდინარიდან: სასახლე კადრის ცენტრში, გადახურვების ზემოთ",
+    "uk": "Вигляд з річки: палац у центрі кадру над забудовою"
+  },
   "width": 1920,
   "height": 1080,
   "sourceTags": [

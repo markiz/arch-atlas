@@ -73,8 +73,8 @@ TAXONOMY = ROOT / 'data' / 'photo-visual-tags.json'
 WORK = ROOT / 'work' / 'registry-photos'
 REPORT = WORK / 'applied.json'
 USER_AGENT = 'TbilisiArchitectureAtlasPhotos/1.3 (educational atlas research)'
-REGISTRY_AUTHOR = 'Реестр памятников Грузии (автор не указан)'
-UNKNOWN_LICENSE = 'Не установлена'
+REGISTRY_AUTHOR = ''
+UNKNOWN_LICENSE = ''
 TARGET = 3
 MAX_PHOTOS = 4
 SHEET_SIZE = 6
@@ -597,7 +597,6 @@ def apply_selection(cards: dict[str, dict], fallbacks: dict[str, dict], selected
                     'licenseUrl': record,
                     'source': photo['url'],
                     'modifications': modifications(width, original_width),
-                    'description': 'Фото реестра памятников; автор и лицензия не установлены',
                 }
                 if photo['id'] in chosen_tags:
                     metadata['visualTags'] = chosen_tags[photo['id']]

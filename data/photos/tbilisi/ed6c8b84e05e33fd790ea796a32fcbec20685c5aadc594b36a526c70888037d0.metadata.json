@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Metro_Rustaveli.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "наземный павильон станции метро «Руставели»",
+  "descriptions": {
+    "ru": "Наземный павильон станции",
+    "en": "Surface pavilion of the station",
+    "ka": "სადგურის მიწისზედა პავილიონი",
+    "uk": "Наземний павільйон станції"
+  },
   "width": 1920,
   "height": 1280,
   "sourceTags": [

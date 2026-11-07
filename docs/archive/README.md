@@ -9,9 +9,9 @@
 | [planning/](planning/) | Исходный план реализации — [implementation-plan.md](planning/implementation-plan.md), версия 1.0 от 31 октября 2026. |
 | [status/](status/) | Ранние снимки состояния — [status-2026-10-31.md](status/status-2026-10-31.md) на 100 карточек. |
 | [reviews/](reviews/) | Завершённые рабочие списки — [google-place-id-manual-review-100.md](reviews/google-place-id-manual-review-100.md). |
-| [research/](research/) | Датированные исследовательские журналы по очередям 1–4; карта и итоги — в [research/README.md](research/README.md). |
+| [research/](research/) | Датированные исследовательские журналы по очередям 1–4 и кампании публичных зданий; карта и итоги — в [research/README.md](research/README.md). |
 
-Исследования сгруппированы по кампаниям: `queue-1-heritage-200/` разложена по стадиям `screening/`, `verification/` и `waves/`; очереди 2–4 лежат отдельными папками вместе с итоговым разбором.
+Исследования сгруппированы по кампаниям: `queue-1-heritage-200/` разложена по стадиям `screening/`, `verification/` и `waves/`; очереди 2–4 лежат отдельными папками вместе с итоговым разбором; `public-buildings/` — завершённая кампания публичных и правительственных зданий.
 
 ## Что считать актуальным
 

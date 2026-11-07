@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
   "source": "https://commons.wikimedia.org/wiki/File:Church_of_St._Nicholas_in_Narikala_(5).jpg",
   "modifications": "уменьшен размер, преобразовано в WebP",
-  "description": "храм Св. Николая, вид сбоку; загружено в рамках конкурса памятников Грузии",
+  "descriptions": {
+    "ru": "Вид сбоку",
+    "en": "Side view",
+    "ka": "ხედი გვერდიდან",
+    "uk": "Вигляд збоку"
+  },
   "width": 1920,
   "height": 1280,
   "sourceTags": [

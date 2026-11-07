@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
   "source": "https://commons.wikimedia.org/wiki/File:State_Armenian_Drama_Theatre_-_Tbilisi.jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Тбилисский армянский драматический театр; вид с улицы.",
+  "descriptions": {
+    "ru": "Вид с улицы",
+    "en": "View from the street",
+    "ka": "ხედი ქუჩიდან",
+    "uk": "Вигляд з вулиці"
+  },
   "visualTags": [
     "facade",
     "window",

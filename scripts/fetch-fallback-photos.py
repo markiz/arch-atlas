@@ -2,9 +2,8 @@
 """Attach low-resolution registry photos when no free photo is available.
 
 This is an explicit last-resort path. It does not claim a license: the card
-stores author "Реестр памятников Грузии (автор не указан)", license
-"Не установлена" and links to the registry record. Images are deliberately
-reduced (max 700 px) and never upscaled.
+stores empty author and license strings and links to the registry record.
+Images are deliberately reduced (max 700 px) and never upscaled.
 
 Usage:
   python3 scripts/fetch-fallback-photos.py --dry-run
@@ -77,12 +76,11 @@ def main() -> int:
         width = image.width
         photo_id = save_photo(image.convert('RGB'), quality=72)
         write_photo_metadata(photo_id, {
-            'author': 'Реестр памятников Грузии (автор не указан)',
-            'license': 'Не установлена',
+            'author': '',
+            'license': '',
             'licenseUrl': candidate['record'],
             'source': candidate['photo'],
             'modifications': (f'уменьшен размер до {width} px по ширине, преобразовано в WebP' if resized else 'преобразовано в WebP'),
-            'description': candidate.get('note', ''),
         })
         card.setdefault('photos', []).append(photo_id)
         modified.append(card)

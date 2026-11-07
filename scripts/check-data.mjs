@@ -66,11 +66,14 @@ for(const b of data){
  const images=b.photos??(b.photo?[b.photo]:[]);assert(Array.isArray(images),`${b.id}: photos`);if(images.length)withPhotos++;if(images.length>1)galleries++;
  const paths=new Set();
  for(const p of images){
-  for(const k of ['id','file','thumb','author','license','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
+  for(const k of ['id','file','thumb','licenseUrl','source','modifications'])assert(p[k],`${b.id}: photo.${k}`);
+  for(const k of ['author','license'])assert(typeof p[k]==='string',`${b.id}: photo.${k} must be a string`);
+  for(const k of ['author','license'])assert(!p[k]||!/[^\p{Script=Latin}\p{Script=Common}\p{Script=Inherited}]/u.test(p[k]),`${b.id}: photo.${k} must be Latin script and English wording`);
   for(const k of ['width','height'])assert(Number.isInteger(p[k])&&p[k]>0,`${b.id}: photo.${k} must be a positive integer`);
   assert(Number.isInteger(p.rating)&&p.rating>=0&&p.rating<=100,`${b.id}: photo.rating must be an integer from 0 to 100`);
   for(const k of ['sourceTags','visualTags'])if(p[k]!==undefined)assert(Array.isArray(p[k])&&p[k].length>0&&p[k].every(tag=>typeof tag==='string'&&tag.trim())&&new Set(p[k]).size===p[k].length,`${b.id}: photo.${k} must be a non-empty array of unique strings`);
   if(p.visualTags)for(const tag of p.visualTags)assert(visualTagIds.has(tag),`${b.id}: unknown visual tag ${tag}`);
+  if(p.descriptions!==undefined)assert(Object.keys(p.descriptions).length===4&&['ru','en','ka','uk'].every(lang=>typeof p.descriptions[lang]==='string'&&p.descriptions[lang].trim()),`${b.id}: photo.descriptions must contain non-empty ru/en/ka/uk`);
   assert(/^[a-f0-9]{64}$/.test(p.id),`${b.id}: photo id must be a lowercase sha256`);
   const expectedFile=`photos/tbilisi/${p.id}.webp`;
   const expectedThumb=`thumbnails/tbilisi/${p.id}.webp`;
@@ -88,7 +91,7 @@ for(const b of data){
    for(const k of ['width','height'])assert(metadata[k]===p[k],`${b.id}: photo metadata ${k} differs from sidecar`);
    assert(metadata.rating===p.rating,`${b.id}: photo metadata rating differs from sidecar`);
    for(const k of ['sourceTags','visualTags'])assert(JSON.stringify(metadata[k])===JSON.stringify(p[k]),`${b.id}: photo metadata ${k} differs from sidecar`);
-   assert(metadata.description===p.description,`${b.id}: photo metadata description differs from sidecar`);
+   assert(JSON.stringify(metadata.descriptions)===JSON.stringify(p.descriptions),`${b.id}: photo metadata descriptions differ from sidecar`);
    for(const path of [source,published]){
     const bytes=await readFile(path);
     assert(bytes.length>32&&bytes.subarray(0,4).toString()==='RIFF'&&bytes.subarray(8,12).toString()==='WEBP',`${b.id}: invalid photo file ${path}`);

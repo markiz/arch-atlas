@@ -12,6 +12,7 @@ import hashlib
 import json
 import re
 import threading
+import unicodedata
 import uuid
 from pathlib import Path
 from typing import Any, Iterable
@@ -25,7 +26,7 @@ PHOTOS_DIR = ROOT / 'data/photos'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
-PHOTO_OPTIONAL_FIELDS = ('description', 'rating')
+PHOTO_OPTIONAL_FIELDS = ('descriptions', 'rating')
 PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 _PHOTO_LOCK = threading.Lock()
@@ -134,19 +135,41 @@ def _normalized_tags(value: Any, field: str) -> list[str]:
     return tags
 
 
+def is_latin_credit(value: str) -> bool:
+    """Author and license are stored in Latin script and English wording."""
+    for char in value:
+        if char.isascii():
+            continue
+        category = unicodedata.category(char)
+        if category[0] in 'PNZSM':
+            continue
+        if unicodedata.name(char, '').startswith('LATIN'):
+            continue
+        return False
+    return True
+
+
 def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
     normalized: dict[str, Any] = {}
     for field in PHOTO_METADATA_FIELDS:
         value = metadata.get(field)
-        if not isinstance(value, str) or not value.strip():
+        if not isinstance(value, str):
+            raise ValueError(f'photo metadata field {field} must be a string')
+        if field in ('author', 'license'):
+            if value.strip() and not is_latin_credit(value):
+                raise ValueError(f'photo metadata field {field} must be Latin script and English wording')
+        elif not value.strip():
             raise ValueError(f'photo metadata field {field} must be a non-empty string')
         normalized[field] = value
-    description = metadata.get('description')
-    if description is not None:
-        if not isinstance(description, str):
-            raise ValueError('photo metadata field description must be a string')
-        if description.strip():
-            normalized['description'] = description
+    descriptions = metadata.get('descriptions')
+    if descriptions is not None:
+        if not isinstance(descriptions, dict) or set(descriptions) != {'ru', 'en', 'ka', 'uk'}:
+            raise ValueError('photo metadata field descriptions must be an object with exactly ru/en/ka/uk')
+        for lang in ('ru', 'en', 'ka', 'uk'):
+            value = descriptions[lang]
+            if not isinstance(value, str) or not value.strip():
+                raise ValueError(f'photo metadata field descriptions.{lang} must be a non-empty string')
+        normalized['descriptions'] = {lang: descriptions[lang] for lang in ('ru', 'en', 'ka', 'uk')}
     rating = metadata.get('rating')
     if rating is not None:
         if not isinstance(rating, int) or isinstance(rating, bool) or not 0 <= rating <= 100:
@@ -167,7 +190,7 @@ def write_photo_metadata(
     *,
     replace_tags: Iterable[str] = (),
 ) -> bool:
-    """Write <sha256>.metadata.json, merging a missing optional description.
+    """Write <sha256>.metadata.json, merging missing optional descriptions.
 
     The image bytes are the identity of a photo, so two gallery entries that use
     the same file share one canonical sidecar. Conflicting attribution for the
@@ -187,12 +210,12 @@ def write_photo_metadata(
         for field in PHOTO_METADATA_FIELDS:
             if merged.get(field) != normalized[field]:
                 raise ValueError(f'{path}: conflicting {field} for the same photo bytes')
-        old_description = merged.get('description')
-        new_description = normalized.get('description')
-        if new_description:
-            if old_description and old_description != new_description:
-                raise ValueError(f'{path}: conflicting description for the same photo bytes')
-            merged['description'] = new_description
+        old_descriptions = merged.get('descriptions')
+        new_descriptions = normalized.get('descriptions')
+        if new_descriptions:
+            if old_descriptions and old_descriptions != new_descriptions:
+                raise ValueError(f'{path}: conflicting descriptions for the same photo bytes')
+            merged['descriptions'] = new_descriptions
         for field in PHOTO_TAG_FIELDS:
             if field in normalized:
                 merged[field] = normalized[field]

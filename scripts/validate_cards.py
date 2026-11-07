@@ -17,6 +17,7 @@ import json
 import math
 import re
 import sys
+import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -42,9 +43,21 @@ PHOTOS_DIR = ROOT / 'data/photos/tbilisi'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails/tbilisi'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
-PHOTO_OPTIONAL_FIELDS = ('description', 'rating')
+PHOTO_OPTIONAL_FIELDS = ('descriptions', 'rating')
 PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
+
+
+def latin_credit(value: str) -> bool:
+    """Author and license are stored in Latin script with English wording."""
+    for char in value:
+        if char.isascii():
+            continue
+        category = unicodedata.category(char)
+        if category[0] in 'PNZSM' or unicodedata.name(char, '').startswith('LATIN'):
+            continue
+        return False
+    return True
 VISUAL_TAXONOMY = ROOT / 'data/photo-visual-tags.json'
 LANGS = ('ru', 'en', 'ka', 'uk')
 GEOMETRY_ROLES = (
@@ -328,12 +341,24 @@ def main() -> int:
                             errors.append(f'{label}: photo[{index}] metadata must be an object')
                         else:
                             for key in PHOTO_FIELDS:
-                                if not isinstance(metadata.get(key), str) or not metadata[key].strip():
+                                value = metadata.get(key)
+                                if not isinstance(value, str):
                                     errors.append(f'{label}: photo[{index}].{key} missing')
-                            if metadata.get('description') is not None and (
-                                not isinstance(metadata['description'], str) or not metadata['description'].strip()
-                            ):
-                                errors.append(f'{label}: photo[{index}].description must be a non-empty string')
+                                elif key not in ('author', 'license') and not value.strip():
+                                    errors.append(f'{label}: photo[{index}].{key} missing')
+                            for key in ('author', 'license'):
+                                value = metadata.get(key)
+                                if isinstance(value, str) and value.strip() and not latin_credit(value):
+                                    errors.append(f'{label}: photo[{index}].{key} must be Latin script and English wording')
+                            if metadata.get('descriptions') is not None:
+                                descriptions = metadata['descriptions']
+                                if not isinstance(descriptions, dict) or set(descriptions) != set(LANGS):
+                                    errors.append(f'{label}: photo[{index}].descriptions must contain exactly ru/en/ka/uk')
+                                else:
+                                    for lang in LANGS:
+                                        value = descriptions[lang]
+                                        if not isinstance(value, str) or not value.strip():
+                                            errors.append(f'{label}: photo[{index}].descriptions.{lang} must be a non-empty string')
                             rating = metadata.get('rating')
                             if not isinstance(rating, int) or isinstance(rating, bool) or not 0 <= rating <= 100:
                                 errors.append(f'{label}: photo[{index}].rating must be an integer from 0 to 100')

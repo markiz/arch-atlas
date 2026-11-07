@@ -4,7 +4,12 @@
   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
   "source": "https://commons.wikimedia.org/wiki/File:2016_Tbilisi,_Widoki_z_Twierdzy_Narikala_(05).jpg",
   "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
-  "description": "Панорама Тбилиси с Домом юстиции в центре; вид с Нарикалы.",
+  "descriptions": {
+    "ru": "Панорама города: Дом юстиции в центре кадра, вид с Нарикалы",
+    "en": "City panorama: the Public Service Hall at the centre of the frame, seen from Narikala",
+    "ka": "ქალაქის პანორამა: იუსტიციის სახლი კადრის ცენტრში, ხედი ნარიყალიდან",
+    "uk": "Панорама міста: Будинок юстиції в центрі кадру, вигляд з Нарікали"
+  },
   "visualTags": [
     "aerial",
     "panorama",

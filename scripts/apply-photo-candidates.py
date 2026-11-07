@@ -43,7 +43,7 @@ UNKNOWN_WIDTH = 1200
 TARGET = 3
 MAX_PHOTOS = 4
 QUALITY = 82
-UNKNOWN_LICENSE = 'Не установлена'
+UNKNOWN_LICENSE = ''
 
 
 def fetch(url: str) -> bytes:

@@ -35,7 +35,7 @@
 ## Исследование очередей
 
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила.
-- [research-public-buildings.md](research-public-buildings.md) — обязательный пул публичных и правительственных зданий: 202 контура, приоритеты и фото.
+- [research-vake-vera-candidates.md](research-vake-vera-candidates.md) — Ваке и Вера: 23 кандидата, 10 READY, три карточки на переименование.
 - [research-modernist-t-j.md](research-modernist-t-j.md) — разбор списка модернистской архитектуры Т—Ж: 8 кандидатов, 6 новых карточек, расхождения дат и адресов.
 - [research-queue-progress.md](research-queue-progress.md) — регистр первой очереди: 95 добавлено, 105 hold/reject.
 - [research-next-200-v5.md](research-next-200-v5.md) — пятая очередь, 200 кандидатов.
@@ -45,4 +45,5 @@
 ## Архив
 
 - [archive/README.md](archive/README.md) — что и почему лежит в архиве.
-- [archive/research/README.md](archive/research/README.md) — карта исследовательских журналов по очередям.
+- [archive/research/README.md](archive/research/README.md) — карта исследовательских журналов по очередям и кампаниям.
+- [Публичные и правительственные здания](archive/research/public-buildings/research-public-buildings.md) — завершённая кампания: 202 контура, приоритеты и фото.

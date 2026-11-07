@@ -1,10 +1,15 @@
 {
-  "author": "Нино Зедгинидзе / Silknet",
-  "license": "Не установлена",
+  "author": "Nino Zedginidze / Silknet",
+  "license": "",
   "licenseUrl": "https://scantbilisi.ge/en/objects/228",
   "source": "https://scantbilisi.ge/en/objects/228",
   "modifications": "ширина сохранена (800 px), преобразовано в WebP (quality 82); полное качество не используется",
-  "description": "Первый корпус университета: боковой фасад со стороны улицы. Фото: Scan Tbilisi / Silknet, фотограф Нино Зедгинидзе; права не переданы.",
+  "descriptions": {
+    "ru": "Боковой фасад со стороны улицы",
+    "en": "Side facade from the street",
+    "ka": "გვერდითი ფასადი ქუჩის მხრიდან",
+    "uk": "Бічний фасад з боку вулиці"
+  },
   "visualTags": [
     "facade",
     "street",
