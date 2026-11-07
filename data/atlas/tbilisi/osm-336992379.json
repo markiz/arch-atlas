@@ -15,10 +15,10 @@
     "uk": "проспект Давида Агмашенебелі, 49/2"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Двухэтажный кирпичный дом на углу Агмашенебели и Мазниашвили с П-образным планом и богато декорированным фасадом. В отделке использованы элементы ампира: руст, пилястры, арочные наличники и металлические балконы.",
+    "en": "A two-storey brick house on the corner of Agmashenebeli Avenue and Mazniashvili Street, with a U-shaped plan and a richly decorated façade. Its decoration uses Empire-style elements: rustication, pilasters, arched surrounds and metal balconies.",
+    "ka": "ორსართულიანი აგურის სახლი აღმაშენებლის გამზირისა და მაზნიაშვილის ქუჩის კუთხეში, П-ს ფორმის გეგმითა და მდიდრულად მორთული ფასადით. გაფორმებაში ამპირის სტილის ელემენტებია გამოყენებული: რუსტი, პილასტრები, თაღოვანი საპირეები და ლითონის აივნები.",
+    "uk": "Двоповерховий цегляний будинок на розі проспекту Агмашенебелі та вулиці Мазніашвілі, П-подібний у плані, з багато декорованим фасадом. В оздобленні використано елементи ампіру: руст, пілястри, арочні наличники та металеві балкони."
   },
   "minYear": null,
   "maxYear": null,
@@ -103,5 +103,11 @@
   "source": "https://www.openstreetmap.org/way/336992379",
   "otherSource": "https://www.wikidata.org/wiki/Q42645160",
   "googlePlaceId": "ChIJcXFgcd8MREARNUGQk6VrenE",
-  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Davit%20Aghmashenebeli/Giorgi%20Mazniashvili%20Street&query_place_id=ChIJcXFgcd8MREARNUGQk6VrenE"
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Davit%20Aghmashenebeli/Giorgi%20Mazniashvili%20Street&query_place_id=ChIJcXFgcd8MREARNUGQk6VrenE",
+  "histories": {
+    "ru": "По описанию реестра дом построен в 1877 году (в структурном поле реестра стоит 1857 — расхождение). В нём размещался кадетский корпус, затем госпиталь; после советизации здание перестроили под жильё. Фасад сильно повреждён и требует срочной реабилитации.",
+    "en": "According to the registry description, the house was built in 1877 (the structured field gives 1857 — a discrepancy). It housed a cadet corps and later a hospital; after Sovietisation it was converted into housing. The façade is badly damaged and urgently needs rehabilitation.",
+    "ka": "რეესტრის აღწერით სახლი 1877 წელს აშენდა (სტრუქტურულ ველში 1857 წელია — განსხვავება). აქ იუნკერთა კორპუსი, შემდეგ საავადმყოფო იყო; გასაბჭოების შემდეგ საცხოვრებლად გადააკეთეს. ფასადი ძლიერ დაზიანებულია და სასწრაფო რეაბილიტაციას საჭიროებს.",
+    "uk": "За описом реєстру будинок зведено 1877 року (у структурному полі стоїть 1857 — розбіжність). Тут розміщувався кадетський корпус, згодом шпиталь; після радянізації будівлю перебудували під житло. Фасад сильно пошкоджений і потребує негайної реабілітації."
+  }
 }

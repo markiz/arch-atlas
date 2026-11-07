@@ -79,6 +79,21 @@ function referenceLabels(file,table,id,kind){
   return requireLabels(file,entry.labels,`${kind} "${id}" labels`);
 }
 
+function styleLabels(file,table,value){
+  const id=requireString(file,value,'styleId');
+  const parts=id.split('+');
+  if(new Set(parts).size!==parts.length)fail(file,`styleId "${id}" has duplicate components`);
+  const labels={ru:[],en:[],ka:[],uk:[]};
+  for(const part of parts){
+    const entry=table[part];
+    if(!entry)fail(file,`unknown style reference "${part}"`);
+    if(!isPlainObject(entry.labels))fail(file,`style "${part}" has no labels in the shared dictionary`);
+    const partLabels=requireLabels(file,entry.labels,`style "${part}" labels`);
+    for(const lang of LANGS)labels[lang].push(partLabels[lang]);
+  }
+  return {ru:labels.ru.join(', '),en:labels.en.join(', '),ka:labels.ka.join(', '),uk:labels.uk.join(', ')};
+}
+
 function validateGeometry(file,geometry,field){
   if(!isPlainObject(geometry)||!['Polygon','MultiPolygon'].includes(geometry.type))fail(file,`${field} must be a Polygon or MultiPolygon`);
   if(!Array.isArray(geometry.coordinates)||!geometry.coordinates.length)fail(file,`${field} has no coordinates`);
@@ -146,7 +161,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   const descriptions=requireLabels(file,card.descriptions,'descriptions');
   const histories=card.histories===undefined?null:requireLabels(file,card.histories,'histories');
 
-  const styleId=requireReference(file,card.styleId,attributes.styles,'style');
+  const styleId=requireString(file,card.styleId,'styleId');
   const yearLabelId=requireReference(file,card.yearLabelId,attributes.yearLabels,'construction label');
   const districtId=requireReference(file,card.districtId,attributes.districts,'district');
   if(!Array.isArray(card.architectIds))fail(file,'architectIds must be an array');
@@ -178,7 +193,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   const seenPhotos=new Set();
   const photos=card.photos.map((photoId,index)=>validatePhoto(file,photoId,index,seenPhotos,city,photoMetadata));
 
-  const styles=referenceLabels(file,attributes.styles,styleId,'style');
+  const styles=styleLabels(file,attributes.styles,styleId);
   const yearLabels=referenceLabels(file,attributes.yearLabels,yearLabelId,'construction label');
   const districts=referenceLabels(file,attributes.districts,districtId,'district');
   const architectsByLanguage={ru:[],en:[],ka:[],uk:[]};

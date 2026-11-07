@@ -198,6 +198,17 @@ def main() -> int:
 
         for field, table in tables.items():
             value = card.get(field)
+            if field == 'styleId':
+                if not isinstance(value, str) or not value.strip():
+                    errors.append(f'{label}: styleId must be a non-empty string')
+                else:
+                    parts = value.split('+')
+                    if len(parts) != len(set(parts)):
+                        errors.append(f'{label}: styleId has duplicate components {value!r}')
+                    for part in parts:
+                        if part not in table:
+                            errors.append(f'{label}: unknown styleId component {part!r}')
+                continue
             if value not in table:
                 errors.append(f'{label}: unknown {field} reference {value!r}')
         district_id = card.get('districtId')

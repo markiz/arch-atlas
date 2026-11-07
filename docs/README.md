@@ -14,7 +14,8 @@
 - [district-attribution.md](district-attribution.md) — канонические районы и правила атрибуции.
 - [name-consistency-review.md](name-consistency-review.md) — ручная проверка названий перед добавлением.
 - [google-place-id-manual-review.md](google-place-id-manual-review.md) — объекты без Place ID.
-- [research-missing-descriptions.md](research-missing-descriptions.md) — 89 карточек с шаблонным описанием: 49 заполнено, 40 осталось; источники и что проверять дальше.
+- [research-missing-descriptions.md](research-missing-descriptions.md) — 89 карточек с шаблонным описанием: 50 заполнено, 39 осталось; источники и что проверять дальше.
+- [style-taxonomy.md](style-taxonomy.md) — атомарные стили, составные `styleId` и открытые вопросы.
 
 ## Фотографии
 
