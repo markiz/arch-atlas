@@ -14,8 +14,7 @@
 - `fetch-osm.py` — докачивает сетку OSM 4×4, существующие тайлы считает кэшем.
 - `import-landmarks.py` — bootstrap-импорт ориентиров из OSM в `data/landmarks/<city>/`; существующие карточки не перезаписывает.
 - `resolve-geometries.py` — собирает контуры relation/way и обновляет геометрию карточек.
-- `research-heritage.py` — собирает исторические кандидаты и сущности Wikidata в `raw/research/`; вход для фото-конвейера и происхождение старых исследовательских файлов. Публичные и правительственные здания теперь не отбрасываются, но скрипт по-прежнему читает только центральную сетку `raw/osm/grid/`; полный городской пул строится из `raw/osm/osm-tbilisi-building-outlines.geojson`.
-- `queue_collect.py`, `queue_report.py`, `create-next-200-report.py` — ручные инструменты исследования очередей; работают с Markdown-очередью и `work/queue/`. Закрытые очереди лежат в `docs/archive/research/`.
+- `queue_collect.py`, `queue_report.py`, `create-next-200-report.py` — инструменты исследования очередей; работают с Markdown-очередью и `work/queue/`. Нужны для незавершённой пятой очереди и будущих выборок; закрытые очереди лежат в `docs/archive/research/`.
 
 ## Фотографии
 
@@ -31,4 +30,4 @@
 
 ## Что удалено
 
-Разовые проходы по Wikimedia/Commons (`fetch-more*.py`, `fetch-sources.py`, `fetch-curated-*.py`, `fetch-conservatory.py`, `fetch-specific-fixes.py`, `fetch-galleries.py`, `fetch-depicts.py`, `fetch-extra-categories.py`, `inspect-commons-categories.py`), одноразовые `enrich-basemap-*.mjs` и завершённая миграция `migrate-photo-ids.py` удалены. Их промежуточные данные и отчёты остаются в `data/`, `raw/research/` и `work/` как исторические артефакты; сборщик их не использует.
+Разовые проходы по Wikimedia/Commons (`fetch-more*.py`, `fetch-sources.py`, `fetch-curated-*.py`, `fetch-conservatory.py`, `fetch-specific-fixes.py`, `fetch-galleries.py`, `fetch-depicts.py`, `fetch-extra-categories.py`, `inspect-commons-categories.py`), одноразовые `enrich-basemap-*.mjs`, завершённая миграция `migrate-photo-ids.py` и легаси-сборщик `research-heritage.py` удалены. Их промежуточные данные и отчёты остаются в `data/`, `raw/research/` и `work/` как исторические артефакты; сборщик их не использует. `raw/research/research-candidates.json` и `wikidata-heritage.json` — исторический снимок; `collect-photo-candidates.py` по-прежнему читает первый как необязательный источник тегов OSM, но заново эти файлы не собираются.

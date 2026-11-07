@@ -2,9 +2,8 @@
 """Collect deterministic facts for the research queue (no editorial judgement).
 
 For every candidate this script stores the registry record and polygon, the OSM
-way or relation geometry and tags, geometry metrics and diagnostic flags, the
-Google Place ID research status, Commons geosearch hits and overlaps with
-already published atlas cards. Explicit relation/way corrections live in
+way or relation geometry and tags, geometry metrics and diagnostic flags,
+Commons geosearch hits and overlaps with already published atlas cards. Explicit relation/way corrections live in
 data/osm-candidate-overrides.json (for example, bath No. 5 is a relation, not
 the neighboring way from the queue).
 
@@ -44,7 +43,6 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 QUEUE_PATH = ROOT / 'docs/research-next-200-v5.md'
 ATLAS_PATH = ROOT / 'public/atlas/buildings.json'
-PLACE_IDS_PATH = ROOT / 'data/research-next-200-google-place-ids.json'
 DEFAULT_OUT = ROOT / 'work/queue'
 
 REGISTRY_ATTRS = (
@@ -374,18 +372,10 @@ def fetch_commons(lat: float, lon: float, cache_dir: Path, refresh: bool, delay:
     ]
 
 
-def load_place_ids(path: Path) -> dict[str, dict[str, Any]]:
-    if not path.exists():
-        return {}
-    data = read_json(path)
-    return {item['id']: item for item in data.get('results', []) if item.get('id')}
-
-
 def collect_candidate(
     row: dict[str, Any],
     out_dir: Path,
     atlas: list[dict[str, Any]],
-    place_ids: dict[str, dict[str, Any]],
     cache_dir: Path,
     refresh: bool,
     delay: float,
@@ -435,7 +425,7 @@ def collect_candidate(
         except Exception as error:  # Commons is an optional enrichment
             warnings.append(f'commons: {error}')
 
-    place = place_ids.get(f'registry-{registry_id}')
+    place = None  # Place ID research is archived with queue 1
     result = {
         'schema': 1,
         'candidate': {
@@ -541,7 +531,6 @@ def main() -> int:
         remaining = remaining[:args.limit]
 
     atlas = read_json(args.atlas)
-    place_ids = load_place_ids(PLACE_IDS_PATH)
     cache_dir = args.out / 'cache'
     index_path = args.out / 'index.jsonl'
     print(f'queue: {len(queue)}; already in atlas: {len(added)}; to collect: {len(remaining)}')
@@ -584,7 +573,7 @@ def main() -> int:
                 pass
         try:
             summary = collect_candidate(
-                row, args.out, atlas, place_ids, cache_dir,
+                row, args.out, atlas, cache_dir,
                 args.refresh, args.delay, not args.no_commons,
             )
             summaries.append(summary)

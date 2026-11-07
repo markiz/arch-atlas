@@ -136,7 +136,7 @@ npm run build                   # упаковка карточек, маниф�
 | `data/photo-gallery-selection.json` | Ручной allowlist источников после визуальной проверки; `apply-photo-candidates.py` добавляет из кандидатов только эти снимки |
 | `data/registry-photo-selection.json` | Ручной отбор фото реестра по `photoIds` после просмотра контактных листов; `fetch-registry-photos.py --apply` добавляет только эти снимки и их `visualTags` |
 | `work/photo-research/` | Кэш поиска Commons, `candidates.json` и `applied.json` основного фотоконвейера; каталог не публикуется и не входит в сборку |
-| `data/research-next-200-google-place-ids.json`, `osm-candidate-overrides.json` | Вход `scripts/queue_collect.py` и исправления очереди; не источники карточек. Это исключение из правила «research — в work/»: файл читает скрипт |
+| `data/osm-candidate-overrides.json` | Ручные исправления OSM-контуров для очереди; читает `scripts/queue_collect.py` |
 | `data/gallery-sources.json`, `depicts-photos.json`, `category-extra-photos.json`, `specific-fixes.json`, `geometry-variants.json` | Промежуточные результаты отдельных исследований. Сборщик карточек их не читает; источником остаётся `data/atlas/tbilisi/<id>.json` |
 | `scripts/assemble-atlas.mjs` | Упаковывает `data/atlas/<city>/*.json` в общий JSON, проверяет ссылки, подставляет подписи и подмешивает sidecar-метаданные фотографий |
 | `scripts/build-data.py` | Собирает только `basemap.geojson` и `building-outlines.geojson`; карточки не создаёт и не меняет |
@@ -157,9 +157,8 @@ npm run build                   # упаковка карточек, маниф�
 ### Где хранить исследовательские материалы
 
 - `work/<campaign>/` — рабочие выгрузки, промежуточные CSV/JSON, OSM XML, кэш API и разовые скрипты. Каталог в `.gitignore`, в Git не входит.
-- `docs/research-<campaign>.md` — итоговый отчёт действующей кампании; после завершения или замены он переносится в `docs/archive/research/<campaign>/` вместе с компактными приложениями (реестр, CSV).
+- `work/<campaign>/` — рабочий отчёт кампании, таблицы и источники. После завершения отчёт переносится в `docs/archive/research/<campaign>/` вместе с компактными приложениями (реестр, CSV). Новые исследовательские отчёты в `docs/` не добавляются.
 - `data/` — только источники и входы сборки: карточки, справочники, фото, редакционные selections и файлы, которые читают скрипты. Рабочие реестры кандидатов, промежуточные ответы API и одноразовые выгрузки сюда не складываются.
-- Исключение — `data/research-next-200-google-place-ids.json`: это вход `scripts/queue_collect.py`, а не рабочий журнал. При переносе очереди в архив обновляйте путь в скрипте и документации.
 
 ### Формат исходной карточки
 
@@ -197,16 +196,16 @@ npm run build                   # упаковка карточек, маниф�
 
 ## 5. Как отбираются и обогащаются здания
 
-### Существующая автоматизация
+### Историческая автоматизация
 
-`scripts/research-heritage.py` читает XML-сетку и отбирает только замкнутые `way` с `building`, полным набором узлов и минимум четырьмя координатами. Условия интереса:
+Легаси-сборщик `scripts/research-heritage.py` (удалён) читал XML-сетку и отбирал только замкнутые `way` с `building`, полным набором узлов и минимум четырьмя координатами. Условия интереса:
 
 - `heritage` равен `1`, `2` или `3`; либо
 - `historic` входит в `house`, `building`, `church`, `castle`, `caravanserai`, `hotel`, `monastery`, и есть `wikidata` или `name:ru`.
 
-Исключаются `roof`, `construction`, `garage` и определённые `building:part`. Отношения автоматически в этот список не попадают, а важные здания без этих тегов могут быть пропущены. Поэтому для новой локации обязателен дополнительный редакционный поиск, не только копирование фильтра.
+Исключались `roof`, `construction`, `garage` и определённые `building:part`. Отношения автоматически в этот список не попадали, а важные здания без этих тегов могли быть пропущены. Поэтому для новой локации обязателен дополнительный редакционный поиск, а не копирование старого фильтра. Файлы `raw/research/research-candidates.json` и `wikidata-heritage.json` остаются историческим снимком; текущий отбор идёт по полному слою `raw/osm/osm-tbilisi-building-outlines.geojson`.
 
-Wikidata загружается через `https://www.wikidata.org/w/api.php`, `action=wbgetentities`, пакетами по 25 QID, с `labels|claims|sitelinks`, языками `ru|ka|en` и тремя попытками. Частичный ответ после ошибок нужно выявлять отдельно.
+Исторический сборщик загружал Wikidata через `https://www.wikidata.org/w/api.php`, `action=wbgetentities`, пакетами по 25 QID, с `labels|claims|sitelinks`, языками `ru|ka|en` и тремя попытками. Частичный ответ после ошибок нужно было выявлять отдельно.
 
 Новая карточка пишется сразу в `data/atlas/tbilisi/<id>.json`. Старый генератор `build-heritage-extra.py`, который собирал `data/heritage-extra.json` и обрезал набор до 90 записей, удалён: он смешивал автоматический отбор с редакционными правками и зависел от предыдущей публичной сборки. Автоматически можно подготовить черновик фактов и контура, но итоговую карточку с переводами и атрибуцией фото проверяет и сохраняет редактор. `scripts/assemble-atlas.mjs` падает с понятной ошибкой, если в карточке нет обязательных переводов или ссылка (`styleIds`, `architectIds`, `districtId`, `yearLabelId`) отсутствует в городском справочнике.
 
@@ -389,7 +388,7 @@ python3 -B -m unittest discover -s tests -p 'test_google_addresses.py'
 ### Что в коде привязано к Тбилиси
 
 - `fetch-osm.py`: сетка; `build-data.py`: имя городской выборки и грузинские fallback-формы подложки; `assemble-atlas.mjs`: по умолчанию каталог `data/atlas/tbilisi` и выходной `public/atlas/buildings.json`; `resolve-geometries.py`: ID отношений и Метехи.
-- `research-heritage.py`: прежние фильтры кандидатов и пути; `data/atlas/tbilisi/<id>.json`: ручная запись карточек и обязательные переводы.
+- `data/atlas/tbilisi/<id>.json`: ручная запись карточек и обязательные переводы.
 - Фотозагрузчики: названия статей, категории, файлы, ручные ID; не универсальные команды для нового города.
 - `scripts/check-data.mjs`: допустимые координаты жёстко ограничены долготой 44.6–45 и широтой 41.5–41.9. Для других городов нужна проверка по соответствующим границам, а не удаление пространственной проверки.
 - `src/App.tsx`: загрузка одного `atlas/manifest.json`, отсутствие `cityId` в `Building`, ветка UI только для `tbilisi`, надписи города, `Tbilisi, Georgia` в Google-ссылке.

@@ -35,7 +35,6 @@
 ## Исследование очередей
 
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила.
-- [research-vake-vera-candidates.md](research-vake-vera-candidates.md) — Ваке и Вера: 23 кандидата, 10 READY, три карточки на переименование.
 - [research-modernist-t-j.md](research-modernist-t-j.md) — разбор списка модернистской архитектуры Т—Ж: 8 кандидатов, 6 новых карточек, расхождения дат и адресов.
 - [research-queue-progress.md](research-queue-progress.md) — регистр первой очереди: 95 добавлено, 105 hold/reject.
 - [research-next-200-v5.md](research-next-200-v5.md) — пятая очередь, 200 кандидатов.

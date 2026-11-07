@@ -150,7 +150,7 @@ const files = await Promise.all(paths.map(async path => {
 Прогресс уже добавлен в:
 
 - сетевые загрузчики: `fetch-osm.py`, `fetch-fallback-photos.py`, `fetch-registry-photos.py`, `batch-registry-review.py`, `fetch-selected-photos.py`, `batch-google-addresses.py`, `collect-photo-candidates.py`, `apply-photo-candidates.py`;
-- сбор и очередь: `queue_collect.py`, `queue_report.py`, `create-next-200-report.py`, `research-heritage.py`, `resolve-geometries.py`, `extract-tbilisi-building-outlines.py`, `build-data.py`, `assemble-atlas.mjs`, `validate_cards.py`;
+- сбор и очередь: `queue_collect.py`, `queue_report.py`, `create-next-200-report.py`, `resolve-geometries.py`, `extract-tbilisi-building-outlines.py`, `build-data.py`, `assemble-atlas.mjs`, `validate_cards.py`;
 - сборка и проверка: `create-manifest.mjs`, `check-data.mjs`, `verify-dist.mjs`.
 
 `queue_report.py` при чтении локального индекса обычно завершается быстрее секунды, но при сканировании `collect.json` и `verdict.json` показывает прогресс по файлам.
