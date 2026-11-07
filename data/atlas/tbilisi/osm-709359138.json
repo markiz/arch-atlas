@@ -70,7 +70,5 @@
     "6ec4953a397111a94574e88c50d3f57ffc4b5af1471408cd1e832f3321944cd0"
   ],
   "source": "https://www.openstreetmap.org/way/709359138",
-  "otherSource": "https://www.wikidata.org/wiki/Q42651587",
-  "googlePlaceId": "ChIJb5qJivAMREARdJ9EzjusMsw",
-  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6916358,44.80716959999999&query_place_id=ChIJb5qJivAMREARdJ9EzjusMsw"
+  "otherSource": "https://www.wikidata.org/wiki/Q42651587"
 }
