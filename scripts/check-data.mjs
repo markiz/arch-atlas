@@ -37,7 +37,8 @@ function webpSize(bytes,label){
 progress.start();
 for(const b of data){
  assert(!ids.has(b.id),`duplicate id: ${b.id}`);ids.add(b.id);
- for(const k of ['name','district','yearLabel','style','description','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
+ for(const k of ['name','district','yearLabel','style','source','geometryQuality'])assert(typeof b[k]==='string'&&b[k].trim(),`${b.id}: ${k}`);
+ assert(typeof b.description==='string',`${b.id}: description`);
  if(b.geometryQualityTranslations)assert(['en','ka','uk'].every(lang=>typeof b.geometryQualityTranslations[lang]==='string'&&b.geometryQualityTranslations[lang].trim()),`${b.id}: translated geometry quality`);
  assert(typeof b.address==='string'&&b.address===b.addresses?.ru&&b.addresses&&['ru','en','ka','uk'].every(lang=>typeof b.addresses[lang]==='string'),`${b.id}: translated addresses`);
  assert(['ru','en','ka','uk'].every(lang=>b.addresses[lang]===''||b.addresses[lang].trim()),`${b.id}: invalid empty address`);
@@ -52,7 +53,8 @@ for(const b of data){
  assert(typeof b.districtId==='string'&&b.districts&&['ru','en','ka','uk'].every(lang=>typeof b.districts[lang]==='string'&&b.districts[lang].trim()),`${b.id}: translated district`);
  assert(Array.isArray(b.architectIds)&&b.architectIds.length===b.architects.length&&b.architectsByLanguage&&['ru','en','ka','uk'].every(lang=>Array.isArray(b.architectsByLanguage[lang])&&b.architectsByLanguage[lang].length===b.architects.length&&b.architectsByLanguage[lang].every(Boolean)),`${b.id}: translated architects`);
  assert(typeof b.yearLabelId==='string'&&b.yearLabels&&['ru','en','ka','uk'].every(lang=>typeof b.yearLabels[lang]==='string'&&b.yearLabels[lang].trim()),`${b.id}: translated construction label`);
- assert(b.descriptions&&['ru','en','ka','uk'].every(lang=>typeof b.descriptions[lang]==='string'&&b.descriptions[lang].trim()),`${b.id}: translated descriptions`);
+ if(b.descriptions)assert(['ru','en','ka','uk'].every(lang=>typeof b.descriptions[lang]==='string'&&b.descriptions[lang].trim()),`${b.id}: translated descriptions`);
+ assert.equal(b.description,b.descriptions?.ru??'',`${b.id}: Russian description fallback`);
  if(b.histories){assert(['ru','en','ka','uk'].every(lang=>typeof b.histories[lang]==='string'&&b.histories[lang].trim()),`${b.id}: translated history`);assert.equal(b.history,b.histories.ru,`${b.id}: Russian history fallback`)}else assert.equal(b.history,'',`${b.id}: history should be empty when translations are absent`);
  assert(typeof b.nameKa==='string'&&typeof b.nameEn==='string',`${b.id}: localized names`);
  assert(Array.isArray(b.architects),`${b.id}: architects`);assert(Array.isArray(b.coordinates)&&b.coordinates.length===2&&b.coordinates[0]>44.6&&b.coordinates[0]<45&&b.coordinates[1]>41.5&&b.coordinates[1]<41.9,`${b.id}: coordinates`);

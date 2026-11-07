@@ -14,12 +14,6 @@
     "ka": "ლადო ასათიანის ქუჩა 48",
     "uk": "вулиця Ладо Асატіані, 48"
   },
-  "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
-  },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",

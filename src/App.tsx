@@ -123,7 +123,7 @@ type InspectorPhotos=BuildingPhotos & {retry:()=>void};
 function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;photos:InspectorPhotos;onClose:()=>void;onMap:()=>void;onFilter:(key:'architect'|'style',value:string)=>void}){
  const {t,language}=useI18n();
  const name=building.names?.[language]||building.name;
- const description=building.descriptions?.[language]||building.description;
+ const description=(building.descriptions?.[language]||building.description||'').trim();
  const history=building.histories?.[language]||(language==='ru'?building.history:'');
  const individualStyles=styleEntries(building,language) as {id:string;label:string}[];
  const constructionLabel=building.yearLabels?.[language]||building.yearLabel;
@@ -151,7 +151,7 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
    </div>
    <div className="inspect-body"><div className="inspect-meta"><span><span className="period-dot" style={{background:p.color}}/>{t(p.label)}</span><span>{district}</span></div>
     <h2>{name}</h2><p className="georgian">{building.nameKa}</p><a className="address address-link" href={googleMapsUrl} target="_blank" rel="noopener noreferrer" aria-label={t("Открыть адрес «")+(address||t('Адрес не установлен'))+t("» в Google Картах")}><Icon name="pin" size={15}/>{address||t('Адрес не установлен')}<Icon name="external" size={12}/></a>
-    <p className="description">{description}</p>
+    {description&&<p className="description">{description}</p>}
     {building.geometryRole==='heritage_boundary'&&<p className="geometry-note">{t('Показана охраняемая граница памятника, а не надземный контур здания.')}</p>}
     <div className="details"><div><span>{t("ПОСТРОЕНО")}</span><strong>{constructionLabel}</strong></div><div><span>{t("СТИЛЬ")}</span><strong>{individualStyles.map((item,index)=><Fragment key={item.id}>{index>0?', ':''}{item.id!=='undetermined'?<button className="detail-filter" onClick={()=>onFilter('style',item.id)} aria-label={t("Фильтр по стилю: ")+item.label}>{item.label}</button>:item.label}</Fragment>)}</strong></div><div className="full"><span>{t("АРХИТЕКТОР")}</span><strong>{architects.length?architects.map((architect,index)=><Fragment key={building.architectIds[index]||architect}>{index>0?', ':''}<button className="detail-filter" onClick={()=>onFilter('architect',building.architectIds[index]||architect)} aria-label={t("Фильтр по архитектору: ")+architect}>{architect}</button></Fragment>):t('Не установлен')}</strong></div></div>
     {history.trim()&&<><div className="section-rule"/><p className="eyebrow">{t('ИСТОРИЯ ЗДАНИЯ')}</p><p className="history">{history}</p></>}

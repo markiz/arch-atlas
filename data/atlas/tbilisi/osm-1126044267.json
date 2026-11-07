@@ -14,12 +14,6 @@
     "ka": "ბეგლარ ახოსპირელის ქუჩა 8 / ლადო ასათიანის ქუჩა 9",
     "uk": "вулиця Беглара Ахоспірелі, 8 / вулиця Ладо Асатіані, 9"
   },
-  "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
-  },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",

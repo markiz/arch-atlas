@@ -601,5 +601,158 @@
       "ka": "Freyrie & Pestalozza",
       "uk": "Freyrie & Pestalozza"
     }
+  },
+  "gizo-potskhishvili": {
+    "source": "Гизо Поцхишвили",
+    "labels": {
+      "ru": "Гизо Поцхишвили",
+      "en": "Gizo Potskhishvili",
+      "ka": "გიზო ფოცხიშვილი",
+      "uk": "Гізо Поцхішвілі"
+    }
+  },
+  "shota-kavlashvili": {
+    "source": "Шота Кавлашвили",
+    "labels": {
+      "ru": "Шота Кавлашвили",
+      "en": "Shota Kavlashvili",
+      "ka": "შოთა ყავლაშვილი",
+      "uk": "Шота Кавлашвілі"
+    }
+  },
+  "shota-gvantseladze": {
+    "source": "Шота Гванцеладзе",
+    "labels": {
+      "ru": "Шота Гванцеладзе",
+      "en": "Shota Gvantseladze",
+      "ka": "შოთა გვანცელაძე",
+      "uk": "Шота Гванцеладзе"
+    }
+  },
+  "vakhtang-abramishvili": {
+    "source": "Вахтанг Абрамишвили",
+    "labels": {
+      "ru": "Вахтанг Абрамишвили",
+      "en": "Vakhtang Abramishvili",
+      "ka": "ვახტანგ აბრამიშვილი",
+      "uk": "Вахтанг Абрамішвілі"
+    }
+  },
+  "guram-mirianashvili": {
+    "source": "Гурам Мирианашвили",
+    "labels": {
+      "ru": "Гурам Мирианашвили",
+      "en": "Guram Mirianashvili",
+      "ka": "გურამ მირიანაშვილი",
+      "uk": "Гурам Міріанашвілі"
+    }
+  },
+  "giorgi-salukvadze": {
+    "source": "Георгий Салуквадзе",
+    "labels": {
+      "ru": "Георгий Салуквадзе",
+      "en": "Giorgi Salukvadze",
+      "ka": "გიორგი სალუქვაძე",
+      "uk": "Гіоргі Салуквадзе"
+    }
+  },
+  "s-meliashvili": {
+    "source": "С. Мелиашвили",
+    "labels": {
+      "ru": "С. Мелиашвили",
+      "en": "S. Meliashvili",
+      "ka": "ს. მელიაშვილი",
+      "uk": "С. Меліашвілі"
+    }
+  },
+  "gari-bichiashvili": {
+    "source": "Гари Бичиашвили",
+    "labels": {
+      "ru": "Гари Бичиашвили",
+      "en": "Gari Bichiashvili",
+      "ka": "გარი ბიჭიაშვილი",
+      "uk": "Гарі Бічіашвілі"
+    }
+  },
+  "shota-kachkachishvili": {
+    "source": "Шота Качкачишвили",
+    "labels": {
+      "ru": "Шота Качкачишвили",
+      "en": "Shota Kachkachishvili",
+      "ka": "შოთა კაჩკაჩიშვილი",
+      "uk": "Шота Качкачішвілі"
+    }
+  },
+  "zurab-kopaladze": {
+    "source": "Зураб Копаладзе",
+    "labels": {
+      "ru": "Зураб Копаладзе",
+      "en": "Zurab Kopaladze",
+      "ka": "ზურაბ კოპალაძე",
+      "uk": "Зураб Копаладзе"
+    }
+  },
+  "bidzina-maminaishvili": {
+    "source": "Бидзина Маминаишвили",
+    "labels": {
+      "ru": "Бидзина Маминаишвили",
+      "en": "Bidzina Maminaishvili",
+      "ka": "ბიძინა მამინაიშვილი",
+      "uk": "Бідзіна Мамінаішвілі"
+    }
+  },
+  "nodar-mgaloblishvili": {
+    "source": "Нодар Мгалоблишвили",
+    "labels": {
+      "ru": "Нодар Мгалоблишвили",
+      "en": "Nodar Mgaloblishvili",
+      "ka": "ნოდარ მგალობლიშვილი",
+      "uk": "Нодар Мгалоблішвілі"
+    }
+  },
+  "aleksandre-sabashvili": {
+    "source": "Александре Сабашвили",
+    "labels": {
+      "ru": "Александре Сабашвили",
+      "en": "Aleksandre Sabashvili",
+      "ka": "ალექსანდრე საბაშვილი",
+      "uk": "Александре Сабашвілі"
+    }
+  },
+  "devi-chopikashvili": {
+    "source": "Деви Чопикашвили",
+    "labels": {
+      "ru": "Деви Чопикашвили",
+      "en": "Devi Chopikashvili",
+      "ka": "დევი ჩოპიკაშვილი",
+      "uk": "Деві Чопікашвілі"
+    }
+  },
+  "mikheil-shavishvili": {
+    "source": "Михеил Шавишвили",
+    "labels": {
+      "ru": "Михеил Шавишвили",
+      "en": "Mikheil Shavishvili",
+      "ka": "მიხეილ შავიშვილი",
+      "uk": "Міхеїл Шавішвілі"
+    }
+  },
+  "s-bezhanov": {
+    "source": "С. Бежанов",
+    "labels": {
+      "ru": "С. Бежанов",
+      "en": "S. Bezhanov",
+      "ka": "ს. ბეჟანოვი",
+      "uk": "С. Бежанов"
+    }
+  },
+  "m-shubladze": {
+    "source": "М. Шубладзе",
+    "labels": {
+      "ru": "М. Шубладзе",
+      "en": "M. Shubladze",
+      "ka": "მ. შუბლაძე",
+      "uk": "М. Шубладзе"
+    }
   }
 }

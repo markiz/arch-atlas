@@ -1,0 +1,117 @@
+{
+  "id": "house-of-political-education",
+  "osmId": "relation/1185464",
+  "names": {
+    "ru": "Дом политпросвещения (бизнес-центр «Мозаика»)",
+    "en": "House of Political Education (Mosaic Business Center)",
+    "ka": "პოლიტიკური განათლების სახლი (ბიზნეს ცენტრი „მოზაიკა“)",
+    "uk": "Будинок політосвіти (бізнес-центр «Мозаїка»)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 61",
+    "en": "61 Davit Agmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი, 61",
+    "uk": "проспект Давида Агмашенеблі, 61"
+  },
+  "descriptions": {
+    "ru": "Пятиэтажный общественный корпус на Агмашенебели: два нижних этажа раскрыты витринами и проходами, а верхние закрыты крупным рельефным мозаичным панно длиной около 42 метров. Панно работы Зураба Церетели занимает почти всю плоскость фасада, и его рельеф меняется в зависимости от света. В плане здание образует замкнутый объём с внутренним двором.",
+    "en": "A five-storey public building on Aghmashenebeli Avenue: the two lower floors are opened up with shopfronts and passages, while the upper floors are closed by a large relief mosaic about 42 metres long. The panel by Zurab Tsereteli covers almost the entire facade, its relief changing with the light. In plan the building forms a closed block with an inner courtyard.",
+    "ka": "ხუთსართულიანი საზოგადოებრივი კორპუსი აღმაშენებლის გამზირზე: ქვედა ორი სართული ვიტრინებითა და გასასვლელებითაა გახსნილი, ზედა სართულები კი დაახლოებით 42 მეტრის სიგრძის რელიეფური მოზაიკური პანოთია დახურული. ზურაბ ცერეთელის პანო ფასადის თითქმის მთელ სიბრტყეს იკავებს და მისი რელიეფი განათების მიხედვით იცვლება. გეგმაში შენობა დახურულ მოცულობას ქმნის შიდა ეზოთი.",
+    "uk": "П’ятиповерховий громадський корпус на Агмашенеблі: два нижні поверхи розкриті вітринами й проходами, а верхні закриті великим рельєфним мозаїчним панно завдовжки близько 42 метрів. Панно роботи Зураба Церетелі займає майже всю площину фасаду, і його рельєф змінюється залежно від світла. У плані будівля утворює замкнений об’єм із внутрішнім двором."
+  },
+  "histories": {
+    "ru": "Дом политпросвещения построен в 1978–1980 годах по проекту Вахтанга Абрамишвили, Гурама Мирианашвили, Георгия Салуквадзе и С. Мелиашвили. Мозаику выполнил Зураб Церетели. В постсоветские годы здание перестроили под бизнес-центр «Мозаика»: нижние этажи получили новый облик, но панно сохранилось. Сейчас здесь офисы и отделение TBC Bank.",
+    "en": "The House of Political Education was built in 1978–1980 to a design by Vakhtang Abramishvili, Guram Mirianashvili, Giorgi Salukvadze and S. Meliashvili. The mosaic was made by Zurab Tsereteli. In the post-Soviet years the building was converted into the Mosaic Business Center: the lower floors were rebuilt, but the panel survived. It now houses offices and a TBC Bank branch.",
+    "ka": "პოლიტიკური განათლების სახლი 1978–1980 წლებში აშენდა ვახტანგ აბრამიშვილის, გურამ მირიანაშვილის, გიორგი სალუქვაძისა და ს. მელიაშვილის პროექტით. მოზაიკა ზურაბ ცერეთელმა შეასრულა. პოსტსაბჭოთა წლებში შენობა ბიზნეს ცენტრ „მოზაიკად“ გადაკეთდა: ქვედა სართულებმა ახალი სახე მიიღო, პანო კი შემორჩა. ახლა აქ ოფისები და TBC Bank-ის ფილიალია.",
+    "uk": "Будинок політосвіти зведено в 1978–1980 роках за проєктом Вахтанга Абрамішвілі, Гурама Міріанашвілі, Гіоргі Салуквадзе та С. Меліашвілі. Мозаїку виконав Зураб Церетелі. У пострадянські роки будівлю перебудували під бізнес-центр «Мозаїка»: нижні поверхи отримали новий вигляд, але панно збереглося. Тепер тут офіси та відділення TBC Bank."
+  },
+  "minYear": 1978,
+  "maxYear": 1980,
+  "yearLabelId": "period-1978-1980",
+  "styleIds": [
+    "soviet-modernism"
+  ],
+  "architectIds": [
+    "vakhtang-abramishvili",
+    "guram-mirianashvili",
+    "giorgi-salukvadze",
+    "s-meliashvili"
+  ],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7997553,
+    41.7070534
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.799527,
+          41.707079
+        ],
+        [
+          44.799658,
+          41.706901
+        ],
+        [
+          44.799788,
+          41.706724
+        ],
+        [
+          44.800407,
+          41.706978
+        ],
+        [
+          44.800276,
+          41.707157
+        ],
+        [
+          44.800147,
+          41.707333
+        ],
+        [
+          44.799527,
+          41.707079
+        ]
+      ],
+      [
+        [
+          44.799931,
+          41.707099
+        ],
+        [
+          44.800069,
+          41.707156
+        ],
+        [
+          44.800165,
+          41.707028
+        ],
+        [
+          44.800026,
+          41.706971
+        ],
+        [
+          44.799931,
+          41.707099
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OSM relation/1185464 — внешний абрис с внутренним двором; поздние перестройки нижних этажей и пристройки в контуре не отражены. Контур приблизительный, без обмера.",
+  "geometryQualityTranslations": {
+    "en": "The OSM relation/1185464 outline is the outer perimeter with an inner courtyard; the later reconstruction of the lower floors and annexes is not reflected. The outline is approximate, not surveyed.",
+    "ka": "OSM relation/1185464-ის კონტური გარე პერიმეტრია შიდა ეზოთი; ქვედა სართულების გვიანი გადაკეთება და მიშენებები კონტურში არ აისახება. კონტური მიახლოებითია, აზომვის გარეშე.",
+    "uk": "Контур OSM relation/1185464 — зовнішній периметр із внутрішнім двором; пізня перебудова нижніх поверхів і прибудови в контурі не відображені. Контур приблизний, без обміру."
+  },
+  "photos": [
+    "eab3f319a4885001f8796edb49bff7c315ef1f7af1e6fc2997a216d3d92ddd5c",
+    "e088b5332495e88fbc3cf9207a00cad88650198d7f43449cf5e4391ac83d3669"
+  ],
+  "source": "https://t-j.ru/list/modernist-architecture-tbilisi/",
+  "otherSource": "https://bizzz.media/places/mozaika/",
+  "googlePlaceId": "ChIJVSPRWXMNREARb857zZ6d7mM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7070534,44.7997553&query_place_id=ChIJVSPRWXMNREARb857zZ6d7mM"
+}

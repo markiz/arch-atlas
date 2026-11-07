@@ -192,7 +192,8 @@ def main() -> int:
         address = labels_ok(card, 'addresses', errors, label, allow_empty=True)
         if address and any(not value.strip() for value in address.values()):
             warnings.append(f'{label}: empty address translation (allowed for unknown address)')
-        labels_ok(card, 'descriptions', errors, label)
+        if card.get('descriptions') is not None:
+            labels_ok(card, 'descriptions', errors, label)
         if card.get('histories') is not None:
             labels_ok(card, 'histories', errors, label)
 

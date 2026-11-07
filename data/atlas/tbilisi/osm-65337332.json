@@ -14,12 +14,6 @@
     "ka": "შოთა რუსთაველის გამზირი 1",
     "uk": "проспект Шота Руставелі, 1"
   },
-  "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
-  },
   "minYear": 1939,
   "maxYear": 1939,
   "yearLabelId": "year-1939",

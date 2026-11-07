@@ -141,6 +141,16 @@ test('hydrateCard keeps an empty history out of the bundle',()=>{
  assert.equal('histories' in out,false);
 });
 
+test('hydrateCard keeps a missing description out of the bundle',()=>{
+ const out=hydrateCard(card('osm-4',{descriptions:undefined}),attributes());
+ assert.equal(out.description,'');
+ assert.equal('descriptions' in out,false);
+});
+
+test('rejects an empty description when descriptions are present',()=>{
+ assert.throws(()=>hydrateCard(card('osm-5',{descriptions:labels('','','','')}),attributes()),/descriptions\.ru/);
+});
+
 async function writePhoto(root,id,metadata){
  await mkdir(path.join(root,'data','photos','tbilisi'),{recursive:true});
  await writeFile(path.join(root,'data','photos','tbilisi',`${id}.metadata.json`),JSON.stringify(metadata));

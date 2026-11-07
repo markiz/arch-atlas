@@ -158,7 +158,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   const id=requireString(file,card.id,'id');
   const names=requireLabels(file,card.names,'names');
   const addresses=requireLabels(file,card.addresses,'addresses',{allowEmpty:true});
-  const descriptions=requireLabels(file,card.descriptions,'descriptions');
+  const descriptions=card.descriptions===undefined?null:requireLabels(file,card.descriptions,'descriptions');
   const histories=card.histories===undefined?null:requireLabels(file,card.histories,'histories');
 
   const yearLabelId=requireReference(file,card.yearLabelId,attributes.yearLabels,'construction label');
@@ -225,8 +225,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
     style:styles.ru,
     styleIds,
     styles,
-    description:descriptions.ru,
-    descriptions,
+    description:descriptions?.ru??'',
     history:histories?.ru??'',
     coordinates:card.coordinates,
     geometry,
@@ -234,6 +233,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
     photos,
     source:card.source,
   };
+  if(descriptions)out.descriptions=descriptions;
   if(histories)out.histories=histories;
   if(geometryQualityTranslations)out.geometryQualityTranslations=geometryQualityTranslations;
   if(card.osmId!==undefined)out.osmId=requireString(file,card.osmId,'osmId');

@@ -14,7 +14,7 @@
 - [district-attribution.md](district-attribution.md) — канонические районы и правила атрибуции.
 - [name-consistency-review.md](name-consistency-review.md) — ручная проверка названий перед добавлением.
 - [google-place-id-manual-review.md](google-place-id-manual-review.md) — объекты без Place ID.
-- [research-missing-descriptions.md](research-missing-descriptions.md) — 89 карточек с шаблонным описанием: 50 заполнено, 39 осталось; источники и что проверять дальше.
+- [research-missing-descriptions.md](research-missing-descriptions.md) — 89 карточек с шаблонным описанием: 50 заполнено, у 39 шаблон удалён; источники и что проверять дальше.
 - [style-taxonomy.md](style-taxonomy.md) — атомарные стили, массивы `styleIds` и открытые вопросы.
 
 ## Фотографии
@@ -36,6 +36,7 @@
 
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила.
 - [research-public-buildings.md](research-public-buildings.md) — обязательный пул публичных и правительственных зданий: 202 контура, приоритеты и фото.
+- [research-modernist-t-j.md](research-modernist-t-j.md) — разбор списка модернистской архитектуры Т—Ж: 8 кандидатов, 6 новых карточек, расхождения дат и адресов.
 - [research-queue-progress.md](research-queue-progress.md) — регистр первой очереди: 95 добавлено, 105 hold/reject.
 - [research-next-200-v5.md](research-next-200-v5.md) — пятая очередь, 200 кандидатов.
 - [research-queue-v5-progress.md](research-queue-v5-progress.md) — разбор пятой очереди: 40 интегрировано, 60 READY ждут перевода.

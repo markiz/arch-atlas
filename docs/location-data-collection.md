@@ -38,6 +38,7 @@
 - [Дом писателей](https://writershouse.ge/) — история собственного здания.
 - [Tbilisi Architecture](https://www.tbilisiarchitecture.net/) — ИМЭЛИ.
 - [Tbilisi Architecture Archive](https://taa.net.ge/en/archive/) — исследовательский каталог архитектуры с отдельными страницами проектов, датами, авторами и библиографией; включает также нереализованные и незавершённые проекты, поэтому наличие записи само по себе не подтверждает существующее здание или его контур. Права на фотографии проверять отдельно.
+- [bureau MARKA: Modernist Architecture of Georgia](https://bureaumarka.com/bonus/coloring/ge-modernism/) — профильные очерки о позднесоветских зданиях с датами, авторами и фотографиями; полезен для проверки построек 1960–1980-х годов. Фотографии сборника защищены авторским правом и не переносятся в атлас без отдельной свободной лицензии.
 - [Georgian Encyclopedia](https://georgianencyclopedia.ge/) — Анчисхати.
 - [Georgia Travel](https://georgia.travel/) — Сиони и Метехи; отдельная [историческая справка о дворце царицы Дареджан «Сачино»](https://georgia.travel/queen-darejan-palace) описывает строительство комплекса, церковь и повторное освящение в 1824 году. Для точной датировки отдельного корпуса сопоставлять с реестром и архивными источниками.
 - [Tabula, обзор серных бань Абанотубани](https://tabula.ge/en/news/543131-utsetskhlod-tsetskhli) цитирует исследование историка архитектуры Майи Мании и различает террасы и отдельные комплексы бань, в том числе две постройки бывшей бани Мирзоевых на Гришашвили, 10 и 11. Это полезно для топонимии и проверки составных ансамблей; газетный пересказ не заменяет первичный план или точную привязку корпуса.
@@ -155,7 +156,7 @@ npm run build                   # упаковка карточек, маниф�
 
 ### Формат исходной карточки
 
-`data/atlas/tbilisi/<id>.json` — pretty-JSON (`indent=2`, UTF-8, завершающий перевод строки). Имя файла совпадает с `id`. Большинство id имеют вид `osm-<номер>`; 10 ранних редакционных карточек сохраняют короткие id (`opera`, `writers`, `imeli`, …), поэтому их файлы называются `opera.json` и т. д. Обязательные поля: `id`, `names`, `addresses`, `descriptions`, `minYear`, `maxYear`, `styleIds`, `architectIds`, `districtId`, `yearLabelId`, `coordinates`, `geometry`, `geometryQuality`, `photos`, `source`. Необязательные: `histories`, `osmId`, `originalLanguage`, `otherSource`, `geometryRole`, `geometryVariants`, `googlePlaceId`, `googlePlaceIdSource`, `geometryQualityTranslations` (объект `{en,ka,uk}` с переводами технического описания контура).
+`data/atlas/tbilisi/<id>.json` — pretty-JSON (`indent=2`, UTF-8, завершающий перевод строки). Имя файла совпадает с `id`. Большинство id имеют вид `osm-<номер>`; 10 ранних редакционных карточек сохраняют короткие id (`opera`, `writers`, `imeli`, …), поэтому их файлы называются `opera.json` и т. д. Обязательные поля: `id`, `names`, `addresses`, `minYear`, `maxYear`, `styleIds`, `architectIds`, `districtId`, `yearLabelId`, `coordinates`, `geometry`, `geometryQuality`, `photos`, `source`. Необязательные: `descriptions` (объект `{ru,en,ka,uk}` с содержательным описанием), `histories`, `osmId`, `originalLanguage`, `otherSource`, `geometryRole`, `geometryVariants`, `googlePlaceId`, `googlePlaceIdSource`, `geometryQualityTranslations` (объект `{en,ka,uk}` с переводами технического описания контура). Если проверяемого описания нет, поле `descriptions` не добавляется: шаблонные фразы вроде «В OpenStreetMap объект отмечен как памятник культурного наследия» описанием не считаются.
 
 ```json
 {
@@ -206,7 +207,7 @@ Wikidata загружается через `https://www.wikidata.org/w/api.php`,
 
 Контракт задают [типы](../src/types.ts), [упаковщик карточек](../scripts/assemble-atlas.mjs), [проверка исходников](../scripts/validate_cards.py) и [проверка собранных данных](../scripts/check-data.mjs).
 
-В исходном файле не дублируются производные поля: хранятся `names`, `addresses`, `descriptions`, `histories`, `coordinates`, `geometry`, `photos`, `source` и ссылки `styleIds`, `architectIds`, `districtId`, `yearLabelId`. Поля `name`, `nameKa/En/Uk`, `address`, `district`, `style`, `yearLabel`, `architects`, `styles`, `districts`, `yearLabels`, `architectsByLanguage` — производные: их подставляет `scripts/assemble-atlas.mjs` для интерфейса из переводов и городского aux-словаря.
+В исходном файле не дублируются производные поля: хранятся `names`, `addresses`, `descriptions` (если есть), `histories`, `coordinates`, `geometry`, `photos`, `source` и ссылки `styleIds`, `architectIds`, `districtId`, `yearLabelId`. Поля `name`, `nameKa/En/Uk`, `address`, `district`, `style`, `yearLabel`, `architects`, `styles`, `districts`, `yearLabels`, `architectsByLanguage` — производные: их подставляет `scripts/assemble-atlas.mjs` для интерфейса из переводов и городского aux-словаря.
 
 | Поле | Что записываем |
 |---|---|
@@ -217,7 +218,7 @@ Wikidata загружается через `https://www.wikidata.org/w/api.php`,
 | `minYear`, `maxYear`, `yearLabel`, `yearLabelId`, `yearLabels` | Обоснованный интервал датировки и понятная подпись; при отсутствии данных оба года `null` |
 | `architects`, `architectIds`, `architectsByLanguage` | Подтверждённые авторы; если неизвестны — пустые массивы |
 | `style`, `styleIds`, `styles` | Подтверждённый стиль или «Не определён»; не выводить из внешнего сходства |
-| `description`, `descriptions` | Кратко: что это за здание и чем архитектурно интересно; для автоматических карточек честное указание на источник отбора |
+| `description`, `descriptions` | Кратко: что это за здание и чем архитектурно интересно. Поле необязательное: если содержательного текста нет, оно не заполняется. Фразы «В OpenStreetMap объект отмечен как памятник культурного наследия» и аналогичные шаблоны описанием не считаются |
 | `history`, `histories` | Этапы строительства, перестройки и использования; только подтверждённые сведения |
 | `source`, `otherSource` | Прямые страницы, подтверждающие факты; фотостраница хранится отдельно в фотографии |
 | `coordinates`, `geometry`, `osmId`, `geometryQuality`, `geometryQualityTranslations` | Внутренняя точка, настоящий контур, типизированный OSM ID, честная характеристика проверки и её переводы для технической подсказки |
