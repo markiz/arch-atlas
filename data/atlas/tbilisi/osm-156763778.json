@@ -1,0 +1,85 @@
+{
+  "id": "osm-156763778",
+  "osmId": "way/156763778",
+  "names": {
+    "ru": "Корпус «А» Илии (Илиауни)",
+    "en": "Ilia State University Building A",
+    "ka": "ილიას სახელმწიფო უნივერსიტეტის „ა“ კორპუსი",
+    "uk": "Корпус «А» Ілії (Іліауні)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Ильи Чавчавадзе, 32",
+    "en": "32 Ilia Chavchavadze Avenue",
+    "ka": "ილია ჭავჭავაძის გამზირი, 32",
+    "uk": "проспект Іллі Чавчавадзе, 32"
+  },
+  "descriptions": {
+    "ru": "Крупный четырёхэтажный университетский корпус с симметричным классическим фасадом, пилястрами и широкой лестницей перед входом. Здание стоит в глубине участка за деревьями и читается как один из главных корпусов кампуса Илии на Чавчавадзе.",
+    "en": "A large four-storey university building with a symmetrical classical facade, pilasters and a broad entrance stair. Set back from the avenue behind trees, it reads as one of the main buildings of the Ilia State University campus on Chavchavadze Avenue.",
+    "ka": "დიდი ოთხსართულიანი საუნივერსიტეტო კორპუსი სიმეტრიული კლასიკური ფასადით, პილასტრებითა და შესასვლელთან ფართო კიბით. ის ქუჩიდან მოშორებით, ხეების მიღმა დგას და ჭავჭავაძის გამზირზე ილიას უნივერსიტეტის ერთ-ერთ მთავარ კორპუსად აღიქმება.",
+    "uk": "Великий чотириповерховий університетський корпус із симетричним класичним фасадом, пілястрами та широкими сходами перед входом. Він стоїть у глибині ділянки за деревами й читається як один із головних корпусів кампусу Ілії на Чавчавадзе."
+  },
+  "histories": {
+    "ru": "Сейчас это корпус «А» Государственного университета Илии. Русская Википедия называет дом 32 Тбилисским педагогическим институтом (1951, арх. М. Шавишвили), но независимого подтверждения для этого корпуса найти не удалось; дата и автор требуют архивной проверки.",
+    "en": "The building is now Building A of Ilia State University. Russian Wikipedia identifies No. 32 as the Tbilisi Pedagogical Institute (1951, architect M. Shavishvili), but no independent confirmation for this particular building was found; the date and architect require archival verification.",
+    "ka": "ახლა ეს ილიას სახელმწიფო უნივერსიტეტის „ა“ კორპუსია. რუსული ვიკიპედია 32-ე სახლს თბილისის პედაგოგიურ ინსტიტუტად (1951, არქ. მ. შავიშვილი) მოიხსენიებს, მაგრამ ამ კორპუსისთვის დამოუკიდებელი დადასტურება ვერ მოიძებნა; თარიღი და ავტორი არქივით შესამოწმებელია.",
+    "uk": "Нині це корпус «А» Державного університету Ілії. Російська Вікіпедія називає будинок 32 Тбіліським педагогічним інститутом (1951, арх. М. Шавішвілі), але незалежного підтвердження для цього корпусу не знайдено; дата й автор потребують архівної перевірки."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vake",
+  "coordinates": [
+    44.7708995,
+    41.708882
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7705,
+          41.708873
+        ],
+        [
+          44.771074,
+          41.708761
+        ],
+        [
+          44.771243,
+          41.708729
+        ],
+        [
+          44.771299,
+          41.708891
+        ],
+        [
+          44.770556,
+          41.709035
+        ],
+        [
+          44.7705,
+          41.708873
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; дата и авторство корпуса требуют проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; the date and authorship of the building require verification.",
+    "ka": "OpenStreetMap-ის კონტური; კორპუსის თარიღი და ავტორობა შესამოწმებელია.",
+    "uk": "Контур OpenStreetMap; дата й авторство корпусу потребують перевірки."
+  },
+  "photos": [
+    "f9b1384bf5d70b0a74ba99351e1dde2dada07ad8a5a7abce7e2459600215e803"
+  ],
+  "source": "https://www.openstreetmap.org/way/156763778",
+  "otherSource": "https://ru.wikipedia.org/wiki/Проспект_Чавчавадзе",
+  "googlePlaceId": "ChIJJ86DzjJzREARHSIhDGk96mw",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=32%20Ilia%20Chavchavadze%20Avenue%2C%20Tbilisi&query_place_id=ChIJJ86DzjJzREARHSIhDGk96mw"
+}

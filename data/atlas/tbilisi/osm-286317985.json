@@ -1,0 +1,91 @@
+{
+  "id": "osm-286317985",
+  "osmId": "way/286317985",
+  "names": {
+    "ru": "Жилой дом на улице Иване Тархнишвили, 16",
+    "en": "Residential Building at 16 Ivane Tarkhnishvili Street",
+    "ka": "საცხოვრებელი სახლი, ივანე თარხნიშვილის ქუჩა, 16",
+    "uk": "Житловий будинок на вулиці Іване Тархнішвілі, 16"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Иване Тархнишвили, 16",
+    "en": "16 Ivane Tarkhnishvili Street",
+    "ka": "ივანე თარხნიშვილის ქუჩა, 16",
+    "uk": "вулиця Іване Тархнішвілі, 16"
+  },
+  "descriptions": {
+    "ru": "Четырёхэтажный жилой дом середины XX века с симметричным фасадом, рустованным нижним этажом, пилястрами и лепными капителями. Балконы опираются на декоративные кронштейны, карниз оформлен модульонами; дом играет роль доминанты в исторической застройке улицы.",
+    "en": "A four-storey residential building of the mid-20th century with a symmetrical facade, rusticated lower floor, pilasters and relief capitals. The balconies rest on decorative brackets, and the cornice is articulated with modillions; the building is a dominant element in the historic street frontage.",
+    "ka": "ოთხსართულიანი საცხოვრებელი სახლი XX საუკუნის შუა ხანიდან, სიმეტრიული ფასადით, რუსტირებული ქვედა სართულით, პილასტრებითა და რელიეფური კაპიტელებით. აივნები დეკორატიულ კრონშტეინებს ეყრდნობა, კარნიზი მოდულიონებითაა დამუშავებული; შენობა ქუჩის ისტორიულ განაშენიანებაში დომინანტის როლს ასრულებს.",
+    "uk": "Чотириповерховий житловий будинок середини XX століття із симетричним фасадом, рустованим нижнім поверхом, пілястрами та ліпними капітелями. Балкони спираються на декоративні кронштейни, карниз оздоблений модульйонами; будинок відіграє роль домінанти в історичній забудові вулиці."
+  },
+  "histories": {
+    "ru": "Построен в середине XX века; реестр 4615 отмечает высокую архитектурно-художественную ценность и роль доминанты. Архитектор не установлен.",
+    "en": "Built in the mid-20th century; register record 4615 notes its high architectural and artistic value and its role as a dominant element. The architect is not established.",
+    "ka": "აშენდა XX საუკუნის შუა ხანაში; რეესტრის ჩანაწერი 4615 აღნიშნავს მაღალ არქიტექტურულ-მხატვრულ ღირებულებასა და დომინანტის როლს. არქიტექტორი არ არის დადგენილი.",
+    "uk": "Зведений у середині XX століття; реєстровий запис 4615 відзначає високу архітектурно-мистецьку цінність і роль домінанти. Архітектор не встановлений."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "mid-20th-century",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7830847,
+    41.705745
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.783096,
+          41.705948
+        ],
+        [
+          44.78305,
+          41.705861
+        ],
+        [
+          44.783048,
+          41.705857
+        ],
+        [
+          44.782928,
+          41.705633
+        ],
+        [
+          44.783097,
+          41.705585
+        ],
+        [
+          44.783261,
+          41.705896
+        ],
+        [
+          44.783096,
+          41.705948
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური; საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap; потребує редакційної перевірки."
+  },
+  "photos": [
+    "d7541350f384090185aeb8a5c3d03e6a951d502a990067a8434a3ca5abcc4837",
+    "902408faac4c350e5063c4c256a6520288014be579207e2ae2a0a4eebb78c394",
+    "ff2c55b72b4fc53001f16428475a3eebc5f5d5e1859bce2de862cff91a03d4d7"
+  ],
+  "source": "https://www.openstreetmap.org/way/286317985",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4615",
+  "googlePlaceId": "ChIJx6qbOdAMREARYXITTt8mmLU",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=16%20Ivane%20Tarkhnishvili%20St%2C%20T%27bilisi%2C%20Georgia&query_place_id=ChIJx6qbOdAMREARYXITTt8mmLU"
+}

@@ -1,0 +1,101 @@
+{
+  "id": "osm-265589018",
+  "osmId": "way/265589018",
+  "names": {
+    "ru": "Бывшая шелкоткацкая фабрика",
+    "en": "Former Silk Weaving Factory",
+    "ka": "ყოფილი აბრეშუმსაქსოვი ფაბრიკა",
+    "uk": "Колишня шовкоткацька фабрика"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мераба Коставы, 69",
+    "en": "69 Merab Kostava Street",
+    "ka": "მერაბ კოსტავას ქუჩა, 69",
+    "uk": "вулиця Мераба Кости, 69"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный краснокирпичный производственный корпус с большими окнами и кирпичным декором — одна из сохранившихся построек шелкоткацкой фабрики в овраге ниже Коставы. Здание читается как часть протяжённого промышленного комплекса, а не как отдельный доходный дом.",
+    "en": "A three-storey red-brick factory building with large windows and brick detailing, one of the surviving structures of the silk-weaving factory in the gorge below Kostava. It reads as part of a long industrial complex rather than a separate residential building.",
+    "ka": "სამსართულიანი წითელი აგურის საწარმოო კორპუსი დიდი ფანჯრებითა და აგურის დეკორით — კოსტავას ქვემოთ, ხევში მდებარე აბრეშუმსაქსოვი ფაბრიკის შემორჩენილი ნაგებობა. ის გრძელი სამრეწველო კომპლექსის ნაწილად აღიქმება და არა ცალკე საცხოვრებელ სახლად.",
+    "uk": "Триповерховий червоноцегляний виробничий корпус із великими вікнами та цегляним декором — одна зі збережених будівель шовкоткацької фабрики в яру ниже Костави. Він читається як частина довгого промислового комплексу, а не як окремий житловий будинок."
+  },
+  "histories": {
+    "ru": "Реестр 16002 описывает комплекс шелкоткацкой фабрики начала XX века: несколько соединённых кирпичных корпусов в овраге. Сохранившийся корпус с тегом OSM «Former Silk Factory» — один из них; точная дата постройки и архитектор не установлены. Часть комплекса позднее использовалась под другие производства.",
+    "en": "Register record 16002 describes an early-20th-century silk-weaving factory: several connected brick buildings in the gorge. The surviving block tagged in OSM as the Former Silk Factory is one of them; the exact construction date and architect are not established. Parts of the complex were later used for other industries.",
+    "ka": "რეესტრის ჩანაწერი 16002 აღწერს XX საუკუნის დასაწყისის აბრეშუმსაქსოვ ფაბრიკას: ხევში რამდენიმე დაკავშირებული აგურის კორპუსი. OSM-ში „Former Silk Factory“-ს ტეგით აღნიშნული შემორჩენილი კორპუსი ერთ-ერთი მათგანია; მშენებლობის ზუსტი თარიღი და არქიტექტორი არ არის დადგენილი. კომპლექსის ნაწილი მოგვიანებით სხვა წარმოებებს გამოიყენებოდა.",
+    "uk": "Реєстровий запис 16002 описує шовкоткацьку фабрику початку XX століття: кілька з'єднаних цегляних корпусів у яру. Збережений корпус із тегом OSM «Former Silk Factory» — один із них; точна дата будівництва й архітектор не встановлені. Частину комплексу пізніше використовували для інших виробництв."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "early-20th-century",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7847015,
+    41.711831
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.784885,
+          41.711856
+        ],
+        [
+          44.784797,
+          41.711714
+        ],
+        [
+          44.784734,
+          41.711736
+        ],
+        [
+          44.784689,
+          41.711751
+        ],
+        [
+          44.784639,
+          41.711671
+        ],
+        [
+          44.78458,
+          41.711691
+        ],
+        [
+          44.784627,
+          41.711768
+        ],
+        [
+          44.784518,
+          41.711806
+        ],
+        [
+          44.784608,
+          41.711951
+        ],
+        [
+          44.784885,
+          41.711856
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap с тегом name=Former Silk Factory; описывает один сохранившийся корпус, не весь комплекс.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline tagged name=Former Silk Factory; covers one surviving building, not the whole complex.",
+    "ka": "OpenStreetMap-ის კონტური name=Former Silk Factory ტეგით; მოიცავს ერთ შემორჩენილ კორპუსს და არა მთელ კომპლექსს.",
+    "uk": "Контур OpenStreetMap із тегом name=Former Silk Factory; охоплює один збережений корпус, а не весь комплекс."
+  },
+  "photos": [
+    "c4c861406854b912832dec9804048d549983a10da3243cd1bcfbbfc0647eb849",
+    "e26599dabfe972f32564c53947c6afeb447e12edc8e99733b8cf1b8b77405d98",
+    "8b2c5dcf249e73f16c5cebb1f67689001d9b6422281dbd56b732d3a35820ff5a"
+  ],
+  "source": "https://www.openstreetmap.org/way/265589018",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=16002"
+}

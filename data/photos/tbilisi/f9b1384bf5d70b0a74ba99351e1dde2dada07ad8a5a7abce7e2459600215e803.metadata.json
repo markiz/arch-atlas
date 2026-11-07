@@ -1,0 +1,22 @@
+{
+  "author": "Qwelly",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Iliauni1korpusi.jpg",
+  "modifications": "уменьшен размер до 1280 px по ширине, преобразовано в WebP",
+  "width": 1280,
+  "height": 720,
+  "sourceTags": [
+    "CC-BY-SA-4.0",
+    "Ilia University",
+    "Self-published work"
+  ],
+  "visualTags": [
+    "facade",
+    "street",
+    "tree",
+    "staircase",
+    "column"
+  ],
+  "rating": 90
+}

@@ -1,0 +1,111 @@
+{
+  "id": "osm-78356568",
+  "osmId": "way/78356568",
+  "names": {
+    "ru": "Жилой дом на улице Якоба Гогебашвили, 43",
+    "en": "Residential Building at 43 Iakob Gogebashvili Street",
+    "ka": "საცხოვრებელი სახლი, იაკობ გოგებაშვილის ქუჩა, 43",
+    "uk": "Житловий будинок на вулиці Якоба Гогебашвілі, 43"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Якоба Гогебашвили, 43",
+    "en": "43 Iakob Gogebashvili Street",
+    "ka": "იაკობ გოგებაშვილის ქუჩა, 43",
+    "uk": "вулиця Якоба Гогебашвілі, 43"
+  },
+  "descriptions": {
+    "ru": "Пятиэтажный жилой дом 1950-х годов с симметричным фасадом, рустованным нижним этажом, арочными окнами и балконами. В отделке соединены поздняя сталинская неоклассика и грузинские возрожденческие мотивы; дом играет роль доминанты в исторической застройке улицы. На фасаде установлены мемориальные доски Александру Кутатели и Алико Шенгелии.",
+    "en": "A five-storey residential building of the 1950s with a symmetrical facade, a rusticated lower floor, arched windows and balconies. Its decoration combines late Stalinist neoclassicism with Georgian revival motifs; the building is a dominant element in the historic street frontage. Memorial plaques to Alexandre Kutateladze and Aliko Shengelaia are installed on the facade.",
+    "ka": "1950-იანი წლების ხუთსართულიანი საცხოვრებელი სახლი სიმეტრიული ფასადით, რუსტირებული ქვედა სართულით, თაღოვანი ფანჯრებითა და აივნებით. მორთულობაში შერწყმულია გვიანდელი სტალინური ნეოკლასიციზმი და ქართული აღორძინების მოტივები; შენობა ქუჩის ისტორიულ განაშენიანებაში დომინანტის როლს ასრულებს. ფასადზე ალექსანდრე ქუთათელისა და ალიკო შენგელიას მემორიალური დაფებია დამონტაჟებული.",
+    "uk": "П'ятиповерховий житловий будинок 1950-х років із симетричним фасадом, рустованим нижнім поверхом, арочними вікнами та балконами. В оздобленні поєднано пізній сталінський неокласицизм і грузинські відроджувальні мотиви; будинок відіграє роль домінанти в історичній забудові вулиці. На фасаді встановлено меморіальні дошки Александру Кутателі та Аліко Шенгелії."
+  },
+  "histories": {
+    "ru": "Дом построен в 1950-х годах; официальный реестр памятников (запись 4892) отмечает его высокую архитектурно-художественную ценность и роль доминанты. С домом связаны имена Александра Кутатели, Алико Шенгелии и других деятелей грузинской культуры; архитектор не установлен.",
+    "en": "The building was constructed in the 1950s; the official heritage register (record 4892) notes its high architectural and artistic value and its role as a dominant element. The house is associated with Alexandre Kutateladze, Aliko Shengelaia and other figures of Georgian culture; the architect is not established.",
+    "ka": "სახლი 1950-იან წლებში აშენდა; ოფიციალური რეესტრი (ჩანაწერი 4892) აღნიშნავს მის მაღალ არქიტექტურულ-მხატვრულ ღირებულებასა და დომინანტის როლს. სახლთან დაკავშირებულია ალექსანდრე ქუთათელის, ალიკო შენგელიასა და სხვა ქართველი კულტურის მოღვაწეთა სახელები; არქიტექტორი არ არის დადგენილი.",
+    "uk": "Будинок зведено в 1950-х роках; офіційний реєстр пам'яток (запис 4892) відзначає його високу архітектурно-мистецьку цінність і роль домінанти. З будинком пов'язані імена Александра Кутателі, Аліко Шенгелії та інших діячів грузинської культури; архітектор не встановлений."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "mid-20th-century",
+  "styleIds": [
+    "soviet-neoclassicism",
+    "georgian-revival"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7809439,
+    41.703911
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.780553,
+          41.704137
+        ],
+        [
+          44.781309,
+          41.70385
+        ],
+        [
+          44.781225,
+          41.703727
+        ],
+        [
+          44.781059,
+          41.70379
+        ],
+        [
+          44.781037,
+          41.703798
+        ],
+        [
+          44.781016,
+          41.703806
+        ],
+        [
+          44.78098,
+          41.70382
+        ],
+        [
+          44.780847,
+          41.70387
+        ],
+        [
+          44.780824,
+          41.703879
+        ],
+        [
+          44.780655,
+          41.703943
+        ],
+        [
+          44.78047,
+          41.704014
+        ],
+        [
+          44.780553,
+          41.704137
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap с тегом heritage=2; совпадает с реестровой площадью, требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline tagged heritage=2; matches the register area and requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური heritage=2 ტეგით; ემთხვევა რეესტრის ფართობს, საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap із тегом heritage=2; збігається з площею реєстру, потребує редакційної перевірки."
+  },
+  "photos": [
+    "26d92fab932d846c2dc75394d8e99f408f76ba71f9f59fb36d32f008b3b1625b",
+    "656ef09486b3322fe4e021c76c3f8bbde180d26f6570a54c95f0105801eac8b9"
+  ],
+  "source": "https://www.openstreetmap.org/way/78356568",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4892",
+  "googlePlaceId": "ChIJBR5ll88MREAR0wEQPQ-B3aY",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=43%20Iakob%20Gogebashvili%20St%2C%20T%27bilisi%2C%20Georgia&query_place_id=ChIJBR5ll88MREAR0wEQPQ-B3aY"
+}

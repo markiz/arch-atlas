@@ -1,0 +1,127 @@
+{
+  "id": "osm-287346775",
+  "osmId": "way/287346775",
+  "names": {
+    "ru": "Жилой дом на улице Михаила Зандукели, 27",
+    "en": "Residential Building at 27 Mikheil Zandukeli Street",
+    "ka": "საცხოვრებელი სახლი, მიხეილ ზანდუკელის ქუჩა, 27",
+    "uk": "Житловий будинок на вулиці Михайла Зандукелі, 27"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Михаила Зандукели, 27",
+    "en": "27 Mikheil Zandukeli Street",
+    "ka": "მიხეილ ზანდუკელის ქუჩა, 27",
+    "uk": "вулиця Михайла Зандукелі, 27"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный жилой дом конца XIX века с дворовыми деревянными галереями и балконами — характерный пример тбилисской жилой архитектуры. Уличный фасад с рустованным нижним этажом, наличниками и карнизом; на первом этаже размещено кафе.",
+    "en": "A three-storey late-19th-century apartment building with wooden courtyard galleries and balconies, a characteristic example of Tbilisi residential architecture. The street facade has a rusticated lower floor, decorated window surrounds and a cornice; a cafe occupies the ground floor.",
+    "ka": "სამსართულიანი საცხოვრებელი სახლი XIX საუკუნის ბოლოდან, ეზოს ხის გალერეებითა და აივნებით — თბილისური საცხოვრებელი არქიტექტურის დამახასიათებელი ნიმუში. ქუჩის ფასადს რუსტირებული ქვედა სართული, ჩარჩოები და კარნიზი აქვს; პირველ სართულზე კაფეა.",
+    "uk": "Триповерховий житловий будинок кінця XIX століття з дерев'яними дворовими галереями та балконами — характерний приклад тбіліської житлової архітектури. Вуличний фасад має рустований нижній поверх, оздоблені віконні обрамлення та карниз; на першому поверсі розміщено кафе."
+  },
+  "histories": {
+    "ru": "Построен в конце XIX века; реестр 4849 отмечает высокую архитектурно-художественную ценность и важную роль в исторической застройке. Архитектор не установлен.",
+    "en": "Built in the late 19th century; register record 4849 notes its high architectural and artistic value and its important role in the historic frontage. The architect is not established.",
+    "ka": "აშენდა XIX საუკუნის ბოლოს; რეესტრის ჩანაწერი 4849 აღნიშნავს მაღალ არქიტექტურულ-მხატვრულ ღირებულებასა და მნიშვნელოვან როლს ისტორიულ განაშენიანებაში. არქიტექტორი არ არის დადგენილი.",
+    "uk": "Зведений наприкінці XIX століття; реєстровий запис 4849 відзначає високу архітектурно-мистецьку цінність і важливу роль в історичній забудові. Архітектор не встановлений."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7843118,
+    41.7043575
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.784129,
+          41.70428
+        ],
+        [
+          44.784258,
+          41.704451
+        ],
+        [
+          44.784296,
+          41.704499
+        ],
+        [
+          44.784379,
+          41.704464
+        ],
+        [
+          44.784362,
+          41.704442
+        ],
+        [
+          44.784315,
+          41.704379
+        ],
+        [
+          44.784501,
+          41.704346
+        ],
+        [
+          44.784527,
+          41.704393
+        ],
+        [
+          44.784609,
+          41.704367
+        ],
+        [
+          44.784597,
+          41.704348
+        ],
+        [
+          44.78458,
+          41.704319
+        ],
+        [
+          44.784522,
+          41.704221
+        ],
+        [
+          44.784463,
+          41.70422
+        ],
+        [
+          44.784397,
+          41.704232
+        ],
+        [
+          44.784249,
+          41.704259
+        ],
+        [
+          44.784129,
+          41.70428
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური; საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap; потребує редакційної перевірки."
+  },
+  "photos": [
+    "6474fb6f43507406d5daaf996fbeabac88d8231aaca9bfcc5deac026cf4d77fe",
+    "93f4dd8eea90160c172ee85b0f7105617a892b8400de0b1db72008a0e523bf48",
+    "b7fd5691c1e9b1f0bad17b24554dfce5880560bdecea01e1144591869dd92c30"
+  ],
+  "source": "https://www.openstreetmap.org/way/287346775",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4849",
+  "googlePlaceId": "ChIJTSa0q9oMREARD6kTRrKFMO4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=27%20Mikheil%20Zandukeli%20St%2C%20T%27bilisi%200179%2C%20Georgia&query_place_id=ChIJTSa0q9oMREARD6kTRrKFMO4"
+}

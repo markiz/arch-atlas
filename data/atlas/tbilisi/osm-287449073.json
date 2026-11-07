@@ -1,0 +1,119 @@
+{
+  "id": "osm-287449073",
+  "osmId": "way/287449073",
+  "names": {
+    "ru": "Жилой дом на улице Тамары Човелидзе, 21",
+    "en": "Residential Building at 21 Tamar Chovelidze Street",
+    "ka": "საცხოვრებელი სახლი, თამარ ჭოველიძის ქუჩა, 21",
+    "uk": "Житловий будинок на вулиці Тамари Човелидзе, 21"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Тамары Човелидзе, 21",
+    "en": "21 Tamar Chovelidze Street",
+    "ka": "თამარ ჭოველიძის ქუჩა, 21",
+    "uk": "вулиця Тамари Човелидзе, 21"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный жилой дом начала XX века с симметричным фасадом, рустованным нижним этажом, балконами с коваными решётками и декоративными наличниками. На первом этаже — торговые помещения; дом сохраняет роль заметного элемента исторической застройки улицы.",
+    "en": "A three-storey early-20th-century apartment building with a symmetrical facade, rusticated lower floor, balconies with wrought-iron railings and decorated window surrounds. The ground floor contains shops; the building remains a notable element of the historic street frontage.",
+    "ka": "სამსართულიანი საცხოვრებელი სახლი XX საუკუნის დასაწყისიდან, სიმეტრიული ფასადით, რუსტირებული ქვედა სართულით, ჭედური მოაჯირებიანი აივნებითა და დეკორატიული ჩარჩოებით. პირველ სართულზე სავაჭრო ფართებია; შენობა ქუჩის ისტორიული განაშენიანების შესამჩნევ ელემენტად რჩება.",
+    "uk": "Триповерховий житловий будинок початку XX століття із симетричним фасадом, рустованим нижнім поверхом, балконами з кованими ґратами та декоративними обрамленнями вікон. На першому поверсі — торгові приміщення; будинок залишається помітним елементом історичної забудови вулиці."
+  },
+  "histories": {
+    "ru": "Построен в начале XX века; реестр 4990 отмечает высокую архитектурно-художественную ценность и важную роль в исторической застройке. Архитектор не установлен.",
+    "en": "Built in the early 20th century; register record 4990 notes its high architectural and artistic value and its important role in the historic frontage. The architect is not established.",
+    "ka": "აშენდა XX საუკუნის დასაწყისში; რეესტრის ჩანაწერი 4990 აღნიშნავს მაღალ არქიტექტურულ-მხატვრულ ღირებულებასა და მნიშვნელოვან როლს ისტორიულ განაშენიანებაში. არქიტექტორი არ არის დადგენილი.",
+    "uk": "Зведений на початку XX століття; реєстровий запис 4990 відзначає високу архітектурно-мистецьку цінність і важливу роль в історичній забудові. Архітектор не встановлений."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "early-20th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7861252,
+    41.704917
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.786055,
+          41.705076
+        ],
+        [
+          44.786262,
+          41.70496
+        ],
+        [
+          44.786163,
+          41.70486
+        ],
+        [
+          44.786071,
+          41.704767
+        ],
+        [
+          44.78597,
+          41.704824
+        ],
+        [
+          44.785896,
+          41.704866
+        ],
+        [
+          44.785862,
+          41.704883
+        ],
+        [
+          44.785884,
+          41.704907
+        ],
+        [
+          44.785924,
+          41.704945
+        ],
+        [
+          44.786011,
+          41.704897
+        ],
+        [
+          44.786041,
+          41.704927
+        ],
+        [
+          44.786084,
+          41.70497
+        ],
+        [
+          44.785997,
+          41.705019
+        ],
+        [
+          44.786055,
+          41.705076
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური; საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap; потребує редакційної перевірки."
+  },
+  "photos": [
+    "ce7e3cd91bf390e148d993000b7f63487ded3d3d374462349286d3a8652dff8f",
+    "4e5b7b492fccb6f91769a3041ed77d6278cdfbda9bb773fec9b0694264f3d51b",
+    "e16b0bc85946dbbe3a627a1e24a2a8ae3e5783bb517b7cff7720672b5d881f14"
+  ],
+  "source": "https://www.openstreetmap.org/way/287449073",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4990",
+  "googlePlaceId": "ChIJa5jVm9oMREAREU-kjAES_o0",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=21%20Tamar%20Chovelidze%20St%2C%20T%27bilisi%2C%20Georgia&query_place_id=ChIJa5jVm9oMREAREU-kjAES_o0"
+}

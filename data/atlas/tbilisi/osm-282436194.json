@@ -1,0 +1,99 @@
+{
+  "id": "osm-282436194",
+  "osmId": "way/282436194",
+  "names": {
+    "ru": "Жилой дом на улице Лео Киачели, 5",
+    "en": "Residential Building at 5 Leo Kiacheli Street",
+    "ka": "საცხოვრებელი სახლი, ლეო ქიაჩელის ქუჩა, 5",
+    "uk": "Житловий будинок на вулиці Лео Кіачелі, 5"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Лео Киачели, 5 / улица Михаила Джавахишвили, 7",
+    "en": "5 Leo Kiacheli Street / 7 Mikheil Javakhishvili Street",
+    "ka": "ლეო ქიაჩელის ქუჩა, 5 / მიხეილ ჯავახიშვილის ქუჩა, 7",
+    "uk": "вулиця Лео Кіачелі, 5 / вулиця Михайла Джавахішвілі, 7"
+  },
+  "descriptions": {
+    "ru": "Шестиэтажный секционный жилой дом на склоне между Киачели и Джавахишвили, построенный по проекту Николая Северова. Оштукатуренные фасады почти без декора, с железными балконами; со стороны Джавахишвили — полукруглые и овальные каменные балконы. Ко второму этажу ведут два небольших мостика, с другой стороны спускается мощёная дорожка по склону.",
+    "en": "A six-storey sectional apartment building on a slope between Kiacheli and Javakhishvili streets, designed by Nikolai Severov. The plastered facades are almost without ornament, with iron balconies; on the Javakhishvili side there are semicircular and oval stone balconies. Two small bridges lead to the second floor, while a paved path descends the slope on the other side.",
+    "ka": "ექვსსართულიანი სექციური საცხოვრებელი სახლი ფერდობზე, ლეო ქიაჩელისა და მიხეილ ჯავახიშვილის ქუჩებს შორის, ნიკოლაი სევეროვის პროექტით. შელესილი ფასადები თითქმის უმკობია, რკინის აივნებით; ჯავახიშვილის ქუჩის მხრიდან ნახევარწრიული და ოვალური ქვის აივნებია. მეორე სართულზე ორი პატარა ხიდი მიდის, მეორე მხრიდან კი დამრეცი მოკირწყლული გზა ეშვება.",
+    "uk": "Шестиповерховий секційний житловий будинок на схилі між вулицями Лео Кіачелі та Михайла Джавахішвілі, за проєктом Миколи Сєверова. Потиньковані фасади майже без оздоблення, із залізними балконами; з боку Джавахішвілі — напівкруглі та овальні кам'яні балкони. До другого поверху ведуть два маленькі містки, з іншого боку спускається мощена стежка."
+  },
+  "histories": {
+    "ru": "Дом середины XX века; реестр 4432 отмечает его как важный градостроительный акцент. В реестре указано, что здесь жил Лаврентий Берия; этот факт требует нейтральной подачи и архивной сверки. По OSM у дома шесть этажей, реестр говорит о пяти — расхождение зафиксировано.",
+    "en": "The house dates from the mid-20th century; register record 4432 notes it as an important urban accent. The register states that Lavrentiy Beria lived here; this fact requires neutral wording and archival verification. OSM records six storeys, while the register says five; the discrepancy is noted.",
+    "ka": "სახლი XX საუკუნის შუა ხანას განეკუთვნება; რეესტრის ჩანაწერი 4432 მას მნიშვნელოვან ქალაქგეგმარებით აქცენტად აღნიშნავს. რეესტრში მითითებულია, რომ აქ ლავრენტი ბერია ცხოვრობდა; ეს ფაქტი ნეიტრალურად უნდა იყოს მოცემული და არქივით შემოწმებული. OSM-ში ექვსი სართულია, რეესტრში — ხუთი; განსხვავება აღნიშნულია.",
+    "uk": "Будинок середини XX століття; реєстровий запис 4432 відзначає його як важливий містобудівний акцент. У реєстрі зазначено, що тут жив Лаврентій Берія; цей факт потребує нейтрального викладу й архівної перевірки. В OSM шість поверхів, у реєстрі — п'ять; розбіжність зафіксовано."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "mid-20th-century",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "nikolai-severov"
+  ],
+  "districtId": "vera",
+  "coordinates": [
+    44.7907134,
+    41.706178
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.790458,
+          41.706362
+        ],
+        [
+          44.790541,
+          41.706262
+        ],
+        [
+          44.790681,
+          41.706094
+        ],
+        [
+          44.790692,
+          41.70608
+        ],
+        [
+          44.790776,
+          41.705979
+        ],
+        [
+          44.790924,
+          41.706048
+        ],
+        [
+          44.790605,
+          41.706431
+        ],
+        [
+          44.790474,
+          41.70637
+        ],
+        [
+          44.790458,
+          41.706362
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური; საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap; потребує редакційної перевірки."
+  },
+  "photos": [
+    "7eaa1eff21c8b6b0f2a7919ddbe2a35a5ad7a3efa46e4d35ca6925cfee7f9630",
+    "19f15a679519d70579933a090021a5f5c2321a779a74af98ed3e890f41b65e5b",
+    "241e6030a418419b3af3fe7c9e7409590bdb053889696676ba9b0fd009b64f19"
+  ],
+  "source": "https://www.openstreetmap.org/way/282436194",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4432"
+}
