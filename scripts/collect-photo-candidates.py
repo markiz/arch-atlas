@@ -482,7 +482,7 @@ def collect() -> None:
         card = read_json(path)
         cards[card['id']] = card
 
-    raw_candidates = ROOT / 'raw' / 'research-candidates.json'
+    raw_candidates = ROOT / 'raw' / 'research' / 'research-candidates.json'
     osm_tags = {}
     if raw_candidates.exists():
         for row in read_json(raw_candidates):

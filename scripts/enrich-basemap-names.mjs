@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {Progress} from './lib/progress.mjs';
 
-const root=process.cwd(),raw=path.join(root,'raw'),nodes=new Map(),ways=new Map();
+const root=process.cwd(),raw=path.join(root,'raw','osm','grid'),nodes=new Map(),ways=new Map();
 const files=fs.readdirSync(raw).filter(x=>x.startsWith('osm-grid-')&&x.endsWith('.xml'));
 const progress=new Progress(files.length,'enrich basemap names');
 progress.start();

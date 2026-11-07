@@ -3,6 +3,8 @@ from PIL import Image
 from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 ROOT=pathlib.Path(__file__).resolve().parent.parent
+RESEARCH=ROOT/'raw'/'research'
+RESEARCH.mkdir(parents=True,exist_ok=True)
 HEAD={'User-Agent':'TbilisiArchitectureAtlas/0.1 (personal educational prototype)'}
 ARTICLES={'sioni':'Tbilisi Sioni Cathedral','metekhi':'Metekhi','wedding':'Wedding Palace (Tbilisi)'}
 
@@ -16,7 +18,7 @@ def get(item):
  key,title=item
  try:
   url='https://en.wikipedia.org/api/rest_v1/page/summary/'+urllib.parse.quote(title.replace(' ','_'),safe='')
-  wiki=json.loads(read(url)); (ROOT/'raw'/f'{key}.json').write_text(json.dumps(wiki,ensure_ascii=False,indent=2))
+  wiki=json.loads(read(url)); (RESEARCH/f'{key}.json').write_text(json.dumps(wiki,ensure_ascii=False,indent=2))
   thumb=wiki.get('originalimage',wiki.get('thumbnail',{})).get('source','')
   if '/commons/' not in thumb:return {'id':key,'error':'no Commons photo','coordinates':wiki.get('coordinates'),'title':wiki.get('title')}
   # The source contains the original Commons filename before the generated thumbnail name.
@@ -29,7 +31,7 @@ def get(item):
   license=val('LicenseShortName'); artist=val('Artist'); licenseurl=val('LicenseUrl')
   if not license or not artist or not licenseurl:return {'id':key,'error':'license or author missing','coordinates':wiki.get('coordinates'),'title':wiki.get('title'),'photo':filename}
   imgurl=info.get('thumburl',info.get('url'))
-  img=read(imgurl); temp=ROOT/'raw'/f'{key}.image';temp.write_bytes(img)
+  img=read(imgurl); temp=RESEARCH/f'{key}.image';temp.write_bytes(img)
   im=Image.open(temp);im=fit_width(im, FREE_PHOTO_WIDTH);relative=save_photo(im.convert('RGB'),key,quality=PHOTO_QUALITY,method=5);temp.unlink()
   result={'id':key,'title':wiki.get('title'),'coordinates':wiki.get('coordinates'),'wiki':wiki.get('content_urls',{}).get('desktop',{}).get('page'),'photo':{'file':relative,'author':artist,'license':license,'licenseUrl':licenseurl,'source':info.get('descriptionurl'),'modifications':'уменьшен размер, преобразовано в WebP'},'extract':wiki.get('extract','')}
   return result
@@ -43,5 +45,5 @@ progress.start()
 with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
  results=list(ex.map(tracked,ARTICLES.items()))
 progress.finish()
-(ROOT/'raw'/'wikimedia-more.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
+(RESEARCH/'wikimedia-more.json').write_text(json.dumps(results,ensure_ascii=False,indent=2))
 for r in results: print(r['id'], r.get('coordinates'),r.get('error','ok'), flush=True)

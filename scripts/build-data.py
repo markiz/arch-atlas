@@ -18,7 +18,7 @@ if landmark_cards_dir.exists():
   card_key=card.get('osmId') or card.get('id')
   if card_key and card.get('names'):landmark_cards[card_key]=card
 nodes={};node_tags={};ways={};relations={}
-paths=sorted((root/'raw').glob('osm-grid-*.xml'))
+paths=sorted((root/'raw'/'osm'/'grid').glob('osm-grid-*.xml'))
 parse_progress=Progress(len(paths),'parse OSM XML')
 parse_progress.start()
 for path in paths:
@@ -159,7 +159,7 @@ for index,(wid,w) in enumerate(ways.items(),1):
 way_progress.finish()
 
 # City-wide extract contains only mapped streets, public green areas and museums.
-city_extract=root/'raw/osm-tbilisi-selected.json'
+city_extract=root/'raw/osm/osm-tbilisi-selected.json'
 if city_extract.exists():
  city_data=json.loads(city_extract.read_text())
  local_ids={('node',x) for x in nodes}|{('way',x) for x in ways}|{('relation',x) for x in relations}
@@ -211,7 +211,7 @@ if city_extract.exists():
  print('City-wide streets, parks and museums added',added)
 
 # Full Tbilisi building outlines are extracted locally from the regional PBF.
-building_extract=root/'raw/osm-tbilisi-building-outlines.geojson'
+building_extract=root/'raw/osm/osm-tbilisi-building-outlines.geojson'
 if building_extract.exists():
  building_data=json.loads(building_extract.read_text())
  local_ids={('way',x) for x in ways}

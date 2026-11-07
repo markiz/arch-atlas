@@ -106,7 +106,7 @@ def build_report(force=False, output=None, exclude_queues=(), label=None, max_di
     if report_path.exists() and not force:
         raise SystemExit('Report exists; use --force only after preserving the current research snapshot')
     registry = registry_records()
-    outline_file = ROOT / 'raw/osm-tbilisi-building-outlines.geojson'
+    outline_file = ROOT / 'raw/osm/osm-tbilisi-building-outlines.geojson'
     atlas_file = ROOT / 'public/atlas/buildings.json'
     outlines = json.loads(outline_file.read_text())['features']
     atlas = json.loads(atlas_file.read_text())
@@ -267,7 +267,7 @@ def build_report(force=False, output=None, exclude_queues=(), label=None, max_di
         '## Основание и метод',
         '',
         f'- В официальном реестре найдено записей по Тбилиси: **{len(registry)}**. Запрос: `Region=N\'თბილისი\'` к [слою недвижимых памятников](https://memkvidreoba.gov.ge/arcgisch/rest/services/CultureWMS/PS_ImmovableMonumentObjectP/MapServer/1).',
-        f'- Сопоставление выполнено с {len(outlines):,} контурами из локальной OSM-выгрузки `raw/osm-tbilisi-building-outlines.geojson` и {len(atlas)} карточками атласа на момент отбора.',
+        f'- Сопоставление выполнено с {len(outlines):,} контурами из локальной OSM-выгрузки `raw/osm/osm-tbilisi-building-outlines.geojson` и {len(atlas)} карточками атласа на момент отбора.',
         '- Отобраны записи с классификацией архитектуры, отдельным контуром OSM в радиусе примерно 17 м, без близкого совпадения или значительного пересечения с текущей карточкой атласа. Сначала взяты записи с конкретным названием и содержательным описанием.',
         prior_note.rstrip('\n'),
         '- Сопоставление точки реестра с контуром автоматическое. Даже расстояние 0 м не подтверждает, что реестр и контур относятся к одному корпусу; каждую пару нужно проверить на карте и по адресу.',

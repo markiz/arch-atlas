@@ -2,8 +2,8 @@
 // public/atlas/building-outlines.geojson from the tracked raw extracts, but
 // only when an input actually changed.
 //
-// scripts/build-data.py is deterministic: the same raw/osm-grid-*.xml,
-// raw/osm-tbilisi-*.{json,geojson}, name translations and the script itself
+// scripts/build-data.py is deterministic: the same raw/osm/grid/*.xml,
+// raw/osm/osm-tbilisi-*.{json,geojson}, name translations and the script itself
 // always produce byte-identical layers. Hashing that input set costs ~0.3 s
 // against ~5 s for the Python pass, so the build is skipped unless the hash
 // differs, an output is missing, or --force was passed. The stamp lives in
@@ -20,12 +20,12 @@ export const ATLAS=path.join(ROOT,'public','atlas');
 export const STAMP=path.join(ROOT,'.cache','map-layers.json');
 const SCRIPT='scripts/build-data.py';
 const OUTPUTS=['basemap.geojson','building-outlines.geojson'];
-// Everything build-data.py reads besides raw/osm-grid-*.xml. The optional
+// Everything build-data.py reads besides raw/osm/grid/*.xml. The optional
 // translations file is hashed as "missing" when absent, so creating it later
 // still invalidates the stamp.
 const EXTRA_INPUTS=[
- 'raw/osm-tbilisi-selected.json',
- 'raw/osm-tbilisi-building-outlines.geojson',
+ 'raw/osm/osm-tbilisi-selected.json',
+ 'raw/osm/osm-tbilisi-building-outlines.geojson',
  'data/landmark-name-translations.json',
  'data/basemap-name-translations.json',
  'data/landmark-skip.json',
@@ -41,11 +41,11 @@ async function fileExists(file){
 }
 
 async function inputPaths(){
- const names=await readdir(path.join(ROOT,'raw'));
+ const names=await readdir(path.join(ROOT,'raw','osm','grid'));
  const grid=names
   .filter(name=>name.startsWith('osm-grid-')&&name.endsWith('.xml'))
   .sort()
-  .map(name=>`raw/${name}`);
+  .map(name=>`raw/osm/grid/${name}`);
  let landmarks=[];
  try{
   const landmarkNames=await readdir(path.join(ROOT,'data','landmarks','tbilisi'));

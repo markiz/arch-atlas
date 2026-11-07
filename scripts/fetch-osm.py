@@ -20,7 +20,8 @@ progress = Progress(len(JOBS), 'fetch OSM grid')
 
 def get(job):
     name, box = job
-    path = ROOT / 'raw' / f'osm-{name}.xml'
+    path = ROOT / 'raw' / 'osm' / 'grid' / f'osm-{name}.xml'
+    path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists() and path.stat().st_size > 1000:
         size = path.stat().st_size
         progress.advance(f'{name}: cached {size:,} B')

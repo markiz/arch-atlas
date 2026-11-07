@@ -3,7 +3,8 @@ from PIL import Image
 from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
-rows=json.loads((root/'raw/research-candidates.json').read_text()); entities=json.loads((root/'raw/wikidata-heritage.json').read_text());existing=json.loads((root/'public/atlas/buildings.json').read_text());meta={}; lock=threading.Lock()
+(root/'raw'/'research').mkdir(parents=True,exist_ok=True)
+rows=json.loads((root/'raw/research/research-candidates.json').read_text()); entities=json.loads((root/'raw/research/wikidata-heritage.json').read_text());existing=json.loads((root/'public/atlas/buildings.json').read_text());meta={}; lock=threading.Lock()
 headers={'User-Agent':'TbilisiAtlasResearch/0.2 (heritage research; educational project)'}
 def getjson(params):
  url='https://commons.wikimedia.org/w/api.php?'+urllib.parse.urlencode(params)
@@ -70,7 +71,7 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
   entries[key]['files']+= [x for x in found if x['title'] not in known]
   categories.advance(f'{key}: {len(found)} found')
 categories.finish()
-(root/'raw/gallery-research.json').write_text(json.dumps(entries,ensure_ascii=False,indent=2))
+(root/'raw/research/gallery-research.json').write_text(json.dumps(entries,ensure_ascii=False,indent=2))
 # Existing objects keep their current hero, but receive up to two different images.
 selected=[]
 for key,e in entries.items():

@@ -6,7 +6,7 @@ sys.path.insert(0, '.deps')
 from shapely.geometry import LineString, mapping
 from shapely.ops import polygonize, unary_union
 nodes = {}; ways = {}; rels = {}
-files = sorted(glob.glob('raw/osm-grid-*.xml'))
+files = sorted(glob.glob('raw/osm/grid/osm-grid-*.xml'))
 parse_progress = Progress(len(files), 'parse OSM grid')
 parse_progress.start()
 for file in files:
@@ -23,7 +23,7 @@ for file in files:
 parse_progress.finish()
 result = {}
 jobs = [('imeli', '19590971'), ('conservatoire', '18222383'), ('rustaveli', '19640789')]
-metekhi_path = Path('raw/metekhi-way.json')
+metekhi_path = Path('raw/osm/metekhi-way.json')
 resolve_progress = Progress(len(jobs) + int(metekhi_path.exists()), 'resolve geometry overrides')
 resolve_progress.start()
 for name, rid in jobs:

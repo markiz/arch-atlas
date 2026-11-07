@@ -4,7 +4,7 @@ from PIL import Image
 from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, save_photo
 from progress import Progress
 root=Path(__file__).resolve().parent.parent
-research=json.loads((root/'raw/gallery-research.json').read_text());gals=json.loads((root/'data/gallery-sources.json').read_text());
+research=json.loads((root/'raw/research/gallery-research.json').read_text());gals=json.loads((root/'data/gallery-sources.json').read_text());
 known={
  'File:43-ე საჯრო სკოლა 01.jpg':'Former Trade School of the Tiflis Merchant Society building',
  'File:Giorgi Atoneli street 27 (2).jpg':'27 Giorgi Atoneli Street, Tbilisi',

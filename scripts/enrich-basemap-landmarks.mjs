@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {Progress} from './lib/progress.mjs';
 
-const root=process.cwd(),raw=path.join(root,'raw'),nodes=new Map(),ways=new Map(),features=[];
+const root=process.cwd(),raw=path.join(root,'raw','osm','grid'),nodes=new Map(),ways=new Map(),features=[];
 const translations=JSON.parse(fs.readFileSync(path.join(root,'data/landmark-name-translations.json'),'utf8'));
 function attrs(source){return Object.fromEntries([...source.matchAll(/([\w:]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]))}
 function category(tags){

@@ -1,6 +1,6 @@
 import sys
 import urllib.request, urllib.parse, json
-entries = json.load(open('raw/gallery-research.json'))
+entries = json.load(open('raw/research/gallery-research.json'))
 jobs = [(k, v['files'][0]['title']) for k, v in entries.items() if k.startswith('osm-') and len(v['files']) == 1][:30]
 print(f'Fetching categories for {len(jobs)} Commons files...', file=sys.stderr, flush=True)
 params = urllib.parse.urlencode({'action': 'query', 'format': 'json', 'prop': 'categories', 'cllimit': 100, 'titles': '|'.join(t for k, t in jobs)})

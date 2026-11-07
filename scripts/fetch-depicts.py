@@ -3,7 +3,7 @@ from PIL import Image
 from atlas_source import FREE_PHOTO_WIDTH, PHOTO_QUALITY, fit_width, read_cards, read_photo_metadata, save_photo
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
-cards=read_cards();candidates=json.loads((root/'raw/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
+cards=read_cards();candidates=json.loads((root/'raw/research/research-candidates.json').read_text());qmap={'osm-'+c['osmId']:c['qid'] for c in candidates};head={'User-Agent':'TbilisiAtlasResearch/0.2 (architecture research)'}
 def fetch(url):
  for attempt in range(2):
   try:

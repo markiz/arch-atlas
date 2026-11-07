@@ -93,7 +93,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('pbf', type=pathlib.Path)
     parser.add_argument('-o', '--output', type=pathlib.Path,
-                        default=pathlib.Path('raw/osm-tbilisi-building-outlines.geojson'))
+                        default=pathlib.Path('raw/osm/osm-tbilisi-building-outlines.geojson'))
     args = parser.parse_args()
     if not args.pbf.is_file():
         parser.error(f'PBF not found: {args.pbf}')

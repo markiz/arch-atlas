@@ -65,7 +65,7 @@ def load_registry():
 
 def load_osm_tags():
     tags = {}
-    for path in sorted((ROOT / 'raw').glob('osm-grid-*.xml')):
+    for path in sorted((ROOT / 'raw' / 'osm' / 'grid').glob('osm-grid-*.xml')):
         try:
             doc = ET.parse(path).getroot()
         except Exception:
@@ -75,7 +75,7 @@ def load_osm_tags():
                 continue
             key = f'{element.tag}/{element.attrib.get("id")}'
             tags[key] = {t.attrib.get('k'): t.attrib.get('v') for t in element.findall('tag')}
-    selected_path = ROOT / 'raw' / 'osm-tbilisi-selected.json'
+    selected_path = ROOT / 'raw' / 'osm' / 'osm-tbilisi-selected.json'
     if selected_path.exists():
         try:
             data = json.loads(selected_path.read_text())

@@ -274,7 +274,7 @@ fetch → normalize → seed atlas → hard filter → dedupe → score → top-
 
 Правила интеграции:
 
-- `build-data.py` не должен повторно добавлять объект, который уже есть в `raw/osm-grid-*.xml` или `raw/osm-tbilisi-selected.json`.
+- `build-data.py` не должен повторно добавлять объект, который уже есть в `raw/osm/grid/osm-grid-*.xml` или `raw/osm/osm-tbilisi-selected.json`.
 - Если объект есть в OSM-источниках, используются OSM-теги и координата; переводы берутся из `landmark-name-translations.json`.
 - Если объект есть только в карточке атласа, используются `point` и `names` из `landmark-selection.json`; в записи сохраняется `atlasId`.
 - `category` ограничен поддерживаемым набором; новые категории (`theatre`, `monument`) должны иметь иконку и цвет в `src/MapView.tsx` или временно использовать иконку `museum` с явной пометкой в данных.
