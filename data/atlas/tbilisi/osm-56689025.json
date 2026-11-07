@@ -1,0 +1,82 @@
+{
+  "id": "osm-56689025",
+  "osmId": "way/56689025",
+  "names": {
+    "ru": "Тбилисский государственный армянский драматический театр имени П. Адамяна",
+    "en": "Petros Adamian Tbilisi State Armenian Drama Theatre",
+    "ka": "თბილისის პეტროს ადამიანის სახელობის სომხური დრამატული თეატრი",
+    "uk": "Тбіліський державний вірменський драматичний театр імені П. Адамяна"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Царицы Кетеван, 8",
+    "en": "8 Queen Ketevan Avenue",
+    "ka": "ქეთევან დედოფლის გამზირი, 8",
+    "uk": "проспект Цариці Кетеван, 8"
+  },
+  "descriptions": {
+    "ru": "Театральное здание с неоклассическим портиком на главном фасаде, обращённом к проспекту Царицы Кетеван. За портиком следуют основной объём со сценой и служебными помещениями; боковые фасады более сдержаны.",
+    "en": "A theatre building with a neoclassical portico on the main facade facing Queen Ketevan Avenue. Behind the portico are the main auditorium, stage and service areas; the side facades are more restrained.",
+    "ka": "თეატრალური შენობა ნეოკლასიკური პორტიკით მთავარ ფასადზე, ქეთევან დედოფლის გამზირისკენ. პორტიკის უკან ძირითადი დარბაზი, სცენა და დამხმარე სივრცეებია; გვერდითი ფასადები უფრო თავშეკავებულია.",
+    "uk": "Театральна будівля з неокласичним портиком на головному фасаді, зверненому до проспекту Цариці Кетеван. За портиком розташовані головна зала, сцена та службові приміщення; бічні фасади стриманіші."
+  },
+  "histories": {
+    "ru": "Театр основан в 1856 году; 29 марта 1936 года труппа переехала в собственное здание в Авлабаре. Автор проекта этого здания не установлен. С 2010-х годов театр был закрыт на реставрацию, спектакли шли на других площадках.",
+    "en": "The theatre was founded in 1856; on 29 March 1936 the company moved into its own building in Avlabari. The architect of this building has not been established. From the 2010s the theatre was closed for restoration and performed at other venues.",
+    "ka": "თეატრი 1856 წელს დაარსდა; 1936 წლის 29 მარტს დასი ავლაბარში საკუთარ შენობაში გადავიდა. ამ შენობის პროექტის ავტორი დადგენილი არ არის. 2010-იანი წლებიდან თეატრი რესტავრაციის გამო დახურული იყო და სპექტაკლებს სხვა დარბაზებში მართავდა.",
+    "uk": "Театр засновано 1856 року; 29 березня 1936 року трупа переїхала до власної будівлі в Авлабарі. Автор проєкту цієї будівлі не встановлений. З 2010-х театр був закритий на реставрацію, вистави йшли на інших майданчиках."
+  },
+  "minYear": 1936,
+  "maxYear": 1936,
+  "yearLabelId": "year-1936",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "avlabari",
+  "coordinates": [
+    44.8164465,
+    41.691678
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.816452,
+          41.69197
+        ],
+        [
+          44.816796,
+          41.69181
+        ],
+        [
+          44.816441,
+          41.691386
+        ],
+        [
+          44.816097,
+          41.691546
+        ],
+        [
+          44.816452,
+          41.69197
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OSM way/56689025 — всего 5 точек, простой прямоугольник площадью 1 862 м²; это приблизительный абрис, а не обмер театра. Границы портика, сценической коробки и пристроек требуют уточнения по спутнику или кадастру.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way/56689025 outline has only 5 points and is a simple rectangle of 1,862 m²; this is an approximate footprint, not a survey of the theatre. The portico, stage house and annexes need verification against satellite imagery or cadastre.",
+    "ka": "OSM way/56689025-ის კონტურს მხოლოდ 5 წერტილი აქვს და 1 862 მ²-ის მარტივი მართკუთხედია; ეს არის მიახლოებითი აბრისი და არა თეატრის აზომვა. პორტიკის, სასცენო კორპუსისა და ნაშენების საზღვრები საჭიროებს დაზუსტებას სატელიტური გამოსახულებით ან კადასტრით.",
+    "uk": "Контур OSM way/56689025 має лише 5 точок і є простим прямокутником площею 1 862 м²; це приблизний абрис, а не обмір театру. Межі портика, сценічної коробки та прибудов потребують уточнення за супутниковими даними або кадастром."
+  },
+  "photos": [
+    "2c1de9a56e3322e2efc96d891d7310febab2b4f580f86e090bc5ba0058939e8e",
+    "29e42b19236e1c4037e0e1695a0f423207e10d2091a34295a2a1d155a47f47aa"
+  ],
+  "source": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B4%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9F._%D0%90%D0%B4%D0%B0%D0%BC%D1%8F%D0%BD%D0%B0",
+  "otherSource": "https://www.openstreetmap.org/way/56689025",
+  "googlePlaceId": "ChIJb3BWBfkMREARFomKysyfkKk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.691678,44.8164465&query_place_id=ChIJb3BWBfkMREARFomKysyfkKk"
+}

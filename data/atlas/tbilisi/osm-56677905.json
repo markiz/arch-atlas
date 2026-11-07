@@ -1,0 +1,94 @@
+{
+  "id": "osm-56677905",
+  "osmId": "way/56677905",
+  "names": {
+    "ru": "Национальное агентство охраны культурного наследия Грузии",
+    "en": "National Agency for Cultural Heritage Preservation of Georgia",
+    "ka": "საქართველოს კულტურული მემკვიდრეობის დაცვის ეროვნული სააგენტო",
+    "uk": "Національне агентство охорони культурної спадщини Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Реваза Табукашвили, 7",
+    "en": "7 Revaz Tabukashvili Street",
+    "ka": "რევაზ თაბუკაშვილის ქუჩა, 7",
+    "uk": "вулиця Реваза Табукашвілі, 7"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажное административное здание поздней эклектики с барочной интерпретацией фасадов: рустованный первый этаж, арочные окна и сдержанный декор верхних этажей. Стоит на склоне у Леонидзевского сада.",
+    "en": "A three-storey administrative building of late eclecticism with a Baroque interpretation of the facades: a rusticated ground floor, arched windows and restrained decoration on the upper floors. It stands on a slope by the Leonidze Garden.",
+    "ka": "სამსართულიანი ადმინისტრაციული შენობა გვიანი ეკლექტიზმითა და ფასადების ბაროკალური ინტერპრეტაციით: რუსტირებული პირველი სართული, თაღოვანი სარკმლები და თავშეკავებული დეკორი ზედა სართულებზე. დგას ლეონიძის ბაღის მახლობლად, ფერდობზე.",
+    "uk": "Триповерхова адміністративна будівля пізньої еклектики з бароковою інтерпретацією фасадів: рустований перший поверх, арочні вікна та стриманий декор верхніх поверхів. Стоїть на схилі біля саду Леонідзе."
+  },
+  "histories": {
+    "ru": "Реестр датирует здание 1890–1902 годами; в 1904–1928 годах здесь работало Кавказское медицинское общество. В описании реестра также упоминается третья четверть XX века, поэтому датировка требует проверки. Адрес в реестре и на фото — Табукашвили, 5; OSM и Google указывают № 7. Сейчас здание занимает Национальное агентство охраны культурного наследия.",
+    "en": "The register dates the building to 1890–1902; the Caucasian Medical Society worked here in 1904–1928. The register description also mentions the third quarter of the 20th century, so the dating needs verification. The register and the photo give Tabukashvili 5; OSM and Google give No. 7. The building now houses the National Agency for Cultural Heritage Preservation.",
+    "ka": "რეესტრი შენობას 1890–1902 წლებით ათარიღებს; 1904–1928 წლებში აქ კავკასიის სამედიცინო საზოგადოება მოღვაწეობდა. რეესტრის აღწერაში ასევე მოხსენიებულია XX საუკუნის მესამე მეოთხედი, ამიტომ დათარიღება საჭიროებს შემოწმებას. რეესტრში და ფოტოზე მისამართია თაბუკაშვილის 5; OSM და Google მიუთითებენ № 7-ს. ახლა შენობაში კულტურული მემკვიდრეობის დაცვის ეროვნული სააგენტოა.",
+    "uk": "Реєстр датує будівлю 1890–1902 роками; у 1904–1928 роках тут працювало Кавказьке медичне товариство. В описі реєстру також згадується третя чверть XX століття, тому датування потребує перевірки. Адреса в реєстрі та на фото — Табукашвілі, 5; OSM і Google вказують № 7. Нині будівлю займає Національне агентство охорони культурної спадщини."
+  },
+  "minYear": 1890,
+  "maxYear": 1902,
+  "yearLabelId": "period-1890-1902",
+  "styleIds": [
+    "eclecticism",
+    "neo-baroque"
+  ],
+  "architectIds": [],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.8010352,
+    41.698547
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.800807,
+          41.698644
+        ],
+        [
+          44.800967,
+          41.698736
+        ],
+        [
+          44.801205,
+          41.698507
+        ],
+        [
+          44.801044,
+          41.698414
+        ],
+        [
+          44.801025,
+          41.698433
+        ],
+        [
+          44.800982,
+          41.698474
+        ],
+        [
+          44.800866,
+          41.698587
+        ],
+        [
+          44.800807,
+          41.698644
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OSM way/56677905 — 540 м², 4 этажа по OSM; реестр описывает трёхэтажный корпус. Адрес расходится: реестр и фото — Табукашвили, 5, OSM и Google — 7. Контур и адрес требуют проверки по спутнику и кадастру.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way/56677905 outline is 540 m² and 4 levels in OSM; the register describes a three-storey building. The address differs: the register and the photo give Tabukashvili 5, OSM and Google give 7. The outline and address need verification against satellite imagery and cadastre.",
+    "ka": "OSM way/56677905-ის კონტური 540 მ² და 4 სართულია OSM-ის მიხედვით; რეესტრი სამსართულიან კორპუსს აღწერს. მისამართი განსხვავდება: რეესტრი და ფოტო — თაბუკაშვილის 5, OSM და Google — 7. კონტური და მისამართი საჭიროებს შემოწმებას სატელიტური გამოსახულებითა და კადასტრით.",
+    "uk": "Контур OSM way/56677905 — 540 м², 4 поверхи за OSM; реєстр описує триповерхову будівлю. Адреса різниться: реєстр і фото — Табукашвілі, 5, OSM і Google — 7. Контур і адресу потрібно перевірити за супутниковими даними та кадастром."
+  },
+  "photos": [
+    "a2126e2ce5dbbfad5f8bd4b4e5990dcae58115aaa93414eafee41c4a557afd40"
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4239",
+  "otherSource": "https://www.openstreetmap.org/way/56677905",
+  "googlePlaceId": "ChIJQW7lzeYMREARROD02MVzsQk",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.698547,44.8010352&query_place_id=ChIJQW7lzeYMREARROD02MVzsQk"
+}
