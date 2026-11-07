@@ -15,16 +15,24 @@
     "uk": ""
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Бывший отель «Лондон» на улице Атонели, 31 (угол улицы Хиди, 2) — двухэтажное здание с европейским фасадом и овальной лестницей, построенное по проекту Отто Симонсона. В парадной сохранились росписи.",
+    "en": "The former Hotel London at 31 Atoneli Street (corner of Khidi Street, 2) is a two-storey building with a European façade and an oval staircase, designed by Otto Simonson. Painted interiors survive in the entrance hall.",
+    "ka": "ყოფილი სასტუმრო „ლონდონი“ ათონელის ქუჩა 31-ში (ხიდის ქუჩა 2-ის კუთხე) ორსართულიანი შენობაა ევროპული ფასადითა და ოვალური კიბით, აგებული ოტო სიმონსონის პროექტით. პარადულ ფოიეში მხატვრობა შემორჩა.",
+    "uk": "Колишній готель «Лондон» на вулиці Атонелі, 31 (ріг вулиці Хіді, 2) — двоповерхова будівля з європейським фасадом і овальними сходами, зведена за проєктом Отто Сімонсона. У парадному вестибюлі збереглися розписи."
+  },
+  "histories": {
+    "ru": "Проект утверждён в 1872 году, отель открылся в 1875 году как Hotel de Londres и имел 28 номеров. Им владели промышленники Зубалашвили; гостями были Кнут Гамсун и Пётр Чайковский, а в 1890 году здесь прошёл первый в Тифлисе сеанс фонографа Эдисона. В 1914 году здание отдали под военный госпиталь, в 1925 году — под Центральный дом крестьянина, в 1950 году — под управление милиции; с 1960-х это жилой дом.",
+    "en": "The design was approved in 1872, and the hotel opened in 1875 as Hotel de Londres with 28 rooms. It belonged to the Zubalashvili industrialists; guests included Knut Hamsun and Pyotr Tchaikovsky, and in 1890 the first Edison phonograph session in Tiflis took place here. In 1914 the building became a military hospital, in 1925 the Central House of the Peasant, and in 1950 the police administration; since the 1960s it has been a residential building.",
+    "ka": "პროექტი 1872 წელს დამტკიცდა, სასტუმრო კი 1875 წელს გაიხსნა როგორც Hotel de Londres და 28 ნომერი ჰქონდა. ის მრეწველებს ზუბალაშვილებს ეკუთვნოდათ; სტუმრებს შორის იყვნენ კნუტ გამსუნი და პიოტრ ჩაიკოვსკი, ხოლო 1890 წელს აქ ედისონის ფონოგრაფის პირველი სეანსი ჩატარდა ტფილისში. 1914 წელს შენობა სამხედრო ჰოსპიტალს გადაეცა, 1925 წელს — გლეხის ცენტრალურ სახლს, 1950 წელს — პოლიციის სამმართველოს; 1960-იანი წლებიდან საცხოვრებელი სახლია.",
+    "uk": "Проєкт затвердили 1872 року, а готель відкрився 1875 року як Hotel de Londres і мав 28 номерів. Він належав промисловцям Зубалашвілі; серед гостей були Кнут Гамсун і Петро Чайковський, а 1890 року тут відбувся перший у Тифлісі сеанс фонографа Едісона. 1914 року будівлю передали під військовий шпиталь, 1925 року — під Центральний дім селянина, 1950 року — під управління поліції; з 1960-х це житловий будинок."
   },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "undetermined",
-  "architectIds": [],
+  "styleId": "eclecticism",
+  "architectIds": [
+    "otto-simonson"
+  ],
   "districtId": "mtatsminda",
   "coordinates": [
     44.8019144,

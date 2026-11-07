@@ -27,12 +27,12 @@
     }
   },
   "korneli-tatishev": {
-    "source": "Корнели Татищев",
+    "source": "Корнелий Татищев",
     "labels": {
-      "ru": "Корнели Татищев",
-      "en": "Korneli Tatishev",
+      "ru": "Корнелий Татищев",
+      "en": "Kornely Tatishchev",
       "ka": "კორნელი ტატიშჩევი",
-      "uk": "Корнелій Татіщев"
+      "uk": "Корнелій Татищев"
     }
   },
   "alexey-shchusev": {
@@ -348,6 +348,114 @@
       "en": "Tariel Kiparoidze",
       "ka": "ტარიელ კიპაროიძე",
       "uk": "Таріель Кіпароїдзе"
+    }
+  },
+  "germane-ghudushauri": {
+    "source": "Германе Гудушаури",
+    "labels": {
+      "ru": "Германе Гудушаури",
+      "en": "Germane Ghudushauri",
+      "ka": "გერმანე ღუდუშაური",
+      "uk": "Германе Гудушаурі"
+    }
+  },
+  "mikhail-chkhikvadze": {
+    "source": "Михаил Чхиквадзе",
+    "labels": {
+      "ru": "Михаил Чхиквадзе",
+      "en": "Mikhail Chkhikvadze",
+      "ka": "მიხეილ ჩხიკვაძე",
+      "uk": "Михайло Чхіквадзе"
+    }
+  },
+  "konstantin-chkheidze": {
+    "source": "Константин Чхеидзе",
+    "labels": {
+      "ru": "Константин Чхеидзе",
+      "en": "Konstantin Chkheidze",
+      "ka": "კონსტანტინე ჩხეიძე",
+      "uk": "Костянтин Чхеїдзе"
+    }
+  },
+  "krichinsky": {
+    "source": "С. С. Кричинский",
+    "labels": {
+      "ru": "С. С. Кричинский",
+      "en": "S. S. Krichinsky",
+      "ka": "ს. ს. კრიჩინსკი",
+      "uk": "С. С. Кричинський"
+    }
+  },
+  "nikolai-obolonsky": {
+    "source": "Николай Оболонский",
+    "labels": {
+      "ru": "Николай Оболонский",
+      "en": "Nikolai Obolonsky",
+      "ka": "ნიკოლაი ობოლონსკი",
+      "uk": "Микола Оболонський"
+    }
+  },
+  "robert-gedike": {
+    "source": "Роберт Гедике",
+    "labels": {
+      "ru": "Роберт Гедике",
+      "en": "Robert Gedike",
+      "ka": "რობერტ გედიკე",
+      "uk": "Роберт Гедіке"
+    }
+  },
+  "otto-simonson": {
+    "source": "Отто Симонсон",
+    "labels": {
+      "ru": "Отто Симонсон",
+      "en": "Otto Simonson",
+      "ka": "ოტო სიმონსონი",
+      "uk": "Отто Сімонсон"
+    }
+  },
+  "georgy-aladzhanov": {
+    "source": "Георгий Аладжанов",
+    "labels": {
+      "ru": "Георгий Аладжанов",
+      "en": "Georgy Aladzhanov",
+      "ka": "გიორგი ალაჯანოვი",
+      "uk": "Георгій Аладжанов"
+    }
+  },
+  "k-antonov": {
+    "source": "К. Антонов",
+    "labels": {
+      "ru": "К. Антонов",
+      "en": "K. Antonov",
+      "ka": "კ. ანტონოვი",
+      "uk": "К. Антонов"
+    }
+  },
+  "alexander-chizhov": {
+    "source": "Александр Чижов",
+    "labels": {
+      "ru": "Александр Чижов",
+      "en": "Alexander Chizhov",
+      "ka": "ალექსანდრე ჩიჟოვი",
+      "uk": "Олександр Чижов"
+    }
+  },
+  "giovanni-bernardazzi": {
+    "source": "Джованни Бернардацци",
+    "labels": {
+      "ru": "Джованни Бернардацци",
+      "en": "Giovanni Bernardazzi",
+      "ka": "ჯოვანი ბერნარდაცი",
+      "uk": "Джованні Бернардацці"
+    }
+  },
+  "giuseppe-bernardazzi": {
+    "source": "Джузеппе Бернардацци",
+    "labels": {
+      "ru": "Джузеппе Бернардацци",
+      "en": "Giuseppe Bernardazzi",
+      "ka": "ჯუზეპე ბერნარდაცი",
+      "uk": "Джузеппе Бернардацці"
     }
   }
 }

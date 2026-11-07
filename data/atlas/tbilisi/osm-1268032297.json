@@ -2,23 +2,23 @@
   "id": "osm-1268032297",
   "osmId": "way/1268032297",
   "names": {
-    "ru": "Башня",
-    "en": "Tower",
-    "ka": "კოშკი",
-    "uk": "Вежа"
+    "ru": "Восточная оборонительная башня Ботанического сада",
+    "en": "Eastern Defense Tower of the Botanical Garden",
+    "ka": "ბოტანიკური ბაღის აღმოსავლეთი თავდაცვითი კოშკი",
+    "uk": "Східна оборонна вежа Ботанічного саду"
   },
   "originalLanguage": "ka",
   "addresses": {
-    "ru": "",
-    "en": "",
-    "ka": "",
-    "uk": ""
+    "ru": "Ботаническая улица, 1",
+    "en": "1 Botanicheskaya Street",
+    "ka": "ბოტანიკურის ქუჩა 1",
+    "uk": "Ботанічна вулиця, 1"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Восточная оборонительная башня Национального ботанического сада — каменная сторожевая башня с зубцами и бойницами, встроенная в старую крепостную стену на склоне под Нарикалой. Это часть укреплений, окружавших бывшие «цихис баги» — сады при крепости.",
+    "en": "The Eastern Defense Tower of the National Botanical Garden is a stone watchtower with crenellations and arrow slits, built into the old fortress wall on the slope below Narikala. It is part of the fortifications that surrounded the former \"fortress gardens\" (tsikhis bagi).",
+    "ka": "საქართველოს ეროვნული ბოტანიკური ბაღის აღმოსავლეთი თავდაცვითი კოშკი ქვის სადარაჯო კოშკია კბილანებითა და სათოფურებით, ჩაშენებული ძველ ციხის კედელში, ნარიყალას ქვეშ, ფერდობზე. ის იმ გალავნის ნაწილია, რომელიც ყოფილ „ციხის ბაღებს“ ერტყა.",
+    "uk": "Східна оборонна вежа Національного ботанічного саду — кам'яна сторожова вежа із зубцями та бійницями, вмурована в старий фортечний мур на схилі під Нарікалою. Це частина укріплень, що оточували колишні «цихіс багі» — сади при фортеці."
   },
   "minYear": null,
   "maxYear": null,
@@ -71,5 +71,11 @@
     "6cad51c974cdde4fd01c804ff9ae5e0d136a7ad705c90efa74067ce9d3fbd211"
   ],
   "source": "https://www.openstreetmap.org/way/1268032297",
-  "otherSource": "https://www.wikidata.org/wiki/Q42628230"
+  "otherSource": "https://www.wikidata.org/wiki/Q42628230",
+  "histories": {
+    "ru": "Башня входит в комплекс оборонних сооружений Нарикалы, связанных с царскими садами в долине Цавкисисцкали, известными с начала XVII века. Точная дата постройки не установлена: стены неоднократно перестраивались, особенно после персидского погрома 1795 года. Памятник культурного наследия (ID 3993).",
+    "en": "The tower belongs to the defensive complex of Narikala, associated with the royal gardens in the Tsavkisistskali valley, known since the early 17th century. The exact date of construction is not established: the walls were repeatedly rebuilt, especially after the Persian sack of 1795. It is a cultural heritage monument (ID 3993).",
+    "ka": "კოშკი ნარიყალას თავდაცვითი კომპლექსის ნაწილია, რომელიც დაკავშირებულია ცავკისისწყლის ხეობის სამეფო ბაღებთან, ცნობილთა XVII საუკუნის დასაწყისიდან. მშენებლობის ზუსტი თარიღი არ არის დადგენილი: კედლები არაერთხელ გადაკეთდა, განსაკუთრებით 1795 წლის სპარსული შემოსევის შემდეგ. ეს კულტურული მემკვიდრეობის ძეგლია (ID 3993).",
+    "uk": "Вежа належить до оборонного комплексу Нарікали, пов'язаного з царськими садами в долині Цавкісісцкалі, відомими з початку XVII століття. Точна дата будівництва не встановлена: мури неодноразово перебудовували, особливо після перського погрому 1795 року. Це пам'ятка культурної спадщини (ID 3993)."
+  }
 }

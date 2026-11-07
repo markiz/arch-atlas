@@ -15,15 +15,21 @@
     "uk": "вулиця Георгія Афонелі, 27"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Школа № 68 на улице Георгия Афонели, 27 — трёхэтажное кирпичное здание 1880 года с тремя корпусами, расположенными под прямым углом. Фасад сохранил арочный проезд во двор и балконы с растительным орнаментом.",
+    "en": "School No. 68 at 27 Georgy Afoneli Street is a three-storey brick building of 1880 with three wings set at right angles. The façade retains an arched passage into the courtyard and balconies with plant ornament.",
+    "ka": "68-ე სკოლა გიორგი აფონელის ქუჩა 27-ში 1880 წლის სამსართულიანი აგურის შენობაა, სამი კორპუსით, ერთმანეთის მიმართ მართი კუთხით. ფასადზე შემორჩენილია თაღოვანი გასასვლელი ეზოში და მცენარეული ორნამენტით აივნები.",
+    "uk": "Школа № 68 на вулиці Георгія Афонелі, 27 — триповерхова цегляна будівля 1880 року із трьома корпусами під прямим кутом. Фасад зберіг арочний проїзд у двір і балкони з рослинним орнаментом."
+  },
+  "histories": {
+    "ru": "Первоначальное учебное заведение и архитектор не установлены. По школьному сайту, раньше это была школа № 28, затем женская № 34; точная история требует архивной проверки.",
+    "en": "The original school and the architect are not established. According to the school's website, it was formerly School No. 28 and then Women's School No. 34; the exact history requires archival verification.",
+    "ka": "თავდაპირველი სასწავლებელი და არქიტექტორი არ არის დადგენილი. სკოლის ვებგვერდის მიხედვით, ადრე ეს იყო 28-ე სკოლა, შემდეგ ქალთა 34-ე სკოლა; ზუსტი ისტორია არქივურ შემოწმებას მოითხოვს.",
+    "uk": "Первісний навчальний заклад і архітектор не встановлені. За сайтом школи, раніше це була школа № 28, згодом жіноча № 34; точна історія потребує архівної перевірки."
   },
   "minYear": 1880,
   "maxYear": 1880,
   "yearLabelId": "year-1880",
-  "styleId": "undetermined",
+  "styleId": "art-nouveau",
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

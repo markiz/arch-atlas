@@ -15,16 +15,24 @@
     "uk": "вулиця Коте Марджанішвілі, 8"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Театр Марджанишвили занимает бывший Народный дом Зубалова (1909) — здание с симметричным фасадом и глубокими арочными окнами.",
+    "en": "The Marjanishvili Theatre occupies the former Zubalov People's House (1909), a building with a symmetrical façade and deep arched windows.",
+    "ka": "მარჯანიშვილის თეატრი ყოფილ ზუბალოვის სახალხო სახლში (1909) მდებარეობს — შენობა სიმეტრიული ფასადითა და ღრმა თაღოვანი სარკმლებით.",
+    "uk": "Театр Марджанішвілі займає колишній Народний дім Зубалова (1909) — будівлю із симетричним фасадом і глибокими арочними вікнами."
+  },
+  "histories": {
+    "ru": "Театр основан Котэ Марджанишвили в Кутаиси в 1928 году как 2-й Государственный драматический театр. В 1930 году труппа переехала в Тифлис и заняла Народный дом Зубалова; с 1933 года театр носит имя Марджанишвили, с 1966 года — академический.",
+    "en": "The theatre was founded by Kote Marjanishvili in Kutaisi in 1928 as the Second State Drama Theatre. In 1930 the company moved to Tiflis and took over the Zubalov People's House; since 1933 it has borne Marjanishvili's name and since 1966 it has been an academic theatre.",
+    "ka": "თეატრი კოტე მარჯანიშვილმა 1928 წელს ქუთაისში დააარსა, როგორც მე-2 სახელმწიფო დრამატული თეატრი. 1930 წელს დასი ტფილისში გადავიდა და ზუბალოვის სახალხო სახლი დაიკავა; 1933 წლიდან თეატრი მარჯანიშვილის სახელს ატარებს, 1966 წლიდან აკადემიურია.",
+    "uk": "Театр заснував Коте Марджанішвілі в Кутаїсі 1928 року як Другий державний драматичний театр. 1930 року трупа переїхала до Тифліса й зайняла Народний дім Зубалова; з 1933 року театр носить ім'я Марджанішвілі, з 1966 року — академічний."
   },
   "minYear": 1909,
   "maxYear": 1909,
   "yearLabelId": "year-1909",
-  "styleId": "undetermined",
-  "architectIds": [],
+  "styleId": "art-nouveau",
+  "architectIds": [
+    "krichinsky"
+  ],
   "districtId": "chughureti",
   "coordinates": [
     44.79452,

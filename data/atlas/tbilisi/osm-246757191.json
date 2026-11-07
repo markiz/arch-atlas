@@ -15,16 +15,24 @@
     "uk": "проспект Давида Агмашенебелі, 27"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Бывший доходный дом Манташева на проспекте Агмашенебели, 27 — двухэтажный дом 1905 года с выразительным декором фасада, построенный на месте более раннего здания. Первый этаж сильно изменён, фасад в аварийном состоянии.",
+    "en": "The former Mantashev apartment house at 27 Agmashenebeli Avenue is a two-storey building of 1905 with a distinctive façade decoration, erected on the site of an earlier building. The ground floor has been heavily altered and the façade is in an emergency condition.",
+    "ka": "მანთაშევის ყოფილი შემოსავლიანი სახლი აღმაშენებლის გამზირ 27-ში 1905 წლის ორსართულიანი შენობაა გამომსახველი ფასადის დეკორით, აშენებული ადრინდელი შენობის ადგილზე. პირველი სართული ძლიერ არის შეცვლილი, ფასადი ავარიულ მდგომარეობაშია.",
+    "uk": "Колишній прибутковий будинок Манташева на проспекті Агмашенебелі, 27 — двоповерхова будівля 1905 року з виразним декором фасаду, зведена на місці ранішої споруди. Перший поверх сильно змінено, фасад в аварійному стані."
+  },
+  "histories": {
+    "ru": "Дом построен по проекту Газара Саркисяна по желанию Александра Манташева и отдан в приданое дочери. Это не «дом с подсолнухами» на Табидзе — тот принадлежал другой линии манташевских построек. Точная история здания до перестройки 1905 года не установлена.",
+    "en": "The house was built to a design by Ghazar Sarkisyan at the wish of Alexander Mantashev and given as a dowry to his daughter. It is not the 'house with sunflowers' on Tabidze Street, which belongs to another line of Mantashev's buildings. The exact history of the site before the 1905 rebuilding is not established.",
+    "ka": "სახლი ღაზარ სარქისიანის პროექტით ააშენეს ალექსანდრე მანთაშევის სურვილით და ქალიშვილს მზითვად გადასცეს. ეს არ არის ტაბიძის ქუჩის „მზესუმზირებიანი სახლი“ — ის მანთაშევის სხვა ნაგებობათა ხაზს ეკუთვნის. 1905 წლის გადაკეთებამდე ადგილის ზუსტი ისტორია არ არის დადგენილი.",
+    "uk": "Будинок зведено за проєктом Газара Саркісяна на бажання Олександра Манташева й передано як посаг дочці. Це не «будинок із соняшниками» на Табідзе — той належить до іншої лінії манташевських споруд. Точна історія ділянки до перебудови 1905 року не встановлена."
   },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
   "styleId": "art-nouveau",
-  "architectIds": [],
+  "architectIds": [
+    "ghazar-sarkisian"
+  ],
   "districtId": "chughureti",
   "coordinates": [
     44.8029283,

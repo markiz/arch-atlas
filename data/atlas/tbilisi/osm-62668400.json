@@ -15,10 +15,16 @@
     "uk": ""
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Музей фольклора на Сололакской улице, 11 — одноэтажное вытянутое кирпичное здание начала XX века с ленточным остеклением и металлическими решётками. По реестру его функция — музей.",
+    "en": "The Folklore Museum at 11 Sololaki Street is a long single-storey brick building of the early 20th century with ribbon windows and metal grilles. The heritage register gives its function as a museum.",
+    "ka": "ფოლკლორის მუზეუმი სოლოლაკის ქუჩა 11-ში XX საუკუნის დასაწყისის გრძელი, ერთსართულიანი აგურის შენობაა ლენტური ფანჯრებითა და ლითონის ცხაურებით. რეესტრის მიხედვით მისი ფუნქცია მუზეუმია.",
+    "uk": "Музей фольклору на Сололакській вулиці, 11 — довга одноповерхова цегляна будівля початку XX століття зі стрічковим склінням і металевими ґратами. За реєстром її функція — музей."
+  },
+  "histories": {
+    "ru": "История институции и то, когда здание получило музейную функцию, не установлены. Точная дата постройки и автор проекта также требуют проверки по архивным документам.",
+    "en": "The history of the institution and the date when the building acquired its museum function are not established. The exact date of construction and the architect also require verification against archival documents.",
+    "ka": "ინსტიტუციის ისტორია და ის, თუ როდის მიიღო შენობამ მუზეუმის ფუნქცია, არ არის დადგენილი. მშენებლობის ზუსტი თარიღი და არქიტექტორიც არქივურ დოკუმენტებით უნდა შემოწმდეს.",
+    "uk": "Історія установи й те, коли будівля набула музейної функції, не встановлені. Точна дата будівництва й архітектор також потребують перевірки за архівними документами."
   },
   "minYear": null,
   "maxYear": null,

@@ -15,16 +15,25 @@
     "uk": "вулиця Мераба Костави, 29"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Здание Шахматного дворца и альпийского клуба в парке Вера — крупный общественный корпус с остеклённым фасадом и залом на 520 мест, вписанный в рельеф парка. В интерьере — светлое фойе и открытые лестницы.",
+    "en": "The Chess Palace and Alpine Club in Vera Park is a large public building with a glazed façade and a 520-seat hall, set into the park's sloping terrain. Its interior features a light-filled foyer and open staircases.",
+    "ka": "ჭადრაკის სასახლე და ალპური კლუბი ვერის პარკში დიდი საზოგადოებრივი შენობაა მინის ფასადითა და 520 ადგილიანი დარბაზით, პარკის რელიეფში ჩაწერილი. ინტერიერში ნათელი ფოიე და ღია კიბეებია.",
+    "uk": "Шаховий палац і альпійський клуб у парку Вера — великий громадський корпус із заскленим фасадом і залом на 520 місць, вписаний у рельєф парку. В інтер'єрі — світлий вестибюль і відкриті сходи."
+  },
+  "histories": {
+    "ru": "Дворец открыт 14 апреля 1973 года в парке Вера (тогда парк Кирова) и посвящён пятикратной чемпионке мира Ноны Гаприндашвили, которой тогда было 33 года. Интерьеры выполнила группа «Самеули» (О. Кочакидзе, А. Словинский, И. Чикваидзе). Для здания разработан консервационный план в рамках проекта Getty Foundation «Keeping It Modern» при участии Blue Shield.",
+    "en": "The palace opened on 14 April 1973 in Vera Park (then Kirov Park) and was dedicated to the five-time world chess champion Nona Gaprindashvili, then 33. The interiors were created by the Sameuli group (O. Kochakidze, A. Slovinsky, I. Chikvaidze). A conservation management plan has been prepared under the Getty Foundation's Keeping It Modern programme with Blue Shield.",
+    "ka": "სასახლე გაიხსნა 1973 წლის 14 აპრილს ვერის პარკში (მაშინ კიროვის პარკი) და მიეძღვნა მსოფლიოს ხუთგზის ჩემპიონ ნონა გაფრინდაშვილს, რომელიც მაშინ 33 წლის იყო. ინტერიერი შექმნა ჯგუფმა „სამეული“ (ო. ქოჩაკიძე, ა. სლოვინსკი, ი. ჩიკვაიძე). შენობისთვის მომზადდა კონსერვაციის გეგმა Getty Foundation-ის „Keeping It Modern“ პროგრამის ფარგლებში, Blue Shield-ის მონაწილეობით.",
+    "uk": "Палац відкрито 14 квітня 1973 року в парку Вера (тоді парк Кірова) і присвячено п'ятиразовій чемпіонці світу Ноні Гапріндашвілі, якій тоді було 33 роки. Інтер'єри створила група «Самеулі» (О. Кочакідзе, А. Словінський, І. Чікваїдзе). Для будівлі розроблено консерваційний план у межах програми Getty Foundation «Keeping It Modern» за участі Blue Shield."
   },
   "minYear": 1973,
   "maxYear": 1973,
   "yearLabelId": "year-1973",
-  "styleId": "undetermined",
-  "architectIds": [],
+  "styleId": "late-soviet-modernism",
+  "architectIds": [
+    "vladimir-aleksi-meskhishvili",
+    "germane-ghudushauri"
+  ],
   "districtId": "vera",
   "coordinates": [
     44.7876875,

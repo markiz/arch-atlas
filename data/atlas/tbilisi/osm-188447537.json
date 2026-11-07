@@ -15,16 +15,24 @@
     "uk": ""
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Синий монастырь (Лурджи) — церковь Святого Андрея Первозванного в парке Вера, трёхнефная базилика с коническим куполом. От первоначального здания XII века сохранились апсида с резными окнами и нижние части стен.",
+    "en": "The Blue Monastery (Lurji) is the Church of St Andrew the First-Called in Vera Park, a three-nave basilica with a conical dome. From the original 12th-century building survive the apse with carved windows and the lower parts of the walls.",
+    "ka": "ლურჯი მონასტერი (ლურჯი) ვერის პარკში მდებარე წმინდა ანდრია პირველწოდებულის ეკლესიაა, სამნავიანი ბაზილიკა კონუსური გუმბათით. XII საუკუნის თავდაპირველი ნაგებობიდან შემორჩენილია მოჩუქურთმებული სარკმლებით აფსიდი და კედლების ქვედა ნაწილები.",
+    "uk": "Синій монастир (Лурджі) — церква Святого Андрія Первозванного в парку Вера, тринавна базиліка з конічним куполом. Від первісної будівлі XII століття збереглися апсида з різьбленими вікнами та нижні частини стін."
+  },
+  "histories": {
+    "ru": "Нынешнее здание возведено в конце XII века (1180-е, эпоха царицы Тамары) на месте монастыря, основанного, по преданию, в VII веке; строителем был Василий, бывший архиепископ Картли. В XVII веке повреждённую церковь восстановили как трёхнефную базилику без купола, в 1873 году реконструировали по проекту Александра Чижова. В советское время здесь были склад и Музей грузинской медицины; в 1990 году монастырь вернули церкви, в 1995 году купол заменили коническим.",
+    "en": "The present church was built in the late 12th century (the 1180s, under Queen Tamar) on the site of a monastery traditionally founded in the 7th century; its builder was Basil, former archbishop of Kartli. In the 17th century the damaged church was rebuilt as a three-nave basilica without a dome, and in 1873 it was reconstructed to a design by Alexander Chizhov. In the Soviet period it housed a warehouse and the Museum of Georgian Medicine; it was returned to the church in 1990, and in 1995 the dome was replaced with a conical one.",
+    "ka": "დღევანდელი ეკლესია XII საუკუნის ბოლოს (1180-იანი წლები, დედოფალ თამარის დრო) აშენდა იმ მონასტრის ადგილზე, რომელიც, გადმოცემით, VII საუკუნეში დაარსდა; მშენებელი იყო ბასილი, ქართლის ყოფილი მთავარეპისკოპოსი. XVII საუკუნეში დაზიანებული ეკლესია სამნავიან ბაზილიკად, გუმბათის გარეშე აღადგინეს, 1873 წელს კი ალექსანდრე ჩიჟოვის პროექტით გადააკეთეს. საბჭოთა პერიოდში აქ საწყობი და ქართული მედიცინის მუზეუმი იყო; 1990 წელს მონასტერი ეკლესიას დაუბრუნდა, 1995 წელს გუმბათი კონუსურით შეიცვალა.",
+    "uk": "Сучасну церкву зведено наприкінці XII століття (1180-ті, за цариці Тамари) на місці монастиря, заснованого, за переказом, у VII столітті; будівничим був Василій, колишній архієпископ Картлі. У XVII столітті пошкоджену церкву відбудували як тринавну базиліку без купола, а 1873 року реконструювали за проєктом Олександра Чижова. За радянських часів тут були склад і Музей грузинської медицини; 1990 року монастир повернули церкві, а 1995 року купол замінили конічним."
   },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "undetermined",
-  "architectIds": [],
+  "styleId": "medieval-georgian-architecture",
+  "architectIds": [
+    "alexander-chizhov"
+  ],
   "districtId": "vera",
   "coordinates": [
     44.7889875,

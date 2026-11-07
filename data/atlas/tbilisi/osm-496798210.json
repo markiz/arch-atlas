@@ -15,16 +15,24 @@
     "uk": "вулиця Даніеля Чонкадзе, 12"
   },
   "descriptions": {
-    "ru": "В OpenStreetMap объект отмечен как памятник культурного наследия.",
-    "en": "OpenStreetMap marks this building as a cultural heritage monument.",
-    "ka": "OpenStreetMap-ში ეს შენობა კულტურული მემკვიდრეობის ძეგლად არის მონიშნული.",
-    "uk": "В OpenStreetMap цю будівлю позначено як пам’ятку культурної спадщини."
+    "ru": "Дом Бозарджянца на улице Чонкадзе, 12 — богатый особняк табачного промышленника, оформленный на жену владельца. Фасад отличается пышным декором.",
+    "en": "The Bozardzhyants house at 12 Chonkadze Street is a rich mansion of a tobacco industrialist, registered in his wife's name. The façade is notable for its lush decoration.",
+    "ka": "ბოზარჯიანცის სახლი ჭონქაძის ქუჩა 12-ში თამბაქოს მრეწველის მდიდარი სახლია, გაფორმებული მისი ცოლის სახელზე. ფასადი მდიდარი დეკორით გამოირჩევა.",
+    "uk": "Будинок Бозарджянца на вулиці Чонкадзе, 12 — багатий особняк тютюнового промисловця, оформлений на дружину власника. Фасад вирізняється пишним декором."
+  },
+  "histories": {
+    "ru": "Николай Бозарджянц оформил дом на жену Екатерину Григорьевну, поэтому в городе его называли «домом мадам Бозарджянц». После советизации предприятие «Бозарджянц и сыновья» национализировали, папиросы «Симпатия» сменила «Прима», а в дом вселили партийную элиту. Точная дата постройки не установлена.",
+    "en": "Nikolai Bozardzhyants registered the house in the name of his wife Ekaterina Grigorievna, which is why it was known as 'Madame Bozardzhyants' house'. After Sovietisation the firm 'Bozardzhyants and Sons' was nationalised, the 'Sympathy' cigarettes were replaced by 'Prima', and party elites moved into the house. The exact date of construction is not established.",
+    "ka": "ნიკოლაი ბოზარჯიანცმა სახლი ცოლის, ეკატერინე გრიგორის ასულის სახელზე გააფორმა, ამიტომ მას „მადამ ბოზარჯიანცის სახლს“ ეძახდნენ. საბჭოთა ხელისუფლების დამყარების შემდეგ კომპანია „ბოზარჯიანცი და შვილები“ ნაციონალიზებული იქნა, პაპიროსი „სიმპათია“ „პრიმამ“ შეცვალა, ხოლო სახლში პარტიული ელიტა ჩასახლდა. მშენებლობის ზუსტი თარიღი არ არის დადგენილი.",
+    "uk": "Микола Бозарджянц оформив будинок на дружину Катерину Григорівну, тому його називали «домом мадам Бозарджянц». Після радянізації підприємство «Бозарджянц і сини» націоналізували, цигарки «Симпатія» замінила «Прима», а в будинок вселили партійну еліту. Точна дата будівництва не встановлена."
   },
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
   "styleId": "undetermined",
-  "architectIds": [],
+  "architectIds": [
+    "mikhail-ogandzhanov"
+  ],
   "districtId": "sololaki",
   "coordinates": [
     44.7948795,
