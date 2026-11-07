@@ -35,6 +35,7 @@
 ## Исследование очередей
 
 - [research-pipeline.md](research-pipeline.md) — схема конвейера, скрипты и правила.
+- [research-public-buildings.md](research-public-buildings.md) — обязательный пул публичных и правительственных зданий: 202 контура, приоритеты и фото.
 - [research-queue-progress.md](research-queue-progress.md) — регистр первой очереди: 95 добавлено, 105 hold/reject.
 - [research-next-200-v5.md](research-next-200-v5.md) — пятая очередь, 200 кандидатов.
 - [research-queue-v5-progress.md](research-queue-v5-progress.md) — разбор пятой очереди: 40 интегрировано, 60 READY ждут перевода.
