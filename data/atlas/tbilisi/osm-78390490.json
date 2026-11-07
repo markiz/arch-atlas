@@ -29,7 +29,8 @@
   "maxYear": 1903,
   "yearLabelId": "period-1901-1903",
   "styleIds": [
-    "undetermined"
+    "art-nouveau",
+    "classicism"
   ],
   "architectIds": [
     "leopold-bielfeld",
