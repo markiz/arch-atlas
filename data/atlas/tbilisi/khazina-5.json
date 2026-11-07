@@ -1,0 +1,94 @@
+{
+  "id": "khazina-5",
+  "osmId": "way/282045910",
+  "names": {
+    "ru": "Дом на Хазина, 5",
+    "en": "House at 5 Khazina Street",
+    "ka": "სახლი ხაზინის ქუჩაზე, 5",
+    "uk": "Будинок на Хазіна, 5"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Хазина, 5",
+    "en": "5 Khazina Street",
+    "ka": "ხაზინის ქუჩა 5",
+    "uk": "вулиця Хазіна, 5"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом на Хазина, 5 скромно декорирован и асимметричен. Слева нависает балкон, под ним — простая деревянная дверь; первый этаж полностью рустован.",
+    "en": "The two-storey house at 5 Khazina Street is modestly decorated and asymmetrical. A balcony hangs on the left, with a simple wooden door below; the ground floor is fully rusticated.",
+    "ka": "ორსართულიანი სახლი ხაზინის ქუჩაზე, 5, მწირადაა შემკული და ასიმეტრიულია. მარცხნივ აივანია შეკიდული, მის ქვეშ მარტივი ხის კარი; პირველი სართული მთლიანად რუსტირებულია.",
+    "uk": "Двоповерховий будинок на Хазіна, 5, скромно декорований і асиметричний. Ліворуч нависає балкон, під ним проста дерев’яні двері; перший поверх повністю рустований."
+  },
+  "histories": {
+    "ru": "К дому примыкают поздние пристройки, одна из них — из старого материала с неоштукатуренными стенами. Фасад со стороны Собчак восстановили после повреждений.",
+    "en": "Later extensions adjoin the house, one of them built of old material with unplastered walls. The façade on the Sobchak side was restored after damage.",
+    "ka": "სახლს გვიანდელი მიშენებები ებჯინება, ერთ-ერთი ძველი მასალითაა ნაგები, შეულესავი კედლებით. სობჩაკის მხრიდან ფასადი დაზიანების შემდეგ აღადგინეს.",
+    "uk": "До будинку прилягають пізні прибудови, одна з них зі старого матеріалу з непоштукатуреними стінами. Фасад з боку Собчак відновили після пошкоджень."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.8022961,
+    41.6983705
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.802337,
+          41.698501
+        ],
+        [
+          44.802067,
+          41.698356
+        ],
+        [
+          44.802098,
+          41.698323
+        ],
+        [
+          44.802066,
+          41.698306
+        ],
+        [
+          44.802172,
+          41.698195
+        ],
+        [
+          44.802301,
+          41.698264
+        ],
+        [
+          44.802283,
+          41.698282
+        ],
+        [
+          44.802458,
+          41.698376
+        ],
+        [
+          44.802337,
+          41.698501
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/282045910).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/282045910).",
+    "ka": "OpenStreetMap-ის კონტური (way/282045910).",
+    "uk": "Контур OpenStreetMap (way/282045910)."
+  },
+  "photos": [
+    "2591f50572bd2e8d08b6da745978b6ba84430a6964401d98c0cbfff1d5ab0357"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/257"
+}

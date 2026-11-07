@@ -1,0 +1,94 @@
+{
+  "id": "agmashenebeli-72",
+  "osmId": "way/1246282538",
+  "names": {
+    "ru": "Дом на Агмашенебели, 72",
+    "en": "House at 72 Agmashenebeli Avenue",
+    "ka": "სახლი აღმაშენებლის გამზირზე, 72",
+    "uk": "Будинок на Агмашенебелі, 72"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 72 / улица Додо Абашидзе",
+    "en": "72 Davit Agmashenebeli Avenue / Dodo Abashidze Street",
+    "ka": "დავით აღმაშენებლის გამზირი 72 / დოდო აბაშიძის ქუჩა",
+    "uk": "проспект Давида Агмашенебелі, 72 / вулиця Додо Абашідзе"
+  },
+  "descriptions": {
+    "ru": "Дом на углу Агмашенебели, 72 и Абашидзе стоит на пересечении двух улиц. Главный фасад в духе классицизма симметричен, с рустованным первым этажом и женской головой над входом.",
+    "en": "The house on the corner of 72 Agmashenebeli Avenue and Abashidze Street stands at a crossroads. Its symmetrical classical main façade has a rusticated ground floor and a woman’s head above the entrance.",
+    "ka": "სახლი აღმაშენებლის გამზირის 72-ისა და აბაშიძის ქუჩის კუთხეში ორი ქუჩის გადაკვეთაზე დგას. კლასიციზმის სულისკვეთებით შექმნილი მთავარი ფასადი სიმეტრიულია, რუსტირებული პირველი სართულითა და შესასვლელის ზემოთ ქალის თავით.",
+    "uk": "Будинок на розі Агмашенебелі, 72 і Абашідзе, стоїть на перехресті двох вулиць. Симетричний головний фасад у дусі класицизму має рустований перший поверх і жіночу голову над входом."
+  },
+  "histories": {
+    "ru": "Со стороны Абашидзе фасад почти лишён декора и сохранил простые прямоугольные окна. Дом двухэтажный, с торговыми помещениями на первом этаже.",
+    "en": "The Abashidze side is almost undecorated and retains simple rectangular windows. The house is two storeys tall, with shops on the ground floor.",
+    "ka": "აბაშიძის მხრიდან ფასადი თითქმის მოურთავია და მარტივი სწორკუთხა ფანჯრები შემორჩა. სახლი ორსართულიანია, პირველ სართულზე სავაჭრო ობიექტებით.",
+    "uk": "З боку Абашідзе фасад майже позбавлений декору й зберіг прості прямокутні вікна. Будинок двоповерховий, із крамницями на першому поверсі."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-early-20th-century",
+  "styleIds": [
+    "classicism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7954574,
+    41.7073775
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.795296,
+          41.707428
+        ],
+        [
+          44.795378,
+          41.707462
+        ],
+        [
+          44.795393,
+          41.707441
+        ],
+        [
+          44.795786,
+          41.7076
+        ],
+        [
+          44.795832,
+          41.707537
+        ],
+        [
+          44.795702,
+          41.707484
+        ],
+        [
+          44.795714,
+          41.707467
+        ],
+        [
+          44.795369,
+          41.707327
+        ],
+        [
+          44.795296,
+          41.707428
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1246282538).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1246282538).",
+    "ka": "OpenStreetMap-ის კონტური (way/1246282538).",
+    "uk": "Контур OpenStreetMap (way/1246282538)."
+  },
+  "photos": [
+    "d7ce4225c9d98784d6f9e19b3df49869be4b80b5d9f5fcaa6e64d3ee7792ad72"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/225"
+}

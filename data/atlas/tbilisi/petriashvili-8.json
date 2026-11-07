@@ -1,0 +1,98 @@
+{
+  "id": "petriashvili-8",
+  "osmId": "way/284568387",
+  "names": {
+    "ru": "Дом на Петриашвили, 8",
+    "en": "House at 8 Petriashvili Street",
+    "ka": "სახლი პეტრიაშვილის ქუჩაზე, 8",
+    "uk": "Будинок на Петріашвілі, 8"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Васила Петриашвили, 8",
+    "en": "8 Vasil Petriashvili Street",
+    "ka": "ვასილ პეტრიაშვილის ქუჩა 8",
+    "uk": "вулиця Василя Петріашвілі, 8"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом на Петриашвили, 8 начала XX века следует эстетике модерна с влиянием ар-деко. Фасад с ризалитами и равномерным ритмом окон выглядит сдержанно и монументально.",
+    "en": "The three-storey house at 8 Petriashvili Street, from the early 20th century, follows Art Nouveau with an Art Deco influence. Its façade with risalits and an even window rhythm looks restrained and monumental.",
+    "ka": "სამსართულიანი სახლი პეტრიაშვილის ქუჩაზე, 8, XX საუკუნის დასაწყისისაა და მოდერნის ესთეტიკას მიჰყვება არტ-დეკოს გავლენით. რიზალიტებიანი და ფანჯრების თანაბარი რიტმის მქონე ფასადი თავშეკავებული და მონუმენტურია.",
+    "uk": "Триповерховий будинок на Петріашвілі, 8, початку XX століття, наслідує естетику модерну з впливом ар-деко. Фасад із ризалітами й рівним ритмом вікон виглядає стримано та монументально."
+  },
+  "histories": {
+    "ru": "Гирлянды, связанные в корону, — характерный мотив ар-деко. Дом формирует художественный облик улицы.",
+    "en": "Garlands tied into a crown are a characteristic Art Deco motif. The house shapes the street’s artistic appearance.",
+    "ka": "გვირგვინად დაკავშირებული გირლანდები არტ-დეკოს დამახასიათებელი მოტივია. სახლი ქუჩის მხატვრულ იერსახეს ქმნის.",
+    "uk": "Гірлянди, зав’язані в корону, — характерний мотив ар-деко. Будинок формує мистецький вигляд вулиці."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "early-20th-century",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7810087,
+    41.7078752
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.781253,
+          41.70788
+        ],
+        [
+          44.781225,
+          41.707835
+        ],
+        [
+          44.781136,
+          41.707866
+        ],
+        [
+          44.781083,
+          41.707783
+        ],
+        [
+          44.781176,
+          41.70775
+        ],
+        [
+          44.781135,
+          41.707683
+        ],
+        [
+          44.781113,
+          41.707693
+        ],
+        [
+          44.78088,
+          41.707782
+        ],
+        [
+          44.781001,
+          41.707969
+        ],
+        [
+          44.781253,
+          41.70788
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/284568387).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/284568387).",
+    "ka": "OpenStreetMap-ის კონტური (way/284568387).",
+    "uk": "Контур OpenStreetMap (way/284568387)."
+  },
+  "photos": [
+    "a35aa70896e6e2901e90a0fd4f87dfc6f5c75720b22d70d4bfc4cfb7297fb98d"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/388"
+}

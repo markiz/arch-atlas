@@ -1,0 +1,104 @@
+{
+  "id": "kostava-25",
+  "osmId": "way/188447536",
+  "names": {
+    "ru": "Резиденция Сараджишвили",
+    "en": "Sarajishvili Residence",
+    "ka": "სარაჯიშვილის რეზიდენცია",
+    "uk": "Резиденція Сараджішвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мераба Костава, 25",
+    "en": "25 Merab Kostava Street",
+    "ka": "მერაბ კოსტავას ქუჩა 25",
+    "uk": "вулиця Мераба Костави, 25"
+  },
+  "descriptions": {
+    "ru": "Резиденция Александра Сараджишвили на Костава, 25 построена в 1905 году Александром Озеровым. Угловой дом с эркером и металлическим шпилем закрепляет угол площади и богато декорирован в духе эклектики.",
+    "en": "Alexander Sarajishvili’s residence at 25 Kostava Street was built in 1905 by Alexander Ozerov. The corner house with a bay window and metal spire anchors the square and is richly decorated in an eclectic manner.",
+    "ka": "ალექსანდრე სარაჯიშვილის რეზიდენცია კოსტავას ქუჩაზე, 25, 1905 წელს ალექსანდრე ოზეროვმა ააშენა. ერკერითა და ლითონის შპილით კუთხის სახლი მოედნის კუთხეს ამაგრებს და ეკლექტიკური დეკორითაა მდიდრად შემკული.",
+    "uk": "Резиденцію Александра Сараджішвілі на Коставі, 25, зведено 1905 року Олександром Озеровим. Кутовий будинок з еркером і металевим шпилем закріплює кут площі та багато декорований в еклектичному дусі."
+  },
+  "histories": {
+    "ru": "Фасады решены в единой стилистике с мотивами модерна, ренессанса и готики. Здание считается архитектурной доминантой квартала.",
+    "en": "Its façades share a single style with motifs from Art Nouveau, Renaissance and Gothic architecture. The building is considered the architectural dominant of the block.",
+    "ka": "ფასადები ერთიან სტილისტიკაშია მოდერნის, რენესანსისა და გოთიკის მოტივებით. შენობა კვარტლის არქიტექტურულ დომინანტად ითვლება.",
+    "uk": "Фасади вирішені в єдиній стилістиці з мотивами модерну, ренесансу й готики. Будівля вважається архітектурною домінантою кварталу."
+  },
+  "minYear": 1905,
+  "maxYear": 1905,
+  "yearLabelId": "year-1905",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [
+    "alexander-ozerov"
+  ],
+  "districtId": "vera",
+  "coordinates": [
+    44.7874245,
+    41.7065389
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.78746,
+          41.706594
+        ],
+        [
+          44.787552,
+          41.706532
+        ],
+        [
+          44.78759,
+          41.706561
+        ],
+        [
+          44.787649,
+          41.706523
+        ],
+        [
+          44.787621,
+          41.706499
+        ],
+        [
+          44.787487,
+          41.706385
+        ],
+        [
+          44.787339,
+          41.706481
+        ],
+        [
+          44.78732,
+          41.706481
+        ],
+        [
+          44.787319,
+          41.706509
+        ],
+        [
+          44.787339,
+          41.706509
+        ],
+        [
+          44.78746,
+          41.706594
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/188447536).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/188447536).",
+    "ka": "OpenStreetMap-ის კონტური (way/188447536).",
+    "uk": "Контур OpenStreetMap (way/188447536)."
+  },
+  "photos": [
+    "019c9b7aa49abe8618fa3e6d0595924a7ba8ead347e34bfcd3979d1da21c28fb"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/371"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "marriott",
+  "osmId": "relation/7108262",
+  "names": {
+    "ru": "Гостиница «Мажестик» (Tbilisi Marriott)",
+    "en": "Majestic Hotel (Tbilisi Marriott)",
+    "ka": "სასტუმრო „მაჯესტიკი“ (Tbilisi Marriott)",
+    "uk": "Готель «Мажестік» (Tbilisi Marriott)"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Шота Руставели, 13",
+    "en": "13 Shota Rustaveli Avenue",
+    "ka": "შოთა რუსთაველის გამზირი 13",
+    "uk": "проспект Шота Руставелі, 13"
+  },
+  "descriptions": {
+    "ru": "Гостиница «Мажестик» на Руставели, 13 строилась в 1910–1915 годах: проект Александра Озерова переработал Габриэль Тер-Микелов. К открытию это был один из главных отелей Тифлиса, сегодня здесь Tbilisi Marriott.",
+    "en": "The Majestic Hotel at 13 Rustaveli Avenue was built in 1910–1915; Alexander Ozerov’s design was revised by Gabriel Ter-Mikelov. It opened as one of Tiflis’s main hotels and now houses the Tbilisi Marriott.",
+    "ka": "სასტუმრო „მაჯესტიკი“ რუსთაველის გამზირზე, 13, 1910–1915 წლებში აშენდა: ალექსანდრე ოზეროვის პროექტი გაბრიელ ტერ-მიქელოვმა გადაამუშავა. გახსნის დროს ის თბილისის ერთ-ერთი მთავარი სასტუმრო იყო, დღეს აქ Tbilisi Marriott-ია.",
+    "uk": "Готель «Мажестік» на Руставелі, 13, зводили у 1910–1915 роках: проєкт Олександра Озерова переробив Габріель Тер-Мікелов. На момент відкриття це був один із головних готелів Тифліса, нині тут Tbilisi Marriott."
+  },
+  "histories": {
+    "ru": "Во время Первой мировой войны в здании работал военный госпиталь; после советизации отель закрыли, и здесь разместился Дворец труда. В 1935 году дом вернули гостинице, с 1939 года она называлась «Тбилиси»; после пожара 1990-х здание восстановили под Marriott.",
+    "en": "During the First World War the building housed a military hospital; after Sovietization the hotel closed and the Palace of Labour moved in. In 1935 it returned to hotel use and from 1939 was called Tbilisi; after a fire in the 1990s it was restored as the Marriott.",
+    "ka": "პირველი მსოფლიო ომის დროს შენობაში სამხედრო ჰოსპიტალი მუშაობდა; საბჭოთა პერიოდში სასტუმრო დაიხურა და აქ შრომის სასახლე განთავსდა. 1935 წელს შენობა კვლავ სასტუმროს დაუბრუნდა, 1939 წლიდან „თბილისი“ ერქვა; 1990-იანების ხანძრის შემდეგ ის Marriott-ად აღადგინეს.",
+    "uk": "Під час Першої світової війни в будівлі працював військовий шпиталь; після совєтизації готель закрили, і тут розмістився Палац праці. 1935 року будинок повернули готельній функції, з 1939-го він називався «Тбілісі»; після пожежі 1990-х його відновили як Marriott."
+  },
+  "minYear": 1910,
+  "maxYear": 1915,
+  "yearLabelId": "period-1910-1915",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [
+    "alexander-ozerov",
+    "gabriel-ter-mikelov"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.798284,
+    41.6991676
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.7979207,
+          41.6991517
+        ],
+        [
+          44.7980805,
+          41.6992631
+        ],
+        [
+          44.798165,
+          41.6993281
+        ],
+        [
+          44.7981408,
+          41.6993475
+        ],
+        [
+          44.7983529,
+          41.6994779
+        ],
+        [
+          44.7985433,
+          41.6993111
+        ],
+        [
+          44.7985208,
+          41.6993
+        ],
+        [
+          44.7986205,
+          41.6992038
+        ],
+        [
+          44.7985631,
+          41.6991729
+        ],
+        [
+          44.7986716,
+          41.6990607
+        ],
+        [
+          44.7983655,
+          41.6988668
+        ],
+        [
+          44.7983054,
+          41.6988517
+        ],
+        [
+          44.7982387,
+          41.6988659
+        ],
+        [
+          44.798101,
+          41.6990253
+        ],
+        [
+          44.7979207,
+          41.6991517
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation 7108262).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation 7108262).",
+    "ka": "OpenStreetMap-ის კონტური (relation 7108262).",
+    "uk": "Контур OpenStreetMap (relation 7108262)."
+  },
+  "photos": [
+    "e05a3b0d10ca5ae32dc971b21c9a5b69456c1a4da94945c6a077e9e6829a224b",
+    "f5315f3eb295d974f108f73ca4984d0f42a1ec4cf88b8bf6e4bf2e1354495800"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/323",
+  "googlePlaceId": "ChIJQXOYvOcMREAROJ4pWq6e2RE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Tbilisi%20Marriott%2C%2013%20Shota%20Rustaveli%20Ave%2C%20Tbilisi&query_place_id=ChIJQXOYvOcMREAROJ4pWq6e2RE"
+}

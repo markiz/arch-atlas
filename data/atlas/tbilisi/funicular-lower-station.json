@@ -1,0 +1,120 @@
+{
+  "id": "funicular-lower-station",
+  "osmId": "way/1216647745",
+  "names": {
+    "ru": "Нижняя станция Тбилисского фуникулёра",
+    "en": "Lower Station of the Tbilisi Funicular",
+    "ka": "თბილისის ფუნიკულიორის ქვედა სადგური",
+    "uk": "Нижня станція Тбіліського фунікулера"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Даниэла Чонкадзе, 22",
+    "en": "22 Daniel Chonkadze Street",
+    "ka": "დანიელ ჭონქაძის ქუჩა 22",
+    "uk": "вулиця Даніела Чонкадзе, 22"
+  },
+  "descriptions": {
+    "ru": "Нижняя станция фуникулёра на Чонкадзе, 22 — современное здание 1968–1969 годов, заменившее старую станцию 1905 года. Отсюда начинается подъём на Мтацминду: 501 м пути, уклон 28–33° и перепад высот 267 м.",
+    "en": "The lower funicular station at 22 Chonkadze Street is a modern building of 1968–1969 that replaced the original 1905 station. The line climbs to Mtatsminda over 501 m, with a 28–33° gradient and a 267 m height difference.",
+    "ka": "ფუნიკულიორის ქვედა სადგური ჭონქაძის ქუჩაზე, 22, 1968–1969 წლების თანამედროვე შენობაა, რომელმაც 1905 წლის ძველი სადგური შეცვალა. აქედან იწყება ასვლა მთაწმინდაზე: 501 მ გზა, 28–33° დახრილობა და 267 მ სიმაღლეთა სხვაობა.",
+    "uk": "Нижня станція фунікулера на Чонкадзе, 22 — сучасна будівля 1968–1969 років, що замінила стару станцію 1905 року. Звідси починається підйом на Мтацмінду: 501 м колії, нахил 28–33° і перепад висот 267 м."
+  },
+  "histories": {
+    "ru": "Фуникулёр открыли 27 марта 1905 года; проект дороги готовил французский инженер А. Бланш, архитектурную часть — Александр Шимкевич. В 1968–1969 годах старую нижнюю станцию заменили новым зданием, а вагоны и подходы к линии реконструировали.",
+    "en": "The funicular opened on 27 March 1905; the route was designed by the French engineer A. Blanche and the architectural part by Alexander Shimkevich. In 1968–1969 the old lower station was replaced by a new building, and the cars and approaches were rebuilt.",
+    "ka": "ფუნიკულიორი 1905 წლის 27 მარტს გაიხსნა; გზის პროექტი ფრანგმა ინჟინერმა ა. ბლანშმა, არქიტექტურული ნაწილი ალექსანდრე შიმკევიჩმა მოამზადა. 1968–1969 წლებში ძველი ქვედა სადგური ახალი შენობით შეცვალეს, ვაგონები და მისადგომები კი გადააკეთეს.",
+    "uk": "Фунікулер відкрили 27 березня 1905 року; проєкт колії підготував французький інженер А. Бланш, архітектурну частину — Олександр Шимкевич. У 1968–1969 роках стару нижню станцію замінили новою будівлею, а вагони й підходи перебудували."
+  },
+  "minYear": 1968,
+  "maxYear": 1969,
+  "yearLabelId": "period-1968-1969",
+  "styleIds": [
+    "soviet-modernism"
+  ],
+  "architectIds": [],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.7918488,
+    41.6952453
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.791882,
+          41.695236
+        ],
+        [
+          44.791924,
+          41.695239
+        ],
+        [
+          44.791952,
+          41.695241
+        ],
+        [
+          44.791927,
+          41.695391
+        ],
+        [
+          44.79191,
+          41.695389
+        ],
+        [
+          44.791894,
+          41.695464
+        ],
+        [
+          44.791956,
+          41.69547
+        ],
+        [
+          44.791947,
+          41.695513
+        ],
+        [
+          44.791816,
+          41.695495
+        ],
+        [
+          44.791842,
+          41.695381
+        ],
+        [
+          44.791714,
+          41.695358
+        ],
+        [
+          44.791713,
+          41.695347
+        ],
+        [
+          44.791703,
+          41.695345
+        ],
+        [
+          44.791722,
+          41.695238
+        ],
+        [
+          44.791882,
+          41.695236
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1216647745), нижняя станция.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1216647745), lower station.",
+    "ka": "OpenStreetMap-ის კონტური (way/1216647745), ქვედა სადგური.",
+    "uk": "Контур OpenStreetMap (way/1216647745), нижня станція."
+  },
+  "photos": [
+    "30c353ccfc6a0d79146447410745f11210cac3986b82458ba910bb350435a350"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/348",
+  "googlePlaceId": "ChIJBdgnhOkMREARctIRBbp7PHc",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Tbilisi%20Funicular%20%28Lower%20Station%29%2C%2022%20Daniel%20Chonkadze%20St%2C%20Tbilisi&query_place_id=ChIJBdgnhOkMREARctIRBbp7PHc"
+}

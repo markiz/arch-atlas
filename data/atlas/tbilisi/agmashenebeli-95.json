@@ -1,0 +1,86 @@
+{
+  "id": "agmashenebeli-95",
+  "osmId": "way/246754368",
+  "names": {
+    "ru": "Дом на Агмашенебели, 95",
+    "en": "House at 95 Agmashenebeli Avenue",
+    "ka": "სახლი აღმაშენებლის გამზირზე, 95",
+    "uk": "Будинок на Агмашенебелі, 95"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 95",
+    "en": "95 Davit Agmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 95",
+    "uk": "проспект Давида Агмашенебелі, 95"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом на Агмашенебели, 95 датируется 1904 годом. Его главный фасад богато декорирован в стиле модерн: растительные мотивы, пилястры с маскаронами и асимметричный эркер.",
+    "en": "The two-storey house at 95 Agmashenebeli Avenue dates from 1904. Its main façade is richly decorated in Art Nouveau: plant motifs, pilasters with mascarons and an asymmetrical bay window.",
+    "ka": "ორსართულიანი სახლი აღმაშენებლის გამზირზე, 95, 1904 წლით თარიღდება. მთავარი ფასადი მოდერნის სტილშია მდიდრად შემკული: მცენარეული მოტივები, მასკარონებიანი პილასტრები და ასიმეტრიული ერკერი.",
+    "uk": "Двоповерховий будинок на Агмашенебелі, 95, датується 1904 роком. Його головний фасад багато декорований у стилі модерн: рослинні мотиви, пілястри з маскаронами й асиметричний еркер."
+  },
+  "histories": {
+    "ru": "Пластический декор сосредоточен вокруг окон и дверей второго этажа. Металлический ажурный балкон справа дополняет композицию.",
+    "en": "The sculptural decoration is concentrated around the second-floor windows and doors. An openwork metal balcony on the right completes the composition.",
+    "ka": "პლასტიკური დეკორი მეორე სართულის ფანჯრებისა და კარების ირგვლივაა თავმოყრილი. მარჯვნივ მდებარე ლითონის აჟურული აივანი კომპოზიციას ავსებს.",
+    "uk": "Пластичний декор зосереджений навколо вікон і дверей другого поверху. Металевий ажурний балкон праворуч доповнює композицію."
+  },
+  "minYear": 1904,
+  "maxYear": 1904,
+  "yearLabelId": "year-1904",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7967424,
+    41.7107387
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.796719,
+          41.710561
+        ],
+        [
+          44.796624,
+          41.710688
+        ],
+        [
+          44.796599,
+          41.710722
+        ],
+        [
+          44.796775,
+          41.710795
+        ],
+        [
+          44.796796,
+          41.710767
+        ],
+        [
+          44.796895,
+          41.710635
+        ],
+        [
+          44.796719,
+          41.710561
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/246754368).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/246754368).",
+    "ka": "OpenStreetMap-ის კონტური (way/246754368).",
+    "uk": "Контур OpenStreetMap (way/246754368)."
+  },
+  "photos": [
+    "c0504568e3b567d96e72341abcc6d65b1d63843cabc57ee4c1a7d573431ed978"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/305"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "melikishvili-9",
+  "osmId": "way/279588593",
+  "names": {
+    "ru": "Угловой дом на Меликишвили, 9",
+    "en": "Corner House at 9 Melikishvili Avenue",
+    "ka": "კუთხის სახლი მელიქიშვილის გამზირზე, 9",
+    "uk": "Кутовий будинок на Мелікішвілі, 9"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Петре Меликишвили, 9 / улица Шалвы Гамбашидзе, 12",
+    "en": "9 Petre Melikishvili Avenue / 12 Shalva Gambashidze Street",
+    "ka": "პეტრე მელიქიშვილის გამზირი 9 / შალვა გამბაშიძის ქუჩა 12",
+    "uk": "проспект Петре Мелікішвілі, 9 / вулиця Шалви Гамбашідзе, 12"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом на углу Меликишвили, 9 и Гамбашидзе, 12 построен в конце XIX века. Его фасады богато декорированы в духе ренессансно-барочной эклектики.",
+    "en": "The three-storey house on the corner of 9 Melikishvili Avenue and 12 Gambashidze Street was built at the end of the 19th century. Its façades are richly decorated in Renaissance-Baroque eclecticism.",
+    "ka": "სამსართულიანი სახლი მელიქიშვილის გამზირის 9-ისა და გამბაშიძის ქუჩის 12-ის კუთხეში XIX საუკუნის ბოლოს აშენდა. ფასადები რენესანსულ-ბაროკული ეკლექტიკის სულისკვეთებითაა მდიდრად შემკული.",
+    "uk": "Триповерховий будинок на розі Мелікішвілі, 9 і Гамбашідзе, 12, зведено наприкінці XIX століття. Фасади багато декоровані в дусі ренесансно-барокової еклектики."
+  },
+  "histories": {
+    "ru": "Ритм окон, металлические ажурные балконы и руст создают упорядоченную композицию. Дом формирует облик проспекта.",
+    "en": "The window rhythm, openwork metal balconies and rustication create an ordered composition. The house shapes the avenue’s appearance.",
+    "ka": "ფანჯრების რიტმი, ლითონის აჟურული აივნები და რუსტი მოწესრიგებულ კომპოზიციას ქმნის. სახლი გამზირის იერსახეს აყალიბებს.",
+    "uk": "Ритм вікон, металеві ажурні балкони й руст творять упорядковану композицію. Будинок формує вигляд проспекту."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "vera",
+  "coordinates": [
+    44.7835155,
+    41.7079989
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.783427,
+          41.708002
+        ],
+        [
+          44.783778,
+          41.708211
+        ],
+        [
+          44.783882,
+          41.708117
+        ],
+        [
+          44.783821,
+          41.708075
+        ],
+        [
+          44.783756,
+          41.708031
+        ],
+        [
+          44.783615,
+          41.707934
+        ],
+        [
+          44.783594,
+          41.707941
+        ],
+        [
+          44.783529,
+          41.707965
+        ],
+        [
+          44.783427,
+          41.708002
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/279588593).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/279588593).",
+    "ka": "OpenStreetMap-ის კონტური (way/279588593).",
+    "uk": "Контур OpenStreetMap (way/279588593)."
+  },
+  "photos": [
+    "7579a61ff2878390930ddbc1daa3dff611aa034f4848fd8a6fd614ae3bcab639"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/386"
+}

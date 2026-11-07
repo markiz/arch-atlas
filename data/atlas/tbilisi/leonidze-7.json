@@ -1,0 +1,92 @@
+{
+  "id": "leonidze-7",
+  "osmId": "way/294975693",
+  "names": {
+    "ru": "Дом на Леонидзе, 7",
+    "en": "House at 7 Leonidze Street",
+    "ka": "სახლი ლეონიძის ქუჩაზე, 7",
+    "uk": "Будинок на Леонідзе, 7"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Георгия Леонидзе, 7",
+    "en": "7 Giorgi Leonidze Street",
+    "ka": "გიორგი ლეონიძის ქუჩა 7",
+    "uk": "вулиця Георгія Леонідзе, 7"
+  },
+  "descriptions": {
+    "ru": "Дом на Леонидзе, 7 принадлежал Мариам, матери царевича Ираклия. Здание 1863 года по проекту Альберта Зальцмана сложено из старого грузинского кирпича.",
+    "en": "The house at 7 Leonidze Street belonged to Mariam, mother of Prince Erekle. Built in 1863 to a design by Albert Salzmann, it is made of old Georgian brick.",
+    "ka": "სახლი ლეონიძის ქუჩაზე, 7, მარიამს, უფლისწულ ირაკლის დედას ეკუთვნოდა. 1863 წელს ალბერტ ზალცმანის პროექტით აშენებული შენობა ძველი ქართული აგურითაა ნაგები.",
+    "uk": "Будинок на Леонідзе, 7, належав Маріам, матері царевича Іраклія. Зведений 1863 року за проєктом Альберта Зальцмана, він складений зі старої грузинської цегли."
+  },
+  "histories": {
+    "ru": "Третий этаж надстроили позже; фасад с арочными окнами и коринфскими капителями несёт черты эклектики. Дом хорошо читается со всех сторон перекрёстка.",
+    "en": "The third floor was added later; the façade with arched windows and Corinthian capitals shows eclectic features. The house is clearly visible from every side of the intersection.",
+    "ka": "მესამე სართული მოგვიანებით დაემატა; თაღოვანი ფანჯრებითა და კორინთული კაპიტელებით ფასადი ეკლექტიკის ნიშნებს ატარებს. სახლი გადაკვეთის ყველა მხრიდან კარგად იკითხება.",
+    "uk": "Третій поверх надбудували пізніше; фасад з арковими вікнами й коринфськими капітелями має риси еклектики. Будинок добре читається з усіх боків перехрестя."
+  },
+  "minYear": 1863,
+  "maxYear": 1863,
+  "yearLabelId": "year-1863",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [
+    "albert-salzmann"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.7991158,
+    41.6926387
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.798887,
+          41.692721
+        ],
+        [
+          44.798964,
+          41.692743
+        ],
+        [
+          44.798982,
+          41.692709
+        ],
+        [
+          44.799256,
+          41.692792
+        ],
+        [
+          44.799358,
+          41.6926
+        ],
+        [
+          44.799015,
+          41.692499
+        ],
+        [
+          44.799003,
+          41.692495
+        ],
+        [
+          44.798887,
+          41.692721
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/294975693).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/294975693).",
+    "ka": "OpenStreetMap-ის კონტური (way/294975693).",
+    "uk": "Контур OpenStreetMap (way/294975693)."
+  },
+  "photos": [
+    "99fdff5eb86e561d0b23bc965d6cc8e0dcde84bb759ed06cc8adb6940e078f70"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/331"
+}

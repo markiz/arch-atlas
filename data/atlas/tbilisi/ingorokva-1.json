@@ -1,0 +1,106 @@
+{
+  "id": "ingorokva-1",
+  "osmId": "way/190037405",
+  "names": {
+    "ru": "Дом на Ингороква, 1",
+    "en": "House at 1 Ingorokva Street",
+    "ka": "სახლი ინგოროყვას ქუჩაზე, 1",
+    "uk": "Будинок на Інгорокві, 1"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Павле Ингороква, 1",
+    "en": "1 Pavle Ingorokva Street",
+    "ka": "პავლე ინგოროყვას ქუჩა 1",
+    "uk": "вулиця Павле Інгорокви, 1"
+  },
+  "descriptions": {
+    "ru": "Крупный трёхэтажный дом на углу Ингороква и Леонидзе. Фасад членится пилястрами с коринфскими капителями, а третий этаж, вероятно, надстроен позже.",
+    "en": "A large three-storey house on the corner of Ingorokva and Leonidze streets. Its façade is divided by pilasters with Corinthian capitals, and the third floor was probably added later.",
+    "ka": "მსხვილი სამსართულიანი სახლი ინგოროყვასა და ლეონიძის ქუჩების კუთხეში. ფასადი კორინთული კაპიტელებით დასრულებული პილასტრებით იყოფა, მესამე სართული კი, სავარაუდოდ, მოგვიანებით დაემატა.",
+    "uk": "Великий триповерховий будинок на розі Інгорокви й Леонідзе. Фасад членують пілястри з коринфськими капітелями, а третій поверх, імовірно, надбудували пізніше."
+  },
+  "histories": {
+    "ru": "Со стороны Ингороква первый этаж сильно перестроен, а дворовые балконы утрачены. Дом остаётся важным элементом застройки перекрёстка.",
+    "en": "On the Ingorokva side the ground floor was heavily rebuilt and the courtyard balconies are lost. The house remains an important element of the crossroads.",
+    "ka": "ინგოროყვას მხრიდან პირველი სართული ძლიერადაა გადაკეთებული, ეზოს აივნები კი დაკარგულია. სახლი გადაკვეთის განაშენიანების მნიშვნელოვან ელემენტად რჩება.",
+    "uk": "З боку Інгорокви перший поверх сильно перебудували, а дворові балкони втрачено. Будинок залишається важливим елементом забудови перехрестя."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-early-20th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.7986036,
+    41.6925093
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.798559,
+          41.69238
+        ],
+        [
+          44.798862,
+          41.692452
+        ],
+        [
+          44.798709,
+          41.692781
+        ],
+        [
+          44.7987,
+          41.692802
+        ],
+        [
+          44.798634,
+          41.692777
+        ],
+        [
+          44.798675,
+          41.692703
+        ],
+        [
+          44.798633,
+          41.692686
+        ],
+        [
+          44.798659,
+          41.692633
+        ],
+        [
+          44.798699,
+          41.692645
+        ],
+        [
+          44.798734,
+          41.692584
+        ],
+        [
+          44.798472,
+          41.692512
+        ],
+        [
+          44.798559,
+          41.69238
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/190037405); проверить, что это дом 1, а не соседний по Леонидзе.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/190037405); verify it is house 1 and not the neighbour on Leonidze Street.",
+    "ka": "OpenStreetMap-ის კონტური (way/190037405); შეამოწმეთ, რომ ეს სახლი 1-ია და არა ლეონიძის ქუჩის მეზობელი.",
+    "uk": "Контур OpenStreetMap (way/190037405); перевірити, що це будинок 1, а не сусідній на Леонідзе."
+  },
+  "photos": [
+    "b03b4140dd47c91eb4fd23bea94ab62e3ae8a2da65c94d27021e54994ece9f0e"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/224"
+}

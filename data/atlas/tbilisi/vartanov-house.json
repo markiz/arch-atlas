@@ -1,0 +1,91 @@
+{
+  "id": "vartanov-house",
+  "osmId": "way/1225299282",
+  "names": {
+    "ru": "Дом Вартанова",
+    "en": "Vartanov House",
+    "ka": "ვართანოვის სახლი",
+    "uk": "Будинок Вартанова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 28",
+    "en": "28 Davit Agmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 28",
+    "uk": "проспект Давида Агмашенебелі, 28"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом на Агмашенебели, 28 — одно из старейших зданий улицы, вероятно второй половины XIX века. Он принадлежал Григору Вартанову, чья семья занималась окраской тканей.",
+    "en": "The two-storey house at 28 Agmashenebeli Avenue is one of the street’s oldest buildings, probably from the second half of the 19th century. It belonged to Grigor Vartanov, whose family worked in textile dyeing.",
+    "ka": "ორსართულიანი სახლი აღმაშენებლის გამზირზე, 28, ქუჩის ერთ-ერთი უძველესი შენობაა, სავარაუდოდ XIX საუკუნის მეორე ნახევრიდან. ის გრიგორ ვართანოვს ეკუთვნოდა, რომლის ოჯახიც ქსოვილების შეღებვას ეწეოდა.",
+    "uk": "Двоповерховий будинок на Агмашенебелі, 28 — одна з найдавніших споруд вулиці, ймовірно другої половини XIX століття. Він належав Григору Вартанову, родина якого займалася фарбуванням тканин."
+  },
+  "histories": {
+    "ru": "Под полом первого этажа нашли шахматную мозаику, а на фасаде долго сохранялся номер красильной мастерской. Второй этаж был жилым, с открытым деревянным балконом на пяти дорических колоннах.",
+    "en": "A chessboard mosaic was found under the ground-floor floor, and the number of the dyeing workshop long remained on the façade. The upper floor was residential, with an open wooden balcony on five Doric columns.",
+    "ka": "პირველი სართულის იატაკის ქვეშ ჭადრაკისებრი მოზაიკა აღმოაჩინეს, ფასადზე კი დიდხანს შენარჩუნდა საღებავი სახელოსნოს ნომერი. მეორე სართული საცხოვრებელი იყო, ხუთ დორიულ სვეტზე დაყრდნობილი ღია ხის აივნით.",
+    "uk": "Під підлогою першого поверху знайшли шахову мозаїку, а на фасаді довго зберігався номер фарбувальної майстерні. Другий поверх був житловим, з відкритим дерев’яним балконом на п’яти дорійських колонах."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "second-half-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.8021298,
+    41.7041802
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.802026,
+          41.704177
+        ],
+        [
+          44.802096,
+          41.704231
+        ],
+        [
+          44.802188,
+          41.704165
+        ],
+        [
+          44.802025,
+          41.704066
+        ],
+        [
+          44.801973,
+          41.704035
+        ],
+        [
+          44.801913,
+          41.704094
+        ],
+        [
+          44.802054,
+          41.704157
+        ],
+        [
+          44.802026,
+          41.704177
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1225299282).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1225299282).",
+    "ka": "OpenStreetMap-ის კონტური (way/1225299282).",
+    "uk": "Контур OpenStreetMap (way/1225299282)."
+  },
+  "photos": [
+    "457b5a59064850ca6db4f62912ded0ba5b21076c96bac5e030aaf560a5ff8cbc",
+    "1e5d1fbcdf8db9439b220385a689b36a42a9033a2ced65c9ae7d0c314b572ee2"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/294"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "stern-house",
+  "osmId": "way/282471267",
+  "names": {
+    "ru": "Дом Штерна",
+    "en": "Stern House",
+    "ka": "შტერნის სახლი",
+    "uk": "Будинок Штерна"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Джансуга Кахидзе, 1 / проспект Давида Агмашенебели, 128",
+    "en": "1 Jansug Kakhidze Street / 128 Davit Agmashenebeli Avenue",
+    "ka": "ჯანსუღ კახიძის ქუჩა 1 / დავით აღმაშენებლის გამზირი 128",
+    "uk": "вулиця Джансуга Кахідзе, 1 / проспект Давида Агмашенебелі, 128"
+  },
+  "descriptions": {
+    "ru": "Дом на углу Агмашенебели, 128 и Кахидзе, 1 построен в 1893 году немецким архитектором В. Штерном как собственная резиденция. Фасад соединяет исламские и восточные мотивы.",
+    "en": "The house on the corner of 128 Agmashenebeli Avenue and 1 Kakhidze Street was built in 1893 by the German architect V. Stern as his own residence. Its façade combines Islamic and Eastern motifs.",
+    "ka": "სახლი აღმაშენებლის გამზირის 128-ისა და კახიძის ქუჩის 1-ის კუთხეში 1893 წელს გერმანელმა არქიტექტორმა ვ. შტერნმა საკუთარ რეზიდენციად ააშენა. ფასადი ისლამურ და აღმოსავლურ მოტივებს აერთიანებს.",
+    "uk": "Будинок на розі Агмашенебелі, 128 і Кахідзе, 1, зведено 1893 року німецьким архітектором В. Штерном як власну резиденцію. Фасад поєднує ісламські та східні мотиви."
+  },
+  "histories": {
+    "ru": "Здание считается одним из ярких примеров тбилисской архитектуры конца XIX века. Его декор и угловое положение до сих пор формируют перекрёсток.",
+    "en": "The building is considered one of the striking examples of late 19th-century Tbilisi architecture. Its decoration and corner position still define the intersection.",
+    "ka": "შენობა XIX საუკუნის ბოლოს თბილისური არქიტექტურის ერთ-ერთ ნათელ ნიმუშად ითვლება. მისი დეკორი და კუთხის პოზიცია დღემდე ქმნის გადაკვეთის იერსახეს.",
+    "uk": "Будівля вважається одним із яскравих прикладів тбіліської архітектури кінця XIX століття. Її декор і кутове положення досі формують перехрестя."
+  },
+  "minYear": 1893,
+  "maxYear": 1893,
+  "yearLabelId": "year-1893",
+  "styleIds": [
+    "islamic-architecture"
+  ],
+  "architectIds": [
+    "v-stern"
+  ],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7945754,
+    41.7126738
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.794452,
+          41.712458
+        ],
+        [
+          44.794381,
+          41.712548
+        ],
+        [
+          44.79461,
+          41.712639
+        ],
+        [
+          44.794579,
+          41.712677
+        ],
+        [
+          44.794609,
+          41.71269
+        ],
+        [
+          44.7948,
+          41.712767
+        ],
+        [
+          44.794888,
+          41.71266
+        ],
+        [
+          44.794881,
+          41.712644
+        ],
+        [
+          44.794452,
+          41.712458
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/282471267).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/282471267).",
+    "ka": "OpenStreetMap-ის კონტური (way/282471267).",
+    "uk": "Контур OpenStreetMap (way/282471267)."
+  },
+  "photos": [
+    "976129302439455df8c8f772edbc0847f406781b03a9637aa82ef0b12f0b15ee"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/382"
+}

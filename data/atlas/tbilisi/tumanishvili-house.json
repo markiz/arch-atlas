@@ -1,0 +1,78 @@
+{
+  "id": "tumanishvili-house",
+  "osmId": "way/337848919",
+  "names": {
+    "ru": "Дом Туманишвили",
+    "en": "Tumanishvili House",
+    "ka": "თუმანიშვილის სახლი",
+    "uk": "Будинок Туманішвілі"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Павле Ингороква, 2",
+    "en": "2 Pavle Ingorokva Street",
+    "ka": "პავლე ინგოროყვას ქუჩა 2",
+    "uk": "вулиця Павле Інгорокви, 2"
+  },
+  "descriptions": {
+    "ru": "Дом на Ингороква, 2 принадлежал княгине Нине Туманишвили. Изначально одноэтажный дом с большим двором и деревянным балконом получил нынешний вид в 1930-х годах.",
+    "en": "The house at 2 Ingorokva Street belonged to Princess Nina Tumanishvili. Originally a single-storey house with a large courtyard and wooden balcony, it acquired its present form in the 1930s.",
+    "ka": "სახლი ინგოროყვას ქუჩაზე, 2, თავადის ქალ ნინო თუმანიშვილს ეკუთვნოდა. თავდაპირველად ერთსართულიანი სახლი დიდი ეზოთი და ხის აივნით დღევანდელი სახეს 1930-იან წლებში მიიღო.",
+    "uk": "Будинок на Інгорокві, 2, належав княгині Ніні Туманішвілі. Спочатку одноповерховий будинок із великим двором і дерев’яним балконом набув сучасного вигляду в 1930-х роках."
+  },
+  "histories": {
+    "ru": "При реконструкции родовой дом превратили в многоквартирное здание. Двор и балконы сохранили дух старой Сололаки.",
+    "en": "The reconstruction turned the family house into an apartment building. Its courtyard and balconies retain the spirit of old Sololaki.",
+    "ka": "რეკონსტრუქციისას საგვარეულო სახლი მრავალბინიან შენობად იქცა. ეზომ და აივნებმა ძველი სოლოლაკის სული შეინარჩუნა.",
+    "uk": "Під час реконструкції родинний будинок перетворили на багатоквартирний. Двір і балкони зберегли дух старої Сололакі."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "period-1930s",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "sololaki",
+  "coordinates": [
+    44.798122,
+    41.6924432
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.79801,
+          41.692557
+        ],
+        [
+          44.798221,
+          41.692642
+        ],
+        [
+          44.798445,
+          41.692332
+        ],
+        [
+          44.798245,
+          41.692257
+        ],
+        [
+          44.79801,
+          41.692557
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/337848919); проверить, что контур соответствует дому 2, а не соседнему.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/337848919); verify it corresponds to house 2 and not a neighbour.",
+    "ka": "OpenStreetMap-ის კონტური (way/337848919); შეამოწმეთ, რომ ის სახლ 2-ს შეესაბამება და არა მეზობელს.",
+    "uk": "Контур OpenStreetMap (way/337848919); перевірити, що він відповідає будинку 2, а не сусідньому."
+  },
+  "photos": [
+    "dae155bade2ea988ad4c52703a226a519389d36557d9c40cf4701743cc2d98d5"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/308"
+}

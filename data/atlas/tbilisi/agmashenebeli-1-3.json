@@ -1,0 +1,94 @@
+{
+  "id": "agmashenebeli-1-3",
+  "osmId": "way/1225073816",
+  "names": {
+    "ru": "Угловой дом на Агмашенебели, 1–3",
+    "en": "Corner House at 1–3 Agmashenebeli Avenue",
+    "ka": "კუთხის სახლი აღმაშენებლის გამზირზე, 1–3",
+    "uk": "Кутовий будинок на Агмашенебелі, 1–3"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 1–3 / улица Мосе Гогиберидзе, 2",
+    "en": "1–3 Davit Agmashenebeli Avenue / 2 Mose Gogiberidze Street",
+    "ka": "დავით აღმაშენებლის გამზირი 1–3 / მოსე გოგიბერიძის ქუჩა 2",
+    "uk": "проспект Давида Агмашенебелі, 1–3 / вулиця Мосе Гогіберідзе, 2"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом на углу Агмашенебели, 1–3 и Мосе Гогиберидзе, 2 открывается на площадь. Его европейские фасады с рустом, пилястрами и балюстрадой — пример барочной эклектики.",
+    "en": "The two-storey house on the corner of 1–3 Agmashenebeli Avenue and 2 Mose Gogiberidze Street opens onto the square. Its European façades with rustication, pilasters and a balustrade are an example of Baroque eclecticism.",
+    "ka": "ორსართულიანი სახლი აღმაშენებლის გამზირის 1–3-ისა და მოსე გოგიბერიძის ქუჩის 2-ის კუთხეში მოედანზე გადის. რუსტირებული, პილასტრებიანი და ბალუსტრადიანი ევროპული ფასადები ბაროკოს ეკლექტიკის ნიმუშია.",
+    "uk": "Двоповерховий будинок на розі Агмашенебелі, 1–3 і Мосе Гогіберідзе, 2, виходить на площу. Його європейські фасади з рустом, пілястрами й балюстрадою — приклад барокової еклектики."
+  },
+  "histories": {
+    "ru": "Фасад завершают аттик с острыми фронтонами и маскаронами львов. Дом важен как градостроительный акцент у площади.",
+    "en": "The façade is crowned by an attic with pointed pediments and lion mascarons. The house is an important urban accent by the square.",
+    "ka": "ფასადს აგვირგვინებს ატიკი წვეტიანი ფრონტონებითა და ლომის მასკარონებით. სახლი მოედანთან მნიშვნელოვანი ურბანული აქცენტია.",
+    "uk": "Фасад завершує аттик із гострими фронтонами й маскаронами левів. Будинок є важливим містобудівним акцентом біля площі."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-early-20th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.8047915,
+    41.702997
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.804699,
+          41.703209
+        ],
+        [
+          44.804517,
+          41.703044
+        ],
+        [
+          44.804589,
+          41.703005
+        ],
+        [
+          44.804652,
+          41.70297
+        ],
+        [
+          44.804777,
+          41.702902
+        ],
+        [
+          44.804806,
+          41.702886
+        ],
+        [
+          44.804975,
+          41.703051
+        ],
+        [
+          44.804772,
+          41.703168
+        ],
+        [
+          44.804699,
+          41.703209
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1225073816).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1225073816).",
+    "ka": "OpenStreetMap-ის კონტური (way/1225073816).",
+    "uk": "Контур OpenStreetMap (way/1225073816)."
+  },
+  "photos": [
+    "d50630a6189c7fdb2ab263d556f52234a6a00eec4a4d4e2283a90faba37b9a7f"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/403"
+}

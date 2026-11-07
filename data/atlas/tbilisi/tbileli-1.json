@@ -1,0 +1,94 @@
+{
+  "id": "tbileli-1",
+  "osmId": "way/65344858",
+  "names": {
+    "ru": "Дом на Або Тбилисском, 1",
+    "en": "House at 1 Abo Tbileli Street",
+    "ka": "სახლი აბო თბილელის ქუჩაზე, 1",
+    "uk": "Будинок на Або Тбілелі, 1"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Або Тбилисского, 1",
+    "en": "1 Abo Tbileli Street",
+    "ka": "აბო თბილელის ქუჩა 1",
+    "uk": "вулиця Або Тбілелі, 1"
+  },
+  "descriptions": {
+    "ru": "Дом на Або Тбилисском, 1 занимает большой участок на углу с площадью Гудиашвили. Двухэтажное здание конца XIX века решено в духе барочной эклектики.",
+    "en": "The house at 1 Abo Tbileli Street occupies a large corner plot by Gudiashvili Square. The two-storey late 19th-century building is designed in Baroque eclecticism.",
+    "ka": "სახლი აბო თბილელის ქუჩაზე, 1, გუდიაშვილის მოედნის კუთხეში დიდ ნაკვეთს იკავებს. XIX საუკუნის ბოლოს ორსართულიანი შენობა ბაროკოს ეკლექტიკის სულისკვეთებითაა აგებული.",
+    "uk": "Будинок на Або Тбілелі, 1, займає велику ділянку на розі з площею Гудіашвілі. Двоповерхова споруда кінця XIX століття вирішена в дусі барокової еклектики."
+  },
+  "histories": {
+    "ru": "Пластический декор сосредоточен на втором этаже; угловые ризалиты и металлический балкон подчёркивают симметрию. Со двора сохранились открытые деревянные балконы.",
+    "en": "The sculptural decoration is concentrated on the second floor; corner risalits and a metal balcony emphasise symmetry. Open wooden balconies survive in the courtyard.",
+    "ka": "პლასტიკური დეკორი მეორე სართულზეა თავმოყრილი; კუთხის რიზალიტები და ლითონის აივანი სიმეტრიას უსვამს ხაზს. ეზოში ღია ხის აივნები შემორჩა.",
+    "uk": "Пластичний декор зосереджений на другому поверсі; кутові ризаліти й металевий балкон підкреслюють симетрію. У дворі збереглися відкриті дерев’яні балкони."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "kala",
+  "coordinates": [
+    44.804038,
+    41.6911832
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.804013,
+          41.691227
+        ],
+        [
+          44.804062,
+          41.691224
+        ],
+        [
+          44.80409,
+          41.691137
+        ],
+        [
+          44.804102,
+          41.691091
+        ],
+        [
+          44.804024,
+          41.691069
+        ],
+        [
+          44.80393,
+          41.691043
+        ],
+        [
+          44.803922,
+          41.69106
+        ],
+        [
+          44.803865,
+          41.691181
+        ],
+        [
+          44.804013,
+          41.691227
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/65344858).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/65344858).",
+    "ka": "OpenStreetMap-ის კონტური (way/65344858).",
+    "uk": "Контур OpenStreetMap (way/65344858)."
+  },
+  "photos": [
+    "50901e143a8049a840ff2856a398f31a0df490895d0622544a6ae88ac2753817"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/345"
+}

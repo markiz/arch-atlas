@@ -1,0 +1,102 @@
+{
+  "id": "tsinamdzgvrishvili-33",
+  "osmId": "way/337374156",
+  "names": {
+    "ru": "Дом на Цинамдзгвришвили, 33",
+    "en": "House at 33 Tsinamdzgvrishvili Street",
+    "ka": "სახლი წინამძღვრიშვილის ქუჩაზე, 33",
+    "uk": "Будинок на Цінамдзгврішвілі, 33"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Михаила Цинамдзгвришвили, 33",
+    "en": "33 Mikheil Tsinamdzgvrishvili Street",
+    "ka": "მიხეილ წინამძღვრიშვილის ქუჩა 33",
+    "uk": "вулиця Михайла Цінамдзгврішвілі, 33"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный дом на Цинамдзгвришвили, 33 построен на рубеже XIX–XX веков. Изящный эклектичный фасад с вертикалями и рустом типичен для тбилисского жилого дома.",
+    "en": "The two-storey house at 33 Tsinamdzgvrishvili Street was built at the turn of the 19th–20th centuries. Its graceful eclectic façade with verticals and rustication is typical of Tbilisi housing.",
+    "ka": "ორსართულიანი სახლი წინამძღვრიშვილის ქუჩაზე, 33, XIX–XX საუკუნეების მიჯნაზე აშენდა. დახვეწილი ეკლექტიკური ფასადი ვერტიკალებითა და რუსტით თბილისური საცხოვრებლისთვისაა დამახასიათებელი.",
+    "uk": "Двоповерховий будинок на Цінамдзгврішвілі, 33, зведено на межі XIX–XX століть. Витончений еклектичний фасад із вертикалями й рустом типовий для тбіліського житла."
+  },
+  "histories": {
+    "ru": "Со двора сохранились деревянные резные балконы, идущие по периметру обоих этажей. Дом остаётся частью исторической застройки улицы.",
+    "en": "The courtyard retains carved wooden balconies running around both floors. The house remains part of the street’s historic fabric.",
+    "ka": "ეზოს მხრიდან ორივე სართულის პერიმეტრზე განლაგებული ხის ჩუქურთმიანი აივნები შემორჩა. სახლი ქუჩის ისტორიული განაშენიანების ნაწილად რჩება.",
+    "uk": "З боку двору збереглися різьблені дерев’яні балкони по периметру обох поверхів. Будинок залишається частиною історичної забудови вулиці."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "turn-of-19th-20th",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.8042424,
+    41.7047982
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.804449,
+          41.704624
+        ],
+        [
+          44.804792,
+          41.704772
+        ],
+        [
+          44.804753,
+          41.704837
+        ],
+        [
+          44.804569,
+          41.704766
+        ],
+        [
+          44.804491,
+          41.704863
+        ],
+        [
+          44.804622,
+          41.704922
+        ],
+        [
+          44.80464,
+          41.7049
+        ],
+        [
+          44.8047,
+          41.704927
+        ],
+        [
+          44.804629,
+          41.705016
+        ],
+        [
+          44.804276,
+          41.704857
+        ],
+        [
+          44.804449,
+          41.704624
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/337374156).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/337374156).",
+    "ka": "OpenStreetMap-ის კონტური (way/337374156).",
+    "uk": "Контур OpenStreetMap (way/337374156)."
+  },
+  "photos": [
+    "622097811318b20eee9e6b23caeb80bee53ec4bd92a9e1a19cfca939083c1a9d"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/370"
+}

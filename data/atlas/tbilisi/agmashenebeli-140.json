@@ -1,0 +1,82 @@
+{
+  "id": "agmashenebeli-140",
+  "osmId": "way/1127991549",
+  "names": {
+    "ru": "Дом на Агмашенебели, 140",
+    "en": "House at 140 Agmashenebeli Avenue",
+    "ka": "სახლი აღმაშენებლის გამზირზე, 140",
+    "uk": "Будинок на Агмашенебелі, 140"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 140",
+    "en": "140 Davit Agmashenebeli Avenue",
+    "ka": "დავით აღმაშენებლის გამზირი 140",
+    "uk": "проспект Давида Агмашенебелі, 140"
+  },
+  "descriptions": {
+    "ru": "Дом на Агмашенебели, 140 середины XIX века — одно из старейших зданий проспекта. Его фасад из старого грузинского кирпича покрыт простой штукатуркой, а главный акцент — деревянные балконы.",
+    "en": "The mid-19th-century house at 140 Agmashenebeli Avenue is one of the avenue’s oldest buildings. Its old Georgian brick façade is plainly plastered, and its main accent is the wooden balconies.",
+    "ka": "XIX საუკუნის შუა ხანების სახლი აღმაშენებლის გამზირზე, 140, გამზირის ერთ-ერთი უძველესი შენობაა. ძველი ქართული აგურის ფასადი უბრალო ბათქაშითაა დაფარული, მთავარი აქცენტი კი ხის აივნებია.",
+    "uk": "Будинок на Агмашенебелі, 140, середини XIX століття — одна з найдавніших споруд проспекту. Його фасад зі старої грузинської цегли вкритий простою штукатуркою, а головний акцент — дерев’яні балкони."
+  },
+  "histories": {
+    "ru": "Во время реставрации 2009–2011 годов надстроили третий мансардный этаж, что изменило пропорции дома. Балконы второго этажа при этом сохранили.",
+    "en": "During the 2009–2011 restoration a third mansard floor was added, changing the house’s proportions. The second-floor balconies were retained.",
+    "ka": "2009–2011 წლების რესტავრაციის დროს მესამე მანსარდული სართული დაემატა, რამაც სახლის პროპორციები შეცვალა. მეორე სართულის აივნები შემორჩა.",
+    "uk": "Під час реставрації 2009–2011 років надбудували третій мансардний поверх, що змінило пропорції будинку. Балкони другого поверху зберегли."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "mid-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7938163,
+    41.7140781
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.794003,
+          41.71386
+        ],
+        [
+          44.793885,
+          41.713817
+        ],
+        [
+          44.793825,
+          41.713903
+        ],
+        [
+          44.793771,
+          41.71398
+        ],
+        [
+          44.793891,
+          41.714022
+        ],
+        [
+          44.794003,
+          41.71386
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1127991549).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1127991549).",
+    "ka": "OpenStreetMap-ის კონტური (way/1127991549).",
+    "uk": "Контур OpenStreetMap (way/1127991549)."
+  },
+  "photos": [
+    "63acf3b262ad3fb44eaca7698d9f30298df0d07d85e181854f01cba001e742ff"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/360"
+}

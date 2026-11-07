@@ -1,0 +1,86 @@
+{
+  "id": "tumanyan-23-1",
+  "osmId": "way/549425913",
+  "names": {
+    "ru": "Дом на углу Туманяна и Грибоедова",
+    "en": "House at the Tumanyan and Griboyedov Corner",
+    "ka": "სახლი თუმანიანისა და გრიბოედოვის კუთხეში",
+    "uk": "Будинок на розі Туманяна і Грибоєдова"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Туманяна, 23/1 / Грибоедовский переулок, 5",
+    "en": "23/1 Tumanyan Street / 5 Griboyedov Lane",
+    "ka": "თუმანიანის ქუჩა 23/1 / გრიბოედოვის შესახვევი 5",
+    "uk": "вулиця Туманяна, 23/1 / Грибоєдовський провулок, 5"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный кирпичный дом на углу Туманяна и Грибоедова обращён главным фасадом к Мтквари. Его деревянный резной балкон на дорических колоннах — характерный мотив Абанотубани.",
+    "en": "The two-storey brick house at the Tumanyan and Griboyedov corner faces the Mtkvari with its main façade. Its carved wooden balcony on Doric columns is a characteristic Abanotubani motif.",
+    "ka": "ორსართულიანი აგურის სახლი თუმანიანისა და გრიბოედოვის კუთხეში მთავარი ფასადით მტკვრისკენაა მიმართული. დორიულ სვეტებზე დაყრდნობილი ხის ჩუქურთმიანი აივანი აბანოთუბნის დამახასიათებელი მოტივია.",
+    "uk": "Двоповерховий цегляний будинок на розі Туманяна й Грибоєдова головним фасадом звернений до Мткварі. Його різьблений дерев’яний балкон на дорійських колонах — характерний мотив Абанотубані."
+  },
+  "histories": {
+    "ru": "Дом стоит на одной из старейших площадей города и раскрывается к реке открытой галереей. Такие балконные дома считаются визитной карточкой Тбилиси.",
+    "en": "The house stands on one of the city’s oldest squares and opens to the river with an open gallery. Such balcony houses are considered a hallmark of Tbilisi.",
+    "ka": "სახლი ქალაქის ერთ-ერთ უძველეს მოედანზე დგას და მდინარისკენ ღია გალერეით იშლება. ასეთი აივნიანი სახლები თბილისის ვიზიტურ ბარათად ითვლება.",
+    "uk": "Будинок стоїть на одній із найдавніших площ міста й розкривається до річки відкритою галереєю. Такі балконні будинки вважаються візитівкою Тбілісі."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "kala",
+  "coordinates": [
+    44.8089006,
+    41.6897573
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.808758,
+          41.689749
+        ],
+        [
+          44.808828,
+          41.689808
+        ],
+        [
+          44.80894,
+          41.689714
+        ],
+        [
+          44.808786,
+          41.689586
+        ],
+        [
+          44.808701,
+          41.689642
+        ],
+        [
+          44.808798,
+          41.689723
+        ],
+        [
+          44.808758,
+          41.689749
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/549425913).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/549425913).",
+    "ka": "OpenStreetMap-ის კონტური (way/549425913).",
+    "uk": "Контур OpenStreetMap (way/549425913)."
+  },
+  "photos": [
+    "854582369f722b246a4834c55fc93927d7599674723e304566ecf12402c9fddc"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/256"
+}

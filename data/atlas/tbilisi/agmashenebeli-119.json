@@ -1,0 +1,90 @@
+{
+  "id": "agmashenebeli-119",
+  "osmId": "way/1069051166",
+  "names": {
+    "ru": "Угловой дом на Агмашенебели, 119",
+    "en": "Corner House at 119 Agmashenebeli Avenue",
+    "ka": "კუთხის სახლი აღმაშენებლის გამზირზე, 119",
+    "uk": "Кутовий будинок на Агмашенебелі, 119"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "проспект Давида Агмашенебели, 119 / улица Георгия Товстоногова",
+    "en": "119 Davit Agmashenebeli Avenue / Georgi Tovstonogov Street",
+    "ka": "დავით აღმაშენებლის გამზირი 119 / გიორგი ტოვსტონოგოვის ქუჩა",
+    "uk": "проспект Давида Агмашенебелі, 119 / вулиця Георгія Товстоногова"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом на углу Агмашенебели, 119 и Товстоногова построен на рубеже XIX–XX веков. Европейские фасады сочетают ренессансно-барочную эклектику с кирпичным декором.",
+    "en": "The three-storey house on the corner of 119 Agmashenebeli Avenue and Tovstonogov Street was built at the turn of the 19th–20th centuries. Its European façades combine Renaissance-Baroque eclecticism with brick decoration.",
+    "ka": "სამსართულიანი სახლი აღმაშენებლის გამზირის 119-ისა და ტოვსტონოგოვის ქუჩის კუთხეში XIX–XX საუკუნეების მიჯნაზე აშენდა. ევროპული ფასადები რენესანსულ-ბაროკულ ეკლექტიკას აგურის დეკორთან აერთიანებს.",
+    "uk": "Триповерховий будинок на розі Агмашенебелі, 119 і Товстоногова, зведено на межі XIX–XX століть. Європейські фасади поєднують ренесансно-барокову еклектику з цегляним декором."
+  },
+  "histories": {
+    "ru": "Симметричный главный фасад акцентирован центральным ризалитом с криволинейным фронтоном. В вестибюле сохранилась полихромная керамическая плитка.",
+    "en": "The symmetrical main façade is centred on a risalit with a curved pediment. The lobby retains polychrome ceramic tiles.",
+    "ka": "სიმეტრიულ მთავარ ფასადს ცენტრალური რიზალიტი მრუდხაზოვანი ფრონტონით აქცენტებს. ვესტიბიულში პოლიქრომული კერამიკული ფილები შემორჩა.",
+    "uk": "Симетричний головний фасад акцентовано центральним ризалітом із криволінійним фронтоном. У вестибюлі збереглася поліхромна керамічна плитка."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "turn-of-19th-20th",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "chughureti",
+  "coordinates": [
+    44.7948866,
+    41.7132335
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.794746,
+          41.713255
+        ],
+        [
+          44.794864,
+          41.713085
+        ],
+        [
+          44.79518,
+          41.713222
+        ],
+        [
+          44.795132,
+          41.713287
+        ],
+        [
+          44.795066,
+          41.71326
+        ],
+        [
+          44.79502,
+          41.713242
+        ],
+        [
+          44.794951,
+          41.713338
+        ],
+        [
+          44.794746,
+          41.713255
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1069051166).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1069051166).",
+    "ka": "OpenStreetMap-ის კონტური (way/1069051166).",
+    "uk": "Контур OpenStreetMap (way/1069051166)."
+  },
+  "photos": [
+    "bdf54b99212f9607e3159936b694a30d43469f1a504257dd044de842d538a425"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/309"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "ingorokva-4",
+  "osmId": "way/1265985358",
+  "names": {
+    "ru": "Дом на Ингороква, 4",
+    "en": "House at 4 Ingorokva Street",
+    "ka": "სახლი ინგოროყვას ქუჩაზე, 4",
+    "uk": "Будинок на Інгорокві, 4"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Павле Ингороква, 4",
+    "en": "4 Pavle Ingorokva Street",
+    "ka": "პავლე ინგოროყვას ქუჩა 4",
+    "uk": "вулиця Павле Інгорокви, 4"
+  },
+  "descriptions": {
+    "ru": "Трёхэтажный дом на Ингороква, 4 симметричен по плану и фасаду. Центральные окна объединены аркой, а над ними выступает большой ажурный балкон.",
+    "en": "The three-storey house at 4 Ingorokva Street is symmetrical in plan and façade. Its central windows are united by an arch, with a large openwork balcony above.",
+    "ka": "სამსართულიანი სახლი ინგოროყვას ქუჩაზე, 4, გეგმითაც და ფასადითაც სიმეტრიულია. ცენტრალური ფანჯრები თაღითაა გაერთიანებული, მათ ზემოთ კი დიდი აჟურული აივანია.",
+    "uk": "Триповерховий будинок на Інгорокві, 4, симетричний за планом і фасадом. Центральні вікна об’єднані аркою, а над ними виступає великий ажурний балкон."
+  },
+  "histories": {
+    "ru": "Первый этаж сильно перестроен; со двора сохранились деревянные балконы с резными ограждениями. Дом играет заметную роль в застройке улицы.",
+    "en": "The ground floor was heavily rebuilt; the courtyard retains wooden balconies with carved railings. The house plays a notable role in the street’s fabric.",
+    "ka": "პირველი სართული ძლიერადაა გადაკეთებული; ეზოში ჩუქურთმიანი მოაჯირებით ხის აივნები შემორჩა. სახლი ქუჩის განაშენიანებაში შესამჩნევ როლს თამაშობს.",
+    "uk": "Перший поверх сильно перебудували; у дворі збереглися дерев’яні балкони з різьбленими огорожами. Будинок відіграє помітну роль у забудові вулиці."
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "late-19th-early-20th-century",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "sololaki",
+  "coordinates": [
+    44.7979536,
+    41.6928503
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.797753,
+          41.692856
+        ],
+        [
+          44.797814,
+          41.692766
+        ],
+        [
+          44.798053,
+          41.692859
+        ],
+        [
+          44.797992,
+          41.692947
+        ],
+        [
+          44.797753,
+          41.692856
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1265985358).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1265985358).",
+    "ka": "OpenStreetMap-ის კონტური (way/1265985358).",
+    "uk": "Контур OpenStreetMap (way/1265985358)."
+  },
+  "photos": [
+    "803eee2e82556b3cb24925226cc4e4a79efd229c0f78ef004c75a1505a5502fa"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/227"
+}

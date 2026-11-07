@@ -1,0 +1,82 @@
+{
+  "id": "national-library",
+  "osmId": "relation/1182326",
+  "names": {
+    "ru": "Национальная библиотека парламента Грузии",
+    "en": "National Library of the Parliament of Georgia",
+    "ka": "საქართველოს პარლამენტის ეროვნული ბიბლიოთეკა",
+    "uk": "Національна бібліотека парламенту Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Ладо Гудиашвили, 5",
+    "en": "5 Lado Gudiashvili Street",
+    "ka": "ლადო გუდიაშვილის ქუჩა 5",
+    "uk": "вулиця Ладо Гудіашвілі, 5"
+  },
+  "descriptions": {
+    "ru": "Бывший главный офис Грузинского банка на Гудиашвили, 5 построен в 1913–1916 годах по проекту Анатолия Калгина и Генриха Хриневского. Фасад с национальными мотивами и скульптурой братьев Агладзе сегодня принадлежит Национальной библиотеке парламента.",
+    "en": "The former head office of the Georgian Bank at 5 Gudiashvili Street was built in 1913–1916 to a design by Anatoly Kalgin and Henrik Hrinevsky. Its façade with national motifs and sculpture by the Agladze brothers now belongs to the National Library of Parliament.",
+    "ka": "გუდიაშვილის ქუჩაზე, 5, მდებარე საქართველოს ბანკის ყოფილი მთავარი ოფისი 1913–1916 წლებში ანატოლი კალგინისა და ჰენრიკ ჰრინევსკის პროექტით აშენდა. ეროვნული მოტივებითა და აგლაძე ძმების სკულპტურით გაფორმებული ფასადი დღეს პარლამენტის ეროვნულ ბიბლიოთეკას ეკუთვნის.",
+    "uk": "Колишній головний офіс Грузинського банку на Гудіашвілі, 5, зведено у 1913–1916 роках за проєктом Анатолія Калгіна та Генріха Хріневського. Фасад із національними мотивами та скульптурою братів Агладзе нині належить Національній бібліотеці парламенту."
+  },
+  "histories": {
+    "ru": "В конкурсе 1912 года победил проект Калгина и Хриневского, а строительство завершили в 1916 году. Скульптурное убранство фасадов выполнили братья Агладзе.",
+    "en": "Kalgin and Hrinevsky won the 1912 competition, and construction was completed in 1916. The sculptural decoration of the façades was made by the Agladze brothers.",
+    "ka": "1912 წლის კონკურსში კალგინისა და ჰრინევსკის პროექტმა გაიმარჯვა, მშენებლობა კი 1916 წელს დასრულდა. ფასადების სკულპტურული დეკორი აგლაძე ძმებმა შეასრულეს.",
+    "uk": "У конкурсі 1912 року переміг проєкт Калгіна та Хріневського, а будівництво завершили 1916 року. Скульптурне оздоблення фасадів виконали брати Агладзе."
+  },
+  "minYear": 1913,
+  "maxYear": 1916,
+  "yearLabelId": "period-1913-1916",
+  "styleIds": [
+    "georgian-revival"
+  ],
+  "architectIds": [
+    "anatoly-kalgin",
+    "henrik-hrinevsky"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.8012179,
+    41.6965489
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.8011719,
+          41.6961388
+        ],
+        [
+          44.8017004,
+          41.6963376
+        ],
+        [
+          44.8012613,
+          41.6969722
+        ],
+        [
+          44.8007337,
+          41.6967769
+        ],
+        [
+          44.8011719,
+          41.6961388
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation 1182326); точка сайта попадает в соседний музей, контур библиотеки собран отдельно.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation 1182326); the site point falls inside the neighbouring museum, so the library outline was assembled separately.",
+    "ka": "OpenStreetMap-ის კონტური (relation 1182326); საიტის წერტილი მეზობელ მუზეუმში ხვდება, ამიტომ ბიბლიოთეკის კონტური ცალკე შევკრიბეთ.",
+    "uk": "Контур OpenStreetMap (relation 1182326); точка сайту потрапляє до сусіднього музею, тому контур бібліотеки зібрано окремо."
+  },
+  "photos": [
+    "ec51aaa9856dceb69be8f07431213c3cffe9f1f37c94c3b5bbbec4e0496aff32",
+    "b0b4b1268db1e65c1978baf714c7b4c9e788bc5eb099ec45c66837fb268abe91"
+  ],
+  "source": "https://scantbilisi.ge/en/objects/310"
+}
