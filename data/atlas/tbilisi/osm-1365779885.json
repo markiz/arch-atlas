@@ -104,5 +104,7 @@
     "0745313e4c538a4fba795b2ddf72147cabfab9e3b91ec3fa0f7514e4b1aabdcf"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3232",
-  "otherSource": "https://www.openstreetmap.org/way/1365779885"
+  "otherSource": "https://www.openstreetmap.org/way/1365779885",
+  "googlePlaceId": "ChIJYTouNSoNREAR-xcZjIgiouE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7143058,44.79073959999999&query_place_id=ChIJYTouNSoNREAR-xcZjIgiouE"
 }

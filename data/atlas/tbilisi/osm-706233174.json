@@ -85,5 +85,7 @@
     "05cf8de2630f273ab7859f0e06dd340ca72979baddebd48660e325cce055526d"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3662",
-  "otherSource": "https://www.matsne.gov.ge/ka/document/view/63112"
+  "otherSource": "https://www.matsne.gov.ge/ka/document/view/63112",
+  "googlePlaceId": "ChIJnTR6_OQMREARvgvFOrTQxJQ",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6962302,44.8063534&query_place_id=ChIJnTR6_OQMREARvgvFOrTQxJQ"
 }

@@ -134,5 +134,7 @@
     "c95ac110ab769eb79c3593e331496f715df515c7e2d01938a371e2419d18e6e6"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4369",
-  "otherSource": "https://www.olympics.com/ioc/georgia"
+  "otherSource": "https://www.olympics.com/ioc/georgia",
+  "googlePlaceId": "ChIJg_MjCPIMREARkkslVw6CYJ8",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6905302,44.7994384&query_place_id=ChIJg_MjCPIMREARkkslVw6CYJ8"
 }

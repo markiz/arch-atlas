@@ -139,5 +139,7 @@
     "9afdfab2ae600091c561abde52ce42a2c3689705f12bee434723c7cb33e028f9"
   ],
   "source": "https://georgianencyclopedia.ge/en/form_eng/633",
-  "otherSource": "https://georgia.travel/queen-darejan-palace"
+  "otherSource": "https://georgia.travel/queen-darejan-palace",
+  "googlePlaceId": "ChIJRSF78fkMREARFTDKWO3-cwQ",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6912273,44.8124356&query_place_id=ChIJRSF78fkMREARFTDKWO3-cwQ"
 }

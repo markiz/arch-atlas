@@ -128,7 +128,8 @@ function Inspector({building,photos,onClose,onMap,onFilter}:{building:Building;p
  const architects=building.architectsByLanguage?.[language]||building.architects;
  const [photoIndex,setPhotoIndex]=useState(0),[lightboxOpen,setLightboxOpen]=useState(false);const images=photos.assets;const current=images[photoIndex]??images[0];const credits=current?.photo;const photoNote=credits?photoTechnicalNote(credits.modifications,t):'';const preview=current?.thumb??current?.full;const gallery=current?.full??current?.thumb;
  const close=useRef<HTMLButtonElement>(null),photoOpener=useRef<HTMLButtonElement>(null);useEffect(()=>{close.current?.focus()},[building.id]);useEffect(()=>{const key=(e:KeyboardEvent)=>{if(e.key==='Escape'&&!lightboxOpen)onClose()};window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[building.id,lightboxOpen]);
- const googleMapsUrl=building.googlePlaceId?`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${building.nameEn||building.name}, ${building.addresses?.en||''}, Tbilisi, Georgia`)}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${building.coordinates[1]},${building.coordinates[0]}`)}`;
+ const googleMapsQuery=encodeURIComponent(`${building.nameEn||building.name}, ${building.addresses?.en||''}, Tbilisi, Georgia`);
+ const googleMapsUrl=building.googlePlaceId?`https://www.google.com/maps/search/?api=1&query=${googleMapsQuery}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`:`https://www.google.com/maps/search/?api=1&query=${building.addresses?.en?googleMapsQuery:encodeURIComponent(`${building.coordinates[1]},${building.coordinates[0]}`)}`;
  function nextPhoto(){setPhotoIndex(i=>images.length?(i+1)%images.length:0)}
  function previousPhoto(){setPhotoIndex(i=>images.length?(i+images.length-1)%images.length:0)}
  const p=period(building.minYear,building.maxYear)!;

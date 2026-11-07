@@ -143,5 +143,7 @@
     "db312262e199168984e9da2d434363752be2957b64f6c634210d9bb7c09bb17c"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/358/old-cinema",
-  "otherSource": "https://georgia.travel/agmashenebeli-avenue-in-tbilisi-neu-tiflis"
+  "otherSource": "https://georgia.travel/agmashenebeli-avenue-in-tbilisi-neu-tiflis",
+  "googlePlaceId": "ChIJOQOQ9isNREAR2oiNg3iqX3Q",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7154319,44.7934953&query_place_id=ChIJOQOQ9isNREAR2oiNg3iqX3Q"
 }

@@ -161,5 +161,7 @@
     "501c051c957519adee586d43daa089945ea4af12f70140ac6214bfca268a67bb"
   ],
   "source": "https://www.openstreetmap.org/way/375514162",
-  "otherSource": "https://www.wikidata.org/wiki/Q42623452"
+  "otherSource": "https://www.wikidata.org/wiki/Q42623452",
+  "googlePlaceId": "ChIJm_8TW_IMREARWYll9YYeql4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6889623,44.7998391&query_place_id=ChIJm_8TW_IMREARWYll9YYeql4"
 }

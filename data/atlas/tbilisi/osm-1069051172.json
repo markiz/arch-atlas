@@ -91,5 +91,7 @@
     "bf7d91dea14858cde3fdc02b45d91ef001b217eea5d5a798bf1a1f335aaf625b"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3096",
-  "otherSource": "https://www.openstreetmap.org/way/1069051172"
+  "otherSource": "https://www.openstreetmap.org/way/1069051172",
+  "googlePlaceId": "ChIJA-FALikNREARWRPbAUPIFcw",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7138083,44.7963516&query_place_id=ChIJA-FALikNREARWRPbAUPIFcw"
 }

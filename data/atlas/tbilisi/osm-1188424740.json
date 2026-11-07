@@ -101,5 +101,7 @@
     "deb06ff0c11363498589c58c9a3aedd37c76819b8079eb03d4d18166d1b8141c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3190",
-  "otherSource": "https://www.scantbilisi.ge/en/objects/350/Mushtaidi-Garden"
+  "otherSource": "https://www.scantbilisi.ge/en/objects/350/Mushtaidi-Garden",
+  "googlePlaceId": "ChIJFzd5ytNyREARMiEaXxFWh6s",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7209999,44.78768729999999&query_place_id=ChIJFzd5ytNyREARMiEaXxFWh6s"
 }

@@ -185,5 +185,7 @@
     "354d10128bb3cffcb2a74966504de91b59a7a00404e7943eebbd7aa7228653ba"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3082",
-  "otherSource": "https://mesy.gov.ge/ka/gverdi/3"
+  "otherSource": "https://mesy.gov.ge/ka/gverdi/3",
+  "googlePlaceId": "ChIJi765-dcMREARyvuprVGlA_Q",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7095291,44.7940275&query_place_id=ChIJi765-dcMREARyvuprVGlA_Q"
 }

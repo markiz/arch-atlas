@@ -113,5 +113,7 @@
     "04fc0d7e4434c014f4543865b80c79ced3ba3be0abf05ff367e10dabc09f0738"
   ],
   "source": "https://scantbilisi.ge/en/objects/249/gogirdis-samefo-abano",
-  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3534"
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3534",
+  "googlePlaceId": "ChIJD6JlVfYMREARgktIMxRGt8Y",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6881989,44.8109246&query_place_id=ChIJD6JlVfYMREARgktIMxRGt8Y"
 }

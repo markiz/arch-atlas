@@ -101,5 +101,7 @@
     "f978210903b53cad955ef0bd87673382f8b721cd8409e2589365123f580207f7"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/356/satesto",
-  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028"
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4028",
+  "googlePlaceId": "ChIJy5Zgqt0MREARijBGDub7osw",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7015986,44.7950041&query_place_id=ChIJy5Zgqt0MREARijBGDub7osw"
 }

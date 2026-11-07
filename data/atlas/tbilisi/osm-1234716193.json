@@ -223,5 +223,7 @@
     "33a9ae1b99a4f77584ea73de8dcb5976ca65775d453e738889bebcc10ef3ad22"
   ],
   "source": "https://circus.ge/about/en",
-  "otherSource": "https://www.openstreetmap.org/way/1234716193"
+  "otherSource": "https://www.openstreetmap.org/way/1234716193",
+  "googlePlaceId": "ChIJOT9_CgANREAR3L9OpxoBRwg",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.714334,44.7851221&query_place_id=ChIJOT9_CgANREAR3L9OpxoBRwg"
 }

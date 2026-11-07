@@ -9,10 +9,10 @@
   },
   "originalLanguage": "ka",
   "addresses": {
-    "ru": "улица Вукола Беридзе",
-    "en": "Vukol Beridze Street",
-    "ka": "ვუკოლ ბერიძის ქუჩა",
-    "uk": "вулиця Вукола Берідзе"
+    "ru": "улица Вукола Беридзе, 6",
+    "en": "6 Vukol Beridze Street",
+    "ka": "ვუკოლ ბერიძის ქუჩა 6",
+    "uk": "вулиця Вукола Берідзе, 6"
   },
   "descriptions": {
     "ru": "Историческое здание на улице Вукола Беридзе, 6 — масштабный кирпичный пятиэтажный дом 1849 года с симметричным фасадом и рядами арочных окон. В карточке реестра он назван зданием МИД Грузии.",
@@ -120,5 +120,7 @@
     "6dd86da59faef9d6f66184e3c5ac9a80722b2f7173e7f680043beba118c353ce",
     "bc5d46a58aaba820e694931c66b21095cc74cc2d7e06affaaa26ac0fff034058"
   ],
-  "source": "https://www.openstreetmap.org/way/159818817"
+  "source": "https://www.openstreetmap.org/way/159818817",
+  "googlePlaceId": "ChIJVVNNSukMREAR9ZXnGS0Esl4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6942956,44.7957431&query_place_id=ChIJVVNNSukMREAR9ZXnGS0Esl4"
 }

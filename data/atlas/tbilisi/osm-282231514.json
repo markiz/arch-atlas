@@ -149,5 +149,7 @@
     "a9b8ee19d4cd417bd78e1e0a3b8d5709cb2a30d4785fccd4b9479f72bc0e3eed"
   ],
   "source": "https://www.openstreetmap.org/way/282231514",
-  "otherSource": "https://www.wikidata.org/wiki/Q42654453"
+  "otherSource": "https://www.wikidata.org/wiki/Q42654453",
+  "googlePlaceId": "ChIJZbHMcuYMREARBku7z7mSu8M",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6971781,44.8008367&query_place_id=ChIJZbHMcuYMREARBku7z7mSu8M"
 }

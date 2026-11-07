@@ -453,5 +453,7 @@
     "ca230f0cc591f0efbbea806198e37327f2699cfb12d95fb7f5b17373df82002a"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3756",
-  "otherSource": "https://docs.tbilisi.gov.ge/architect/dzeglebis_sia.pdf"
+  "otherSource": "https://docs.tbilisi.gov.ge/architect/dzeglebis_sia.pdf",
+  "googlePlaceId": "ChIJDcQoIvcMREARMagAMw3voZE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6891567,44.80986660000001&query_place_id=ChIJDcQoIvcMREARMagAMw3voZE"
 }

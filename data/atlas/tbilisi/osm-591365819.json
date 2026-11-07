@@ -75,5 +75,7 @@
     "8d88cc28db37e1a59d6dbc72a2eb4d033bb445598a56e53198103da5d18d659f"
   ],
   "source": "https://georgia.travel/jvaris-mama",
-  "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/503668/1/IerusalimisJvrisMonastrisMiwatmflobelobaSaqartveloshi_2007.pdf"
+  "otherSource": "https://dspace.nplg.gov.ge/bitstream/1234/503668/1/IerusalimisJvrisMonastrisMiwatmflobelobaSaqartveloshi_2007.pdf",
+  "googlePlaceId": "ChIJW1pJ-vAMREARu6FCtrmsZg4",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6908624,44.8065187&query_place_id=ChIJW1pJ-vAMREARu6FCtrmsZg4"
 }

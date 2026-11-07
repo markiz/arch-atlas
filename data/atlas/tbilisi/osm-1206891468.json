@@ -83,5 +83,7 @@
     "b37e5b2ab6698c8580bf42585f9aed4f5a897c3b65146771ca72f64a5d707d51"
   ],
   "source": "https://www.openstreetmap.org/way/1206891468",
-  "otherSource": "https://www.wikidata.org/wiki/Q42623569"
+  "otherSource": "https://www.wikidata.org/wiki/Q42623569",
+  "googlePlaceId": "ChIJbb6hXfIMREARrrzTqx7X4Ek",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.689117,44.7994298&query_place_id=ChIJbb6hXfIMREARrrzTqx7X4Ek"
 }

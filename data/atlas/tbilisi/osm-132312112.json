@@ -149,5 +149,7 @@
     "de2983ca0b0e73663981e114e55640c869ded98359e69be8765bd8b0f439fa9d"
   ],
   "source": "https://georgia.travel/st-peter-and-paul-catholic-church",
-  "otherSource": "https://rm.coe.int/168070ce59"
+  "otherSource": "https://rm.coe.int/168070ce59",
+  "googlePlaceId": "ChIJR8NVjSYNREARdxoWcmS7HDU",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7100547,44.8021471&query_place_id=ChIJR8NVjSYNREARdxoWcmS7HDU"
 }

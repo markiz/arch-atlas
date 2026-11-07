@@ -147,5 +147,7 @@
     "b739fe58f00631eeb1e8acd3a30395912b32250a0d5a5505ac65ac1c7c89e192"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3049",
-  "otherSource": "https://orthodoxy.ge/tsnobarebi/tadzrebi/neveli.htm"
+  "otherSource": "https://orthodoxy.ge/tsnobarebi/tadzrebi/neveli.htm",
+  "googlePlaceId": "ChIJydbWciYNREARx1ZABiiaLUM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7114495,44.8009519&query_place_id=ChIJydbWciYNREARx1ZABiiaLUM"
 }

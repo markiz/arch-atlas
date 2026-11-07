@@ -117,5 +117,7 @@
     "be4d06d1c955ef323486046ab690a662be2c34b652628583767c113af1fb429d"
   ],
   "source": "https://scantbilisi.ge/en/objects/348/TBILISI--Funicular",
-  "otherSource": "https://www.funicular.ge/?lang=en"
+  "otherSource": "https://www.funicular.ge/?lang=en",
+  "googlePlaceId": "ChIJMRFS1cEMREAR_6a_xehVgTM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.694913,44.7866085&query_place_id=ChIJMRFS1cEMREAR_6a_xehVgTM"
 }

@@ -79,5 +79,7 @@
     "7f8773b8731e5243a9c35c054dbc788ec1056f105163f64011c8f643c73b9508"
   ],
   "source": "https://scantbilisi.ge/ka/objects/302",
-  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2850"
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2850",
+  "googlePlaceId": "ChIJC7dT2ycNREAR4stesT_9VDE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7102242,44.7970818&query_place_id=ChIJC7dT2ycNREAR4stesT_9VDE"
 }

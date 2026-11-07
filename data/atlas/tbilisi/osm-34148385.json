@@ -98,5 +98,7 @@
     "064310e970997a8d304b5cbccf9d71eaf9f2dbae00ac872a688dfd7a4e26ae01"
   ],
   "source": "https://taa.net.ge/en/archive-geo/tbilisi-sports-palace/",
-  "otherSource": "https://www.openstreetmap.org/way/34148385"
+  "otherSource": "https://www.openstreetmap.org/way/34148385",
+  "googlePlaceId": "ChIJS_EpXtZyREAR1U_nHYjBFFM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7195581,44.7797955&query_place_id=ChIJS_EpXtZyREAR1U_nHYjBFFM"
 }

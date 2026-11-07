@@ -99,5 +99,7 @@
     "b372a7e13934f406481f6940fc03496240be81ce5a8b8e682852f468d9f7cf16"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3088",
-  "otherSource": "https://www.openstreetmap.org/way/1283023030"
+  "otherSource": "https://www.openstreetmap.org/way/1283023030",
+  "googlePlaceId": "ChIJLWcybC0NREARxh5RMZmYC5U",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7189957,44.7954315&query_place_id=ChIJLWcybC0NREARxh5RMZmYC5U"
 }

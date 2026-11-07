@@ -100,5 +100,7 @@
     "8498a6166b9b7ab8f896a627704daf19d41c6af9b59c201d5e0fdd9d25c633f5"
   ],
   "source": "https://www.silkmuseum.ge/en/about/building",
-  "otherSource": "https://taa.net.ge/en/archive-geo/silk-museum/"
+  "otherSource": "https://taa.net.ge/en/archive-geo/silk-museum/",
+  "googlePlaceId": "ChIJ8RNGO9JyREARWT-wTCnpX-k",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7218862,44.7882277&query_place_id=ChIJ8RNGO9JyREARWT-wTCnpX-k"
 }

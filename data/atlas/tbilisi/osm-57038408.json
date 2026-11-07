@@ -135,5 +135,7 @@
     "11c88fea78ede363c7db64f50cabbd4dc6e128e646e31df2bed1f932068bcece"
   ],
   "source": "https://www.artpalace.ge/blank-9",
-  "otherSource": "https://www.openstreetmap.org/way/57038408"
+  "otherSource": "https://www.openstreetmap.org/way/57038408",
+  "googlePlaceId": "ChIJ5zAGDiwNREARiXRmcQG43Ls",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.715877,44.7942939&query_place_id=ChIJ5zAGDiwNREARiXRmcQG43Ls"
 }

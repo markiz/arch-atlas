@@ -108,5 +108,7 @@
     "68e6cc4c9c79319cce48f1bfbeb856da5ed9f478e11894b71194f3312b7e8b4c"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2727",
-  "otherSource": "https://www.openstreetmap.org/way/246787222"
+  "otherSource": "https://www.openstreetmap.org/way/246787222",
+  "googlePlaceId": "ChIJOenacicNREARPjqWp0jyihg",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7087382,44.7992594&query_place_id=ChIJOenacicNREARPjqWp0jyihg"
 }

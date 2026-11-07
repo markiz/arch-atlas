@@ -86,5 +86,7 @@
     "8aa9aff003f577e488010aa89ca94a4b7adeb0f8fbd3070ab8b63cb6598a5754"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3090",
-  "otherSource": "https://www.openstreetmap.org/way/414653510"
+  "otherSource": "https://www.openstreetmap.org/way/414653510",
+  "googlePlaceId": "ChIJ2RWCZdJyREARt-tv--71NWI",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7216671,44.7904444&query_place_id=ChIJ2RWCZdJyREARt-tv--71NWI"
 }

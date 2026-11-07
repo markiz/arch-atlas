@@ -92,5 +92,7 @@
     "15f2e4dcd631116dbee8b120fc4995577bf384053fea0804278a167e899c3549"
   ],
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3369",
-  "otherSource": "https://www.heritagesites.ge/uploads/files/60e836cf86bd8.pdf"
+  "otherSource": "https://www.heritagesites.ge/uploads/files/60e836cf86bd8.pdf",
+  "googlePlaceId": "ChIJRSF78fkMREARFTDKWO3-cwQ",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6912273,44.8124356&query_place_id=ChIJRSF78fkMREARFTDKWO3-cwQ"
 }

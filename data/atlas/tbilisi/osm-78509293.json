@@ -145,5 +145,7 @@
     "6b06f71bbe62f6e2de4168fca7957567de23265fbb71f3dd1129e2476b4f1091"
   ],
   "source": "https://tbilisimuseumsunion.ge/en/museums/ilia-chavchavadzis-literaturul-memorialuri-muzeumi/",
-  "otherSource": "https://www.openstreetmap.org/way/78509293"
+  "otherSource": "https://www.openstreetmap.org/way/78509293",
+  "googlePlaceId": "ChIJj4lHHeAMREARbc6HUBXJhIg",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7039573,44.8061728&query_place_id=ChIJj4lHHeAMREARbc6HUBXJhIg"
 }

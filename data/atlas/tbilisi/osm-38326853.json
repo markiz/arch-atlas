@@ -148,5 +148,7 @@
     "842d598f94ed3c2077479989cb98ed4ffaa7a1e14fb9b170c07acf51be50c772"
   ],
   "source": "https://scantbilisi.ge/en/objects/390/Cachava-Clinic",
-  "otherSource": "https://www.openstreetmap.org/way/38326853"
+  "otherSource": "https://www.openstreetmap.org/way/38326853",
+  "googlePlaceId": "ChIJtyCyJNEMREARvGg0PhSYzlo",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7081896,44.78501379999999&query_place_id=ChIJtyCyJNEMREARvGg0PhSYzlo"
 }

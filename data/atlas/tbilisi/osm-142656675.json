@@ -128,5 +128,7 @@
     "8f5d6e91490bbb68449335f3b2e9cb156f3b6b8ccedb0a3f4179229d8bf99b47"
   ],
   "source": "https://georgia.travel/georgian-state-museum-of-literature",
-  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4273"
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4273",
+  "googlePlaceId": "ChIJdfhOp-cMREARMiUPU4oEsM0",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6994407,44.7991161&query_place_id=ChIJdfhOp-cMREARMiUPU4oEsM0"
 }

@@ -98,5 +98,7 @@
     "3f6707f45bb50b97da5d6acaad8195964b2eb0da8c04e1cf938c98d98d1f3232"
   ],
   "source": "https://www.scantbilisi.ge/en/objects/236/D.-Agmashenebeli-Avenue--148",
-  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3178"
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3178",
+  "googlePlaceId": "ChIJNx7BgCsNREARj155qQV_RTM",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7162549,44.7921385&query_place_id=ChIJNx7BgCsNREARj155qQV_RTM"
 }
