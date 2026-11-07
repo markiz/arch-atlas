@@ -204,4 +204,4 @@ flowchart TD
 - Диаграммы: `docs/images/hold-verdicts-by-wave.svg`, `hold-reasons.svg`, `hold-quality.svg`, `hold-matrix.svg`, `hold-funnel.svg`.
 - Данные: `work/hold-audit/holds.json` (273 записи), `work/hold-audit/summary.json`.
 - Скрипты: `work/hold-audit/collect.py`, `work/hold-audit/charts.py`.
-- Очередь 4: `docs/research-next-200-v4.md` (200 лучших оставшихся безымянных жилых домов; факты собраны).
+- Очередь 4: `docs/archive/research/queue-4-unnamed-200/research-next-200-v4.md` (200 лучших оставшихся безымянных жилых домов; факты собраны).

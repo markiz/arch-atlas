@@ -1,8 +1,8 @@
 # Прогресс разбора очереди 200
 
-Снимок: 1 ноября 2026 года, после волны 4. Очередь: [research-next-200.md](research-next-200.md).
-Подробные вердикты по всем оставшимся кандидатам — в [отчёте волны 4](research-queue-wave-4.md);
-волны 1–3 — в [research-queue-wave-1.md](research-queue-wave-1.md), [wave 2](research-queue-wave-2.md), [wave 3](research-queue-wave-3.md).
+Снимок: 1 ноября 2026 года, после волны 4. Очередь: [research-next-200.md](archive/research/queue-1-heritage-200/screening/research-next-200.md).
+Подробные вердикты по всем оставшимся кандидатам — в [отчёте волны 4](archive/research/queue-1-heritage-200/waves/research-queue-wave-4.md);
+волны 1–3 — в [research-queue-wave-1.md](archive/research/queue-1-heritage-200/waves/research-queue-wave-1.md), [wave 2](archive/research/queue-1-heritage-200/waves/research-queue-wave-2.md), [wave 3](archive/research/queue-1-heritage-200/waves/research-queue-wave-3.md).
 
 | Показатель | Значение |
 |---|---:|
@@ -18,7 +18,7 @@
 
 Разобраны 102 ранее не проверенных кандидата и перепроверены две старые записи (№ 190, 198).
 Добавлено 19 карточек, 77 оставлены в hold, 8 отклонены. Для остальных 20 записей сохранён вердикт предыдущих волн.
-Полная таблица с причинами — в [research-queue-wave-4.md](research-queue-wave-4.md).
+Полная таблица с причинами — в [research-queue-wave-4.md](archive/research/queue-1-heritage-200/waves/research-queue-wave-4.md).
 
 ## Добавлено в волне 4
 
@@ -60,13 +60,12 @@
 источник, после чего карточка собирается без пересборки геометрии. Для ошибочных пар OSM (№ 22, 26, 52, 69,
 71, 77, 97) сначала нужен новый контур.
 
-Следующая очередь из 200 кандидатов подготовлена в [research-next-200-v2.md](research-next-200-v2.md)
-и ещё не разбиралась.
+Следующая очередь из 200 кандидатов подготовлена в [research-next-200-v2.md](archive/research/queue-2-heritage-200/research-next-200-v2.md); её разбор — ниже.
 
 ## Вторая очередь (2026-11-01)
 
-Вторая очередь 200 разобрана: **17 добавлено, 80 hold, 103 reject**. Полная таблица вердиктов — в [research-queue-v2.md](research-queue-v2.md). Очередь отбора — [research-next-200-v2.md](research-next-200-v2.md).
+Вторая очередь 200 разобрана: **17 добавлено, 80 hold, 103 reject**. Полная таблица вердиктов — в [research-queue-v2.md](archive/research/queue-2-heritage-200/research-queue-v2.md). Очередь отбора — [research-next-200-v2.md](archive/research/queue-2-heritage-200/research-next-200-v2.md).
 
 ## Третья очередь (2026-11-01)
 
-Третья очередь 200 разобрана: **55 добавлено, 116 hold, 29 reject**. Полная таблица — в [research-queue-v3.md](research-queue-v3.md). Очередь отбора — [research-next-200-v3.md](research-next-200-v3.md).
+Третья очередь 200 разобрана: **55 добавлено, 116 hold, 29 reject**. Полная таблица — в [research-queue-v3.md](archive/research/queue-3-heritage-200/research-queue-v3.md). Очередь отбора — [research-next-200-v3.md](archive/research/queue-3-heritage-200/research-next-200-v3.md).

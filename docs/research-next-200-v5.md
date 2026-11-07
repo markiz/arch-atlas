@@ -2,7 +2,7 @@
 
 **Статус:** разобраны все 200: 100 READY, 83 HOLD, 17 REJECT; 40 интегрировано, 60 ждут перевода. Итоги — в [research-queue-v5-progress.md](research-queue-v5-progress.md).
 
-Предыдущая очередь: [research-next-200-v4.md](research-next-200-v4.md), её итоги — в [research-queue-v4-progress.md](research-queue-v4-progress.md). После закрытия четвёртой очереди именованных объектов в реестре не осталось; очередь состоит из 200 лучших безымянных исторических жилых домов.
+Предыдущая очередь: [research-next-200-v4.md](archive/research/queue-4-unnamed-200/research-next-200-v4.md), её итоги — в [research-queue-v4-progress.md](archive/research/queue-4-unnamed-200/research-queue-v4-progress.md). После закрытия четвёртой очереди именованных объектов в реестре не осталось; очередь состоит из 200 лучших безымянных исторических жилых домов.
 
 **Снимок:** 2026-11-01 UTC. Контуры: © участники OpenStreetMap, [ODbL](https://www.openstreetmap.org/copyright).
 
@@ -11,7 +11,7 @@
 - В официальном реестре найдено записей по Тбилиси: **2599**. Запрос: `Region=N'თბილისი'` к [слою недвижимых памятников](https://memkvidreoba.gov.ge/arcgisch/rest/services/CultureWMS/PS_ImmovableMonumentObjectP/MapServer/1).
 - Сопоставление выполнено с 121,313 контурами из локальной OSM-выгрузки `raw/osm-tbilisi-building-outlines.geojson` и 363 карточками атласа на момент отбора.
 - Отобраны записи с классификацией архитектуры, отдельным контуром OSM в радиусе примерно 17 м, без близкого совпадения или значительного пересечения с текущей карточкой атласа. Сначала взяты записи с конкретным названием и содержательным описанием.
-- Исключены все записи предыдущих очередей: `docs/research-next-200.md`, `docs/research-next-200-v2.md`, `docs/research-next-200-v3.md`, `docs/research-next-200-v4.md`. Это не даёт повторно отобрать уже разобранных кандидатов.
+- Исключены все записи предыдущих очередей: `docs/archive/research/queue-1-heritage-200/screening/research-next-200.md`, `docs/archive/research/queue-2-heritage-200/research-next-200-v2.md`, `docs/archive/research/queue-3-heritage-200/research-next-200-v3.md`, `docs/archive/research/queue-4-unnamed-200/research-next-200-v4.md`. Это не даёт повторно отобрать уже разобранных кандидатов.
 - Сопоставление точки реестра с контуром автоматическое. Даже расстояние 0 м не подтверждает, что реестр и контур относятся к одному корпусу; каждую пару нужно проверить на карте и по адресу.
 - Официальные текстовые поля не перепечатываются в этом отчёте: условия повторного использования данных реестра не установлены. Идентификаторы нужны для открытия карточек источника.
 
@@ -244,4 +244,4 @@
 - У каждого снимка проверить здание, ракурс, авторство, лицензию и отдельные права на архитектурное произведение.
 - Place ID необязателен для исторической карточки; Google API запускать только отдельным согласованным батчем с допуском 5 м.
 
-Генератор: `python3 scripts/create-next-200-report.py --output docs/research-next-200-v2.md --exclude-queue docs/research-next-200.md --label "следующие 200 объектов Тбилиси (вторая очередь)"`. Флаг `--exclude-queue` исключает записи предыдущей очереди по ID реестра и OSM way; для перезаписи существующего отчёта нужен `--force`. Данные реестра запрашиваются по HTTPS с проверкой сертификата.
+Генератор: `python3 scripts/create-next-200-report.py --output docs/research-next-200-v6.md --exclude-queue docs/research-next-200-v5.md --label "следующие 200 объектов Тбилиси (шестая очередь)"`. Флаг `--exclude-queue` исключает записи предыдущей очереди по ID реестра и OSM way; для перезаписи существующего отчёта нужен `--force`. Данные реестра запрашиваются по HTTPS с проверкой сертификата.

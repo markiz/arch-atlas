@@ -101,7 +101,7 @@ def read_prior_queue(path):
 
 
 def build_report(force=False, output=None, exclude_queues=(), label=None, max_distance_km=None, excluded_classifications=(), exclude_generic_names=False, allow_fewer=False):
-    report_path = (ROOT / output) if output else ROOT / 'docs/research-next-200.md'
+    report_path = (ROOT / output) if output else ROOT / 'docs/research-next-200-v6.md'
     report_path = report_path.resolve()
     if report_path.exists() and not force:
         raise SystemExit('Report exists; use --force only after preserving the current research snapshot')
@@ -319,7 +319,7 @@ def build_report(force=False, output=None, exclude_queues=(), label=None, max_di
         '- У каждого снимка проверить здание, ракурс, авторство, лицензию и отдельные права на архитектурное произведение.',
         '- Place ID необязателен для исторической карточки; Google API запускать только отдельным согласованным батчем с допуском 5 м.',
         '',
-        'Генератор: `python3 scripts/create-next-200-report.py --output docs/research-next-200-v2.md --exclude-queue docs/research-next-200.md --label "следующие 200 объектов Тбилиси (вторая очередь)"`. Флаг `--exclude-queue` исключает записи предыдущей очереди по ID реестра и OSM way; для перезаписи существующего отчёта нужен `--force`. Данные реестра запрашиваются по HTTPS с проверкой сертификата.',
+        'Генератор: `python3 scripts/create-next-200-report.py --output docs/research-next-200-v6.md --exclude-queue docs/research-next-200-v5.md --label "следующие 200 объектов Тбилиси (шестая очередь)"`. Флаг `--exclude-queue` исключает записи предыдущей очереди по ID реестра и OSM way; для перезаписи существующего отчёта нужен `--force`. Данные реестра запрашиваются по HTTPS с проверкой сертификата.',
         '',
     ]
     report_path.write_text('\n'.join(lines), encoding='utf-8')

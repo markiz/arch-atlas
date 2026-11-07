@@ -2,7 +2,7 @@
 
 **Статус:** очередь разобрана 1 ноября 2026 года: 55 карточек добавлено, 116 hold, 29 reject. Итоги — в [research-queue-v3.md](research-queue-v3.md).
 
-Предыдущая очередь: [research-next-200-v2.md](research-next-200-v2.md), её итоги — в [research-queue-v2.md](research-queue-v2.md). Эта очередь только подготовлена: карточек из неё ещё нет, факты не проверялись.
+Предыдущая очередь: [research-next-200-v2.md](../queue-2-heritage-200/research-next-200-v2.md), её итоги — в [research-queue-v2.md](../queue-2-heritage-200/research-queue-v2.md). Эта очередь только подготовлена: карточек из неё ещё нет, факты не проверялись.
 
 **Снимок:** 2026-10-31 UTC. Контуры: © участники OpenStreetMap, [ODbL](https://www.openstreetmap.org/copyright).
 

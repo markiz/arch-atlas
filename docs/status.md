@@ -2,7 +2,7 @@
 
 Снимок: 1 ноября 2026 года, после пакетного прогона галерей реестра. Текущая сборка содержит 403 здания с контурами из OSM: у 399 есть хотя бы одна фотография, у 310 — несколько, у 154 — три, у 46 — четыре; всего 955 фотозаписей (210 со свободной лицензией, 745 — фото реестра с пометкой «лицензия не установлена»); датировка установлена у 319, Place ID — у 92. Четыре карточки без фото — честный пробел, а не отсутствие проверки. Это исследовательский каталог, а не 403 полностью проверенные редакционные карточки.
 
-Первая очередь 200: добавлено 95, осталось 105 hold/reject. Вторая: 17 добавлено, 80 hold, 103 reject. Третья: 55 добавлено, 116 hold, 29 reject. Четвёртая: 96 ready, 97 hold, 7 reject; все 96 интегрированы. Пятая: 100 ready, 83 hold, 17 reject; 40 интегрировано. Итоги — в [research-queue-wave-4.md](research-queue-wave-4.md), [research-queue-v2.md](research-queue-v2.md), [research-queue-v3.md](research-queue-v3.md), [research-queue-v4-progress.md](research-queue-v4-progress.md) и [research-queue-v5-progress.md](research-queue-v5-progress.md); регистр — в [research-queue-progress.md](research-queue-progress.md).
+Первая очередь 200: добавлено 95, осталось 105 hold/reject. Вторая: 17 добавлено, 80 hold, 103 reject. Третья: 55 добавлено, 116 hold, 29 reject. Четвёртая: 96 ready, 97 hold, 7 reject; все 96 интегрированы. Пятая: 100 ready, 83 hold, 17 reject; 40 интегрировано. Итоги — в [research-queue-wave-4.md](archive/research/queue-1-heritage-200/waves/research-queue-wave-4.md), [research-queue-v2.md](archive/research/queue-2-heritage-200/research-queue-v2.md), [research-queue-v3.md](archive/research/queue-3-heritage-200/research-queue-v3.md), [research-queue-v4-progress.md](archive/research/queue-4-unnamed-200/research-queue-v4-progress.md) и [research-queue-v5-progress.md](research-queue-v5-progress.md); регистр — в [research-queue-progress.md](research-queue-progress.md).
 
 ## Сделано
 
@@ -47,6 +47,6 @@
 - Пять очередей разобраны; следующая очередь ещё не отбиралась.
 - Публикация и push выполняются пользователем; см. ограничения в [README.md](../README.md).
 
-Исторические документы и ранние снимки состояния сохранены в [архиве](archive/README.md); карта research-файлов — в [research-index.md](research-index.md); исходный план проекта больше не является действующим контрактом.
+Исторические документы и ранние снимки состояния сохранены в [архиве](archive/README.md); карта research-файлов — в [архивном указателе исследований](archive/research/README.md); исходный план проекта больше не является действующим контрактом. Действующие документы перечислены в [docs/README.md](README.md).
 
-Сводный разбор причин HOLD и план их преодоления — [research-hold-report.md](research-hold-report.md). Четвёртая очередь разобрана полностью: 96 READY, 97 HOLD, 7 REJECT; 96 карточек интегрировано; пятая очередь: 40 интегрировано, 60 ждут перевода — [research-queue-v4-progress.md](research-queue-v4-progress.md).
+Сводный разбор причин HOLD и план их преодоления — [research-hold-report.md](research-hold-report.md). Четвёртая очередь разобрана полностью: 96 READY, 97 HOLD, 7 REJECT; 96 карточек интегрировано; пятая очередь: 40 интегрировано, 60 ждут перевода — [research-queue-v4-progress.md](archive/research/queue-4-unnamed-200/research-queue-v4-progress.md).

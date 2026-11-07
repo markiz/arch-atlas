@@ -187,7 +187,7 @@ queue.jsonl
 
 При 4–6 параллельных enriching-агентах это примерно **8 кандидатов за 15–20 минут** вместо 20–28, плюс меньше повторных запросов и меньше «перевернутых» выводов.
 
-Первый фактический прогон (волна 3, 8 кандидатов, 4 агента): collect — 0:18, enrich — 4:33 wall, adjudicate — 0:21, edit одной карточки — ~0:10, validate — ~0:15, отчёт — 1:05; итого **7:14** на волну, 1 ready и 7 hold. Namecheck в этом прогоне ещё не было. Triage-волна оказалась быстрее гипотезы; стоимость READY-тяжёлой волны ещё нужно проверить на 3+ добавлениях. Детали — в [волне 3](research-queue-wave-3.md).
+Первый фактический прогон (волна 3, 8 кандидатов, 4 агента): collect — 0:18, enrich — 4:33 wall, adjudicate — 0:21, edit одной карточки — ~0:10, validate — ~0:15, отчёт — 1:05; итого **7:14** на волну, 1 ready и 7 hold. Namecheck в этом прогоне ещё не было. Triage-волна оказалась быстрее гипотезы; стоимость READY-тяжёлой волны ещё нужно проверить на 3+ добавлениях. Детали — в [волне 3](archive/research/queue-1-heritage-200/waves/research-queue-wave-3.md).
 
 ## Реализация в репозитории
 
@@ -220,15 +220,15 @@ python3 scripts/validate_cards.py
 
 # подготовить следующую очередь, не разбирая её
 python3 scripts/create-next-200-report.py \
-  --output docs/research-next-200-v2.md \
-  --exclude-queue docs/research-next-200.md \
-  --label "следующие 200 объектов Тбилиси (вторая очередь)"
+  --output docs/research-next-200-v6.md \
+  --exclude-queue docs/research-next-200-v5.md \
+  --label "следующие 200 объектов Тбилиси (шестая очередь)"
 
 # собрать факты по новой очереди (номера кандидатов не совпадают с прошлой,
 # поэтому overrides нужно передать явно — для новой очереди он пустой)
-printf '{}\n' > work/queue-v2-overrides.json
-python3 scripts/queue_collect.py --queue docs/research-next-200-v2.md \
-  --out work/queue-v2 --overrides work/queue-v2-overrides.json
+printf '{}\n' > work/queue-v6-overrides.json
+python3 scripts/queue_collect.py --queue docs/research-next-200-v6.md \
+  --out work/queue-v6 --overrides work/queue-v6-overrides.json
 ```
 
 `--exclude-queue` исключает записи прошлой очереди по ID реестра и OSM way, чтобы следующая выборка не повторяла уже разобранных. `--overrides` отделяет номер кандидата от глобального файла `data/osm-candidate-overrides.json`: без этого номера новой очереди могли бы получить чужие relation-исправления.
@@ -265,7 +265,7 @@ python3 scripts/queue_collect.py --queue docs/research-next-200-v2.md \
         "reason": "Очередь ссылалась на соседний way; баня №5 — relation"}}
 ```
 
-Коллектор применяет override по номеру кандидата, тянет `relation/<id>`, собирает внешние контуры через `polygonize`, вычитает inner и сохраняет `osm.members`. Пример разбора — [баня №5](research-bath-5-geometry.md). Без override такой объект получил бы чужой way и ложный IoU.
+Коллектор применяет override по номеру кандидата, тянет `relation/<id>`, собирает внешние контуры через `polygonize`, вычитает inner и сохраняет `osm.members`. Пример разбора — [баня №5](archive/research/queue-1-heritage-200/verification/research-bath-5-geometry.md). Без override такой объект получил бы чужой way и ложный IoU.
 
 ### Primary и вторичные контуры
 

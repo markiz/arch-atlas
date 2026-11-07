@@ -2,7 +2,7 @@
 
 **Статус:** разобраны все 200: 96 READY, 97 HOLD, 7 REJECT; 96 карточек интегрировано; очередь закрыта. Итоги — в [research-queue-v4-progress.md](research-queue-v4-progress.md).
 
-Предыдущая очередь: [research-next-200-v3.md](research-next-200-v3.md), её итоги — в [research-queue-v3.md](research-queue-v3.md). После трёх очередей именованных объектов в реестре не осталось: очередь состоит из 200 лучших безымянных исторических жилых домов.
+Предыдущая очередь: [research-next-200-v3.md](../queue-3-heritage-200/research-next-200-v3.md), её итоги — в [research-queue-v3.md](../queue-3-heritage-200/research-queue-v3.md). После трёх очередей именованных объектов в реестре не осталось: очередь состоит из 200 лучших безымянных исторических жилых домов.
 
 **Снимок:** 2026-10-31 UTC. Контуры: © участники OpenStreetMap, [ODbL](https://www.openstreetmap.org/copyright).
 
