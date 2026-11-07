@@ -1,0 +1,149 @@
+{
+  "id": "osm-1066392731",
+  "osmId": "way/1066392731",
+  "names": {
+    "ru": "Дом юстиции",
+    "en": "Public Service Hall",
+    "ka": "იუსტიციის სახლი",
+    "uk": "Будинок юстиції"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "набережная Звиада Гамсахурдиа, 1",
+    "en": "1 Zviad Gamsakhurdia Embankment",
+    "ka": "ზვიად გამსახურდიას სანაპირო, 1",
+    "uk": "набережна Звіада Гамсахурдіа, 1"
+  },
+  "descriptions": {
+    "ru": "Стеклянный общественный комплекс с системой нависающих лепестковых навесов на тонких опорах. Внутри — многосветный атриум с балконами и лестницами; фасады полностью остеклены, а белые кровельные оболочки формируют силуэт здания на набережной.",
+    "en": "A glass civic complex with a system of overlapping petal-like canopies on slender supports. Inside is a tall atrium with balconies and staircases; the facades are fully glazed, and the white roof shells shape the building’s silhouette on the embankment.",
+    "ka": "მინის საზოგადოებრივი კომპლექსი გადაფარებული ფურცლისებრი ფარდულებით თხელ საყრდენებზე. შიგნით მაღალი ატრიუმია აივნებითა და კიბეებით; ფასადები მთლიანად მოჭიქულია, თეთრი სახურავის გარსები კი შენობის სილუეტს ქმნის სანაპიროზე.",
+    "uk": "Скляний громадський комплекс із системою нависаючих пелюсткоподібних навісів на тонких опорах. Усередині — високий атріум з балконами та сходами; фасади повністю засклені, а білі покрівельні оболонки формують силует будівлі на набережній."
+  },
+  "histories": {
+    "ru": "Построен в 2012 году по проекту Массимилиано Фуксаса (Studio Fuksas) для Дома юстиции — общественного сервисного зала, где оказывают гражданские и административные услуги. Открыт 21 сентября 2012 года. Здание стало одним из самых узнаваемых объектов современной архитектуры Тбилиси; в текущей выгрузке реестра недвижимых памятников запись не найдена.",
+    "en": "Built in 2012 to a design by Massimiliano Fuksas (Studio Fuksas) for the House of Justice, a public service hall providing civil and administrative services. It opened on 21 September 2012. The building became one of Tbilisi’s most recognisable works of contemporary architecture; no record was found in the current export of the immovable monuments register.",
+    "ka": "აშენდა 2012 წელს მასიმილიანო ფუკსასის (Studio Fuksas) პროექტით იუსტიციის სახლისთვის — საჯარო მომსახურების დარბაზისთვის, სადაც სამოქალაქო და ადმინისტრაციულ მომსახურებას აწვდიან. გაიხსნა 2012 წლის 21 სექტემბერს. შენობა თბილისის თანამედროვე არქიტექტურის ერთ-ერთ ყველაზე ცნობად ნაგებობად იქცა; უძრავი ძეგლების რეესტრის მიმდინარე ამონაწერში ჩანაწერი არ მოიძებნა.",
+    "uk": "Побудований 2012 року за проєктом Массіміліано Фуксаса (Studio Fuksas) для Будинку юстиції — зали публічних послуг, де надають цивільні та адміністративні послуги. Відкритий 21 вересня 2012 року. Будівля стала однією з найвпізнаваніших споруд сучасної архітектури Тбілісі; у поточній вибірці реєстру нерухомих пам'яток запису не знайдено."
+  },
+  "minYear": 2012,
+  "maxYear": 2012,
+  "yearLabelId": "year-2012",
+  "styleIds": [
+    "contemporary"
+  ],
+  "architectIds": [
+    "massimiliano-fuksas"
+  ],
+  "districtId": "mtatsminda",
+  "coordinates": [
+    44.8066221,
+    41.6990895
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.806074,
+          41.699253
+        ],
+        [
+          44.806227,
+          41.69927
+        ],
+        [
+          44.806191,
+          41.699448
+        ],
+        [
+          44.806366,
+          41.699468
+        ],
+        [
+          44.806337,
+          41.699606
+        ],
+        [
+          44.806713,
+          41.699649
+        ],
+        [
+          44.806749,
+          41.699473
+        ],
+        [
+          44.806871,
+          41.699487
+        ],
+        [
+          44.806924,
+          41.699225
+        ],
+        [
+          44.807105,
+          41.699246
+        ],
+        [
+          44.807235,
+          41.698608
+        ],
+        [
+          44.807145,
+          41.698598
+        ],
+        [
+          44.806926,
+          41.698573
+        ],
+        [
+          44.806947,
+          41.698472
+        ],
+        [
+          44.8066,
+          41.698432
+        ],
+        [
+          44.806562,
+          41.698617
+        ],
+        [
+          44.806349,
+          41.698593
+        ],
+        [
+          44.806286,
+          41.6989
+        ],
+        [
+          44.806149,
+          41.698885
+        ],
+        [
+          44.806135,
+          41.698954
+        ],
+        [
+          44.806074,
+          41.699253
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OSM way/1066392731 имеет 21 точку и помечен авторами как супер-приблизительный (note: «Super-approximated shape of the outline, to be refined»); площадь 8 202 м². Принят как временный: границы навесов и стилобата требуют уточнения по спутнику или кадастру.",
+  "geometryQualityTranslations": {
+    "en": "The OSM way/1066392731 outline has 21 points and is marked by mappers as super-approximated (note: “Super-approximated shape of the outline, to be refined”); area 8,202 m². Accepted as provisional: the canopy and plinth edges need verification against satellite imagery or cadastre.",
+    "ka": "OSM way/1066392731-ის კონტურს 21 წერტილი აქვს და რუკის ავტორებმა მონიშნეს როგორც ზედმეტად მიახლოებითი (note: “Super-approximated shape of the outline, to be refined”); ფართობი 8 202 მ². მიღებულია დროებით: ფარდულებისა და სტილობატის საზღვრები საჭიროებს დაზუსტებას სატელიტური გამოსახულების ან კადასტრის მიხედვით.",
+    "uk": "Контур OSM way/1066392731 має 21 точку і позначений укладачами як супер-наближений (note: “Super-approximated shape of the outline, to be refined”); площа 8 202 м². Прийнятий як тимчасовий: межі навісів і стилобату потребують уточнення за супутниковими даними або кадастром."
+  },
+  "photos": [
+    "014476ada52269278f2eafcd6b0398474e0c703da3f6b778f7dfa4741453db4e",
+    "5ec864faab5cfe796a3fae95a8fb418c1bfb51a2a12d1a7c67e7a1a978384377",
+    "d6d06b13ad24c3f566831190bdb3ca2281a13f7cd7e69b086e6a30954d05ea7d"
+  ],
+  "source": "https://fuksas.com/tbilisi-service/",
+  "otherSource": "https://www.openstreetmap.org/way/1066392731",
+  "googlePlaceId": "ChIJdQJW4uMMREAR_LcK1iD5YTE",
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6993711,44.8064753&query_place_id=ChIJdQJW4uMMREAR_LcK1iD5YTE"
+}

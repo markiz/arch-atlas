@@ -1,0 +1,20 @@
+{
+  "author": "Marcin Konsek",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:2016_Tbilisi,_Widoki_z_Twierdzy_Narikala_(05).jpg",
+  "modifications": "уменьшен размер до 1920 px по ширине, преобразовано в WebP",
+  "description": "Панорама Тбилиси с Домом юстиции в центре; вид с Нарикалы.",
+  "visualTags": [
+    "aerial",
+    "panorama",
+    "multiple-buildings",
+    "tree",
+    "water",
+    "roof",
+    "subject-far"
+  ],
+  "width": 1920,
+  "height": 1280,
+  "rating": 44
+}
