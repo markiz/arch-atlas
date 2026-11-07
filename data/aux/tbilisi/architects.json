@@ -565,5 +565,41 @@
       "ka": "მასიმილიანო ფუკსასი",
       "uk": "Массіміліано Фуксас"
     }
+  },
+  "michele-de-lucchi": {
+    "source": "Микеле Де Лукки",
+    "labels": {
+      "ru": "Микеле Де Лукки",
+      "en": "Michele De Lucchi",
+      "ka": "მიკელე დე ლუკი",
+      "uk": "Мікеле Де Луккі"
+    }
+  },
+  "giorgi-batiashvili": {
+    "source": "Георгий Батиашвили",
+    "labels": {
+      "ru": "Георгий Батиашвили",
+      "en": "Giorgi Batiashvili",
+      "ka": "გიორგი ბათიაშვილი",
+      "uk": "Георгій Батіашвілі"
+    }
+  },
+  "valeria-hajibeili": {
+    "source": "Валерия Хаджибейли",
+    "labels": {
+      "ru": "Валерия Хаджибейли",
+      "en": "Valeria Hajibeili",
+      "ka": "ვალერია ჰაჯიბეილი",
+      "uk": "Валерія Хаджибейлі"
+    }
+  },
+  "freyrie-pestalozza": {
+    "source": "Freyrie & Pestalozza",
+    "labels": {
+      "ru": "Freyrie & Pestalozza",
+      "en": "Freyrie & Pestalozza",
+      "ka": "Freyrie & Pestalozza",
+      "uk": "Freyrie & Pestalozza"
+    }
   }
 }
