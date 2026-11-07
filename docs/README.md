@@ -28,6 +28,7 @@
 ## Скрипты
 
 - [long-running-scripts.md](long-running-scripts.md) — обязательный прогресс, ETA и общие helper'ы.
+- [../scripts/README.md](../scripts/README.md) — какие скрипты постоянные, а какие разовые (разовые живут в `work/`).
 
 ## Исследование очередей
 

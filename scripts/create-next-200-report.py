@@ -7,6 +7,7 @@ source links and completeness flags, not the registry's descriptive text.
 import argparse
 import json
 import math
+import os
 import re
 import sys
 import urllib.parse
@@ -251,16 +252,31 @@ def build_report(force=False, output=None, exclude_queues=(), label=None, max_di
         gaps['outline_match_over_5m'] += row['_distance_m'] > 5
 
     queue_title = label or 'следующие 200 объектов Тбилиси'
-    prior_note = ''
+
+    def doc_rel(target: str) -> str:
+        return os.path.relpath((ROOT / target).resolve(), report_path.parent).replace(os.sep, '/')
+
+    prior_paragraph = ''
+    prior_bullet = ''
     if exclude_queues:
-        prior_note = f'- Исключены все записи предыдущих очередей: {", ".join(f"`{path}`" for path in exclude_queues)}. Это не даёт повторно отобрать уже разобранных кандидатов.\n'
+        prior_links = ', '.join(f'[{Path(path).stem}]({doc_rel(path)})' for path in exclude_queues)
+        prior_paragraph = f'Предыдущие очереди: {prior_links}. '
+        prior_bullet = (
+            f'- Исключены все записи предыдущих очередей: '
+            f'{", ".join(f"`{path}`" for path in exclude_queues)}. '
+            'Это не даёт повторно отобрать уже разобранных кандидатов.\n'
+        )
+    prior_paragraph += (
+        f'Итоги — в [архивном указателе исследований]({doc_rel("docs/archive/research/README.md")}) '
+        f'и [регистре первой очереди]({doc_rel("docs/research-queue-progress.md")}). '
+        'Эта очередь только подготовлена: карточек из неё ещё нет, факты не проверялись.'
+    )
     lines = [
         f'# Исследовательская очередь: {queue_title}',
         '',
         '**Статус:** очередь кандидатов для редакционной проверки; эти записи ещё не добавлены в каталог атласа и не разбирались.',
         '',
-        ('Предыдущая очередь: [research-next-200.md](research-next-200.md), её итоги — в [регистре](research-queue-progress.md) '
-         'и [отчёте волны 4](research-queue-wave-4.md). Эта очередь только подготовлена: карточек из неё ещё нет, факты не проверялись.'),
+        prior_paragraph,
         '',
         f"**Снимок:** {datetime.now(timezone.utc).date().isoformat()} UTC. Контуры: © участники OpenStreetMap, [ODbL](https://www.openstreetmap.org/copyright).",
         '',
@@ -269,7 +285,7 @@ def build_report(force=False, output=None, exclude_queues=(), label=None, max_di
         f'- В официальном реестре найдено записей по Тбилиси: **{len(registry)}**. Запрос: `Region=N\'თბილისი\'` к [слою недвижимых памятников](https://memkvidreoba.gov.ge/arcgisch/rest/services/CultureWMS/PS_ImmovableMonumentObjectP/MapServer/1).',
         f'- Сопоставление выполнено с {len(outlines):,} контурами из локальной OSM-выгрузки `raw/osm/osm-tbilisi-building-outlines.geojson` и {len(atlas)} карточками атласа на момент отбора.',
         '- Отобраны записи с классификацией архитектуры, отдельным контуром OSM в радиусе примерно 17 м, без близкого совпадения или значительного пересечения с текущей карточкой атласа. Сначала взяты записи с конкретным названием и содержательным описанием.',
-        prior_note.rstrip('\n'),
+        prior_bullet.rstrip('\n'),
         '- Сопоставление точки реестра с контуром автоматическое. Даже расстояние 0 м не подтверждает, что реестр и контур относятся к одному корпусу; каждую пару нужно проверить на карте и по адресу.',
         '- Официальные текстовые поля не перепечатываются в этом отчёте: условия повторного использования данных реестра не установлены. Идентификаторы нужны для открытия карточек источника.',
         '',

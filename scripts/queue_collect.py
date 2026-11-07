@@ -42,7 +42,7 @@ except ImportError:
     sys.exit('This script requires shapely: python3 -m pip install shapely')
 
 ROOT = Path(__file__).resolve().parent.parent
-QUEUE_PATH = ROOT / 'docs/archive/research/queue-1-heritage-200/screening/research-next-200.md'
+QUEUE_PATH = ROOT / 'docs/research-next-200-v5.md'
 ATLAS_PATH = ROOT / 'public/atlas/buildings.json'
 PLACE_IDS_PATH = ROOT / 'data/research-next-200-google-place-ids.json'
 DEFAULT_OUT = ROOT / 'work/queue'

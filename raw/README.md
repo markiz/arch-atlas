@@ -28,19 +28,21 @@ raw/
 | `osm/metekhi-way.json` (~5 КиБ) | Полная геометрия ОСМ-пути Метехи | `api.openstreetmap.org` (cgimap) | Повторить запрос к OSM API по way ID; нужен только `scripts/resolve-geometries.py` для проверки контура Метехи |
 | `research/research-candidates.json` (~120 КиБ) | Кандидаты с историческими/охранными тегами: ID, теги, контур, Wikidata QID | Собирает `scripts/research-heritage.py` | Запустить `python3 scripts/research-heritage.py` (нужна сеть) |
 | `research/wikidata-heritage.json` (~1 МиБ) | Сохранённые сущности Wikidata по кандидатам | Собирает `scripts/research-heritage.py` | То же |
-| `research/gallery-research.json` (~150 КиБ) | Найденные файлы Commons по кандидатам: лицензии, авторы, ссылки | Собирает `scripts/fetch-galleries.py` | То же, после `research-heritage.py` |
+| `research/gallery-research.json` (~150 КиБ) | Исторический снимок найденных файлов Commons по кандидатам: лицензии, авторы, ссылки | Собран удалённым разовым скриптом `fetch-galleries.py` | Заново не собирается; см. git history. Для новых задач разовые скрипты создаются в `work/` |
 
 ## Кто читает
 
 - `scripts/build-data.py` — `osm/grid/*.xml`, `osm/osm-tbilisi-selected.json`, `osm/osm-tbilisi-building-outlines.geojson`; собирает `public/atlas/basemap.geojson` и `public/atlas/building-outlines.geojson`.
 - `scripts/build-map-layers.mjs` — хеширует этот же набор и `data/`, чтобы не пересобирать слои без изменений.
-- `scripts/import-landmarks.py`, `scripts/enrich-basemap-*.mjs`, `scripts/resolve-geometries.py` — сетка и `osm/metekhi-way.json`.
-- `scripts/research-heritage.py`, `scripts/fetch-galleries.py`, `scripts/fetch-depicts.py`, `scripts/collect-photo-candidates.py`, `scripts/fetch-extra-categories.py`, `scripts/inspect-commons-categories.py` — файлы из `research/`.
+- `scripts/import-landmarks.py`, `scripts/resolve-geometries.py` — сетка и `osm/metekhi-way.json`.
+- `scripts/research-heritage.py` — `research/research-candidates.json`, `research/wikidata-heritage.json`; `scripts/collect-photo-candidates.py` читает `research/research-candidates.json` как необязательный источник тегов OSM.
 - `scripts/create-next-200-report.py`, `scripts/extract-tbilisi-building-outlines.py` — контуры зданий.
+
+`research/gallery-research.json` — исторический снимок: текущие скрипты его не читают.
 
 ## Правила
 
-1. Новый источник кладём в `raw/osm/` или `raw/research/` с загрузчиком в `scripts/` и фиксируем в таблице выше endpoint, параметры, время загрузки и время базы OSM.
+1. Новый источник кладём в `raw/osm/` или `raw/research/` с загрузчиком: повторяемый — в `scripts/`, одноразовый — в `work/` (в Git не входит). В таблице выше фиксируем endpoint, параметры, время загрузки и время базы OSM.
 2. Не редактируем эти файлы вручную: меняется только содержимое, полученное от источника, либо файл пересоздаётся скриптом.
 3. Не храним здесь промежуточные ответы API по отдельным зданиям, тестовые запросы и картинки-кандидаты: для исследования используйте `work/` (в Git не входит), а в `raw/` оставляйте только то, что читает сборка.
 4. Большие производные файлы (например, контуры зданий) допускаются, если без них чистая сборка перестаёт работать; в самом файле или рядом должно быть записано, из чего и как он получен.

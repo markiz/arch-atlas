@@ -22,7 +22,7 @@ from typing import Any
 from progress import Progress
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_QUEUE = ROOT / 'docs/archive/research/queue-1-heritage-200/screening/research-next-200.md'
+DEFAULT_QUEUE = ROOT / 'docs/research-next-200-v5.md'
 DEFAULT_WORK = ROOT / 'work/queue'
 DEFAULT_ATLAS = ROOT / 'public/atlas/buildings.json'
 OVERRIDES_PATH = ROOT / 'data/osm-candidate-overrides.json'

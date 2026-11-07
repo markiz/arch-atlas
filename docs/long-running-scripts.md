@@ -145,12 +145,14 @@ const files = await Promise.all(paths.map(async path => {
 
 ## 6. Текущее покрытие
 
+Одноразовые исследовательские скрипты не коммитятся в `scripts/`: они живут в `work/` и не входят в этот список. Если разовый скрипт стал повторяемым инструментом, он переезжает в `scripts/`, получает прогресс, документацию и тесты.
+
 Прогресс уже добавлен в:
 
-- сетевые загрузчики: `fetch-osm.py`, `fetch-more.py`, `fetch-more-2.py`, `fetch-sources.py`, `fetch-conservatory.py`, `fetch-curated-photos.py`, `fetch-curated-remaining.py`, `fetch-specific-fixes.py`, `fetch-depicts.py`, `fetch-extra-categories.py`, `fetch-fallback-photos.py`, `fetch-registry-photos.py`, `batch-registry-review.py`, `fetch-galleries.py`, `fetch-selected-photos.py`, `batch-google-addresses.py`;
+- сетевые загрузчики: `fetch-osm.py`, `fetch-fallback-photos.py`, `fetch-registry-photos.py`, `batch-registry-review.py`, `fetch-selected-photos.py`, `batch-google-addresses.py`, `collect-photo-candidates.py`, `apply-photo-candidates.py`;
 - сбор и очередь: `queue_collect.py`, `queue_report.py`, `create-next-200-report.py`, `research-heritage.py`, `resolve-geometries.py`, `extract-tbilisi-building-outlines.py`, `build-data.py`, `assemble-atlas.mjs`, `validate_cards.py`;
-- сборка и проверка: `create-manifest.mjs`, `enrich-basemap-landmarks.mjs`, `enrich-basemap-names.mjs`, `check-data.mjs`, `verify-dist.mjs`.
+- сборка и проверка: `create-manifest.mjs`, `check-data.mjs`, `verify-dist.mjs`.
 
-`inspect-commons-categories.py` делает один запрос и печатает только стадии «запрос/получено»; отдельный ETA для одной операции не нужен. `queue_report.py` при чтении локального индекса обычно завершается быстрее секунды, но при сканировании `collect.json` и `verdict.json` показывает прогресс по файлам.
+`queue_report.py` при чтении локального индекса обычно завершается быстрее секунды, но при сканировании `collect.json` и `verdict.json` показывает прогресс по файлам.
 
 При добавлении нового скрипта или новой длительной фазы в существующий скрипт это правило действует без отдельного напоминания.

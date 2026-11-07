@@ -108,7 +108,7 @@
    - категории файла для подтверждения или отклонения адреса.
    Поиск идёт через HTML-страницу Special:Search и кэшируется в `work/photo-research/`, метаданные — пакетами через Commons API. Кандидаты и отчёт складываются в `work/photo-research/candidates.json`; в карточки скрипт не пишет.
 2. `scripts/apply-photo-candidates.py` — скачивает выбранные снимки, применяет лимиты 1920/1200, убирает почти-дубли по perceptual hash, добивает галерею до трёх, ставит свободные снимки перед fallback реестра, сохраняет файлы по SHA-256 и пишет порядок id в карточки. Список ручного отбора после визуальной проверки — `data/photo-gallery-selection.json`; кандидаты вне его не добавляются. Отчёт — `work/photo-research/applied.json`.
-3. `npm run photos:thumbs` — создаёт недостающие превью 720 px в `data/thumbnails/` по sha256-идентификаторам; `npm run build`, `npm run check` и `npm run dev` вызывают этот шаг автоматически. После разовой миграции старых данных `npm run photos:migrate` раскладывает файлы по sha256 и sidecars.
+3. `npm run photos:thumbs` — создаёт недостающие превью 720 px в `data/thumbnails/` по sha256-идентификаторам; `npm run build`, `npm run check` и `npm run dev` вызывают этот шаг автоматически. Старые данные уже переведены на sha256; отдельная разовая миграция в текущем пайплайне не нужна.
 
 Проверка перед добавлением:
 

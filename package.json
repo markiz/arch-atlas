@@ -19,7 +19,6 @@
     "photos:review-sheets": "python3 scripts/photo-visual-review.py sheets",
     "photos:apply-tags": "python3 scripts/photo-visual-review.py apply",
     "photos:review-status": "python3 scripts/photo-visual-review.py status",
-    "photos:migrate": "python3 scripts/migrate-photo-ids.py",
     "photos:thumbs": "node scripts/create-photo-thumbs.mjs",
     "test": "node --test tests/*.test.mjs",
     "verify": "node scripts/verify-dist.mjs",
