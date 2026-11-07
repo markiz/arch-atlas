@@ -28,7 +28,9 @@
   "minYear": 1896,
   "maxYear": 1896,
   "yearLabelId": "year-1896",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

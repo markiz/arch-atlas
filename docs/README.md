@@ -15,7 +15,7 @@
 - [name-consistency-review.md](name-consistency-review.md) — ручная проверка названий перед добавлением.
 - [google-place-id-manual-review.md](google-place-id-manual-review.md) — объекты без Place ID.
 - [research-missing-descriptions.md](research-missing-descriptions.md) — 89 карточек с шаблонным описанием: 50 заполнено, 39 осталось; источники и что проверять дальше.
-- [style-taxonomy.md](style-taxonomy.md) — атомарные стили, составные `styleId` и открытые вопросы.
+- [style-taxonomy.md](style-taxonomy.md) — атомарные стили, массивы `styleIds` и открытые вопросы.
 
 ## Фотографии
 

@@ -29,7 +29,9 @@
   "minYear": 1915,
   "maxYear": 1915,
   "yearLabelId": "year-1915",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "nikolai-obolonsky"
   ],

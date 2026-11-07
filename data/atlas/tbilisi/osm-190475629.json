@@ -28,7 +28,9 @@
   "minYear": 1902,
   "maxYear": 1906,
   "yearLabelId": "period-1902-1906",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "mikhail-ogandzhanov"
   ],

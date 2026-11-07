@@ -29,7 +29,9 @@
   "minYear": 1838,
   "maxYear": 1838,
   "yearLabelId": "year-1838",
-  "styleId": "neoclassicism",
+  "styleIds": [
+    "neoclassicism"
+  ],
   "architectIds": [
     "giovanni-bernardazzi",
     "giuseppe-bernardazzi"

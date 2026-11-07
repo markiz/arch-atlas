@@ -28,7 +28,9 @@
   "minYear": 1880,
   "maxYear": 1899,
   "yearLabelId": "late-19th-century",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

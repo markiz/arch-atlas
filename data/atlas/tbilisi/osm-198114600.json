@@ -28,7 +28,9 @@
   "minYear": 1900,
   "maxYear": 1935,
   "yearLabelId": "period-1900-1935",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

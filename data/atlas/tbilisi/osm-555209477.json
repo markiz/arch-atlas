@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

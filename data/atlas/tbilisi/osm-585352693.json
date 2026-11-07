@@ -28,7 +28,9 @@
   "minYear": 1995,
   "maxYear": 2004,
   "yearLabelId": "period-1995-2004",
-  "styleId": "georgian-revival",
+  "styleIds": [
+    "georgian-revival"
+  ],
   "architectIds": [
     "archil-mindiashvili"
   ],

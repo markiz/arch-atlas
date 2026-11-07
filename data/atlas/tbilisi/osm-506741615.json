@@ -29,7 +29,10 @@
   "minYear": 1723,
   "maxYear": 1723,
   "yearLabelId": "year-1723",
-  "styleId": "islamic-architecture+neo-gothic",
+  "styleIds": [
+    "islamic-architecture",
+    "neo-gothic"
+  ],
   "architectIds": [
     "osmans",
     "giovanni-scudieri"

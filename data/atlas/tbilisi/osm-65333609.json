@@ -29,7 +29,9 @@
   "minYear": 1880,
   "maxYear": 1880,
   "yearLabelId": "year-1880",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

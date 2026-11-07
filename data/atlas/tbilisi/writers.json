@@ -29,7 +29,9 @@
   "minYear": 1905,
   "maxYear": 1905,
   "yearLabelId": "period-1903-1905",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "karl-zaar",
     "alexander-ozerov",

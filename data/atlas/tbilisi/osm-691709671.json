@@ -29,7 +29,9 @@
   "minYear": 1800,
   "maxYear": 1899,
   "yearLabelId": "year-19th-century",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "avlabari",
   "coordinates": [

@@ -29,7 +29,9 @@
   "minYear": 1896,
   "maxYear": 1896,
   "yearLabelId": "year-1896",
-  "styleId": "neo-baroque",
+  "styleIds": [
+    "neo-baroque"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

@@ -28,7 +28,9 @@
   "minYear": 1867,
   "maxYear": 1867,
   "yearLabelId": "year-1867",
-  "styleId": "neoclassicism",
+  "styleIds": [
+    "neoclassicism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

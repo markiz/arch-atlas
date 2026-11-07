@@ -28,7 +28,9 @@
   "minYear": 1910,
   "maxYear": 1910,
   "yearLabelId": "year-1910",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "ortachala",
   "coordinates": [

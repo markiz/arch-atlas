@@ -29,7 +29,9 @@
   "minYear": 1804,
   "maxYear": 1808,
   "yearLabelId": "year-1804-1808",
-  "styleId": "neo-gothic",
+  "styleIds": [
+    "neo-gothic"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

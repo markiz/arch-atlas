@@ -79,12 +79,12 @@ function referenceLabels(file,table,id,kind){
   return requireLabels(file,entry.labels,`${kind} "${id}" labels`);
 }
 
-function styleLabels(file,table,value){
-  const id=requireString(file,value,'styleId');
-  const parts=id.split('+');
-  if(new Set(parts).size!==parts.length)fail(file,`styleId "${id}" has duplicate components`);
+function styleLabels(file,table,values){
+  if(!Array.isArray(values)||!values.length)fail(file,'styleIds must be a non-empty array');
+  if(new Set(values).size!==values.length)fail(file,'styleIds must not contain duplicates');
   const labels={ru:[],en:[],ka:[],uk:[]};
-  for(const part of parts){
+  for(const part of values){
+    if(typeof part!=='string'||!part.trim())fail(file,'styleIds must contain non-empty strings');
     const entry=table[part];
     if(!entry)fail(file,`unknown style reference "${part}"`);
     if(!isPlainObject(entry.labels))fail(file,`style "${part}" has no labels in the shared dictionary`);
@@ -161,7 +161,6 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   const descriptions=requireLabels(file,card.descriptions,'descriptions');
   const histories=card.histories===undefined?null:requireLabels(file,card.histories,'histories');
 
-  const styleId=requireString(file,card.styleId,'styleId');
   const yearLabelId=requireReference(file,card.yearLabelId,attributes.yearLabels,'construction label');
   const districtId=requireReference(file,card.districtId,attributes.districts,'district');
   if(!Array.isArray(card.architectIds))fail(file,'architectIds must be an array');
@@ -193,7 +192,8 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
   const seenPhotos=new Set();
   const photos=card.photos.map((photoId,index)=>validatePhoto(file,photoId,index,seenPhotos,city,photoMetadata));
 
-  const styles=styleLabels(file,attributes.styles,styleId);
+  const styleIds=card.styleIds;
+  const styles=styleLabels(file,attributes.styles,styleIds);
   const yearLabels=referenceLabels(file,attributes.yearLabels,yearLabelId,'construction label');
   const districts=referenceLabels(file,attributes.districts,districtId,'district');
   const architectsByLanguage={ru:[],en:[],ka:[],uk:[]};
@@ -223,7 +223,7 @@ export function hydrateCard(card,attributes,file=`<${card?.id??'unknown'}>`,city
     architectIds,
     architectsByLanguage,
     style:styles.ru,
-    styleId,
+    styleIds,
     styles,
     description:descriptions.ru,
     descriptions,

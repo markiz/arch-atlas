@@ -29,7 +29,9 @@
   "minYear": 1863,
   "maxYear": 1864,
   "yearLabelId": "year-1863-1864",
-  "styleId": "russian-style",
+  "styleIds": [
+    "russian-style"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

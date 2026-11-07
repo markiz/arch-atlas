@@ -28,7 +28,9 @@
   "minYear": 1800,
   "maxYear": 1850,
   "yearLabelId": "first-half-19th-century",
-  "styleId": "classicism",
+  "styleIds": [
+    "classicism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

@@ -29,7 +29,9 @@
   "minYear": 1846,
   "maxYear": 1856,
   "yearLabelId": "year-1846-1856",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "ortachala",
   "coordinates": [

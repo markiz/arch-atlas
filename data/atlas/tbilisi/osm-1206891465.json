@@ -29,7 +29,10 @@
   "minYear": 1914,
   "maxYear": 1914,
   "yearLabelId": "year-1914",
-  "styleId": "neoclassicism+art-nouveau",
+  "styleIds": [
+    "neoclassicism",
+    "art-nouveau"
+  ],
   "architectIds": [
     "georgy-aladzhanov"
   ],

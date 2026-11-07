@@ -29,7 +29,9 @@
   "minYear": 1870,
   "maxYear": 1877,
   "yearLabelId": "year-1870-1877",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "albert-salzmann"
   ],

@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "ghazar-sarkisian"
   ],

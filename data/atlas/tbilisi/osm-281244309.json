@@ -28,7 +28,9 @@
   "minYear": 1870,
   "maxYear": 1899,
   "yearLabelId": "late-19th-century",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

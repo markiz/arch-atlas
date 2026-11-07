@@ -28,7 +28,9 @@
   "minYear": 1940,
   "maxYear": 1959,
   "yearLabelId": "mid-20th-century",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

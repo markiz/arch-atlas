@@ -29,7 +29,9 @@
   "minYear": 1893,
   "maxYear": 1893,
   "yearLabelId": "year-1893",
-  "styleId": "neo-moorish",
+  "styleIds": [
+    "neo-moorish"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

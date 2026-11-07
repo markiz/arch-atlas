@@ -29,7 +29,9 @@
   "minYear": 1909,
   "maxYear": 1909,
   "yearLabelId": "year-1909",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "krichinsky"
   ],

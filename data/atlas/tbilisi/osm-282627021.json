@@ -28,7 +28,9 @@
   "minYear": 1890,
   "maxYear": 1899,
   "yearLabelId": "late-19th-century",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

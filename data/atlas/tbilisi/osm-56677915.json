@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "neo-baroque",
+  "styleIds": [
+    "neo-baroque"
+  ],
   "architectIds": [
     "albert-salzmann"
   ],

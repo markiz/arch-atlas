@@ -28,7 +28,9 @@
   "minYear": 1876,
   "maxYear": 1876,
   "yearLabelId": "year-1876",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

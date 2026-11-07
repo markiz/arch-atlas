@@ -29,7 +29,9 @@
   "minYear": 1900,
   "maxYear": 1909,
   "yearLabelId": "1900s",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

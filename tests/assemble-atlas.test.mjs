@@ -28,7 +28,7 @@ function card(id,overrides={}){
   minYear:1905,
   maxYear:1905,
   yearLabelId:'year-1905',
-  styleId:'art-nouveau',
+  styleIds:['art-nouveau'],
   architectIds:['saar'],
   districtId:'sololaki',
   coordinates:[44.8,41.7],
@@ -103,7 +103,7 @@ test('rejects a filename that does not match the card id',async()=>{
 test('rejects unknown style and architect references',async()=>{
  const root=await fixture();
  try{
-  await writeCard(root,'osm-1.json',card('osm-1',{styleId:'missing-style'}));
+  await writeCard(root,'osm-1.json',card('osm-1',{styleIds:['missing-style']}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/unknown style reference/);
   await writeCard(root,'osm-1.json',card('osm-1',{architectIds:['missing-architect']}));
   await assert.rejects(()=>assembleAtlas({root,outFile:path.join(root,'out.json'),quiet:true}),/unknown architectIds\[0\] reference/);

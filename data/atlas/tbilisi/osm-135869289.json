@@ -29,7 +29,9 @@
   "minYear": 1889,
   "maxYear": 1892,
   "yearLabelId": "year-1889-1892",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "alexander-shimkevich"
   ],

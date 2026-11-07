@@ -29,7 +29,9 @@
   "minYear": 1896,
   "maxYear": 1896,
   "yearLabelId": "period-1880-1896",
-  "styleId": "neo-moorish",
+  "styleIds": [
+    "neo-moorish"
+  ],
   "architectIds": [
     "viktor-shreter"
   ],

@@ -29,7 +29,9 @@
   "minYear": 1400,
   "maxYear": 1425,
   "yearLabelId": "early-15th-century",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

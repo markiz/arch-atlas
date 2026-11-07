@@ -29,7 +29,9 @@
   "minYear": 1874,
   "maxYear": 1884,
   "yearLabelId": "research-5004",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "research-architect-5004"
   ],

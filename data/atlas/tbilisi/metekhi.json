@@ -29,7 +29,9 @@
   "minYear": 1201,
   "maxYear": 1300,
   "yearLabelId": "century-13",
-  "styleId": "medieval-georgian-architecture",
+  "styleIds": [
+    "medieval-georgian-architecture"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

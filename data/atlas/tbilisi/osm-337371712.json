@@ -28,7 +28,9 @@
   "minYear": 1890,
   "maxYear": 1900,
   "yearLabelId": "late-19th-century",
-  "styleId": "neo-moorish",
+  "styleIds": [
+    "neo-moorish"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

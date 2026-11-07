@@ -28,7 +28,9 @@
   "minYear": 1981,
   "maxYear": 1984,
   "yearLabelId": "period-1981-1984",
-  "styleId": "postmodernism",
+  "styleIds": [
+    "postmodernism"
+  ],
   "architectIds": [
     "viktor-dzhorbenadze",
     "vazha-orbeladze"

@@ -29,7 +29,9 @@
   "minYear": 1901,
   "maxYear": 1901,
   "yearLabelId": "year-1901",
-  "styleId": "russian-style",
+  "styleIds": [
+    "russian-style"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

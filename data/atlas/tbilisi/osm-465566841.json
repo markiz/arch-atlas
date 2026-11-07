@@ -29,7 +29,9 @@
   "minYear": 1900,
   "maxYear": 1902,
   "yearLabelId": "year-1900-1902",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

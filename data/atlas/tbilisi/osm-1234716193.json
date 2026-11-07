@@ -29,7 +29,9 @@
   "minYear": 1939,
   "maxYear": 1940,
   "yearLabelId": "year-1939-1940",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "saburtalo",
   "coordinates": [

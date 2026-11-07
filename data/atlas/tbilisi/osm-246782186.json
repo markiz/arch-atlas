@@ -23,7 +23,9 @@
   "minYear": 1936,
   "maxYear": 1936,
   "yearLabelId": "year-1936",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

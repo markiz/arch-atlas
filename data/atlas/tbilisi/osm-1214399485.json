@@ -28,7 +28,9 @@
   "minYear": 1966,
   "maxYear": 1966,
   "yearLabelId": "year-1966",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [
     "archil-kurdiani",
     "ketevan-sokolova-kurdiani",

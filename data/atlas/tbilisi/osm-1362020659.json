@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [
     "mikhail-chkhikvadze",
     "konstantin-chkheidze"

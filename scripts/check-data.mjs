@@ -42,7 +42,7 @@ for(const b of data){
  assert(typeof b.address==='string'&&b.address===b.addresses?.ru&&b.addresses&&['ru','en','ka','uk'].every(lang=>typeof b.addresses[lang]==='string'),`${b.id}: translated addresses`);
  assert(['ru','en','ka','uk'].every(lang=>b.addresses[lang]===''||b.addresses[lang].trim()),`${b.id}: invalid empty address`);
  assert(typeof b.history==='string',`${b.id}: history`);
- assert(typeof b.styleId==='string'&&b.styles&&['ru','en','ka','uk'].every(lang=>typeof b.styles[lang]==='string'&&b.styles[lang].trim()),`${b.id}: translated style`);
+ assert(Array.isArray(b.styleIds)&&b.styleIds.length>0&&b.styleIds.every(id=>typeof id==='string'&&id.trim())&&b.styles&&['ru','en','ka','uk'].every(lang=>typeof b.styles[lang]==='string'&&b.styles[lang].trim()),`${b.id}: translated style`);
  assert(typeof b.districtId==='string'&&b.districts&&['ru','en','ka','uk'].every(lang=>typeof b.districts[lang]==='string'&&b.districts[lang].trim()),`${b.id}: translated district`);
  assert(Array.isArray(b.architectIds)&&b.architectIds.length===b.architects.length&&b.architectsByLanguage&&['ru','en','ka','uk'].every(lang=>Array.isArray(b.architectsByLanguage[lang])&&b.architectsByLanguage[lang].length===b.architects.length&&b.architectsByLanguage[lang].every(Boolean)),`${b.id}: translated architects`);
  assert(typeof b.yearLabelId==='string'&&b.yearLabels&&['ru','en','ka','uk'].every(lang=>typeof b.yearLabels[lang]==='string'&&b.yearLabels[lang].trim()),`${b.id}: translated construction label`);

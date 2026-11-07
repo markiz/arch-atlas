@@ -28,7 +28,9 @@
   "minYear": 1879,
   "maxYear": 1879,
   "yearLabelId": "year-1879",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "leopold-bielfeld"
   ],

@@ -28,7 +28,9 @@
   "minYear": 1894,
   "maxYear": 1896,
   "yearLabelId": "period-1894-1896",
-  "styleId": "georgian-revival",
+  "styleIds": [
+    "georgian-revival"
+  ],
   "architectIds": [
     "alexander-ozerov"
   ],

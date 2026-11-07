@@ -29,7 +29,10 @@
   "minYear": 1818,
   "maxYear": 1818,
   "yearLabelId": "year-1818",
-  "styleId": "neoclassicism+art-nouveau",
+  "styleIds": [
+    "neoclassicism",
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

@@ -29,7 +29,9 @@
   "minYear": 1894,
   "maxYear": 1894,
   "yearLabelId": "year-1894",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "alexander-shimkevich"
   ],

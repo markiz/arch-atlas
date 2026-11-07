@@ -28,7 +28,9 @@
   "minYear": 1900,
   "maxYear": 1914,
   "yearLabelId": "early-20th-century",
-  "styleId": "classicism",
+  "styleIds": [
+    "classicism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

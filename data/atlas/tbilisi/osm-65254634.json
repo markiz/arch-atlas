@@ -29,7 +29,11 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "neoclassicism+neo-baroque+neo-moorish",
+  "styleIds": [
+    "neoclassicism",
+    "neo-baroque",
+    "neo-moorish"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

@@ -28,7 +28,9 @@
   "minYear": 1928,
   "maxYear": 1928,
   "yearLabelId": "year-1928",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "d-chisliev"
   ],

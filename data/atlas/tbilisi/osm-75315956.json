@@ -28,7 +28,9 @@
   "minYear": 1978,
   "maxYear": 1981,
   "yearLabelId": "period-1978-1981",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

@@ -23,7 +23,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "neoclassicism",
+  "styleIds": [
+    "neoclassicism"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

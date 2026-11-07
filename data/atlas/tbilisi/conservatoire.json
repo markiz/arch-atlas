@@ -29,7 +29,9 @@
   "minYear": 1904,
   "maxYear": 1904,
   "yearLabelId": "period-1901-1904",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "alexander-shimkevich"
   ],

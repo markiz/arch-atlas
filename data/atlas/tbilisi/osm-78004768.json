@@ -29,7 +29,9 @@
   "minYear": 1824,
   "maxYear": 1824,
   "yearLabelId": "year-1824",
-  "styleId": "classicism",
+  "styleIds": [
+    "classicism"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

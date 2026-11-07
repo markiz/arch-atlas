@@ -29,7 +29,9 @@
   "minYear": 1903,
   "maxYear": 1903,
   "yearLabelId": "year-1903",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "ghazar-sarkisian"
   ],

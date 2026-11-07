@@ -29,7 +29,9 @@
   "minYear": 1970,
   "maxYear": 1980,
   "yearLabelId": "year-1970-1980",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [
     "vladimir-aleksi-meskhishvili",
     "teimuraz-mikashavidze"

@@ -29,7 +29,9 @@
   "minYear": 1912,
   "maxYear": 1913,
   "yearLabelId": "year-1912-1913",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [
     "alexander-rogoisky"
   ],

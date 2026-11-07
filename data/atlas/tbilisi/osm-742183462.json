@@ -28,7 +28,9 @@
   "minYear": 1978,
   "maxYear": 1978,
   "yearLabelId": "year-1978",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [],
   "districtId": "saburtalo",
   "coordinates": [

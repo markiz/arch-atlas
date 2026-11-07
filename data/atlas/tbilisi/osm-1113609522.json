@@ -28,7 +28,9 @@
   "minYear": 1872,
   "maxYear": 1872,
   "yearLabelId": "year-1872",
-  "styleId": "classicism",
+  "styleIds": [
+    "classicism"
+  ],
   "architectIds": [
     "albert-salzmann"
   ],

@@ -29,7 +29,9 @@
   "minYear": 1859,
   "maxYear": 1879,
   "yearLabelId": "year-1859-1879",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

@@ -29,7 +29,9 @@
   "minYear": 1890,
   "maxYear": 1899,
   "yearLabelId": "1890s",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

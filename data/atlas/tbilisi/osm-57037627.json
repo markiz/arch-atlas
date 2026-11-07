@@ -29,7 +29,9 @@
   "minYear": 1950,
   "maxYear": 1952,
   "yearLabelId": "research-3137",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "research-architect-3137"
   ],

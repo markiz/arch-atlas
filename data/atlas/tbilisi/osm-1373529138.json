@@ -28,7 +28,9 @@
   "minYear": 1927,
   "maxYear": 1929,
   "yearLabelId": "period-1927-1929",
-  "styleId": "neoclassicism",
+  "styleIds": [
+    "neoclassicism"
+  ],
   "architectIds": [
     "nikolai-severov"
   ],

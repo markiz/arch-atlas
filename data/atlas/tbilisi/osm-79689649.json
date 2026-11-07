@@ -28,7 +28,9 @@
   "minYear": 1891,
   "maxYear": 1891,
   "yearLabelId": "year-1891",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "didube",
   "coordinates": [

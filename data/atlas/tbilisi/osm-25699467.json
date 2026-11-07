@@ -29,7 +29,9 @@
   "minYear": 1936,
   "maxYear": 1938,
   "yearLabelId": "year-1936-1938",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "funicular-architect-1",
     "funicular-architect-2",

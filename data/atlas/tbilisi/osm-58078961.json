@@ -29,7 +29,9 @@
   "minYear": 1911,
   "maxYear": 1913,
   "yearLabelId": "year-1911-1913",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

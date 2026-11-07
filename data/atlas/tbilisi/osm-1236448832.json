@@ -28,7 +28,9 @@
   "minYear": 1975,
   "maxYear": 1977,
   "yearLabelId": "period-1975-1977",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [
     "giorgi-chakhava",
     "zurab-djalagonia"

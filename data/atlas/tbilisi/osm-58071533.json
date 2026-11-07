@@ -29,7 +29,9 @@
   "minYear": 1973,
   "maxYear": 1973,
   "yearLabelId": "year-1973",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [
     "vladimir-aleksi-meskhishvili",
     "germane-ghudushauri"

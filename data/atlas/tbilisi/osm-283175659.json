@@ -28,7 +28,9 @@
   "minYear": 1911,
   "maxYear": 1911,
   "yearLabelId": "year-1911",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

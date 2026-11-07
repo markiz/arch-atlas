@@ -29,7 +29,9 @@
   "minYear": 1900,
   "maxYear": 1909,
   "yearLabelId": "1900s",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "isani",
   "coordinates": [

@@ -29,7 +29,9 @@
   "minYear": 1957,
   "maxYear": 1961,
   "yearLabelId": "year-1957-1961",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "vladimir-aleksi-meskhishvili",
     "yuri-kasradze"

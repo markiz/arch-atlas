@@ -29,7 +29,9 @@
   "minYear": 1868,
   "maxYear": 1868,
   "yearLabelId": "year-1868",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

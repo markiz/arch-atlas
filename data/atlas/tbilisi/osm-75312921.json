@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "neo-moorish",
+  "styleIds": [
+    "neo-moorish"
+  ],
   "architectIds": [
     "paul-friedrich-stern"
   ],

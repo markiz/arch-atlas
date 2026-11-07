@@ -28,7 +28,9 @@
   "minYear": 1850,
   "maxYear": 1859,
   "yearLabelId": "mid-19th-century",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "ortachala",
   "coordinates": [

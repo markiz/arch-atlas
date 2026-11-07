@@ -139,7 +139,7 @@ def main() -> int:
         return 1
 
     tables = {
-        'styleId': attributes.get('styles', {}),
+        'styleIds': attributes.get('styles', {}),
         'yearLabelId': attributes.get('yearLabels', {}),
         'districtId': attributes.get('districts', {}),
     }
@@ -198,16 +198,17 @@ def main() -> int:
 
         for field, table in tables.items():
             value = card.get(field)
-            if field == 'styleId':
-                if not isinstance(value, str) or not value.strip():
-                    errors.append(f'{label}: styleId must be a non-empty string')
+            if field == 'styleIds':
+                if not isinstance(value, list) or not value:
+                    errors.append(f'{label}: styleIds must be a non-empty array')
                 else:
-                    parts = value.split('+')
-                    if len(parts) != len(set(parts)):
-                        errors.append(f'{label}: styleId has duplicate components {value!r}')
-                    for part in parts:
-                        if part not in table:
-                            errors.append(f'{label}: unknown styleId component {part!r}')
+                    if len(value) != len(set(value)):
+                        errors.append(f'{label}: styleIds has duplicate entries {value!r}')
+                    for part in value:
+                        if not isinstance(part, str) or not part.strip():
+                            errors.append(f'{label}: styleIds must contain non-empty strings')
+                        elif part not in table:
+                            errors.append(f'{label}: unknown styleIds entry {part!r}')
                 continue
             if value not in table:
                 errors.append(f'{label}: unknown {field} reference {value!r}')

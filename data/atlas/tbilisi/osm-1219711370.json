@@ -28,7 +28,9 @@
   "minYear": 1840,
   "maxYear": 1860,
   "yearLabelId": "mid-19th-century",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

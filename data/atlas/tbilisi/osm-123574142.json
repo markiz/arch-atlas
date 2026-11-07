@@ -29,7 +29,9 @@
   "minYear": 1790,
   "maxYear": 1799,
   "yearLabelId": "late-18th-century",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "avlabari",
   "coordinates": [

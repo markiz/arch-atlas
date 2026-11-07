@@ -29,7 +29,9 @@
   "minYear": 1776,
   "maxYear": 1776,
   "yearLabelId": "year-1776",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "avlabari",
   "coordinates": [

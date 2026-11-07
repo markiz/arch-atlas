@@ -29,7 +29,9 @@
   "minYear": 1860,
   "maxYear": 1950,
   "yearLabelId": "1860s-early-20th-century",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

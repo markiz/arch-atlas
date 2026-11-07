@@ -113,7 +113,7 @@ npm run build                   # упаковка карточек, маниф�
 | `raw/research/research-candidates.json` | Результат отбора OSM-кандидатов: ID, теги, контур, Wikidata QID |
 | `raw/research/wikidata-heritage.json` | Сохранённые сущности Wikidata |
 | `raw/research/gallery-research.json` | Ответы поиска фотографий Commons; не основной источник сборки сайта |
-| `data/atlas/tbilisi/<id>.json` | **Исходники карточек.** Один pretty-JSON на объект: имена, адреса, описания и история со всеми переводами, координаты, контур, фотографии и источники. Стиль, архитекторы, район и подпись датировки остаются ссылками (`styleId`, `architectIds`, `districtId`, `yearLabelId`). Имя файла равно `id` карточки |
+| `data/atlas/tbilisi/<id>.json` | **Исходники карточек.** Один pretty-JSON на объект: имена, адреса, описания и история со всеми переводами, координаты, контур, фотографии и источники. Стиль, архитекторы, район и подпись датировки остаются ссылками (`styleIds`, `architectIds`, `districtId`, `yearLabelId`). Имя файла равно `id` карточки |
 | `data/landmarks/tbilisi/<id>.json` | **Исходники ориентиров подложки.** Один pretty-JSON на объект: категория, точка, имена и короткие описания на четырёх языках, источник, охранный статус, Wikidata/Wikipedia и компоненты рейтинга значимости. Схема — [landmark-schema.md](landmark-schema.md); полигоны, фотографии и история здесь не хранятся |
 | `data/name-translation-rules.json` | **Единый редакционный словарь названий.** Канонические термины, допустимые синонимы, опечатки, транслитерация, различение верхняя/нижняя и старая/новая, правила для общих названий. Используется при ручной проверке названий, а не для автоматической замены текста |
 | `data/aux/tbilisi/styles.json`, `architects.json`, `districts.json`, `year-labels.json` | Редактируемые городские справочники стабильных ID и подписей стилей, районов, датировок и архитекторов; карточки ссылаются на них, а не дублируют подписи |
@@ -147,7 +147,7 @@ npm run build                   # упаковка карточек, маниф�
 
 ### Формат исходной карточки
 
-`data/atlas/tbilisi/<id>.json` — pretty-JSON (`indent=2`, UTF-8, завершающий перевод строки). Имя файла совпадает с `id`. Большинство id имеют вид `osm-<номер>`; 10 ранних редакционных карточек сохраняют короткие id (`opera`, `writers`, `imeli`, …), поэтому их файлы называются `opera.json` и т. д. Обязательные поля: `id`, `names`, `addresses`, `descriptions`, `minYear`, `maxYear`, `styleId`, `architectIds`, `districtId`, `yearLabelId`, `coordinates`, `geometry`, `geometryQuality`, `photos`, `source`. Необязательные: `histories`, `osmId`, `originalLanguage`, `otherSource`, `geometryRole`, `geometryVariants`, `googlePlaceId`, `googlePlaceIdSource`, `geometryQualityTranslations` (объект `{en,ka,uk}` с переводами технического описания контура).
+`data/atlas/tbilisi/<id>.json` — pretty-JSON (`indent=2`, UTF-8, завершающий перевод строки). Имя файла совпадает с `id`. Большинство id имеют вид `osm-<номер>`; 10 ранних редакционных карточек сохраняют короткие id (`opera`, `writers`, `imeli`, …), поэтому их файлы называются `opera.json` и т. д. Обязательные поля: `id`, `names`, `addresses`, `descriptions`, `minYear`, `maxYear`, `styleIds`, `architectIds`, `districtId`, `yearLabelId`, `coordinates`, `geometry`, `geometryQuality`, `photos`, `source`. Необязательные: `histories`, `osmId`, `originalLanguage`, `otherSource`, `geometryRole`, `geometryVariants`, `googlePlaceId`, `googlePlaceIdSource`, `geometryQualityTranslations` (объект `{en,ka,uk}` с переводами технического описания контура).
 
 ```json
 {
@@ -161,7 +161,7 @@ npm run build                   # упаковка карточек, маниф�
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "undetermined",
+  "styleIds": ["undetermined"],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [44.7905317, 41.7025608],
@@ -175,7 +175,7 @@ npm run build                   # упаковка карточек, маниф�
 }
 ```
 
-`styleId`, `architectIds`, `districtId` и `yearLabelId` — ссылки в городские справочники `data/aux/<city>/`; подписи на четырёх языках и производные поля (`name`, `style`, `yearLabel`, `architectsByLanguage` и т. п.) подставляет `scripts/assemble-atlas.mjs`, читая `data/aux/<city>.json`. Справочники разделены по видам: `styles.json`, `architects.json`, `districts.json`, `year-labels.json`; каждый — объект `ID -> {source?, labels:{ru,en,ka,uk}}`. `source` необязателен и служит исходной подписью; `labels.ru` — основная русская подпись. `scripts/merge-aux.mjs` проверяет все четыре языка и склеивает файлы в единый `data/aux/<city>.json`. Не храните их в карточке: иначе появится второй источник истины. `minYear`/`maxYear` — либо оба `null`, либо оба целых и `minYear <= maxYear`. `photos` может быть пустым массивом; порядок sha256-идентификаторов задаёт порядок галереи, а полная атрибуция каждого id лежит в sidecar `data/photos/<city>/<sha256>.metadata.json`.
+`styleIds`, `architectIds`, `districtId` и `yearLabelId` — ссылки в городские справочники `data/aux/<city>/`; подписи на четырёх языках и производные поля (`name`, `style`, `yearLabel`, `architectsByLanguage` и т. п.) подставляет `scripts/assemble-atlas.mjs`, читая `data/aux/<city>.json`. Справочники разделены по видам: `styles.json`, `architects.json`, `districts.json`, `year-labels.json`; каждый — объект `ID -> {source?, labels:{ru,en,ka,uk}}`. `source` необязателен и служит исходной подписью; `labels.ru` — основная русская подпись. `scripts/merge-aux.mjs` проверяет все четыре языка и склеивает файлы в единый `data/aux/<city>.json`. Не храните их в карточке: иначе появится второй источник истины. `minYear`/`maxYear` — либо оба `null`, либо оба целых и `minYear <= maxYear`. `photos` может быть пустым массивом; порядок sha256-идентификаторов задаёт порядок галереи, а полная атрибуция каждого id лежит в sidecar `data/photos/<city>/<sha256>.metadata.json`.
 
 Основной путь — `collect-photo-candidates.py` и `apply-photo-candidates.py`: первый собирает кандидатов в `work/photo-research/candidates.json`, второй сверяет их с `data/photo-gallery-selection.json`, скачивает выбранные снимки и пишет карточки. Для реестра памятников отдельный путь — `fetch-registry-photos.py`: `--review` собирает все `photoIds` записи и контактные листы, `--apply` берёт ручной отбор из `data/registry-photo-selection.json`. Точечные `fetch-selected-photos.py` и `fetch-fallback-photos.py` тоже сохраняют проверенное фото в `data/photos/tbilisi/<sha256>.webp`, пишут sidecar и добавляют id в упорядоченный массив `photos`. Затем `npm run photos:thumbs` создаёт недостающие превью 720 px в `data/thumbnails/`; `npm run build` делает это автоматически. Само появление JSON или WebP не подключает изображение к сайту.
 
@@ -192,13 +192,13 @@ npm run build                   # упаковка карточек, маниф�
 
 Wikidata загружается через `https://www.wikidata.org/w/api.php`, `action=wbgetentities`, пакетами по 25 QID, с `labels|claims|sitelinks`, языками `ru|ka|en` и тремя попытками. Частичный ответ после ошибок нужно выявлять отдельно.
 
-Новая карточка пишется сразу в `data/atlas/tbilisi/<id>.json`. Старый генератор `build-heritage-extra.py`, который собирал `data/heritage-extra.json` и обрезал набор до 90 записей, удалён: он смешивал автоматический отбор с редакционными правками и зависел от предыдущей публичной сборки. Автоматически можно подготовить черновик фактов и контура, но итоговую карточку с переводами и атрибуцией фото проверяет и сохраняет редактор. `scripts/assemble-atlas.mjs` падает с понятной ошибкой, если в карточке нет обязательных переводов или ссылка (`styleId`, `architectIds`, `districtId`, `yearLabelId`) отсутствует в городском справочнике.
+Новая карточка пишется сразу в `data/atlas/tbilisi/<id>.json`. Старый генератор `build-heritage-extra.py`, который собирал `data/heritage-extra.json` и обрезал набор до 90 записей, удалён: он смешивал автоматический отбор с редакционными правками и зависел от предыдущей публичной сборки. Автоматически можно подготовить черновик фактов и контура, но итоговую карточку с переводами и атрибуцией фото проверяет и сохраняет редактор. `scripts/assemble-atlas.mjs` падает с понятной ошибкой, если в карточке нет обязательных переводов или ссылка (`styleIds`, `architectIds`, `districtId`, `yearLabelId`) отсутствует в городском справочнике.
 
 ### Требуемая детализация карточки
 
 Контракт задают [типы](../src/types.ts), [упаковщик карточек](../scripts/assemble-atlas.mjs), [проверка исходников](../scripts/validate_cards.py) и [проверка собранных данных](../scripts/check-data.mjs).
 
-В исходном файле не дублируются производные поля: хранятся `names`, `addresses`, `descriptions`, `histories`, `coordinates`, `geometry`, `photos`, `source` и ссылки `styleId`, `architectIds`, `districtId`, `yearLabelId`. Поля `name`, `nameKa/En/Uk`, `address`, `district`, `style`, `yearLabel`, `architects`, `styles`, `districts`, `yearLabels`, `architectsByLanguage` — производные: их подставляет `scripts/assemble-atlas.mjs` для интерфейса из переводов и городского aux-словаря.
+В исходном файле не дублируются производные поля: хранятся `names`, `addresses`, `descriptions`, `histories`, `coordinates`, `geometry`, `photos`, `source` и ссылки `styleIds`, `architectIds`, `districtId`, `yearLabelId`. Поля `name`, `nameKa/En/Uk`, `address`, `district`, `style`, `yearLabel`, `architects`, `styles`, `districts`, `yearLabels`, `architectsByLanguage` — производные: их подставляет `scripts/assemble-atlas.mjs` для интерфейса из переводов и городского aux-словаря.
 
 | Поле | Что записываем |
 |---|---|
@@ -208,7 +208,7 @@ Wikidata загружается через `https://www.wikidata.org/w/api.php`,
 | `district`, `districtId`, `districts` | Проверенный исторический район из канонического списка; город и «Старый Тбилиси» не используются. Правила и таблица — [district-attribution.md](district-attribution.md) |
 | `minYear`, `maxYear`, `yearLabel`, `yearLabelId`, `yearLabels` | Обоснованный интервал датировки и понятная подпись; при отсутствии данных оба года `null` |
 | `architects`, `architectIds`, `architectsByLanguage` | Подтверждённые авторы; если неизвестны — пустые массивы |
-| `style`, `styleId`, `styles` | Подтверждённый стиль или «Не определён»; не выводить из внешнего сходства |
+| `style`, `styleIds`, `styles` | Подтверждённый стиль или «Не определён»; не выводить из внешнего сходства |
 | `description`, `descriptions` | Кратко: что это за здание и чем архитектурно интересно; для автоматических карточек честное указание на источник отбора |
 | `history`, `histories` | Этапы строительства, перестройки и использования; только подтверждённые сведения |
 | `source`, `otherSource` | Прямые страницы, подтверждающие факты; фотостраница хранится отдельно в фотографии |

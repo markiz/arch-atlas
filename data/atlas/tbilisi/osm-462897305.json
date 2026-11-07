@@ -28,7 +28,9 @@
   "minYear": 1935,
   "maxYear": 1937,
   "yearLabelId": "period-1935-1937",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [
     "mikheil-kalashnikov"
   ],

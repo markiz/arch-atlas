@@ -28,7 +28,9 @@
   "minYear": 1908,
   "maxYear": 1908,
   "yearLabelId": "year-1908",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

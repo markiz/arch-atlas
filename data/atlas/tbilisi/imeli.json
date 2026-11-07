@@ -29,7 +29,9 @@
   "minYear": 1938,
   "maxYear": 1938,
   "yearLabelId": "period-1934-1938",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [
     "alexey-shchusev"
   ],

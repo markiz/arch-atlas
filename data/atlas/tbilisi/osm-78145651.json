@@ -28,7 +28,9 @@
   "minYear": 1996,
   "maxYear": 1997,
   "yearLabelId": "period-1996-1997",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "tariel-kiparoidze"
   ],

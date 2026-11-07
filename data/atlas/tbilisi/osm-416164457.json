@@ -29,7 +29,9 @@
   "minYear": 1905,
   "maxYear": 1905,
   "yearLabelId": "year-1905",
-  "styleId": "neo-gothic",
+  "styleIds": [
+    "neo-gothic"
+  ],
   "architectIds": [
     "alexander-ozerov"
   ],

@@ -29,7 +29,9 @@
   "minYear": 501,
   "maxYear": 600,
   "yearLabelId": "century-6",
-  "styleId": "early-christian-basilica",
+  "styleIds": [
+    "early-christian-basilica"
+  ],
   "architectIds": [],
   "districtId": "kala",
   "coordinates": [

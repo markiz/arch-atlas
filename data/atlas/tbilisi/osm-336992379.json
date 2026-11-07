@@ -23,7 +23,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "empire",
+  "styleIds": [
+    "empire"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

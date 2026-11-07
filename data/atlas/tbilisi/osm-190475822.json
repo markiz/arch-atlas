@@ -29,7 +29,9 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "russian-style",
+  "styleIds": [
+    "russian-style"
+  ],
   "architectIds": [
     "k-antonov"
   ],

@@ -28,7 +28,9 @@
   "minYear": 1895,
   "maxYear": 1910,
   "yearLabelId": "turn-of-19th-20th",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

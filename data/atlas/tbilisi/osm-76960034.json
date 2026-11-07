@@ -29,7 +29,9 @@
   "minYear": 1930,
   "maxYear": 1930,
   "yearLabelId": "year-1930",
-  "styleId": "constructivism",
+  "styleIds": [
+    "constructivism"
+  ],
   "architectIds": [
     "m-buzogli"
   ],

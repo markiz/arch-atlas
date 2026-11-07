@@ -29,7 +29,9 @@
   "minYear": 1910,
   "maxYear": 1910,
   "yearLabelId": "period-1904-1910",
-  "styleId": "georgian-revival",
+  "styleIds": [
+    "georgian-revival"
+  ],
   "architectIds": [
     "leopold-bielfeld"
   ],

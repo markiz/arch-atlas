@@ -28,7 +28,9 @@
   "minYear": 1940,
   "maxYear": 1949,
   "yearLabelId": "1940s",
-  "styleId": "soviet-neoclassicism",
+  "styleIds": [
+    "soviet-neoclassicism"
+  ],
   "architectIds": [],
   "districtId": "didube",
   "coordinates": [

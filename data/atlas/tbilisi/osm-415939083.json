@@ -28,7 +28,9 @@
   "minYear": 1900,
   "maxYear": 1919,
   "yearLabelId": "early-20th-century",
-  "styleId": "pseudo-classicism",
+  "styleIds": [
+    "pseudo-classicism"
+  ],
   "architectIds": [],
   "districtId": "didube",
   "coordinates": [

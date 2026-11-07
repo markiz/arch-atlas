@@ -28,7 +28,9 @@
   "minYear": 1901,
   "maxYear": 1901,
   "yearLabelId": "year-1901",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "mtatsminda",
   "coordinates": [

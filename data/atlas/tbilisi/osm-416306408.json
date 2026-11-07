@@ -28,7 +28,9 @@
   "minYear": 1900,
   "maxYear": 1913,
   "yearLabelId": "early-20th-century",
-  "styleId": "art-nouveau",
+  "styleIds": [
+    "art-nouveau"
+  ],
   "architectIds": [],
   "districtId": "didube",
   "coordinates": [

@@ -28,7 +28,9 @@
   "minYear": 1900,
   "maxYear": 1909,
   "yearLabelId": "early-20th-century",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "didube",
   "coordinates": [

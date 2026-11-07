@@ -29,7 +29,9 @@
   "minYear": 1926,
   "maxYear": 1930,
   "yearLabelId": "research-4579",
-  "styleId": "constructivism",
+  "styleIds": [
+    "constructivism"
+  ],
   "architectIds": [
     "d-chisliev"
   ],

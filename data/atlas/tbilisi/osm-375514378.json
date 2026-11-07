@@ -28,7 +28,9 @@
   "minYear": 1875,
   "maxYear": 1899,
   "yearLabelId": "late-19th-century",
-  "styleId": "pseudo-classicism",
+  "styleIds": [
+    "pseudo-classicism"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

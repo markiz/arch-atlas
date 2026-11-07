@@ -29,7 +29,9 @@
   "minYear": 1890,
   "maxYear": 1890,
   "yearLabelId": "year-1890",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "robert-gedike"
   ],

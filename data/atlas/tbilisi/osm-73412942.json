@@ -29,7 +29,9 @@
   "minYear": 1890,
   "maxYear": 1895,
   "yearLabelId": "research-year-4945",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "chughureti",
   "coordinates": [

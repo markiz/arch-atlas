@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import {period,normalize,filterBuildings,styleEntries} from '../src/domain.js';
 const empty={query:'',from:'',to:'',architect:[],style:[]};
 const data=[
- {id:'old',name:'Анчисхати',nameKa:'ანჩისხატი',nameEn:'Anchiskhati',address:'Шавтели',district:'Старый Тбилиси',style:'Базилика',styleId:'basilica',architects:[],architectIds:[],minYear:501,maxYear:600,osmId:'way/78357093'},
- {id:'uncertain',name:'Дом Ёжика',nameKa:'სახლი',nameEn:'House',address:'Тбилиси',addresses:{en:'13 Machabeli Street'},district:'Центр',style:'Модерн, Неоготика',styleId:'art-nouveau+neo-gothic',styles:{en:'Art Nouveau, Neo-Gothic'},architects:['Заар','Озеров'],architectIds:['saar','ozerov'],architectsByLanguage:{en:['Karl Saar','Alexander Ozerov']},minYear:1895,maxYear:1905},
- {id:'unknown',name:'Дом без даты',nameKa:'',nameEn:'',address:'',district:'',style:'Модерн',styleId:'art-nouveau',architects:[],architectIds:[],minYear:null,maxYear:null}
+ {id:'old',name:'Анчисхати',nameKa:'ანჩისხატი',nameEn:'Anchiskhati',address:'Шавтели',district:'Старый Тбилиси',style:'Базилика',styleIds:['basilica'],architects:[],architectIds:[],minYear:501,maxYear:600,osmId:'way/78357093'},
+ {id:'uncertain',name:'Дом Ёжика',nameKa:'სახლი',nameEn:'House',address:'Тбилиси',addresses:{en:'13 Machabeli Street'},district:'Центр',style:'Модерн, Неоготика',styleIds:['art-nouveau','neo-gothic'],styles:{en:'Art Nouveau, Neo-Gothic'},architects:['Заар','Озеров'],architectIds:['saar','ozerov'],architectsByLanguage:{en:['Karl Saar','Alexander Ozerov']},minYear:1895,maxYear:1905},
+ {id:'unknown',name:'Дом без даты',nameKa:'',nameEn:'',address:'',district:'',style:'Модерн',styleIds:['art-nouveau'],architects:[],architectIds:[],minYear:null,maxYear:null}
 ];
 test('period boundaries and ranges',()=>{assert.equal(period(1799,1799).label,'До 1800');assert.equal(period(1800,1800).label,'1800–1849');assert.equal(period(1899,1899).label,'1850–1899');assert.equal(period(1900,1900).label,'1900–1919');assert.equal(period(1992,1992).label,'С 1992');assert.equal(period(1895,1905).label,'Несколько периодов');assert.equal(period(null,null).label,'Неизвестно')});
 test('normalization and multilingual search',()=>{

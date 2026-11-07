@@ -29,7 +29,10 @@
   "minYear": null,
   "maxYear": null,
   "yearLabelId": "unknown",
-  "styleId": "art-nouveau+neo-gothic",
+  "styleIds": [
+    "art-nouveau",
+    "neo-gothic"
+  ],
   "architectIds": [
     "alexander-ozerov"
   ],

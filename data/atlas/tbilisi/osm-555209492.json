@@ -28,7 +28,9 @@
   "minYear": 1914,
   "maxYear": 1914,
   "yearLabelId": "year-1914",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [],
   "districtId": "sololaki",
   "coordinates": [

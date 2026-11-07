@@ -29,7 +29,9 @@
   "minYear": 1900,
   "maxYear": 1900,
   "yearLabelId": "year-1900",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "alexander-rogoisky"
   ],

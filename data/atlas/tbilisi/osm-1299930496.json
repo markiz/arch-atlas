@@ -28,7 +28,9 @@
   "minYear": 1967,
   "maxYear": 1967,
   "yearLabelId": "year-1967",
-  "styleId": "soviet-modernism",
+  "styleIds": [
+    "soviet-modernism"
+  ],
   "architectIds": [
     "otar-kalandarishvili",
     "i-tskhomelidze"

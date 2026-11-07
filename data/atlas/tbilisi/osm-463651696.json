@@ -28,7 +28,9 @@
   "minYear": 1881,
   "maxYear": 1881,
   "yearLabelId": "year-1881",
-  "styleId": "eclecticism",
+  "styleIds": [
+    "eclecticism"
+  ],
   "architectIds": [
     "paul-friedrich-stern"
   ],

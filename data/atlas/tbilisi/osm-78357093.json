@@ -29,7 +29,9 @@
   "minYear": 1947,
   "maxYear": 1958,
   "yearLabelId": "research-5009",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [],
   "districtId": "vera",
   "coordinates": [

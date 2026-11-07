@@ -28,7 +28,9 @@
   "minYear": 1901,
   "maxYear": 1903,
   "yearLabelId": "period-1901-1903",
-  "styleId": "undetermined",
+  "styleIds": [
+    "undetermined"
+  ],
   "architectIds": [
     "leopold-bielfeld",
     "alexander-rogoisky"
