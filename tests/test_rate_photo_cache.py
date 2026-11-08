@@ -23,7 +23,7 @@ class StatsCacheTests(unittest.TestCase):
     def entry(self, **overrides):
         value = {
             'size': self.info.st_size,
-            'mtimeNs': self.info.st_mtime_ns,
+            'mtime': int(self.info.st_mtime),
             'stats': [12.5, 3.0, 4, 5, 6],
         }
         value.update(overrides)
@@ -37,7 +37,14 @@ class StatsCacheTests(unittest.TestCase):
 
     def test_changed_size_or_mtime_invalidates(self):
         self.assertIsNone(rate_photos.cached_stats(self.entry(size=self.info.st_size + 1), self.info))
-        self.assertIsNone(rate_photos.cached_stats(self.entry(mtimeNs=self.info.st_mtime_ns + 1), self.info))
+        self.assertIsNone(rate_photos.cached_stats(self.entry(mtime=int(self.info.st_mtime) + 1), self.info))
+
+    def test_subsecond_mtime_is_ignored(self):
+        # tar (used by deploy-pages.sh) keeps only whole seconds; the cache key
+        # must survive a copy that zeroes the fractional part.
+        info = type('Info', (), {'st_size': 7, 'st_mtime': 1000.987654})()
+        entry = {'size': 7, 'mtime': 1000, 'stats': [1.0, 2.0, 3, 4, 5]}
+        self.assertEqual(rate_photos.cached_stats(entry, info), (1.0, 2.0, 3, 4, 5))
 
     def test_malformed_entry_is_ignored(self):
         for broken in (None, [], {}, self.entry(stats=[1, 2]), self.entry(stats=[1, 2, 3, 4, True])):

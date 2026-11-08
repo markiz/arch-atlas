@@ -1,5 +1,19 @@
+# Secrets
 .env
 .env.*
 *.env
 *.env.*
 !.env.example
+
+# The image only needs package files and scripts/: the project itself is
+# bind-mounted at runtime. Keep the build context small instead of shipping
+# multi-gigabyte data, caches and research artifacts to the Docker daemon.
+.git
+node_modules
+dist
+work
+.tmp
+.cache
+public
+data
+raw

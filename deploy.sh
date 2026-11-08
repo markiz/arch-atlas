@@ -46,12 +46,12 @@ if [[ -n "$remote_refs" ]]; then
   parent="$(git rev-parse --verify 'FETCH_HEAD^{commit}')"
 fi
 
-# Копия включает незакоммиченные изменения и остаётся после запуска.
+# Копия включает незакоммиченные изменения и удаляется после запуска.
 tmp_dir="$(mktemp -d "${TMPDIR:-/tmp}/atlas-pages.XXXXXXXX")"
 tmp_dir="$(cd "$tmp_dir" && pwd -P)"
 repo_root="$(cd "$repo_root" && pwd -P)"
 
-trap 'printf "\nВременная копия сохранена: %s\n" "$tmp_dir"' EXIT
+trap 'rm -rf -- "$tmp_dir"' EXIT
 
 case "$tmp_dir/" in
   "$repo_root/"*)
@@ -66,6 +66,8 @@ tar -C "$repo_root" \
   --exclude='./node_modules' \
   --exclude='./dist' \
   --exclude='./.deps' \
+  --exclude='./work' \
+  --exclude='./.tmp' \
   -cf - . | tar -C "$tmp_dir/project" -xf -
 
 if [[ -d "$repo_root/node_modules" ]] && npm ls --depth=0 >/dev/null 2>&1; then
@@ -80,6 +82,20 @@ printf 'Собираю сайт...\n'
 
 [[ -f "$tmp_dir/project/dist/index.html" ]] ||
   fail 'После сборки не найден dist/index.html.'
+
+# Превью и статистика рейтингов — дорогие производные данные. Обе папки
+# gitignored, но возвращаем их в рабочий репозиторий: следующая сборка во
+# временной копии иначе снова начнёт с холодной генерации.
+if [[ -d "$tmp_dir/project/.cache" ]]; then
+  mkdir -p "$repo_root/.cache"
+  cp -a --update "$tmp_dir/project/.cache/." "$repo_root/.cache/" ||
+    printf 'Предупреждение: не удалось сохранить .cache, следующая сборка будет холоднее.\n' >&2
+fi
+if [[ -d "$tmp_dir/project/data/thumbnails" ]]; then
+  mkdir -p "$repo_root/data/thumbnails"
+  cp -a --update "$tmp_dir/project/data/thumbnails/." "$repo_root/data/thumbnails/" ||
+    printf 'Предупреждение: не удалось сохранить data/thumbnails, следующая сборка будет холоднее.\n' >&2
+fi
 
 mkdir -p "$tmp_dir/site"
 cp -R "$tmp_dir/project/dist/." "$tmp_dir/site/"

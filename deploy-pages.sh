@@ -42,12 +42,12 @@ else
   fail 'PAGES_PUSH должен быть yes или no.'
 fi
 
-# The temporary directory is private and deliberately kept for inspection.
-# It contains a copy of the current files, including uncommitted changes.
+# The temporary directory is private and removed on exit. It contains a copy of
+# the current files, including uncommitted changes.
 tmp_dir="$(mktemp -d "${TMPDIR:-/tmp}/atlas-pages.XXXXXXXX")"
 tmp_dir="$(cd "$tmp_dir" && pwd -P)"
 repo_root="$(cd "$repo_root" && pwd -P)"
-trap 'printf "\nВременная копия сохранена: %s\n" "$tmp_dir"' EXIT
+trap 'rm -rf -- "$tmp_dir"' EXIT
 case "$tmp_dir/" in
   "$repo_root/"*) fail 'Временная папка оказалась внутри репозитория. Задай TMPDIR вне репозитория.' ;;
 esac
@@ -55,6 +55,7 @@ mkdir -p "$tmp_dir/project"
 tar -C "$repo_root" \
   --exclude='./.git' --exclude='./node_modules' \
   --exclude='./dist' --exclude='./.deps' \
+  --exclude='./work' --exclude='./.tmp' \
   -cf - . | tar -C "$tmp_dir/project" -xf -
 if [[ -n "${ATLAS_NODE_MODULES:-}" ]]; then
   [[ -d "$ATLAS_NODE_MODULES" ]] || fail 'ATLAS_NODE_MODULES указывает на отсутствующую папку.'
@@ -75,6 +76,20 @@ fi
 printf 'Собираю сайт...\n'
 (cd "$tmp_dir/project" && npm run build)
 [[ -f "$tmp_dir/project/dist/index.html" ]] || fail 'После сборки не найден dist/index.html.'
+
+# Превью и статистика рейтингов — дорогие производные данные. Обе папки
+# gitignored, но возвращаем их в рабочий репозиторий: следующий запуск в новом
+# контейнере иначе снова начнёт с холодной генерации.
+if [[ -d "$tmp_dir/project/.cache" ]]; then
+  mkdir -p "$repo_root/.cache"
+  cp -a --update "$tmp_dir/project/.cache/." "$repo_root/.cache/" ||
+    printf 'Предупреждение: не удалось сохранить .cache, следующая сборка будет холоднее.\n' >&2
+fi
+if [[ -d "$tmp_dir/project/data/thumbnails" ]]; then
+  mkdir -p "$repo_root/data/thumbnails"
+  cp -a --update "$tmp_dir/project/data/thumbnails/." "$repo_root/data/thumbnails/" ||
+    printf 'Предупреждение: не удалось сохранить data/thumbnails, следующая сборка будет холоднее.\n' >&2
+fi
 
 # A private temporary index creates the deployment commit without switching
 # branches or modifying the user's index and working tree.

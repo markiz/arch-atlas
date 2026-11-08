@@ -33,7 +33,7 @@ dev: image
 		$(IMAGE) scripts/run-dev-server.sh
 
 build:
-	docker run \
+	docker run --rm \
 		$(ENV_FILE_ARGS) \
 		--user "$$(id -u):$$(id -g)" \
 		--mount type=bind,src="$$(pwd)",dst=/workspace \

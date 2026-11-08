@@ -130,7 +130,7 @@ git fetch origin gh-pages:refs/heads/gh-pages
 git push origin gh-pages
 ```
 
-Если имя ветки или remote отличаются, укажи `-e PAGES_BRANCH=site-pages` и при необходимости `-e PAGES_REMOTE=upstream`; последний влияет на подсказку команды push, но не вызывает соединение с remote. После изменения `package-lock.json`, `Dockerfile` или `deploy-pages.sh` повторно выполни `docker build`. Контейнер оставляет временную копию проекта внутри себя для осмотра и не удаляет её автоматически. `docker run` без `--rm` сохраняет остановленный контейнер; посмотреть его можно через `docker ps -a`.
+Если имя ветки или remote отличаются, укажи `-e PAGES_BRANCH=site-pages` и при необходимости `-e PAGES_REMOTE=upstream`; последний влияет на подсказку команды push, но не вызывает соединение с remote. После изменения `package-lock.json`, `Dockerfile` или `deploy-pages.sh` повторно выполни `docker build`. Сборка идёт во временной копии, которая не включает `work/` и `.tmp/`; сгенерированные `.cache/` и `data/thumbnails/` скрипт возвращает в рабочий репозиторий, чтобы повторные `make build` не начинали с холодной генерации превью и рейтингов.
 
 ## Происхождение и права
 

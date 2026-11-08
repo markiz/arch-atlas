@@ -19,6 +19,11 @@ content hashes, therefore (id, size, mtime) identifies identical image bytes;
 the cache is only a speed-up and is rebuilt transparently when it is missing,
 corrupt or produced by an older ``STATS_VERSION``.
 
+The mtime is stored in whole seconds on purpose: the deployment script copies
+the repository with ``tar``, whose default format drops sub-second precision.
+Nanosecond timestamps would make every copied photo look changed and force a
+full re-decode inside ``make build``.
+
 Usage:
   python3 scripts/rate-photos.py
   python3 scripts/rate-photos.py --check
@@ -42,8 +47,8 @@ from PIL import Image, ImageOps
 from atlas_source import PHOTOS_DIR, ROOT, photo_metadata_path
 from progress import Progress
 
-# Bump when image_stats() changes: every stored statistic becomes stale at once.
-STATS_VERSION = 1
+# Bump when image_stats() or the cache key changes: all stored values go stale.
+STATS_VERSION = 2
 STATS_CACHE_PATH = ROOT / '.cache/photo-stats.json'
 
 HIGH_RATING = 50
@@ -168,10 +173,10 @@ def save_stats_cache(images: dict[str, dict[str, Any]]) -> None:
 
 
 def cached_stats(entry: Any, info: Any) -> ImageStats | None:
-    """Return cached statistics only when size and mtime still match the file."""
+    """Return cached statistics only when size and mtime (seconds) still match."""
     if not isinstance(entry, dict):
         return None
-    if entry.get('size') != info.st_size or entry.get('mtimeNs') != info.st_mtime_ns:
+    if entry.get('size') != info.st_size or entry.get('mtime') != int(info.st_mtime):
         return None
     values = entry.get('stats')
     if not isinstance(values, list) or len(values) != 5:
@@ -447,7 +452,7 @@ def main() -> int:
                 cache_hits += 1
             next_cache[photo_id] = {
                 'size': info.st_size,
-                'mtimeNs': info.st_mtime_ns,
+                'mtime': int(info.st_mtime),
                 'stats': list(stats),
             }
             rating, breakdown = rate_photo(metadata, stats)
