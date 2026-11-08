@@ -13,6 +13,12 @@ with no quality flags. Night shots and dark frames are capped so that a frame
 where little is visible cannot score high. The script is idempotent and only
 rewrites a sidecar when its ``rating`` differs.
 
+Decoding every full-size WebP costs ~12 s for the current collection, so the
+grayscale statistics are cached in ``.cache/photo-stats.json``. Photo names are
+content hashes, therefore (id, size, mtime) identifies identical image bytes;
+the cache is only a speed-up and is rebuilt transparently when it is missing,
+corrupt or produced by an older ``STATS_VERSION``.
+
 Usage:
   python3 scripts/rate-photos.py
   python3 scripts/rate-photos.py --check
@@ -35,6 +41,10 @@ from PIL import Image, ImageOps
 
 from atlas_source import PHOTOS_DIR, ROOT, photo_metadata_path
 from progress import Progress
+
+# Bump when image_stats() changes: every stored statistic becomes stale at once.
+STATS_VERSION = 1
+STATS_CACHE_PATH = ROOT / '.cache/photo-stats.json'
 
 HIGH_RATING = 50
 RESOLUTION_MAX = 30
@@ -126,6 +136,49 @@ def image_stats(path: Path) -> tuple[float, float, int, int, int]:
         return 255
 
     return mean, standard_deviation, quantile(0.10), quantile(0.50), quantile(0.90)
+
+
+ImageStats = tuple[float, float, int, int, int]
+
+
+def load_stats_cache() -> dict[str, dict[str, Any]]:
+    """Read derived image statistics; a missing or broken cache means no hits."""
+    try:
+        payload = json.loads(STATS_CACHE_PATH.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return {}
+    if not isinstance(payload, dict) or payload.get('version') != STATS_VERSION:
+        return {}
+    images = payload.get('images')
+    return images if isinstance(images, dict) else {}
+
+
+def save_stats_cache(images: dict[str, dict[str, Any]]) -> None:
+    """Write the cache atomically; a cache failure must not fail the build."""
+    try:
+        STATS_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        temporary = STATS_CACHE_PATH.with_name(f'.{STATS_CACHE_PATH.name}.{uuid.uuid4().hex}.tmp')
+        temporary.write_text(
+            json.dumps({'version': STATS_VERSION, 'images': images}, ensure_ascii=False) + '\n',
+            encoding='utf-8',
+        )
+        temporary.replace(STATS_CACHE_PATH)
+    except OSError as error:
+        print(f'Could not write {STATS_CACHE_PATH}: {error}', file=sys.stderr)
+
+
+def cached_stats(entry: Any, info: Any) -> ImageStats | None:
+    """Return cached statistics only when size and mtime still match the file."""
+    if not isinstance(entry, dict):
+        return None
+    if entry.get('size') != info.st_size or entry.get('mtimeNs') != info.st_mtime_ns:
+        return None
+    values = entry.get('stats')
+    if not isinstance(values, list) or len(values) != 5:
+        return None
+    if not all(isinstance(value, (int, float)) and not isinstance(value, bool) for value in values):
+        return None
+    return (float(values[0]), float(values[1]), int(values[2]), int(values[3]), int(values[4]))
 
 
 def resolution_score(width: int, height: int) -> int:
@@ -342,6 +395,8 @@ def main() -> int:
         print(f'No images in {directory.relative_to(ROOT)}', file=sys.stderr)
         return 1
 
+    stats_cache = load_stats_cache()
+
     if args.explain:
         matches = [path for path in images if path.stem.startswith(args.explain)]
         if not matches:
@@ -350,7 +405,7 @@ def main() -> int:
         for path in matches:
             sidecar = photo_metadata_path(path.stem, args.city)
             metadata = read_metadata(sidecar)
-            stats = image_stats(path)
+            stats = cached_stats(stats_cache.get(path.stem), path.stat()) or image_stats(path)
             rating, breakdown = rate_photo(metadata, stats)
             print(json.dumps({
                 'id': path.stem,
@@ -367,8 +422,10 @@ def main() -> int:
     progress.start(f'{len(images)} images in data/photos/{args.city}')
     started = time.monotonic()
     changed = unchanged = errors = missing = 0
+    cache_hits = cache_misses = 0
     ratings: list[int] = []
     report_photos: list[dict[str, Any]] = []
+    next_cache: dict[str, dict[str, Any]] = {}
 
     for path in images:
         photo_id = path.stem
@@ -381,7 +438,18 @@ def main() -> int:
                 progress.advance(label)
                 continue
             metadata = read_metadata(sidecar)
-            stats = image_stats(path)
+            info = path.stat()
+            stats = cached_stats(stats_cache.get(photo_id), info)
+            if stats is None:
+                cache_misses += 1
+                stats = image_stats(path)
+            else:
+                cache_hits += 1
+            next_cache[photo_id] = {
+                'size': info.st_size,
+                'mtimeNs': info.st_mtime_ns,
+                'stats': list(stats),
+            }
             rating, breakdown = rate_photo(metadata, stats)
             ratings.append(rating)
             report_photos.append({
@@ -410,6 +478,8 @@ def main() -> int:
             progress.advance(label)
 
     progress.finish()
+    if not args.dry_run:
+        save_stats_cache(next_cache)
     elapsed = time.monotonic() - started
     mode = 'checked' if args.check else 'dry-run' if args.dry_run else 'updated'
     if ratings:
@@ -417,7 +487,8 @@ def main() -> int:
         buckets = distribution(ratings)
         print(
             f'Photo ratings {mode}: {changed} changed, {unchanged} unchanged, '
-            f'{missing} missing sidecar, {errors} errors in {elapsed:.1f}s; '
+            f'{missing} missing sidecar, {errors} errors in {elapsed:.1f}s '
+            f'(image stats: {cache_hits} cached, {cache_misses} decoded); '
             f'{len(ratings)} rated, avg {average:.1f}, '
             f'<50 {buckets["under50"]}, 50–69 {buckets["50to69"]}, '
             f'70–84 {buckets["70to84"]}, 85–100 {buckets["85to100"]}, '

@@ -8,6 +8,8 @@
 
 `build-map-layers.mjs`, `build-data.py`, `merge-aux.mjs`, `create-photo-thumbs.py`/`.mjs`, `sync-photos.mjs`, `rate-photos.py`, `assemble-atlas.mjs`, `assemble-landmarks.mjs`, `create-manifest.mjs`, `check-data.mjs`, `verify-dist.mjs`. Большинство из них вызываются через `npm run build`, `npm run check` или `npm run dev`.
 
+Сборка не должна пересчитывать одно и то же на каждом запуске: `build-map-layers.mjs` пропускает `build-data.py`, пока не изменился хеш входов; `create-photo-thumbs.py` кодирует недостающие превью параллельно (до 8 потоков, Pillow отпускает GIL на WebP-энкодере); `rate-photos.py` кэширует статистику яркости в `.cache/photo-stats.json` по `(sha256, size, mtime)`. После изменения алгоритма статистики поднимайте `STATS_VERSION` в скрипте.
+
 ## Данные и карта
 
 - `extract-tbilisi-building-outlines.py` — извлекает городской слой зданий из PBF Geofabrik.
