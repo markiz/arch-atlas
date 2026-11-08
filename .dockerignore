@@ -14,6 +14,7 @@ dist
 work
 .tmp
 .cache
+archive
 public
 data
 raw
