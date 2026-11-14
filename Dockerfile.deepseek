@@ -1,6 +1,7 @@
 FROM node:24-bookworm-slim
 
 ARG DSH_VERSION=0.2.1-rc.5
+ARG PLAYWRIGHT_MCP_VERSION=0.0.85
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
@@ -12,10 +13,20 @@ RUN apt-get update \
  && npm cache clean --force \
  && mkdir -p /dsh && chmod 1777 /dsh
 
+# Playwright MCP and a version-matched headless Chromium. Keep the browser
+# layer separate from the config and DSH patch so editing them does not
+# re-download Chromium.
+COPY scripts/install-browser.sh /opt/atlas-browser/
+RUN bash /opt/atlas-browser/install-browser.sh
+
+COPY scripts/mcp.config.json scripts/dsh-mcp.patch.yml /opt/atlas-browser/
+
 # HOME и DSH_HOME лежат на томе, доступном только Harness-пользователю,
 # а npm по умолчанию пишет кэш в недоступный $HOME/.npm.
 ENV NPM_CONFIG_CACHE=/tmp/npm-cache \
-    PIP_NO_CACHE_DIR=1
+    PIP_NO_CACHE_DIR=1 \
+    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers \
+    PLAYWRIGHT_MCP_CONFIG=/opt/atlas-browser/mcp.config.json
 
 COPY scripts/run-deepseek-web.sh /usr/local/bin/atlas-deepseek-web
 RUN chmod 0755 /usr/local/bin/atlas-deepseek-web

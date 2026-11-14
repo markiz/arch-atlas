@@ -1,0 +1,20 @@
+{
+  "browser": {
+    "browserName": "chromium",
+    "launchOptions": {
+      "headless": true,
+      "chromiumSandbox": false,
+      "args": ["--disable-dev-shm-usage", "--disable-gpu"]
+    },
+    "contextOptions": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      }
+    }
+  },
+  "outputDir": "/workspace/work/playwright",
+  "console": {
+    "level": "warning"
+  }
+}

@@ -103,7 +103,7 @@ npm run verify
 ## Рабочие ограничения
 
 - Не запускай `make` и `docker`; эти команды запускает пользователь.
-- Не устанавливай браузеры и инструменты автоматизации (Chromium, Playwright, Puppeteer). Вёрстку проверяй по коду и сборке; визуальную проверку в браузере выполняет пользователь.
+- Не устанавливай браузеры и инструменты автоматизации (Chromium, Playwright, Puppeteer) в хост или в рабочее дерево проекта. В образах `atlas-codex` и `atlas-deepseek` включён Playwright MCP и headless Chromium: навигация, клики, скриншоты, консоль и `run-code` доступны как `mcp__playwright__*`. Для тач-драга задай `atlasTouchParams` через `browser_evaluate` и выполни `browser_run_code_unsafe {filename: "scripts/mcp-touch-drag.js"}`. MCP отключается `ATLAS_DISABLE_MCP=1`. Подробности — [docs/browser-checks.md](docs/browser-checks.md). Проверка вне этих образов остаётся за пользователем.
 - Перед правкой смотри `git status` и не перезаписывай пользовательские изменения.
 - Не используй широкие команды удаления. Удаляй только конкретные проверенные пути.
 - Для проверки страницы используй HTTP(S), а не `file://`.

@@ -1,0 +1,37 @@
+# Agent image: build toolchain from atlas-deploy + Codex CLI + headless Chromium.
+# The builder image stays free of agent tooling. Build it first (or let Make do it):
+#   make image
+#   docker build -f Dockerfile.codex --build-arg BASE_IMAGE=atlas-deploy -t atlas-codex .
+ARG BASE_IMAGE=atlas-deploy
+FROM ${BASE_IMAGE}
+
+ARG PLAYWRIGHT_MCP_VERSION=0.0.85
+
+# Agent-only tools that the builder image deliberately does not carry: network
+# access for research, JSON/image utilities, extra Python packages and bwrap for
+# Codex's own sandbox when it is run without --dangerously-bypass-... .
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        bubblewrap curl file imagemagick jq procps \
+        python3-pip python3-pyosmium python3-shapely python3-venv \
+        unzip webp wget \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN npm install --global @openai/codex@latest \
+    && npm cache clean --force \
+    && mkdir -p /codex && chmod 1777 /codex
+
+# Playwright MCP and a version-matched headless Chromium. The builder image
+# does not get this layer. Keep the browser layer separate from the config and
+# entrypoint so editing them does not re-download Chromium.
+COPY scripts/install-browser.sh /opt/atlas-browser/
+RUN bash /opt/atlas-browser/install-browser.sh
+
+COPY scripts/mcp.config.json scripts/run-codex.sh /opt/atlas-browser/
+RUN install -m 0755 /opt/atlas-browser/run-codex.sh /usr/local/bin/atlas-codex
+
+ENV PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers \
+    PLAYWRIGHT_MCP_CONFIG=/opt/atlas-browser/mcp.config.json
+
+WORKDIR /workspace
+ENTRYPOINT ["/usr/local/bin/atlas-codex"]

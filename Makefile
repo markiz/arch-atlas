@@ -1,4 +1,5 @@
 IMAGE ?= atlas-deploy
+CODEX_IMAGE ?= atlas-codex
 REMOTE ?= origin
 BRANCH ?= gh-pages
 CODEX_VOLUME ?= atlas-codex-home
@@ -15,7 +16,7 @@ GIT_EMAIL ?= $(or $(shell git config user.email 2>/dev/null),atlas-agent@localho
 TZ ?= Asia/Tbilisi
 ROOT ?= $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 
-.PHONY: image dev build push codex deepseek-image deepseek
+.PHONY: image dev build push codex-image codex deepseek-image deepseek
 
 image:
 	docker build -t $(IMAGE) .
@@ -49,24 +50,31 @@ build:
 push:
 	git push $(REMOTE) $(BRANCH)
 
-codex: image
+# The builder image (atlas-deploy) has no Codex or browser. The agent image is
+# assembled on top of it so the build toolchain is not duplicated.
+codex-image: image
+	docker build -f Dockerfile.codex \
+		--build-arg BASE_IMAGE=$(IMAGE) \
+		-t $(CODEX_IMAGE) .
+
+codex: codex-image
 	docker run -it \
 		$(ENV_FILE_ARGS) \
 		--read-only \
 		--cap-drop=ALL \
 		--security-opt=no-new-privileges:true \
-		--tmpfs /tmp:rw,nosuid,nodev,size=256m,mode=1777 \
+		--tmpfs /tmp:rw,nosuid,nodev,size=512m,mode=1777 \
 		--user "$$(id -u):$$(id -g)" \
 		--mount type=bind,src="$$(pwd)",dst=/workspace \
 		--mount type=volume,src="$(CODEX_VOLUME)",dst=/codex \
 		-e HOME=/tmp \
 		-e CODEX_HOME=/codex \
+		-e ATLAS_DISABLE_MCP="$${ATLAS_DISABLE_MCP:-0}" \
 		-e GIT_AUTHOR_NAME="$(GIT_NAME)" \
 		-e GIT_AUTHOR_EMAIL="$(GIT_EMAIL)" \
 		-e GIT_COMMITTER_NAME="$(GIT_NAME)" \
 		-e GIT_COMMITTER_EMAIL="$(GIT_EMAIL)" \
-		--entrypoint codex \
-		$(IMAGE) --no-daemon --dangerously-bypass-approvals-and-sandbox $(ARGS)
+		$(CODEX_IMAGE) --no-daemon --dangerously-bypass-approvals-and-sandbox $(ARGS)
 
 deepseek-image:
 	docker build -f Dockerfile.deepseek -t $(DEEPSEEK_IMAGE) .
@@ -75,7 +83,6 @@ deepseek-image:
 # root, а Harness выставляет на домашнем каталоге режим 0700 и без владения
 # падает с EPERM (из-за этого ломалось чтение изображений и вложений).
 deepseek: deepseek-image
-	docker build -f Dockerfile.deepseek -t $(DEEPSEEK_IMAGE) .
 	docker run --rm -it \
 		--init \
 		--name atlas-deepseek \
@@ -96,6 +103,7 @@ deepseek: deepseek-image
 		-e NARB_NATIVE_CACHE_DIR=/dsh/home/native-cache \
 		-e DSH_WEB_PORT=$(DEEPSEEK_PORT) \
 		-e TZ=$(TZ) \
+		-e ATLAS_DISABLE_MCP="$${ATLAS_DISABLE_MCP:-0}" \
 		-e GIT_AUTHOR_NAME="$(GIT_NAME)" \
 		-e GIT_AUTHOR_EMAIL="$(GIT_EMAIL)" \
 		-e GIT_COMMITTER_NAME="$(GIT_NAME)" \

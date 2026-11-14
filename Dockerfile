@@ -1,17 +1,16 @@
 FROM node:24-bookworm-slim
 
+# Only what the build and local publishing pipeline needs. Codex, the browser
+# and research tools live in the separate agent images (Dockerfile.codex and
+# Dockerfile.deepseek), not here.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        bash bubblewrap ca-certificates curl diffutils file git imagemagick jq procps \
-        python3 python3-pil python3-pip python3-pyosmium python3-shapely python3-venv \
-        tar unzip webp wget \
+        ca-certificates diffutils git python3 python3-pil tar \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/atlas-deps
 COPY package.json package-lock.json ./
 RUN npm ci
-RUN npm install --global @openai/codex@latest
-RUN mkdir -p /codex && chmod 1777 /codex
 
 COPY deploy-pages.sh /usr/local/bin/atlas-deploy
 COPY docker-entrypoint.sh /usr/local/bin/atlas-entrypoint

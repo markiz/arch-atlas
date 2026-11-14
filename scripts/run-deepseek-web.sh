@@ -12,7 +12,15 @@ fi
 
 printf 'DeepSeek Harness будет доступен по адресу http://127.0.0.1:%s/\n' "$port"
 printf 'Остановка сервера: Ctrl+C. Настройки сохраняются в Docker-томе /dsh.\n'
-exec dsh web \
+
+# Playwright MCP is loaded as an overlay; the user's profile patch is not
+# modified. Set ATLAS_DISABLE_MCP=1 to boot without the browser tools.
+patch_args=()
+if [[ "${ATLAS_DISABLE_MCP:-0}" != "1" ]]; then
+  patch_args=(--patch /opt/atlas-browser/dsh-mcp.patch.yml)
+fi
+
+exec dsh web "${patch_args[@]}" \
   --host "$container_ip" \
   --port "$port" \
   --no-open \
