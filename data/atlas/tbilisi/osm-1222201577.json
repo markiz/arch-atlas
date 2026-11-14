@@ -1,0 +1,86 @@
+{
+  "id": "osm-1222201577",
+  "osmId": "way/1222201577",
+  "names": {
+    "ru": "Жилой дом на улице Виктора Джорбенадзе, 35",
+    "en": "Residential Building at 35 Viktor Jorbenadze Street",
+    "ka": "საცხოვრებელი სახლი, ვიქტორ ჯორბენაძის ქუჩა, 35",
+    "uk": "Житловий будинок на вулиці Віктора Джорбенадзе, 35"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Виктора Джорбенадзе, 35",
+    "en": "35 Viktor Jorbenadze Street",
+    "ka": "ვიქტორ ჯორბენაძის ქუჩა, 35",
+    "uk": "вулиця Віктора Джорбенадзе, 35"
+  },
+  "descriptions": {
+    "ru": "Двухэтажный угловой дом из старого кирпича с неоштукатуренным фасадом, металлической кровлей и внутренним двором. По данным реестра, здание середины XX века обладает высокой архитектурно-художественной ценностью и важной градостроительной ролью.",
+    "en": "A two-storey corner house of old brick with an unplastered facade, a metal roof and an inner courtyard. According to the heritage register, the mid-20th-century building has high architectural and artistic value and an important urban role.",
+    "ka": "ორსართულიანი კუთხის სახლი ძველი აგურით, შეულესავი ფასადით, ლითონის სახურავითა და შიდა ეზოთი. რეესტრის მიხედვით, XX საუკუნის შუა ხანის შენობას მაღალი არქიტექტურულ-მხატვრული ღირებულება და მნიშვნელოვანი ქალაქგეგმარებითი როლი აქვს.",
+    "uk": "Двоповерховий кутовий будинок зі старої цегли з непотинькованим фасадом, металевим дахом і внутрішнім двором. За даними реєстру, будівля середини XX століття має високу архітектурно-мистецьку цінність і важливу містобудівну роль."
+  },
+  "histories": {
+    "ru": "В реестре недвижимых памятников дом числится под № 3353; в качестве допустимых работ указана только реставрация.",
+    "en": "The house is listed in the heritage register as no. 3353; only restoration work is permitted.",
+    "ka": "რეესტრში სახლი აღრიცხულია №3353-ად; დასაშვებ სამუშაოებად მხოლოდ რესტავრაციაა მითითებული.",
+    "uk": "У реєстрі пам'яток будинок значиться під № 3353; серед дозволених робіт зазначена лише реставрація."
+  },
+  "minYear": 1930,
+  "maxYear": 1970,
+  "yearLabelId": "mid-20th-century",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "kala",
+  "coordinates": [
+    44.8158661,
+    41.689837
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.81581,
+          41.689894
+        ],
+        [
+          44.815957,
+          41.689857
+        ],
+        [
+          44.815935,
+          41.689799
+        ],
+        [
+          44.815859,
+          41.689817
+        ],
+        [
+          44.815824,
+          41.689748
+        ],
+        [
+          44.815745,
+          41.689758
+        ],
+        [
+          44.81581,
+          41.689894
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap; сопоставлен с реестровым контуром, требует редакционной проверки.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline matched against the heritage-register boundary; requires editorial verification.",
+    "ka": "OpenStreetMap-ის კონტური, შედარებული რეესტრის საზღვართან; საჭიროებს რედაქციულ შემოწმებას.",
+    "uk": "Контур OpenStreetMap, зіставлений з реєстровою межею; потребує редакційної перевірки."
+  },
+  "photos": [
+    "9deec816775c97218b2543e20629ce507022cc58923ff896118ebfd7d011903e"
+  ],
+  "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3353"
+}
