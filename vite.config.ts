@@ -4,6 +4,7 @@ import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
 import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
 import { assembleLandmarks } from './scripts/assemble-landmarks.mjs';
 import { buildMapLayers } from './scripts/build-map-layers.mjs';
+import { buildOutlinesBinary } from './scripts/build-outlines-binary.mjs';
 import { createManifest } from './scripts/create-manifest.mjs';
 import { createPhotoThumbs } from './scripts/create-photo-thumbs.mjs';
 import { syncPhotos } from './scripts/sync-photos.mjs';
@@ -36,6 +37,13 @@ function atlasHotReload(): Plugin {
       } catch (error) {
         server.config.logger.error(
           `[atlas] map layers: ${error instanceof Error ? error.message : String(error)}`,
+        );
+      }
+      try {
+        await buildOutlinesBinary({ quiet: true });
+      } catch (error) {
+        server.config.logger.error(
+          `[atlas] outlines binary: ${error instanceof Error ? error.message : String(error)}`,
         );
       }
       try {

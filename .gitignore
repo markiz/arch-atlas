@@ -9,10 +9,12 @@ data/photos/**/.tmp-*
 
 # Сгенерированные превью фотографий (источник — data/photos)
 data/thumbnails/
+data/cards/
 
-# Сгенерированные зеркала фотографий и превью (источники — data/photos, data/thumbnails)
+# Сгенерированные зеркала фотографий и превью (источники — data/photos, data/thumbnails, data/cards)
 public/atlas/photos/
 public/atlas/thumbnails/
+public/atlas/cards/
 
 # Сгенерированные бандлы, манифест и слои карты (источники — data/atlas, data/landmarks, data/aux, raw)
 public/atlas/buildings.json
@@ -20,6 +22,7 @@ public/atlas/landmarks.json
 public/atlas/manifest.json
 public/atlas/basemap.geojson
 public/atlas/building-outlines.geojson
+public/atlas/building-outlines.bin
 
 # Отметка входных хешей для пересборки слоёв карты (scripts/build-map-layers.mjs)
 .cache/

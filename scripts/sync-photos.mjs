@@ -116,19 +116,27 @@ export async function syncPhotos({ root = ROOT, quiet = false } = {}) {
     label: 'publish photo previews',
     quiet,
   });
+  const cards = await syncTree({
+    root,
+    sourceRelative: 'data/cards',
+    targetRelative: 'public/atlas/cards',
+    label: 'publish card previews',
+    quiet,
+  });
   return {
-    files: photos.files + thumbnails.files,
-    copied: photos.copied + thumbnails.copied,
-    kept: photos.kept + thumbnails.kept,
-    removed: photos.removed + thumbnails.removed,
+    files: photos.files + thumbnails.files + cards.files,
+    copied: photos.copied + thumbnails.copied + cards.copied,
+    kept: photos.kept + thumbnails.kept + cards.kept,
+    removed: photos.removed + thumbnails.removed + cards.removed,
     photos,
     thumbnails,
+    cards,
   };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const result = await syncPhotos();
   console.log(
-    `Published ${result.files} image files: ${result.copied} copied, ${result.kept} unchanged, ${result.removed} stale removed (${result.photos.files} photos, ${result.thumbnails.files} previews).`,
+    `Published ${result.files} image files: ${result.copied} copied, ${result.kept} unchanged, ${result.removed} stale removed (${result.photos.files} photos, ${result.thumbnails.files} previews, ${result.cards.files} cards).`,
   );
 }

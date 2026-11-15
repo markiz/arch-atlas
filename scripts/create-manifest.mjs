@@ -23,10 +23,11 @@ export async function createManifest({ root = ATLAS_ROOT, quiet = false } = {}) 
     'landmarks.json',
     'basemap.geojson',
     'building-outlines.geojson',
+    'building-outlines.bin',
     ...new Set(
       buildings.flatMap((item) =>
         (item.photos ?? (item.photo ? [item.photo] : [])).flatMap((photo) =>
-          [photo.file, photo.thumb].filter(Boolean),
+          [photo.file, photo.thumb, photo.card].filter(Boolean),
         ),
       ),
     ),

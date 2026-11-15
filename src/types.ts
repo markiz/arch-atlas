@@ -18,6 +18,8 @@ export interface Photo {
   id: string;
   file: string;
   thumb: string;
+  /** Smaller catalog-only preview; falls back to `thumb` for old bundles. */
+  card?: string;
   author: string;
   license: string;
   licenseUrl: string;

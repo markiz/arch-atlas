@@ -4,11 +4,15 @@ import type { Building } from './types';
 import { useI18n } from './i18n';
 import { AtlasCanvasMap } from './map/AtlasCanvasMap';
 import { emptyBBox, boundsFromBBox, extendBBox, geometryBounds } from './map/geometry';
-import type { BBox, Bounds, LatLng, MapViewProps } from './map/types';
+import type { BBox, Bounds, LatLng, MapViewProps, OutlineBinary } from './map/types';
+import { parseOutlineBinary } from './map/outline-binary';
 import { layerMemory } from './map/layer-state';
 import { rememberMapView, savedMapView } from './map/view-memory';
 
 type Props = MapViewProps;
+
+/** Drop the 79 MB outline graph after the layer has been off for a while. */
+const OUTLINE_RELEASE_MS = 20_000;
 
 function padded(bounds: Bounds, ratio: number): Bounds {
   const width = bounds.east - bounds.west,
@@ -54,8 +58,10 @@ export default function MapView({
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<AtlasCanvasMap | null>(null);
   const selectionRef = useRef(onSelect);
-  const buildingData = useRef<Promise<GeoJSON.FeatureCollection> | null>(null);
+  const buildingData = useRef<Promise<GeoJSON.FeatureCollection | OutlineBinary> | null>(null);
   const outlineFeatures = useRef<GeoJSON.Feature[] | null>(null);
+  const outlineBinary = useRef<OutlineBinary | null>(null);
+  const outlineReleaseTimer = useRef<number | null>(null);
   const handledFit = useRef(fit),
     handledReset = useRef(reset),
     focusHandled = useRef(onFocusHandled);
@@ -122,7 +128,10 @@ export default function MapView({
       detailedStreets,
     });
     map.setAtlas(buildings, selected, selectedPeriods, hoveredPeriod);
-    if (outlineFeatures.current && showBuildings) {
+    if (showBuildings && outlineBinary.current) {
+      map.setBuildingOutlinesBinary(outlineBinary.current);
+      map.setBuildingsVisible(true);
+    } else if (outlineFeatures.current && showBuildings) {
       map.setBuildingOutlines(outlineFeatures.current);
       map.setBuildingsVisible(true);
     }
@@ -173,19 +182,28 @@ export default function MapView({
             .join('');
           if (bytes.byteLength !== buildingOutlines.size || hash !== buildingOutlines.sha256)
             throw new Error(`Поврежден файл ${buildingOutlines.path}`);
+          if (buildingOutlines.path.endsWith('.bin')) return parseOutlineBinary(bytes);
           return JSON.parse(new TextDecoder().decode(bytes)) as GeoJSON.FeatureCollection;
         })();
       }
       try {
         const data = await buildingData.current;
         if (cancelled) return;
-        outlineFeatures.current = data.features;
-        map.setBuildingOutlines(data.features);
+        if ('features' in data) {
+          outlineFeatures.current = data.features;
+          outlineBinary.current = null;
+          map.setBuildingOutlines(data.features);
+        } else {
+          outlineFeatures.current = null;
+          outlineBinary.current = data;
+          map.setBuildingOutlinesBinary(data);
+        }
         map.setBuildingsVisible(true);
         setBuildingLayerLoading(false);
       } catch {
         buildingData.current = null;
         outlineFeatures.current = null;
+        outlineBinary.current = null;
         if (cancelled) return;
         map.setBuildingOutlines(null);
         map.setBuildingsVisible(false);
@@ -198,6 +216,27 @@ export default function MapView({
       cancelled = true;
     };
   }, [showBuildings, buildingOutlines, basemap, atlasBounds]);
+  useEffect(() => {
+    if (outlineReleaseTimer.current !== null) {
+      window.clearTimeout(outlineReleaseTimer.current);
+      outlineReleaseTimer.current = null;
+    }
+    if (!showBuildings) {
+      outlineReleaseTimer.current = window.setTimeout(() => {
+        outlineReleaseTimer.current = null;
+        mapRef.current?.setBuildingOutlines(null);
+        outlineFeatures.current = null;
+        outlineBinary.current = null;
+        buildingData.current = null;
+      }, OUTLINE_RELEASE_MS);
+    }
+    return () => {
+      if (outlineReleaseTimer.current !== null) {
+        window.clearTimeout(outlineReleaseTimer.current);
+        outlineReleaseTimer.current = null;
+      }
+    };
+  }, [showBuildings]);
   useEffect(() => {
     if (!focus) return;
     const building = buildings.find((item) => item.id === focus.id);

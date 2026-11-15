@@ -15,7 +15,7 @@ import {
   unprojectX,
   unprojectY,
 } from './geometry';
-import type { BBox, Bounds, LatLng, Point } from './types';
+import type { BBox, Bounds, LatLng, OutlineBinary, Point } from './types';
 
 export interface AtlasLayerVisibility {
   roads: boolean;
@@ -75,7 +75,7 @@ type PinchSession = { startDistance: number; anchorWorld: Point; startZoom: numb
 type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks: number[] };
 
 const MAX_CANVAS_PIXELS = 11_000_000;
-const CANVAS_PADDING = 0.3;
+const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
 const MIN_DRAG = 3;
 const DEFAULT_VISIBILITY: AtlasLayerVisibility = {
@@ -186,6 +186,7 @@ export class AtlasCanvasMap {
   private baseBoxes: Float32Array | null = null;
   private baseGroups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
   private outlineFeatures: GeoJSON.Feature[] = [];
+  private outlineBinary: OutlineBinary | null = null;
   private outlineBoxes: Float32Array | null = null;
   private atlasSource: Building[] | null = null;
   private atlasEntries: AtlasEntry[] = [];
@@ -360,7 +361,16 @@ export class AtlasCanvasMap {
   /** Building outlines are stored as feature objects + a packed bbox array. */
   setBuildingOutlines(features: GeoJSON.Feature[] | null) {
     this.outlineFeatures = features ?? [];
+    this.outlineBinary = null;
     this.outlineBoxes = features ? this.computeBoxes(features) : null;
+    if (this.buildingsVisible) this.renderBase();
+  }
+
+  /** Compact outlines from building-outlines.bin: typed arrays, no GeoJSON objects. */
+  setBuildingOutlinesBinary(binary: OutlineBinary | null) {
+    this.outlineFeatures = [];
+    this.outlineBinary = binary;
+    this.outlineBoxes = binary?.boxes ?? null;
     if (this.buildingsVisible) this.renderBase();
   }
 
@@ -752,8 +762,12 @@ export class AtlasCanvasMap {
       });
       drawGroup(landmarks, { fill: 'rgba(199,168,120,.34)', stroke: '#947652', width: 1.4 });
     }
-    if (this.buildingsVisible && this.outlineBoxes && this.outlineFeatures.length)
-      this.drawBuildingOutlines(context, view, scale, offsetX, offsetY);
+    if (this.buildingsVisible && this.outlineBoxes) {
+      if (this.outlineBinary)
+        this.drawBuildingOutlinesBinary(context, view, scale, offsetX, offsetY);
+      else if (this.outlineFeatures.length)
+        this.drawBuildingOutlines(context, view, scale, offsetX, offsetY);
+    }
   }
 
   /** Repaint one exposed strip of the base canvas at the current camera. */
@@ -947,6 +961,86 @@ export class AtlasCanvasMap {
       if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
       const x = Math.round((box.x1 + box.x2) / 2),
         y = Math.round((box.y1 + box.y2) / 2);
+      const size = 1 / this.dpr;
+      context.rect(x, y, size, size);
+    }
+    context.fillStyle = 'rgba(214,216,207,.34)';
+    context.fill();
+  }
+
+  /**
+   * Draw the compact outline file. Coordinates are flat floats and offsets are
+   * typed arrays, so this loop avoids per-feature GeoJSON objects entirely.
+   */
+  private drawBuildingOutlinesBinary(
+    context: CanvasRenderingContext2D,
+    view: Bounds,
+    scale: number,
+    offsetX: number,
+    offsetY: number,
+  ) {
+    const data = this.outlineBinary!;
+    const { points, ringStarts, featureRings, boxes, featureCount } = data;
+    const projectCanvasX = (lng: number) => ((lng + 180) / 360) * scale + offsetX;
+    const projectCanvasY = (lat: number) => {
+      const safe = Math.max(-85.0511287798, Math.min(85.0511287798, lat));
+      const sin = Math.sin((safe * Math.PI) / 180);
+      return (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * scale + offsetY;
+    };
+    const projectedBox = (index: number) => {
+      const offset = index * 4;
+      return {
+        x1: projectCanvasX(boxes[offset]),
+        y1: projectCanvasY(boxes[offset + 1]),
+        x2: projectCanvasX(boxes[offset + 2]),
+        y2: projectCanvasY(boxes[offset + 3]),
+      };
+    };
+    const BATCH_SIZE = 100;
+    let batch = 0;
+    context.beginPath();
+    for (let index = 0; index < featureCount; index++) {
+      if (!this.boxVisible(boxes, index, view)) continue;
+      const ringEnd = featureRings[index + 1];
+      if (ringEnd === featureRings[index]) continue;
+      const box = projectedBox(index);
+      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) < DOT_THRESHOLD) continue;
+      for (let ring = featureRings[index]; ring < ringEnd; ring++) {
+        const start = ringStarts[ring];
+        const end = ringStarts[ring + 1];
+        for (let pointIndex = start; pointIndex < end; pointIndex++) {
+          const x = projectCanvasX(points[pointIndex * 2]);
+          const y = projectCanvasY(points[pointIndex * 2 + 1]);
+          if (pointIndex === start) context.moveTo(x, y);
+          else context.lineTo(x, y);
+        }
+        if (end > start) context.closePath();
+      }
+      batch++;
+      if (batch >= BATCH_SIZE) {
+        context.fillStyle = 'rgba(214,216,207,.34)';
+        context.fill('evenodd');
+        context.strokeStyle = 'rgba(157,164,151,.7)';
+        context.lineWidth = 0.7;
+        context.stroke();
+        context.beginPath();
+        batch = 0;
+      }
+    }
+    if (batch) {
+      context.fillStyle = 'rgba(214,216,207,.34)';
+      context.fill('evenodd');
+      context.strokeStyle = 'rgba(157,164,151,.7)';
+      context.lineWidth = 0.7;
+      context.stroke();
+    }
+    context.beginPath();
+    for (let index = 0; index < featureCount; index++) {
+      if (!this.boxVisible(boxes, index, view)) continue;
+      const box = projectedBox(index);
+      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
+      const x = Math.round((box.x1 + box.x2) / 2);
+      const y = Math.round((box.y1 + box.y2) / 2);
       const size = 1 / this.dpr;
       context.rect(x, y, size, size);
     }

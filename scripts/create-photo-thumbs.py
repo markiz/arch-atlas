@@ -2,14 +2,18 @@
 """Create the preview version of every atlas photo.
 
 The full photograph remains the gallery image. The source card stores only the
-ordered SHA-256 photo identifiers, and the cache is content-addressed:
+ordered SHA-256 photo identifiers, and the caches are content-addressed:
 
   data/photos/<city>/<sha256>.webp -> data/thumbnails/<city>/<sha256>.webp
+                                   -> data/cards/<city>/<sha256>.webp
 
-Previews are width-limited to 720 px, preserve the source aspect ratio, and are
-never upscaled. The bundle derives the preview path as
-thumbnails/<city>/<sha256>.webp. Browser cards and the inspector show this
-preview, while the full gallery files load afterwards.
+The inspector preview is generated at a fixed height of 480 px, i.e. 2x the
+240 px photo area in the card, so its physical height is always an integer
+multiple of the rendered height. Catalog cards get a separate 360 px wide file
+so the grid does not retain 480 px tall bitmaps for every card. Both preserve
+the source aspect ratio; only the inspector preview may upscale a very small
+original to reach 480 px. The bundle derives the paths as
+thumbnails/<city>/<sha256>.webp and cards/<city>/<sha256>.webp.
 
 Because the source name is already its content hash, a changed image gets a new
 name automatically. Existing previews newer than their source are left
@@ -35,31 +39,65 @@ from pathlib import Path
 
 from PIL import Image
 
-from atlas_source import CITY, PHOTO_ID_RE, THUMBNAILS_DIR, photo_path, read_cards, thumb_path
+from atlas_source import (
+    CARDS_DIR,
+    CITY,
+    PHOTO_ID_RE,
+    THUMBNAILS_DIR,
+    card_path,
+    photo_path,
+    read_cards,
+    thumb_path,
+)
 from progress import Progress
 
-TARGET_WIDTH = 720
+# The inspector preview is 2x its 240 px rendered height (480 / 240 = 2) on
+# both desktop and mobile. Cards keep their own 360 px width and are rendered
+# at 180 px (360 / 180 = 2) or 120 px (360 / 120 = 3) on mobile.
+# Keep in sync with .photo-wrap and .card-image in src/style.css.
+THUMB_HEIGHT = 480
+CARD_WIDTH = 360
 QUALITY = 75
 # WebP preview encoding releases the GIL, so a small thread pool scales well on
 # a cold cache: eight workers turn a ~100 s serial pass into ~20 s.
 MAX_WORKERS = 8
 
 
-def make_thumb(source: Path, target: Path) -> None:
+def make_card_preview(source: Path, target: Path, width: int) -> None:
     target.parent.mkdir(parents=True, exist_ok=True)
     with Image.open(source) as image:
-        if image.width <= TARGET_WIDTH:
+        if image.width <= width:
             # Never upscale a small original just to match the nominal width.
             shutil.copyfile(source, target)
             return
-        height = max(1, round(image.height * TARGET_WIDTH / image.width))
-        preview = image.convert('RGB').resize((TARGET_WIDTH, height), Image.Resampling.LANCZOS)
+        height = max(1, round(image.height * width / image.width))
+        preview = image.convert('RGB').resize((width, height), Image.Resampling.LANCZOS)
         preview.save(target, 'WEBP', quality=QUALITY, method=6)
 
 
-def prune_thumbnails(expected: set[Path]) -> int:
+def make_inspector_preview(source: Path, target: Path, height: int) -> None:
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with Image.open(source) as image:
+        width = max(1, round(image.width * height / image.height))
+        preview = image.convert('RGB').resize((width, height), Image.Resampling.LANCZOS)
+        preview.save(target, 'WEBP', quality=QUALITY, method=6)
+
+
+def make_previews(source: Path, thumb_target: Path, card_target: Path) -> None:
+    make_inspector_preview(source, thumb_target, THUMB_HEIGHT)
+    make_card_preview(source, card_target, CARD_WIDTH)
+
+
+def preview_size(path: Path) -> tuple[int, int] | None:
+    try:
+        with Image.open(path) as image:
+            return image.size
+    except Exception:
+        return None
+
+
+def prune_previews(directory: Path, expected: set[Path]) -> int:
     """Remove previews that no card references, then empty directories."""
-    directory = THUMBNAILS_DIR / CITY
     if not directory.exists():
         return 0
     removed = 0
@@ -86,8 +124,9 @@ def main() -> int:
     args = parser.parse_args()
 
     cards = read_cards()
-    jobs: dict[str, tuple[Path, Path]] = {}
-    expected: set[Path] = set()
+    jobs: dict[str, tuple[Path, Path, Path]] = {}
+    expected_thumbs: set[Path] = set()
+    expected_cards: set[Path] = set()
     errors = 0
     for card in cards.values():
         for photo_id in card.get('photos', []):
@@ -98,22 +137,41 @@ def main() -> int:
             if photo_id in jobs:
                 continue
             source = photo_path(photo_id)
-            target = thumb_path(photo_id)
-            jobs[photo_id] = (source, target)
-            expected.add(target)
+            thumb = thumb_path(photo_id)
+            card_target = card_path(photo_id)
+            jobs[photo_id] = (source, thumb, card_target)
+            expected_thumbs.add(thumb)
+            expected_cards.add(card_target)
 
     progress = Progress(len(jobs), 'create photo previews')
-    progress.start(f'{len(jobs)} unique photos, width <= {TARGET_WIDTH}px')
+    progress.start(
+        f'{len(jobs)} unique photos, inspector previews {THUMB_HEIGHT}px high, '
+        f'cards <= {CARD_WIDTH}px wide'
+    )
     created = skipped = 0
-    pending: list[tuple[str, Path, Path]] = []
-    for photo_id, (source, target) in jobs.items():
+    pending: list[tuple[str, Path, Path, Path]] = []
+    for photo_id, (source, thumb, card_target) in jobs.items():
         label = photo_id[:12]
         if not source.exists():
             errors += 1
             print(f'{label}: missing source {source}', file=sys.stderr)
             progress.advance(f'{label}: error')
             continue
-        fresh = target.exists() and target.stat().st_mtime >= source.stat().st_mtime and target.stat().st_size > 32
+        thumb_size = preview_size(thumb) if thumb.exists() else None
+        card_size = preview_size(card_target) if card_target.exists() else None
+        thumb_fresh = (
+            thumb_size is not None
+            and thumb_size[1] == THUMB_HEIGHT
+            and thumb.stat().st_mtime >= source.stat().st_mtime
+            and thumb.stat().st_size > 32
+        )
+        card_fresh = (
+            card_size is not None
+            and card_size[0] <= CARD_WIDTH
+            and card_target.stat().st_mtime >= source.stat().st_mtime
+            and card_target.stat().st_size > 32
+        )
+        fresh = thumb_fresh and card_fresh
         if fresh and not args.force:
             skipped += 1
             progress.advance(f'{label}: exists')
@@ -122,15 +180,15 @@ def main() -> int:
             created += 1
             progress.advance(f'{label}: would create')
             continue
-        pending.append((photo_id, source, target))
+        pending.append((photo_id, source, thumb, card_target))
 
     if pending:
         workers = min(MAX_WORKERS, len(pending), os.cpu_count() or 1)
         failures: list[tuple[str, Exception]] = []
         with ThreadPoolExecutor(max_workers=workers) as pool:
             futures = {
-                pool.submit(make_thumb, source, target): photo_id[:12]
-                for photo_id, source, target in pending
+                pool.submit(make_previews, source, thumb, card_target): photo_id[:12]
+                for photo_id, source, thumb, card_target in pending
             }
             for future in as_completed(futures):
                 label = futures[future]
@@ -146,12 +204,14 @@ def main() -> int:
             print(f'{label}: {error}', file=sys.stderr)
     progress.finish()
 
-    removed = 0
+    removed = removed_cards = 0
     if not args.dry_run:
-        removed = prune_thumbnails(expected)
+        removed = prune_previews(THUMBNAILS_DIR / CITY, expected_thumbs)
+        removed_cards = prune_previews(CARDS_DIR / CITY, expected_cards)
     print(
-        f'Preview photos: {created} {"would be " if args.dry_run else ""}created, '
-        f'{skipped} up to date, {removed} stale removed, {errors} errors.'
+        f'Photo previews: {created} {"would be " if args.dry_run else ""}created, '
+        f'{skipped} up to date, {removed} stale previews removed, '
+        f'{removed_cards} stale cards removed, {errors} errors.'
     )
     return 1 if errors else 0
 

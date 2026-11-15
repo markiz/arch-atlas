@@ -253,6 +253,7 @@ test('hydrates ordered sha256 photo ids from metadata sidecars', async () => {
     );
     assert.equal(cards[0].photos[0].file, `photos/tbilisi/${second}.webp`);
     assert.equal(cards[0].photos[0].thumb, `thumbnails/tbilisi/${second}.webp`);
+    assert.equal(cards[0].photos[0].card, `cards/tbilisi/${second}.webp`);
     assert.equal(cards[0].photos[0].author, 'B');
     assert.deepEqual(cards[0].photos[0].descriptions, labels('фасад', 'facade', 'ფასადი', 'фасад'));
     assert.equal(cards[0].photos[0].width, 1600);

@@ -24,6 +24,7 @@ CITY = 'tbilisi'
 SOURCE_DIR = ROOT / 'data/atlas/tbilisi'
 PHOTOS_DIR = ROOT / 'data/photos'
 THUMBNAILS_DIR = ROOT / 'data/thumbnails'
+CARDS_DIR = ROOT / 'data/cards'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('descriptions', 'rating')
@@ -91,6 +92,13 @@ def thumb_path(photo_id: str, city: str = CITY) -> Path:
     return THUMBNAILS_DIR / city / f'{photo_id}.webp'
 
 
+def card_path(photo_id: str, city: str = CITY) -> Path:
+    """Small catalog-only preview; the 720 px thumb stays for the inspector."""
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return CARDS_DIR / city / f'{photo_id}.webp'
+
+
 def photo_relative(photo_id: str, city: str = CITY) -> str:
     """Return the published-relative path of a full photo."""
     if not PHOTO_ID_RE.fullmatch(photo_id):
@@ -103,6 +111,13 @@ def thumb_relative(photo_id: str, city: str = CITY) -> str:
     if not PHOTO_ID_RE.fullmatch(photo_id):
         raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
     return f'thumbnails/{city}/{photo_id}.webp'
+
+
+def card_relative(photo_id: str, city: str = CITY) -> str:
+    """Return the published-relative path of a catalog preview."""
+    if not PHOTO_ID_RE.fullmatch(photo_id):
+        raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
+    return f'cards/{city}/{photo_id}.webp'
 
 
 def read_photo_metadata(photo_id: str, city: str = CITY) -> dict[str, Any] | None:

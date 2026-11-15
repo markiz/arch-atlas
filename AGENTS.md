@@ -43,13 +43,13 @@ README описывает запуск, состав репозитория и �
 
 ## Что за проект
 
-- React + TypeScript + Vite + Leaflet; точка входа — `src/App.tsx`, карта — `src/MapView.tsx`.
+- React + TypeScript + Vite; точка входа — `src/App.tsx`, карта — `src/MapView.tsx` на собственном Canvas-движке `src/map/AtlasCanvasMap.ts`.
 - `vite.config.ts` задаёт `base: './'`, чтобы `dist/` работал в подкаталоге GitHub Pages.
 - Исходные карточки — `data/atlas/<city>/<id>.json`, по одному JSON на объект. Справочники стилей, архитекторов, районов и подписей дат — `data/aux/<city>/*.json`; они склеиваются в генерируемый `data/aux/<city>.json`.
 - Ориентиры — `data/landmarks/<city>/<id>.json`.
-- Фотографии — `data/photos/<city>/<sha256>.webp` и sidecar `<sha256>.metadata.json`; превью — `data/thumbnails/<city>/`.
+- Фотографии — `data/photos/<city>/<sha256>.webp` и sidecar `<sha256>.metadata.json`; превью для инспектора — `data/thumbnails/<city>/`, уменьшенные превью для каталога — `data/cards/<city>/`.
 - `raw/osm/` — сохранённые выгрузки OSM, из которых `scripts/build-data.py` собирает слои карты.
-- `public/atlas/` — генерируемый каталог: `buildings.json`, `landmarks.json`, `manifest.json`, `basemap.geojson`, `building-outlines.geojson`, `photos/`, `thumbnails/`. Не редактируй его вручную; всё это создают `npm run build`, `npm run check` и `npm run dev`.
+- `public/atlas/` — генерируемый каталог: `buildings.json`, `landmarks.json`, `manifest.json`, `basemap.geojson`, `building-outlines.geojson`, `photos/`, `thumbnails/`, `cards/`. Не редактируй его вручную; всё это создают `npm run build`, `npm run check` и `npm run dev`.
 - `dist/` — результат `npm run build`, статический сайт.
 
 ## Команды
@@ -83,10 +83,10 @@ npm run verify
 
 - Не выдумывай годы, стили, архитекторов, истории, адреса и объекты на фотографиях. Неизвестное значение должно быть явно пустым или «не установлено».
 - Каждый объект атласа обязан иметь реальный контур `Polygon`/`MultiPolygon`. Не заменяй отсутствующую геометрию точкой или придуманным прямоугольником.
-- Координаты в JSON и GeoJSON — `[longitude, latitude]`; Leaflet получает `[latitude, longitude]`.
+- Координаты в JSON и GeoJSON — `[longitude, latitude]`; Canvas-движок получает широту и долготу отдельными полями.
 - Не добавляй растровые OSM-тайлы, bitmap-подложки, `L.tileLayer` или сплошную фоновую карту из внешнего сервиса. Карта работает на локальных векторных слоях; при необходимости расширяй конкретные категории GeoJSON.
 - Фотографии адресуются по SHA-256 содержимого. Не переименовывай их вручную и не редактируй sidecar без необходимости; обязательные поля sidecar — `author`, `license`, `licenseUrl`, `source`, `modifications`, `width`, `height`, `rating`.
-- `public/atlas/`, `data/aux/<city>.json`, `data/thumbnails/`, `dist/` и `.cache/` — генерируемые артефакты. Меняй источники в `data/`, `raw/` и `src/`, а не результат сборки.
+- `public/atlas/`, `data/aux/<city>.json`, `data/thumbnails/`, `data/cards/`, `dist/` и `.cache/` — генерируемые артефакты. Меняй источники в `data/`, `raw/` и `src/`, а не результат сборки.
 - После изменения данных или сборщика запускай `npm run check`; для проверки итогового сайта — `npm run build` и `npm run verify`.
 
 ## Фото для существующих карточек

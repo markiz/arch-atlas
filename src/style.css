@@ -465,8 +465,11 @@ a {
   overflow: auto;
   overscroll-behavior: contain;
 }
+/* Inspector preview files are 480 px high, exactly 2x the 240 px box on every
+   breakpoint. Card files are 360 px wide: 2x the 180 px desktop height and 3x
+   the 120 px mobile height. Keep in sync with scripts/create-photo-thumbs.py. */
 .photo-wrap {
-  height: 208px;
+  height: 240px;
   position: relative;
   background: #e3e6dc;
 }
@@ -644,6 +647,30 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 16px;
 }
+.catalog-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 22px 0 6px;
+}
+.catalog-more button {
+  border: 1px solid #cfd9c9;
+  background: #fff;
+  color: #315b44;
+  padding: 11px 18px;
+  font-size: 12px;
+  font-weight: 650;
+  border-radius: 3px;
+}
+.catalog-more button:hover {
+  background: #eef3ea;
+}
+.catalog-more span {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: #9aa99b;
+}
 .card {
   background: #fff;
   border: 1px solid #e8ebe2;
@@ -653,7 +680,7 @@ a {
   padding: 0;
   position: relative;
   width: 100%;
-  height: 170px;
+  height: 180px;
   background: #e3e8de;
   text-align: left;
 }
@@ -918,7 +945,7 @@ footer b {
     box-shadow: 0 -10px 30px #30483720;
   }
   .photo-wrap {
-    height: 180px;
+    height: 240px;
   }
   .inspect-body {
     padding: 18px 20px;

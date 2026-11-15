@@ -26,9 +26,63 @@ interface PhotoRun {
   listeners: Set<(state: BuildingPhotos) => void>;
 }
 
+interface CacheEntry {
+  url: string;
+  bytes: number;
+  touched: number;
+  createdAt: number;
+  pins: number;
+}
+
+/** Keep the compressed photo cache bounded. Decoded images are browser-side. */
+const MAX_PHOTO_CACHE_BYTES = 32 * 1024 * 1024;
+/** Do not evict images that may still be loading into a visible <img>. */
+const MIN_CACHE_AGE_MS = 8000;
+
 const fileRequests = new Map<string, Promise<string>>();
-const resolvedFiles = new Map<string, string>();
+const resolvedFiles = new Map<string, CacheEntry>();
 const runs = new Map<string, PhotoRun>();
+let cacheBytes = 0;
+
+function evictCache() {
+  if (cacheBytes <= MAX_PHOTO_CACHE_BYTES) return;
+  const now = performance.now();
+  const candidates = [...resolvedFiles.entries()]
+    .filter(([, entry]) => entry.pins === 0 && now - entry.createdAt >= MIN_CACHE_AGE_MS)
+    .sort((a, b) => a[1].touched - b[1].touched);
+  for (const [file, entry] of candidates) {
+    if (cacheBytes <= MAX_PHOTO_CACHE_BYTES) break;
+    URL.revokeObjectURL(entry.url);
+    resolvedFiles.delete(file);
+    cacheBytes -= entry.bytes;
+  }
+}
+
+/** Pin a photo that is currently displayed; pinned URLs are never evicted. */
+export function pinPhotoUrl(file: string | undefined) {
+  const entry = file ? resolvedFiles.get(file) : undefined;
+  if (!entry) return;
+  entry.pins++;
+  entry.touched = performance.now();
+}
+
+/** Release a pin and opportunistically trim the cache. */
+export function unpinPhotoUrl(file: string | undefined) {
+  const entry = file ? resolvedFiles.get(file) : undefined;
+  if (!entry) return;
+  entry.pins = Math.max(0, entry.pins - 1);
+  entry.touched = performance.now();
+  evictCache();
+}
+
+/** Cache counters for memory checks in the browser. */
+export function photoCacheStats() {
+  return {
+    entries: resolvedFiles.size,
+    bytes: cacheBytes,
+    pinned: [...resolvedFiles.values()].filter((entry) => entry.pins > 0).length,
+  };
+}
 
 function errorText(error: unknown) {
   return error instanceof Error ? error.message : 'Не удалось загрузить фотографию';
@@ -52,7 +106,10 @@ export function loadPhotoFile(
   files: ReadonlyMap<string, ManifestFile>,
 ): Promise<string> {
   const resolved = resolvedFiles.get(file);
-  if (resolved) return Promise.resolve(resolved);
+  if (resolved) {
+    resolved.touched = performance.now();
+    return Promise.resolve(resolved.url);
+  }
   const pending = fileRequests.get(file);
   if (pending) return pending;
   const manifest = files.get(file);
@@ -66,20 +123,37 @@ export function loadPhotoFile(
     if (bytes.byteLength !== manifest.size || (await hashHex(bytes)) !== manifest.sha256)
       throw new Error(`Повреждена фотография ${file}`);
     const url = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
-    resolvedFiles.set(file, url);
+    resolvedFiles.set(file, {
+      url,
+      bytes: bytes.byteLength,
+      touched: performance.now(),
+      createdAt: performance.now(),
+      pins: 0,
+    });
+    cacheBytes += bytes.byteLength;
+    evictCache();
     return url;
   })();
-  const tracked = request.catch((error) => {
-    fileRequests.delete(file);
-    throw error;
-  });
+  const tracked = request.then(
+    (url) => {
+      fileRequests.delete(file);
+      return url;
+    },
+    (error) => {
+      fileRequests.delete(file);
+      throw error;
+    },
+  );
   fileRequests.set(file, tracked);
   return tracked;
 }
 
 /** A photo already downloaded during this session, if any. */
 export function cachedPhotoUrl(file: string | undefined) {
-  return file ? resolvedFiles.get(file) : undefined;
+  const entry = file ? resolvedFiles.get(file) : undefined;
+  if (!entry) return undefined;
+  entry.touched = performance.now();
+  return entry.url;
 }
 
 function publish(run: PhotoRun, state: BuildingPhotos) {
@@ -121,43 +195,20 @@ function startBuildingRun(building: Building, files: ReadonlyMap<string, Manifes
       const result = thumbResults[index];
       return { photo, thumb: result.status === 'fulfilled' ? result.value : undefined };
     });
-    const previewFailures = thumbResults.filter((result) => result.status === 'rejected').length;
-    const preview: BuildingPhotos = {
-      status: previewFailures === total && total > 0 ? 'loading' : 'ready',
-      phase: 'preview',
-      assets: previewAssets,
-      total,
-      loaded: total - previewFailures,
-      error: previewFailures ? 'Часть превью не загрузилась.' : undefined,
-    };
-    publish(run, preview);
-    const fullResults = await Promise.allSettled(
-      photos.map((photo) => loadPhotoFile(photo.file, files)),
-    );
-    const assets = photos.map((photo, index) => {
-      const result = fullResults[index];
-      return {
-        photo,
-        thumb: previewAssets[index].thumb,
-        full: result.status === 'fulfilled' ? result.value : undefined,
-      };
-    });
-    const failures = fullResults.filter((result) => result.status === 'rejected').length;
-    const noImages = assets.every((asset) => !asset.thumb && !asset.full);
-    if (failures === total && noImages)
-      throw new Error(
-        errorText(fullResults.find((result) => result.status === 'rejected')?.reason),
-      );
+    const failures = thumbResults.filter((result) => result.status === 'rejected').length;
+    const noImages = previewAssets.every((asset) => !asset.thumb);
+    // Full gallery files are loaded on demand by useFullPhoto: opening a card
+    // used to download every photo of the object, even though one is shown.
     const ready: BuildingPhotos = {
       status: noImages ? 'error' : 'ready',
       phase: 'gallery',
-      assets,
+      assets: previewAssets,
       total,
       loaded: total - failures,
       error: failures
         ? failures === total
-          ? 'Полные фотографии не загрузились.'
-          : 'Часть фотографий не загрузилась.'
+          ? 'Превью не загрузились.'
+          : 'Часть превью не загрузилась.'
         : undefined,
     };
     publish(run, ready);
@@ -190,6 +241,7 @@ export function useBuildingPhotos(
     total: 0,
     loaded: 0,
   });
+  const pinnedFiles = useRef<Set<string>>(new Set());
   useEffect(() => {
     if (!building) {
       setState({ status: 'ready', phase: 'gallery', assets: [], total: 0, loaded: 0 });
@@ -200,8 +252,27 @@ export function useBuildingPhotos(
     run.listeners.add(setState);
     return () => {
       run.listeners.delete(setState);
+      if (!run.listeners.size) runs.delete(building.id);
     };
   }, [building?.id, files, attempt]);
+  // Keep every file of the open gallery in memory; navigation between its
+  // photos must not hit an evicted URL.
+  useEffect(() => {
+    const next = new Set<string>();
+    for (const asset of state.assets) {
+      if (asset.photo?.thumb) next.add(asset.photo.thumb);
+    }
+    for (const file of next) if (!pinnedFiles.current.has(file)) pinPhotoUrl(file);
+    for (const file of pinnedFiles.current) if (!next.has(file)) unpinPhotoUrl(file);
+    pinnedFiles.current = next;
+  }, [state.assets]);
+  useEffect(
+    () => () => {
+      for (const file of pinnedFiles.current) unpinPhotoUrl(file);
+      pinnedFiles.current.clear();
+    },
+    [],
+  );
   const retry = () => {
     if (!building) return;
     runs.delete(building.id);
@@ -233,6 +304,43 @@ export function useLazyPhoto(
     };
   }, [file, files, visible, url]);
   return { url, error };
+}
+
+/** Load the full file for the photo currently displayed in the inspector. */
+export function useFullPhoto(photo: Photo | undefined, files: ReadonlyMap<string, ManifestFile>) {
+  const [url, setUrl] = useState<string | undefined>();
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const pinned = useRef<string | null>(null);
+  useEffect(() => {
+    let active = true;
+    setUrl(undefined);
+    setError('');
+    setLoading(false);
+    if (!photo?.file) return;
+    setLoading(true);
+    loadPhotoFile(photo.file, files)
+      .then((value) => {
+        if (!active) return;
+        pinPhotoUrl(photo.file);
+        pinned.current = photo.file;
+        setUrl(value);
+        setLoading(false);
+      })
+      .catch((value) => {
+        if (!active) return;
+        setError(errorText(value));
+        setLoading(false);
+      });
+    return () => {
+      active = false;
+      if (pinned.current) {
+        unpinPhotoUrl(pinned.current);
+        pinned.current = null;
+      }
+    };
+  }, [photo?.file, files]);
+  return { url, error, loading };
 }
 
 export function useVisibility<T extends HTMLElement>() {

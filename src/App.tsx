@@ -9,6 +9,7 @@ import { I18nContext, translate, type Language, useI18n } from './i18n';
 import {
   rankPhotos,
   useBuildingPhotos,
+  useFullPhoto,
   useLazyPhoto,
   useVisibility,
   type BuildingPhotos,
@@ -17,6 +18,8 @@ import {
 type View = 'map' | 'catalog';
 const initialFilters: Filters = { query: '', from: '', to: '', architect: [], style: [] };
 const base = import.meta.env.BASE_URL + 'atlas/';
+/** Cards per catalog page. Bounds how many photo bitmaps the grid loads. */
+const CATALOG_PAGE_SIZE = 60;
 function Icon({ name, size = 18 }: { name: string; size?: number }) {
   const common = {
     width: size,
@@ -595,8 +598,10 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
           throw new Error('Неизвестная версия пакета');
         if (!crypto.subtle)
           throw new Error('Для проверки пакета откройте атлас через HTTPS или localhost');
-        const optionalOutlines = manifest.files.find((f) => f.path === 'building-outlines.geojson');
-        if (!optionalOutlines) throw new Error('В пакете нет building-outlines.geojson');
+        const optionalOutlines =
+          manifest.files.find((f) => f.path === 'building-outlines.bin') ??
+          manifest.files.find((f) => f.path === 'building-outlines.geojson');
+        if (!optionalOutlines) throw new Error('В пакете нет контуров зданий');
         const corePaths = new Set(['buildings.json', 'basemap.geojson']);
         const initialFiles = manifest.files.filter((f) => corePaths.has(f.path));
         const photoFiles = new Map(manifest.files.map((f) => [f.path, f]));
@@ -635,7 +640,11 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
           basemap: FeatureCollection = decode('basemap.geojson');
         for (const item of buildings)
           for (const photo of item.photos ?? (item.photo ? [item.photo] : []))
-            if (!photoFiles.has(photo.file) || !photoFiles.has(photo.thumb))
+            if (
+              !photoFiles.has(photo.file) ||
+              !photoFiles.has(photo.thumb) ||
+              (photo.card && !photoFiles.has(photo.card))
+            )
               throw new Error(`В пакете нет фото ${item.name}`);
         if (!cancelled) {
           onReady({ buildings, basemap, buildingOutlines: optionalOutlines, photoFiles });
@@ -678,7 +687,11 @@ function CardPhoto({
   const { t } = useI18n();
   const photo = rankPhotos(building.photos ?? (building.photo ? [building.photo] : []))[0];
   const { ref, visible } = useVisibility<HTMLSpanElement>();
-  const { url, error } = useLazyPhoto(photo?.thumb ?? photo?.file, photoFiles, visible);
+  const { url, error } = useLazyPhoto(
+    photo?.card ?? photo?.thumb ?? photo?.file,
+    photoFiles,
+    visible,
+  );
   if (!photo) return <div className="no-photo">{t('Фотографии пока нет')}</div>;
   return (
     <span ref={ref} className="card-photo">
@@ -696,12 +709,14 @@ type InspectorPhotos = BuildingPhotos & { retry: () => void };
 function Inspector({
   building,
   photos,
+  photoFiles,
   onClose,
   onMap,
   onFilter,
 }: {
   building: Building;
   photos: InspectorPhotos;
+  photoFiles: Data['photoFiles'];
   onClose: () => void;
   onMap: () => void;
   onFilter: (key: 'architect' | 'style', value: string) => void;
@@ -726,8 +741,9 @@ function Inspector({
   const credits = current?.photo;
   const photoNote = credits ? photoTechnicalNote(credits.modifications, t) : '';
   const creditText = credits ? photoCreditText(credits, t) : '';
-  const preview = current?.thumb ?? current?.full;
-  const gallery = current?.full ?? current?.thumb;
+  const { url: fullUrl } = useFullPhoto(current?.photo, photoFiles);
+  const preview = current?.thumb ?? fullUrl;
+  const gallery = fullUrl ?? current?.thumb;
   const close = useRef<HTMLButtonElement>(null),
     photoOpener = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -1015,7 +1031,8 @@ function AppContent({ data }: { data: Data }) {
     [focus, setFocus] = useState<{ id: string; serial: number } | null>(null),
     [reset, setReset] = useState(0),
     [fit, setFit] = useState(0),
-    [sort, setSort] = useState('name');
+    [sort, setSort] = useState('name'),
+    [visibleCount, setVisibleCount] = useState(CATALOG_PAGE_SIZE);
   const opener = useRef<HTMLElement | null>(null),
     firstHash = useRef(true);
   const filtered = useMemo(() => {
@@ -1068,6 +1085,9 @@ function AppContent({ data }: { data: Data }) {
         : (b.minYear ?? -Infinity) - (a.minYear ?? -Infinity) ||
           sortName(a).localeCompare(sortName(b), language),
   );
+  useEffect(() => {
+    setVisibleCount(CATALOG_PAGE_SIZE);
+  }, [filters, selectedPeriods, sort, view]);
   useEffect(() => {
     const p = new URLSearchParams();
     p.set('view', view);
@@ -1362,36 +1382,51 @@ function AppContent({ data }: { data: Data }) {
                         <button onClick={resetFilters}>{t('Сбросить фильтры')}</button>
                       </div>
                     ) : (
-                      <div className="cards">
-                        {sorted.map((b) => (
-                          <article key={b.id} className="card">
+                      <>
+                        <div className="cards">
+                          {sorted.slice(0, visibleCount).map((b) => (
+                            <article key={b.id} className="card">
+                              <button
+                                className="card-image"
+                                onClick={() => select(b.id)}
+                                aria-label={t('Подробнее: ') + (b.names?.[language] || b.name)}
+                              >
+                                <CardPhoto building={b} photoFiles={data.photoFiles} />
+                                <span className="card-year">
+                                  <i style={{ background: period(b.minYear, b.maxYear)!.color }} />
+                                  {b.yearLabels?.[language] || b.yearLabel}
+                                </span>
+                              </button>
+                              <div className="card-body">
+                                <span className="card-district">
+                                  {b.districts?.[language] || b.district} /{' '}
+                                  {b.styles?.[language] || b.style}
+                                </span>
+                                <button className="card-title" onClick={() => select(b.id)}>
+                                  {b.names?.[language] || b.name}
+                                </button>
+                                <p>{b.addresses?.[language] || t('Адрес не установлен')}</p>
+                                <button className="text-link" onClick={() => goMap(b.id)}>
+                                  {t('На карте')} <Icon name="arrow" size={15} />
+                                </button>
+                              </div>
+                            </article>
+                          ))}
+                        </div>
+                        {visibleCount < sorted.length && (
+                          <div className="catalog-more">
                             <button
-                              className="card-image"
-                              onClick={() => select(b.id)}
-                              aria-label={t('Подробнее: ') + (b.names?.[language] || b.name)}
+                              type="button"
+                              onClick={() => setVisibleCount((count) => count + CATALOG_PAGE_SIZE)}
                             >
-                              <CardPhoto building={b} photoFiles={data.photoFiles} />
-                              <span className="card-year">
-                                <i style={{ background: period(b.minYear, b.maxYear)!.color }} />
-                                {b.yearLabels?.[language] || b.yearLabel}
-                              </span>
+                              {t('Показать ещё')}
                             </button>
-                            <div className="card-body">
-                              <span className="card-district">
-                                {b.districts?.[language] || b.district} /{' '}
-                                {b.styles?.[language] || b.style}
-                              </span>
-                              <button className="card-title" onClick={() => select(b.id)}>
-                                {b.names?.[language] || b.name}
-                              </button>
-                              <p>{b.addresses?.[language] || t('Адрес не установлен')}</p>
-                              <button className="text-link" onClick={() => goMap(b.id)}>
-                                {t('На карте')} <Icon name="arrow" size={15} />
-                              </button>
-                            </div>
-                          </article>
-                        ))}
-                      </div>
+                            <span>
+                              {visibleCount} / {sorted.length}
+                            </span>
+                          </div>
+                        )}
+                      </>
                     )}
                   </div>
                 )}
@@ -1401,6 +1436,7 @@ function AppContent({ data }: { data: Data }) {
                   key={selectedBuilding.id}
                   building={selectedBuilding}
                   photos={selectedPhotos}
+                  photoFiles={data.photoFiles}
                   onClose={close}
                   onMap={() => goMap(selectedBuilding.id)}
                   onFilter={filterBy}

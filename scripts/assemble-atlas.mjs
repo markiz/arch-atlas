@@ -198,6 +198,7 @@ function validatePhoto(file, photoId, index, seen, city, metadataById) {
     id: photoId,
     file: `photos/${city}/${photoId}.webp`,
     thumb: `thumbnails/${city}/${photoId}.webp`,
+    card: `cards/${city}/${photoId}.webp`,
   };
   for (const key of PHOTO_METADATA_FIELDS) photo[key] = metadata[key];
   for (const key of PHOTO_DIMENSION_FIELDS) photo[key] = metadata[key];

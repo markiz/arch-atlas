@@ -231,7 +231,7 @@ for (const b of data) {
   if (images.length > 1) galleries++;
   const paths = new Set();
   for (const p of images) {
-    for (const k of ['id', 'file', 'thumb', 'licenseUrl', 'source', 'modifications'])
+    for (const k of ['id', 'file', 'thumb', 'card', 'licenseUrl', 'source', 'modifications'])
       assert(p[k], `${b.id}: photo.${k}`);
     for (const k of ['author', 'license'])
       assert(typeof p[k] === 'string', `${b.id}: photo.${k} must be a string`);
@@ -269,9 +269,11 @@ for (const b of data) {
     assert(/^[a-f0-9]{64}$/.test(p.id), `${b.id}: photo id must be a lowercase sha256`);
     const expectedFile = `photos/tbilisi/${p.id}.webp`;
     const expectedThumb = `thumbnails/tbilisi/${p.id}.webp`;
+    const expectedCard = `cards/tbilisi/${p.id}.webp`;
     assert(p.file === expectedFile, `${b.id}: photo file must match ${expectedFile}`);
     assert(p.thumb === expectedThumb, `${b.id}: photo preview must match ${expectedThumb}`);
-    for (const file of [p.file, p.thumb]) {
+    assert(p.card === expectedCard, `${b.id}: photo card must match ${expectedCard}`);
+    for (const file of [p.file, p.thumb, p.card]) {
       assert(
         !file.includes('..') && !file.startsWith('/') && !paths.has(file),
         `${b.id}: invalid or duplicate photo path`,
@@ -318,18 +320,20 @@ for (const b of data) {
           `${b.id}: photo ${path} is ${size.width}x${size.height}, metadata says ${p.width}x${p.height}`,
         );
       }
-      const thumb = 'data/' + p.thumb,
-        thumbPublished = 'public/atlas/' + p.thumb;
-      await access(thumb);
-      await access(thumbPublished);
-      for (const path of [thumb, thumbPublished]) {
-        const bytes = await readFile(path);
-        assert(
-          bytes.length > 32 &&
-            bytes.subarray(0, 4).toString() === 'RIFF' &&
-            bytes.subarray(8, 12).toString() === 'WEBP',
-          `${b.id}: invalid photo preview ${path}`,
-        );
+      for (const preview of [p.thumb, p.card]) {
+        const source = 'data/' + preview,
+          published = 'public/atlas/' + preview;
+        await access(source);
+        await access(published);
+        for (const path of [source, published]) {
+          const bytes = await readFile(path);
+          assert(
+            bytes.length > 32 &&
+              bytes.subarray(0, 4).toString() === 'RIFF' &&
+              bytes.subarray(8, 12).toString() === 'WEBP',
+            `${b.id}: invalid photo preview ${path}`,
+          );
+        }
       }
       verifiedPhotos.add(p.id);
     }
