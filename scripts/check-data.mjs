@@ -109,6 +109,28 @@ for (const b of data) {
     );
   }
   assert(typeof b.history === 'string', `${b.id}: history`);
+  const editorialGarbage = [
+    /архитектор[^.!?]{0,80}(?:не установлен|неизвестен)/i,
+    /(?:автор|зодчий)[^.!?]{0,60}(?:не установлен|неизвестен)/i,
+    /(?:architect|author|designer)[^.!?]{0,80}(?:not (?:been )?established|unknown)/i,
+    /(?:არქიტექტორ|ავტორ)[^.!?]{0,80}(?:დადგენილი არ არის|არ არის დადგენილი|უცნობია)/,
+    /(?:архітектор|автор)[^.!?]{0,80}(?:не встановлен|невідом)/i,
+    /требу(?:ет|ют)\s+(?:проверк|сверк|уточнен|подтвержд|редактур|нейтральн)/i,
+    /в\s+карточке\s+(?:принят|оставлен|взят|дан|ошибочна)/i,
+    /расхождени[^.!?]{0,40}сохранены/i,
+    /конфликт[^.!?]{0,40}не\s+разрешён/i,
+    /до\s+уточнения\s+сохран/i,
+  ];
+  for (const field of ['descriptions', 'histories']) {
+    for (const [lang, text] of Object.entries(b[field] ?? {})) {
+      if (typeof text !== 'string') continue;
+      for (const pattern of editorialGarbage)
+        assert(
+          !pattern.test(text),
+          `${b.id}: ${field}.${lang} contains editorial garbage ${pattern}`,
+        );
+    }
+  }
   assert(
     Array.isArray(b.styleIds) &&
       b.styleIds.length > 0 &&
