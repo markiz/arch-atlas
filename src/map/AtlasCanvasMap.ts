@@ -3,7 +3,7 @@ import type { Building } from '../types';
 import type { Language } from '../i18n';
 import { period, periodsFor } from '../domain';
 import { landmarkSvg } from './landmark';
-import { streetLabelFontSize, streetLabelHalo } from './street-labels';
+import { LiveStreetLabels } from './live-street-labels';
 import {
   WORLD_SIZE,
   bboxIntersects,
@@ -17,7 +17,6 @@ import {
   unprojectY,
 } from './geometry';
 import type { BBox, Bounds, LatLng, OutlineBinary, Point } from './types';
-import { LABEL_TILE_SIZE, type StreetLabelTileSet } from './street-label-tiles';
 
 export interface AtlasLayerVisibility {
   roads: boolean;
@@ -75,11 +74,6 @@ type DragSession = {
 type PinchSession = { startDistance: number; anchorWorld: Point; startZoom: number };
 type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks: number[] };
 
-const STREET_LABEL_FILL = 'rgba(117,129,118,.75)';
-const STREET_LABEL_HALO = 'rgba(255,254,248,.85)';
-const streetLabelFont = (size: number) => `400 ${size}px "Atlas Labels", "DejaVu Sans", sans-serif`;
-const glyphChars: string[] = [];
-const glyphChar = (code: number) => (glyphChars[code] ??= String.fromCharCode(code));
 const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
@@ -198,7 +192,7 @@ export class AtlasCanvasMap {
   private readonly previewCtx: CanvasRenderingContext2D | null;
   private labelCanvas: HTMLCanvasElement | null = null;
   private labelCtx: CanvasRenderingContext2D | null = null;
-  private labelCamera: RenderedCamera | null = null;
+  private readonly liveLabels = new LiveStreetLabels();
   private readonly onSelect: (id: string) => void;
   private readonly onViewChange?: (center: LatLng, zoom: number) => void;
   private readonly minZoom: number;
@@ -215,7 +209,6 @@ export class AtlasCanvasMap {
   private previewCost = 0;
   private renderRaf: number | null = null;
   private renderTimer: number | null = null;
-  private labelRaf: number | null = null;
   private view: Camera;
   private rendered: RenderedCamera | null = null;
   private baseFeatures: GeoJSON.Feature[] = [];
@@ -234,8 +227,6 @@ export class AtlasCanvasMap {
   private buildingsVisible = false;
   private position: PositionShape | null = null;
   private markers: MarkerEntry[] = [];
-  private streetLabelTiles: StreetLabelTileSet | null = null;
-  private streetLabelTilesLanguage: Language | null = null;
   private raf: number | null = null;
   private animating = false;
   private wheelRaf: number | null = null;
@@ -283,8 +274,10 @@ export class AtlasCanvasMap {
     this.tooltip = document.createElement('div');
     this.tooltip.className = 'atlas-map-tooltip';
     this.tooltip.setAttribute('role', 'tooltip');
-    this.pan.append(this.baseCanvas, this.overlayCanvas, this.previewCanvas, this.markersLayer);
-    this.container.append(this.pan, this.tooltip);
+    this.pan.append(this.baseCanvas, this.overlayCanvas, this.previewCanvas);
+    // Markers are screen-space as well: keeping them outside the scaled pan
+    // both keeps icons fixed-size and puts them above the street labels.
+    this.container.append(this.pan, this.markersLayer, this.tooltip);
     this.container.tabIndex = this.container.tabIndex < 0 ? 0 : this.container.tabIndex;
     this.attachEvents();
     this.resizeObserver = new ResizeObserver(() => this.resize());
@@ -295,6 +288,7 @@ export class AtlasCanvasMap {
   /** Replace all basemap vector features (roads, water, parks, landmarks). */
   setBasemap(collection: GeoJSON.FeatureCollection) {
     this.baseFeatures = collection.features;
+    this.liveLabels.setSource(this.baseFeatures);
     this.baseBoxes = this.computeBoxes(this.baseFeatures);
     const groups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
     for (let index = 0; index < this.baseFeatures.length; index++) {
@@ -385,13 +379,6 @@ export class AtlasCanvasMap {
     this.updateMarkerLabels();
     this.renderOverlay();
     this.renderLabels();
-  }
-
-  /** Tiles are language-specific and already contain precomputed placements. */
-  setStreetLabelTiles(tiles: StreetLabelTileSet | null, language: Language = this.language) {
-    this.streetLabelTiles = tiles;
-    this.streetLabelTilesLanguage = tiles ? language : null;
-    if (this.visibility.detailedStreets) this.renderLabels();
   }
 
   setLayerVisibility(visibility: AtlasLayerVisibility) {
@@ -589,7 +576,11 @@ export class AtlasCanvasMap {
     this.sizeCanvas(this.baseCanvas, cssWidth, cssHeight, this.dpr);
     this.sizeCanvas(this.overlayCanvas, cssWidth, cssHeight, this.dpr);
     this.sizeCanvas(this.previewCanvas, cssWidth, cssHeight, this.previewRatio());
-    if (this.labelCanvas) this.sizeCanvas(this.labelCanvas, cssWidth, cssHeight, this.dpr);
+    if (this.labelCanvas) {
+      this.sizeCanvas(this.labelCanvas, this.size.x, this.size.y, this.dpr);
+      this.labelCanvas.style.left = '0';
+      this.labelCanvas.style.top = '0';
+    }
     this.markersLayer.style.width = `${width}px`;
     this.markersLayer.style.height = `${height}px`;
     this.renderAll();
@@ -647,14 +638,6 @@ export class AtlasCanvasMap {
     if (this.destroyed || !this.size.x || !this.size.y) return;
     this.stopAnimation(false);
     this.cancelScheduledRender();
-    // Tiles are laid out on half-zoom levels. Snapping the crisp pass to the
-    // same grid avoids scaling glyph positions without scaling the font:
-    // fractional wheel/pinch zooms otherwise stretched letter spacing.
-    if (this.zoomSnap > 0) {
-      const snapped = Math.round(this.view.zoom / this.zoomSnap) * this.zoomSnap;
-      if (Math.abs(snapped - this.view.zoom) > 1e-6)
-        this.view = { ...this.view, zoom: this.clampZoom(snapped) };
-    }
     this.preview = false;
     this.pixelRatio = this.dpr;
     this.previewCanvas.style.display = 'none';
@@ -706,7 +689,6 @@ export class AtlasCanvasMap {
     this.baseCanvas.style.visibility = 'hidden';
     this.overlayCanvas.style.visibility = 'hidden';
     this.previewCanvas.style.display = '';
-    if (this.labelCanvas) this.labelCanvas.style.visibility = 'hidden';
     this.repositionMarkers();
     this.lastPreviewAt = performance.now();
     this.previewCost = this.lastPreviewAt - started;
@@ -738,24 +720,6 @@ export class AtlasCanvasMap {
       window.clearTimeout(this.renderTimer);
       this.renderTimer = null;
     }
-    if (this.labelRaf !== null) {
-      cancelAnimationFrame(this.labelRaf);
-      this.labelRaf = null;
-    }
-  }
-
-  /**
-   * A drag bakes the label bitmap to keep up with the base layer; labels in the
-   * newly exposed strips are missing until this one deferred pass. It is
-   * label-only: the base and atlas are already correct.
-   */
-  private scheduleLabelRefresh() {
-    if (this.labelRaf !== null) return;
-    this.labelRaf = requestAnimationFrame(() => {
-      this.labelRaf = null;
-      if (this.destroyed || this.pointers.size || this.animating || this.preview) return;
-      this.renderLabels();
-    });
   }
 
   private renderBase() {
@@ -1053,7 +1017,6 @@ export class AtlasCanvasMap {
       this.view.zoom,
     );
     this.rendered = { center, zoom: this.view.zoom, origin };
-    this.bakeLabelCanvas(bakeX, bakeY);
     if (bakeX !== 0) {
       const rect = {
         x: bakeX > 0 ? 0 : canvasWidth + bakeX,
@@ -1062,7 +1025,6 @@ export class AtlasCanvasMap {
         h: canvasHeight,
       };
       this.renderBaseRegion(rect, this.rendered);
-      this.renderLabelRegion(rect);
     }
     if (bakeY !== 0) {
       const rect = {
@@ -1072,7 +1034,6 @@ export class AtlasCanvasMap {
         h: Math.abs(bakeY),
       };
       this.renderBaseRegion(rect, this.rendered);
-      this.renderLabelRegion(rect);
     }
     this.renderOverlay();
     this.repositionMarkers();
@@ -1088,7 +1049,7 @@ export class AtlasCanvasMap {
       this.recenterForDrag();
   }
 
-  private settleDrag(moved = false) {
+  private settleDrag(_moved = false) {
     if (!this.rendered) return;
     if (Math.abs(this.view.zoom - this.rendered.zoom) > 1e-6 || this.preview) {
       // The scaled preview stays on screen while the crisp pass is painted in
@@ -1102,7 +1063,6 @@ export class AtlasCanvasMap {
       bakeY = this.rendered.origin.y - viewOrigin.y;
     if (Math.abs(bakeX) > 0.25 || Math.abs(bakeY) > 0.25) this.recenterForDrag();
     else this.applyPanTransform(this.rendered, this.view);
-    if (moved) this.scheduleLabelRefresh();
     this.reportView();
   }
 
@@ -1402,30 +1362,32 @@ export class AtlasCanvasMap {
     const canvas = makeCanvas('atlas-map-labels');
     this.labelCanvas = canvas;
     this.labelCtx = canvas.getContext('2d');
-    const cssWidth = this.size.x + this.padding.x * 2,
-      cssHeight = this.size.y + this.padding.y * 2;
-    this.sizeCanvas(canvas, cssWidth, cssHeight, this.dpr);
+    this.sizeCanvas(canvas, this.size.x, this.size.y, this.dpr);
+    canvas.style.left = '0';
+    canvas.style.top = '0';
     canvas.style.visibility = 'hidden';
-    this.pan.insertBefore(canvas, this.markersLayer);
+    // The labels are screen-space: they live outside the CSS-scaled pan and are
+    // re-laid out every frame at the live camera, like a vector layer.
+    this.container.insertBefore(canvas, this.tooltip);
   }
 
   private releaseLabelCanvas() {
+    this.liveLabels.release();
     if (!this.labelCanvas) return;
     this.labelCanvas.remove();
     this.labelCanvas.width = 1;
     this.labelCanvas.height = 1;
     this.labelCanvas = null;
     this.labelCtx = null;
-    this.labelCamera = null;
   }
 
   /**
-   * Street labels are a separate canvas: drag recentring, period hover and
-   * building selection repaint the atlas layer without re-rendering glyphs.
-   * The layer is allocated only while the detailed-streets option is on.
+   * Street labels are a separate screen-space canvas: they are re-laid out at
+   * the live (fractional) zoom on every frame, so the text stays sharp and the
+   * motion stays continuous through gestures.
    */
   private renderLabels() {
-    if (!this.visibility.detailedStreets || !this.rendered || this.preview) {
+    if (!this.visibility.detailedStreets || !this.rendered) {
       if (this.labelCanvas) this.labelCanvas.style.visibility = 'hidden';
       return;
     }
@@ -1436,82 +1398,27 @@ export class AtlasCanvasMap {
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    const camera = this.rendered;
-    this.drawLabels(context, camera);
-    this.labelCamera = {
-      center: { ...camera.center },
-      zoom: camera.zoom,
-      origin: { ...camera.origin },
-    };
-    canvas.style.transform = '';
+    this.liveLabels.draw(
+      context,
+      { zoom: this.view.zoom, origin: this.originFor(this.view) },
+      this.size.x,
+      this.size.y,
+      this.language,
+      this.dpr,
+    );
     canvas.style.visibility = '';
-  }
-
-  /** Repaint only a newly exposed strip, like the base layer does. */
-  private renderLabelRegion(rect: Rect) {
-    if (!this.visibility.detailedStreets || this.preview || !this.rendered) return;
-    const canvas = this.labelCanvas,
-      context = this.labelCtx;
-    if (!canvas || !context) return;
-    if (!this.streetLabelTiles || this.streetLabelTilesLanguage !== this.language) return;
-    context.save();
-    context.setTransform(1, 0, 0, 1, 0, 0);
-    context.beginPath();
-    context.rect(rect.x * this.dpr, rect.y * this.dpr, rect.w * this.dpr, rect.h * this.dpr);
-    context.clip();
-    context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    this.drawTiledLabels(context, this.rendered, rect);
-    context.restore();
-  }
-
-  /**
-   * Shift the label bitmap when the drag path bakes the camera into the
-   * bitmap. Labels in the newly exposed strips wait for the next full render,
-   * exactly like the base layer.
-   */
-  private bakeLabelCanvas(bakeX: number, bakeY: number) {
-    const canvas = this.labelCanvas,
-      context = this.labelCtx;
-    if (!canvas || !context) return;
-    context.save();
-    context.setTransform(1, 0, 0, 1, 0, 0);
-    context.globalCompositeOperation = 'copy';
-    context.drawImage(canvas, Math.round(bakeX * this.dpr), Math.round(bakeY * this.dpr));
-    context.globalCompositeOperation = 'source-over';
-    context.restore();
-    if (this.labelCamera && this.rendered) {
-      this.labelCamera = { ...this.labelCamera, origin: { ...this.rendered.origin } };
-    }
-  }
-
-  private drawLabels(context: CanvasRenderingContext2D, camera: RenderedCamera, clip?: Rect) {
-    // Labels come exclusively from the language tile file. There is no
-    // viewport-cache fallback: while tiles are loading or after a load error,
-    // the label layer simply stays empty until the next successful tile load.
-    this.drawTiledLabels(context, camera, clip);
   }
 
   private repositionMarkers() {
     if (!this.rendered) return;
-    const { origin, zoom } = this.rendered;
+    const zoom = this.view.zoom;
+    const origin = this.originFor(this.view);
     for (const marker of this.markers) {
       const point = project(marker.lat, marker.lng, zoom);
       marker.element.style.left = `${point.x - origin.x}px`;
       marker.element.style.top = `${point.y - origin.y}px`;
       marker.element.style.transform = '';
     }
-  }
-
-  /**
-   * The marker layer sits inside the scaled pan, so a zoom would inflate the
-   * icons. Counter-scale each icon around its tip to keep the labels the same
-   * size at every zoom, the way a native map behaves.
-   */
-  private scaleMarkers(scale: number) {
-    if (!this.markers.length) return;
-    const inverse = Math.abs(scale - 1) < 1e-6 ? '' : `scale(${1 / scale})`;
-    for (const marker of this.markers)
-      if (marker.element.style.transform !== inverse) marker.element.style.transform = inverse;
   }
 
   private updateMarkerLabels() {
@@ -1522,70 +1429,6 @@ export class AtlasCanvasMap {
         String(names?.[this.language] || marker.feature.properties?.name || ''),
       );
     }
-  }
-
-  private drawTiledLabels(
-    context: CanvasRenderingContext2D,
-    camera: RenderedCamera,
-    clip?: Rect,
-  ): boolean {
-    const tiles = this.streetLabelTiles;
-    if (!tiles || this.streetLabelTilesLanguage !== this.language) return false;
-    const bucket = Math.round(camera.zoom * 2) / 2,
-      level = tiles.levels.get(Math.round(bucket * 2)),
-      fontSize = streetLabelFontSize(bucket),
-      halo = streetLabelHalo(fontSize),
-      scale = 2 ** (camera.zoom - bucket),
-      offsetX = this.padding.x - camera.origin.x,
-      offsetY = this.padding.y - camera.origin.y,
-      cssWidth = this.size.x + this.padding.x * 2,
-      cssHeight = this.size.y + this.padding.y * 2,
-      minTx = Math.floor((0 - offsetX) / scale / LABEL_TILE_SIZE),
-      maxTx = Math.floor((cssWidth - offsetX) / scale / LABEL_TILE_SIZE),
-      minTy = Math.floor((0 - offsetY) / scale / LABEL_TILE_SIZE),
-      maxTy = Math.floor((cssHeight - offsetY) / scale / LABEL_TILE_SIZE);
-    if (!level) return false;
-    context.font = streetLabelFont(fontSize);
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.lineJoin = 'round';
-    context.strokeStyle = STREET_LABEL_HALO;
-    context.fillStyle = STREET_LABEL_FILL;
-    context.lineWidth = halo;
-    const visible: { x: number; y: number; angle: number; ch: string }[] = [];
-    for (let tx = minTx; tx <= maxTx; tx++) {
-      for (let ty = minTy; ty <= maxTy; ty++) {
-        const tile = level.get(`${tx},${ty}`);
-        if (!tile) continue;
-        const tileX = tx * LABEL_TILE_SIZE;
-        const tileY = ty * LABEL_TILE_SIZE;
-        visible.length = 0;
-        for (let index = 0; index < tile.count; index++) {
-          const x = (tileX + tile.x[index] / 4) * scale + offsetX;
-          const y = (tileY + tile.y[index] / 4) * scale + offsetY;
-          if (x < 0 || y < 0 || x > cssWidth || y > cssHeight) continue;
-          if (clip && (x < clip.x || x > clip.x + clip.w || y < clip.y || y > clip.y + clip.h))
-            continue;
-          visible.push({
-            x,
-            y,
-            angle: tile.angle[index] / 1000,
-            ch: glyphChar(tile.code[index]),
-          });
-        }
-        for (const pass of ['stroke', 'fill'] as const) {
-          for (const glyph of visible) {
-            context.save();
-            context.translate(glyph.x, glyph.y);
-            context.rotate(glyph.angle);
-            if (pass === 'stroke') context.strokeText(glyph.ch, 0, 0);
-            else context.fillText(glyph.ch, 0, 0);
-            context.restore();
-          }
-        }
-      }
-    }
-    return true;
   }
 
   private animateTo(target: Camera, duration: number) {
@@ -1605,7 +1448,6 @@ export class AtlasCanvasMap {
     // Zoom animations hide the label layer entirely: scaling an old bitmap
     // made names huge and blurry, redrawing them at every intermediate level
     // made them jump. They come back in one crisp pass when motion stops.
-    if (this.labelCanvas) this.labelCanvas.style.visibility = 'hidden';
     const start = performance.now();
     const step = (now: number) => {
       this.raf = null;
@@ -1669,7 +1511,10 @@ export class AtlasCanvasMap {
     const translateX = scale * rendered.origin.x - viewOrigin.x;
     const translateY = scale * rendered.origin.y - viewOrigin.y;
     this.pan.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
-    this.scaleMarkers(scale);
+    // The label and marker layers are screen-space, so they follow the live
+    // camera instead of inheriting the CSS scale of the pan.
+    this.renderLabels();
+    this.repositionMarkers();
   }
 
   private stopAnimation(render = true) {

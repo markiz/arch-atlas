@@ -6,8 +6,6 @@ import { AtlasCanvasMap } from './map/AtlasCanvasMap';
 import { emptyBBox, boundsFromBBox, extendBBox, geometryBounds } from './map/geometry';
 import type { BBox, Bounds, LatLng, MapViewProps, OutlineBinary } from './map/types';
 import { parseOutlineBinary } from './map/outline-binary';
-import { parseStreetLabelTiles, type StreetLabelTileSet } from './map/street-label-tiles';
-import { loadStreetLabelFont } from './map/label-font';
 import { layerMemory } from './map/layer-state';
 import { desktopStartView, isMobileMapLayout, mobileStartView } from './map/start-view';
 import { rememberMapView, savedMapView } from './map/view-memory';
@@ -55,7 +53,6 @@ export default function MapView({
   allBuildings,
   basemap,
   buildingOutlines,
-  streetLabelTiles,
   selected,
   onSelect,
   focus,
@@ -75,8 +72,6 @@ export default function MapView({
   const outlineFeatures = useRef<GeoJSON.Feature[] | null>(null);
   const outlineBinary = useRef<OutlineBinary | null>(null);
   const outlineReleaseTimer = useRef<number | null>(null);
-  const labelTileCache = useRef(new Map<string, Promise<StreetLabelTileSet>>());
-  const labelTileSets = useRef(new Map<string, StreetLabelTileSet>());
   const handledFit = useRef(fit),
     handledReset = useRef(reset),
     focusHandled = useRef(onFocusHandled);
@@ -95,9 +90,7 @@ export default function MapView({
     [locating, setLocating] = useState(false),
     [layersOpen, setLayersOpen] = useState(false),
     [buildingLayerLoading, setBuildingLayerLoading] = useState(false),
-    [buildingLayerError, setBuildingLayerError] = useState(false),
-    [streetLayerLoading, setStreetLayerLoading] = useState(false),
-    [streetLayerError, setStreetLayerError] = useState(false);
+    [buildingLayerError, setBuildingLayerError] = useState(false);
   const [showRoads, setShowRoads] = useState(() => layerMemory.showRoads),
     [showBuildings, setShowBuildings] = useState(() => layerMemory.showBuildings),
     [showWater, setShowWater] = useState(() => layerMemory.showWater),
@@ -176,85 +169,6 @@ export default function MapView({
   useEffect(() => {
     mapRef.current?.setLanguage(language);
   }, [language]);
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map) return;
-    let cancelled = false;
-    if (!detailedStreets) {
-      setStreetLayerLoading(false);
-      setStreetLayerError(false);
-      map.setStreetLabelTiles(null);
-      return;
-    }
-    const file = streetLabelTiles[language];
-    if (!file) {
-      setStreetLayerLoading(false);
-      setStreetLayerError(true);
-      map.setStreetLabelTiles(null);
-      return;
-    }
-    const key = `${language}:${file.sha256}`;
-    const cached = labelTileSets.current.get(key);
-    if (cached) {
-      setStreetLayerLoading(false);
-      setStreetLayerError(false);
-      map.setStreetLabelTiles(cached, language);
-      return;
-    }
-    setStreetLayerLoading(true);
-    setStreetLayerError(false);
-    const load = async () => {
-      await loadStreetLabelFont();
-      let pending = labelTileCache.current.get(key);
-      if (!pending) {
-        pending = (async () => {
-          if (file.path.includes('..') || file.path.startsWith('/'))
-            throw new Error('Некорректный путь в пакете');
-          const url = `${import.meta.env.BASE_URL}atlas/${file.path}?v=${encodeURIComponent(file.sha256)}`;
-          const response = await fetch(url);
-          if (!response.ok) throw new Error(`Не удалось загрузить ${file.path}`);
-          const compressed = await response.arrayBuffer();
-          const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', compressed)))
-            .map((value) => value.toString(16).padStart(2, '0'))
-            .join('');
-          if (compressed.byteLength !== file.size || hash !== file.sha256)
-            throw new Error(`Поврежден файл ${file.path}`);
-          if (typeof DecompressionStream === 'undefined')
-            throw new Error('Браузер не поддерживает gzip для тайлов подписей');
-          const raw = await new Response(
-            new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip')),
-          ).arrayBuffer();
-          return parseStreetLabelTiles(raw);
-        })();
-        labelTileCache.current.set(key, pending);
-      }
-      try {
-        const tiles = await pending;
-        if (cancelled) return;
-        // Keep only the visible language: parsed tiles are much larger than
-        // their gzip file and the user normally uses one language at a time.
-        labelTileSets.current.clear();
-        labelTileSets.current.set(key, tiles);
-        for (const existingKey of labelTileCache.current.keys()) {
-          if (existingKey !== key) labelTileCache.current.delete(existingKey);
-        }
-        map.setStreetLabelTiles(tiles, language);
-        setStreetLayerLoading(false);
-      } catch (error) {
-        labelTileCache.current.delete(key);
-        throw error;
-      }
-    };
-    void load().catch(() => {
-      if (cancelled) return;
-      map.setStreetLabelTiles(null);
-      setStreetLayerLoading(false);
-      setStreetLayerError(true);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [detailedStreets, language, streetLabelTiles]);
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
@@ -512,13 +426,7 @@ export default function MapView({
                   onChange={(event) => setDetailedStreets(event.target.checked)}
                 />{' '}
                 {t('Подробности улиц и названия')}
-                {streetLayerLoading && ` (${t('Загружается…')})`}
               </label>
-              {streetLayerError && (
-                <small className="layer-status" role="alert">
-                  {t('Не удалось загрузить названия улиц.')}
-                </small>
-              )}
               <label>
                 <input
                   type="checkbox"

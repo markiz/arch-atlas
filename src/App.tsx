@@ -635,11 +635,6 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
         const corePaths = new Set(['buildings.json', 'basemap.geojson']);
         const initialFiles = manifest.files.filter((f) => corePaths.has(f.path));
         const photoFiles = new Map(manifest.files.map((f) => [f.path, f]));
-        const streetLabelTiles: Partial<Record<Language, (typeof manifest.files)[number]>> = {};
-        for (const lang of ['ru', 'en', 'ka', 'uk'] as const) {
-          const file = manifest.files.find((f) => f.path.startsWith(`street-labels-${lang}-`));
-          if (file) streetLabelTiles[lang] = file;
-        }
         const files = new Map<string, ArrayBuffer>();
         let done = 0;
         const total = initialFiles.reduce((n, f) => n + f.size, 0);
@@ -686,7 +681,6 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
             buildings,
             basemap,
             buildingOutlines: optionalOutlines,
-            streetLabelTiles,
             photoFiles,
           });
         }
@@ -1311,7 +1305,6 @@ function AppContent({ data }: { data: Data }) {
     allBuildings: data.buildings,
     basemap: data.basemap as FeatureCollection,
     buildingOutlines: data.buildingOutlines,
-    streetLabelTiles: data.streetLabelTiles,
     selected,
     onSelect: select,
     focus,

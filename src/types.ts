@@ -1,5 +1,4 @@
 import type { GeoJsonObject, Geometry } from 'geojson';
-import type { Language } from './i18n';
 export type GeometryRole =
   | 'above_ground'
   | 'heritage_boundary'
@@ -84,7 +83,6 @@ export interface Data {
   buildings: Building[];
   basemap: GeoJsonObject;
   buildingOutlines: ManifestFile;
-  streetLabelTiles: Partial<Record<Language, ManifestFile>>;
   photoFiles: Map<string, ManifestFile>;
 }
 export interface Filters {

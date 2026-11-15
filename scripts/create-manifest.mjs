@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile, rename } from 'node:fs/promises';
+import { readFile, writeFile, rename } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -18,9 +18,6 @@ async function writeFileAtomic(file, contents) {
 export async function createManifest({ root = ATLAS_ROOT, quiet = false } = {}) {
   const bundlePath = path.join(root, 'buildings.json');
   const buildings = JSON.parse(await readFile(bundlePath, 'utf8'));
-  const labelTiles = (await readdir(root))
-    .filter((file) => /^street-labels-.*\.bin$/.test(file))
-    .sort();
   const paths = [
     'buildings.json',
     'landmarks.json',
@@ -34,7 +31,6 @@ export async function createManifest({ root = ATLAS_ROOT, quiet = false } = {}) 
         ),
       ),
     ),
-    ...labelTiles,
   ];
   const progress = new Progress(paths.length, {
     label: 'hash atlas files',
