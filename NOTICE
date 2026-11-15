@@ -1,0 +1,49 @@
+Tbilisi Architecture Atlas — License Scope and Rights in Materials
+==================================================================
+
+The project's source code is distributed under the MIT License (see LICENSE).
+That license does NOT cover data, cartography, texts or images: rights in
+those remain with their respective rights holders, and terms of use are
+determined by their sources and stated licenses.
+
+Covered by the MIT License
+--------------------------
+
+- application source code: `src/`, `index.html`, styles;
+- build, check and import scripts: `scripts/`, `tests/`, build and tooling
+  configuration (`vite.config.ts`, `tsconfig.json`, `eslint.config.mjs`,
+  `package.json`, etc.).
+
+NOT covered by the MIT License
+------------------------------
+
+- Cartographic data and derived layers: `raw/osm/` exports, building geometry
+  and object coordinates, `public/atlas/basemap.geojson`,
+  `public/atlas/building-outlines.geojson`,
+  `public/atlas/building-outlines.bin`, label tiles
+  `public/atlas/street-labels-*.bin`, and everything assembled from
+  OpenStreetMap exports. OpenStreetMap data © OpenStreetMap contributors,
+  licensed under ODbL 1.0
+  (https://www.openstreetmap.org/copyright, https://opendatacommons.org/licenses/odbl/1-0/).
+- Photographs: `data/photos/`, `data/thumbnails/`, `data/cards/`,
+  `public/atlas/photos/` and other derived previews. Rights belong to the
+  authors and sources; the author, license and file page are recorded in the
+  `<sha256>.metadata.json` sidecar next to each image.
+- Texts, names, addresses, descriptions, historical information and other
+  content in `data/`: rights belong to their authors and rights holders, and
+  terms of use are set by the sources cited in the cards and metadata.
+- Third-party assets: the DejaVu Sans font (`public/fonts/DejaVuSans.ttf`) is
+  distributed under its own license
+  (`public/fonts/DejaVuSans.LICENSE.txt`); dependencies in `node_modules/` are
+  covered by the licenses of their respective packages.
+
+Generated artifacts
+-------------------
+
+`public/atlas/`, `data/aux/<city>.json`, `data/thumbnails/`, `data/cards/`,
+`dist/` and `.cache/` are built from the materials listed above and inherit
+the rights of their sources. The build code itself remains under the MIT
+License.
+
+Where a specific item states its own license (for example, in a photo sidecar
+or on the source page), that license applies instead of the MIT License.
