@@ -85,6 +85,8 @@ const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
 const MIN_DRAG = 3;
+/** How long to wait for the compatibility click that follows a selecting tap. */
+const TAP_CLICK_GUARD_MS = 400;
 const DEFAULT_VISIBILITY: AtlasLayerVisibility = {
   roads: true,
   water: true,
@@ -218,6 +220,11 @@ export class AtlasCanvasMap {
   private tooltipVisible = false;
   private destroyed = false;
   private suppressClick = false;
+  private tapClickGuard: {
+    onClick: (event: MouseEvent) => void;
+    onPointerDown: () => void;
+    timer: number;
+  } | null = null;
 
   constructor(container: HTMLElement, options: AtlasCanvasOptions) {
     this.container = container;
@@ -485,6 +492,7 @@ export class AtlasCanvasMap {
     this.destroyed = true;
     this.stopAnimation(false);
     if (this.wheelTimer !== null) window.clearTimeout(this.wheelTimer);
+    this.releaseTapClickGuard();
     this.resizeObserver.disconnect();
     this.detachEvents();
     this.container.replaceChildren();
@@ -1578,6 +1586,7 @@ export class AtlasCanvasMap {
         const building = this.hitAt(point);
         if (building) {
           this.onSelect(building.id);
+          this.suppressNextTapClick();
           this.suppressClick = false;
           return;
         }
@@ -1590,6 +1599,37 @@ export class AtlasCanvasMap {
       this.settleDrag();
       this.suppressClick = false;
     }
+  }
+
+  /**
+   * A tap fires compatibility mouse events after pointerup. By then the card
+   * opened by the tap already covers the map, so that synthesized click hits
+   * the card control under the finger (the photo, for instance) instead of the
+   * map. Swallow that one click; a click on the map itself is left alone.
+   */
+  private suppressNextTapClick() {
+    this.releaseTapClickGuard();
+    const onClick = (event: MouseEvent) => {
+      this.releaseTapClickGuard();
+      if (event.detail === 0) return;
+      if (event.target instanceof Node && this.container.contains(event.target)) return;
+      event.preventDefault();
+      event.stopPropagation();
+    };
+    const onPointerDown = () => this.releaseTapClickGuard();
+    const timer = window.setTimeout(() => this.releaseTapClickGuard(), TAP_CLICK_GUARD_MS);
+    this.tapClickGuard = { onClick, onPointerDown, timer };
+    document.addEventListener('click', onClick, true);
+    document.addEventListener('pointerdown', onPointerDown, true);
+  }
+
+  private releaseTapClickGuard() {
+    const guard = this.tapClickGuard;
+    if (!guard) return;
+    this.tapClickGuard = null;
+    window.clearTimeout(guard.timer);
+    document.removeEventListener('click', guard.onClick, true);
+    document.removeEventListener('pointerdown', guard.onPointerDown, true);
   }
 
   private handleRemainingPointer() {

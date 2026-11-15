@@ -961,15 +961,14 @@ footer b {
   .legend-list {
     font-size: 9px;
   }
+  /* The expanded card is a full-height sheet on narrow screens: it covers the
+     map completely instead of leaving a strip of map controls behind it. */
   .inspector {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
-    height: min(78%, 650px);
+    height: 100%;
     border-left: 0;
-    border-top: 1px solid #dce3d8;
-    box-shadow: 0 -10px 30px #30483720;
   }
   .photo-wrap {
     height: 240px;
