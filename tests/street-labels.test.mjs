@@ -6,6 +6,7 @@ import {
   layoutTextAlongPath,
   measureLabel,
   multiTextWindows,
+  stableTextWindows,
   prepareScreenPath,
   straightTextLayout,
   straightTextLayoutAt,
@@ -242,4 +243,23 @@ test('straight fallback keeps text upright on vertical and horizontal lines', ()
   assert.ok(horizontal && vertical);
   assert.ok(Math.abs(straightTextLayout(horizontal, text).angle) < 1e-6);
   assert.ok(Math.abs(Math.abs(straightTextLayout(vertical, text).angle) - Math.PI / 2) < 1e-6);
+});
+
+test('stable slots keep the same road fractions when the font changes', () => {
+  const path = prepareScreenPath([
+    [0, 0],
+    [1000, 0],
+  ]);
+  assert.ok(path);
+  const narrow = stableTextWindows(path, metrics('улица', 6), 3);
+  const wide = stableTextWindows(path, metrics('улица', 9), 3);
+  assert.equal(narrow.length, 3);
+  assert.equal(wide.length, 3);
+  for (let index = 0; index < 3; index++) {
+    const target = ((index + 0.5) / 3) * path.length;
+    const near = (narrow[index].box.minX + narrow[index].box.maxX) / 2;
+    const far = (wide[index].box.minX + wide[index].box.maxX) / 2;
+    assert.ok(Math.abs(near - target) < 80);
+    assert.ok(Math.abs(far - target) < 80);
+  }
 });

@@ -13,8 +13,8 @@ import {
   buildStreetLines,
   layoutTextAlongPath,
   measureLabel,
-  multiTextWindows,
   prepareScreenPath,
+  stableTextWindows,
   streetLabelFontSize,
   streetPriority,
 } from '../src/map/street-labels.ts';
@@ -85,6 +85,52 @@ function lineGlyphs(entry) {
   return glyphs;
 }
 
+const REFERENCE_ZOOM = 15.5;
+const REFERENCE_FONT_SIZE = streetLabelFontSize(REFERENCE_ZOOM);
+const referenceLengths = new WeakMap();
+const stableSlotsCache = new WeakMap();
+
+/**
+ * Slot count is fixed from the street at the reference zoom, not from the
+ * current text size. Every zoom then uses the same fractions of the road, so
+ * a name does not jump to a different window when the font grows.
+ */
+function stableSlots(line, text, language, metricsTable) {
+  let perLine = stableSlotsCache.get(line);
+  if (!perLine) {
+    perLine = new Map();
+    stableSlotsCache.set(line, perLine);
+  }
+  const key = `${language}|${text}`;
+  const cached = perLine.get(key);
+  if (cached) return cached;
+  let referenceLength = referenceLengths.get(line);
+  if (referenceLength === undefined) {
+    referenceLength = 0;
+    for (let index = 1; index < line.coords.length; index++) {
+      const from = line.coords[index - 1];
+      const to = line.coords[index];
+      referenceLength += Math.hypot(
+        projectX(to[0], REFERENCE_ZOOM) - projectX(from[0], REFERENCE_ZOOM),
+        projectY(to[1], REFERENCE_ZOOM) - projectY(from[1], REFERENCE_ZOOM),
+      );
+    }
+    referenceLengths.set(line, referenceLength);
+  }
+  const table = metricsTable[String(REFERENCE_FONT_SIZE)] ?? {};
+  const referenceMetrics = measureLabel(
+    (char) => table[char] ?? table['?'] ?? 0,
+    text,
+    REFERENCE_FONT_SIZE,
+  );
+  const slots = Math.max(
+    1,
+    Math.min(4, Math.floor(referenceLength / Math.max(1, referenceMetrics.total * 1.7))),
+  );
+  perLine.set(key, slots);
+  return slots;
+}
+
 function buildLabels(lines, view, zoom, metricsTable, language) {
   const bucket = Math.round(zoom * 2) / 2;
   const fontSize = streetLabelFontSize(bucket);
@@ -141,7 +187,14 @@ function buildLabels(lines, view, zoom, metricsTable, language) {
     // leave this street unnamed instead of drawing a straight label over
     // neighbouring blocks.
     if (!path || path.length < metrics.total + 8) continue;
-    const layouts = multiTextWindows(path, metrics, { isVisible: visible });
+    const layouts = stableTextWindows(
+      path,
+      metrics,
+      stableSlots(line, text, language, metricsTable),
+      {
+        isVisible: visible,
+      },
+    );
     for (const layout of layouts) {
       const boxes = layout.glyphs.map((glyph) => glyph.box);
       const center = {

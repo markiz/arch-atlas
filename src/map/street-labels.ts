@@ -654,6 +654,44 @@ function nearTextWindow(
 }
 
 /**
+ * Stable version of the repeat slots: the caller decides the slot count from
+ * the street at a reference zoom, so the same fractions of the road are used
+ * at every zoom. A label stays near its road anchor instead of jumping to a
+ * different window when the font grows.
+ */
+export function stableTextWindows(
+  path: ScreenPath,
+  metrics: TextMetrics,
+  slots: number,
+  options: WindowOptions = {},
+): TextLayout[] {
+  const total = metrics.total;
+  if (path.length < total + 8) return [];
+  const count = Math.max(1, Math.min(4, Math.floor(slots)));
+  const slotLength = path.length / count;
+  const layouts: TextLayout[] = [];
+  for (let index = 0; index < count; index++) {
+    const target = (index + 0.5) * slotLength;
+    const centerStart = Math.max(0, Math.min(path.length - total, target - total / 2));
+    const radius = Math.min(48, Math.max(6, total * 0.45));
+    const from = Math.max(0, centerStart - radius);
+    const to = Math.min(path.length - total, centerStart + radius);
+    if (from > to) continue;
+    const layout = bestTextWindow(path, metrics, {
+      ...options,
+      target,
+      from,
+      to,
+      step: 6,
+      centerWeight: 220,
+      stepWeight: 18,
+    });
+    if (layout) layouts.push(layout);
+  }
+  return layouts.sort((a, b) => a.start - b.start);
+}
+
+/**
  * Variant C: split a long street into up to four slots and place one label in
  * each. This gives repeated names on avenues and embankments without stacking
  * two labels on a short lane.
