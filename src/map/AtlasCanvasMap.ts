@@ -73,6 +73,7 @@ type DragSession = {
 };
 type PinchSession = { startDistance: number; anchorWorld: Point; startZoom: number };
 type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks: number[] };
+type RoadGroups = { major: number[]; secondary: number[]; minor: number[] };
 
 const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
@@ -214,6 +215,7 @@ export class AtlasCanvasMap {
   private baseFeatures: GeoJSON.Feature[] = [];
   private baseBoxes: Float32Array | null = null;
   private baseGroups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
+  private roadGroups: RoadGroups = { major: [], secondary: [], minor: [] };
   private outlineFeatures: GeoJSON.Feature[] = [];
   private outlineBinary: OutlineBinary | null = null;
   private outlineBoxes: Float32Array | null = null;
@@ -299,6 +301,15 @@ export class AtlasCanvasMap {
       else if (kind === 'landmark') groups.landmarks.push(index);
     }
     this.baseGroups = groups;
+    this.roadGroups = { major: [], secondary: [], minor: [] };
+    for (let index = 0; index < this.baseFeatures.length; index++) {
+      if (this.baseFeatures[index].properties?.kind !== 'road') continue;
+      const roadClass = String(this.baseFeatures[index].properties?.class ?? '');
+      if (roadClass === 'motorway' || roadClass === 'trunk' || roadClass === 'primary')
+        this.roadGroups.major.push(index);
+      else if (roadClass === 'secondary') this.roadGroups.secondary.push(index);
+      else this.roadGroups.minor.push(index);
+    }
     this.markers = [];
     this.markersLayer.replaceChildren();
     for (const feature of this.baseFeatures) {
@@ -847,63 +858,28 @@ export class AtlasCanvasMap {
       }
     }
     if (this.visibility.roads && boxes) {
-      if (this.visibility.detailedStreets) {
-        const major = new Set(['primary', 'secondary', 'trunk']);
+      const detailed = this.visibility.detailedStreets;
+      const strokeRoads = (indices: number[], color: string, width: number) => {
+        if (!indices.length) return;
+        context.beginPath();
         let any = false;
-        context.beginPath();
-        for (const index of this.baseGroups.roads) {
-          if (
-            !this.boxVisible(boxes, index, view) ||
-            major.has(String(this.baseFeatures[index].properties?.class))
-          )
-            continue;
-          const geometry = this.baseFeatures[index].geometry;
-          if (geometry) {
-            addGeometry(geometry, context);
-            any = true;
-          }
-        }
-        if (any) {
-          context.strokeStyle = '#fffefa';
-          context.lineWidth = 1.7;
-          context.stroke();
-        }
-        any = false;
-        context.beginPath();
-        for (const index of this.baseGroups.roads) {
-          if (
-            !this.boxVisible(boxes, index, view) ||
-            !major.has(String(this.baseFeatures[index].properties?.class))
-          )
-            continue;
-          const geometry = this.baseFeatures[index].geometry;
-          if (geometry) {
-            addGeometry(geometry, context);
-            any = true;
-          }
-        }
-        if (any) {
-          context.strokeStyle = '#fffefa';
-          context.lineWidth = 3.1;
-          context.stroke();
-        }
-      } else {
-        let any = false;
-        context.beginPath();
-        for (const index of this.baseGroups.roads) {
+        for (const index of indices) {
           if (!this.boxVisible(boxes, index, view)) continue;
           const geometry = this.baseFeatures[index].geometry;
-          if (geometry) {
-            addGeometry(geometry, context);
-            any = true;
-          }
+          if (!geometry) continue;
+          addGeometry(geometry, context);
+          any = true;
         }
-        if (any) {
-          context.strokeStyle = '#fffefa';
-          context.lineWidth = 1.5;
-          context.stroke();
-        }
-      }
+        if (!any) return;
+        context.strokeStyle = color;
+        context.lineWidth = width;
+        context.stroke();
+      };
+      // Minor streets stay white; avenues and secondary roads get the warm
+      // colours from the prototype, so the street hierarchy reads at a glance.
+      strokeRoads(this.roadGroups.minor, '#fffefa', detailed ? 1.7 : 1.5);
+      strokeRoads(this.roadGroups.secondary, '#ece3cf', detailed ? 2.6 : 2.2);
+      strokeRoads(this.roadGroups.major, '#ece3cf', detailed ? 3.4 : 2.8);
     }
     if (this.visibility.landmarks) {
       const landmarks = this.baseGroups.landmarks.filter((index) => {
