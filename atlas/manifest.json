@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "revision": "56aa95542e3437d1",
+  "revision": "cc212ed41d8f65ce",
   "files": [
     {
       "path": "buildings.json",
@@ -16646,6 +16646,26 @@
       "path": "cards/tbilisi/63dc758fab1123dbb14aea32e4ab7af179b25ec9c3e45ab696e75a4386f0d8f0.webp",
       "size": 16652,
       "sha256": "aeeb9d515ad2b37d4f1ad170ec46cbbd54142942d6172a5641a1ded4e4999b6c"
+    },
+    {
+      "path": "street-labels-en-4157195d3e85.bin",
+      "size": 7654359,
+      "sha256": "265b9d80cd2469d699df591483099f023cc338bff6311145432617dc8a37f455"
+    },
+    {
+      "path": "street-labels-ka-3ff49e4f6dea.bin",
+      "size": 7385372,
+      "sha256": "7ae57d696ea627560c71a7a3d420953297f619fb08ed35d36ad5aa2285bcefdb"
+    },
+    {
+      "path": "street-labels-ru-fd52efff146b.bin",
+      "size": 6896337,
+      "sha256": "2561167eda2762d567dee061ad6a1bb196db9d07a1a14c392baa273cf35476fc"
+    },
+    {
+      "path": "street-labels-uk-7ac654735922.bin",
+      "size": 7542996,
+      "sha256": "a7a627d37be6e8ac21389c92c094647fc69a4dbbee2384c795273f7d0a1c1a1a"
     }
   ]
 }
