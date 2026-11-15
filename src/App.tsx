@@ -51,6 +51,11 @@ function Icon({ name, size = 18 }: { name: string; size?: number }) {
         <path d="M4 6h.01M4 12h.01M4 18h.01" />
       </>
     ),
+    menu: (
+      <>
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </>
+    ),
     close: (
       <>
         <path d="M5 5l14 14M19 5 5 19" />
@@ -1026,6 +1031,7 @@ function AppContent({ data }: { data: Data }) {
     [showLegend, setShowLegend] = useState(
       () => typeof window === 'undefined' || !window.matchMedia('(max-width: 650px)').matches,
     ),
+    [menuOpen, setMenuOpen] = useState(false),
     [hoveredPeriod, setHoveredPeriod] = useState<string | null>(null),
     [selectedPeriods, setSelectedPeriods] = useState<string[]>([]),
     [focus, setFocus] = useState<{ id: string; serial: number } | null>(null),
@@ -1034,7 +1040,8 @@ function AppContent({ data }: { data: Data }) {
     [sort, setSort] = useState('name'),
     [visibleCount, setVisibleCount] = useState(CATALOG_PAGE_SIZE);
   const opener = useRef<HTMLElement | null>(null),
-    firstHash = useRef(true);
+    firstHash = useRef(true),
+    mobileMenu = useRef<HTMLElement | null>(null);
   const filtered = useMemo(() => {
     const results = filterBuildings(data.buildings, filters) as Building[];
     return selectedPeriods.length
@@ -1107,6 +1114,51 @@ function AppContent({ data }: { data: Data }) {
     };
     window.addEventListener('popstate', pop);
     return () => window.removeEventListener('popstate', pop);
+  }, []);
+  useEffect(() => {
+    if (!menuOpen) return;
+    const root = mobileMenu.current;
+    const previous = document.activeElement as HTMLElement | null;
+    const focusable = () =>
+      root
+        ? [...root.querySelectorAll<HTMLElement>('button, select, a[href], input')].filter(
+            (element) => !element.hasAttribute('disabled') && element.offsetParent !== null,
+          )
+        : [];
+    const timer = window.setTimeout(() => focusable()[0]?.focus(), 30);
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setMenuOpen(false);
+        return;
+      }
+      if (event.key !== 'Tab') return;
+      const items = focusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.clearTimeout(timer);
+      document.removeEventListener('keydown', onKeyDown);
+      previous?.focus?.();
+    };
+  }, [menuOpen]);
+  useEffect(() => {
+    const query = window.matchMedia('(min-width: 651px)');
+    const onChange = () => {
+      if (query.matches) setMenuOpen(false);
+    };
+    query.addEventListener('change', onChange);
+    return () => query.removeEventListener('change', onChange);
   }, []);
   useEffect(() => {
     if (selected && !filtered.some((x) => x.id === selected)) setSelected(null);
@@ -1225,7 +1277,7 @@ function AppContent({ data }: { data: Data }) {
                   aria-label={t('Поиск по атласу')}
                   value={filters.query}
                   onChange={(e) => update('query', e.target.value)}
-                  placeholder={t('Название, архитектор, адрес, OSM…')}
+                  placeholder={t('Название, архитектор, адрес…')}
                 />
                 {filters.query && (
                   <button onClick={() => update('query', '')} aria-label={t('Очистить поиск')}>
@@ -1233,6 +1285,17 @@ function AppContent({ data }: { data: Data }) {
                   </button>
                 )}
               </label>
+              <button
+                type="button"
+                className="mobile-menu-button"
+                aria-label={t('Открыть меню')}
+                aria-haspopup="dialog"
+                aria-expanded={menuOpen}
+                aria-controls="atlas-mobile-menu"
+                onClick={() => setMenuOpen(true)}
+              >
+                <Icon name="menu" size={20} />
+              </button>
               <button
                 className={'filter-button ' + (showFilters ? 'active' : '')}
                 onClick={() => setShowFilters(!showFilters)}
@@ -1325,17 +1388,20 @@ function AppContent({ data }: { data: Data }) {
                       ⌖
                     </button>
                     <div className={'legend ' + (!showLegend ? 'compact' : '')}>
-                      <div className="legend-head">
+                      <button
+                        type="button"
+                        className="legend-head"
+                        onClick={() => setShowLegend(!showLegend)}
+                        aria-expanded={showLegend}
+                        aria-controls="legend-details"
+                      >
                         <span>{t('Период постройки')}</span>
-                        <button
-                          onClick={() => setShowLegend(!showLegend)}
-                          aria-label={t(showLegend ? 'Свернуть легенду' : 'Развернуть легенду')}
-                        >
+                        <span className="legend-toggle" aria-hidden="true">
                           {showLegend ? '−' : '+'}
-                        </button>
-                      </div>
+                        </span>
+                      </button>
                       {showLegend && (
-                        <>
+                        <div id="legend-details">
                           <div className="legend-colors">
                             {periods.slice(0, 7).map((p) => (
                               <span key={p.label} style={{ background: p.color }} />
@@ -1351,12 +1417,7 @@ function AppContent({ data }: { data: Data }) {
                             onToggle={togglePeriod}
                             onHover={setHoveredPeriod}
                           />
-                          <p>
-                            {t(
-                              'Цвет показывает датировку здания. Выбор периода — в панели фильтров.',
-                            )}
-                          </p>
-                        </>
+                        </div>
                       )}
                     </div>
                   </>
@@ -1454,6 +1515,53 @@ function AppContent({ data }: { data: Data }) {
           </div>
         )}
       </main>
+      <div
+        className={'mobile-menu-scrim' + (menuOpen ? ' open' : '')}
+        aria-hidden="true"
+        onClick={() => setMenuOpen(false)}
+      />
+      <section
+        id="atlas-mobile-menu"
+        className={'mobile-menu' + (menuOpen ? ' open' : '')}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="atlas-mobile-menu-title"
+        ref={mobileMenu}
+        inert={!menuOpen}
+      >
+        <div className="mobile-menu-grab" aria-hidden="true" />
+        <div className="mobile-menu-head">
+          <h2 id="atlas-mobile-menu-title">{t('Меню атласа')}</h2>
+          <button type="button" onClick={() => setMenuOpen(false)} aria-label={t('Закрыть меню')}>
+            <Icon name="close" size={16} />
+          </button>
+        </div>
+        <div className="mobile-menu-field">
+          <label htmlFor="city-mobile">{t('ГОРОД')}</label>
+          <select
+            id="city-mobile"
+            className="mobile-menu-select"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          >
+            <option value="tbilisi">{t('Тбилиси')}</option>
+          </select>
+        </div>
+        <div className="mobile-menu-field">
+          <label htmlFor="language-mobile">{t('ЯЗЫК')}</label>
+          <select
+            id="language-mobile"
+            className="mobile-menu-select"
+            value={language}
+            onChange={(e) => setLanguage(e.target.value as Language)}
+          >
+            <option value="ru">Русский</option>
+            <option value="en">English</option>
+            <option value="ka">ქართული</option>
+            <option value="uk">Українська</option>
+          </select>
+        </div>
+      </section>
     </div>
   );
 }
