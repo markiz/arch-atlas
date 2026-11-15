@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "revision": "ae5da8ffc5046631",
+  "revision": "56aa95542e3437d1",
   "files": [
     {
       "path": "buildings.json",
@@ -14,8 +14,8 @@
     },
     {
       "path": "basemap.geojson",
-      "size": 9756251,
-      "sha256": "b18488dbef9b802d1f6f581c75ba6f9ede468981c72b1daa5748d86388e555e4"
+      "size": 9780699,
+      "sha256": "39ae2e6d925e1e2ea4f323fad8240a9bc0ad3e960de75dbba12e3e825ff442fa"
     },
     {
       "path": "building-outlines.geojson",
