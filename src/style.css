@@ -498,6 +498,7 @@ a {
   font-size: 9px;
   letter-spacing: 0.08em;
   color: #fff;
+  pointer-events: none;
 }
 .inspect-body {
   padding: 21px 24px 26px;
@@ -1579,6 +1580,7 @@ footer b {
   }
 }
 .photo-open {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -1586,12 +1588,33 @@ footer b {
   background: transparent;
   cursor: zoom-in;
   overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
+}
+.photo-carousel {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  width: 300%;
+  height: 100%;
+}
+.photo-carousel.sliding {
+  will-change: transform;
+}
+.photo-slide {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
 }
 .photo-open img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .lightbox-backdrop {
   position: fixed;
@@ -1646,12 +1669,51 @@ footer b {
   justify-content: center;
   min-height: 0;
   width: 100%;
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: contain;
+  user-select: none;
+}
+.lightbox-track {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  display: flex;
+  width: 300%;
+  height: 100%;
+  pointer-events: none;
+}
+.lightbox-view.sliding .lightbox-track {
+  will-change: transform;
+}
+.lightbox-slide {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .lightbox-view img {
   display: block;
   max-width: calc(100vw - 110px);
-  max-height: calc(100dvh - 155px);
+  max-height: 100%;
   object-fit: contain;
+  transform-origin: 50% 50%;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto;
+}
+.lightbox-slide.current img {
+  will-change: transform;
+}
+.lightbox-view.zoomed .lightbox-slide:not(.current) {
+  visibility: hidden;
+}
+.lightbox-view.zoomed .lightbox-source,
+.lightbox-view.sliding .lightbox-source {
+  opacity: 0;
+  pointer-events: none;
 }
 .lightbox-source {
   position: absolute;
@@ -1734,7 +1796,7 @@ footer b {
   }
   .lightbox-view img {
     max-width: calc(100vw - 28px);
-    max-height: calc(100dvh - 150px);
+    max-height: 100%;
   }
   .lightbox-source {
     padding: 4px 6px;
@@ -2168,6 +2230,7 @@ footer b {
   color: #607a66;
   font-size: 9px;
   letter-spacing: 0.03em;
+  pointer-events: none;
 }
 @keyframes photo-shimmer {
   0% {
@@ -2186,6 +2249,12 @@ footer b {
   .photo-skeleton,
   .photo-spinner {
     animation: none;
+  }
+  .photo-open img,
+  .photo-carousel,
+  .lightbox-view img,
+  .lightbox-track {
+    transition: none !important;
   }
 }
 .photo-unavailable {

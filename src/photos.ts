@@ -308,29 +308,29 @@ export function useLazyPhoto(
 
 /** Load the full file for the photo currently displayed in the inspector. */
 export function useFullPhoto(photo: Photo | undefined, files: ReadonlyMap<string, ManifestFile>) {
-  const [url, setUrl] = useState<string | undefined>();
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [state, setState] = useState<{
+    file?: string;
+    url?: string;
+    error: string;
+    loading: boolean;
+  }>({ error: '', loading: false });
   const pinned = useRef<string | null>(null);
   useEffect(() => {
     let active = true;
-    setUrl(undefined);
-    setError('');
-    setLoading(false);
-    if (!photo?.file) return;
-    setLoading(true);
-    loadPhotoFile(photo.file, files)
+    const file = photo?.file;
+    setState({ file, error: '', loading: false });
+    if (!file) return;
+    setState({ file, error: '', loading: true });
+    loadPhotoFile(file, files)
       .then((value) => {
         if (!active) return;
-        pinPhotoUrl(photo.file);
-        pinned.current = photo.file;
-        setUrl(value);
-        setLoading(false);
+        pinPhotoUrl(file);
+        pinned.current = file;
+        setState({ file, url: value, error: '', loading: false });
       })
       .catch((value) => {
         if (!active) return;
-        setError(errorText(value));
-        setLoading(false);
+        setState({ file, error: errorText(value), loading: false });
       });
     return () => {
       active = false;
@@ -340,7 +340,12 @@ export function useFullPhoto(photo: Photo | undefined, files: ReadonlyMap<string
       }
     };
   }, [photo?.file, files]);
-  return { url, error, loading };
+  const current = state.file === photo?.file ? state : undefined;
+  return {
+    url: current?.url,
+    error: current?.error || '',
+    loading: current?.loading || false,
+  };
 }
 
 export function useVisibility<T extends HTMLElement>() {

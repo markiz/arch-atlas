@@ -14,6 +14,7 @@ import {
   useVisibility,
   type BuildingPhotos,
 } from './photos';
+import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
 
 type View = 'map' | 'catalog';
 const initialFilters: Filters = { query: '', from: '', to: '', architect: [], style: [] };
@@ -397,6 +398,8 @@ function photoSourceHost(source: string) {
 function PhotoLightbox({
   building,
   src,
+  previousSrc,
+  nextSrc,
   index,
   total,
   description,
@@ -408,6 +411,8 @@ function PhotoLightbox({
 }: {
   building: Building;
   src: string;
+  previousSrc?: string;
+  nextSrc?: string;
   index: number;
   total: number;
   description?: string;
@@ -424,26 +429,35 @@ function PhotoLightbox({
   const viewRef = useRef<HTMLDivElement>(null),
     imgRef = useRef<HTMLImageElement>(null),
     badgeRef = useRef<HTMLAnchorElement>(null);
+  const gestures = usePhotoLightboxGestures({
+    enabled: total > 1,
+    onNext,
+    onPrevious,
+    resetKey: `${building.id}:${credit?.file ?? index}`,
+    viewRef,
+    imgRef,
+  });
   const placeBadge = () => {
     const view = viewRef.current,
       img = imgRef.current,
       badge = badgeRef.current;
     if (!view || !img || !badge || !img.complete || (src && !img.currentSrc.endsWith(src))) return;
-    const v = view.getBoundingClientRect(),
-      r = img.getBoundingClientRect();
-    if (!r.width || !r.height) return;
+    const width = img.offsetWidth,
+      height = img.offsetHeight;
+    if (!width || !height) return;
     const inset = window.matchMedia('(max-width: 650px)').matches ? 6 : 10;
-    badge.style.left = `${Math.round(r.right - v.left - inset)}px`;
-    badge.style.top = `${Math.round(r.bottom - v.top - inset)}px`;
+    badge.style.left = `${Math.round((view.clientWidth - width) / 2 + width - inset)}px`;
+    badge.style.top = `${Math.round((view.clientHeight - height) / 2 + height - inset)}px`;
     badge.style.visibility = 'visible';
   };
   useLayoutEffect(() => {
     if (badgeRef.current) badgeRef.current.style.visibility = 'hidden';
+    if (gestures.zoomed) return;
     placeBadge();
     const resize = () => placeBadge();
     window.addEventListener('resize', resize);
     return () => window.removeEventListener('resize', resize);
-  }, [src]);
+  }, [src, gestures.zoomed]);
   const closeButton = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     const previousOverflow = document.body.style.overflow;
@@ -468,6 +482,7 @@ function PhotoLightbox({
       aria-modal="true"
       aria-label={t('Фотографии: ') + name}
       onClick={(event) => {
+        if (gestures.consumeClick(event)) return;
         if (event.target === event.currentTarget) onClose();
       }}
     >
@@ -491,9 +506,14 @@ function PhotoLightbox({
           </button>
         </div>
         <div
-          className="lightbox-view"
+          className={`lightbox-view${gestures.zoomed ? ' zoomed' : ''}${gestures.sliding ? ' sliding' : ''}`}
           ref={viewRef}
+          onPointerDown={gestures.onPointerDown}
+          onPointerMove={gestures.onPointerMove}
+          onPointerUp={gestures.onPointerUp}
+          onPointerCancel={gestures.onPointerCancel}
           onClick={(event) => {
+            if (gestures.consumeClick(event)) return;
             if (event.target === event.currentTarget) onClose();
           }}
         >
@@ -506,12 +526,24 @@ function PhotoLightbox({
               ‹
             </button>
           )}
-          <img
-            ref={imgRef}
-            src={src}
-            alt={`${name}, ${t('фотография ')}${index + 1}`}
-            onLoad={placeBadge}
-          />
+          <div className="lightbox-track" style={gestures.trackStyle}>
+            <div className="lightbox-slide previous" aria-hidden="true">
+              {previousSrc && <img src={previousSrc} alt="" draggable={false} />}
+            </div>
+            <div className="lightbox-slide current">
+              <img
+                ref={imgRef}
+                src={src}
+                alt={`${name}, ${t('фотография ')}${index + 1}`}
+                style={gestures.imageStyle}
+                draggable={false}
+                onLoad={placeBadge}
+              />
+            </div>
+            <div className="lightbox-slide next" aria-hidden="true">
+              {nextSrc && <img src={nextSrc} alt="" draggable={false} />}
+            </div>
+          </div>
           {credit && sourceHost && (
             <a
               ref={badgeRef}
@@ -735,12 +767,23 @@ function Inspector({
     [lightboxOpen, setLightboxOpen] = useState(false);
   const images = photos.assets;
   const current = images[photoIndex] ?? images[0];
+  const previousAsset =
+    images.length > 1 ? images[(photoIndex - 1 + images.length) % images.length] : undefined;
+  const nextAsset = images.length > 1 ? images[(photoIndex + 1) % images.length] : undefined;
+  const previousPreview = previousAsset?.thumb;
+  const nextPreview = nextAsset?.thumb;
   const credits = current?.photo;
   const photoNote = credits ? photoTechnicalNote(credits.modifications, t) : '';
   const creditText = credits ? photoCreditText(credits, t) : '';
   const { url: fullUrl } = useFullPhoto(current?.photo, photoFiles);
   const preview = current?.thumb ?? fullUrl;
   const gallery = fullUrl ?? current?.thumb;
+  const swipe = usePhotoSwipe({
+    enabled: images.length > 1,
+    onNext: nextPhoto,
+    onPrevious: previousPhoto,
+    resetKey: current?.photo.file ?? '',
+  });
   const close = useRef<HTMLButtonElement>(null),
     photoOpener = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -790,12 +833,39 @@ function Inspector({
                   <button
                     ref={photoOpener}
                     className="photo-open"
-                    onClick={() => setLightboxOpen(true)}
+                    onPointerDown={swipe.onPointerDown}
+                    onPointerMove={swipe.onPointerMove}
+                    onPointerUp={swipe.onPointerUp}
+                    onPointerCancel={swipe.onPointerCancel}
+                    onClick={(event) => {
+                      if (swipe.consumeClick(event)) return;
+                      setLightboxOpen(true);
+                    }}
                     aria-label={
                       t('Открыть фотографию ') + `${photoIndex + 1}` + t(' на весь экран')
                     }
                   >
-                    <img src={preview} alt={`${name}, ${t('фотография ')}${photoIndex + 1}`} />
+                    <div
+                      className={`photo-carousel${swipe.offset || swipe.animating ? ' sliding' : ''}`}
+                      style={{
+                        transform: `translateX(${swipe.offset}px)`,
+                        transition: swipe.animating ? 'transform 200ms ease-out' : 'none',
+                      }}
+                    >
+                      <div className="photo-slide previous" aria-hidden="true">
+                        {previousPreview && <img src={previousPreview} alt="" draggable={false} />}
+                      </div>
+                      <div className="photo-slide current">
+                        <img
+                          src={preview}
+                          alt={`${name}, ${t('фотография ')}${photoIndex + 1}`}
+                          draggable={false}
+                        />
+                      </div>
+                      <div className="photo-slide next" aria-hidden="true">
+                        {nextPreview && <img src={nextPreview} alt="" draggable={false} />}
+                      </div>
+                    </div>
                   </button>
                   {images.length > 1 && (
                     <>
@@ -999,6 +1069,8 @@ function Inspector({
         <PhotoLightbox
           building={building}
           src={gallery}
+          previousSrc={previousPreview}
+          nextSrc={nextPreview}
           index={photoIndex}
           total={images.length}
           description={credits.descriptions?.[language]}
