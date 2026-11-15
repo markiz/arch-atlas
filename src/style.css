@@ -2374,14 +2374,16 @@ footer b {
   will-change: transform;
 }
 .atlas-map-base,
-.atlas-map-overlay {
+.atlas-map-overlay,
+.atlas-map-preview {
   position: absolute;
   pointer-events: none;
 }
 .atlas-map-base {
   z-index: 1;
 }
-.atlas-map-overlay {
+.atlas-map-overlay,
+.atlas-map-preview {
   z-index: 2;
 }
 .atlas-map-markers {
@@ -2397,6 +2399,8 @@ footer b {
   height: 36px;
   margin-left: -15px;
   margin-top: -35px;
+  /* Zoom counter-scaling pivots around the pin tip at the anchor point. */
+  transform-origin: 15px 35px;
   pointer-events: auto;
   cursor: pointer;
 }

@@ -85,6 +85,32 @@ const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
 const MIN_DRAG = 3;
+/**
+ * Zoom is continuous while the user is pinching or scrolling. The canvas is
+ * only repainted from a coarser camera when it drifts far enough from the
+ * bitmap on screen: inside these bounds the CSS transform still has enough
+ * resolution for the motion to look continuous. Zooming out also has to keep
+ * the padded canvas covering the viewport, hence the tighter bound.
+ */
+const PREVIEW_ZOOM_IN = 0.85;
+const PREVIEW_ZOOM_OUT = 0.3;
+/** Backing-store scale of a preview repaint; 1 is the full device ratio. */
+const PREVIEW_DPR_SCALE = 0.6;
+/** Preview canvases stay near this many pixels no matter how large the map is. */
+const PREVIEW_PIXEL_BUDGET = 1_000_000;
+/** Do not repaint previews more often than this while a gesture is running. */
+const PREVIEW_MIN_INTERVAL_MS = 120;
+/**
+ * A preview that takes longer than this is not worth repeating on every level:
+ * zooming in then keeps the scaled bitmap (a little softer) instead of dropping
+ * frames, while the full pass after the gesture restores sharpness. Zooming out
+ * still refreshes because otherwise the canvas stops covering the viewport.
+ */
+const PREVIEW_SLOW_MS = 24;
+/** Wheel bursts start a new zoom baseline after this much silence. */
+const WHEEL_BURST_GAP_MS = 160;
+/** A wheel can cross several levels quickly; refresh before the bitmap is a blur. */
+const WHEEL_PREVIEW_ZOOM = 1;
 /** How long to wait for the compatibility click that follows a selecting tap. */
 const TAP_CLICK_GUARD_MS = 400;
 const DEFAULT_VISIBILITY: AtlasLayerVisibility = {
@@ -136,6 +162,11 @@ function wheelDelta(event: WheelEvent) {
   if (event.deltaY && event.deltaMode === 2) return -event.deltaY * 60;
   return 0;
 }
+/** Signed number of zoom levels for the raw wheel travel of one burst. */
+function wheelZoomAmount(raw: number) {
+  const amount = (4 * Math.log(2 / (1 + Math.exp(-Math.abs(raw) / 240)))) / Math.LN2;
+  return amount * Math.sign(raw);
+}
 function makeCanvas(className: string) {
   const canvas = document.createElement('canvas');
   canvas.className = className;
@@ -176,10 +207,12 @@ export class AtlasCanvasMap {
   private readonly pan: HTMLDivElement;
   private readonly baseCanvas: HTMLCanvasElement;
   private readonly overlayCanvas: HTMLCanvasElement;
+  private readonly previewCanvas: HTMLCanvasElement;
   private readonly markersLayer: HTMLDivElement;
   private readonly tooltip: HTMLDivElement;
   private readonly baseCtx: CanvasRenderingContext2D | null;
   private readonly overlayCtx: CanvasRenderingContext2D | null;
+  private readonly previewCtx: CanvasRenderingContext2D | null;
   private readonly onSelect: (id: string) => void;
   private readonly onViewChange?: (center: LatLng, zoom: number) => void;
   private readonly minZoom: number;
@@ -189,6 +222,13 @@ export class AtlasCanvasMap {
   private size: Point = { x: 1, y: 1 };
   private padding: Point = { x: 0, y: 0 };
   private dpr = 1;
+  /** Ratio used by the draw calls currently running (full or preview). */
+  private pixelRatio = 1;
+  private preview = false;
+  private lastPreviewAt = 0;
+  private previewCost = 0;
+  private renderRaf: number | null = null;
+  private renderTimer: number | null = null;
   private view: Camera;
   private rendered: RenderedCamera | null = null;
   private baseFeatures: GeoJSON.Feature[] = [];
@@ -211,8 +251,11 @@ export class AtlasCanvasMap {
   private labelCache: LabelCache | null = null;
   private raf: number | null = null;
   private animating = false;
-  private wheelTimer: number | null = null;
-  private wheelDelta = 0;
+  private wheelRaf: number | null = null;
+  private wheelTargetZoom: number | null = null;
+  private wheelBurst = 0;
+  private wheelBurstZoom = 0;
+  private lastWheelAt = 0;
   private wheelPoint: Point = { x: 0, y: 0 };
   private pointers = new Map<number, Point>();
   private drag: DragSession | null = null;
@@ -242,15 +285,18 @@ export class AtlasCanvasMap {
     this.pan.className = 'atlas-map-pan';
     this.baseCanvas = makeCanvas('atlas-map-base');
     this.overlayCanvas = makeCanvas('atlas-map-overlay');
+    this.previewCanvas = makeCanvas('atlas-map-preview');
+    this.previewCanvas.style.display = 'none';
     this.markersLayer = document.createElement('div');
     this.markersLayer.className = 'atlas-map-markers';
     this.markersLayer.style.display = 'none';
     this.baseCtx = this.baseCanvas.getContext('2d');
     this.overlayCtx = this.overlayCanvas.getContext('2d');
+    this.previewCtx = this.previewCanvas.getContext('2d');
     this.tooltip = document.createElement('div');
     this.tooltip.className = 'atlas-map-tooltip';
     this.tooltip.setAttribute('role', 'tooltip');
-    this.pan.append(this.baseCanvas, this.overlayCanvas, this.markersLayer);
+    this.pan.append(this.baseCanvas, this.overlayCanvas, this.previewCanvas, this.markersLayer);
     this.container.append(this.pan, this.tooltip);
     this.container.tabIndex = this.container.tabIndex < 0 ? 0 : this.container.tabIndex;
     this.attachEvents();
@@ -409,20 +455,21 @@ export class AtlasCanvasMap {
   }
 
   zoomIn() {
-    this.setView(this.view.center, this.limitZoom(this.view.zoom + 1), {
+    this.setView(this.view.center, this.clampZoom(this.view.zoom + 1), {
       animate: true,
       duration: 220,
     });
   }
   zoomOut() {
-    this.setView(this.view.center, this.limitZoom(this.view.zoom - 1), {
+    this.setView(this.view.center, this.clampZoom(this.view.zoom - 1), {
       animate: true,
       duration: 220,
     });
   }
 
   setView(center: LatLng, zoom: number, options: { animate?: boolean; duration?: number } = {}) {
-    const nextZoom = this.limitZoom(zoom);
+    this.stopWheel();
+    const nextZoom = this.clampZoom(zoom);
     const next = { center: { lat: clamp(center.lat, -85, 85), lng: center.lng }, zoom: nextZoom };
     const distance =
       Math.abs(next.zoom - this.view.zoom) +
@@ -491,7 +538,8 @@ export class AtlasCanvasMap {
   destroy() {
     this.destroyed = true;
     this.stopAnimation(false);
-    if (this.wheelTimer !== null) window.clearTimeout(this.wheelTimer);
+    this.stopWheel();
+    this.cancelScheduledRender();
     this.releaseTapClickGuard();
     this.resizeObserver.disconnect();
     this.detachEvents();
@@ -517,9 +565,9 @@ export class AtlasCanvasMap {
     return boxes;
   }
 
-  private limitZoom(zoom: number) {
-    const snapped = this.zoomSnap > 0 ? Math.round(zoom / this.zoomSnap) * this.zoomSnap : zoom;
-    return clamp(snapped, this.minZoom, this.maxZoom);
+  /** Gestures never snap: a fractional zoom keeps the motion continuous. */
+  private clampZoom(zoom: number) {
+    return clamp(zoom, this.minZoom, this.maxZoom);
   }
 
   private originFor(camera: Camera): Point {
@@ -533,6 +581,7 @@ export class AtlasCanvasMap {
       height = Math.max(1, this.container.clientHeight);
     if (width === this.size.x && height === this.size.y && this.rendered) return;
     this.stopAnimation(false);
+    this.stopWheel();
     this.size = { x: width, y: height };
     this.padding = {
       x: Math.round(width * CANVAS_PADDING),
@@ -543,16 +592,23 @@ export class AtlasCanvasMap {
     const area = Math.max(1, cssWidth * cssHeight);
     const device = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1;
     this.dpr = Math.max(0.75, Math.min(device, 2, Math.sqrt(MAX_CANVAS_PIXELS / area)));
-    this.sizeCanvas(this.baseCanvas, cssWidth, cssHeight);
-    this.sizeCanvas(this.overlayCanvas, cssWidth, cssHeight);
+    this.pixelRatio = this.dpr;
+    this.sizeCanvas(this.baseCanvas, cssWidth, cssHeight, this.dpr);
+    this.sizeCanvas(this.overlayCanvas, cssWidth, cssHeight, this.dpr);
+    this.sizeCanvas(this.previewCanvas, cssWidth, cssHeight, this.previewRatio());
     this.markersLayer.style.width = `${width}px`;
     this.markersLayer.style.height = `${height}px`;
     this.renderAll();
   }
 
-  private sizeCanvas(canvas: HTMLCanvasElement, width: number, height: number) {
-    const pixelWidth = Math.max(1, Math.round(width * this.dpr)),
-      pixelHeight = Math.max(1, Math.round(height * this.dpr));
+  private sizeCanvas(
+    canvas: HTMLCanvasElement,
+    width: number,
+    height: number,
+    ratio = this.pixelRatio,
+  ) {
+    const pixelWidth = Math.max(1, Math.round(width * ratio)),
+      pixelHeight = Math.max(1, Math.round(height * ratio));
     if (canvas.width !== pixelWidth) canvas.width = pixelWidth;
     if (canvas.height !== pixelHeight) canvas.height = pixelHeight;
     canvas.style.width = `${width}px`;
@@ -579,9 +635,29 @@ export class AtlasCanvasMap {
     );
   }
 
+  private previewRatio() {
+    // Keep a preview pass near this many backing-store pixels: on phones the
+    // 0.6x device ratio is already well inside the budget, while a retina
+    // tablet would otherwise pay for a multi-megapixel repaint on every level.
+    const area = Math.max(
+      1,
+      (this.size.x + this.padding.x * 2) * (this.size.y + this.padding.y * 2),
+    );
+    return Math.max(
+      0.35,
+      Math.min(this.dpr * PREVIEW_DPR_SCALE, Math.sqrt(PREVIEW_PIXEL_BUDGET / area)),
+    );
+  }
+
   private renderAll() {
     if (this.destroyed || !this.size.x || !this.size.y) return;
     this.stopAnimation(false);
+    this.cancelScheduledRender();
+    this.preview = false;
+    this.pixelRatio = this.dpr;
+    this.previewCanvas.style.display = 'none';
+    this.baseCanvas.style.visibility = '';
+    this.overlayCanvas.style.visibility = '';
     this.rendered = {
       center: { ...this.view.center },
       zoom: this.view.zoom,
@@ -594,27 +670,92 @@ export class AtlasCanvasMap {
     this.reportView();
   }
 
-  private renderAt(camera: Camera) {
+  /**
+   * Repaint at a coarser backing-store scale on a dedicated canvas. The main
+   * canvases keep their allocation (resizing them costs a compositor hitch),
+   * and the preview canvas is only shown once its content is ready, so the
+   * visible bitmap never moves or blanks while it sharpens.
+   */
+  private renderPreviewAt(camera: Camera) {
+    const context = this.previewCtx;
+    if (!context || this.destroyed || !this.size.x || !this.size.y) return;
+    const started = performance.now();
+    this.preview = true;
+    this.pixelRatio = this.previewRatio();
     this.rendered = {
       center: { ...camera.center },
       zoom: camera.zoom,
       origin: this.originFor(camera),
     };
     this.pan.style.transform = '';
-    this.renderBase();
-    this.renderOverlay();
+    const cssWidth = this.size.x + this.padding.x * 2,
+      cssHeight = this.size.y + this.padding.y * 2;
+    context.setTransform(1, 0, 0, 1, 0, 0);
+    context.clearRect(
+      0,
+      0,
+      Math.round(cssWidth * this.pixelRatio),
+      Math.round(cssHeight * this.pixelRatio),
+    );
+    context.setTransform(this.pixelRatio, 0, 0, this.pixelRatio, 0, 0);
+    this.drawBase(context, this.rendered, this.viewBounds(this.rendered));
+    this.drawOverlayContent(context, this.rendered);
+    this.baseCanvas.style.visibility = 'hidden';
+    this.overlayCanvas.style.visibility = 'hidden';
+    this.previewCanvas.style.display = '';
     this.repositionMarkers();
+    this.lastPreviewAt = performance.now();
+    this.previewCost = this.lastPreviewAt - started;
+  }
+
+  /**
+   * Full-quality rendering waits for one painted frame: finger-up (or the last
+   * animation frame) reaches the screen with the scaled bitmap still in place,
+   * then the crisp pass runs. A new gesture cancels the pending pass.
+   */
+  private scheduleFinalRender() {
+    if (this.destroyed || this.renderRaf !== null || this.renderTimer !== null) return;
+    this.renderRaf = requestAnimationFrame(() => {
+      this.renderRaf = null;
+      this.renderTimer = window.setTimeout(() => {
+        this.renderTimer = null;
+        if (this.destroyed || this.pointers.size || this.animating) return;
+        this.renderAll();
+      }, 0);
+    });
+  }
+
+  private cancelScheduledRender() {
+    if (this.renderRaf !== null) {
+      cancelAnimationFrame(this.renderRaf);
+      this.renderRaf = null;
+    }
+    if (this.renderTimer !== null) {
+      window.clearTimeout(this.renderTimer);
+      this.renderTimer = null;
+    }
   }
 
   private renderBase() {
+    if (this.preview) {
+      // Redraw at the live camera: the CSS transform is about to be reset, so
+      // using the older rendered camera would visibly jump.
+      this.renderPreviewAt(this.view);
+      return;
+    }
     const context = this.baseCtx;
     if (!context) return;
     const cssWidth = this.size.x + this.padding.x * 2,
       cssHeight = this.size.y + this.padding.y * 2;
     context.setTransform(1, 0, 0, 1, 0, 0);
-    context.clearRect(0, 0, Math.round(cssWidth * this.dpr), Math.round(cssHeight * this.dpr));
+    context.clearRect(
+      0,
+      0,
+      Math.round(cssWidth * this.pixelRatio),
+      Math.round(cssHeight * this.pixelRatio),
+    );
     if (!this.rendered) return;
-    context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    context.setTransform(this.pixelRatio, 0, 0, this.pixelRatio, 0, 0);
     this.drawBase(context, this.rendered, this.viewBounds(this.rendered));
   }
 
@@ -785,7 +926,9 @@ export class AtlasCanvasMap {
       });
       drawGroup(landmarks, { fill: 'rgba(199,168,120,.34)', stroke: '#947652', width: 1.4 });
     }
-    if (this.buildingsVisible && this.outlineBoxes) {
+    // Outlines are the most expensive layer and are barely legible at preview
+    // resolution; skip them while a gesture is repainting coarsely.
+    if (this.buildingsVisible && this.outlineBoxes && !this.preview) {
       if (this.outlineBinary)
         this.drawBuildingOutlinesBinary(context, view, scale, offsetX, offsetY);
       else if (this.outlineFeatures.length)
@@ -806,10 +949,15 @@ export class AtlasCanvasMap {
     if (x1 <= x0 || y1 <= y0) return;
     context.save();
     context.setTransform(1, 0, 0, 1, 0, 0);
-    context.clearRect(x0 * this.dpr, y0 * this.dpr, (x1 - x0) * this.dpr, (y1 - y0) * this.dpr);
+    context.clearRect(
+      x0 * this.pixelRatio,
+      y0 * this.pixelRatio,
+      (x1 - x0) * this.pixelRatio,
+      (y1 - y0) * this.pixelRatio,
+    );
     context.restore();
     context.save();
-    context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    context.setTransform(this.pixelRatio, 0, 0, this.pixelRatio, 0, 0);
     context.beginPath();
     context.rect(x0, y0, x1 - x0, y1 - y0);
     context.clip();
@@ -839,19 +987,27 @@ export class AtlasCanvasMap {
    */
   private recenterForDrag() {
     if (!this.rendered) return;
+    if (this.preview) {
+      this.renderPreviewAt(this.view);
+      return;
+    }
     if (Math.abs(this.view.zoom - this.rendered.zoom) > 1e-6) {
-      this.renderAll();
+      // A preview repaint is cheap and lands exactly on the current camera, so
+      // the drag can keep baking strips instead of blocking on a full repaint.
+      this.renderPreviewAt(this.view);
       return;
     }
     const context = this.baseCtx;
     if (!context) return;
     const viewOrigin = this.originFor(this.view);
-    const bakeX = Math.round((this.rendered.origin.x - viewOrigin.x) * this.dpr) / this.dpr;
-    const bakeY = Math.round((this.rendered.origin.y - viewOrigin.y) * this.dpr) / this.dpr;
+    const bakeX =
+      Math.round((this.rendered.origin.x - viewOrigin.x) * this.pixelRatio) / this.pixelRatio;
+    const bakeY =
+      Math.round((this.rendered.origin.y - viewOrigin.y) * this.pixelRatio) / this.pixelRatio;
     const canvasWidth = this.size.x + this.padding.x * 2,
       canvasHeight = this.size.y + this.padding.y * 2;
     if (Math.abs(bakeX) >= canvasWidth || Math.abs(bakeY) >= canvasHeight) {
-      this.renderAll();
+      this.renderPreviewAt(this.view);
       return;
     }
     if (bakeX === 0 && bakeY === 0) {
@@ -861,7 +1017,11 @@ export class AtlasCanvasMap {
     context.save();
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.globalCompositeOperation = 'copy';
-    context.drawImage(this.baseCanvas, Math.round(bakeX * this.dpr), Math.round(bakeY * this.dpr));
+    context.drawImage(
+      this.baseCanvas,
+      Math.round(bakeX * this.pixelRatio),
+      Math.round(bakeY * this.pixelRatio),
+    );
     context.globalCompositeOperation = 'source-over';
     context.restore();
     const origin = { x: this.rendered.origin.x - bakeX, y: this.rendered.origin.y - bakeY };
@@ -897,8 +1057,11 @@ export class AtlasCanvasMap {
 
   private settleDrag() {
     if (!this.rendered) return;
-    if (Math.abs(this.view.zoom - this.rendered.zoom) > 1e-6) {
-      this.renderAll();
+    if (Math.abs(this.view.zoom - this.rendered.zoom) > 1e-6 || this.preview) {
+      // The scaled preview stays on screen while the crisp pass is painted in
+      // the next task, so lifting a finger never freezes the gesture.
+      this.scheduleFinalRender();
+      this.reportView();
       return;
     }
     const viewOrigin = this.originFor(this.view);
@@ -984,7 +1147,7 @@ export class AtlasCanvasMap {
       if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
       const x = Math.round((box.x1 + box.x2) / 2),
         y = Math.round((box.y1 + box.y2) / 2);
-      const size = 1 / this.dpr;
+      const size = 1 / this.pixelRatio;
       context.rect(x, y, size, size);
     }
     context.fillStyle = 'rgba(214,216,207,.34)';
@@ -1064,7 +1227,7 @@ export class AtlasCanvasMap {
       if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
       const x = Math.round((box.x1 + box.x2) / 2);
       const y = Math.round((box.y1 + box.y2) / 2);
-      const size = 1 / this.dpr;
+      const size = 1 / this.pixelRatio;
       context.rect(x, y, size, size);
     }
     context.fillStyle = 'rgba(214,216,207,.34)';
@@ -1072,17 +1235,33 @@ export class AtlasCanvasMap {
   }
 
   private renderOverlay() {
+    if (this.preview) {
+      // The preview canvas carries both layers; a lone overlay repaint would
+      // land on a hidden canvas.
+      this.renderPreviewAt(this.view);
+      return;
+    }
     const context = this.overlayCtx;
     if (!context) return;
     const cssWidth = this.size.x + this.padding.x * 2,
       cssHeight = this.size.y + this.padding.y * 2;
     context.setTransform(1, 0, 0, 1, 0, 0);
-    context.clearRect(0, 0, Math.round(cssWidth * this.dpr), Math.round(cssHeight * this.dpr));
+    context.clearRect(
+      0,
+      0,
+      Math.round(cssWidth * this.pixelRatio),
+      Math.round(cssHeight * this.pixelRatio),
+    );
     if (!this.rendered) return;
-    context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    this.drawAtlas(context, this.rendered);
-    if (this.visibility.detailedStreets) this.drawLabels(context, this.rendered);
-    this.drawPosition(context, this.rendered);
+    context.setTransform(this.pixelRatio, 0, 0, this.pixelRatio, 0, 0);
+    this.drawOverlayContent(context, this.rendered);
+  }
+
+  /** Atlas shapes, street labels and the position dot, on any 2D context. */
+  private drawOverlayContent(context: CanvasRenderingContext2D, camera: RenderedCamera) {
+    this.drawAtlas(context, camera);
+    if (this.visibility.detailedStreets) this.drawLabels(context, camera);
+    this.drawPosition(context, camera);
   }
 
   private drawAtlas(context: CanvasRenderingContext2D, camera: RenderedCamera) {
@@ -1190,17 +1369,21 @@ export class AtlasCanvasMap {
     context.strokeStyle = 'rgba(255,254,248,.85)';
     context.lineWidth = 3;
     context.lineJoin = 'round';
-    const zoom = camera.zoom;
+    const zoom = camera.zoom,
+      // Zoom is continuous now, so exact-equality caching would rebuild the
+      // label list on every preview frame. A quarter-level bucket keeps the
+      // filtering stable while positions are still projected at the real zoom.
+      bucket = Math.round(zoom * 4) / 4;
     if (
       !this.labelCache ||
-      this.labelCache.zoom !== zoom ||
+      Math.abs(this.labelCache.zoom - bucket) > 1e-6 ||
       this.labelCache.language !== this.language
     ) {
       const occupied = new Set<string>(),
         entries: { entry: StreetLabel; name: string }[] = [];
       for (const entry of this.streetLabels) {
-        if (zoom < entry.minZoom) continue;
-        const worldPoint = project(entry.latlng.lat, entry.latlng.lng, zoom),
+        if (bucket < entry.minZoom) continue;
+        const worldPoint = project(entry.latlng.lat, entry.latlng.lng, bucket),
           name = entry.names[this.language] || entry.fallback;
         const radius = Math.max(context.measureText(name).width / 2, 10),
           cells: string[] = [];
@@ -1219,7 +1402,7 @@ export class AtlasCanvasMap {
         cells.forEach((cell) => occupied.add(cell));
         entries.push({ entry, name });
       }
-      this.labelCache = { zoom, language: this.language, entries };
+      this.labelCache = { zoom: bucket, language: this.language, entries };
     }
     const offsetX = this.padding.x - camera.origin.x,
       offsetY = this.padding.y - camera.origin.y;
@@ -1246,7 +1429,20 @@ export class AtlasCanvasMap {
       const point = project(marker.lat, marker.lng, zoom);
       marker.element.style.left = `${point.x - origin.x}px`;
       marker.element.style.top = `${point.y - origin.y}px`;
+      marker.element.style.transform = '';
     }
+  }
+
+  /**
+   * The marker layer sits inside the scaled pan, so a zoom would inflate the
+   * icons. Counter-scale each icon around its tip to keep the labels the same
+   * size at every zoom, the way a native map behaves.
+   */
+  private scaleMarkers(scale: number) {
+    if (!this.markers.length) return;
+    const inverse = Math.abs(scale - 1) < 1e-6 ? '' : `scale(${1 / scale})`;
+    for (const marker of this.markers)
+      if (marker.element.style.transform !== inverse) marker.element.style.transform = inverse;
   }
 
   private updateMarkerLabels() {
@@ -1325,12 +1521,15 @@ export class AtlasCanvasMap {
 
   private animateTo(target: Camera, duration: number) {
     this.stopAnimation(false);
+    this.stopWheel();
+    this.cancelScheduledRender();
     this.hideTooltip();
+    // Zooming out folds the target camera into the bitmap before the motion
+    // starts: the preview pass is cheap, and the shrinking canvas then always
+    // covers the viewport. Zooming in can simply scale the current level up.
     const preRender = this.rendered !== null && target.zoom < this.rendered.zoom - 0.75;
-    if (preRender) this.renderAt(target);
-    else if (!this.rendered) {
-      this.renderAt(this.view);
-    }
+    if (!this.rendered) this.renderAll();
+    else if (preRender) this.renderPreviewAt(target);
     const from = { center: { ...this.view.center }, zoom: this.view.zoom };
     if (preRender) this.applyPanTransform(this.rendered!, this.view);
     this.animating = true;
@@ -1360,15 +1559,31 @@ export class AtlasCanvasMap {
             origin: this.originFor(target),
           };
           this.pan.style.transform = '';
-          this.renderOverlay();
           this.repositionMarkers();
           this.reportView();
-        } else {
-          this.renderAll();
         }
+        // Let the last animated frame paint before the crisp pass, so the end
+        // of an animation does not freeze the map for the render duration.
+        this.scheduleFinalRender();
       }
     };
     this.raf = requestAnimationFrame(step);
+  }
+
+  /**
+   * Repaint from a coarse camera when the scaled bitmap has drifted too far.
+   * Pinch and wheel keep their transforms continuous between these passes.
+   */
+  private maybeRefreshPreview(limitIn = PREVIEW_ZOOM_IN, allowSlow = false) {
+    if (!this.rendered || this.destroyed) return;
+    const delta = this.view.zoom - this.rendered.zoom;
+    const limit = delta < 0 ? PREVIEW_ZOOM_OUT : limitIn;
+    if (Math.abs(delta) < limit) return;
+    // Zooming out must refresh on time: waiting can expose the canvas edge.
+    // Zooming in only loses sharpness, so it can wait for the interval.
+    if (delta > 0 && performance.now() - this.lastPreviewAt < PREVIEW_MIN_INTERVAL_MS) return;
+    if (delta > 0 && !allowSlow && this.previewCost > PREVIEW_SLOW_MS) return;
+    this.renderPreviewAt(this.view);
   }
 
   private reportView() {
@@ -1381,6 +1596,7 @@ export class AtlasCanvasMap {
     const translateX = scale * rendered.origin.x - viewOrigin.x;
     const translateY = scale * rendered.origin.y - viewOrigin.y;
     this.pan.style.transform = `translate3d(${translateX}px, ${translateY}px, 0) scale(${scale})`;
+    this.scaleMarkers(scale);
   }
 
   private stopAnimation(render = true) {
@@ -1391,6 +1607,32 @@ export class AtlasCanvasMap {
     if (!this.animating) return;
     this.animating = false;
     if (render && !this.destroyed) this.renderAll();
+  }
+
+  private stopWheel() {
+    if (this.wheelRaf !== null) {
+      cancelAnimationFrame(this.wheelRaf);
+      this.wheelRaf = null;
+    }
+    this.wheelTargetZoom = null;
+    // Any programmatic camera change ends the current burst; otherwise the next
+    // wheel tick would reuse a baseline from before the animation.
+    this.wheelBurst = 0;
+    this.lastWheelAt = 0;
+  }
+
+  /** Zoom while keeping the world point under `point` pinned to the screen. */
+  private zoomToPoint(zoom: number, point: Point) {
+    const origin = this.originFor(this.view);
+    const anchorWorld = { x: origin.x + point.x, y: origin.y + point.y };
+    const scale = 2 ** (zoom - this.view.zoom);
+    const newOrigin = {
+      x: anchorWorld.x * scale - point.x,
+      y: anchorWorld.y * scale - point.y,
+    };
+    const center = unproject(newOrigin.x + this.size.x / 2, newOrigin.y + this.size.y / 2, zoom);
+    this.view = { center, zoom };
+    if (this.rendered) this.applyPanTransform(this.rendered, this.view);
   }
 
   private updateViewFromDrag(session: DragSession, point: Point) {
@@ -1415,7 +1657,9 @@ export class AtlasCanvasMap {
     const [a, b] = points;
     const distance = Math.max(1, Math.hypot(b.x - a.x, b.y - a.y));
     const midpoint = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
-    const zoom = this.limitZoom(
+    // Continuous zoom: snapping to the level grid here turns one smooth pinch
+    // into a series of visible 1.41x jumps.
+    const zoom = this.clampZoom(
       this.pinch.startZoom + Math.log2(distance / this.pinch.startDistance),
     );
     const scale = 2 ** (zoom - this.pinch.startZoom);
@@ -1424,7 +1668,10 @@ export class AtlasCanvasMap {
     const center = unproject(origin.x + this.size.x / 2, origin.y + this.size.y / 2, zoom);
     this.view = { center, zoom };
     this.suppressClick = true;
-    if (this.rendered) this.applyPanTransform(this.rendered, this.view);
+    if (this.rendered) {
+      this.applyPanTransform(this.rendered, this.view);
+      this.maybeRefreshPreview();
+    }
     this.reportView();
   }
 
@@ -1498,8 +1745,9 @@ export class AtlasCanvasMap {
   private handlePointerDown = (event: PointerEvent) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
     this.stopAnimation(false);
+    this.stopWheel();
+    this.cancelScheduledRender();
     this.container.classList.remove('keyboard-focus');
-    if (this.rendered && Math.abs(this.rendered.zoom - this.view.zoom) > 1e-6) this.renderAll();
     this.hideTooltip();
     if (!this.pointers.size) this.suppressClick = false;
     this.pointers.set(event.pointerId, this.pointerPoint(event));
@@ -1635,7 +1883,6 @@ export class AtlasCanvasMap {
   private handleRemainingPointer() {
     const first = [...this.pointers.entries()][0];
     if (!first) return;
-    if (this.rendered && Math.abs(this.rendered.zoom - this.view.zoom) > 1e-6) this.renderAll();
     const [pointerId, point] = first;
     this.drag = {
       startX: point.x,
@@ -1661,30 +1908,62 @@ export class AtlasCanvasMap {
     event.stopPropagation();
     const delta = wheelDelta(event);
     if (!delta) return;
-    this.wheelDelta += delta;
-    this.wheelPoint = this.pointerPoint(event);
+    const interrupted = this.animating;
     this.stopAnimation(false);
-    if (this.wheelTimer !== null) window.clearTimeout(this.wheelTimer);
-    this.wheelTimer = window.setTimeout(() => this.applyWheelZoom(), 40);
+    if (interrupted) {
+      this.wheelBurst = 0;
+      this.lastWheelAt = 0;
+    }
+    this.cancelScheduledRender();
+    const now = performance.now();
+    // A new burst starts from the zoom where the previous one ended, so the
+    // cumulative wheel travel never fights the camera. Reversing direction is
+    // also a new burst: the saturating curve should not make the user unwind
+    // scroll they made in the opposite direction.
+    if (
+      now - this.lastWheelAt > WHEEL_BURST_GAP_MS ||
+      (this.wheelBurst !== 0 && Math.sign(delta) !== Math.sign(this.wheelBurst))
+    ) {
+      this.wheelBurst = 0;
+      this.wheelBurstZoom = this.view.zoom;
+    }
+    this.lastWheelAt = now;
+    this.wheelBurst += delta;
+    this.wheelPoint = this.pointerPoint(event);
+    this.wheelTargetZoom = this.clampZoom(this.wheelBurstZoom + wheelZoomAmount(this.wheelBurst));
+    this.startWheelSmoothing();
   };
 
-  private applyWheelZoom() {
-    this.wheelTimer = null;
-    if (!this.wheelDelta) return;
-    const amount = (4 * Math.log(2 / (1 + Math.exp(-Math.abs(this.wheelDelta) / 240)))) / Math.LN2;
-    const delta = Math.ceil(amount / 0.5) * 0.5 * Math.sign(this.wheelDelta);
-    this.wheelDelta = 0;
-    const zoom = this.limitZoom(this.view.zoom + delta);
-    if (zoom === this.view.zoom) return;
-    const origin = this.originFor(this.view);
-    const anchorWorld = { x: origin.x + this.wheelPoint.x, y: origin.y + this.wheelPoint.y };
-    const scale = 2 ** (zoom - this.view.zoom);
-    const newOrigin = {
-      x: anchorWorld.x * scale - this.wheelPoint.x,
-      y: anchorWorld.y * scale - this.wheelPoint.y,
+  /**
+   * Ease the camera towards the wheel target every frame. The zoom value stays
+   * continuous, so a mouse wheel or trackpad produces one smooth motion instead
+   * of a sequence of half-level steps.
+   */
+  private startWheelSmoothing() {
+    if (this.wheelRaf !== null || this.wheelTargetZoom === null) return;
+    if (Math.abs(this.wheelTargetZoom - this.view.zoom) < 0.002 && !this.preview) {
+      this.wheelTargetZoom = null;
+      return;
+    }
+    const step = () => {
+      this.wheelRaf = null;
+      if (this.destroyed || this.wheelTargetZoom === null) return;
+      const target = this.wheelTargetZoom;
+      const remaining = target - this.view.zoom;
+      if (Math.abs(remaining) < 0.002) {
+        if (remaining !== 0) this.zoomToPoint(target, this.wheelPoint);
+        this.view = { ...this.view, zoom: target };
+        this.wheelTargetZoom = null;
+        this.reportView();
+        this.scheduleFinalRender();
+        return;
+      }
+      this.zoomToPoint(this.view.zoom + remaining * 0.32, this.wheelPoint);
+      this.reportView();
+      this.maybeRefreshPreview(WHEEL_PREVIEW_ZOOM, true);
+      this.wheelRaf = requestAnimationFrame(step);
     };
-    const center = unproject(newOrigin.x + this.size.x / 2, newOrigin.y + this.size.y / 2, zoom);
-    this.setView(center, zoom, { animate: true, duration: 220 });
+    this.wheelRaf = requestAnimationFrame(step);
   }
 
   private handleDoubleClick = (event: MouseEvent) => {
@@ -1692,7 +1971,7 @@ export class AtlasCanvasMap {
     const point = this.pointerPoint(event as PointerEvent);
     const origin = this.originFor(this.view);
     const anchorWorld = { x: origin.x + point.x, y: origin.y + point.y };
-    const zoom = this.limitZoom(this.view.zoom + 1);
+    const zoom = this.clampZoom(this.view.zoom + 1);
     const scale = 2 ** (zoom - this.view.zoom);
     const newOrigin = { x: anchorWorld.x * scale - point.x, y: anchorWorld.y * scale - point.y };
     const center = unproject(newOrigin.x + this.size.x / 2, newOrigin.y + this.size.y / 2, zoom);
