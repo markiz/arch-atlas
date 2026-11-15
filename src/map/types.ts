@@ -1,4 +1,5 @@
 import type { Building, ManifestFile } from '../types';
+import type { Language } from '../i18n';
 
 export type LatLng = { lat: number; lng: number };
 export type Point = { x: number; y: number };
@@ -25,6 +26,7 @@ export interface MapViewProps {
   allBuildings: Building[];
   basemap: GeoJSON.FeatureCollection;
   buildingOutlines: ManifestFile;
+  streetLabelTiles: Partial<Record<Language, ManifestFile>>;
   selected: string | null;
   onSelect: (id: string) => void;
   focus: { id: string; serial: number } | null;

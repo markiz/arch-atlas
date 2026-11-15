@@ -3,23 +3,7 @@ import type { Building } from '../types';
 import type { Language } from '../i18n';
 import { period, periodsFor } from '../domain';
 import { landmarkSvg } from './landmark';
-import {
-  buildStreetLines,
-  layoutTextAlongPath,
-  measureLabel,
-  multiTextWindows,
-  prepareScreenPath,
-  straightTextLayout,
-  straightTextLayoutAt,
-  streetLabelFontSize,
-  streetLabelHalo,
-  streetPriority,
-  type ScreenPath,
-  type StreetLine,
-  type StreetWay,
-  type TextBox,
-  type TextMetrics,
-} from './street-labels';
+import { streetLabelFontSize, streetLabelHalo } from './street-labels';
 import {
   WORLD_SIZE,
   bboxIntersects,
@@ -28,13 +12,12 @@ import {
   metersPerPixel,
   pointInGeometry,
   project,
-  projectX,
-  projectY,
   unproject,
   unprojectX,
   unprojectY,
 } from './geometry';
 import type { BBox, Bounds, LatLng, OutlineBinary, Point } from './types';
+import { LABEL_TILE_SIZE, type StreetLabelTileSet } from './street-label-tiles';
 
 export interface AtlasLayerVisibility {
   roads: boolean;
@@ -75,81 +58,11 @@ type AtlasEntry = {
 };
 type MarkerEntry = { feature: GeoJSON.Feature; element: HTMLDivElement; lat: number; lng: number };
 type PositionShape = { lat: number; lng: number; accuracy: number };
-type CachedStreetLabel =
-  | {
-      kind: 'curved';
-      line: StreetLine;
-      text: string;
-      metrics: TextMetrics;
-      /** Start of the text window in world units at the cached zoom bucket. */
-      start: number;
-    }
-  | {
-      kind: 'straight';
-      line: StreetLine;
-      text: string;
-      metrics: TextMetrics;
-      /** Midpoint in world units at the cached zoom bucket. */
-      point: Point;
-      angle: number;
-      box: TextBox;
-    };
-type LabelCache = {
-  zoom: number;
-  language: Language;
-  /** View plus the margin the labels were built for. */
-  bounds: Bounds;
-  fontSize: number;
-  entries: CachedStreetLabel[];
-};
-
 /**
  * Label collision uses finer cells than the old point-per-street grid: a
  * curved name covers several boxes, and the denser grid is what makes variant
  * C's repeated labels fit between neighbours.
  */
-class LabelOccupancy {
-  private readonly cells = new Set<string>();
-  constructor(
-    private readonly cellWidth = 56,
-    private readonly cellHeight = 16,
-  ) {}
-  free(boxes: TextBox[]) {
-    for (const box of boxes) {
-      for (
-        let x = Math.floor(box.minX / this.cellWidth);
-        x <= Math.floor(box.maxX / this.cellWidth);
-        x++
-      ) {
-        for (
-          let y = Math.floor(box.minY / this.cellHeight);
-          y <= Math.floor(box.maxY / this.cellHeight);
-          y++
-        ) {
-          if (this.cells.has(`${x}:${y}`)) return false;
-        }
-      }
-    }
-    return true;
-  }
-  mark(boxes: TextBox[]) {
-    for (const box of boxes) {
-      for (
-        let x = Math.floor(box.minX / this.cellWidth);
-        x <= Math.floor(box.maxX / this.cellWidth);
-        x++
-      ) {
-        for (
-          let y = Math.floor(box.minY / this.cellHeight);
-          y <= Math.floor(box.maxY / this.cellHeight);
-          y++
-        ) {
-          this.cells.add(`${x}:${y}`);
-        }
-      }
-    }
-  }
-}
 type DragSession = {
   startX: number;
   startY: number;
@@ -164,9 +77,9 @@ type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks
 
 const STREET_LABEL_FILL = 'rgba(117,129,118,.75)';
 const STREET_LABEL_HALO = 'rgba(255,254,248,.85)';
-const streetLabelFont = (size: number) => `500 ${size}px sans-serif`;
-/** Labels are cached for the view plus this fraction on every side. */
-const LABEL_CACHE_MARGIN = 0.2;
+const streetLabelFont = (size: number) => `400 ${size}px "Atlas Labels", "DejaVu Sans", sans-serif`;
+const glyphChars: string[] = [];
+const glyphChar = (code: number) => (glyphChars[code] ??= String.fromCharCode(code));
 const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
@@ -233,14 +146,6 @@ function atlasStyle(look: AtlasLook, zoom: number) {
     opacity: dimmed ? 0.25 : 1,
   };
 }
-function boundsInside(view: Bounds, outer: Bounds) {
-  return (
-    view.west >= outer.west &&
-    view.east <= outer.east &&
-    view.south >= outer.south &&
-    view.north <= outer.north
-  );
-}
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
 }
@@ -274,13 +179,6 @@ function geometryIsArea(geometry: Geometry): boolean {
     geometry.type === 'GeometryCollection'
   );
 }
-function lineCoordinates(feature: GeoJSON.Feature): number[][] {
-  const geometry = feature.geometry;
-  if (geometry?.type === 'LineString') return geometry.coordinates as number[][];
-  if (geometry?.type === 'MultiLineString') return geometry.coordinates.flat() as number[][];
-  return [];
-}
-
 /**
  * Small Canvas 2D map used by the alternative atlas renderer. It implements
  * only the interaction set the atlas needs: one raster layer for the basemap
@@ -336,9 +234,8 @@ export class AtlasCanvasMap {
   private buildingsVisible = false;
   private position: PositionShape | null = null;
   private markers: MarkerEntry[] = [];
-  private streetLabels: StreetLine[] = [];
-  private streetMetrics = new Map<string, TextMetrics>();
-  private labelCache: LabelCache | null = null;
+  private streetLabelTiles: StreetLabelTileSet | null = null;
+  private streetLabelTilesLanguage: Language | null = null;
   private raf: number | null = null;
   private animating = false;
   private wheelRaf: number | null = null;
@@ -399,7 +296,6 @@ export class AtlasCanvasMap {
   setBasemap(collection: GeoJSON.FeatureCollection) {
     this.baseFeatures = collection.features;
     this.baseBoxes = this.computeBoxes(this.baseFeatures);
-    this.streetMetrics.clear();
     const groups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
     for (let index = 0; index < this.baseFeatures.length; index++) {
       const kind = this.baseFeatures[index].properties?.kind;
@@ -439,8 +335,6 @@ export class AtlasCanvasMap {
       this.markers.push({ feature, element, lat, lng });
       this.markersLayer.append(element);
     }
-    this.streetLabels = this.prepareStreetLabels();
-    this.labelCache = null;
     this.markersLayer.style.display = this.visibility.landmarks ? '' : 'none';
     this.updateMarkerLabels();
     this.renderBase();
@@ -487,12 +381,17 @@ export class AtlasCanvasMap {
   setLanguage(language: Language) {
     if (this.language === language) return;
     this.language = language;
-    this.labelCache = null;
-    this.streetMetrics.clear();
     this.hideTooltip();
     this.updateMarkerLabels();
     this.renderOverlay();
     this.renderLabels();
+  }
+
+  /** Tiles are language-specific and already contain precomputed placements. */
+  setStreetLabelTiles(tiles: StreetLabelTileSet | null, language: Language = this.language) {
+    this.streetLabelTiles = tiles;
+    this.streetLabelTilesLanguage = tiles ? language : null;
+    if (this.visibility.detailedStreets) this.renderLabels();
   }
 
   setLayerVisibility(visibility: AtlasLayerVisibility) {
@@ -659,7 +558,7 @@ export class AtlasCanvasMap {
     return boxes;
   }
 
-  /** Gestures never snap: a fractional zoom keeps the motion continuous. */
+  /** Gestures stay fractional while moving; the final crisp pass snaps. */
   private clampZoom(zoom: number) {
     return clamp(zoom, this.minZoom, this.maxZoom);
   }
@@ -748,6 +647,14 @@ export class AtlasCanvasMap {
     if (this.destroyed || !this.size.x || !this.size.y) return;
     this.stopAnimation(false);
     this.cancelScheduledRender();
+    // Tiles are laid out on half-zoom levels. Snapping the crisp pass to the
+    // same grid avoids scaling glyph positions without scaling the font:
+    // fractional wheel/pinch zooms otherwise stretched letter spacing.
+    if (this.zoomSnap > 0) {
+      const snapped = Math.round(this.view.zoom / this.zoomSnap) * this.zoomSnap;
+      if (Math.abs(snapped - this.view.zoom) > 1e-6)
+        this.view = { ...this.view, zoom: this.clampZoom(snapped) };
+    }
     this.preview = false;
     this.pixelRatio = this.dpr;
     this.previewCanvas.style.display = 'none';
@@ -1540,42 +1447,28 @@ export class AtlasCanvasMap {
     canvas.style.visibility = '';
   }
 
-  /**
-   * Shift the label bitmap when the drag path bakes the camera into the
-   * bitmap. Labels in the newly exposed strips wait for the next full render,
-   * exactly like the base layer.
-   */
   /** Repaint only a newly exposed strip, like the base layer does. */
   private renderLabelRegion(rect: Rect) {
     if (!this.visibility.detailedStreets || this.preview || !this.rendered) return;
     const canvas = this.labelCanvas,
       context = this.labelCtx;
     if (!canvas || !context) return;
-    const camera = this.rendered,
-      bucket = Math.round(camera.zoom * 4) / 4,
-      view = this.rectBounds(rect, camera);
-    let cache = this.labelCache;
-    if (
-      !cache ||
-      Math.abs(cache.zoom - bucket) > 1e-6 ||
-      cache.language !== this.language ||
-      !boundsInside(view, cache.bounds)
-    ) {
-      // The main cache does not reach this strip: place labels for the strip
-      // alone. It is much smaller than a full rebuild and keeps dragging live.
-      cache = this.buildStreetLabelCache(context, bucket, view);
-    }
-    if (!cache.entries.length) return;
+    if (!this.streetLabelTiles || this.streetLabelTilesLanguage !== this.language) return;
     context.save();
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.beginPath();
     context.rect(rect.x * this.dpr, rect.y * this.dpr, rect.w * this.dpr, rect.h * this.dpr);
     context.clip();
     context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    this.drawLabelEntries(context, camera, cache, rect);
+    this.drawTiledLabels(context, this.rendered, rect);
     context.restore();
   }
 
+  /**
+   * Shift the label bitmap when the drag path bakes the camera into the
+   * bitmap. Labels in the newly exposed strips wait for the next full render,
+   * exactly like the base layer.
+   */
   private bakeLabelCanvas(bakeX: number, bakeY: number) {
     const canvas = this.labelCanvas,
       context = this.labelCtx;
@@ -1592,272 +1485,10 @@ export class AtlasCanvasMap {
   }
 
   private drawLabels(context: CanvasRenderingContext2D, camera: RenderedCamera, clip?: Rect) {
-    if (!this.streetLabels.length) return;
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-    context.lineJoin = 'round';
-    const zoom = camera.zoom,
-      // Zoom is continuous now, so exact-equality caching would rebuild the
-      // label list on every preview frame. A quarter-level bucket keeps the
-      // filtering stable while positions are still projected at the real zoom.
-      bucket = Math.round(zoom * 4) / 4,
-      view = this.viewBounds(camera);
-    // Labels are built for a slightly larger view so a pan or a small preview
-    // zoom does not rebuild the whole cache; positions are projected live.
-    if (
-      !this.labelCache ||
-      Math.abs(this.labelCache.zoom - bucket) > 1e-6 ||
-      this.labelCache.language !== this.language ||
-      !boundsInside(view, this.labelCache.bounds)
-    ) {
-      this.labelCache = this.buildStreetLabelCache(context, bucket, view);
-    }
-    const cache = this.labelCache;
-    if (!cache.entries.length) return;
-    this.drawLabelEntries(context, camera, cache, clip);
-  }
-
-  private drawLabelEntries(
-    context: CanvasRenderingContext2D,
-    camera: RenderedCamera,
-    cache: LabelCache,
-    clip?: Rect,
-  ) {
-    const fontSize = cache.fontSize,
-      halo = streetLabelHalo(fontSize),
-      scale = 2 ** (camera.zoom - cache.zoom),
-      offsetX = this.padding.x - camera.origin.x,
-      offsetY = this.padding.y - camera.origin.y,
-      cssWidth = this.size.x + this.padding.x * 2,
-      cssHeight = this.size.y + this.padding.y * 2,
-      clipWorld = clip
-        ? {
-            minX: clip.x - offsetX,
-            maxX: clip.x + clip.w - offsetX,
-            minY: clip.y - offsetY,
-            maxY: clip.y + clip.h - offsetY,
-          }
-        : null;
-    // Chained ways repeat the same street; project each one at most once per
-    // frame even when several repeats are visible.
-    const zoom = camera.zoom;
-    context.font = streetLabelFont(fontSize);
-    const projected = new Map<StreetLine, ScreenPath | null>();
-    for (const entry of cache.entries) {
-      if (entry.kind === 'straight') {
-        if (
-          clipWorld &&
-          (entry.box.maxX * scale < clipWorld.minX ||
-            entry.box.minX * scale > clipWorld.maxX ||
-            entry.box.maxY * scale < clipWorld.minY ||
-            entry.box.minY * scale > clipWorld.maxY)
-        )
-          continue;
-        const x = entry.point.x * scale + offsetX,
-          y = entry.point.y * scale + offsetY;
-        if (x < 0 || y < 0 || x > cssWidth || y > cssHeight) continue;
-        context.save();
-        context.translate(x, y);
-        context.rotate(entry.angle);
-        context.strokeStyle = STREET_LABEL_HALO;
-        context.lineWidth = halo;
-        context.strokeText(entry.text, 0, 0);
-        context.fillStyle = STREET_LABEL_FILL;
-        context.fillText(entry.text, 0, 0);
-        context.restore();
-        continue;
-      }
-      let path = projected.get(entry.line);
-      if (path === undefined) {
-        path = prepareScreenPath(
-          entry.line.coords.map(([lng, lat]) => {
-            const point = project(lat, lng, zoom);
-            return [point.x, point.y] as [number, number];
-          }),
-        );
-        projected.set(entry.line, path);
-      }
-      if (!path) continue;
-      // The cached start is in bucket coordinates; the text width itself stays
-      // in CSS pixels, so converting the start is enough.
-      const start = Math.min(entry.start * scale, path.length - entry.metrics.total);
-      if (start < 0) continue;
-      const layout = layoutTextAlongPath(path, start, entry.metrics);
-      if (!layout) continue;
-      if (
-        clipWorld &&
-        (layout.box.maxX < clipWorld.minX ||
-          layout.box.minX > clipWorld.maxX ||
-          layout.box.maxY < clipWorld.minY ||
-          layout.box.minY > clipWorld.maxY)
-      )
-        continue;
-      if (
-        layout.box.maxX < -offsetX ||
-        layout.box.minX > cssWidth - offsetX ||
-        layout.box.maxY < -offsetY ||
-        layout.box.minY > cssHeight - offsetY
-      )
-        continue;
-      context.strokeStyle = STREET_LABEL_HALO;
-      context.fillStyle = STREET_LABEL_FILL;
-      context.lineWidth = halo;
-      // Stroke every glyph first: a per-glyph stroke would paint over the
-      // previous glyph's fill and leave white notches inside the name.
-      for (const pass of ['stroke', 'fill'] as const) {
-        for (const glyph of layout.glyphs) {
-          context.save();
-          context.translate(glyph.x + offsetX, glyph.y + offsetY);
-          context.rotate(glyph.angle);
-          if (pass === 'stroke') context.strokeText(glyph.ch, 0, 0);
-          else context.fillText(glyph.ch, 0, 0);
-          context.restore();
-        }
-      }
-    }
-  }
-
-  private buildStreetLabelCache(
-    context: CanvasRenderingContext2D,
-    bucket: number,
-    view: Bounds,
-  ): LabelCache {
-    const width = view.east - view.west,
-      height = view.north - view.south,
-      expanded: Bounds = {
-        west: view.west - width * LABEL_CACHE_MARGIN,
-        east: view.east + width * LABEL_CACHE_MARGIN,
-        south: view.south - height * LABEL_CACHE_MARGIN,
-        north: view.north + height * LABEL_CACHE_MARGIN,
-      },
-      fontSize = streetLabelFontSize(bucket),
-      occupancy = new LabelOccupancy(),
-      entries: CachedStreetLabel[] = [],
-      placedCenters = new Map<string, Point[]>(),
-      viewWorld = {
-        minX: projectX(expanded.west, bucket),
-        maxX: projectX(expanded.east, bucket),
-        minY: projectY(expanded.north, bucket),
-        maxY: projectY(expanded.south, bucket),
-      };
-    const visible = (box: TextBox) =>
-      box.maxX >= viewWorld.minX &&
-      box.minX <= viewWorld.maxX &&
-      box.maxY >= viewWorld.minY &&
-      box.minY <= viewWorld.maxY;
-    context.font = streetLabelFont(fontSize);
-    for (const line of this.streetLabels) {
-      if (bucket < line.minZoom) continue;
-      if (
-        line.bbox.maxX < expanded.west ||
-        line.bbox.minX > expanded.east ||
-        line.bbox.maxY < expanded.south ||
-        line.bbox.minY > expanded.north
-      )
-        continue;
-      const text = line.names[this.language] || line.fallback;
-      if (!text) continue;
-      const metrics = this.streetTextMetrics(context, text, fontSize);
-      const gap = Math.max(90, metrics.total * 1.25);
-      const isRepeat = (box: TextBox) => {
-        const x = (box.minX + box.maxX) / 2,
-          y = (box.minY + box.maxY) / 2;
-        return (placedCenters.get(line.name) ?? []).some(
-          (point) => Math.hypot(point.x - x, point.y - y) < gap,
-        );
-      };
-      const addStraight = (point: [number, number], angle: number, box: TextBox) => {
-        if (!visible(box) || isRepeat(box) || !occupancy.free([box])) return false;
-        occupancy.mark([box]);
-        const center = {
-          x: (box.minX + box.maxX) / 2,
-          y: (box.minY + box.maxY) / 2,
-        };
-        const centers = placedCenters.get(line.name);
-        if (centers) centers.push(center);
-        else placedCenters.set(line.name, [center]);
-        entries.push({
-          kind: 'straight',
-          line,
-          text,
-          metrics,
-          point: { x: point[0], y: point[1] },
-          angle,
-          box,
-        });
-        return true;
-      };
-
-      const screen = line.coords.map(([lng, lat]) => {
-        const point = project(lat, lng, bucket);
-        return [point.x, point.y] as [number, number];
-      });
-      let projectedLength = 0;
-      for (let index = 1; index < screen.length; index++) {
-        projectedLength += Math.hypot(
-          screen[index][0] - screen[index - 1][0],
-          screen[index][1] - screen[index - 1][1],
-        );
-      }
-      if (projectedLength < metrics.total + 8) {
-        // Short labels only need a midpoint and a tangent; skipping the
-        // resample/smoothing pass here is a large part of the cache build.
-        const point = project(line.midpoint[1], line.midpoint[0], bucket),
-          next = project(
-            line.midpoint[1] + line.direction[1],
-            line.midpoint[0] + line.direction[0],
-            bucket,
-          ),
-          straight = straightTextLayoutAt(
-            [point.x, point.y],
-            [next.x - point.x, next.y - point.y],
-            metrics,
-          );
-        addStraight([point.x, point.y], straight.angle, straight.box);
-        continue;
-      }
-
-      const path = prepareScreenPath(screen);
-      if (!path) continue;
-      if (path.length >= metrics.total + 8) {
-        const layouts = multiTextWindows(path, metrics, { isVisible: visible });
-        let placed = false;
-        for (const layout of layouts) {
-          if (isRepeat(layout.box)) continue;
-          const boxes = layout.glyphs.map((glyph) => glyph.box);
-          if (!occupancy.free(boxes)) continue;
-          occupancy.mark(boxes);
-          const centers = placedCenters.get(line.name);
-          const center = {
-            x: (layout.box.minX + layout.box.maxX) / 2,
-            y: (layout.box.minY + layout.box.maxY) / 2,
-          };
-          if (centers) centers.push(center);
-          else placedCenters.set(line.name, [center]);
-          entries.push({ kind: 'curved', line, text, metrics, start: layout.start });
-          placed = true;
-        }
-        if (placed) continue;
-      }
-      const straight = straightTextLayout(path, metrics);
-      addStraight([straight.point[0], straight.point[1]], straight.angle, straight.box);
-    }
-    return { zoom: bucket, language: this.language, bounds: expanded, fontSize, entries };
-  }
-
-  private streetTextMetrics(
-    context: CanvasRenderingContext2D,
-    text: string,
-    fontSize: number,
-  ): TextMetrics {
-    context.font = streetLabelFont(fontSize);
-    const key = `${this.language}\u0000${fontSize}\u0000${text}`;
-    let metrics = this.streetMetrics.get(key);
-    if (!metrics) {
-      metrics = measureLabel((part) => context.measureText(part).width, text, fontSize);
-      this.streetMetrics.set(key, metrics);
-    }
-    return metrics;
+    // Labels come exclusively from the language tile file. There is no
+    // viewport-cache fallback: while tiles are loading or after a load error,
+    // the label layer simply stays empty until the next successful tile load.
+    this.drawTiledLabels(context, camera, clip);
   }
 
   private repositionMarkers() {
@@ -1893,47 +1524,68 @@ export class AtlasCanvasMap {
     }
   }
 
-  private prepareStreetLabels() {
-    const ways: StreetWay[] = [];
-    for (const feature of this.baseFeatures) {
-      if (feature.properties?.kind !== 'road') continue;
-      const name = String(feature.properties?.name ?? '').trim();
-      if (!name) continue;
-      const priority = streetPriority(feature.properties?.class);
-      if (priority === null) continue;
-      const coords = lineCoordinates(feature).filter(
-        (point): point is [number, number] =>
-          Array.isArray(point) &&
-          point.length >= 2 &&
-          Number.isFinite(point[0]) &&
-          Number.isFinite(point[1]),
-      );
-      if (coords.length < 2) continue;
-      ways.push({
-        name,
-        names: (feature.properties?.names ?? {}) as Record<string, string>,
-        fallback: name,
-        coords,
-        priority,
-      });
+  private drawTiledLabels(
+    context: CanvasRenderingContext2D,
+    camera: RenderedCamera,
+    clip?: Rect,
+  ): boolean {
+    const tiles = this.streetLabelTiles;
+    if (!tiles || this.streetLabelTilesLanguage !== this.language) return false;
+    const bucket = Math.round(camera.zoom * 2) / 2,
+      level = tiles.levels.get(Math.round(bucket * 2)),
+      fontSize = streetLabelFontSize(bucket),
+      halo = streetLabelHalo(fontSize),
+      scale = 2 ** (camera.zoom - bucket),
+      offsetX = this.padding.x - camera.origin.x,
+      offsetY = this.padding.y - camera.origin.y,
+      cssWidth = this.size.x + this.padding.x * 2,
+      cssHeight = this.size.y + this.padding.y * 2,
+      minTx = Math.floor((0 - offsetX) / scale / LABEL_TILE_SIZE),
+      maxTx = Math.floor((cssWidth - offsetX) / scale / LABEL_TILE_SIZE),
+      minTy = Math.floor((0 - offsetY) / scale / LABEL_TILE_SIZE),
+      maxTy = Math.floor((cssHeight - offsetY) / scale / LABEL_TILE_SIZE);
+    if (!level) return false;
+    context.font = streetLabelFont(fontSize);
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    context.lineJoin = 'round';
+    context.strokeStyle = STREET_LABEL_HALO;
+    context.fillStyle = STREET_LABEL_FILL;
+    context.lineWidth = halo;
+    const visible: { x: number; y: number; angle: number; ch: string }[] = [];
+    for (let tx = minTx; tx <= maxTx; tx++) {
+      for (let ty = minTy; ty <= maxTy; ty++) {
+        const tile = level.get(`${tx},${ty}`);
+        if (!tile) continue;
+        const tileX = tx * LABEL_TILE_SIZE;
+        const tileY = ty * LABEL_TILE_SIZE;
+        visible.length = 0;
+        for (let index = 0; index < tile.count; index++) {
+          const x = (tileX + tile.x[index] / 4) * scale + offsetX;
+          const y = (tileY + tile.y[index] / 4) * scale + offsetY;
+          if (x < 0 || y < 0 || x > cssWidth || y > cssHeight) continue;
+          if (clip && (x < clip.x || x > clip.x + clip.w || y < clip.y || y > clip.y + clip.h))
+            continue;
+          visible.push({
+            x,
+            y,
+            angle: tile.angle[index] / 1000,
+            ch: glyphChar(tile.code[index]),
+          });
+        }
+        for (const pass of ['stroke', 'fill'] as const) {
+          for (const glyph of visible) {
+            context.save();
+            context.translate(glyph.x, glyph.y);
+            context.rotate(glyph.angle);
+            if (pass === 'stroke') context.strokeText(glyph.ch, 0, 0);
+            else context.fillText(glyph.ch, 0, 0);
+            context.restore();
+          }
+        }
+      }
     }
-    const byName = new Map<string, StreetLine[]>();
-    for (const line of buildStreetLines(ways)) {
-      // Sub-30 m service stubs add noise without a readable label.
-      if (line.length < 0.0003) continue;
-      const group = byName.get(line.name);
-      if (group) group.push(line);
-      else byName.set(line.name, [line]);
-    }
-    const labels: StreetLine[] = [];
-    for (const group of byName.values()) {
-      group.sort((a, b) => b.length - a.length);
-      // Disconnected pieces of the same name are rare; three is enough for
-      // the repeats variant and keeps the cache build bounded.
-      labels.push(...group.slice(0, 3));
-    }
-    labels.sort((a, b) => b.priority - a.priority || b.length - a.length);
-    return labels;
+    return true;
   }
 
   private animateTo(target: Camera, duration: number) {
