@@ -1552,11 +1552,6 @@ footer b {
   line-height: 1.2;
   border-radius: 2px;
 }
-/* The long "several periods" option gets the full row so it never squeezes
-   the two interval columns. */
-.legend-period-options button:last-child {
-  grid-column: 1 / -1;
-}
 .legend-period-options button:hover,
 .legend-period-options button:focus-visible {
   background: #e9eee5;

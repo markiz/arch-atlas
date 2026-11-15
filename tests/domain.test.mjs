@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { period, normalize, filterBuildings, styleEntries } from '../src/domain.js';
+import { period, periodsFor, normalize, filterBuildings, styleEntries } from '../src/domain.js';
 const empty = { query: '', from: '', to: '', architect: [], style: [] };
 const data = [
   {
@@ -56,8 +56,34 @@ test('period boundaries and ranges', () => {
   assert.equal(period(1899, 1899).label, '1850–1899');
   assert.equal(period(1900, 1900).label, '1900–1919');
   assert.equal(period(1992, 1992).label, 'С 1992');
-  assert.equal(period(1895, 1905).label, 'Несколько периодов');
+  assert.equal(period(1895, 1905).label, '1850–1899');
   assert.equal(period(null, null).label, 'Неизвестно');
+});
+test('a building belongs to every period its date range overlaps', () => {
+  assert.deepEqual(
+    periodsFor(1895, 1905).map((p) => p.label),
+    ['1850–1899', '1900–1919'],
+  );
+  assert.deepEqual(
+    periodsFor(1850, 1991).map((p) => p.label),
+    ['1850–1899', '1900–1919', '1920–1959', '1960–1991'],
+  );
+  assert.deepEqual(
+    periodsFor(1799, 1800).map((p) => p.label),
+    ['До 1800', '1800–1849'],
+  );
+  assert.deepEqual(
+    periodsFor(1900, 1900).map((p) => p.label),
+    ['1900–1919'],
+  );
+  assert.deepEqual(
+    periodsFor(1992, 2020).map((p) => p.label),
+    ['С 1992'],
+  );
+  assert.deepEqual(
+    periodsFor(null, null).map((p) => p.label),
+    ['Неизвестно'],
+  );
 });
 test('normalization and multilingual search', () => {
   assert.equal(normalize(' ЁЖИК—дом  '), 'ежик дом');

@@ -2,7 +2,7 @@ import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState 
 import { createPortal } from 'react-dom';
 import type { FeatureCollection } from 'geojson';
 import type { Building, Data, Filters, Photo } from './types';
-import { filterBuildings, normalize, period, periods, styleEntries } from './domain';
+import { filterBuildings, normalize, period, periods, periodsFor, styleEntries } from './domain';
 import MapView from './MapView';
 import type { MapViewProps } from './map/types';
 import { I18nContext, translate, type Language, useI18n } from './i18n';
@@ -241,13 +241,9 @@ function PeriodChoices({
   className: string;
 }) {
   const { t } = useI18n();
-  const options = [
-    ...periods,
-    { label: 'Несколько периодов', min: null, max: null, color: '#999b91' },
-  ];
   return (
     <div className={className}>
-      {options.map((p) => (
+      {periods.map((p) => (
         <button
           type="button"
           key={p.label}
@@ -276,10 +272,6 @@ function PeriodPicker({
   onHover: (label: string | null) => void;
 }) {
   const { t } = useI18n();
-  const options = [
-    ...periods,
-    { label: 'Несколько периодов', min: null, max: null, color: '#999b91' },
-  ];
   const summary =
     selected.length === 0
       ? t('Все периоды')
@@ -293,7 +285,7 @@ function PeriodPicker({
         <i aria-hidden="true" />
       </summary>
       <div className="period-picker-menu">
-        {options.map((p) => (
+        {periods.map((p) => (
           <label
             key={p.label}
             onMouseEnter={() => onHover(p.label)}
@@ -1045,7 +1037,9 @@ function AppContent({ data }: { data: Data }) {
   const filtered = useMemo(() => {
     const results = filterBuildings(data.buildings, filters) as Building[];
     return selectedPeriods.length
-      ? results.filter((b) => selectedPeriods.includes(period(b.minYear, b.maxYear)!.label))
+      ? results.filter((b) =>
+          periodsFor(b.minYear, b.maxYear).some((p) => selectedPeriods.includes(p.label)),
+        )
       : results;
   }, [data.buildings, filters, selectedPeriods]);
   const architects = useMemo(() => {

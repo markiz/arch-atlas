@@ -8,11 +8,14 @@ export const periods = [
   { label: 'С 1992', min: 1992, max: Infinity, color: '#7184ad' },
   { label: 'Неизвестно', min: null, max: null, color: '#999b91' },
 ];
+export function periodsFor(min, max) {
+  const unknown = periods[periods.length - 1];
+  if (min === null || max === null) return [unknown];
+  const matched = periods.filter((x) => x.min !== null && min <= x.max && max >= x.min);
+  return matched.length ? matched : [unknown];
+}
 export function period(min, max) {
-  if (min === null || max === null) return periods.at(-1);
-  const a = periods.find((x) => x.min !== null && min >= x.min && min <= x.max),
-    b = periods.find((x) => x.min !== null && max >= x.min && max <= x.max);
-  return a === b ? a : { label: 'Несколько периодов', color: '#999b91' };
+  return periodsFor(min, max)[0];
 }
 export function normalize(s) {
   return (s || '')

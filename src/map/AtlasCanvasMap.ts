@@ -1,7 +1,7 @@
 import type { Geometry } from 'geojson';
 import type { Building } from '../types';
 import type { Language } from '../i18n';
-import { period } from '../domain';
+import { periodsFor } from '../domain';
 import { landmarkSvg } from './landmark';
 import {
   WORLD_SIZE,
@@ -46,7 +46,14 @@ type AtlasLook = {
   hovered: boolean;
   fillColor: string;
 };
-type AtlasEntry = { building: Building; bbox: BBox };
+type AtlasEntry = {
+  building: Building;
+  bbox: BBox;
+  /** Labels of every construction period the building overlaps. */
+  periodLabels: string[];
+  /** Colour of the earliest of those periods. */
+  fillColor: string;
+};
 type MarkerEntry = { feature: GeoJSON.Feature; element: HTMLDivElement; lat: number; lng: number };
 type PositionShape = { lat: number; lng: number; accuracy: number };
 type StreetLabel = {
@@ -315,7 +322,15 @@ export class AtlasCanvasMap {
               geometry: building.geometry,
             } as GeoJSON.Feature)
           : null;
-        if (bbox) this.atlasEntries.push({ building, bbox });
+        if (bbox) {
+          const buildingPeriods = periodsFor(building.minYear, building.maxYear);
+          this.atlasEntries.push({
+            building,
+            bbox,
+            periodLabels: buildingPeriods.map((p) => p.label),
+            fillColor: buildingPeriods[0].color,
+          });
+        }
       }
     }
     this.selectedId = selected;
@@ -1091,20 +1106,20 @@ export class AtlasCanvasMap {
       const building = entry.building;
       const geometry = building.geometry;
       if (!geometry) continue;
-      const buildingPeriod = period(building.minYear, building.maxYear);
-      if (!buildingPeriod) continue;
       const isSelected = building.id === this.selectedId;
-      const matches = !activePeriods.length || activePeriods.includes(buildingPeriod.label);
+      const matches =
+        !activePeriods.length || entry.periodLabels.some((label) => activePeriods.includes(label));
       const isHovered =
-        this.hoveredPeriod === buildingPeriod.label &&
-        !this.selectedPeriods.includes(buildingPeriod.label);
+        !!this.hoveredPeriod &&
+        !this.selectedPeriods.includes(this.hoveredPeriod) &&
+        entry.periodLabels.includes(this.hoveredPeriod);
       const look: AtlasLook = {
         selected: isSelected,
         boundary: building.geometryRole === 'heritage_boundary',
         highlighted: activePeriods.length > 0,
         matched: matches,
         hovered: isHovered,
-        fillColor: buildingPeriod.color,
+        fillColor: entry.fillColor,
       };
       const style = atlasStyle(look, camera.zoom);
       context.beginPath();
