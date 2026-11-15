@@ -32,6 +32,9 @@ Object.assign(extras.uk,{'Ширина уменьшена до ':'Ширину �
 Object.assign(extras.en,{'Ширина сохранена: ':'Width kept: ','фотография ':'photo '});
 Object.assign(extras.ka,{'Ширина сохранена: ':'სიგანე შენარჩუნებულია: ','фотография ':'ფოტო '});
 Object.assign(extras.uk,{'Ширина сохранена: ':'Ширину збережено: ','фотография ':'фото '});
+Object.assign(extras.en,{'ДВИЖОК КАРТЫ':'MAP ENGINE','Canvas-рендер (быстрее)':'Canvas renderer (faster)','Альтернативный движок без Leaflet':'Alternative engine without Leaflet','Приблизить':'Zoom in','Отдалить':'Zoom out'});
+Object.assign(extras.ka,{'ДВИЖОК КАРТЫ':'რუკის ძრავა','Canvas-рендер (быстрее)':'Canvas რენდერი (უფრო სწრაფი)','Альтернативный движок без Leaflet':'ალტერნატიული ძრავა Leaflet-ის გარეშე','Приблизить':'გადიდება','Отдалить':'დაპატარავება'});
+Object.assign(extras.uk,{'ДВИЖОК КАРТЫ':'РУШІЙ МАПИ','Canvas-рендер (быстрее)':'Canvas-рендеринг (швидше)','Альтернативный движок без Leaflet':'Альтернативний рушій без Leaflet','Приблизить':'Наблизити','Отдалить':'Віддалити'});
 export function translate(value:string,language:Language):string{
  if(language==='ru')return value;
  const direct=messages[language][value]??extras[language][value];if(direct)return direct;

@@ -2,11 +2,13 @@ import {useEffect, useMemo, useRef, useState} from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type {Geometry} from 'geojson';
-import type {Building,ManifestFile} from './types';
 import {period} from './domain';
 import {useI18n} from './i18n';
+import type {MapViewProps} from './map/types';
+import {layerMemory} from './map/layer-state';
+import {rememberMapView,savedMapView} from './map/view-memory';
 
-type Props={buildings:Building[];allBuildings:Building[];basemap:GeoJSON.FeatureCollection;buildingOutlines:ManifestFile;selected:string|null;onSelect:(id:string)=>void;focus:{id:string;serial:number}|null;reset:number;fit:number;showFit:boolean;onFit:()=>void;selectedPeriods:string[];hoveredPeriod:string|null};
+type Props=MapViewProps;
 type SpatialBounds={minX:number;minY:number;maxX:number;maxY:number};
 type OutlineIndexItem=SpatialBounds&{featureIndex:number};
 type OutlineIndexNode=SpatialBounds&{children:(OutlineIndexNode|OutlineIndexItem)[];leaf:boolean};
@@ -83,21 +85,27 @@ function landmarkIcon(category:string){
  glyph.setAttribute('d',drawings[category]||drawings.museum);glyph.setAttribute('transform','translate(6 7) scale(.75)');glyph.setAttribute('fill','none');glyph.setAttribute('stroke','#fffef5');glyph.setAttribute('stroke-width','1.7');glyph.setAttribute('stroke-linecap','round');glyph.setAttribute('stroke-linejoin','round');svg.append(glyph);
  return L.divIcon({className:'landmark-icon',html:svg,iconSize:[30,36],iconAnchor:[15,35],tooltipAnchor:[0,-31]});
 }
-export default function MapView({buildings,allBuildings,basemap,buildingOutlines,selected,onSelect,focus,reset,fit,showFit,onFit,selectedPeriods,hoveredPeriod}:Props){
+export default function MapView({buildings,allBuildings,basemap,buildingOutlines,selected,onSelect,focus,reset,fit,showFit,onFit,selectedPeriods,hoveredPeriod,engine,onEngineChange,onFocusHandled}:Props){
  const {t,language}=useI18n();
  const container=useRef<HTMLDivElement>(null),mapRef=useRef<L.Map|null>(null),objects=useRef<L.LayerGroup|null>(null),atlasRenderer=useRef<L.SVG|null>(null),basemapRenderer=useRef<L.Canvas|null>(null),buildingLayer=useRef<L.LayerGroup|null>(null),buildingData=useRef<Promise<GeoJSON.FeatureCollection>|null>(null),buildingIndex=useRef<OutlineIndexNode|null>(null),buildingLayerCache=useRef<Map<number,L.GeoJSON>>(new Map()),refreshBuildingOutlines=useRef<()=>void>(()=>{}),position=useRef<L.LayerGroup|null>(null),selectionRef=useRef(onSelect),languageRef=useRef(language),streetLabels=useRef<{latlng:L.LatLng;names:Record<string,string>;fallback:string;angle:number;priority:number;minZoom:number}[]>([]),redrawLabels=useRef<()=>void>(()=>{}),setLabelsEnabled=useRef<(enabled:boolean)=>void>(()=>{}),restyleAtlas=useRef<()=>void>(()=>{});
  const atlasBounds=useMemo(()=>{const bounds=L.latLngBounds([]);const visit=(coordinates:any):void=>{if(!Array.isArray(coordinates))return;if(typeof coordinates[0]==='number'&&typeof coordinates[1]==='number'){bounds.extend([coordinates[1],coordinates[0]]);return}coordinates.forEach(visit)};const geometry=(g:Geometry|null):void=>{if(!g)return;if(g.type==='GeometryCollection')g.geometries.forEach(geometry);else visit(g.coordinates)};allBuildings.forEach(building=>geometry(building.geometry as Geometry|null));return bounds},[allBuildings]);
  const layerRefs=useRef<{roads:L.GeoJSON;water:L.GeoJSON;green:L.GeoJSON;landmarks:L.GeoJSON}|null>(null);
+ const handledFit=useRef(fit),handledReset=useRef(reset),focusHandled=useRef(onFocusHandled);
+ focusHandled.current=onFocusHandled;
  const [locationMessage,setLocationMessage]=useState(''),[locating,setLocating]=useState(false),[layersOpen,setLayersOpen]=useState(false),[buildingLayerLoading,setBuildingLayerLoading]=useState(false),[buildingLayerError,setBuildingLayerError]=useState(false);
- const [showRoads,setShowRoads]=useState(true),[showBuildings,setShowBuildings]=useState(false),[showWater,setShowWater]=useState(true),[detailedStreets,setDetailedStreets]=useState(false),[showLandmarks,setShowLandmarks]=useState(()=>{try{return localStorage.getItem('atlas-layer-landmarks')==='true'}catch{return false}}),[showGreen,setShowGreen]=useState(true);
+ const [showRoads,setShowRoads]=useState(()=>layerMemory.showRoads),[showBuildings,setShowBuildings]=useState(()=>layerMemory.showBuildings),[showWater,setShowWater]=useState(()=>layerMemory.showWater),[detailedStreets,setDetailedStreets]=useState(()=>layerMemory.detailedStreets),[showLandmarks,setShowLandmarks]=useState(()=>{try{return localStorage.getItem('atlas-layer-landmarks')==='true'}catch{return false}}),[showGreen,setShowGreen]=useState(()=>layerMemory.showGreen);
  selectionRef.current=onSelect;
  languageRef.current=language;
  useEffect(()=>{try{localStorage.setItem('atlas-layer-landmarks',String(showLandmarks))}catch{}},[showLandmarks]);
+ useEffect(()=>{layerMemory.showRoads=showRoads;layerMemory.showBuildings=showBuildings;layerMemory.showWater=showWater;layerMemory.detailedStreets=detailedStreets;layerMemory.showGreen=showGreen},[showRoads,showBuildings,showWater,detailedStreets,showGreen]);
  useEffect(()=>{
   if(!container.current)return;
   streetLabels.current=[];
-  const map=L.map(container.current,{zoomControl:false,attributionControl:true,minZoom:10,maxZoom:19,zoomSnap:.5,scrollWheelZoom:false,preferCanvas:false}).setView([41.715,44.800],11.5);
-  if(atlasBounds.isValid())map.fitBounds(atlasBounds.pad(.08));
+  const saved=savedMapView();
+  const map=L.map(container.current,{zoomControl:false,attributionControl:true,minZoom:10,maxZoom:19,zoomSnap:.5,scrollWheelZoom:false,preferCanvas:false}).setView(saved?[saved.center.lat,saved.center.lng]:[41.715,44.800],saved?saved.zoom:11.5,{animate:false});
+  if(!saved&&atlasBounds.isValid())map.fitBounds(atlasBounds.pad(.08),{animate:false});
+  const remember=()=>rememberMapView(map.getCenter(),map.getZoom());
+  map.on('move',remember);remember();
   mapRef.current=map;
   // Animate intermediate zoom levels while keeping new wheel input in the target.
   let wheelDelta=0,wheelPoint=L.point(0,0),wheelTimer:ReturnType<typeof setTimeout>|null=null,wheelFrame:number|null=null,targetZoom=map.getZoom();
@@ -215,7 +223,7 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
   redrawLabels.current=drawLabels;
   setLabelsEnabled.current=(enabled)=>{labelsEnabled=enabled;drawLabels()};
   objects.current=L.layerGroup().addTo(map);position.current=L.layerGroup().addTo(map);
-  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('zoomstart',hideLabels);map.off('zoomend',applyZoomStyles);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};refreshBuildingOutlines.current=()=>{};restyleAtlas.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
+  return()=>{resizeObserver.disconnect();L.DomEvent.off(map.getContainer(),'wheel',onWheel);if(wheelTimer!==null)clearTimeout(wheelTimer);if(wheelFrame!==null)cancelAnimationFrame(wheelFrame);map.off('drag',refreshDuringDrag);map.off('moveend',finishMove);map.off('move',remember);map.off('zoomstart',hideLabels);map.off('zoomend',applyZoomStyles);if(dragFrame!==null)cancelAnimationFrame(dragFrame);labelCanvas.remove();redrawLabels.current=()=>{};setLabelsEnabled.current=()=>{};refreshBuildingOutlines.current=()=>{};restyleAtlas.current=()=>{};map.remove();mapRef.current=null;objects.current=null;atlasRenderer.current=null;position.current=null};
  },[basemap,atlasBounds]);
  useEffect(()=>{redrawLabels.current()},[language]);
  useEffect(()=>{
@@ -276,9 +284,21 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
   restyleAtlas.current=restyle;
   return()=>{restyleAtlas.current=()=>{}};
  },[buildings,selected,selectedPeriods,hoveredPeriod,language]);
- useEffect(()=>{if(focus&&mapRef.current){const b=buildings.find(x=>x.id===focus.id);if(b) mapRef.current.flyTo([b.coordinates[1],b.coordinates[0]],17,{duration:.45})}},[focus]);
- useEffect(()=>{if(fit&&mapRef.current&&buildings.length){const bounds=L.latLngBounds(buildings.map(b=>[b.coordinates[1],b.coordinates[0]]));mapRef.current.fitBounds(bounds.pad(.12),{maxZoom:16})}},[fit]);
- useEffect(()=>{if(reset&&mapRef.current){if(atlasBounds.isValid())mapRef.current.fitBounds(atlasBounds.pad(.08),{animate:true,duration:.45});else mapRef.current.flyTo([41.715,44.800],11.5,{duration:.45})}},[reset,atlasBounds]);
+ useEffect(()=>{if(!focus)return;const b=buildings.find(x=>x.id===focus.id);if(b&&mapRef.current)mapRef.current.flyTo([b.coordinates[1],b.coordinates[0]],17,{duration:.45});focusHandled.current()},[focus]);
+ useEffect(()=>{
+  if(fit===handledFit.current)return;
+  const map=mapRef.current;if(!map)return;
+  handledFit.current=fit;
+  if(!buildings.length)return;
+  const bounds=L.latLngBounds(buildings.map(b=>[b.coordinates[1],b.coordinates[0]]));
+  map.fitBounds(bounds.pad(.12),{maxZoom:16});
+ },[fit]);
+ useEffect(()=>{
+  if(reset===handledReset.current)return;
+  const map=mapRef.current;if(!map)return;
+  handledReset.current=reset;
+  if(atlasBounds.isValid())map.fitBounds(atlasBounds.pad(.08),{animate:true,duration:.45});else map.flyTo([41.715,44.800],11.5,{duration:.45});
+ },[reset,atlasBounds]);
  function locate(){
   if(!navigator.geolocation){setLocationMessage(t('Геолокация недоступна в этом браузере.'));return}
   setLocating(true);setLocationMessage(t('Определяем местоположение…'));
@@ -289,5 +309,5 @@ export default function MapView({buildings,allBuildings,basemap,buildingOutlines
    L.circleMarker(point,{radius:8,color:'#fff',weight:3,fillColor:'#287ac2',fillOpacity:1,interactive:false}).addTo(group);map.flyTo(point,17,{duration:.45});
   },err=>{setLocating(false);setLocationMessage(t(err.code===1?'Доступ к местоположению запрещён.':err.code===3?'Не удалось определить местоположение вовремя.':'Не удалось определить местоположение.'))},{enableHighAccuracy:false,timeout:12000,maximumAge:60000});
  }
- return <><div ref={container} className="map-canvas" aria-label={t('Интерактивная карта архитектурного атласа')}/><div className="map-actions">{showFit&&<button className="fit-results" disabled={!buildings.length} onClick={onFit}>{t('Показать найденные')}</button>}<div className="map-layers"><button className="map-layers-toggle" aria-label={t('Слои')} onClick={()=>setLayersOpen(x=>!x)} aria-expanded={layersOpen} aria-controls="map-layers-panel"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>{t('Слои')}</span></button>{layersOpen&&<div id="map-layers-panel" className="map-layers-panel"><p>{t('ОСНОВНАЯ КАРТА')}</p><label><input type="checkbox" checked={showRoads} onChange={e=>setShowRoads(e.target.checked)}/> {t('Улицы')}</label><label aria-live="polite"><input type="checkbox" checked={showBuildings} onChange={e=>setShowBuildings(e.target.checked)}/> {t('Силуэты зданий')}{buildingLayerLoading&&` (${t('Загружается…')})`}</label>{buildingLayerError&&<small className="layer-status" role="alert">{t('Не удалось загрузить силуэты зданий.')}</small>}<label><input type="checkbox" checked={showWater} onChange={e=>setShowWater(e.target.checked)}/> {t('Реки и водоёмы')}</label><p>{t('ДОПОЛНИТЕЛЬНЫЕ СЛОИ')}</p><label><input type="checkbox" checked={detailedStreets} onChange={e=>setDetailedStreets(e.target.checked)}/> {t('Подробности улиц и названия')}</label><label><input type="checkbox" checked={showLandmarks} onChange={e=>setShowLandmarks(e.target.checked)}/> {t('Достопримечательности')}</label><label><input type="checkbox" checked={showGreen} onChange={e=>setShowGreen(e.target.checked)}/> {t('Парки и природные зоны')}</label></div>}</div></div><button className="locate-button" onClick={locate} disabled={locating} title={t('Моё местоположение')} aria-label={t('Показать моё местоположение')}><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></button>{locationMessage&&<div className="location-message" role="status">{locationMessage}<button onClick={()=>setLocationMessage('')} aria-label={t('Закрыть сообщение')}>×</button></div>}</>;
+ return <><div ref={container} className="map-canvas" aria-label={t('Интерактивная карта архитектурного атласа')}/><div className="map-actions">{showFit&&<button className="fit-results" disabled={!buildings.length} onClick={onFit}>{t('Показать найденные')}</button>}<div className="map-layers"><button className="map-layers-toggle" aria-label={t('Слои')} onClick={()=>setLayersOpen(x=>!x)} aria-expanded={layersOpen} aria-controls="map-layers-panel"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>{t('Слои')}</span></button>{layersOpen&&<div id="map-layers-panel" className="map-layers-panel"><p>{t('ОСНОВНАЯ КАРТА')}</p><label><input type="checkbox" checked={showRoads} onChange={e=>setShowRoads(e.target.checked)}/> {t('Улицы')}</label><label aria-live="polite"><input type="checkbox" checked={showBuildings} onChange={e=>setShowBuildings(e.target.checked)}/> {t('Силуэты зданий')}{buildingLayerLoading&&` (${t('Загружается…')})`}</label>{buildingLayerError&&<small className="layer-status" role="alert">{t('Не удалось загрузить силуэты зданий.')}</small>}<label><input type="checkbox" checked={showWater} onChange={e=>setShowWater(e.target.checked)}/> {t('Реки и водоёмы')}</label><p>{t('ДОПОЛНИТЕЛЬНЫЕ СЛОИ')}</p><label><input type="checkbox" checked={detailedStreets} onChange={e=>setDetailedStreets(e.target.checked)}/> {t('Подробности улиц и названия')}</label><label><input type="checkbox" checked={showLandmarks} onChange={e=>setShowLandmarks(e.target.checked)}/> {t('Достопримечательности')}</label><label><input type="checkbox" checked={showGreen} onChange={e=>setShowGreen(e.target.checked)}/> {t('Парки и природные зоны')}</label><p>{t('ДВИЖОК КАРТЫ')}</p><label title={t('Альтернативный движок без Leaflet')}><input type="checkbox" checked={engine==='canvas'} onChange={e=>onEngineChange(e.target.checked?'canvas':'leaflet')}/> {t('Canvas-рендер (быстрее)')}</label></div>}</div></div><button className="locate-button" onClick={locate} disabled={locating} title={t('Моё местоположение')} aria-label={t('Показать моё местоположение')}><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></button>{locationMessage&&<div className="location-message" role="status">{locationMessage}<button onClick={()=>setLocationMessage('')} aria-label={t('Закрыть сообщение')}>×</button></div>}</>;
 }
