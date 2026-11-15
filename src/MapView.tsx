@@ -7,6 +7,7 @@ import { emptyBBox, boundsFromBBox, extendBBox, geometryBounds } from './map/geo
 import type { BBox, Bounds, LatLng, MapViewProps, OutlineBinary } from './map/types';
 import { parseOutlineBinary } from './map/outline-binary';
 import { layerMemory } from './map/layer-state';
+import { desktopStartView, isMobileMapLayout, mobileStartView } from './map/start-view';
 import { rememberMapView, savedMapView } from './map/view-memory';
 
 type Props = MapViewProps;
@@ -135,7 +136,10 @@ export default function MapView({
       map.setBuildingOutlines(outlineFeatures.current);
       map.setBuildingsVisible(true);
     }
-    if (!saved && atlasBounds) map.fitBounds(padded(atlasBounds, 0.08), { animate: false });
+    if (!saved) {
+      const view = isMobileMapLayout() ? mobileStartView() : desktopStartView();
+      map.setView(view.center, view.zoom, { animate: false });
+    }
     return () => {
       mapRef.current = null;
       map.destroy();
@@ -262,7 +266,12 @@ export default function MapView({
     const map = mapRef.current;
     if (!map) return;
     handledReset.current = reset;
-    map.reset(atlasBounds);
+    if (isMobileMapLayout()) {
+      const view = mobileStartView();
+      map.setView(view.center, view.zoom, { animate: true, duration: 450 });
+    } else {
+      map.reset(atlasBounds);
+    }
   }, [reset, atlasBounds]);
   function locate() {
     if (!navigator.geolocation) {

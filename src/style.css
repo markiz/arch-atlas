@@ -2439,15 +2439,14 @@ footer b {
 .map-attribution {
   position: absolute;
   z-index: 1000;
-  top: 0;
-  left: 0;
-  margin: 10px;
-  padding: 0 5px;
-  background: #f8f8f0d9;
+  /* Bottom-right corner, under the zoom block: right edges align, the badge
+     sits in the gap between the zoom buttons and the map edge. */
+  right: 17px;
+  bottom: 3px;
+  margin: 0;
   color: #687d70;
   font-size: 9px;
   line-height: 1.4;
-  border-radius: 2px;
   pointer-events: auto;
 }
 .map-attribution a {
@@ -2503,9 +2502,15 @@ footer b {
     right: 10px;
     bottom: 12px;
   }
+  /* Under the zoom block, in the bottom-right corner. The gap there is 12 px
+     tall, so the credit line is tightened to 10 px to keep it clear of the
+     buttons and of the map edge. */
   .map-attribution {
     font-size: 8px;
-    margin: 8px;
+    line-height: 1.25;
+    right: 10px;
+    bottom: 1px;
+    margin: 0;
   }
 }
 
