@@ -92,6 +92,7 @@ type CachedStreetLabel =
       /** Midpoint in world units at the cached zoom bucket. */
       point: Point;
       angle: number;
+      box: TextBox;
     };
 type LabelCache = {
   zoom: number;
@@ -316,6 +317,7 @@ export class AtlasCanvasMap {
   private previewCost = 0;
   private renderRaf: number | null = null;
   private renderTimer: number | null = null;
+  private labelRaf: number | null = null;
   private view: Camera;
   private rendered: RenderedCamera | null = null;
   private baseFeatures: GeoJSON.Feature[] = [];
@@ -829,6 +831,24 @@ export class AtlasCanvasMap {
       window.clearTimeout(this.renderTimer);
       this.renderTimer = null;
     }
+    if (this.labelRaf !== null) {
+      cancelAnimationFrame(this.labelRaf);
+      this.labelRaf = null;
+    }
+  }
+
+  /**
+   * A drag bakes the label bitmap to keep up with the base layer; labels in the
+   * newly exposed strips are missing until this one deferred pass. It is
+   * label-only: the base and atlas are already correct.
+   */
+  private scheduleLabelRefresh() {
+    if (this.labelRaf !== null) return;
+    this.labelRaf = requestAnimationFrame(() => {
+      this.labelRaf = null;
+      if (this.destroyed || this.pointers.size || this.animating || this.preview) return;
+      this.renderLabels();
+    });
   }
 
   private renderBase() {
@@ -1127,16 +1147,26 @@ export class AtlasCanvasMap {
     );
     this.rendered = { center, zoom: this.view.zoom, origin };
     this.bakeLabelCanvas(bakeX, bakeY);
-    if (bakeX !== 0)
-      this.renderBaseRegion(
-        { x: bakeX > 0 ? 0 : canvasWidth + bakeX, y: 0, w: Math.abs(bakeX), h: canvasHeight },
-        this.rendered,
-      );
-    if (bakeY !== 0)
-      this.renderBaseRegion(
-        { x: 0, y: bakeY > 0 ? 0 : canvasHeight + bakeY, w: canvasWidth, h: Math.abs(bakeY) },
-        this.rendered,
-      );
+    if (bakeX !== 0) {
+      const rect = {
+        x: bakeX > 0 ? 0 : canvasWidth + bakeX,
+        y: 0,
+        w: Math.abs(bakeX),
+        h: canvasHeight,
+      };
+      this.renderBaseRegion(rect, this.rendered);
+      this.renderLabelRegion(rect);
+    }
+    if (bakeY !== 0) {
+      const rect = {
+        x: 0,
+        y: bakeY > 0 ? 0 : canvasHeight + bakeY,
+        w: canvasWidth,
+        h: Math.abs(bakeY),
+      };
+      this.renderBaseRegion(rect, this.rendered);
+      this.renderLabelRegion(rect);
+    }
     this.renderOverlay();
     this.repositionMarkers();
     this.applyPanTransform(this.rendered, this.view);
@@ -1151,7 +1181,7 @@ export class AtlasCanvasMap {
       this.recenterForDrag();
   }
 
-  private settleDrag() {
+  private settleDrag(moved = false) {
     if (!this.rendered) return;
     if (Math.abs(this.view.zoom - this.rendered.zoom) > 1e-6 || this.preview) {
       // The scaled preview stays on screen while the crisp pass is painted in
@@ -1165,6 +1195,7 @@ export class AtlasCanvasMap {
       bakeY = this.rendered.origin.y - viewOrigin.y;
     if (Math.abs(bakeX) > 0.25 || Math.abs(bakeY) > 0.25) this.recenterForDrag();
     else this.applyPanTransform(this.rendered, this.view);
+    if (moved) this.scheduleLabelRefresh();
     this.reportView();
   }
 
@@ -1514,6 +1545,37 @@ export class AtlasCanvasMap {
    * bitmap. Labels in the newly exposed strips wait for the next full render,
    * exactly like the base layer.
    */
+  /** Repaint only a newly exposed strip, like the base layer does. */
+  private renderLabelRegion(rect: Rect) {
+    if (!this.visibility.detailedStreets || this.preview || !this.rendered) return;
+    const canvas = this.labelCanvas,
+      context = this.labelCtx;
+    if (!canvas || !context) return;
+    const camera = this.rendered,
+      bucket = Math.round(camera.zoom * 4) / 4,
+      view = this.rectBounds(rect, camera);
+    let cache = this.labelCache;
+    if (
+      !cache ||
+      Math.abs(cache.zoom - bucket) > 1e-6 ||
+      cache.language !== this.language ||
+      !boundsInside(view, cache.bounds)
+    ) {
+      // The main cache does not reach this strip: place labels for the strip
+      // alone. It is much smaller than a full rebuild and keeps dragging live.
+      cache = this.buildStreetLabelCache(context, bucket, view);
+    }
+    if (!cache.entries.length) return;
+    context.save();
+    context.setTransform(1, 0, 0, 1, 0, 0);
+    context.beginPath();
+    context.rect(rect.x * this.dpr, rect.y * this.dpr, rect.w * this.dpr, rect.h * this.dpr);
+    context.clip();
+    context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
+    this.drawLabelEntries(context, camera, cache, rect);
+    context.restore();
+  }
+
   private bakeLabelCanvas(bakeX: number, bakeY: number) {
     const canvas = this.labelCanvas,
       context = this.labelCtx;
@@ -1529,7 +1591,7 @@ export class AtlasCanvasMap {
     }
   }
 
-  private drawLabels(context: CanvasRenderingContext2D, camera: RenderedCamera) {
+  private drawLabels(context: CanvasRenderingContext2D, camera: RenderedCamera, clip?: Rect) {
     if (!this.streetLabels.length) return;
     context.textAlign = 'center';
     context.textBaseline = 'middle';
@@ -1552,19 +1614,45 @@ export class AtlasCanvasMap {
     }
     const cache = this.labelCache;
     if (!cache.entries.length) return;
+    this.drawLabelEntries(context, camera, cache, clip);
+  }
+
+  private drawLabelEntries(
+    context: CanvasRenderingContext2D,
+    camera: RenderedCamera,
+    cache: LabelCache,
+    clip?: Rect,
+  ) {
     const fontSize = cache.fontSize,
       halo = streetLabelHalo(fontSize),
-      scale = 2 ** (zoom - bucket),
+      scale = 2 ** (camera.zoom - cache.zoom),
       offsetX = this.padding.x - camera.origin.x,
       offsetY = this.padding.y - camera.origin.y,
       cssWidth = this.size.x + this.padding.x * 2,
-      cssHeight = this.size.y + this.padding.y * 2;
+      cssHeight = this.size.y + this.padding.y * 2,
+      clipWorld = clip
+        ? {
+            minX: clip.x - offsetX,
+            maxX: clip.x + clip.w - offsetX,
+            minY: clip.y - offsetY,
+            maxY: clip.y + clip.h - offsetY,
+          }
+        : null;
     // Chained ways repeat the same street; project each one at most once per
     // frame even when several repeats are visible.
+    const zoom = camera.zoom;
     context.font = streetLabelFont(fontSize);
     const projected = new Map<StreetLine, ScreenPath | null>();
     for (const entry of cache.entries) {
       if (entry.kind === 'straight') {
+        if (
+          clipWorld &&
+          (entry.box.maxX * scale < clipWorld.minX ||
+            entry.box.minX * scale > clipWorld.maxX ||
+            entry.box.maxY * scale < clipWorld.minY ||
+            entry.box.minY * scale > clipWorld.maxY)
+        )
+          continue;
         const x = entry.point.x * scale + offsetX,
           y = entry.point.y * scale + offsetY;
         if (x < 0 || y < 0 || x > cssWidth || y > cssHeight) continue;
@@ -1596,6 +1684,14 @@ export class AtlasCanvasMap {
       if (start < 0) continue;
       const layout = layoutTextAlongPath(path, start, entry.metrics);
       if (!layout) continue;
+      if (
+        clipWorld &&
+        (layout.box.maxX < clipWorld.minX ||
+          layout.box.minX > clipWorld.maxX ||
+          layout.box.maxY < clipWorld.minY ||
+          layout.box.minY > clipWorld.maxY)
+      )
+        continue;
       if (
         layout.box.maxX < -offsetX ||
         layout.box.minX > cssWidth - offsetX ||
@@ -1687,6 +1783,7 @@ export class AtlasCanvasMap {
           metrics,
           point: { x: point[0], y: point[1] },
           angle,
+          box,
         });
         return true;
       };
@@ -2148,7 +2245,7 @@ export class AtlasCanvasMap {
       this.pinch = null;
       this.drag = null;
       if (this.pointers.size) this.handleRemainingPointer();
-      else this.settleDrag();
+      else this.settleDrag(true);
       return;
     }
     const session = this.drag;
@@ -2168,7 +2265,7 @@ export class AtlasCanvasMap {
       this.drag = null;
       this.pinch = null;
       this.container.style.cursor = 'grab';
-      this.settleDrag();
+      this.settleDrag(session?.moved ?? false);
       this.suppressClick = false;
     }
   }
