@@ -112,7 +112,7 @@ const WHEEL_BURST_GAP_MS = 160;
 /** A wheel can cross several levels quickly; refresh before the bitmap is a blur. */
 const WHEEL_PREVIEW_ZOOM = 1;
 /** How long to wait for the compatibility click that follows a selecting tap. */
-const TAP_CLICK_GUARD_MS = 400;
+const TAP_CLICK_GUARD_MS = 200;
 const DEFAULT_VISIBILITY: AtlasLayerVisibility = {
   roads: true,
   water: true,

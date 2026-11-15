@@ -83,6 +83,12 @@ interface SwipeOptions {
   onPrevious: () => void;
   /** Changes when the shown photo is changed by anything other than the gesture. */
   resetKey: string;
+  /**
+   * A press that never became a swipe. Fired instead of relying on the click
+   * synthesized after pointerup: the browser drops that click when the carousel
+   * is still sliding, which made a quick tap right after a swipe do nothing.
+   */
+  onTap?: () => void;
 }
 
 interface SwipeSession {
@@ -93,23 +99,41 @@ interface SwipeSession {
   axis: 'x' | 'y' | null;
 }
 
+interface TapCandidate {
+  pointerId: number;
+  startX: number;
+  startY: number;
+}
+
 /**
  * Horizontal drag-to-switch for the inspector preview. `touch-action: pan-y`
  * (set in CSS) leaves vertical scrolling to the browser, so the photo only
  * follows a deliberate sideways drag.
  */
-export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey }: SwipeOptions) {
+export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey, onTap }: SwipeOptions) {
   const [offset, setOffset] = useState(0);
   const [animating, setAnimating] = useState(false);
   const session = useRef<SwipeSession | null>(null);
+  const pendingTap = useRef<TapCandidate | null>(null);
   const timer = useRef<number | null>(null);
+  const tapTimer = useRef<number | null>(null);
   const { suppress, consume, reset } = useClickGuard();
 
   const clearTimer = () => {
     if (timer.current !== null) window.clearTimeout(timer.current);
     timer.current = null;
   };
-  useEffect(() => clearTimer, []);
+  const clearTapTimer = () => {
+    if (tapTimer.current !== null) window.clearTimeout(tapTimer.current);
+    tapTimer.current = null;
+  };
+  useEffect(
+    () => () => {
+      clearTimer();
+      clearTapTimer();
+    },
+    [],
+  );
   useEffect(() => {
     clearTimer();
     session.current = null;
@@ -117,10 +141,38 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey }: SwipeOp
     setOffset(0);
   }, [resetKey]);
 
+  /**
+   * The click synthesized after pointerup is dispatched before timers run, so
+   * opening the lightbox on the next task lets the click guard swallow it and
+   * keeps the tap working even when the browser never synthesizes a click.
+   */
+  const tap = () => {
+    if (!onTap) return;
+    suppress();
+    clearTapTimer();
+    tapTimer.current = window.setTimeout(() => {
+      tapTimer.current = null;
+      onTap();
+    }, 0);
+  };
+
   const onPointerDown = (event: ReactPointerEvent<HTMLElement>) => {
-    if (!enabled || event.pointerType === 'mouse' || session.current || timer.current !== null)
-      return;
+    if (event.pointerType === 'mouse' || session.current) return;
+    // A new press ends the click window of the previous gesture.
     reset();
+    if (!enabled) return;
+    if (timer.current !== null) {
+      // The carousel is still sliding; a second swipe would fight it, but a tap
+      // must still open the lightbox, so remember the press and decide on up.
+      if (onTap)
+        pendingTap.current = {
+          pointerId: event.pointerId,
+          startX: event.clientX,
+          startY: event.clientY,
+        };
+      return;
+    }
+    pendingTap.current = null;
     session.current = {
       pointerId: event.pointerId,
       startX: event.clientX,
@@ -131,6 +183,13 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey }: SwipeOp
   };
 
   const onPointerMove = (event: ReactPointerEvent<HTMLElement>) => {
+    const candidate = pendingTap.current;
+    if (candidate && candidate.pointerId === event.pointerId) {
+      const dx = event.clientX - candidate.startX;
+      const dy = event.clientY - candidate.startY;
+      if (Math.max(Math.abs(dx), Math.abs(dy)) >= AXIS_LOCK) pendingTap.current = null;
+      return;
+    }
     const current = session.current;
     if (!current || current.pointerId !== event.pointerId) return;
     const dx = event.clientX - current.startX;
@@ -147,11 +206,18 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey }: SwipeOp
   };
 
   const finish = (event: ReactPointerEvent<HTMLElement>, cancelled: boolean) => {
+    const candidate = pendingTap.current;
+    if (candidate && candidate.pointerId === event.pointerId) {
+      pendingTap.current = null;
+      if (!cancelled) tap();
+      return;
+    }
     const current = session.current;
     if (!current || current.pointerId !== event.pointerId) return;
     session.current = null;
     if (current.axis !== 'x') {
       setOffset(0);
+      if (current.axis === null && !cancelled) tap();
       return;
     }
     suppress();
@@ -289,9 +355,11 @@ export function usePhotoLightboxGestures({
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'mouse') return;
     if (event.button !== 0) return;
+    // A new press ends the click window of the previous gesture, even while the
+    // carousel is still sliding; otherwise the tap that follows a swipe is lost.
+    reset();
     if ((event.target as Element).closest('a, button')) return;
     if (carouselTimer.current !== null) return;
-    reset();
     const view = viewRef.current;
     const image = imgRef.current;
     if (!view || !image) return;

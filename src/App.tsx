@@ -784,6 +784,7 @@ function Inspector({
     onNext: nextPhoto,
     onPrevious: previousPhoto,
     resetKey: current?.photo.file ?? '',
+    onTap: () => setLightboxOpen(true),
   });
   const close = useRef<HTMLButtonElement>(null),
     photoOpener = useRef<HTMLButtonElement>(null);
