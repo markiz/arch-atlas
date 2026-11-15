@@ -34,7 +34,7 @@ browser_run_code_unsafe   — произвольный Playwright-код с `pag
 
 Встроенный `browser_drag` — это drag мышью между элементами. Для настоящего тача используется CDP через `browser_run_code_unsafe`; готовый сценарий лежит в [scripts/mcp-touch-drag.js](../scripts/mcp-touch-drag.js).
 
-1. Задайте параметры жеста в странице. `sessionStorage` переживёт перезагрузку, которую сценарий делает для инициализации Leaflet с тачем:
+1. Задайте параметры жеста в странице. `sessionStorage` переживёт перезагрузку, которую сценарий делает для инициализации карты с тачем:
 
 ```text
 browser_evaluate:
@@ -51,9 +51,9 @@ browser_evaluate:
 browser_run_code_unsafe { filename: "scripts/mcp-touch-drag.js" }
 ```
 
-Сценарий включает `Emulation.setTouchEmulationEnabled`, перезагружает страницу, ждёт `.leaflet-container`, отправляет `touchStart → touchMove… → touchEnd` и возвращает:
+Сценарий включает `Emulation.setTouchEmulationEnabled`, перезагружает страницу, ждёт `.atlas-map-host`, отправляет `touchStart → touchMove… → touchEnd` и возвращает:
 
-- `before` / `after` — transform `.leaflet-map-pane` (видно, сдвинулась ли карта);
+- `before` / `during` / `after` — transform `.atlas-map-pan` (видно, сдвинулась ли карта; `after` может быть пустым после recenter);
 - `events` — первые 80 событий `touch*`/`pointer*` с координатами и `pointerType`;
 - `params` — фактически применённый жест.
 
@@ -64,44 +64,12 @@ browser_run_code_unsafe { filename: "scripts/mcp-touch-drag.js" }
 ```json
 {
   "before": "translate3d(0px, 0px, 0px)",
-  "after": "translate3d(0px, -220px, 0px)",
+  "during": "translate3d(0px, -220px, 0px)",
+  "after": "",
   "events": [{"type": "pointerdown", "x": 700, "y": 520, "pointerType": "touch"}],
   "params": {"x1": 700, "y1": 520, "x2": 700, "y2": 300, "steps": 12, "delay": 16, "wait": 1500}
 }
 ```
-
-## Батарея сравнения движков
-
-Повторяемая проверка Canvas-движка против Leaflet-бейзлайна:
-
-```sh
-npm run test:engines
-```
-
-В образах `atlas-codex` и `atlas-deepseek` скрипт использует Playwright из
-`@playwright/mcp` и Chromium из `/opt/playwright-browsers`; отдельно ставить
-ничего не нужно. При необходимости путь к модулю задаётся через
-`ATLAS_PLAYWRIGHT_MODULE`, а к браузерам — через
-`PLAYWRIGHT_BROWSERS_PATH`.
-
-Скрипт `scripts/test-map-engines.mjs` сам поднимает Vite на свободном порту и
-открывает две изолированные страницы — Canvas и Leaflet. Проверяются:
-
-- базовый слой (дороги, вода, парки);
-- только вода;
-- полная карта с силуэтами зданий;
-- только силуэты зданий;
-- только полигоны атласа на зуме 15;
-- сохранение камеры и слоёв при переключении движка;
-- что `focus` не переигрывается после переключения;
-- отсутствие пустых полос при длинном драге.
-
-Скриншоты складываются в `work/map-engine-tests/`. Сравнение делает
-`scripts/compare-images.py` (Pillow): для каждой сцены проверяются средняя
-разница по RGB и доля пикселей с разницей больше 40 из 255. Пиксельного
-совпадения не требуется: SVG и Canvas по-разному сглаживают кромки, но
-сцена должна укладываться в допуски. Батарея не входит в `npm test`, потому
-что production-образ не содержит браузера.
 
 ## Ограничения
 

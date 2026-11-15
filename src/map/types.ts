@@ -1,6 +1,5 @@
 import type {Building,ManifestFile} from '../types';
 
-export type MapEngine='leaflet'|'canvas';
 export type LatLng={lat:number;lng:number};
 export type Point={x:number;y:number};
 /** Lon/lat bounding box. */
@@ -22,7 +21,5 @@ export interface MapViewProps{
  onFit:()=>void;
  selectedPeriods:string[];
  hoveredPeriod:string|null;
- engine:MapEngine;
- onEngineChange:(engine:MapEngine)=>void;
  onFocusHandled:()=>void;
 }

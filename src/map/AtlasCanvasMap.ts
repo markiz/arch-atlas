@@ -98,8 +98,7 @@ function roadLength(feature:GeoJSON.Feature){
  * Small Canvas 2D map used by the alternative atlas renderer. It implements
  * only the interaction set the atlas needs: one raster layer for the basemap
  * and building outlines, one for atlas shapes/labels, drag, wheel/pinch zoom,
- * hit testing and marker tooltips. It deliberately shares no mutable state
- * with Leaflet.
+ * hit testing and marker tooltips. It has no third-party map state.
  */
 export class AtlasCanvasMap{
  private readonly container:HTMLElement;
@@ -459,11 +458,10 @@ export class AtlasCanvasMap{
   };
   if(this.visibility.green)drawGroup(this.baseGroups.green,{fill:'rgba(213,223,210,.42)',stroke:'#d5dfd2',width:.8});
   if(this.visibility.water&&boxes){
-   // Water is a mix of polygons and river centerlines. Leaflet strokes
-   // LineStrings without filling them; a grouped path would close each
-   // centerline back to its first point and paint a phantom polygon. Draw
-   // water feature-by-feature in source order, exactly like the Leaflet
-   // canvas renderer does.
+   // Water is a mix of polygons and river centerlines. LineStrings must be
+   // stroked without filling: a grouped path would close each centerline back
+   // to its first point and paint a phantom polygon. Draw water
+   // feature-by-feature in source order with per-geometry fill semantics.
    for(const index of this.baseGroups.water){
     if(!this.boxVisible(boxes,index,view))continue;
     const geometry=this.baseFeatures[index].geometry;

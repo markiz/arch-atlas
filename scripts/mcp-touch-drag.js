@@ -14,9 +14,9 @@
 //
 //    browser_run_code_unsafe: { filename: "scripts/mcp-touch-drag.js" }
 //
-// The script enables touch emulation, reloads the page so Leaflet initializes
+// The script enables touch emulation, reloads the page so the map initializes
 // with touch support, records pointer/touch events, sends a real CDP drag and
-// returns the map pane transform before/after plus the first 80 events.
+// returns the map transform before/during/after plus the first 80 events.
 async (page) => {
   const params = await page.evaluate(() => {
     const raw = sessionStorage.getItem('atlasTouchParams');
@@ -40,7 +40,7 @@ async (page) => {
   const cdp = await page.context().newCDPSession(page);
   await cdp.send('Emulation.setTouchEmulationEnabled', {enabled: true, maxTouchPoints: 5});
   await page.reload({waitUntil: 'load'});
-  await page.waitForSelector('.leaflet-container');
+  await page.waitForSelector('.atlas-map-host');
   await page.waitForTimeout(wait);
 
   await page.evaluate(() => {
@@ -62,7 +62,7 @@ async (page) => {
   });
 
   const paneTransform = () => page.evaluate(
-    () => document.querySelector('.leaflet-map-pane')?.style.transform ?? null,
+    () => document.querySelector('.atlas-map-pan')?.style.transform ?? null,
   );
   const point = (x, y) => [{x, y, id: 1, radiusX: 2, radiusY: 2, force: 1}];
   const before = await paneTransform();
@@ -75,10 +75,11 @@ async (page) => {
     await cdp.send('Input.dispatchTouchEvent', {type: 'touchMove', touchPoints: point(x, y)});
     await page.waitForTimeout(delay);
   }
+  const during = await paneTransform();
   await cdp.send('Input.dispatchTouchEvent', {type: 'touchEnd', touchPoints: []});
   await page.waitForTimeout(500);
 
   const after = await paneTransform();
   const events = await page.evaluate(() => window.__atlasTouchLog.slice(0, 80));
-  return {before, after, events, params: {x1, y1, x2, y2, steps, delay, wait}};
+  return {before, during, after, events, params: {x1, y1, x2, y2, steps, delay, wait}};
 }
