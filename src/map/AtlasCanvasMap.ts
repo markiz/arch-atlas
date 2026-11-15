@@ -1,7 +1,7 @@
 import type { Geometry } from 'geojson';
 import type { Building } from '../types';
 import type { Language } from '../i18n';
-import { periodsFor } from '../domain';
+import { period, periodsFor } from '../domain';
 import { landmarkSvg } from './landmark';
 import {
   WORLD_SIZE,
@@ -335,7 +335,7 @@ export class AtlasCanvasMap {
             building,
             bbox,
             periodLabels: buildingPeriods.map((p) => p.label),
-            fillColor: buildingPeriods[0].color,
+            fillColor: period(building.minYear, building.maxYear).color,
           });
         }
       }

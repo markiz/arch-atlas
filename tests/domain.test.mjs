@@ -51,34 +51,54 @@ const data = [
   },
 ];
 test('period boundaries and ranges', () => {
-  assert.equal(period(1799, 1799).label, 'До 1800');
-  assert.equal(period(1800, 1800).label, '1800–1849');
-  assert.equal(period(1899, 1899).label, '1850–1899');
-  assert.equal(period(1900, 1900).label, '1900–1919');
-  assert.equal(period(1992, 1992).label, 'С 1992');
-  assert.equal(period(1895, 1905).label, '1850–1899');
+  assert.equal(period(1499, 1499).label, 'До 1500');
+  assert.equal(period(1500, 1500).label, '1500–1800');
+  assert.equal(period(1800, 1800).label, '1500–1800');
+  assert.equal(period(1801, 1801).label, '1801–1860');
+  assert.equal(period(1860, 1860).label, '1801–1860');
+  assert.equal(period(1861, 1861).label, '1861–1899');
+  assert.equal(period(1899, 1899).label, '1861–1899');
+  assert.equal(period(1900, 1900).label, '1900–1920');
+  assert.equal(period(1920, 1920).label, '1900–1920');
+  assert.equal(period(1921, 1921).label, '1921–1932');
+  assert.equal(period(1932, 1932).label, '1921–1932');
+  assert.equal(period(1933, 1933).label, '1933–1954');
+  assert.equal(period(1954, 1954).label, '1933–1954');
+  assert.equal(period(1955, 1955).label, '1955–1990');
+  assert.equal(period(1990, 1990).label, '1955–1990');
+  assert.equal(period(1991, 1991).label, 'С 1991');
   assert.equal(period(null, null).label, 'Неизвестно');
+});
+test('primary period is taken from the middle of a broad date window', () => {
+  assert.equal(period(1895, 1905).label, '1900–1920');
+  assert.equal(period(1890, 1910).label, '1900–1920');
+  assert.equal(period(1950, 1959).label, '1933–1954');
+  assert.equal(period(1900, 1950).label, '1921–1932');
 });
 test('a building belongs to every period its date range overlaps', () => {
   assert.deepEqual(
     periodsFor(1895, 1905).map((p) => p.label),
-    ['1850–1899', '1900–1919'],
+    ['1861–1899', '1900–1920'],
   );
   assert.deepEqual(
     periodsFor(1850, 1991).map((p) => p.label),
-    ['1850–1899', '1900–1919', '1920–1959', '1960–1991'],
+    ['1801–1860', '1861–1899', '1900–1920', '1921–1932', '1933–1954', '1955–1990', 'С 1991'],
   );
   assert.deepEqual(
     periodsFor(1799, 1800).map((p) => p.label),
-    ['До 1800', '1800–1849'],
+    ['1500–1800'],
+  );
+  assert.deepEqual(
+    periodsFor(1800, 1801).map((p) => p.label),
+    ['1500–1800', '1801–1860'],
   );
   assert.deepEqual(
     periodsFor(1900, 1900).map((p) => p.label),
-    ['1900–1919'],
+    ['1900–1920'],
   );
   assert.deepEqual(
-    periodsFor(1992, 2020).map((p) => p.label),
-    ['С 1992'],
+    periodsFor(1991, 2020).map((p) => p.label),
+    ['С 1991'],
   );
   assert.deepEqual(
     periodsFor(null, null).map((p) => p.label),

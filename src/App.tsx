@@ -1469,13 +1469,15 @@ function AppContent({ data }: { data: Data }) {
                       {showLegend && (
                         <div id="legend-details">
                           <div className="legend-colors">
-                            {periods.slice(0, 7).map((p) => (
-                              <span key={p.label} style={{ background: p.color }} />
-                            ))}
+                            {periods
+                              .filter((p) => p.min !== null)
+                              .map((p) => (
+                                <span key={p.label} style={{ background: p.color }} />
+                              ))}
                           </div>
                           <div className="legend-range">
-                            <span>{t('ДО 1800')}</span>
-                            <span>{t('1992 И ПОЗЖЕ')}</span>
+                            <span>{t(periods[0].label)}</span>
+                            <span>{t(periods[periods.length - 2].label)}</span>
                           </div>
                           <PeriodChoices
                             className="legend-list legend-period-options"

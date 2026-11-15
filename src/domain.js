@@ -1,12 +1,79 @@
+// Границы периодов — исторические вехи Тбилиси. Подпись в интерфейсе — только
+// числовой интервал; name хранит человеческое название периода и не выводится.
 export const periods = [
-  { label: 'До 1800', min: -Infinity, max: 1799, color: '#8d765f' },
-  { label: '1800–1849', min: 1800, max: 1849, color: '#bd8b6b' },
-  { label: '1850–1899', min: 1850, max: 1899, color: '#c8a35e' },
-  { label: '1900–1919', min: 1900, max: 1919, color: '#a5a759' },
-  { label: '1920–1959', min: 1920, max: 1959, color: '#729a78' },
-  { label: '1960–1991', min: 1960, max: 1991, color: '#6595a1' },
-  { label: 'С 1992', min: 1992, max: Infinity, color: '#7184ad' },
-  { label: 'Неизвестно', min: null, max: null, color: '#999b91' },
+  {
+    id: 'medieval',
+    label: 'До 1500',
+    name: 'Средневековье',
+    min: -Infinity,
+    max: 1499,
+    color: '#8d765f',
+  },
+  {
+    id: 'persian',
+    label: '1500–1800',
+    name: 'Позднее средневековье и персидский город',
+    min: 1500,
+    max: 1800,
+    color: '#a58a6d',
+  },
+  {
+    id: 'imperial-early',
+    label: '1801–1860',
+    name: 'Раннеимперский',
+    min: 1801,
+    max: 1860,
+    color: '#bd8b6b',
+  },
+  {
+    id: 'capitalist',
+    label: '1861–1899',
+    name: 'Капиталистический Тбилиси',
+    min: 1861,
+    max: 1899,
+    color: '#c8a35e',
+  },
+  {
+    id: 'imperial-late',
+    label: '1900–1920',
+    name: 'Позднеимперский и первая республика',
+    min: 1900,
+    max: 1920,
+    color: '#a5a759',
+  },
+  {
+    id: 'early-soviet',
+    label: '1921–1932',
+    name: 'Раннесоветский (авангард)',
+    min: 1921,
+    max: 1932,
+    color: '#7f9a63',
+  },
+  {
+    id: 'stalinist',
+    label: '1933–1954',
+    name: 'Сталинский',
+    min: 1933,
+    max: 1954,
+    color: '#6b9a7d',
+  },
+  {
+    id: 'post-stalin',
+    label: '1955–1990',
+    name: 'Постсталинское время',
+    min: 1955,
+    max: 1990,
+    color: '#5b93a1',
+  },
+  {
+    id: 'independence',
+    label: 'С 1991',
+    name: 'Независимая Грузия',
+    min: 1991,
+    max: Infinity,
+    color: '#7184ad',
+  },
+  { id: 'unknown', label: 'Неизвестно', name: null, min: null, max: null, color: '#999b91' },
 ];
 export function periodsFor(min, max) {
   const unknown = periods[periods.length - 1];
@@ -14,8 +81,18 @@ export function periodsFor(min, max) {
   const matched = periods.filter((x) => x.min !== null && min <= x.max && max >= x.min);
   return matched.length ? matched : [unknown];
 }
+/**
+ * Основной период здания. Окно постройки часто широкое, поэтому берём его
+ * середину: дом 1890–1910 попадает в 1900–1920, а не в 1861–1899.
+ * Правые границы включительные, поэтому `max + 1` — это начало следующего года.
+ */
 export function period(min, max) {
-  return periodsFor(min, max)[0];
+  if (min === null || max === null) return periods[periods.length - 1];
+  const middle = (min + max) / 2;
+  return (
+    periods.find((x) => x.min !== null && middle >= x.min && middle < x.max + 1) ||
+    periods[periods.length - 1]
+  );
 }
 export function normalize(s) {
   return (s || '')
