@@ -5,6 +5,7 @@ import type { Building, Data, Filters, Photo } from './types';
 import { filterBuildings, normalize, period, periods, periodsFor, styleEntries } from './domain';
 import MapView from './MapView';
 import type { MapViewProps } from './map/types';
+import { isMobileMapLayout } from './map/start-view';
 import { I18nContext, translate, type Language, useI18n } from './i18n';
 import {
   rankPhotos,
@@ -1099,6 +1100,13 @@ function AppContent({ data }: { data: Data }) {
     [hoveredPeriod, setHoveredPeriod] = useState<string | null>(null),
     [selectedPeriods, setSelectedPeriods] = useState<string[]>([]),
     [focus, setFocus] = useState<{ id: string; serial: number } | null>(null),
+    /**
+     * On phones the inspector covers the map completely, so both "Show on map"
+     * and the close button only hide the card. The selection itself stays in
+     * `selected`, which keeps the outline on the map for the last tapped
+     * building. The wide layout closes the card for real instead.
+     */
+    [inspectorHidden, setInspectorHidden] = useState(false),
     [reset, setReset] = useState(0),
     [fit, setFit] = useState(0),
     [sort, setSort] = useState('name'),
@@ -1177,6 +1185,8 @@ function AppContent({ data }: { data: Data }) {
       const h = parseHash();
       setView(h.view);
       setSelected(h.id);
+      // A history entry with a building means an open card, even on phones.
+      setInspectorHidden(false);
     };
     window.addEventListener('popstate', pop);
     return () => window.removeEventListener('popstate', pop);
@@ -1221,7 +1231,11 @@ function AppContent({ data }: { data: Data }) {
   useEffect(() => {
     const query = window.matchMedia('(min-width: 651px)');
     const onChange = () => {
-      if (query.matches) setMenuOpen(false);
+      if (query.matches) {
+        setMenuOpen(false);
+        // The wide layout shows the inspector beside the map, so bring it back.
+        setInspectorHidden(false);
+      }
     };
     query.addEventListener('change', onChange);
     return () => query.removeEventListener('change', onChange);
@@ -1232,15 +1246,23 @@ function AppContent({ data }: { data: Data }) {
   function select(id: string) {
     opener.current = document.activeElement as HTMLElement;
     setSelected(id);
+    setInspectorHidden(false);
   }
   function close() {
-    setSelected(null);
+    if (isMobileMapLayout()) {
+      // Keep the last tapped building outlined on the phone map; only the
+      // sheet goes away.
+      setInspectorHidden(true);
+    } else {
+      setSelected(null);
+    }
     setTimeout(() => opener.current?.focus(), 0);
   }
   function goMap(id: string) {
     setView('map');
     setSelected(id);
     setFocus({ id, serial: Date.now() });
+    if (isMobileMapLayout()) setInspectorHidden(true);
   }
   function update<K extends keyof Filters>(key: K, value: Filters[K]) {
     setFilters((x) => ({ ...x, [key]: value }));
@@ -1562,7 +1584,7 @@ function AppContent({ data }: { data: Data }) {
                   </div>
                 )}
               </div>
-              {selectedBuilding && (
+              {selectedBuilding && !inspectorHidden && (
                 <Inspector
                   key={selectedBuilding.id}
                   building={selectedBuilding}

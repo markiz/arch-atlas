@@ -15,6 +15,15 @@ type Props = MapViewProps;
 /** Drop the 79 MB outline graph after the layer has been off for a while. */
 const OUTLINE_RELEASE_MS = 20_000;
 
+/**
+ * Phone camera for "Show on map": the neighbouring blocks stay visible instead
+ * of the screen being filled with one building. The selected outline already
+ * marks the object, so the camera keeps it at roughly a third of the shorter
+ * screen side at most.
+ */
+const FOCUS_PADDING = 0.9;
+const FOCUS_MAX_ZOOM = 18;
+
 function padded(bounds: Bounds, ratio: number): Bounds {
   const width = bounds.east - bounds.west,
     height = bounds.north - bounds.south;
@@ -244,12 +253,23 @@ export default function MapView({
   useEffect(() => {
     if (!focus) return;
     const building = buildings.find((item) => item.id === focus.id);
-    if (building)
-      mapRef.current?.flyTo(
-        { lat: building.coordinates[1], lng: building.coordinates[0] },
-        17,
-        450,
-      );
+    const map = mapRef.current;
+    const box = building ? geometryBounds(building.geometry as Geometry | null) : null;
+    if (map && building) {
+      if (isMobileMapLayout() && box) {
+        // The phone sheet covers the map, so "Show on map" has to place the
+        // building in view itself. Fit it with room for the neighbours around
+        // it: the outline marks the object, so the camera does not need to
+        // fill the screen with it.
+        map.fitBounds(padded(boundsFromBBox(box), FOCUS_PADDING), {
+          maxZoom: FOCUS_MAX_ZOOM,
+          animate: true,
+          duration: 450,
+        });
+      } else {
+        map.flyTo({ lat: building.coordinates[1], lng: building.coordinates[0] }, 17, 450);
+      }
+    }
     focusHandled.current();
   }, [focus]);
   useEffect(() => {
