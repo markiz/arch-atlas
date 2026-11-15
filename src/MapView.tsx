@@ -425,7 +425,7 @@ export default function MapView({
                   checked={detailedStreets}
                   onChange={(event) => setDetailedStreets(event.target.checked)}
                 />{' '}
-                {t('Подробности улиц и названия')}
+                {t('Названия улиц')}
               </label>
               <label>
                 <input
