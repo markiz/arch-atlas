@@ -2,6 +2,15 @@ import xml.etree.ElementTree as ET, pathlib, json, math
 import re
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
+ROAD_CLASSES=('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian','service','footway','path','steps')
+# OSM temporarily retags closed avenues as highway=construction. Keep their
+# physical class from construction=* so the basemap does not lose the street.
+def road_class(tags):
+ value=tags.get('highway')
+ if value=='construction':
+  value=tags.get('construction')
+  if isinstance(value,str) and value.endswith('_link'):value=value[:-5]
+ return value if value in ROAD_CLASSES else None
 landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
 curated_name_variants=json.loads((root/'data/basemap-name-translations.json').read_text()) if (root/'data/basemap-name-translations.json').exists() else {}
 landmark_cards={}
@@ -139,14 +148,14 @@ for index,(wid,w) in enumerate(ways.items(),1):
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Polygon','coordinates':[coords]}})
  if 'building' in tags and closed:
   kind='building'
- elif tags.get('highway') in ('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian','service','footway','path','steps'):
+ elif road_class(tags):
   kind='road';
  elif tags.get('waterway') in ('river','stream','canal') or tags.get('natural')=='water':kind='water'
  elif tags.get('leisure') in ('park','garden') or tags.get('landuse') in ('grass','forest','recreation_ground') or tags.get('natural') in ('wood','grassland'):kind='green'
  if not kind:continue
  props={'kind':kind}
  if kind=='road':
-  props['class']=tags['highway']
+  props['class']=road_class(tags)
   props['osmId']=f'way/{wid}'
   props.update(translated_names(tags));name=props['names']['ru']
   if name:props['name']=name
@@ -180,10 +189,10 @@ if city_extract.exists():
   osm_type=element.get('type');osm_id=element.get('id')
   if (osm_type,str(osm_id)) in local_ids:continue
   tags=element.get('tags',{});kind=None;geometry=None;props={'osmId':f'{osm_type}/{osm_id}'}
-  if osm_type=='way' and tags.get('highway') in ('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian'):
+  if osm_type=='way' and road_class(tags):
    coords=city_coords(element)
    if len(coords)<2:continue
-   kind='road';props['class']=tags['highway'];geometry={'type':'LineString','coordinates':coords}
+   kind='road';props['class']=road_class(tags);geometry={'type':'LineString','coordinates':coords}
    props.update(translated_names(tags));name=props['names']['ru']
    if name:props['name']=name
   elif osm_type=='way' and (tags.get('leisure') in ('park','garden') or tags.get('landuse')=='recreation_ground'):
