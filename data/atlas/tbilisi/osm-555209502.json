@@ -14,9 +14,9 @@
     "ka": "ივანე მაჩაბლის ქუჩა 9 / გიგა ლორთქიფანიძის ქუჩა 2",
     "uk": "вулиця Іване Мачабелі, 9 / вулиця Лорткіпанідзе, 2"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
   "styleIds": [
     "undetermined"
   ],

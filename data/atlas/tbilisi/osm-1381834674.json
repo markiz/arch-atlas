@@ -14,9 +14,9 @@
     "ka": "კოტე მარჯანიშვილის ქუჩა 18",
     "uk": "вулиця Коте Марджанішвілі, 18"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1970,
+  "maxYear": 1999,
+  "yearLabelId": "late-20th-century",
   "styleIds": [
     "undetermined"
   ],

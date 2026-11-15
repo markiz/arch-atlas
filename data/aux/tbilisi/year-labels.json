@@ -1366,5 +1366,113 @@
       "ka": "1937",
       "uk": "1937"
     }
+  },
+  "year-1849": {
+    "source": "1849",
+    "labels": {
+      "ru": "1849",
+      "en": "1849",
+      "ka": "1849",
+      "uk": "1849"
+    }
+  },
+  "year-1888": {
+    "source": "1888",
+    "labels": {
+      "ru": "1888",
+      "en": "1888",
+      "ka": "1888",
+      "uk": "1888"
+    }
+  },
+  "year-1924": {
+    "source": "1924",
+    "labels": {
+      "ru": "1924",
+      "en": "1924",
+      "ka": "1924",
+      "uk": "1924"
+    }
+  },
+  "year-1953": {
+    "source": "1953",
+    "labels": {
+      "ru": "1953",
+      "en": "1953",
+      "ka": "1953",
+      "uk": "1953"
+    }
+  },
+  "1830s": {
+    "source": "1830-е годы",
+    "labels": {
+      "ru": "1830-е годы",
+      "en": "1830s",
+      "ka": "1830-იანი წლები",
+      "uk": "1830-ті роки"
+    }
+  },
+  "1860s": {
+    "source": "1860-е годы",
+    "labels": {
+      "ru": "1860-е годы",
+      "en": "1860s",
+      "ka": "1860-იანი წლები",
+      "uk": "1860-ті роки"
+    }
+  },
+  "century-12": {
+    "source": "XII век",
+    "labels": {
+      "ru": "XII век",
+      "en": "12th century",
+      "ka": "XII საუკუნე",
+      "uk": "XII століття"
+    }
+  },
+  "century-17": {
+    "source": "XVII век",
+    "labels": {
+      "ru": "XVII век",
+      "en": "17th century",
+      "ka": "XVII საუკუნე",
+      "uk": "XVII століття"
+    }
+  },
+  "century-17-18": {
+    "source": "XVII–XVIII века",
+    "labels": {
+      "ru": "XVII–XVIII века",
+      "en": "17th–18th centuries",
+      "ka": "XVII–XVIII საუკუნეები",
+      "uk": "XVII–XVIII століття"
+    }
+  },
+  "first-half-20th-century": {
+    "source": "Первая половина XX века",
+    "labels": {
+      "ru": "Первая половина XX века",
+      "en": "First half of the 20th century",
+      "ka": "XX საუკუნის პირველი ნახევარი",
+      "uk": "Перша половина XX століття"
+    }
+  },
+  "second-half-20th-century": {
+    "source": "Вторая половина XX века",
+    "labels": {
+      "ru": "Вторая половина XX века",
+      "en": "Second half of the 20th century",
+      "ka": "XX საუკუნის მეორე ნახევარი",
+      "uk": "Друга половина XX століття"
+    }
+  },
+  "late-20th-century": {
+    "source": "Конец XX века",
+    "labels": {
+      "ru": "Конец XX века",
+      "en": "Late 20th century",
+      "ka": "XX საუკუნის დასასრული",
+      "uk": "Кінець XX століття"
+    }
   }
 }

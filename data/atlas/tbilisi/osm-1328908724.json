@@ -14,9 +14,9 @@
     "ka": "ალექსანდრე გრიბოედოვის ქუჩა 9 / მიტროფანე ლაღიძის ქუჩა 6",
     "uk": "вулиця Олександра Грибоєдова, 9 / вулиця Митрофана Лагідзе, 6"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1840,
+  "maxYear": 1860,
+  "yearLabelId": "mid-19th-century",
   "styleIds": [
     "undetermined"
   ],

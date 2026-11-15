@@ -14,9 +14,9 @@
     "ka": "ლადო ასათიანის ქუჩა 30",
     "uk": "вулиця Ладо Асატіані, 30"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1840,
+  "maxYear": 1860,
+  "yearLabelId": "mid-19th-century",
   "styleIds": [
     "undetermined"
   ],

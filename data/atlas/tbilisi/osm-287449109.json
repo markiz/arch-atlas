@@ -14,9 +14,9 @@
     "ka": "დიმიტრი ბაქრაძის ქუჩა 10",
     "uk": "вулиця Дмитра Бакрадзе, 10"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1900,
+  "maxYear": 1910,
+  "yearLabelId": "early-20th-century",
   "styleIds": [
     "undetermined"
   ],

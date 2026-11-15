@@ -14,9 +14,9 @@
     "ka": "მიხეილ ზანდუკელის ქუჩა 1",
     "uk": "вулиця Михайла Зандукелі, 1"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1890,
+  "maxYear": 1899,
+  "yearLabelId": "late-19th-century",
   "styleIds": [
     "undetermined"
   ],

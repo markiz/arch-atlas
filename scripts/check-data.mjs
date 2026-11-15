@@ -182,6 +182,10 @@ for (const b of data) {
     `${b.id}: years`,
   );
   assert(
+    (b.yearLabelId === 'unknown') === (b.minYear === null),
+    `${b.id}: construction label and numeric years disagree`,
+  );
+  assert(
     b.geometry && ['Polygon', 'MultiPolygon'].includes(b.geometry.type),
     `${b.id}: missing outline`,
   );

@@ -14,9 +14,9 @@
     "ka": "შოთა რუსთაველის გამზირი 52ა",
     "uk": "проспект Шота Руставелі, 52ა"
   },
-  "minYear": null,
-  "maxYear": null,
-  "yearLabelId": "unknown",
+  "minYear": 1900,
+  "maxYear": 1910,
+  "yearLabelId": "early-20th-century",
   "styleIds": [
     "undetermined"
   ],
