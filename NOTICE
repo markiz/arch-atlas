@@ -32,10 +32,8 @@ NOT covered by the MIT License
 - Texts, names, addresses, descriptions, historical information and other
   content in `data/`: rights belong to their authors and rights holders, and
   terms of use are set by the sources cited in the cards and metadata.
-- Third-party assets: the DejaVu Sans font (`public/fonts/DejaVuSans.ttf`) is
-  distributed under its own license
-  (`public/fonts/DejaVuSans.LICENSE.txt`); dependencies in `node_modules/` are
-  covered by the licenses of their respective packages.
+- Third-party assets: dependencies in `node_modules/` are covered by the
+  licenses of their respective packages.
 
 Generated artifacts
 -------------------
