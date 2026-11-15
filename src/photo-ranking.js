@@ -21,8 +21,9 @@ export function rankPhotos(photos) {
       return byRating || a.index - b.index;
     });
   const strong = ranked.filter(({ photo }) => (photo.rating ?? 0) > HIGH_RATING).length;
-  const visible = strong >= MIN_HIGH_PHOTOS
-    ? ranked.filter(({ photo }) => (photo.rating ?? 0) >= HIGH_RATING)
-    : ranked;
+  const visible =
+    strong >= MIN_HIGH_PHOTOS
+      ? ranked.filter(({ photo }) => (photo.rating ?? 0) >= HIGH_RATING)
+      : ranked;
   return visible.map(({ photo }) => photo);
 }

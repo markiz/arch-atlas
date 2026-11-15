@@ -16,7 +16,10 @@
     "photos:thumbs": "node scripts/create-photo-thumbs.mjs",
     "test": "node --test tests/*.test.mjs",
     "verify": "node scripts/verify-dist.mjs",
-    "photos:rate": "python3 scripts/rate-photos.py"
+    "photos:rate": "python3 scripts/rate-photos.py",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.mjs\" \"vite.config.ts\" \"eslint.config.mjs\" \"tsconfig.json\" \"index.html\" \"package.json\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.mjs\" \"vite.config.ts\" \"eslint.config.mjs\" \"tsconfig.json\" \"index.html\" \"package.json\"",
+    "lint": "eslint ."
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -24,10 +27,15 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/geojson": "^7946.0.16",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
     "typescript": "^5.8.3",
+    "typescript-eslint": "^8.72.2",
     "vite": "^8.3.5"
   }
 }

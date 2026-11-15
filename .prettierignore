@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/atlas/
+data/
+raw/
+work/
+archive/
+.cache/
+.tmp/
+*.tsbuildinfo
+package-lock.json

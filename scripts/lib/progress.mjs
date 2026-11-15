@@ -22,7 +22,16 @@ export function formatDuration(seconds) {
 }
 
 export class Progress {
-  constructor(total, { label = '', unit = 'items', stream = process.stderr, minInterval = 500, windowMs = 30000 } = {}) {
+  constructor(
+    total,
+    {
+      label = '',
+      unit = 'items',
+      stream = process.stderr,
+      minInterval = 500,
+      windowMs = 30000,
+    } = {},
+  ) {
     this.total = total === null || total === undefined ? null : Math.max(0, Math.trunc(total));
     this.label = String(label).replace(/\s+/g, ' ').trim();
     this.unit = unit;
@@ -41,7 +50,7 @@ export class Progress {
     if (this.started !== null) return this;
     this.started = Date.now();
     this.samples.push([this.started, 0]);
-    this.emit(this.started, note || 'start', true);
+    this.emit(this.started, note || 'start');
     return this;
   }
 
@@ -56,11 +65,16 @@ export class Progress {
 
     const now = Date.now();
     this.samples.push([now, value]);
-    while (this.samples.length > 2 && now - this.samples[0][0] > this.windowMs) this.samples.shift();
+    while (this.samples.length > 2 && now - this.samples[0][0] > this.windowMs)
+      this.samples.shift();
 
     const finished = this.total !== null && value >= this.total;
-    const due = force || (finished && !this.emittedFinal) || !this.lastPrint || now - this.lastPrint >= this.minInterval;
-    if (due) this.emit(now, note, force);
+    const due =
+      force ||
+      (finished && !this.emittedFinal) ||
+      !this.lastPrint ||
+      now - this.lastPrint >= this.minInterval;
+    if (due) this.emit(now, note);
     return this;
   }
 
@@ -82,11 +96,11 @@ export class Progress {
     this.done = this.total === null ? this.done : this.total;
     const now = Date.now();
     this.samples.push([now, this.done]);
-    this.emit(now, note || (this.total === null ? 'done' : ''), true);
+    this.emit(now, note || (this.total === null ? 'done' : ''));
     return this;
   }
 
-  emit(now, note, force = false) {
+  emit(now, note) {
     this.lastPrint = now;
     const started = this.started ?? now;
     const elapsed = Math.max(0, (now - started) / 1000);
