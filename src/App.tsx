@@ -920,7 +920,7 @@ function Inspector({
                           onClick={() => onFilter('style', item.id)}
                           aria-label={t('Фильтр по стилю: ') + item.label}
                         >
-                          {item.label}
+                          <span className="detail-filter-text">{item.label}</span>
                         </button>
                       ) : (
                         item.label
@@ -943,7 +943,7 @@ function Inspector({
                             }
                             aria-label={t('Фильтр по архитектору: ') + architect}
                           >
-                            {architect}
+                            <span className="detail-filter-text">{architect}</span>
                           </button>
                         </Fragment>
                       ))
@@ -1383,7 +1383,7 @@ function AppContent({ data }: { data: Data }) {
                       </div>
                     ) : (
                       <>
-                        <div className="cards">
+                        <div className="cards" lang={language}>
                           {sorted.slice(0, visibleCount).map((b) => (
                             <article key={b.id} className="card">
                               <button
@@ -1399,8 +1399,10 @@ function AppContent({ data }: { data: Data }) {
                               </button>
                               <div className="card-body">
                                 <span className="card-district">
-                                  {b.districts?.[language] || b.district} /{' '}
-                                  {b.styles?.[language] || b.style}
+                                  {b.districts?.[language] || b.district}
+                                  {!b.styleIds?.includes('undetermined') && (
+                                    <> / {b.styles?.[language] || b.style}</>
+                                  )}
                                 </span>
                                 <button className="card-title" onClick={() => select(b.id)}>
                                   {b.names?.[language] || b.name}

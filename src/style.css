@@ -554,7 +554,7 @@ a {
   grid-column: span 2;
   border-top: 1px solid #eef0ea;
 }
-.details span,
+.details > div > span,
 .credits p {
   font-size: 9px;
   letter-spacing: 0.12em;
@@ -708,7 +708,11 @@ a {
   padding: 16px;
 }
 .card-district {
+  display: block;
   font-size: 9px;
+  /* Without display:block the inline label inherits the 16px line box of
+     .card-body, which gives every 9px line ~19px of leading. */
+  line-height: 1.35;
   color: #9aaa9a;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -722,6 +726,9 @@ a {
   color: #314f3d;
   padding: 0;
   margin: 9px 0;
+  /* Long Russian words like «правительственной» must not run past the
+     card's right padding. */
+  overflow-wrap: break-word;
 }
 .card-body p {
   font-size: 11px;
@@ -954,11 +961,12 @@ footer b {
     font-size: 27px;
   }
   .catalog {
-    padding: 20px 14px;
+    padding: 16px 14px 20px;
   }
   .catalog-head {
     align-items: start;
     gap: 10px;
+    margin-bottom: 16px;
   }
   .catalog-head h2 {
     font-size: 29px;
@@ -974,22 +982,36 @@ footer b {
   }
   .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 8px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
   }
   .card-image {
     height: 120px;
   }
   .card-body {
-    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
   }
   .card-title {
-    font-size: 17px;
+    font-size: 15px;
+    line-height: 1.15;
+    margin: 5px 0 6px;
   }
   .card-district {
     font-size: 8px;
+    letter-spacing: 0.05em;
   }
   .card-body p {
-    font-size: 10px;
+    display: none;
+  }
+  .card-body .text-link {
+    margin-top: auto;
+    align-self: flex-start;
   }
   .overview {
     right: 10px;
@@ -1000,6 +1022,14 @@ footer b {
   }
   footer span:nth-child(2) {
     display: none;
+  }
+}
+/* Below this width even a 15px word cannot fit the two-column card; use
+   proper hyphenation instead of splitting the word without a hyphen. */
+@media (max-width: 348px) {
+  .card-title {
+    hyphens: auto;
+    hyphenate-limit-chars: 8 8 3;
   }
 }
 @media (max-width: 380px) {
@@ -1766,7 +1796,6 @@ footer b {
 .detail-filter {
   padding: 0;
   border: 0;
-  border-bottom: 1px dotted #aebfae;
   background: none;
   color: inherit;
   font-size: inherit;
@@ -1774,8 +1803,13 @@ footer b {
   text-align: left;
   line-height: inherit;
 }
+.detail-filter-text {
+  border-bottom: 1px dotted #aebfae;
+}
 .detail-filter:hover {
   color: #47775a;
+}
+.detail-filter:hover .detail-filter-text {
   border-bottom-color: #47775a;
 }
 .header-city {
@@ -1808,14 +1842,16 @@ footer b {
     height: 32px;
     font-size: 24px;
   }
+  /* Native selects already reserve space for the arrow; keep the side
+     padding small so «Тбилиси» and «Українська» are not clipped. */
   .city-select {
     min-width: 0;
     width: 76px;
-    padding: 0 4px;
+    padding: 0 2px;
     font-size: 10px;
   }
   .language-select {
-    width: 78px;
+    width: 90px;
   }
   .language-label {
     display: none;
@@ -1839,11 +1875,11 @@ footer b {
     letter-spacing: 0.08em;
   }
   .city-select {
-    width: 68px;
+    width: 70px;
     font-size: 9px;
   }
   .language-select {
-    width: 73px;
+    width: 84px;
   }
 }
 .filter-panel > .multi-filter {
