@@ -1,0 +1,25 @@
+{
+  "author": "OLI / Tbilisi Jazz Festival",
+  "license": "",
+  "licenseUrl": "https://georgia.to/tbilisi-jazz-festival/",
+  "source": "https://cbw.ge/storage/8725/filarmonia-005.jpg",
+  "modifications": "уменьшено до 1200 px по ширине, преобразовано в WebP (quality 82); полное качество не используется",
+  "width": 1200,
+  "height": 870,
+  "sourceTags": [
+    "Tbilisi Jazz Festival",
+    "CBW"
+  ],
+  "visualTags": [
+    "facade",
+    "street",
+    "column",
+    "door",
+    "people",
+    "sign",
+    "water",
+    "tree",
+    "car"
+  ],
+  "rating": 75
+}
