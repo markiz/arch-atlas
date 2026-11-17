@@ -13,12 +13,6 @@
     "ka": "ივანე ჯავახიშვილის ქუჩა 36ა",
     "uk": "вулиця Іване Джавахишвілі, 36а"
   },
-  "descriptions": {
-    "ru": "Двухэтажный доходный дом, вытянутый вдоль улицы; фасады не оштукатурены, открытая красная кирпичная кладка для этой застройки редка. Композиция симметрична и построена на классических горизонталях — каменный цоколь с полуподвальными окнами, профилированная междуэтажная тяга, карниз и глухой парапет, — а вертикаль задают пара колоссальных пилястр, образующих по краям слабые ризалиты. Окна всех этажей с плоскими перемычками в форме перевёрнутой трапеции; по центру два французских балкона с чугунным кружевом и два подвесных балкона на втором этаже. Самая выразительная деталь — высокая деревянная дверь парадной с изогнутой резьбой и растительными мотивами в духе модерна.",
-    "en": "A two-storey rental apartment house extended along the street; the façades are unplastered, and exposed red brickwork is rare in this built fabric. The composition is symmetrical and built on classical horizontals — a stone plinth with semi-basement windows, a moulded string course, a cornice and a blind parapet — while the vertical is set by a pair of colossal pilasters forming weak risalits at the edges. The windows of all storeys have flat lintels shaped as an inverted trapezium; in the centre are two French balconies with cast-iron lacework and two suspended balconies on the second storey. The most expressive detail is the tall wooden entrance door with curved carving and plant motifs in the spirit of Art Nouveau.",
-    "ka": "ორსართულიანი საიჯარო სახლი, ქუჩის გასწვრივ გაწელილი; ფასადები შეულესავია, ღია წითელი აგურის წყობა ამ განაშენიანებისთვის იშვიათია. კომპოზიცია სიმეტრიულია და კლასიკურ ჰორიზონტალებზეა აგებული — ქვის ცოკოლი ნახევარსარდაფის ფანჯრებით, პროფილირებული სართულშუა ლიანდაგი, კარნიზი და ყრუ პარაპეტი — ხოლო ვერტიკალს ორი კოლოსალური პილასტრი განსაზღვრავს, რომლებიც კიდეებზე სუსტ რიზალიტებს ქმნიან. ყველა სართულის ფანჯრებს ბრტყელი გადახურვები აქვს შებრუნებული ტრაპეციის ფორმით; ცენტრში ორი ფრანგული აივანია თუჯის მაფორმებით და ორი ჩამოკიდებული აივანი მეორე სართულზე. ყველაზე გამომსახველი დეტალია მაღალი ხის შესასვლელი კარი მოხრილი კვეთითა და მცენარეული მოტივებით, მოდერნის სულისკვეთებით.",
-    "uk": "Двоповерховий прибутковий будинок, витягнутий уздовж вулиці; фасади не потиньковані, відкрита червона цегляна кладка для цієї забудови рідкісна. Композиція симетрична й побудована на класичних горизонталях — кам'яний цоколь із напівпідвальними вікнами, профільована міжповерхова тяга, карниз і глухий парапет, — а вертикаль задають пара колосальних пілястр, що утворюють по краях слабкі ризаліти. Вікна всіх поверхів із плоскими перемичками у формі перевернутої трапеції; по центру два французькі балкони з чавунним мереживом і два підвісні балкони на другому поверсі. Найвиразніша деталь — високі дерев'яні двері парадного з вигнутим різьбленням і рослинними мотивами в дусі модерну."
-  },
   "minYear": 1900,
   "maxYear": 1914,
   "yearLabelId": "early-20th-century",
@@ -79,5 +73,11 @@
   "source": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=2837",
   "otherSource": "https://www.openstreetmap.org/way/1225051119",
   "googlePlaceId": "ChIJTxtIZCANREAR25szdMccAT0",
-  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7059232,44.8042279&query_place_id=ChIJTxtIZCANREAR25szdMccAT0"
+  "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.7059232,44.8042279&query_place_id=ChIJTxtIZCANREAR25szdMccAT0",
+  "descriptions": {
+    "ru": "Бывший доходный дом; открытая красная кирпичная кладка для этой застройки редка.",
+    "en": "A former rental apartment house; exposed red brickwork is rare in this built fabric.",
+    "ka": "ყოფილი საიჯარო სახლი; ღია წითელი აგურის წყობა ამ განაშენიანებისთვის იშვიათია.",
+    "uk": "Колишній прибутковий будинок; відкрита червона цегляна кладка для цієї забудови рідкісна."
+  }
 }
