@@ -770,7 +770,6 @@ function Inspector({
   const individualStyles = styleEntries(building, language) as { id: string; label: string }[];
   const constructionLabel = building.yearLabels?.[language] || building.yearLabel;
   const district = building.districts?.[language] || building.district;
-  const typeLabel = building.typeLabels?.[language] || building.type;
   const address = building.addresses?.[language] ?? building.address;
   const geometryQuality =
     language === 'ru'
@@ -1010,10 +1009,6 @@ function Inspector({
                     </Fragment>
                   ))}
                 </strong>
-              </div>
-              <div className="full">
-                <span>{t('ТИП')}</span>
-                <strong>{typeLabel}</strong>
               </div>
               <div className="full">
                 <span>{t('АРХИТЕКТОР')}</span>
