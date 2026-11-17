@@ -89,16 +89,45 @@ def apply_landmark_card(props,osm_id):
  return props
 def translated_names(tags):
  candidates=name_candidates(tags)
+ original=tags.get('name:ka') or (tags.get('name') if re.search('[\u10a0-\u10ff]',tags.get('name','')) else '') or tags.get('name:ru') or tags.get('name:en') or tags.get('name') or ''
+ original_language='ka' if re.search('[\u10a0-\u10ff]',original) else ('en' if tags.get('name:en') else 'ru')
+ is_georgian=bool(re.search('[\u10a0-\u10ff]',original))
+ names={};sources={}
+ # A missing OSM name:ru must not be replaced with a mechanical translit:
+ # show the Georgian name instead (option 3) until a curated translation exists.
+ if tags.get('name:ru'):
+  names['ru']=tags['name:ru'];sources['ru']='osm'
+ elif is_georgian:
+  names['ru']=original;sources['ru']='ka'
+ else:
+  names['ru']=tags.get('name') or original;sources['ru']='osm'
+ if tags.get('name:en'):
+  names['en']=tags['name:en'];sources['en']='osm'
+ elif is_georgian:
+  names['en']=georgian_label(original,'en');sources['en']='translit'
+ else:
+  names['en']=names['ru'];sources['en']='osm'
+ names['ka']=tags.get('name:ka') or (tags.get('name') if is_georgian else original)
+ sources['ka']='osm' if tags.get('name:ka') else ('ka' if is_georgian else 'osm')
+ if tags.get('name:uk'):
+  names['uk']=tags['name:uk'];sources['uk']='osm'
+ elif sources['ru']=='osm':
+  names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
+ else:
+  names['uk']=original;sources['uk']='ka'
+ # Curated translations may fill any subset of languages; derive the rest.
  for source in candidates:
-  if source in curated_name_variants:
-   return {'originalLanguage':'ka','names':curated_name_variants[source]}
- original=tags.get('name:ka') or (tags.get('name') if re.search('[\\u10a0-\\u10ff]',tags.get('name','')) else '') or tags.get('name:ru') or tags.get('name:en') or tags.get('name') or ''
- original_language='ka' if re.search('[\\u10a0-\\u10ff]',original) else ('en' if tags.get('name:en') else 'ru')
- is_georgian=bool(re.search('[\\u10a0-\\u10ff]',original))
- names={'ru':tags.get('name:ru') or (georgian_label(original,'ru') if is_georgian else tags.get('name') or original),
-        'en':tags.get('name:en') or (georgian_label(original,'en') if is_georgian else tags.get('name') or tags.get('name:ru') or original),
-        'ka':tags.get('name:ka') or (tags.get('name') if re.search('[\\u10a0-\\u10ff]',tags.get('name','')) else original),
-        'uk':tags.get('name:uk') or (georgian_label(original,'uk') if is_georgian else ukrainian_name(tags.get('name:ru') or tags.get('name') or original))}
+  entry=curated_name_variants.get(source)
+  if not entry:continue
+  if isinstance(entry,str):entry={'ru':entry}
+  for language in ('ru','en','ka','uk'):
+   value=entry.get(language)
+   if isinstance(value,str) and value.strip():names[language]=value;sources[language]='curated'
+  if not entry.get('uk') and names.get('ru'):names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
+  break
+ result={'originalLanguage':original_language,'names':names}
+ if sources['ru']!='osm':result['nameSource']=sources['ru']
+ if sources['en']=='translit':result['nameTransliterated']=True
  # Editorial translations override OSM tags for landmarks; values are objects
  # with all four languages. Older string values are treated as Russian-only.
  for source in candidates:
@@ -108,7 +137,7 @@ def translated_names(tags):
   for language,value in entry.items():
    if language in names and isinstance(value,str) and value.strip():names[language]=value
   break
- return {'originalLanguage':original_language,'names':names}
+ return result
 node_progress=Progress(len(node_tags),'scan landmark nodes')
 node_progress.start()
 for index,(nid,tags) in enumerate(node_tags.items(),1):

@@ -50,6 +50,29 @@ for (const feature of geo.features.filter((feature) => feature.properties?.kind 
       `${feature.properties?.osmId}: ${lang} landmark name must start with a capital letter`,
     );
 }
+// Road labels must not regress to the mechanical Georgian transliteration:
+// "…ис" plus a Roman numeral before the street type, or a bare "III тупик".
+const mechanicalRoadName =
+  /[а-яё-]*ис\s+(?:I|II|III|IV|V)\s+(?:улица|переулок|тупик|проезд|проспект|площадь|мост|подъём|шоссе)\b/i;
+const romanRoadOrdinal = /\b(?:I|II|III|IV|V)\s+(?:улица|переулок|тупик|проезд)\b/;
+for (const feature of geo.features) {
+  const props = feature.properties ?? {};
+  if (props.kind !== 'road') continue;
+  const name = typeof props.name === 'string' ? props.name : '';
+  assert(
+    !mechanicalRoadName.test(name),
+    `${props.osmId}: mechanical transliteration in road name "${name}"`,
+  );
+  assert(
+    !romanRoadOrdinal.test(name),
+    `${props.osmId}: Roman numeral instead of an ordinal in "${name}"`,
+  );
+  if (props.nameSource === 'ka')
+    assert(
+      /[\u10a0-\u10ff]/.test(props.names?.ru ?? ''),
+      `${props.osmId}: Georgian fallback must keep the Georgian name`,
+    );
+}
 const progress = new Progress(data.length, { label: 'check atlas cards' });
 const verifiedPhotos = new Set();
 function webpSize(bytes, label) {
