@@ -33,6 +33,7 @@
   ],
   "architectIds": [],
   "districtId": "saburtalo",
+  "type": "infrastructure",
   "coordinates": [
     44.7421144,
     41.7386611

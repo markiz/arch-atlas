@@ -23,7 +23,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.argv.find((value) => value.startsWith('--city='))?.slice('--city='.length) ?? 'tbilisi';
   const result = await mergeAux({ city });
   const counts = result.counts;
-  const summary = `${counts.styles ?? 0} styles, ${counts.architects ?? 0} architects, ${counts.districts ?? 0} districts, ${counts.yearLabels ?? 0} year labels`;
+  const summary = `${counts.styles ?? 0} styles, ${counts.architects ?? 0} architects, ${counts.districts ?? 0} districts, ${counts.yearLabels ?? 0} year labels, ${counts.types ?? 0} types`;
   console.log(
     `${result.written ? 'Merged' : 'Up to date'} ${city} aux: ${summary} -> ${path.relative(ROOT, result.file)}`,
   );

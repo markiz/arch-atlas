@@ -14,6 +14,21 @@ export interface GeometryVariant {
   areaM2?: number;
   note?: string;
 }
+export type BuildingType =
+  | 'residential'
+  | 'commercial'
+  | 'government'
+  | 'educational'
+  | 'cultural'
+  | 'healthcare'
+  | 'religious'
+  | 'hospitality'
+  | 'industrial'
+  | 'military'
+  | 'infrastructure'
+  | 'public'
+  | 'mixed'
+  | 'unknown';
 export interface Photo {
   id: string;
   file: string;
@@ -45,6 +60,8 @@ export interface Building {
   district: string;
   districtId: string;
   districts: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  type: BuildingType;
+  typeLabels: Record<'ru' | 'en' | 'ka' | 'uk', string>;
   minYear: number | null;
   maxYear: number | null;
   yearLabel: string;

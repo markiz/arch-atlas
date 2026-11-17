@@ -13,6 +13,7 @@ function attributes() {
     yearLabels: { 'year-1905': { labels: labels('1905 год', '1905', '1905', '1905') } },
     districts: { sololaki: { labels: labels('Сололаки', 'Sololaki', 'სოლოლაკი', 'Сололакі') } },
     architects: { saar: { labels: labels('Карл Заар', 'Karl Saar', 'კარლ ზაარი', 'Карл Заар') } },
+    types: { residential: { labels: labels('Жилой', 'Residential', 'საცხოვრებელი', 'Житловий') } },
   };
 }
 
@@ -31,6 +32,7 @@ function card(id, overrides = {}) {
     styleIds: ['art-nouveau'],
     architectIds: ['saar'],
     districtId: 'sololaki',
+    type: 'residential',
     coordinates: [44.8, 41.7],
     geometry: {
       type: 'Polygon',
@@ -60,6 +62,7 @@ async function fixture() {
     ['architects.json', 'architects'],
     ['districts.json', 'districts'],
     ['year-labels.json', 'yearLabels'],
+    ['types.json', 'types'],
   ]) {
     await writeFile(path.join(root, 'data', 'aux', 'tbilisi', file), JSON.stringify(tables[table]));
   }
@@ -91,6 +94,8 @@ test('packs cards in filename order and resolves reference labels', async () => 
     assert.equal(first.nameKa, 'სახლი');
     assert.equal(first.address, 'улица 1');
     assert.equal(first.district, 'Сололаки');
+    assert.equal(first.type, 'residential');
+    assert.deepEqual(first.typeLabels, labels('Жилой', 'Residential', 'საცხოვრებელი', 'Житловий'));
     assert.equal(first.style, 'Модерн');
     assert.equal(first.yearLabel, '1905 год');
     assert.deepEqual(first.architects, ['Карл Заар']);
@@ -124,6 +129,19 @@ test('rejects a filename that does not match the card id', async () => {
     await assert.rejects(
       () => assembleAtlas({ root, outFile: path.join(root, 'out.json'), quiet: true }),
       /does not match filename/,
+    );
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test('rejects an unknown building type reference', async () => {
+  const root = await fixture();
+  try {
+    await writeCard(root, 'osm-1.json', card('osm-1', { type: 'missing-type' }));
+    await assert.rejects(
+      () => assembleAtlas({ root, outFile: path.join(root, 'out.json'), quiet: true }),
+      /unknown type reference/,
     );
   } finally {
     await rm(root, { recursive: true, force: true });

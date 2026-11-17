@@ -176,25 +176,75 @@ test('inverted and invalid date intervals return no buildings', () => {
     assert.deepEqual(filterBuildings(data, { ...empty, ...range }), []);
   }
 });
-test('interesting-only hides cards without description and history', () => {
+test('interesting-only hides only residential cards without description and history', () => {
   const cards = [
-    { id: 'text', descriptions: { ru: 'Описание' }, histories: {}, architects: [], minYear: null, architectIds: [] },
-    { id: 'story', descriptions: {}, histories: { ru: 'История' }, architects: [], minYear: null, architectIds: [] },
-    { id: 'dated', descriptions: {}, histories: {}, architects: [], minYear: 1900, maxYear: 1910, architectIds: [] },
-    { id: 'architect', descriptions: {}, architects: [], minYear: null, architectIds: ['saar'] },
-    { id: 'blank', architects: [], minYear: null, architectIds: [] },
+    {
+      id: 'text',
+      type: 'residential',
+      descriptions: { ru: 'Описание' },
+      histories: {},
+      architects: [],
+      minYear: null,
+      architectIds: [],
+    },
+    {
+      id: 'story',
+      type: 'residential',
+      descriptions: {},
+      histories: { ru: 'История' },
+      architects: [],
+      minYear: null,
+      architectIds: [],
+    },
+    {
+      id: 'dated',
+      type: 'residential',
+      descriptions: {},
+      histories: {},
+      architects: [],
+      minYear: 1900,
+      maxYear: 1910,
+      architectIds: [],
+    },
+    {
+      id: 'architect',
+      type: 'residential',
+      descriptions: {},
+      architects: [],
+      minYear: null,
+      architectIds: ['saar'],
+    },
+    { id: 'blank', type: 'residential', architects: [], minYear: null, architectIds: [] },
+    {
+      id: 'museum',
+      type: 'cultural',
+      descriptions: {},
+      histories: {},
+      architects: [],
+      minYear: null,
+      architectIds: [],
+    },
+    {
+      id: 'shop',
+      type: 'commercial',
+      descriptions: {},
+      histories: {},
+      architects: [],
+      minYear: null,
+      architectIds: [],
+    },
   ];
   assert.deepEqual(
     filterBuildings(cards, { ...empty, interestingOnly: true }).map((x) => x.id),
-    ['text', 'story'],
+    ['text', 'story', 'museum', 'shop'],
   );
   assert.deepEqual(
     filterBuildings(cards, { ...empty, interestingOnly: false }).map((x) => x.id),
-    ['text', 'story', 'dated', 'architect', 'blank'],
+    ['text', 'story', 'dated', 'architect', 'blank', 'museum', 'shop'],
   );
   assert.deepEqual(
     filterBuildings(cards, empty).map((x) => x.id),
-    ['text', 'story', 'dated', 'architect', 'blank'],
+    ['text', 'story', 'dated', 'architect', 'blank', 'museum', 'shop'],
   );
 });
 test('architect IDs, style IDs and query combine across filters', () => {

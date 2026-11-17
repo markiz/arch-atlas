@@ -25,13 +25,19 @@ async function fixture() {
     'year-labels.json': {
       'year-1905': { source: '1905', labels: labels('1905', '1905', '1905', '1905') },
     },
+    'types.json': {
+      residential: {
+        source: 'Жилой',
+        labels: labels('Жилой', 'Residential', 'საცხოვრებელი', 'Житловий'),
+      },
+    },
   };
   for (const [name, value] of Object.entries(tables))
     await writeFile(path.join(dir, name), JSON.stringify(value));
   return root;
 }
 
-test('merges the four city dictionaries into one build artifact', async () => {
+test('merges the city dictionaries into one build artifact', async () => {
   const root = await fixture();
   try {
     const { aux, file, written } = await ensureMergedAux({ root });
@@ -41,6 +47,7 @@ test('merges the four city dictionaries into one build artifact', async () => {
     assert.deepEqual(Object.keys(aux.styles), ['empire']);
     assert.equal(aux.architects.zaar.labels.ka, 'კარლ ზაარი');
     assert.equal(aux.districts.tbilisi.labels.uk, 'Тбілісі');
+    assert.equal(aux.types.residential.labels.en, 'Residential');
     assert.equal(aux.yearLabels['year-1905'].labels.ru, '1905');
     const writtenFile = JSON.parse(await readFile(file, 'utf8'));
     assert.equal(writtenFile.version, 1);

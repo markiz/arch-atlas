@@ -1,5 +1,5 @@
-// Per-city auxiliary dictionaries: styles, architects, districts and date
-// labels. Humans edit the small files under data/aux/<city>/; the build merges
+// Per-city auxiliary dictionaries: styles, architects, districts, date labels
+// and building types. Humans edit the small files under data/aux/<city>/; the build merges
 // them into data/aux/<city>.json, the single JSON consumed by assemble-atlas.mjs.
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -12,6 +12,7 @@ export const AUX_TABLES = [
   { key: 'architects', file: 'architects.json', label: 'architects' },
   { key: 'districts', file: 'districts.json', label: 'districts' },
   { key: 'yearLabels', file: 'year-labels.json', label: 'year labels' },
+  { key: 'types', file: 'types.json', label: 'building types' },
 ];
 
 function isPlainObject(value) {

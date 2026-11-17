@@ -139,7 +139,8 @@ export function searchableText(b) {
     .join(' ');
 }
 const filled = (value) => typeof value === 'string' && value.trim() !== '';
-const anyFilled = (value) => !!value && typeof value === 'object' && Object.values(value).some(filled);
+const anyFilled = (value) =>
+  !!value && typeof value === 'object' && Object.values(value).some(filled);
 /**
  * "Interesting" means the card has something to read: a description or a history.
  * Dates and architects live in the card's fields and do not count on their own.
@@ -151,6 +152,9 @@ export function isInteresting(building) {
     anyFilled(building.histories) ||
     filled(building.history)
   );
+}
+export function isResidential(building) {
+  return building.type === 'residential';
 }
 export function filterBuildings(buildings, f) {
   const terms = normalize(f.query).split(' ').filter(Boolean);
@@ -164,7 +168,7 @@ export function filterBuildings(buildings, f) {
       styles = Array.isArray(f.style) ? f.style : f.style ? [f.style] : [],
       buildingStyles = Array.isArray(b.styleIds) ? b.styleIds : [];
     return (
-      (!f.interestingOnly || isInteresting(b)) &&
+      (!f.interestingOnly || !isResidential(b) || isInteresting(b)) &&
       terms.every((t) => hay.includes(t)) &&
       (!dateActive || (b.minYear !== null && b.minYear <= to && b.maxYear >= from)) &&
       (!architects.length ||

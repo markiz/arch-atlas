@@ -8,6 +8,7 @@ const buildingOutlines = JSON.parse(
   await readFile('public/atlas/building-outlines.geojson', 'utf8'),
 );
 const taxonomy = JSON.parse(await readFile('data/photo-visual-tags.json', 'utf8'));
+const aux = JSON.parse(await readFile('data/aux/tbilisi.json', 'utf8'));
 const visualTagIds = new Set(taxonomy.tags.map((tag) => tag.id));
 assert(
   taxonomy.tags.length < 50,
@@ -76,6 +77,17 @@ for (const b of data) {
   for (const k of ['name', 'district', 'yearLabel', 'style', 'source', 'geometryQuality'])
     assert(typeof b[k] === 'string' && b[k].trim(), `${b.id}: ${k}`);
   assert(typeof b.description === 'string', `${b.id}: description`);
+  assert(
+    typeof b.type === 'string' && Object.hasOwn(aux.types, b.type),
+    `${b.id}: unknown building type`,
+  );
+  assert(
+    b.typeLabels &&
+      ['ru', 'en', 'ka', 'uk'].every(
+        (lang) => typeof b.typeLabels[lang] === 'string' && b.typeLabels[lang].trim(),
+      ),
+    `${b.id}: translated building type`,
+  );
   if (b.geometryQualityTranslations)
     assert(
       ['en', 'ka', 'uk'].every(

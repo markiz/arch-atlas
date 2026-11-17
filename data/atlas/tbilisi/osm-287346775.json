@@ -28,6 +28,7 @@
   ],
   "architectIds": [],
   "districtId": "vera",
+  "type": "residential",
   "coordinates": [
     44.7843118,
     41.7043575

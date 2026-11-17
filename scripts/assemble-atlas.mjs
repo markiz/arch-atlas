@@ -236,6 +236,7 @@ export function hydrateCard(
     'construction label',
   );
   const districtId = requireReference(file, card.districtId, attributes.districts, 'district');
+  const type = requireReference(file, card.type, attributes.types, 'type');
   if (!Array.isArray(card.architectIds)) fail(file, 'architectIds must be an array');
   const architectIds = card.architectIds.map((value, index) =>
     requireReference(file, value, attributes.architects, `architectIds[${index}]`),
@@ -305,6 +306,7 @@ export function hydrateCard(
     'construction label',
   );
   const districts = referenceLabels(file, attributes.districts, districtId, 'district');
+  const typeLabels = referenceLabels(file, attributes.types, type, 'type');
   const architectsByLanguage = { ru: [], en: [], ka: [], uk: [] };
   for (const architectId of architectIds) {
     const labels = referenceLabels(file, attributes.architects, architectId, 'architect');
@@ -323,6 +325,8 @@ export function hydrateCard(
     district: districts.ru,
     districts,
     districtId,
+    type,
+    typeLabels,
     minYear: card.minYear,
     maxYear: card.maxYear,
     yearLabel: yearLabels.ru,

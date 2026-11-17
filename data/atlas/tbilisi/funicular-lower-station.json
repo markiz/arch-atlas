@@ -34,6 +34,7 @@
   ],
   "architectIds": [],
   "districtId": "mtatsminda",
+  "type": "infrastructure",
   "coordinates": [
     44.7918488,
     41.6952453
