@@ -101,9 +101,9 @@
   "googlePlaceId": "ChIJcXFgcd8MREARNUGQk6VrenE",
   "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=Davit%20Aghmashenebeli/Giorgi%20Mazniashvili%20Street&query_place_id=ChIJcXFgcd8MREARNUGQk6VrenE",
   "histories": {
-    "ru": "По описанию реестра дом построен в 1877 году (в структурном поле реестра стоит 1857). В нём размещался кадетский корпус, затем госпиталь; после советизации здание перестроили под жильё. Фасад сильно повреждён и требует срочной реабилитации.",
-    "en": "According to the registry description, the house was built in 1877 (the structured field gives 1857). It housed a cadet corps and later a hospital; after Sovietisation it was converted into housing. The façade is badly damaged and urgently needs rehabilitation.",
-    "ka": "რეესტრის აღწერით სახლი 1877 წელს აშენდა (სტრუქტურულ ველში 1857 წელია). აქ იუნკერთა კორპუსი, შემდეგ საავადმყოფო იყო; გასაბჭოების შემდეგ საცხოვრებლად გადააკეთეს. ფასადი ძლიერ დაზიანებულია და სასწრაფო რეაბილიტაციას საჭიროებს.",
-    "uk": "За описом реєстру будинок зведено 1877 року (у структурному полі стоїть 1857). Тут розміщувався кадетський корпус, згодом шпиталь; після радянізації будівлю перебудували під житло. Фасад сильно пошкоджений і потребує негайної реабілітації."
+    "ru": "По описанию реестра дом построен в 1877 году (в структурном поле реестра стоит 1857). В нём размещался кадетский корпус, затем госпиталь; после советизации здание перестроили под жильё.",
+    "en": "According to the registry description, the house was built in 1877 (the structured field gives 1857). It housed a cadet corps and later a hospital; after Sovietisation it was converted into housing.",
+    "ka": "რეესტრის აღწერით სახლი 1877 წელს აშენდა (სტრუქტურულ ველში 1857 წელია). აქ იუნკერთა კორპუსი, შემდეგ საავადმყოფო იყო; გასაბჭოების შემდეგ საცხოვრებლად გადააკეთეს.",
+    "uk": "За описом реєстру будинок зведено 1877 року (у структурному полі стоїть 1857). Тут розміщувався кадетський корпус, згодом шпиталь; після радянізації будівлю перебудували під житло."
   }
 }

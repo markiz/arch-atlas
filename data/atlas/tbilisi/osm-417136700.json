@@ -13,12 +13,6 @@
     "ka": "ბაქოს ქუჩა 4",
     "uk": "вулиця Баку, 4"
   },
-  "histories": {
-    "ru": "Начало XIX века, городской жилой дом. В ризалитной части первого этажа устроен туннель во двор, рядом — вход в подъезд. Дом держит фронт улицы Баку вместе с соседними корпусами.",
-    "en": "Early 19th century, an urban residential house. In the risalit part of the ground floor a tunnel into the courtyard is arranged, with the entrance to the stair hall beside it. The house holds the frontage of Baku Street together with the neighbouring blocks.",
-    "ka": "XIX საუკუნის დასაწყისი, საქალაქო საცხოვრებელი სახლი. პირველი სართულის რიზალიტურ ნაწილში ეზოში გასასვლელი გვირაბია მოწყობილი, გვერდით — სადარბაზოს შესასვლელი. სახლი ბაქოს ქუჩის ფრონტს მეზობელ კორპუსებთან ერთად ინარჩუნებს.",
-    "uk": "Початок XIX століття, міський житловий будинок. У ризалітній частині першого поверху влаштовано тунель у двір, поруч — вхід до під'їзду. Будинок тримає фронт вулиці Баку разом із сусідніми корпусами."
-  },
   "minYear": 1800,
   "maxYear": 1825,
   "yearLabelId": "early-19th-century",
