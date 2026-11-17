@@ -32,7 +32,9 @@
   "styleIds": [
     "soviet-modernism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "alexander-shimkevich"
+  ],
   "districtId": "mtatsminda",
   "type": "infrastructure",
   "coordinates": [

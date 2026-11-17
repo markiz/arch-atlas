@@ -32,7 +32,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "mikhail-ogandzhanov"
+  ],
   "districtId": "sololaki",
   "type": "residential",
   "coordinates": [

@@ -14,6 +14,12 @@
     "ka": "ბოტანიკურის ქუჩა 1",
     "uk": "Ботанічна вулиця, 1"
   },
+  "histories": {
+    "ru": "По данным реестра, лаборатория в Ботаническом саду построена предположительно в 1903–1904 годах, когда садом руководил Адольф Роллов. В это время в саду появились школа садовников, жилые дома для сотрудников, оранжерея и расширенное здание музея. Первоначальное назначение здания неизвестно: на советских планах его подписывали то как научные отделы и лаборатории, то как гостиницу. Сегодня здесь размещаются отдел садоводства и ландшафтного дизайна, охрана и касса.",
+    "en": "According to the heritage register, the laboratory in the Botanical Garden was probably built in 1903–1904, when Adolf Rollow directed the garden. At that time the garden gained a school for gardeners, staff housing, an orangery and an enlarged museum building. The original purpose of this building is unknown: Soviet-era plans label it either as scientific departments and laboratories or as a hotel. Today it houses the gardening and landscape design department, security and the ticket office.",
+    "ka": "რეესტრის მიხედვით, ბოტანიკურ ბაღში მდებარე ლაბორატორია, სავარაუდოდ, 1903–1904 წლებში, ადოლფ როლოვის ხელმძღვანელობის დროს აშენდა. ამ პერიოდში ბაღში მებაღეთა სკოლა, თანამშრომლების საცხოვრებელი სახლები, ორანჟერეა და გაფართოებული მუზეუმის შენობა გაჩნდა. ნაგებობის თავდაპირველი დანიშნულება უცნობია: საბჭოთა პერიოდის გეგმებზე ის ხან სამეცნიერო განყოფილებებად და ლაბორატორიებად, ხან სასტუმროდაა მოხსენიებული. დღეს აქ მებაღეობისა და ლანდშაფტური დიზაინის განყოფილება, დაცვა და სალაროა განთავსებული.",
+    "uk": "За даними реєстру, лабораторію в Ботанічному саду, ймовірно, зведено у 1903–1904 роках, коли садом керував Адольф Роллов. Тоді в саду з’явилися школа садівників, житло для працівників, оранжерея та розширена будівля музею. Початкове призначення споруди невідоме: на радянських планах її підписували то як наукові відділи й лабораторії, то як готель. Нині тут розміщені відділ садівництва й ландшафтного дизайну, охорона та каса."
+  },
   "minYear": 1900,
   "maxYear": 1910,
   "yearLabelId": "early-20th-century",
@@ -86,7 +92,7 @@
     "15ca8ce35c198608c2a0bdca858db9a27dea7cece5170d5dbf472375b28a9258"
   ],
   "source": "https://www.openstreetmap.org/way/1276202716",
-  "otherSource": "https://www.wikidata.org/wiki/Q42628170",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=3640",
   "googlePlaceId": "ChIJUbOzfPYMREAR8yh5gMYVBEE",
   "googlePlaceIdSource": "https://www.google.com/maps/search/?api=1&query=41.6871297%2C44.8092177&query_place_id=ChIJUbOzfPYMREAR8yh5gMYVBEE"
 }

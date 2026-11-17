@@ -14,13 +14,21 @@
     "ka": "ილია ჭავჭავაძის გამზირი, 3",
     "uk": "проспект Іллі Чавчавадзе, 3"
   },
+  "histories": {
+    "ru": "Второй корпус Тбилисского государственного университета построен в 1937 году по проекту архитектора Михеила Шавишвили. В нём размещался физико-химический факультет; корпус входит в университетский комплекс на проспекте Чавчавадзе.",
+    "en": "Building 2 of Tbilisi State University was constructed in 1937 to a design by architect Mikheil Shavishvili. It housed the university’s Faculty of Physics and Chemistry and forms part of the university complex on Chavchavadze Avenue.",
+    "ka": "თბილისის სახელმწიფო უნივერსიტეტის II კორპუსი 1937 წელს არქიტექტორ მიხეილ შავიშვილის პროექტით აშენდა. მასში უნივერსიტეტის ფიზიკა-ქიმიის ფაკულტეტი იყო განთავსებული; კორპუსი ჭავჭავაძის გამზირზე მდებარე საუნივერსიტეტო კომპლექსის ნაწილია.",
+    "uk": "Другий корпус Тбіліського державного університету зведено 1937 року за проєктом архітектора Міхеїла Шавішвілі. У ньому розміщувався фізико-хімічний факультет; корпус входить до університетського комплексу на проспекті Чавчавадзе."
+  },
   "minYear": 1937,
   "maxYear": 1937,
   "yearLabelId": "year-1937",
   "styleIds": [
     "soviet-neoclassicism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "mikheil-shavishvili"
+  ],
   "districtId": "vake",
   "type": "educational",
   "coordinates": [

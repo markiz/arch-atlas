@@ -32,7 +32,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "mikheil-shavishvili"
+  ],
   "districtId": "vake",
   "type": "educational",
   "coordinates": [

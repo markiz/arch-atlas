@@ -31,7 +31,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "gabriel-ter-mikelov"
+  ],
   "districtId": "sololaki",
   "type": "residential",
   "coordinates": [

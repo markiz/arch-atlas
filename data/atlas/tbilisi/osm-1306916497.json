@@ -25,7 +25,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "t-porfirov"
+  ],
   "districtId": "kala",
   "type": "residential",
   "coordinates": [

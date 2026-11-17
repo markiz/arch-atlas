@@ -25,7 +25,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "alexander-shimkevich"
+  ],
   "districtId": "didube",
   "type": "residential",
   "coordinates": [

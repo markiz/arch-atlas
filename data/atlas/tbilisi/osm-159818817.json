@@ -14,6 +14,12 @@
     "ka": "ვუკოლ ბერიძის ქუჩა 6",
     "uk": "вулиця Вукола Берідзе, 6"
   },
+  "histories": {
+    "ru": "Реестр датирует здание на улице Вукола Беридзе, 6 1849 годом и указывает его как здание Министерства иностранных дел Грузии.",
+    "en": "The heritage register dates the building at 6 Vukol Beridze Street to 1849 and identifies it as the building of the Ministry of Foreign Affairs of Georgia.",
+    "ka": "რეესტრი ვუკოლ ბერიძის ქუჩა 6-ში მდებარე შენობას 1849 წლით ათარიღებს და საქართველოს საგარეო საქმეთა სამინისტროს შენობად მიუთითებს.",
+    "uk": "Реєстр датує будівлю на вулиці Вукола Берідзе, 6 1849 роком і зазначає її як будівлю Міністерства закордонних справ Грузії."
+  },
   "minYear": 1849,
   "maxYear": 1849,
   "yearLabelId": "year-1849",
@@ -109,5 +115,6 @@
     "6dd86da59faef9d6f66184e3c5ac9a80722b2f7173e7f680043beba118c353ce",
     "bc5d46a58aaba820e694931c66b21095cc74cc2d7e06affaaa26ac0fff034058"
   ],
-  "source": "https://www.openstreetmap.org/way/159818817"
+  "source": "https://www.openstreetmap.org/way/159818817",
+  "otherSource": "https://memkvidreoba.gov.ge/objects/immovable/immovableObject?id=4291"
 }

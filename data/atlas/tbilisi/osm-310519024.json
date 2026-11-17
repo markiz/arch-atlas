@@ -25,7 +25,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "albert-salzmann"
+  ],
   "districtId": "sololaki",
   "type": "residential",
   "coordinates": [
