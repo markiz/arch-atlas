@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "revision": "a00cac0e0e160e47",
+  "revision": "71cb216cea90a75b",
   "files": [
     {
       "path": "buildings.json",
-      "size": 5828147,
-      "sha256": "a1b3af03d1d4e88cb2381876309e69e27fb53e8d057ac303fdd2d3d38435374a"
+      "size": 3979240,
+      "sha256": "1edb60ecd84d917556322f0a0b75e008db313e886554d993fd68d2557033b593"
     },
     {
       "path": "landmarks.json",
