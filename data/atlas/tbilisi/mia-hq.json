@@ -1,0 +1,132 @@
+{
+  "id": "mia-hq",
+  "osmId": "way/78156670",
+  "names": {
+    "ru": "Министерство внутренних дел Грузии",
+    "en": "Ministry of Internal Affairs of Georgia",
+    "ka": "საქართველოს შინაგან საქმეთა სამინისტრო",
+    "uk": "Міністерство внутрішніх справ Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Гия Гулуа, 10",
+    "en": "10 Gia Gulua Street",
+    "ka": "გია გულუას ქუჩა 10",
+    "uk": "вулиця Гія Гулуа, 10"
+  },
+  "descriptions": {
+    "ru": "Штаб-квартира Министерства внутренних дел Грузии построена в конце 1970-х годов по проекту Шоты Кавлашвили и Шоты Гванцеладзе. Это один из крупных административных комплексов позднесоветского Тбилиси.",
+    "en": "The headquarters of the Ministry of Internal Affairs of Georgia was built in the late 1970s to a design by Shota Kavlashvili and Shota Gvantseladze. It is one of the large administrative complexes of late Soviet Tbilisi.",
+    "ka": "საქართველოს შინაგან საქმეთა სამინისტროს შტაბ-ბინა 1970-იანი წლების ბოლოს აშენდა შოთა ყავლაშვილისა და შოთა გვანცელაძის პროექტით. ეს გვიანი საბჭოთა თბილისის ერთ-ერთი დიდი ადმინისტრაციული კომპლექსია.",
+    "uk": "Штаб-квартиру Міністерства внутрішніх справ Грузії збудували наприкінці 1970-х років за проєктом Шоти Кавлашвілі та Шоти Гванцеладзе. Це один із великих адміністративних комплексів пізньорадянського Тбілісі."
+  },
+  "histories": {
+    "ru": "Здание построено в конце 1970-х годов как штаб-квартира Министерства внутренних дел Грузинской ССР. После восстановления независимости Грузии в нём размещается Министерство внутренних дел Грузии.",
+    "en": "The building was constructed in the late 1970s as the headquarters of the Ministry of Internal Affairs of the Georgian SSR. After Georgia regained independence, it has housed the Ministry of Internal Affairs of Georgia.",
+    "ka": "შენობა 1970-იანი წლების ბოლოს აშენდა საქართველოს სსრ შინაგან საქმეთა სამინისტროს შტაბ-ბინად. საქართველოს დამოუკიდებლობის აღდგენის შემდეგ მასში საქართველოს შინაგან საქმეთა სამინისტროა განთავსებული.",
+    "uk": "Будівлю споруджено наприкінці 1970-х років як штаб-квартиру Міністерства внутрішніх справ Грузинської РСР. Після відновлення незалежності Грузії в ній розміщується Міністерство внутрішніх справ Грузії."
+  },
+  "minYear": 1970,
+  "maxYear": 1979,
+  "yearLabelId": "period-1970-1979",
+  "styleIds": [
+    "soviet-modernism"
+  ],
+  "architectIds": [
+    "shota-kavlashvili",
+    "shota-gvantseladze"
+  ],
+  "districtId": "ortachala",
+  "type": "government",
+  "coordinates": [
+    44.828742,
+    41.677004
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.829193,
+          41.677168
+        ],
+        [
+          44.829084,
+          41.677108
+        ],
+        [
+          44.828872,
+          41.676992
+        ],
+        [
+          44.829113,
+          41.676747
+        ],
+        [
+          44.829173,
+          41.676686
+        ],
+        [
+          44.829019,
+          41.676601
+        ],
+        [
+          44.828711,
+          41.676915
+        ],
+        [
+          44.828583,
+          41.676845
+        ],
+        [
+          44.828424,
+          41.676758
+        ],
+        [
+          44.828398,
+          41.676743
+        ],
+        [
+          44.828299,
+          41.676844
+        ],
+        [
+          44.828594,
+          41.677005
+        ],
+        [
+          44.828293,
+          41.677311
+        ],
+        [
+          44.828447,
+          41.677395
+        ],
+        [
+          44.828748,
+          41.677089
+        ],
+        [
+          44.829088,
+          41.677276
+        ],
+        [
+          44.829193,
+          41.677168
+        ]
+      ]
+    ]
+  },
+  "geometryRole": "above_ground",
+  "geometryQuality": "Контур OpenStreetMap, приведённый к ортофото локальной поправкой около 30 м: в этом квартале контуры OSM систематически смещены. Форма контура взята из OSM, положение сверено по снимку Bing.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline adjusted to the orthophoto by a local correction of about 30 m: OSM outlines in this block are systematically offset. The shape comes from OSM, the position was checked against Bing imagery.",
+    "ka": "OpenStreetMap-ის კონტური ორთოფოტოსთან ~30 მ-ით ლოკალური შესწორებითაა მოყვანილი: ამ კვარტალში OSM-ის კონტურები სისტემატურადაა გადაწეული. ფორმა OSM-იდანაა, მდებარეობა Bing-ის სურათით შემოწმდა.",
+    "uk": "Контур OpenStreetMap приведено до ортофото локальною поправкою близько 30 м: у цьому кварталі контури OSM систематично зміщені. Форму взято з OSM, положення звірено зі знімком Bing."
+  },
+  "photos": [
+    "76dbe84165f7326b6b129eda402db71219fccd833313ddd8ed98492e1a458aa5"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Shota_Kavlashvili",
+  "otherSource": "https://www.google.com/maps/d/viewer?mid=1h7Gon_pwYMQGIdnvsi9rTjTJyKw"
+}

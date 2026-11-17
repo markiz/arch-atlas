@@ -1,0 +1,92 @@
+{
+  "id": "national-science-library",
+  "osmId": "way/58073770",
+  "names": {
+    "ru": "Национальная научная библиотека Грузии",
+    "en": "National Scientific Library of Georgia",
+    "ka": "საქართველოს ეროვნული სამეცნიერო ბიბლიოთეკა",
+    "uk": "Національна наукова бібліотека Грузії"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Мераба Алексидзе, 1/4",
+    "en": "1/4 Merab Aleksidze Street",
+    "ka": "მერაბ ალექსიძის ქუჩა 1/4",
+    "uk": "вулиця Мераба Алексидзе, 1/4"
+  },
+  "descriptions": {
+    "ru": "Национальная научная библиотека Грузии построена в 1970 году в Академгородке по проекту Гиорги Лежавы и Исаака Либермана. В интерьере находится мозаика «Прометей» Нугзара Медзмариашвили.",
+    "en": "The National Scientific Library of Georgia was built in 1970 in the Academic Town to a design by Giorgi Lezhava and Isaak Liberman. Its interior features the Prometheus mosaic by Nugzar Medzmariashvili.",
+    "ka": "საქართველოს ეროვნული სამეცნიერო ბიბლიოთეკა 1970 წელს აკადემიურ ქალაქში აშენდა გიორგი ლეჟავასა და ისააკ ლიბერმანის პროექტით. ინტერიერში ნუგზარ მეძმარიაშვილის მოზაიკა „პრომეთე“აა.",
+    "uk": "Національну наукову бібліотеку Грузії збудували 1970 року в Академічному містечку за проєктом Гіоргі Лежави та Ісаака Лібермана. В інтер'єрі є мозаїка «Прометей» Нугзара Медзмаріашвілі."
+  },
+  "histories": {
+    "ru": "Библиотека основана в 1941 году при Академии наук Грузинской ССР. Современное здание в Академгородке открылось в 1970 году.",
+    "en": "The library was founded in 1941 alongside the Academy of Sciences of the Georgian SSR. The modern building in the Academic Town opened in 1970.",
+    "ka": "ბიბლიოთეკა 1941 წელს დაარსდა საქართველოს სსრ მეცნიერებათა აკადემიასთან. აკადემიურ ქალაქში თანამედროვე შენობა 1970 წელს გაიხსნა.",
+    "uk": "Бібліотеку заснували 1941 року при Академії наук Грузинської РСР. Сучасна будівля в Академічному містечку відкрилася 1970 року."
+  },
+  "minYear": 1970,
+  "maxYear": 1970,
+  "yearLabelId": "year-1970",
+  "styleIds": [
+    "soviet-modernism"
+  ],
+  "architectIds": [
+    "g-lezhava",
+    "isaak-liberman"
+  ],
+  "districtId": "saburtalo",
+  "type": "cultural",
+  "coordinates": [
+    44.782896,
+    41.715747
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.783017,
+          41.71612
+        ],
+        [
+          44.783331,
+          41.715953
+        ],
+        [
+          44.782776,
+          41.715374
+        ],
+        [
+          44.782462,
+          41.715542
+        ],
+        [
+          44.782677,
+          41.715766
+        ],
+        [
+          44.782853,
+          41.715949
+        ],
+        [
+          44.783017,
+          41.71612
+        ]
+      ]
+    ]
+  },
+  "geometryRole": "above_ground",
+  "geometryQuality": "Контур OpenStreetMap; основной корпус. В OSM адрес — 2-й переулок Мераба Алексидзе, 3.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; main building. In OSM the address is 3 Merab Aleksidze 2nd Lane.",
+    "ka": "OpenStreetMap-ის კონტური; მთავარი კორპუსი. OSM-ში მისამართია მერაბ ალექსიძის II შესახვევი 3.",
+    "uk": "Контур OpenStreetMap; головний корпус. В OSM адреса — 2-й провулок Мераба Алексидзе, 3."
+  },
+  "photos": [
+    "75a5b27b7164c39bc4ad29d7eb8afe9deb7557c88fc8971ce960cb459326acbc"
+  ],
+  "source": "http://bizzz.media/en/places/nacionalnaya-nauchnaya-biblioteka/",
+  "otherSource": "https://www.google.com/maps/d/viewer?mid=1h7Gon_pwYMQGIdnvsi9rTjTJyKw"
+}

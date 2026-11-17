@@ -1,0 +1,123 @@
+{
+  "id": "central-bus-station",
+  "osmId": "way/62681922",
+  "names": {
+    "ru": "Тбилисский центральный автовокзал",
+    "en": "Tbilisi Central Bus Station",
+    "ka": "თბილისის ცენტრალური ავტოსადგური",
+    "uk": "Тбіліський центральний автовокзал"
+  },
+  "originalLanguage": "ka",
+  "addresses": {
+    "ru": "улица Димитрия Гулиа, 1",
+    "en": "1 Dimitri Gulia Street",
+    "ka": "დიმიტრი გულიას ქუჩა 1",
+    "uk": "вулиця Димитрія Гуліа, 1"
+  },
+  "descriptions": {
+    "ru": "Автовокзал в Ортачале построен в 1964–1973 годах по проекту Шоты Кавлашвили, Рамаза Кикнадзе и Владимира Куртишвили. Интерьер украшает мозаика Зураба Церетели.",
+    "en": "The bus station in Ortachala was built in 1964–1973 to a design by Shota Kavlashvili, Ramaz Kiknadze and Vladimir Kurtishvili. Its interior features a mosaic by Zurab Tsereteli.",
+    "ka": "ორთაჭალის ავტოსადგური 1964–1973 წლებში აშენდა შოთა ყავლაშვილის, რამაზ კიკნაძისა და ვლადიმერ კურტიშვილის პროექტით. ინტერიერს ზურაბ წერეთლის მოზაიკა ამშვენებს.",
+    "uk": "Автовокзал в Ортачалі збудували в 1964–1973 роках за проєктом Шоти Кавлашвілі, Рамаза Кікнадзе та Володимира Куртишвілі. Інтер'єр прикрашає мозаїка Зураба Церетелі."
+  },
+  "histories": {
+    "ru": "Строительство автовокзала в Ортачале велось с 1964 по 1973 год. Комплекс входит в транспортный узел на правом берегу Куры.",
+    "en": "The bus station in Ortachala was built between 1964 and 1973. The complex is part of the transport hub on the right bank of the Kura River.",
+    "ka": "ორთაჭალის ავტოსადგურის მშენებლობა 1964–1973 წლებში მიმდინარეობდა. კომპლექსი მტკვრის მარჯვენა ნაპირის სატრანსპორტო კვანძის ნაწილია.",
+    "uk": "Будівництво автовокзалу в Ортачалі тривало з 1964 по 1973 рік. Комплекс входить до транспортного вузла на правому березі Кури."
+  },
+  "minYear": 1964,
+  "maxYear": 1973,
+  "yearLabelId": "period-1964-1973",
+  "styleIds": [
+    "soviet-modernism"
+  ],
+  "architectIds": [
+    "shota-kavlashvili",
+    "ramaz-kiknadze",
+    "vladimir-kurtishvili"
+  ],
+  "districtId": "ortachala",
+  "type": "infrastructure",
+  "coordinates": [
+    44.834723,
+    41.675098
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          44.834006,
+          41.675117
+        ],
+        [
+          44.834292,
+          41.675156
+        ],
+        [
+          44.834423,
+          41.675174
+        ],
+        [
+          44.83453,
+          41.675189
+        ],
+        [
+          44.835183,
+          41.675279
+        ],
+        [
+          44.835384,
+          41.675307
+        ],
+        [
+          44.83544,
+          41.675079
+        ],
+        [
+          44.834583,
+          41.674961
+        ],
+        [
+          44.834539,
+          41.674954
+        ],
+        [
+          44.834479,
+          41.674946
+        ],
+        [
+          44.834383,
+          41.674933
+        ],
+        [
+          44.834347,
+          41.674928
+        ],
+        [
+          44.834062,
+          41.674889
+        ],
+        [
+          44.834006,
+          41.675117
+        ]
+      ]
+    ]
+  },
+  "geometryRole": "above_ground",
+  "geometryQuality": "Контур OpenStreetMap; имя и адрес совпадают с источником.",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline; the name and address match the source.",
+    "ka": "OpenStreetMap-ის კონტური; სახელწოდება და მისამართი ემთხვევა წყაროს.",
+    "uk": "Контур OpenStreetMap; назва й адреса збігаються з джерелом."
+  },
+  "photos": [
+    "bd06ab7bf116cc9d038863b173623b8566ad4473adba170a86a96046bcccf7bc",
+    "b4af43e426aa4df804064c7168bc498d7a5b9c66daae779fa52589c413095a13",
+    "d098ffab44298034da04a4e8b6defa1e8139055350b89bb0c9b8b6ff58811264"
+  ],
+  "source": "https://taa.net.ge/en/archive-geo/tbilisi-central-bus-station/",
+  "otherSource": "https://www.openstreetmap.org/way/62681922"
+}
