@@ -46,6 +46,8 @@ export interface Photo {
   descriptions?: Record<'ru' | 'en' | 'ka' | 'uk', string>;
   sourceTags?: string[];
   visualTags?: string[];
+  /** Documentary tags; `stamp` marks postage-stamp scans. */
+  tags?: string[];
 }
 export interface Building {
   id: string;

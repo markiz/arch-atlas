@@ -148,7 +148,9 @@ Flickr, Wikimedia и музеи и не требует ключа. При 429 н
 2. скачать до 1600 px, конвертировать в WebP q82;
 3. SHA-256 содержимого → `data/photos/<city>/<sha>.webp`;
 4. sidecar: `author`, `license`, `licenseUrl`, `source`, `modifications`, `width`,
-   `height`, `rating`, `visualTags`;
+   `height`, `rating`, `visualTags`; необязательный `tags` — служебные пометки.
+   Скан почтовой марки получает `tags: ["stamp"]`: такие кадры всегда видны в
+   галерее независимо от рейтинга и идут после обычных фотографий;
 5. добавить SHA в `photos` карточки (не более трёх лучших; слабые не вытесняют
    сильные);
 6. `python3 scripts/rate-photos.py`, `npm run check`;

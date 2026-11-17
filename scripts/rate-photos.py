@@ -322,7 +322,10 @@ def rate_photo(
 ) -> tuple[int, dict[str, Any]]:
     width = metadata.get('width')
     height = metadata.get('height')
-    tags_value = metadata.get('visualTags')
+    tags_value = metadata.get('visualTags', [])
+    if tags_value is None:
+        tags_value = []
+    photo_tags = metadata.get('tags') or []
     if not isinstance(width, int) or isinstance(width, bool) or width <= 0:
         raise ValueError('width must be a positive integer')
     if not isinstance(height, int) or isinstance(height, bool) or height <= 0:
@@ -330,6 +333,8 @@ def rate_photo(
     if not isinstance(tags_value, list) or not all(
         isinstance(tag, str) and tag.strip() for tag in tags_value
     ):
+        raise ValueError('visualTags must be an array of strings')
+    if not tags_value and not (isinstance(photo_tags, list) and 'stamp' in photo_tags):
         raise ValueError('visualTags must be a non-empty array of strings')
 
     tags = set(tags_value)

@@ -30,7 +30,7 @@ const GEOMETRY_ROLES = new Set([
 const PHOTO_ID_RE = /^[a-f0-9]{64}$/;
 const PHOTO_METADATA_FIELDS = ['author', 'license', 'licenseUrl', 'source', 'modifications'];
 const PHOTO_OPTIONAL_FIELDS = ['descriptions', 'rating'];
-const PHOTO_TAG_FIELDS = ['sourceTags', 'visualTags'];
+const PHOTO_TAG_FIELDS = ['sourceTags', 'visualTags', 'tags'];
 const PHOTO_DIMENSION_FIELDS = ['width', 'height'];
 
 const silent = { write() {} };

@@ -873,6 +873,7 @@ function Inspector({
                         <img
                           src={preview}
                           alt={`${name}, ${t('фотография ')}${photoIndex + 1}`}
+                          className={credits?.tags?.includes('stamp') ? 'stamp-photo' : undefined}
                           draggable={false}
                         />
                       </div>
@@ -903,6 +904,9 @@ function Inspector({
                     {String(photoIndex + 1).padStart(2, '0')} /{' '}
                     {String(images.length).padStart(2, '0')}
                   </span>
+                  {credits?.tags?.includes('stamp') && (
+                    <span className="photo-stamp-badge">{t('МАРКА')}</span>
+                  )}
                   {photos.phase === 'preview' && (
                     <span className="photo-loading-note">{t('Галерея загружается…')}</span>
                   )}

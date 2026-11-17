@@ -541,6 +541,23 @@ a {
   color: #fff;
   pointer-events: none;
 }
+.photo-wrap img.stamp-photo {
+  object-fit: contain;
+  background: #f4f0e4;
+}
+.photo-stamp-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: #f1e7d0e8;
+  border: 1px solid #c9b98f;
+  padding: 5px 8px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #5d4a22;
+  pointer-events: none;
+}
 .inspect-body {
   padding: 21px 24px 26px;
 }

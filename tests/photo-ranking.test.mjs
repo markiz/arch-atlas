@@ -54,3 +54,42 @@ test('empty galleries stay empty', () => {
   assert.equal(HIGH_RATING, 50);
   assert.equal(MIN_HIGH_PHOTOS, 3);
 });
+
+test('stamps stay visible and go after real photos', () => {
+  const input = [
+    photo('low', 10),
+    { id: 'stamp', rating: 99, tags: ['stamp'] },
+    photo('a', 80),
+    photo('b', 70),
+    photo('c', 60),
+  ];
+  assert.deepEqual(
+    rankPhotos(input).map((item) => item.id),
+    ['a', 'b', 'c', 'stamp'],
+  );
+});
+
+test('stamps do not trigger hiding of low-rated real photos', () => {
+  const input = [
+    photo('a', 80),
+    photo('b', 70),
+    { id: 's1', rating: 90, tags: ['stamp'] },
+    { id: 's2', rating: 90, tags: ['stamp'] },
+    photo('low', 20),
+  ];
+  assert.deepEqual(
+    rankPhotos(input).map((item) => item.id),
+    ['a', 'b', 'low', 's1', 's2'],
+  );
+});
+
+test('a stamp-only gallery is returned untouched', () => {
+  const input = [
+    { id: 's1', rating: 10, tags: ['stamp'] },
+    { id: 's2', rating: 90, tags: ['stamp'] },
+  ];
+  assert.deepEqual(
+    rankPhotos(input).map((item) => item.id),
+    ['s1', 's2'],
+  );
+});

@@ -284,7 +284,7 @@ for (const b of data) {
       Number.isInteger(p.rating) && p.rating >= 0 && p.rating <= 100,
       `${b.id}: photo.rating must be an integer from 0 to 100`,
     );
-    for (const k of ['sourceTags', 'visualTags'])
+    for (const k of ['sourceTags', 'visualTags', 'tags'])
       if (p[k] !== undefined)
         assert(
           Array.isArray(p[k]) &&
@@ -331,7 +331,7 @@ for (const b of data) {
       for (const k of ['width', 'height'])
         assert(metadata[k] === p[k], `${b.id}: photo metadata ${k} differs from sidecar`);
       assert(metadata.rating === p.rating, `${b.id}: photo metadata rating differs from sidecar`);
-      for (const k of ['sourceTags', 'visualTags'])
+      for (const k of ['sourceTags', 'visualTags', 'tags'])
         assert(
           JSON.stringify(metadata[k]) === JSON.stringify(p[k]),
           `${b.id}: photo metadata ${k} differs from sidecar`,

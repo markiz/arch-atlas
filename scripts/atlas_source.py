@@ -28,7 +28,7 @@ CARDS_DIR = ROOT / 'data/cards'
 PHOTO_ID_RE = re.compile(r'^[0-9a-f]{64}$')
 PHOTO_METADATA_FIELDS = ('author', 'license', 'licenseUrl', 'source', 'modifications')
 PHOTO_OPTIONAL_FIELDS = ('descriptions', 'rating')
-PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags')
+PHOTO_TAG_FIELDS = ('sourceTags', 'visualTags', 'tags')
 PHOTO_DIMENSION_FIELDS = ('width', 'height')
 _PHOTO_LOCK = threading.Lock()
 
