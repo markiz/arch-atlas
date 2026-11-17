@@ -91,4 +91,6 @@ export interface Filters {
   to: string;
   architect: string[];
   style: string[];
+  /** Hide cards without description and history. On by default. */
+  interestingOnly: boolean;
 }

@@ -18,7 +18,14 @@ import {
 import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
 
 type View = 'map' | 'catalog';
-const initialFilters: Filters = { query: '', from: '', to: '', architect: [], style: [] };
+const initialFilters: Filters = {
+  query: '',
+  from: '',
+  to: '',
+  architect: [],
+  style: [],
+  interestingOnly: true,
+};
 const base = import.meta.env.BASE_URL + 'atlas/';
 /** Cards per catalog page. Bounds how many photo bitmaps the grid loads. */
 const CATALOG_PAGE_SIZE = 60;
@@ -1456,6 +1463,16 @@ function AppContent({ data }: { data: Data }) {
                   selected={filters.style}
                   onToggle={(value) => toggleMultiFilter('style', value)}
                 />
+                <div className="interesting-filter">
+                  <label title={t('Без описания и истории')}>
+                    <input
+                      type="checkbox"
+                      checked={filters.interestingOnly}
+                      onChange={(e) => update('interestingOnly', e.target.checked)}
+                    />
+                    <span>{t('Только интересные')}</span>
+                  </label>
+                </div>
                 <button className="reset-filter" onClick={resetFilters}>
                   {t('Сбросить')}
                 </button>
@@ -1469,7 +1486,7 @@ function AppContent({ data }: { data: Data }) {
                     <div className="map-caption">
                       <span className="caption-dot" /> {t('ТБИЛИСИ, ГРУЗИЯ')}{' '}
                       <span className="caption-line" />{' '}
-                      {hasActiveFilters
+                      {filtered.length !== data.buildings.length
                         ? `${filtered.length}/${data.buildings.length}`
                         : data.buildings.length}{' '}
                       {t('ОБЪЕКТОВ')}
