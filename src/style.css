@@ -1205,6 +1205,7 @@ footer b {
   margin: 9px 0 7px;
   font-size: 8px;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   font-weight: 800;
   color: #91a092;
 }

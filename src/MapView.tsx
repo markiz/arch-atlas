@@ -387,7 +387,7 @@ export default function MapView({
           </button>
           {layersOpen && (
             <div id="map-layers-panel" className="map-layers-panel">
-              <p>{t('ОСНОВНАЯ КАРТА')}</p>
+              <p>{t('Основные')}</p>
               <label>
                 <input
                   type="checkbox"
@@ -395,6 +395,39 @@ export default function MapView({
                   onChange={(event) => setShowRoads(event.target.checked)}
                 />{' '}
                 {t('Улицы')}
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={detailedStreets}
+                  onChange={(event) => setDetailedStreets(event.target.checked)}
+                />{' '}
+                {t('Названия улиц')}
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={showGreen}
+                  onChange={(event) => setShowGreen(event.target.checked)}
+                />{' '}
+                {t('Парки и природные зоны')}
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={showWater}
+                  onChange={(event) => setShowWater(event.target.checked)}
+                />{' '}
+                {t('Реки и водоёмы')}
+              </label>
+              <p>{t('Дополнительные')}</p>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={showLandmarks}
+                  onChange={(event) => setShowLandmarks(event.target.checked)}
+                />{' '}
+                {t('Достопримечательности')}
               </label>
               <label aria-live="polite">
                 <input
@@ -410,39 +443,6 @@ export default function MapView({
                   {t('Не удалось загрузить силуэты зданий.')}
                 </small>
               )}
-              <label>
-                <input
-                  type="checkbox"
-                  checked={showWater}
-                  onChange={(event) => setShowWater(event.target.checked)}
-                />{' '}
-                {t('Реки и водоёмы')}
-              </label>
-              <p>{t('ДОПОЛНИТЕЛЬНЫЕ СЛОИ')}</p>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={detailedStreets}
-                  onChange={(event) => setDetailedStreets(event.target.checked)}
-                />{' '}
-                {t('Названия улиц')}
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={showLandmarks}
-                  onChange={(event) => setShowLandmarks(event.target.checked)}
-                />{' '}
-                {t('Достопримечательности')}
-              </label>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={showGreen}
-                  onChange={(event) => setShowGreen(event.target.checked)}
-                />{' '}
-                {t('Парки и природные зоны')}
-              </label>
             </div>
           )}
         </div>
