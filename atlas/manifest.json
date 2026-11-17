@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "revision": "d2c9e1d409a5bfe4",
+  "revision": "d4d8a645c6dad450",
   "files": [
     {
       "path": "buildings.json",
-      "size": 4110188,
-      "sha256": "487ed01f7b10e0f4cac5855ad0f2546dd89d6ade393b3b4eb3d3cd718040ad0a"
+      "size": 4118135,
+      "sha256": "119f9f99b860a5a498190d234a808e3fa04810dc9d039e99c4f73272d7a21b86"
     },
     {
       "path": "landmarks.json",
@@ -14,8 +14,8 @@
     },
     {
       "path": "basemap.geojson",
-      "size": 9780699,
-      "sha256": "39ae2e6d925e1e2ea4f323fad8240a9bc0ad3e960de75dbba12e3e825ff442fa"
+      "size": 9780521,
+      "sha256": "20daf9dfacc399831a9615c4b537499ad1ddd606775f12c6c0f2bf56758b952b"
     },
     {
       "path": "building-outlines.geojson",
@@ -763,6 +763,21 @@
       "sha256": "d68ad0444b15b83af0588fa3a3e771a1be128bd163b9e2d9306da2466519f51b"
     },
     {
+      "path": "photos/tbilisi/676cc9b1260562e817dbcb460e122212023c9a71db9b824d75ffd3a107e1c15b.webp",
+      "size": 11254,
+      "sha256": "676cc9b1260562e817dbcb460e122212023c9a71db9b824d75ffd3a107e1c15b"
+    },
+    {
+      "path": "thumbnails/tbilisi/676cc9b1260562e817dbcb460e122212023c9a71db9b824d75ffd3a107e1c15b.webp",
+      "size": 16450,
+      "sha256": "e32f1718073032fb78aa789113176d3e856261a45d3b3f9335c78f71141f5fde"
+    },
+    {
+      "path": "cards/tbilisi/676cc9b1260562e817dbcb460e122212023c9a71db9b824d75ffd3a107e1c15b.webp",
+      "size": 11254,
+      "sha256": "676cc9b1260562e817dbcb460e122212023c9a71db9b824d75ffd3a107e1c15b"
+    },
+    {
       "path": "photos/tbilisi/fb68e129acf98a58207e449f6402c35e09dfb9de23a4424bd25a0e8b40f83798.webp",
       "size": 95684,
       "sha256": "fb68e129acf98a58207e449f6402c35e09dfb9de23a4424bd25a0e8b40f83798"
@@ -941,6 +956,21 @@
       "path": "cards/tbilisi/24f9e8f63b3e6dfcb8094d42738249bffb037b3c0d9692c85acaee9343c05bbe.webp",
       "size": 18014,
       "sha256": "dc44446c4b7e0afa753c66653a2dca0c4788a3e565dbb15c4d808242c0756c0c"
+    },
+    {
+      "path": "photos/tbilisi/405258962e55be59104e720d37b229bd1349c62ca624c13457b341a4fa292b8a.webp",
+      "size": 14710,
+      "sha256": "405258962e55be59104e720d37b229bd1349c62ca624c13457b341a4fa292b8a"
+    },
+    {
+      "path": "thumbnails/tbilisi/405258962e55be59104e720d37b229bd1349c62ca624c13457b341a4fa292b8a.webp",
+      "size": 26070,
+      "sha256": "40cbca9f0449bcb9658bb9eafd5775c8d4b7459d651cd97e47dde4050d4b6b12"
+    },
+    {
+      "path": "cards/tbilisi/405258962e55be59104e720d37b229bd1349c62ca624c13457b341a4fa292b8a.webp",
+      "size": 14710,
+      "sha256": "405258962e55be59104e720d37b229bd1349c62ca624c13457b341a4fa292b8a"
     },
     {
       "path": "photos/tbilisi/8561168fa8d741ad4a67c1012652cf5cc5412b8084fa2ce3de01a9e3e7d55f3e.webp",
@@ -5353,6 +5383,21 @@
       "sha256": "5829310ccd913f638559e8370606ff96ce7f97dc0aa441baa81627d183a8538f"
     },
     {
+      "path": "photos/tbilisi/46cfa4722b2876eb1cfc3b6faa0ce930b7d409a9eb66e3d3e40c5d110604b818.webp",
+      "size": 14628,
+      "sha256": "46cfa4722b2876eb1cfc3b6faa0ce930b7d409a9eb66e3d3e40c5d110604b818"
+    },
+    {
+      "path": "thumbnails/tbilisi/46cfa4722b2876eb1cfc3b6faa0ce930b7d409a9eb66e3d3e40c5d110604b818.webp",
+      "size": 22252,
+      "sha256": "0efd2033fc1faab4198c40b90f9c816c1e7dcbaf2b18b30b7d0fe2cc88a606dc"
+    },
+    {
+      "path": "cards/tbilisi/46cfa4722b2876eb1cfc3b6faa0ce930b7d409a9eb66e3d3e40c5d110604b818.webp",
+      "size": 14628,
+      "sha256": "46cfa4722b2876eb1cfc3b6faa0ce930b7d409a9eb66e3d3e40c5d110604b818"
+    },
+    {
       "path": "photos/tbilisi/9afdfab2ae600091c561abde52ce42a2c3689705f12bee434723c7cb33e028f9.webp",
       "size": 270540,
       "sha256": "9afdfab2ae600091c561abde52ce42a2c3689705f12bee434723c7cb33e028f9"
@@ -6311,6 +6356,21 @@
       "path": "cards/tbilisi/aa5c2ec711887f786d443fa32a94509aa9e7236baa4308382730d7ce10ca772c.webp",
       "size": 18738,
       "sha256": "877af9ca4fddc0915d84a8f79d471ea543d034077765c8ad362de72db9f3bbd5"
+    },
+    {
+      "path": "photos/tbilisi/a15ab815db228cf131c0cbce6cc6799cd68d95b3ed87253278cafeff7d3f66c4.webp",
+      "size": 61034,
+      "sha256": "a15ab815db228cf131c0cbce6cc6799cd68d95b3ed87253278cafeff7d3f66c4"
+    },
+    {
+      "path": "thumbnails/tbilisi/a15ab815db228cf131c0cbce6cc6799cd68d95b3ed87253278cafeff7d3f66c4.webp",
+      "size": 52028,
+      "sha256": "64c91700e892ab763c3d08895bb38346727c11861a63c362516869779030f96e"
+    },
+    {
+      "path": "cards/tbilisi/a15ab815db228cf131c0cbce6cc6799cd68d95b3ed87253278cafeff7d3f66c4.webp",
+      "size": 15332,
+      "sha256": "3cad46a25057115211adccc325f9644c0775895190ac5ae3f78630994efeb045"
     },
     {
       "path": "photos/tbilisi/e67c53397eb512720860bff299f700e4475b28202021247fbf73ee44a6944009.webp",
@@ -13828,6 +13888,21 @@
       "sha256": "8a33ceac1815a26fbec9dec220cdea7bb1a92a39a629bcd02e7cf27b0246b692"
     },
     {
+      "path": "photos/tbilisi/ac1c7981669c3f57d5b8eee96f18fc6deeda711805668da6e65dd50b57536430.webp",
+      "size": 13300,
+      "sha256": "ac1c7981669c3f57d5b8eee96f18fc6deeda711805668da6e65dd50b57536430"
+    },
+    {
+      "path": "thumbnails/tbilisi/ac1c7981669c3f57d5b8eee96f18fc6deeda711805668da6e65dd50b57536430.webp",
+      "size": 24332,
+      "sha256": "2382ac5f53407465695558697d41d8a7ae79b4b55ece16eacbbed55900d41aeb"
+    },
+    {
+      "path": "cards/tbilisi/ac1c7981669c3f57d5b8eee96f18fc6deeda711805668da6e65dd50b57536430.webp",
+      "size": 13300,
+      "sha256": "ac1c7981669c3f57d5b8eee96f18fc6deeda711805668da6e65dd50b57536430"
+    },
+    {
       "path": "photos/tbilisi/cc3e8cc311d64389876a7c5943be043070448f7b8c3c37cb577d2857b1613565.webp",
       "size": 615954,
       "sha256": "cc3e8cc311d64389876a7c5943be043070448f7b8c3c37cb577d2857b1613565"
@@ -15433,6 +15508,21 @@
       "sha256": "608c34b2f50c5e75fe543cfab6f95dae971c1de25bafb89a4dd4ef25d5128018"
     },
     {
+      "path": "photos/tbilisi/782a5f612211067d11e3dc42fe0058683f0343d03399b6facab24b64fb1bbc67.webp",
+      "size": 15112,
+      "sha256": "782a5f612211067d11e3dc42fe0058683f0343d03399b6facab24b64fb1bbc67"
+    },
+    {
+      "path": "thumbnails/tbilisi/782a5f612211067d11e3dc42fe0058683f0343d03399b6facab24b64fb1bbc67.webp",
+      "size": 27574,
+      "sha256": "a5ca9589792818333c0dabe53fb14a6e97409bd475412383848b156fca5ff8cc"
+    },
+    {
+      "path": "cards/tbilisi/782a5f612211067d11e3dc42fe0058683f0343d03399b6facab24b64fb1bbc67.webp",
+      "size": 15112,
+      "sha256": "782a5f612211067d11e3dc42fe0058683f0343d03399b6facab24b64fb1bbc67"
+    },
+    {
       "path": "photos/tbilisi/d53a0463532d97dce58a8a87e389f8ed7f11f58dc86ff60be7473115416022d8.webp",
       "size": 54262,
       "sha256": "d53a0463532d97dce58a8a87e389f8ed7f11f58dc86ff60be7473115416022d8"
@@ -16288,6 +16378,36 @@
       "sha256": "56f75eceb734f24f0f9165db4271071f1cf3becd65bae570258b39df0a358d79"
     },
     {
+      "path": "photos/tbilisi/0d4b0076294757a375ebabd60d9ee518b7ebb86a900107c8c2b5b67251a3ab5b.webp",
+      "size": 12898,
+      "sha256": "0d4b0076294757a375ebabd60d9ee518b7ebb86a900107c8c2b5b67251a3ab5b"
+    },
+    {
+      "path": "thumbnails/tbilisi/0d4b0076294757a375ebabd60d9ee518b7ebb86a900107c8c2b5b67251a3ab5b.webp",
+      "size": 22680,
+      "sha256": "fce44e4c696556be3ee51a02e1abca17cc9d8c792096827b5d51fa1e05d8809b"
+    },
+    {
+      "path": "cards/tbilisi/0d4b0076294757a375ebabd60d9ee518b7ebb86a900107c8c2b5b67251a3ab5b.webp",
+      "size": 12898,
+      "sha256": "0d4b0076294757a375ebabd60d9ee518b7ebb86a900107c8c2b5b67251a3ab5b"
+    },
+    {
+      "path": "photos/tbilisi/a113a75ec7f82a2d5d52ef85fc8df3acd7129e623b858e483635e7fd27ccf2d3.webp",
+      "size": 82976,
+      "sha256": "a113a75ec7f82a2d5d52ef85fc8df3acd7129e623b858e483635e7fd27ccf2d3"
+    },
+    {
+      "path": "thumbnails/tbilisi/a113a75ec7f82a2d5d52ef85fc8df3acd7129e623b858e483635e7fd27ccf2d3.webp",
+      "size": 22038,
+      "sha256": "5a20b050e1b6a5533922aaaba413e4cf8b00f2aac643a3c6bef8f9b30949bfbc"
+    },
+    {
+      "path": "cards/tbilisi/a113a75ec7f82a2d5d52ef85fc8df3acd7129e623b858e483635e7fd27ccf2d3.webp",
+      "size": 23018,
+      "sha256": "93574390f0983fa8ba614d8cd05f0f1c07de6c887ac1d2486d35c9679054cbd6"
+    },
+    {
       "path": "photos/tbilisi/fa9955710bf5ffe05a27b904e8bd5bb873ac36f579b52216a937c28a3dd448e7.webp",
       "size": 208056,
       "sha256": "fa9955710bf5ffe05a27b904e8bd5bb873ac36f579b52216a937c28a3dd448e7"
@@ -16331,6 +16451,21 @@
       "path": "cards/tbilisi/8692f3a65c2b433d8d9eed98e226a2b4535414224b9e8c61931bd45289f843d9.webp",
       "size": 15878,
       "sha256": "cf65c8cf5da19ec580e589f6cbf79c6411cb5f3d0a8acc7bfb3091f61dc1ff76"
+    },
+    {
+      "path": "photos/tbilisi/c8e0dcd6a749b3da086cdf1c73ee4e670c9f1d120a7b1de06b8f11ad0184b5c0.webp",
+      "size": 10342,
+      "sha256": "c8e0dcd6a749b3da086cdf1c73ee4e670c9f1d120a7b1de06b8f11ad0184b5c0"
+    },
+    {
+      "path": "thumbnails/tbilisi/c8e0dcd6a749b3da086cdf1c73ee4e670c9f1d120a7b1de06b8f11ad0184b5c0.webp",
+      "size": 18998,
+      "sha256": "2fc7e35562a80cbd7374e2cb133579085308ca96d95c0bbc1341c5c94022e421"
+    },
+    {
+      "path": "cards/tbilisi/c8e0dcd6a749b3da086cdf1c73ee4e670c9f1d120a7b1de06b8f11ad0184b5c0.webp",
+      "size": 10342,
+      "sha256": "c8e0dcd6a749b3da086cdf1c73ee4e670c9f1d120a7b1de06b8f11ad0184b5c0"
     },
     {
       "path": "photos/tbilisi/976129302439455df8c8f772edbc0847f406781b03a9637aa82ef0b12f0b15ee.webp",
@@ -16526,6 +16661,36 @@
       "path": "cards/tbilisi/7faef3111229c73ca984879e312340f9d333b473ab8b0e09ed7b15bd2abf59c4.webp",
       "size": 23362,
       "sha256": "f6fed9624554f64769b2d13919743bc7f8968e1189a3296c977c4872e3fed05a"
+    },
+    {
+      "path": "photos/tbilisi/9f2e956a61cb5fc4a251e759aebe6bb7e335f383433156a182bb04b187ae6e8d.webp",
+      "size": 60102,
+      "sha256": "9f2e956a61cb5fc4a251e759aebe6bb7e335f383433156a182bb04b187ae6e8d"
+    },
+    {
+      "path": "thumbnails/tbilisi/9f2e956a61cb5fc4a251e759aebe6bb7e335f383433156a182bb04b187ae6e8d.webp",
+      "size": 68496,
+      "sha256": "73b2a83f4357afabca7a5bf0099c378b99dc530bd1a5c4298283b7b01a0713e0"
+    },
+    {
+      "path": "cards/tbilisi/9f2e956a61cb5fc4a251e759aebe6bb7e335f383433156a182bb04b187ae6e8d.webp",
+      "size": 28602,
+      "sha256": "b4ae1403d19ed13fabfd8fbc4cc1684180922ffe4fbb63c7cf1793f9b3c8e38e"
+    },
+    {
+      "path": "photos/tbilisi/202a8c2dcf2e12a5a06c5fb37e84acadd2ac6ef75becba451ae74fbe99a9989b.webp",
+      "size": 109788,
+      "sha256": "202a8c2dcf2e12a5a06c5fb37e84acadd2ac6ef75becba451ae74fbe99a9989b"
+    },
+    {
+      "path": "thumbnails/tbilisi/202a8c2dcf2e12a5a06c5fb37e84acadd2ac6ef75becba451ae74fbe99a9989b.webp",
+      "size": 37554,
+      "sha256": "6a4a77b52d752b88bd0441786995ccf403adb7a98c8ca351799331b1dc3ee9af"
+    },
+    {
+      "path": "cards/tbilisi/202a8c2dcf2e12a5a06c5fb37e84acadd2ac6ef75becba451ae74fbe99a9989b.webp",
+      "size": 15074,
+      "sha256": "579ea52d3dd0e39b6489c5f37f57b7d9e37f4f37870456860c9fbbdb08916efd"
     },
     {
       "path": "photos/tbilisi/f5db24dc742bad228adafdec72569e158221f56d79f70c7e36d9d23b6ceebfde.webp",
