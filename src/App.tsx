@@ -1189,14 +1189,16 @@ function AppContent({ data }: { data: Data }) {
   useEffect(() => {
     const p = new URLSearchParams();
     p.set('view', view);
-    if (selected) p.set('building', selected);
+    // A hidden card is closed for the reader, so its id leaves the address bar
+    // too; on phones the selection stays to keep the outline on the map.
+    if (selected && !inspectorHidden) p.set('building', selected);
     p.set('lang', language);
     const hash = '#' + p.toString();
     if (firstHash.current) {
       firstHash.current = false;
       if (location.hash !== hash) history.replaceState(null, '', hash);
     } else if (location.hash !== hash) history.pushState(null, '', hash);
-  }, [view, selected, language]);
+  }, [view, selected, language, inspectorHidden]);
   useEffect(() => {
     const pop = () => {
       const h = parseHash();
