@@ -71,7 +71,8 @@ type DragSession = {
   zoom: number;
   moved: boolean;
   pointerId: number;
-  onMarker: boolean;
+  /** Landmark marker under the finger at pointerdown, if any. */
+  marker: MarkerEntry | null;
 };
 type PinchSession = { startDistance: number; anchorWorld: Point; startZoom: number };
 type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks: number[] };
@@ -250,6 +251,10 @@ export class AtlasCanvasMap {
   private drag: DragSession | null = null;
   private pinch: PinchSession | null = null;
   private tooltipVisible = false;
+  /** Opened by a tap, so it stays until the next map interaction. */
+  private tooltipPinned = false;
+  /** Marker the tooltip belongs to; null for a building under the cursor. */
+  private tooltipMarker: MarkerEntry | null = null;
   private destroyed = false;
   private suppressClick = false;
   private tapClickGuard: {
@@ -319,6 +324,7 @@ export class AtlasCanvasMap {
       else if (roadClass === 'secondary') this.roadGroups.secondary.push(index);
       else this.roadGroups.minor.push(index);
     }
+    this.hideTooltip();
     this.markers = [];
     this.markersLayer.replaceChildren();
     for (const feature of this.baseFeatures) {
@@ -332,18 +338,22 @@ export class AtlasCanvasMap {
       element.tabIndex = -1;
       // Hover is handled by the marker, but pointerdown/move must bubble to the
       // map so that a pinch can start with one finger on a landmark icon.
+      // Touch has no hover: there a tap opens the tooltip from endPointer(),
+      // and the pointerleave that immediately follows the lift must not close
+      // it again. Keeping the mouse path separate also stops a touch from
+      // flashing the tooltip between pointerdown and pointerup.
       element.addEventListener('pointerenter', (event) => {
-        if (this.pointers.size) return;
+        if (event.pointerType === 'touch' || this.pointers.size) return;
         event.stopPropagation();
         this.showMarkerTooltip(feature);
       });
       element.addEventListener('pointermove', (event) => {
-        if (this.pointers.size) return;
+        if (event.pointerType === 'touch' || this.pointers.size) return;
         event.stopPropagation();
         this.showMarkerTooltip(feature);
       });
       element.addEventListener('pointerleave', () => {
-        if (!this.pointers.size) this.hideTooltip();
+        if (!this.pointers.size && !this.tooltipPinned) this.hideTooltip();
       });
       element.addEventListener('click', (event) => event.stopPropagation());
       this.markers.push({ feature, element, lat, lng });
@@ -413,7 +423,10 @@ export class AtlasCanvasMap {
       previous.landmarks !== visibility.landmarks
     )
       this.renderBase();
-    if (previous.landmarks !== visibility.landmarks) this.repositionMarkers();
+    if (previous.landmarks !== visibility.landmarks) {
+      this.hideTooltip();
+      this.repositionMarkers();
+    }
     if (previous.landmarks !== visibility.landmarks) this.renderOverlay();
     if (previous.detailedStreets !== visibility.detailedStreets) {
       if (visibility.detailedStreets) this.renderLabels();
@@ -1405,6 +1418,22 @@ export class AtlasCanvasMap {
       marker.element.style.top = `${point.y - origin.y}px`;
       marker.element.style.transform = '';
     }
+    if (!this.tooltipVisible) return;
+    // A hover tooltip is anchored to the cursor, not to the map, so a camera
+    // move makes it stale. A marker tooltip follows its pin instead.
+    if (!this.tooltipMarker) {
+      this.hideTooltip();
+      return;
+    }
+    const rect = this.tooltipMarker.element.getBoundingClientRect(),
+      hostRect = this.container.getBoundingClientRect();
+    const x = rect.left - hostRect.left + rect.width / 2,
+      y = rect.top - hostRect.top - 6;
+    if (x < 0 || x > this.size.x || y < 0 || y > this.size.y) {
+      this.hideTooltip();
+      return;
+    }
+    this.positionTooltip(this.markerName(this.tooltipMarker.feature), x, y);
   }
 
   private updateMarkerLabels() {
@@ -1421,7 +1450,9 @@ export class AtlasCanvasMap {
     this.stopAnimation(false);
     this.stopWheel();
     this.cancelScheduledRender();
-    this.hideTooltip();
+    // A landmark tooltip travels with its marker through the animation; a
+    // cursor-anchored building tooltip would be left behind.
+    if (!this.tooltipMarker) this.hideTooltip();
     // Zooming out folds the target camera into the bitmap before the motion
     // starts: the preview pass is cheap, and the shrinking canvas then always
     // covers the viewport. Zooming in can simply scale the current level up.
@@ -1594,32 +1625,65 @@ export class AtlasCanvasMap {
     return { x: event.clientX - rect.left, y: event.clientY - rect.top };
   }
 
-  private showMarkerTooltip(feature: GeoJSON.Feature) {
+  private markerName(feature: GeoJSON.Feature): string {
+    return String(
+      (feature.properties?.names as Record<string, string> | undefined)?.[this.language] ||
+        feature.properties?.name ||
+        '',
+    );
+  }
+
+  private showMarkerTooltip(feature: GeoJSON.Feature, pinned = false) {
     const marker = this.markers.find((item) => item.feature === feature);
     if (!marker) return;
     const rect = marker.element.getBoundingClientRect(),
       hostRect = this.container.getBoundingClientRect();
-    this.showTooltip(
-      String(
-        (feature.properties?.names as Record<string, string> | undefined)?.[this.language] ||
-          feature.properties?.name ||
-          '',
-      ),
+    this.tooltipMarker = marker;
+    this.tooltipPinned = pinned;
+    this.positionTooltip(
+      this.markerName(feature),
       rect.left - hostRect.left + rect.width / 2,
       rect.top - hostRect.top - 6,
     );
   }
 
   private showTooltip(text: string, x: number, y: number) {
-    if (!text) return;
+    this.tooltipMarker = null;
+    this.tooltipPinned = false;
+    this.positionTooltip(text, x, y);
+  }
+
+  private positionTooltip(text: string, x: number, y: number) {
+    if (!text) {
+      this.hideTooltip();
+      return;
+    }
     this.tooltip.textContent = text;
-    this.tooltip.style.left = `${clamp(x, 50, Math.max(50, this.size.x - 50))}px`;
-    this.tooltip.style.top = `${Math.max(0, y)}px`;
     this.tooltip.style.display = 'block';
+    // The box is centred on the target and sits above it, so both edges have
+    // to be measured before clamping: landmark names are much wider than the
+    // old 50 px assumption, and a pin near the screen edge used to push the
+    // tooltip half off the map.
+    const margin = 8;
+    const width = this.tooltip.offsetWidth,
+      height = this.tooltip.offsetHeight,
+      half = width / 2;
+    const left =
+      width + margin * 2 >= this.size.x
+        ? this.size.x / 2
+        : clamp(x, margin + half, this.size.x - margin - half);
+    // Keep the little arrow pointing at the marker even when the box is pushed
+    // inwards by the screen edge.
+    const arrowX = clamp(x - (left - half), 10, Math.max(10, width - 10));
+    this.tooltip.style.left = `${left}px`;
+    this.tooltip.style.top = `${Math.max(height + margin, y)}px`;
+    this.tooltip.style.setProperty('--atlas-tooltip-anchor', `${arrowX}px`);
     this.tooltipVisible = true;
   }
 
   private hideTooltip() {
+    this.tooltipPinned = false;
+    this.tooltipMarker = null;
     if (!this.tooltipVisible) return;
     this.tooltip.style.display = 'none';
     this.tooltipVisible = false;
@@ -1654,9 +1718,13 @@ export class AtlasCanvasMap {
     if (this.pointers.size === 1) {
       const point = this.pointerPoint(event);
       const path = event.composedPath?.() ?? [];
-      const onMarker = path.some(
+      const markerElement = path.find(
         (item) => item instanceof Element && item.classList.contains('atlas-map-marker'),
       );
+      const marker =
+        markerElement instanceof Element
+          ? (this.markers.find((item) => item.element === markerElement) ?? null)
+          : null;
       this.drag = {
         startX: point.x,
         startY: point.y,
@@ -1664,7 +1732,7 @@ export class AtlasCanvasMap {
         zoom: this.view.zoom,
         moved: false,
         pointerId: event.pointerId,
-        onMarker,
+        marker,
       };
       this.pinch = null;
       this.container.style.cursor = 'grabbing';
@@ -1726,13 +1794,20 @@ export class AtlasCanvasMap {
     const session = this.drag;
     if (session && session.pointerId === event.pointerId) {
       this.drag = null;
-      if (!session.moved && !session.onMarker && !this.suppressClick && allowClick) {
-        const building = this.hitAt(point, event.pointerType);
-        if (building) {
-          this.onSelect(building.id);
-          this.suppressNextTapClick();
-          this.suppressClick = false;
-          return;
+      if (!session.moved && !this.suppressClick && allowClick) {
+        // A landmark pin has no card of its own, and on a phone there is no
+        // hover to reveal its name. A tap shows the same tooltip the mouse
+        // gets, and the next map interaction closes it.
+        if (session.marker) {
+          this.showMarkerTooltip(session.marker.feature, event.pointerType !== 'mouse');
+        } else {
+          const building = this.hitAt(point, event.pointerType);
+          if (building) {
+            this.onSelect(building.id);
+            this.suppressNextTapClick();
+            this.suppressClick = false;
+            return;
+          }
         }
       }
     }
@@ -1787,14 +1862,14 @@ export class AtlasCanvasMap {
       zoom: this.view.zoom,
       moved: false,
       pointerId,
-      onMarker: false,
+      marker: null,
     };
   }
 
   private handlePointerUp = (event: PointerEvent) => this.endPointer(event, true);
   private handlePointerCancel = (event: PointerEvent) => this.endPointer(event, false);
   private handlePointerLeave = () => {
-    if (!this.pointers.size) this.hideTooltip();
+    if (!this.pointers.size && !this.tooltipPinned) this.hideTooltip();
   };
   private handleBlur = () => this.container.classList.remove('keyboard-focus');
 
