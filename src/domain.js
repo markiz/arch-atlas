@@ -7,7 +7,7 @@ export const periods = [
     name: 'Средневековье',
     min: -Infinity,
     max: 1499,
-    color: '#8d765f',
+    color: '#8f4432',
   },
   {
     id: 'persian',
@@ -15,7 +15,7 @@ export const periods = [
     name: 'Позднее средневековье и персидский город',
     min: 1500,
     max: 1800,
-    color: '#a58a6d',
+    color: '#a85c37',
   },
   {
     id: 'imperial-early',
@@ -23,7 +23,7 @@ export const periods = [
     name: 'Раннеимперский',
     min: 1801,
     max: 1860,
-    color: '#bd8b6b',
+    color: '#bd783f',
   },
   {
     id: 'capitalist',
@@ -31,7 +31,7 @@ export const periods = [
     name: 'Капиталистический Тбилиси',
     min: 1861,
     max: 1899,
-    color: '#c8a35e',
+    color: '#c89a3e',
   },
   {
     id: 'imperial-late',
@@ -39,7 +39,7 @@ export const periods = [
     name: 'Позднеимперский и первая республика',
     min: 1900,
     max: 1920,
-    color: '#a5a759',
+    color: '#a8a845',
   },
   {
     id: 'early-soviet',
@@ -47,7 +47,7 @@ export const periods = [
     name: 'Раннесоветский (авангард)',
     min: 1921,
     max: 1932,
-    color: '#7f9a63',
+    color: '#7c9b4c',
   },
   {
     id: 'stalinist',
@@ -55,7 +55,7 @@ export const periods = [
     name: 'Сталинский',
     min: 1933,
     max: 1954,
-    color: '#6b9a7d',
+    color: '#4f8f72',
   },
   {
     id: 'post-stalin',
@@ -63,7 +63,7 @@ export const periods = [
     name: 'Постсталинское время',
     min: 1955,
     max: 1990,
-    color: '#5b93a1',
+    color: '#3f6f96',
   },
   {
     id: 'independence',
@@ -71,7 +71,7 @@ export const periods = [
     name: 'Независимая Грузия',
     min: 1991,
     max: Infinity,
-    color: '#7184ad',
+    color: '#2f4068',
   },
   { id: 'unknown', label: 'Неизвестно', name: null, min: null, max: null, color: '#999b91' },
 ];

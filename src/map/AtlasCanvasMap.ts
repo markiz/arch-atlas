@@ -872,10 +872,10 @@ export class AtlasCanvasMap {
         context.beginPath();
         addGeometry(geometry, context);
         if (geometry.type === 'Polygon' || geometry.type === 'MultiPolygon') {
-          context.fillStyle = 'rgba(183,208,206,.8)';
+          context.fillStyle = 'rgba(205,222,221,.8)';
           context.fill('evenodd');
         }
-        context.strokeStyle = '#9cbab9';
+        context.strokeStyle = '#c8dbd9';
         context.lineWidth = 3;
         context.stroke();
       }
