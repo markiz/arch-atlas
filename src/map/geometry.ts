@@ -143,6 +143,112 @@ export function pointInGeometry(
   return false;
 }
 
+const METERS_PER_DEGREE = (2 * Math.PI * 6378137) / 360;
+
+/**
+ * Convert a screen-space tap slop into a latitude-degree radius at the current
+ * zoom. Longitude is handled separately with the local cos(latitude) factor.
+ */
+export function tapRadiusDegrees(pixels: number, lat: number, zoom: number): number {
+  return (pixels * metersPerPixel(lat, zoom)) / METERS_PER_DEGREE;
+}
+
+/** Minimal shape of an atlas outline that can take part in tap resolution. */
+export type TapTarget = {
+  bbox: BBox;
+  geometry: Geometry | null | undefined;
+};
+
+/**
+ * Squared distance from a point to the nearest edge of a polygon. `xScale`
+ * compresses longitude so both axes are measured in comparable units; pass
+ * `cos(latitude)` when the coordinates are degrees.
+ */
+export function squaredDistanceToGeometry(
+  x: number,
+  y: number,
+  geometry: Geometry | null | undefined,
+  xScale = 1,
+): number {
+  let best = Infinity;
+  eachPolygonRing(geometry, (ring) => {
+    const count = ring.length;
+    if (count === 1) {
+      const only = ring[0];
+      if (only) {
+        const dx = (x - only[0]) * xScale,
+          dy = y - only[1],
+          distance = dx * dx + dy * dy;
+        if (distance < best) best = distance;
+      }
+      return;
+    }
+    for (let index = 0; index < count; index += 1) {
+      const a = ring[index],
+        b = ring[(index + 1) % count];
+      if (!a || !b) continue;
+      const abx = (b[0] - a[0]) * xScale,
+        aby = b[1] - a[1],
+        apx = (x - a[0]) * xScale,
+        apy = y - a[1],
+        lengthSquared = abx * abx + aby * aby;
+      const t = lengthSquared
+        ? Math.max(0, Math.min(1, (apx * abx + apy * aby) / lengthSquared))
+        : 0;
+      const dx = apx - t * abx,
+        dy = apy - t * aby,
+        distance = dx * dx + dy * dy;
+      if (distance < best) best = distance;
+    }
+  });
+  return best;
+}
+
+/**
+ * Resolve a tap against atlas outlines. An outline is eligible while the tap
+ * is within `radiusDegrees` of its drawn polygon, which is a true distance
+ * buffer: inner corners and courtyards do not grow with the zone. A tap inside
+ * a drawn polygon always wins over a neighbour's buffer; between overlapping
+ * buffers the outline with the closest edge wins.
+ */
+export function pickTapTarget<T extends TapTarget>(
+  lng: number,
+  lat: number,
+  targets: readonly T[],
+  radiusDegrees = 0,
+): T | null {
+  for (let index = targets.length - 1; index >= 0; index -= 1) {
+    const target = targets[index];
+    if (!target || !bboxContains(target.bbox, lng, lat)) continue;
+    if (pointInGeometry(lng, lat, target.geometry)) return target;
+  }
+  if (!(radiusDegrees > 0)) return null;
+  const xScale = Math.max(1e-6, Math.cos(radians(lat)));
+  const lngRadius = radiusDegrees / xScale;
+  const radiusSquared = radiusDegrees * radiusDegrees;
+  let best: T | null = null,
+    bestDistance = Infinity;
+  for (let index = targets.length - 1; index >= 0; index -= 1) {
+    const target = targets[index];
+    if (!target) continue;
+    const box = target.bbox;
+    if (
+      lng < box.minX - lngRadius ||
+      lng > box.maxX + lngRadius ||
+      lat < box.minY - radiusDegrees ||
+      lat > box.maxY + radiusDegrees
+    )
+      continue;
+    const distance = squaredDistanceToGeometry(lng, lat, target.geometry, xScale);
+    if (distance > radiusSquared) continue;
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      best = target;
+    }
+  }
+  return best;
+}
+
 /** Iterate polygon rings of any geometry without allocating intermediate arrays. */
 export function eachPolygonRing(
   geometry: Geometry | null | undefined,

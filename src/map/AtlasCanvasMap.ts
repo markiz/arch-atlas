@@ -10,8 +10,9 @@ import {
   eachPolygonRing,
   featureBounds,
   metersPerPixel,
-  pointInGeometry,
+  pickTapTarget,
   project,
+  tapRadiusDegrees,
   unproject,
   unprojectX,
   unprojectY,
@@ -49,6 +50,7 @@ type AtlasLook = {
 };
 type AtlasEntry = {
   building: Building;
+  geometry: Geometry | null;
   bbox: BBox;
   /** Labels of every construction period the building overlaps. */
   periodLabels: string[];
@@ -79,6 +81,13 @@ const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
 const DOT_THRESHOLD = 1.15;
 const MIN_DRAG = 3;
+/**
+ * A finger lands within roughly 2.5-3 mm of the aim point; at typical phone CSS
+ * density that is about 14 px. A mouse is far more precise, and the same halo
+ * would make the map sticky, so it gets a much smaller one.
+ */
+const TAP_SLOP_TOUCH_PX = 14;
+const TAP_SLOP_MOUSE_PX = 5;
 /**
  * Zoom is continuous while the user is pinching or scrolling. The canvas is
  * only repainted from a coarser camera when it drifts far enough from the
@@ -370,6 +379,7 @@ export class AtlasCanvasMap {
           const buildingPeriods = periodsFor(building.minYear, building.maxYear);
           this.atlasEntries.push({
             building,
+            geometry: building.geometry ?? null,
             bbox,
             periodLabels: buildingPeriods.map((p) => p.label),
             fillColor: period(building.minYear, building.maxYear).color,
@@ -1569,22 +1579,14 @@ export class AtlasCanvasMap {
     this.reportView();
   }
 
-  private hitAt(point: Point): Building | null {
+  private hitAt(point: Point, pointerType: string): Building | null {
     const origin = this.originFor(this.view);
     const lng = unprojectX(origin.x + point.x, this.view.zoom);
     const lat = unprojectY(origin.y + point.y, this.view.zoom);
-    for (let index = this.atlasEntries.length - 1; index >= 0; index--) {
-      const entry = this.atlasEntries[index];
-      if (
-        lng < entry.bbox.minX ||
-        lng > entry.bbox.maxX ||
-        lat < entry.bbox.minY ||
-        lat > entry.bbox.maxY
-      )
-        continue;
-      if (pointInGeometry(lng, lat, entry.building.geometry)) return entry.building;
-    }
-    return null;
+    const slop =
+      pointerType === 'touch' || pointerType === 'pen' ? TAP_SLOP_TOUCH_PX : TAP_SLOP_MOUSE_PX;
+    const radius = tapRadiusDegrees(slop, lat, this.view.zoom);
+    return pickTapTarget(lng, lat, this.atlasEntries, radius)?.building ?? null;
   }
 
   private pointerPoint(event: PointerEvent | WheelEvent): Point {
@@ -1623,9 +1625,9 @@ export class AtlasCanvasMap {
     this.tooltipVisible = false;
   }
 
-  private hoverAt(point: Point) {
+  private hoverAt(point: Point, pointerType: string) {
     if (this.pointers.size) return;
-    const building = this.hitAt(point);
+    const building = this.hitAt(point, pointerType);
     if (building) {
       const name = building.names?.[this.language] || building.name;
       this.showTooltip(name, point.x, point.y - 14);
@@ -1705,7 +1707,7 @@ export class AtlasCanvasMap {
       }
       return;
     }
-    this.hoverAt(point);
+    this.hoverAt(point, event.pointerType);
   };
 
   private endPointer(event: PointerEvent, allowClick: boolean) {
@@ -1725,7 +1727,7 @@ export class AtlasCanvasMap {
     if (session && session.pointerId === event.pointerId) {
       this.drag = null;
       if (!session.moved && !session.onMarker && !this.suppressClick && allowClick) {
-        const building = this.hitAt(point);
+        const building = this.hitAt(point, event.pointerType);
         if (building) {
           this.onSelect(building.id);
           this.suppressNextTapClick();

@@ -7,8 +7,11 @@ import {
   extendBBox,
   geometryBounds,
   metersPerPixel,
+  pickTapTarget,
   pointInGeometry,
   project,
+  squaredDistanceToGeometry,
+  tapRadiusDegrees,
   unproject,
 } from '../src/map/geometry.ts';
 
@@ -97,4 +100,84 @@ test('point hit testing respects outer rings and holes', () => {
 test('scale defaults to one world circumference across 256px tiles', () => {
   near(metersPerPixel(0, 0), (2 * Math.PI * 6378137) / 256, 1e-6);
   near(metersPerPixel(0, 1), (Math.PI * 6378137) / 256, 1e-6);
+});
+
+const square = (minX, minY, maxX, maxY) => ({
+  type: 'Polygon',
+  coordinates: [
+    [
+      [minX, minY],
+      [maxX, minY],
+      [maxX, maxY],
+      [minX, maxY],
+      [minX, minY],
+    ],
+  ],
+});
+const target = (geometry) => ({
+  geometry,
+  bbox: {
+    minX: Math.min(...geometry.coordinates[0].map((point) => point[0])),
+    minY: Math.min(...geometry.coordinates[0].map((point) => point[1])),
+    maxX: Math.max(...geometry.coordinates[0].map((point) => point[0])),
+    maxY: Math.max(...geometry.coordinates[0].map((point) => point[1])),
+  },
+});
+
+test('distance to an outline measures the nearest polygon edge', () => {
+  near(squaredDistanceToGeometry(13, 5, square(0, 0, 10, 10)), 9, 1e-9);
+  near(squaredDistanceToGeometry(5, 5, square(0, 0, 10, 10)), 25, 1e-9);
+  near(squaredDistanceToGeometry(0, 0, square(0, 0, 10, 10)), 0, 1e-9);
+  assert.equal(squaredDistanceToGeometry(5, 5, null), Infinity);
+});
+
+test('exact polygon beats a neighbour buffered tap zone', () => {
+  const wide = target(square(0, 0, 15.6, 10));
+  const near = target(square(15.6, 0, 18, 10));
+  assert.equal(pickTapTarget(15.5, 5, [wide, near], 1), wide);
+  assert.equal(pickTapTarget(16.5, 5, [wide, near], 1), near);
+});
+
+test('between two buffered zones the closest outline wins', () => {
+  const left = target(square(0, 0, 10, 10));
+  const right = target(square(11, 0, 21, 10));
+  assert.equal(pickTapTarget(10.2, 5, [left, right], 0.9), left);
+  assert.equal(pickTapTarget(10.2, 5, [right, left], 0.9), left);
+  assert.equal(pickTapTarget(10.8, 5, [left, right], 0.9), right);
+  assert.equal(pickTapTarget(10.8, 5, [right, left], 0.9), right);
+  assert.equal(pickTapTarget(22, 5, [left, right], 0.9), null);
+  assert.equal(pickTapTarget(10.5, 5, [left, right]), null);
+});
+
+test('tap buffer follows the outline instead of scaling holes and corners', () => {
+  const courtyard = target({
+    type: 'Polygon',
+    coordinates: [
+      [
+        [0, 0],
+        [10, 0],
+        [10, 10],
+        [0, 10],
+        [0, 0],
+      ],
+      [
+        [4, 4],
+        [6, 4],
+        [6, 6],
+        [4, 6],
+        [4, 4],
+      ],
+    ],
+  });
+  // Inside the courtyard hole, half a degree from its wall: the buffer reaches
+  // in, while a 20% scale of the outer polygon would have enlarged the hole.
+  assert.equal(pickTapTarget(4.5, 5, [courtyard], 1), courtyard);
+  assert.equal(pickTapTarget(4.5, 5, [courtyard], 0.4), null);
+  // The solid part stays an exact hit.
+  assert.equal(pickTapTarget(3.5, 5, [courtyard], 0), courtyard);
+});
+
+test('screen tap slop converts to degrees through the current zoom', () => {
+  near(tapRadiusDegrees(1, 0, 0), 360 / 256, 1e-9);
+  near(tapRadiusDegrees(1, 0, 1), 180 / 256, 1e-9);
 });
