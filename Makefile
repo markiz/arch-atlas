@@ -82,6 +82,9 @@ deepseek-image:
 # DSH_HOME указывает на /dsh/home, а не на корень тома: сам /dsh принадлежит
 # root, а Harness выставляет на домашнем каталоге режим 0700 и без владения
 # падает с EPERM (из-за этого ломалось чтение изображений и вложений).
+#
+# ATLAS_DISABLE_MCP передаём только если он задан: лаунчер сам выбирает режим
+# (не задан — только пресет tester, 0 — плюс глобальный MCP, 1 — без браузера).
 deepseek: deepseek-image
 	docker run --rm -it \
 		--init \
@@ -102,8 +105,7 @@ deepseek: deepseek-image
 		-e DSH_HOME=/dsh/home \
 		-e NARB_NATIVE_CACHE_DIR=/dsh/home/native-cache \
 		-e DSH_WEB_PORT=$(DEEPSEEK_PORT) \
-		-e TZ=$(TZ) \
-		-e ATLAS_DISABLE_MCP="$${ATLAS_DISABLE_MCP:-0}" \
+		-e TZ=$(TZ) $(if $(ATLAS_DISABLE_MCP),-e ATLAS_DISABLE_MCP=$(ATLAS_DISABLE_MCP)) \
 		-e GIT_AUTHOR_NAME="$(GIT_NAME)" \
 		-e GIT_AUTHOR_EMAIL="$(GIT_EMAIL)" \
 		-e GIT_COMMITTER_NAME="$(GIT_NAME)" \

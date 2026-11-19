@@ -1,13 +1,27 @@
 # Проверка в браузере
 
-В образах `atlas-codex` и `atlas-deepseek` включён Playwright MCP (`@playwright/mcp`) с headless Chromium. Отдельного браузерного CLI нет: агенту доступны MCP-инструменты вида `mcp__playwright__browser_navigate`, `mcp__playwright__browser_take_screenshot`, `mcp__playwright__browser_run_code_unsafe` и т. д. Браузер запускается внутри контейнера и работает по HTTP.
+В образах `atlas-codex` и `atlas-deepseek` есть Playwright MCP (`@playwright/mcp`) с headless Chromium. Отдельного браузерного CLI нет: работают MCP-инструменты вида `mcp__playwright__browser_navigate`, `mcp__playwright__browser_take_screenshot`, `mcp__playwright__browser_run_code_unsafe` и т. д. Браузер запускается внутри контейнера и работает по HTTP.
 
-- Конфиг — [scripts/mcp.config.json](../scripts/mcp.config.json): `chromium`, headless, viewport `1440x900`, вывод в `work/playwright`.
-- Codex — [scripts/run-codex.sh](../scripts/run-codex.sh) добавляет MCP через `-c mcp_servers.playwright...`, не меняя `$CODEX_HOME/config.toml`.
-- DSH — [scripts/dsh-mcp.patch.yml](../scripts/dsh-mcp.patch.yml) подключается через `--patch` в [scripts/run-deepseek-web.sh](../scripts/run-deepseek-web.sh); пользовательский `cordis.patch.yml` не трогается.
-- Отключить MCP: `ATLAS_DISABLE_MCP=1 make codex` или `ATLAS_DISABLE_MCP=1 make deepseek`.
+В `atlas-codex` MCP подключён к самой сессии. В `atlas-deepseek` он принадлежит агентскому пресету `tester`: основная сессия этих инструментов не видит и делегирует проверку через `subagent(agent_preset="tester", prompt=...)`. У ребёнка read-only файловая система (`write`/`edit` выключены), он возвращает вердикт, доказательства и пути к скриншотам.
+
+- Конфиг — [scripts/mcp.config.json](../scripts/mcp.config.json): `chromium`, headless, viewport `1440x900`, вывод в `work/playwright`; его читают оба образа.
+- Codex — [scripts/run-codex.sh](../scripts/run-codex.sh) добавляет MCP через `-c mcp_servers.playwright...`, не меняя `$CODEX_HOME/config.toml`. Отключить: `ATLAS_DISABLE_MCP=1 make codex`.
+- DSH — пресет `tester` объявлен в [scripts/dsh-agent-presets.patch.yml](../scripts/dsh-agent-presets.patch.yml). Образ кладёт файл в `/opt/atlas-browser/`, лаунчер подаёт его через `--patch`, поэтому пресет есть в любой свежей установке, а `$DSH_HOME` остаётся чистым.
+- `preset-standard` в этом файле — дословная копия `presets/standard.patch.yml` из `@deepseek-ai/dsh-web-app` версии, закреплённой в `Dockerfile.deepseek` (`ARG DSH_VERSION`), плюс `allowedAgentPresets`. При смене версии DSH обновите этот блок. Оверлей применяется после профильного патча, поэтому правки `preset-standard` в `$DSH_HOME` он перекрывает: свои изменения вносите в этот файл.
+- Глобальный оверлей [scripts/dsh-mcp.patch.yml](../scripts/dsh-mcp.patch.yml) по умолчанию не подключается. `ATLAS_DISABLE_MCP=0 make deepseek` возвращает MCP сразу всем сессиям, `ATLAS_DISABLE_MCP=1 make deepseek` выключает браузерные инструменты совсем.
 
 ## Быстрая проверка страницы
+
+В `atlas-deepseek` вызов идёт из основной сессии, дальше всё делает ребёнок:
+
+```text
+subagent:
+  agent_preset: "tester"
+  description: "Проверка страницы"
+  prompt: "http://127.0.0.1:5173/ — проверь, что карта и маркеры загрузились; собери console errors; скриншот в work/shot.png; верни вердикт, ошибки и путь"
+```
+
+Внутри ребёнка — те же вызовы, что и в `atlas-codex`:
 
 ```text
 browser_navigate  { url: "http://127.0.0.1:5173/" }
@@ -33,6 +47,8 @@ browser_run_code_unsafe   — произвольный Playwright-код с `pag
 ## Тач-драг
 
 Встроенный `browser_drag` — это drag мышью между элементами. Для настоящего тача используется CDP через `browser_run_code_unsafe`; готовый сценарий лежит в [scripts/mcp-touch-drag.js](../scripts/mcp-touch-drag.js).
+
+В `atlas-deepseek` оба шага выполняет ребёнок `tester`: в его prompt передайте координаты жеста и просьбу прогнать сценарий.
 
 1. Задайте параметры жеста в странице. `sessionStorage` переживёт перезагрузку, которую сценарий делает для инициализации карты с тачем:
 
@@ -76,4 +92,5 @@ browser_run_code_unsafe { filename: "scripts/mcp-touch-drag.js" }
 - Установлен только headless shell; headed-режим не поддерживается. Для headed пересоберите образ с полным Chromium (`node .../playwright/cli.js install chromium --with-deps` без `--only-shell`).
 - Профиль браузера и временные файлы MCP лежат в `$HOME` (DSH запускает сервер вне bash-sandbox, поэтому это работает); запись страницы идёт в `/workspace`.
 - Контейнер read-only, кроме `/workspace`, `/tmp` и `/dsh`; браузер запускается с `--no-sandbox`, границей безопасности остаётся контейнер.
-- MCP добавляет схемы инструментов в каждый запрос. Если контекст важнее нативных tool-calls, отключите его через `ATLAS_DISABLE_MCP=1`.
+- MCP добавляет схемы инструментов в каждый запрос той сессии, где он смонтирован. В `atlas-deepseek` это только сессия `tester`; `ATLAS_DISABLE_MCP=0` возвращает схемы во все сессии.
+- У пресета `tester` нет `agent-instructions`: правила репозитория и детали задачи (URL, что считать успехом, куда сохранить скриншоты) передаются в prompt, ребёнок не выводит их сам.

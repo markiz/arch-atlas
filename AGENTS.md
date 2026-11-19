@@ -109,7 +109,7 @@ npm run verify
 ## Рабочие ограничения
 
 - Не запускай `make` и `docker`; эти команды запускает пользователь.
-- Не устанавливай браузеры и инструменты автоматизации (Chromium, Playwright, Puppeteer) в хост или в рабочее дерево проекта. В образах `atlas-codex` и `atlas-deepseek` включён Playwright MCP и headless Chromium: навигация, клики, скриншоты, консоль и `run-code` доступны как `mcp__playwright__*`. Для тач-драга задай `atlasTouchParams` через `browser_evaluate` и выполни `browser_run_code_unsafe {filename: "scripts/mcp-touch-drag.js"}`. MCP отключается `ATLAS_DISABLE_MCP=1`. Подробности — [docs/browser-checks.md](docs/browser-checks.md). Проверка вне этих образов остаётся за пользователем.
+- Не устанавливай браузеры и инструменты автоматизации (Chromium, Playwright, Puppeteer) в хост или в рабочее дерево проекта. В образе `atlas-deepseek` браузерные проверки идут через субагента: `subagent(agent_preset="tester", prompt=...)`; у ребёнка headless Chromium и инструменты `mcp__playwright__*`, у основной сессии их нет, правок кода ребёнок не делает. В prompt передай URL, что проверить, что считать вердиктом и куда сложить скриншоты; для тач-драга — параметры жеста и [scripts/mcp-touch-drag.js](scripts/mcp-touch-drag.js). В образе `atlas-codex` MCP подключён напрямую. Вернуть глобальный MCP в `atlas-deepseek`: `ATLAS_DISABLE_MCP=0 make deepseek`. Подробности — [docs/browser-checks.md](docs/browser-checks.md). Проверка вне этих образов остаётся за пользователем.
 - Перед правкой смотри `git status` и не перезаписывай пользовательские изменения.
 - Не используй широкие команды удаления. Удаляй только конкретные проверенные пути.
 - Для проверки страницы используй HTTP(S), а не `file://`.

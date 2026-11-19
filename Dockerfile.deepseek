@@ -19,7 +19,7 @@ RUN apt-get update \
 COPY scripts/install-browser.sh /opt/atlas-browser/
 RUN bash /opt/atlas-browser/install-browser.sh
 
-COPY scripts/mcp.config.json scripts/dsh-mcp.patch.yml /opt/atlas-browser/
+COPY scripts/mcp.config.json scripts/dsh-mcp.patch.yml scripts/dsh-agent-presets.patch.yml /opt/atlas-browser/
 
 # HOME и DSH_HOME лежат на томе, доступном только Harness-пользователю,
 # а npm по умолчанию пишет кэш в недоступный $HOME/.npm.

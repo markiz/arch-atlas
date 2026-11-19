@@ -1,8 +1,8 @@
-# Playwright MCP for the DeepSeek Harness web profile.
+# Playwright MCP for the DeepSeek Harness web profile — the opt-in global overlay.
 #
-# scripts/run-deepseek-web.sh loads this file as a --patch overlay, so the
-# user's own $DSH_HOME/profiles/web/cordis.patch.yml is left untouched.
-# Disable the overlay with ATLAS_DISABLE_MCP=1.
+# scripts/run-deepseek-web.sh loads this file as a --patch overlay only with
+# ATLAS_DISABLE_MCP=0; by default the browser tools live in the `tester` agent
+# preset and the main session has none.
 - insert:
     - id: mcp-playwright
       name: '@deepseek-ai/dsh-mcp-client'

@@ -13,12 +13,17 @@ fi
 printf 'DeepSeek Harness будет доступен по адресу http://127.0.0.1:%s/\n' "$port"
 printf 'Остановка сервера: Ctrl+C. Настройки сохраняются в Docker-томе /dsh.\n'
 
-# Playwright MCP is loaded as an overlay; the user's profile patch is not
-# modified. Set ATLAS_DISABLE_MCP=1 to boot without the browser tools.
-patch_args=()
-if [[ "${ATLAS_DISABLE_MCP:-0}" != "1" ]]; then
-  patch_args=(--patch /opt/atlas-browser/dsh-mcp.patch.yml)
-fi
+# Browser tools belong to the `tester` agent preset, declared by the overlay
+# below, so every fresh $DSH_HOME gets them without a profile edit.
+# ATLAS_DISABLE_MCP keeps its old meaning: 1 disables browser tooling entirely,
+# 0 also loads the global MCP for every session (debugging that server).
+preset_patch=/opt/atlas-browser/dsh-agent-presets.patch.yml
+mcp_patch=/opt/atlas-browser/dsh-mcp.patch.yml
+case "${ATLAS_DISABLE_MCP:-}" in
+  1) patch_args=() ;;
+  0) patch_args=(--patch "$preset_patch" --patch "$mcp_patch") ;;
+  *) patch_args=(--patch "$preset_patch") ;;
+esac
 
 exec dsh web "${patch_args[@]}" \
   --host "$container_ip" \
