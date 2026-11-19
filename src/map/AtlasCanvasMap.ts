@@ -231,6 +231,8 @@ export class AtlasCanvasMap {
   private outlineBoxes: Float32Array | null = null;
   private atlasSource: Building[] | null = null;
   private atlasEntries: AtlasEntry[] = [];
+  private landmarkCardIds = new Set<string>();
+  private landmarkCardOsmIds = new Set<string>();
   private selectedId: string | null = null;
   private selectedPeriods: string[] = [];
   private hoveredPeriod: string | null = null;
@@ -377,6 +379,8 @@ export class AtlasCanvasMap {
     if (this.atlasSource !== buildings) {
       this.atlasSource = buildings;
       this.atlasEntries = [];
+      this.landmarkCardIds = new Set();
+      this.landmarkCardOsmIds = new Set();
       for (const building of buildings) {
         const bbox = building.geometry
           ? featureBounds({
@@ -394,8 +398,14 @@ export class AtlasCanvasMap {
             periodLabels: buildingPeriods.map((p) => p.label),
             fillColor: period(building.minYear, building.maxYear).color,
           });
+          this.landmarkCardIds.add(building.id);
+          if (building.osmId) this.landmarkCardOsmIds.add(building.osmId);
         }
       }
+      // The landmark layer must not add shapes the atlas cannot explain: an
+      // area landmark is painted only while its own card is on the map, and the
+      // card paints the same footprint anyway.
+      if (this.visibility.landmarks) this.renderBase();
     }
     this.selectedId = selected;
     this.selectedPeriods = selectedPeriods;
@@ -906,8 +916,16 @@ export class AtlasCanvasMap {
     }
     if (this.visibility.landmarks) {
       const landmarks = this.baseGroups.landmarks.filter((index) => {
-        const geometry = this.baseFeatures[index].geometry;
-        return geometry && geometryIsArea(geometry);
+        const feature = this.baseFeatures[index];
+        const geometry = feature.geometry;
+        if (!geometry || !geometryIsArea(geometry)) return false;
+        const properties = feature.properties ?? {};
+        const id = properties.landmarkId;
+        const osmId = properties.osmId;
+        return (
+          (typeof id === 'string' && this.landmarkCardIds.has(id)) ||
+          (typeof osmId === 'string' && this.landmarkCardOsmIds.has(osmId))
+        );
       });
       drawGroup(landmarks, { fill: 'rgba(199,168,120,.34)', stroke: '#947652', width: 1.4 });
     }

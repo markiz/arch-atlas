@@ -29,6 +29,7 @@ const EXTRA_INPUTS = [
   'data/landmark-name-translations.json',
   'data/basemap-name-translations.json',
   'data/landmark-skip.json',
+  'data/landmark-area-markers.json',
   SCRIPT,
 ];
 const silent = { write() {} };

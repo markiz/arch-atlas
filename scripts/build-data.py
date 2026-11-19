@@ -19,6 +19,13 @@ landmark_skip_path=root/'data/landmark-skip.json'
 if landmark_skip_path.exists():
  try: landmark_skips=set(json.loads(landmark_skip_path.read_text()).get('osmIds',[]))
  except Exception: landmark_skips=set()
+# Area landmarks have no point in OSM, so the map cannot draw their icon.
+# The list opts selected ones into a synthetic point marker at the centroid.
+area_marker_ids=set()
+area_marker_path=root/'data/landmark-area-markers.json'
+if area_marker_path.exists():
+ try: area_marker_ids=set(json.loads(area_marker_path.read_text()).get('osmIds',[]))
+ except Exception: area_marker_ids=set()
 landmark_cards_dir=root/'data/landmarks/tbilisi'
 if landmark_cards_dir.exists():
  for card_path in sorted(landmark_cards_dir.glob('*.json')):
@@ -87,6 +94,16 @@ def apply_landmark_card(props,osm_id):
   props['names']={language:names[language] for language in ('ru','en','ka','uk')}
   props['name']=props['names']['ru']
  return props
+def polygon_centroid(ring):
+ points=ring[:-1] if len(ring)>1 and ring[0]==ring[-1] else ring
+ double_area=cx=cy=0.0
+ for index,point in enumerate(points):
+  x1,y1=point;x2,y2=points[(index+1)%len(points)]
+  cross=x1*y2-x2*y1
+  double_area+=cross;cx+=(x1+x2)*cross;cy+=(y1+y2)*cross
+ if abs(double_area)<1e-12:
+  return [round(sum(p[0] for p in points)/len(points),6),round(sum(p[1] for p in points)/len(points),6)]
+ return [round(cx/(3*double_area),6),round(cy/(3*double_area),6)]
 def translated_names(tags):
  candidates=name_candidates(tags)
  original=tags.get('name:ka') or (tags.get('name') if re.search('[\u10a0-\u10ff]',tags.get('name','')) else '') or tags.get('name:ru') or tags.get('name:en') or tags.get('name') or ''
@@ -175,6 +192,8 @@ for index,(wid,w) in enumerate(ways.items(),1):
   if name:props['name']=name
   if not name:continue
   features.append({'type':'Feature','properties':props,'geometry':{'type':'Polygon','coordinates':[coords]}})
+  if f'way/{wid}' in area_marker_ids:
+   features.append({'type':'Feature','properties':dict(props),'geometry':{'type':'Point','coordinates':polygon_centroid(coords)}})
  if 'building' in tags and closed:
   kind='building'
  elif road_class(tags):

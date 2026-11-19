@@ -9,6 +9,7 @@ const buildingOutlines = JSON.parse(
 );
 const taxonomy = JSON.parse(await readFile('data/photo-visual-tags.json', 'utf8'));
 const aux = JSON.parse(await readFile('data/aux/tbilisi.json', 'utf8'));
+const areaMarkerIds = JSON.parse(await readFile('data/landmark-area-markers.json', 'utf8')).osmIds;
 const visualTagIds = new Set(taxonomy.tags.map((tag) => tag.id));
 assert(
   taxonomy.tags.length < 50,
@@ -50,6 +51,16 @@ for (const feature of geo.features.filter((feature) => feature.properties?.kind 
       `${feature.properties?.osmId}: ${lang} landmark name must start with a capital letter`,
     );
 }
+for (const osmId of areaMarkerIds)
+  assert(
+    geo.features.some(
+      (feature) =>
+        feature.properties?.kind === 'landmark' &&
+        feature.properties?.osmId === osmId &&
+        feature.geometry?.type === 'Point',
+    ),
+    `${osmId}: area landmark marker has no synthetic point in the basemap`,
+  );
 // Road labels must not regress to the mechanical Georgian transliteration:
 // "…ис" plus a Roman numeral before the street type, or a bare "III тупик".
 const mechanicalRoadName =
