@@ -403,3 +403,40 @@ test('requires photo captions in all four languages and rejects the legacy field
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test('packs an empty city only when the registry allows it', async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), 'atlas-empty-'));
+  try {
+    const city = 'empty-city';
+    await mkdir(path.join(root, 'data', 'atlas', city), { recursive: true });
+    await mkdir(path.join(root, 'data', 'aux', city), { recursive: true });
+    await mkdir(path.join(root, 'data', 'photos', city), { recursive: true });
+    for (const name of ['styles', 'architects', 'districts', 'year-labels', 'types'])
+      await writeFile(path.join(root, 'data', 'aux', city, `${name}.json`), '{}');
+    const outFile = path.join(root, 'out.json');
+    await assert.rejects(
+      () => assembleAtlas({ root, city, outFile, quiet: true }),
+      /no atlas objects found/,
+    );
+    const result = await assembleAtlas({ root, city, outFile, quiet: true, allowEmpty: true });
+    assert.deepEqual(result.cards, []);
+    assert.deepEqual(JSON.parse(await readFile(outFile, 'utf8')), []);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test('hydrated cards carry the city id', async () => {
+  const root = await fixture();
+  try {
+    await writeCard(root, 'osm-1.json', card('osm-1'));
+    const { cards } = await assembleAtlas({
+      root,
+      outFile: path.join(root, 'out.json'),
+      quiet: true,
+    });
+    assert.equal(cards[0].cityId, 'tbilisi');
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});

@@ -17,6 +17,8 @@ public/atlas/thumbnails/
 public/atlas/cards/
 
 # Сгенерированные бандлы, манифест и слои карты (источники — data/atlas, data/landmarks, data/aux, raw)
+public/atlas/cities/
+public/atlas/cities.json
 public/atlas/buildings.json
 public/atlas/landmarks.json
 public/atlas/manifest.json

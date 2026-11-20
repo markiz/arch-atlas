@@ -15,7 +15,10 @@ import { loadCityAux } from './lib/aux.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const DEFAULT_CITY = 'tbilisi';
-export const DEFAULT_OUT = path.join(ROOT, 'public', 'atlas', 'buildings.json');
+export function cityBuildDir(root, city) {
+  return path.join(root, 'public', 'atlas', 'cities', city);
+}
+export const DEFAULT_OUT = cityBuildDir(ROOT, DEFAULT_CITY) + '/buildings.json';
 const LANGS = ['ru', 'en', 'ka', 'uk'];
 const GEOMETRY_TRANSLATION_LANGS = ['en', 'ka', 'uk'];
 const GEOMETRY_ROLES = new Set([
@@ -122,11 +125,26 @@ function styleLabels(file, table, values) {
   };
 }
 
-function validateGeometry(file, geometry, field) {
+function validateGeometry(file, geometry, field, bounds) {
   if (!isPlainObject(geometry) || !['Polygon', 'MultiPolygon'].includes(geometry.type))
     fail(file, `${field} must be a Polygon or MultiPolygon`);
   if (!Array.isArray(geometry.coordinates) || !geometry.coordinates.length)
     fail(file, `${field} has no coordinates`);
+  if (bounds) {
+    const rings = geometry.type === 'Polygon' ? geometry.coordinates : geometry.coordinates.flat();
+    for (const ring of rings)
+      for (const point of ring)
+        if (
+          !Array.isArray(point) ||
+          !Number.isFinite(point[0]) ||
+          !Number.isFinite(point[1]) ||
+          point[0] < bounds.west ||
+          point[0] > bounds.east ||
+          point[1] < bounds.south ||
+          point[1] > bounds.north
+        )
+          fail(file, `${field} is outside the ${bounds.city ?? 'city'} bounds`);
+  }
   return geometry;
 }
 
@@ -219,6 +237,7 @@ export function hydrateCard(
   file = `<${card?.id ?? 'unknown'}>`,
   city,
   photoMetadata = new Map(),
+  bounds,
 ) {
   if (!isPlainObject(card)) fail(file, 'record must be an object');
   const id = requireString(file, card.id, 'id');
@@ -259,7 +278,7 @@ export function hydrateCard(
     !card.coordinates.every((value) => Number.isFinite(value))
   )
     fail(file, 'coordinates must be [longitude, latitude]');
-  const geometry = validateGeometry(file, card.geometry, 'geometry');
+  const geometry = validateGeometry(file, card.geometry, 'geometry', bounds);
   requireString(file, card.geometryQuality, 'geometryQuality');
   const geometryQualityTranslations =
     card.geometryQualityTranslations === undefined
@@ -287,7 +306,7 @@ export function hydrateCard(
       if (!isPlainObject(variant)) fail(file, `geometryVariants[${index}] must be an object`);
       if (!GEOMETRY_ROLES.has(variant.role))
         fail(file, `geometryVariants[${index}].role is invalid`);
-      validateGeometry(file, variant.geometry, `geometryVariants[${index}].geometry`);
+      validateGeometry(file, variant.geometry, `geometryVariants[${index}].geometry`, bounds);
     }
   }
 
@@ -313,8 +332,12 @@ export function hydrateCard(
     for (const lang of LANGS) architectsByLanguage[lang].push(labels[lang]);
   }
 
+  if (bounds && (card.coordinates[0] < bounds.west || card.coordinates[0] > bounds.east || card.coordinates[1] < bounds.south || card.coordinates[1] > bounds.north))
+    fail(file, 'coordinates are outside the city bounds');
+
   const out = {
     id,
+    cityId: city,
     name: names.ru,
     nameKa: names.ka,
     nameEn: names.en,
@@ -369,10 +392,11 @@ export async function assembleAtlas({
   root = ROOT,
   outFile,
   quiet = false,
+  allowEmpty = false,
+  bounds = null,
 } = {}) {
-  const destination =
-    outFile ??
-    (city === DEFAULT_CITY ? DEFAULT_OUT : path.join(root, 'public', 'atlas', `${city}.json`));
+  if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
+  const destination = outFile ?? path.join(cityBuildDir(root, city), 'buildings.json');
   const sourceDir = path.join(root, 'data', 'atlas', city);
   const attributes = await loadCityAux({ root, city });
   const photoMetadata = await loadPhotoMetadata(root, city);
@@ -383,7 +407,8 @@ export async function assembleAtlas({
   } catch (error) {
     throw new Error(`${path.relative(root, sourceDir)}: ${error.message}`, { cause: error });
   }
-  if (!files.length) throw new Error(`${path.relative(root, sourceDir)}: no atlas objects found`);
+  if (!files.length && !allowEmpty)
+    throw new Error(`${path.relative(root, sourceDir)}: no atlas objects found`);
 
   const progress = new Progress(files.length, {
     label: `pack ${city} atlas`,
@@ -404,7 +429,7 @@ export async function assembleAtlas({
     if (card.id !== id) fail(relative, `id "${card.id}" does not match filename "${id}.json"`);
     if (ids.has(id)) fail(relative, `duplicate id "${id}"`);
     ids.add(id);
-    cards.push(hydrateCard(card, attributes, relative, city, photoMetadata));
+    cards.push(hydrateCard(card, attributes, relative, city, photoMetadata, bounds));
     progress.advance(file);
   }
   progress.finish();
@@ -419,7 +444,20 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.argv.find((value) => value.startsWith(`--${name}=`))?.slice(name.length + 3);
   const city = argument('city') ?? DEFAULT_CITY;
   const out = argument('out');
-  const result = await assembleAtlas({ city, outFile: out ? path.resolve(ROOT, out) : undefined });
+  let bounds = null;
+  let allowEmpty = false;
+  try {
+    const { readCityConfig } = await import('./lib/cities.mjs');
+    const config = await readCityConfig(city);
+    bounds = { ...config.map.bounds, city };
+    allowEmpty = config.allowEmpty;
+  } catch {}
+  const result = await assembleAtlas({
+    city,
+    bounds,
+    allowEmpty,
+    outFile: out ? path.resolve(ROOT, out) : undefined,
+  });
   console.log(
     `Packed ${result.cards.length} objects from data/atlas/${result.city}/ into ${path.relative(ROOT, result.outFile)}`,
   );

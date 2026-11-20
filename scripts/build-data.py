@@ -1,7 +1,18 @@
 import xml.etree.ElementTree as ET, pathlib, json, math
-import re
+import re, argparse, sys
 from progress import Progress
 root=pathlib.Path(__file__).resolve().parent.parent
+parser=argparse.ArgumentParser()
+parser.add_argument('--city', default='tbilisi')
+city=parser.parse_args().city
+city_config=json.loads((root/'data'/'cities'/f'{city}.json').read_text())
+build_config=city_config.get('build') or {}
+raw_dir=root/build_config.get('rawDir', f'raw/osm/{city}')
+translations_dir=root/build_config.get('translationsDir', f'data/translations/{city}')
+selected_path=(raw_dir/build_config['selected']) if build_config.get('selected') else None
+outlines_path=(raw_dir/build_config['outlines']) if build_config.get('outlines') else None
+grid_dir=(raw_dir/build_config['gridDir']) if build_config.get('gridDir') else None
+landmark_cards_dir=root/'data'/'landmarks'/city
 ROAD_CLASSES=('motorway','trunk','primary','secondary','tertiary','residential','unclassified','living_street','pedestrian','service','footway','path','steps')
 # OSM temporarily retags closed avenues as highway=construction. Keep their
 # physical class from construction=* so the basemap does not lose the street.
@@ -11,22 +22,21 @@ def road_class(tags):
   value=tags.get('construction')
   if isinstance(value,str) and value.endswith('_link'):value=value[:-5]
  return value if value in ROAD_CLASSES else None
-landmark_names=json.loads((root/'data/landmark-name-translations.json').read_text())
-curated_name_variants=json.loads((root/'data/basemap-name-translations.json').read_text()) if (root/'data/basemap-name-translations.json').exists() else {}
+landmark_names=json.loads((translations_dir/'landmark-names.json').read_text()) if (translations_dir/'landmark-names.json').exists() else {}
+curated_name_variants=json.loads((translations_dir/'basemap-names.json').read_text()) if (translations_dir/'basemap-names.json').exists() else {}
 landmark_cards={}
 landmark_skips=set()
-landmark_skip_path=root/'data/landmark-skip.json'
+landmark_skip_path=translations_dir/'landmark-skip.json'
 if landmark_skip_path.exists():
  try: landmark_skips=set(json.loads(landmark_skip_path.read_text()).get('osmIds',[]))
  except Exception: landmark_skips=set()
 # Area landmarks have no point in OSM, so the map cannot draw their icon.
 # The list opts selected ones into a synthetic point marker at the centroid.
 area_marker_ids=set()
-area_marker_path=root/'data/landmark-area-markers.json'
+area_marker_path=translations_dir/'landmark-area-markers.json'
 if area_marker_path.exists():
  try: area_marker_ids=set(json.loads(area_marker_path.read_text()).get('osmIds',[]))
  except Exception: area_marker_ids=set()
-landmark_cards_dir=root/'data/landmarks/tbilisi'
 if landmark_cards_dir.exists():
  for card_path in sorted(landmark_cards_dir.glob('*.json')):
   try: card=json.loads(card_path.read_text())
@@ -34,7 +44,7 @@ if landmark_cards_dir.exists():
   card_key=card.get('osmId') or card.get('id')
   if card_key and card.get('names'):landmark_cards[card_key]=card
 nodes={};node_tags={};ways={};relations={}
-paths=sorted((root/'raw'/'osm'/'grid').glob('osm-grid-*.xml'))
+paths=sorted((grid_dir).glob('*.xml')) if grid_dir and grid_dir.exists() else []
 parse_progress=Progress(len(paths),'parse OSM XML')
 parse_progress.start()
 for path in paths:
@@ -216,8 +226,8 @@ for index,(wid,w) in enumerate(ways.items(),1):
 way_progress.finish()
 
 # City-wide extract contains only mapped streets, public green areas and museums.
-city_extract=root/'raw/osm/osm-tbilisi-selected.json'
-if city_extract.exists():
+city_extract=selected_path
+if city_extract and city_extract.exists():
  city_data=json.loads(city_extract.read_text())
  local_ids={('node',x) for x in nodes}|{('way',x) for x in ways}|{('relation',x) for x in relations}
  added=0
@@ -243,6 +253,13 @@ if city_extract.exists():
    kind='road';props['class']=road_class(tags);geometry={'type':'LineString','coordinates':coords}
    props.update(translated_names(tags));name=props['names']['ru']
    if name:props['name']=name
+  elif osm_type=='way' and (tags.get('waterway') in ('river','stream','canal') or tags.get('natural')=='water'):
+   coords=city_coords(element)
+   if len(coords)<2:continue
+   closed=len(coords)>3 and coords[0]==coords[-1]
+   kind='water';geometry={'type':'Polygon','coordinates':[coords]} if (closed and tags.get('natural')=='water') else {'type':'LineString','coordinates':coords}
+   props.update(translated_names(tags));name=props['names']['ru']
+   if name:props['name']=name
   elif osm_type=='way' and (tags.get('leisure') in ('park','garden') or tags.get('landuse')=='recreation_ground'):
    coords=city_coords(element)
    if len(coords)<4 or coords[0]!=coords[-1]:continue
@@ -265,11 +282,11 @@ if city_extract.exists():
   props['kind']=kind
   features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
  city_progress.finish()
- print('City-wide streets, parks and museums added',added)
+ print(f'City-wide streets, parks and museums added for {city}',added)
 
 # Full Tbilisi building outlines are extracted locally from the regional PBF.
-building_extract=root/'raw/osm/osm-tbilisi-building-outlines.geojson'
-if building_extract.exists():
+building_extract=outlines_path
+if building_extract and building_extract.exists():
  building_data=json.loads(building_extract.read_text())
  local_ids={('way',x) for x in ways}
  added=0
@@ -284,7 +301,7 @@ if building_extract.exists():
   if not geometry or geometry.get('type') not in ('Polygon','MultiPolygon'):continue
   features.append(feature);local_ids.add(('way',osm_id[4:]));added+=1
  building_progress.finish()
- print('Tbilisi-wide building outlines added',added)
+ print(f'{city}-wide building outlines added',added)
 
 # Curated landmark cards may describe objects outside the OSM extracts (atlas
 # seeds, monuments, theatres). Add those as point landmarks once.
@@ -313,9 +330,13 @@ building_outlines=[feature for feature in features if feature['properties'].get(
 basemap_features=[feature for feature in features if feature['properties'].get('kind')!='building']
 write_progress=Progress(2,'write map layers')
 write_progress.start()
-(root/'public/atlas/basemap.geojson').write_text(json.dumps({'type':'FeatureCollection','features':basemap_features},ensure_ascii=False,separators=(',',':')))
-write_progress.advance('basemap.geojson')
-(root/'public/atlas/building-outlines.geojson').write_text(json.dumps({'type':'FeatureCollection','features':building_outlines},ensure_ascii=False,separators=(',',':')))
-write_progress.advance('building-outlines.geojson')
+basemap_out=root/'public/atlas/cities'/city/'basemap.geojson'
+outlines_out=root/'.cache/atlas'/city/'building-outlines.geojson'
+basemap_out.parent.mkdir(parents=True,exist_ok=True)
+outlines_out.parent.mkdir(parents=True,exist_ok=True)
+basemap_out.write_text(json.dumps({'type':'FeatureCollection','features':basemap_features},ensure_ascii=False,separators=(',',':')))
+write_progress.advance(str(basemap_out))
+outlines_out.write_text(json.dumps({'type':'FeatureCollection','features':building_outlines},ensure_ascii=False,separators=(',',':')))
+write_progress.advance(str(outlines_out))
 write_progress.finish()
 print('OSM nodes',len(nodes),'ways',len(ways),'basemap',len(basemap_features),'building outlines',len(building_outlines))

@@ -54,7 +54,6 @@ const COMPONENT_LIMITS = {
   age: 10,
   editorial: 15,
 };
-const TBILISI_BOUNDS = { minLon: 44.3, maxLon: 45.3, minLat: 41.5, maxLat: 42.0 };
 const silent = { write() {} };
 
 function fail(file, message) {
@@ -91,17 +90,12 @@ function requireNullableString(file, value, field) {
   if (value === null || value === undefined) return null;
   return requireString(file, value, field);
 }
-function requireCoordinate(file, value) {
+function requireCoordinate(file, value, bounds) {
   if (!Array.isArray(value) || value.length !== 2 || !value.every(Number.isFinite))
     fail(file, 'coordinates must be [longitude, latitude]');
   const [lon, lat] = value;
-  if (
-    lon < TBILISI_BOUNDS.minLon ||
-    lon > TBILISI_BOUNDS.maxLon ||
-    lat < TBILISI_BOUNDS.minLat ||
-    lat > TBILISI_BOUNDS.maxLat
-  )
-    fail(file, 'coordinates are outside the Tbilisi bounds');
+  if (bounds && (lon < bounds.west || lon > bounds.east || lat < bounds.south || lat > bounds.north))
+    fail(file, 'coordinates are outside the city bounds');
   return [lon, lat];
 }
 function validateHeritage(file, value) {
@@ -270,20 +264,20 @@ export async function assembleLandmarks({
   root = ROOT,
   outFile,
   quiet = false,
+  allowEmpty = false,
+  bounds = null,
 } = {}) {
-  const destination =
-    outFile ??
-    (city === DEFAULT_CITY
-      ? DEFAULT_OUT
-      : path.join(root, 'public', 'atlas', `landmarks-${city}.json`));
+  if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
+  const destination = outFile ?? path.join(root, '.cache', 'atlas', city, 'landmarks.json');
   const sourceDir = path.join(root, 'data', 'landmarks', city);
   let files;
   try {
     files = (await readdir(sourceDir)).filter((name) => name.endsWith('.json')).sort();
   } catch (error) {
-    throw new Error(`${path.relative(root, sourceDir)}: ${error.message}`, { cause: error });
+    if (error?.code === 'ENOENT' && allowEmpty) files = [];
+    else throw new Error(`${path.relative(root, sourceDir)}: ${error.message}`, { cause: error });
   }
-  if (!files.length)
+  if (!files.length && !allowEmpty)
     throw new Error(`${path.relative(root, sourceDir)}: no landmark objects found`);
   const progress = new Progress(files.length, {
     label: `pack ${city} landmarks`,
@@ -331,7 +325,7 @@ export async function assembleLandmarks({
       a.id.localeCompare(b.id),
   );
   const packed = landmarks.map((record, index) =>
-    hydrateLandmark(record, path.join('data', 'landmarks', city, `${record.id}.json`), index + 1),
+    hydrateLandmark(record, path.join('data', 'landmarks', city, `${record.id}.json`), index + 1, bounds),
   );
   // Catch exact duplicates that the id/osmId checks cannot see.
   for (let i = 0; i < packed.length; i++) {
@@ -364,8 +358,18 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.argv.find((value) => value.startsWith(`--${name}=`))?.slice(name.length + 3);
   const city = argument('city') ?? DEFAULT_CITY;
   const out = argument('out');
+  let bounds = null;
+  let allowEmpty = false;
+  try {
+    const { readCityConfig } = await import('./lib/cities.mjs');
+    const config = await readCityConfig(city);
+    bounds = { ...config.map.bounds };
+    allowEmpty = config.allowEmpty;
+  } catch {}
   const result = await assembleLandmarks({
     city,
+    bounds,
+    allowEmpty,
     outFile: out ? path.resolve(ROOT, out) : undefined,
   });
   console.log(

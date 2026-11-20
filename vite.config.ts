@@ -1,66 +1,51 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
-import { assembleAtlas, ROOT as PROJECT_ROOT } from './scripts/assemble-atlas.mjs';
-import { assembleLandmarks } from './scripts/assemble-landmarks.mjs';
-import { buildMapLayers } from './scripts/build-map-layers.mjs';
-import { buildOutlinesBinary } from './scripts/build-outlines-binary.mjs';
-import { createManifest } from './scripts/create-manifest.mjs';
-import { createPhotoThumbs } from './scripts/create-photo-thumbs.mjs';
-import { syncPhotos } from './scripts/sync-photos.mjs';
+import { ROOT as PROJECT_ROOT } from './scripts/lib/cities.mjs';
+import { buildAll } from './scripts/build-all.mjs';
 
-let manifestRevision = 'dev';
+let catalogRevision = 'dev';
 try {
-  manifestRevision =
-    (JSON.parse(readFileSync('public/atlas/manifest.json', 'utf8')) as { revision?: string })
+  catalogRevision =
+    (JSON.parse(readFileSync('public/atlas/cities.json', 'utf8')) as { revision?: string })
       .revision ?? 'dev';
 } catch {}
 
-// Repack data/atlas/*/*.json into the city bundle and refresh the manifest, then
-// reload the page. Vite watches the source directories; generated files live in
-// public/ (and data/aux/<city>.json) and are filtered out here, so the rebuild
-// cannot loop on itself. The raw-dependent map layers rebuild only when their
-// input hash changes.
+const CITY_SOURCES = [
+  'data/atlas/',
+  'data/landmarks/',
+  'data/photos/',
+  'data/aux/',
+  'data/translations/',
+  'raw/osm/',
+];
+
+function cityFromPath(relative: string): string | null {
+  for (const prefix of CITY_SOURCES) {
+    if (!relative.startsWith(prefix)) continue;
+    const rest = relative.slice(prefix.length);
+    const city = rest.split('/')[0];
+    if (city && /^[a-z0-9-]+$/.test(city)) return city;
+  }
+  return null;
+}
+
+// Repack the affected city and refresh its manifest and the catalog, then reload
+// the page. A city config or period-preset change rebuilds every ready city.
 function atlasHotReload(): Plugin {
   let timer: ReturnType<typeof setTimeout> | undefined;
   let running = false;
-  let pending = false;
-  async function rebuild(server: ViteDevServer, reload: boolean) {
+  let pending: string | null | undefined;
+  async function rebuild(server: ViteDevServer, reload: boolean, city: string | null = null) {
     if (running) {
-      pending = true;
+      pending = city;
       return;
     }
     running = true;
     try {
-      try {
-        await buildMapLayers({ quiet: true });
-      } catch (error) {
-        server.config.logger.error(
-          `[atlas] map layers: ${error instanceof Error ? error.message : String(error)}`,
-        );
-      }
-      try {
-        await buildOutlinesBinary({ quiet: true });
-      } catch (error) {
-        server.config.logger.error(
-          `[atlas] outlines binary: ${error instanceof Error ? error.message : String(error)}`,
-        );
-      }
-      try {
-        await createPhotoThumbs({ quiet: true });
-      } catch (error) {
-        server.config.logger.error(
-          `[atlas] photo previews: ${error instanceof Error ? error.message : String(error)}`,
-        );
-      }
-      const result = await assembleAtlas({ quiet: true });
-      const landmarks = await assembleLandmarks({ quiet: true });
-      await syncPhotos({ quiet: true });
-      await createManifest({ quiet: true });
+      await buildAll({ mode: 'build', city: city ?? undefined, quiet: true });
       if (reload) server.ws.send({ type: 'full-reload' });
-      server.config.logger.info(
-        `[atlas] packed ${result.cards.length} objects and ${landmarks.landmarks.length} landmarks`,
-      );
+      server.config.logger.info(`[atlas] rebuilt ${city ?? 'all ready cities'}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       server.config.logger.error(`[atlas] ${message}`);
@@ -71,9 +56,10 @@ function atlasHotReload(): Plugin {
         });
     } finally {
       running = false;
-      if (pending) {
-        pending = false;
-        void rebuild(server, true);
+      if (pending !== undefined) {
+        const next = pending;
+        pending = undefined;
+        void rebuild(server, true, next);
       }
     }
   }
@@ -82,30 +68,31 @@ function atlasHotReload(): Plugin {
     apply: 'serve',
     async configureServer(server) {
       await rebuild(server, false);
-      const sourceRoot = path.join(PROJECT_ROOT, 'data', 'atlas');
-      const landmarksRoot = path.join(PROJECT_ROOT, 'data', 'landmarks');
-      const auxRoot = path.join(PROJECT_ROOT, 'data', 'aux');
-      const photosRoot = path.join(PROJECT_ROOT, 'data', 'photos');
-      const rawRoot = path.join(PROJECT_ROOT, 'raw');
-      server.watcher.add([sourceRoot, landmarksRoot, auxRoot, photosRoot, rawRoot]);
+      const roots = [
+        path.join(PROJECT_ROOT, 'data', 'atlas'),
+        path.join(PROJECT_ROOT, 'data', 'landmarks'),
+        path.join(PROJECT_ROOT, 'data', 'aux'),
+        path.join(PROJECT_ROOT, 'data', 'photos'),
+        path.join(PROJECT_ROOT, 'data', 'translations'),
+        path.join(PROJECT_ROOT, 'data', 'cities'),
+        path.join(PROJECT_ROOT, 'raw'),
+      ];
+      server.watcher.add(roots);
       const schedule = (file: string) => {
         const relative = path.relative(PROJECT_ROOT, file).split(path.sep).join('/');
-        const isSource = relative.startsWith('data/atlas/') && relative.endsWith('.json');
-        const isLandmark = relative.startsWith('data/landmarks/') && relative.endsWith('.json');
-        const isPhoto = relative.startsWith('data/photos/');
-        const isAux =
-          relative.startsWith('data/aux/') &&
-          relative.endsWith('.json') &&
-          relative.split('/').length > 3;
-        const isLayerInput =
-          relative.startsWith('raw/') && /\.(?:xml|json|geojson)$/.test(relative);
-        const isTranslations =
-          relative === 'data/landmark-name-translations.json' ||
-          relative === 'data/basemap-name-translations.json';
-        if (!isSource && !isLandmark && !isPhoto && !isAux && !isLayerInput && !isTranslations)
-          return;
+        const isConfig = relative.startsWith('data/cities/') || relative === 'src/periods.js';
+        const city = cityFromPath(relative);
+        const isSource =
+          (relative.startsWith('data/atlas/') ||
+            relative.startsWith('data/landmarks/') ||
+            relative.startsWith('data/aux/') ||
+            relative.startsWith('data/translations/') ||
+            relative.startsWith('data/photos/') ||
+            relative.startsWith('raw/')) &&
+          /\.(?:json|xml|geojson|webp)$/.test(relative);
+        if (!isConfig && !isSource) return;
         clearTimeout(timer);
-        timer = setTimeout(() => void rebuild(server, true), 120);
+        timer = setTimeout(() => void rebuild(server, true, isConfig ? null : city), 120);
       };
       server.watcher.on('add', schedule);
       server.watcher.on('change', schedule);
@@ -117,7 +104,7 @@ function atlasHotReload(): Plugin {
 
 export default defineConfig({
   base: './',
-  define: { __ATLAS_REVISION__: JSON.stringify(manifestRevision) },
+  define: { __ATLAS_REVISION__: JSON.stringify(catalogRevision) },
   plugins: [atlasHotReload()],
   server: { watch: { usePolling: process.env.VITE_USE_POLLING === 'true' } },
   build: { target: 'es2022' },

@@ -1,41 +1,35 @@
-// Rebuild the published map layers public/atlas/basemap.geojson and
-// public/atlas/building-outlines.geojson from the tracked raw extracts, but
-// only when an input actually changed.
-//
-// scripts/build-data.py is deterministic: the same raw/osm/grid/*.xml,
-// raw/osm/osm-tbilisi-*.{json,geojson}, name translations and the script itself
-// always produce byte-identical layers. Hashing that input set costs ~0.3 s
-// against ~5 s for the Python pass, so the build is skipped unless the hash
-// differs, an output is missing, or --force was passed. The stamp lives in
-// .cache/ and is not committed.
+// Rebuild the published map layers for one city from its tracked raw extracts.
+// The Python pass is deterministic, so a content hash of all inputs decides
+// whether it has to run. Each city has its own stamp and output directory.
 import { createHash } from 'node:crypto';
 import { readFile, readdir, stat, writeFile, rename, mkdir } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { pathToFileURL } from 'node:url';
 import { Progress } from './lib/progress.mjs';
+import { ROOT as PROJECT_ROOT, readCityConfig, readCityConfigs } from './lib/cities.mjs';
 
-export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+export const ROOT = PROJECT_ROOT;
 export const ATLAS = path.join(ROOT, 'public', 'atlas');
-export const STAMP = path.join(ROOT, '.cache', 'map-layers.json');
 const SCRIPT = 'scripts/build-data.py';
-const OUTPUTS = ['basemap.geojson', 'building-outlines.geojson'];
-// Everything build-data.py reads besides raw/osm/grid/*.xml. The optional
-// translations file is hashed as "missing" when absent, so creating it later
-// still invalidates the stamp.
-const EXTRA_INPUTS = [
-  'raw/osm/osm-tbilisi-selected.json',
-  'raw/osm/osm-tbilisi-building-outlines.geojson',
-  'data/landmark-name-translations.json',
-  'data/basemap-name-translations.json',
-  'data/landmark-skip.json',
-  'data/landmark-area-markers.json',
-  SCRIPT,
-];
 const silent = { write() {} };
-// After a failed Python lookup, keep quiet on later rebuilds in the same
-// process (the Vite dev plugin calls this on every data change).
-let pythonUnavailable = false;
+const pythonUnavailable = new Set();
+
+export function cityAtlasDir(city, root = ROOT) {
+  return path.join(root, 'public', 'atlas', 'cities', city);
+}
+
+export function cityOutlineSource(city, root = ROOT) {
+  return path.join(root, '.cache', 'atlas', city, 'building-outlines.geojson');
+}
+
+function stampFile(city, root = ROOT) {
+  return path.join(root, '.cache', 'map-layers', `${city}.json`);
+}
+
+function outputs(city, root = ROOT) {
+  return [path.join(cityAtlasDir(city, root), 'basemap.geojson'), cityOutlineSource(city, root)];
+}
 
 async function fileExists(file) {
   try {
@@ -45,29 +39,44 @@ async function fileExists(file) {
   }
 }
 
-async function inputPaths() {
-  const names = await readdir(path.join(ROOT, 'raw', 'osm', 'grid'));
-  const grid = names
-    .filter((name) => name.startsWith('osm-grid-') && name.endsWith('.xml'))
-    .sort()
-    .map((name) => `raw/osm/grid/${name}`);
-  let landmarks = [];
+async function inputPaths(city, config) {
+  const rawDir = path.join(ROOT, config.build.rawDir);
+  const names = [];
+  if (config.build.gridDir) {
+    const gridDir = path.join(rawDir, config.build.gridDir);
+    try {
+      for (const name of await readdir(gridDir))
+        if (name.endsWith('.xml')) names.push(path.relative(ROOT, path.join(gridDir, name)));
+    } catch (error) {
+      if (error?.code !== 'ENOENT') throw error;
+    }
+  }
+  const addIfPresent = (relative) => names.push(path.relative(ROOT, path.join(rawDir, relative)));
+  addIfPresent(config.build.selected);
+  if (config.build.outlines) addIfPresent(config.build.outlines);
+  const translations = path.join(ROOT, config.build.translationsDir);
+  for (const name of [
+    'landmark-names.json',
+    'basemap-names.json',
+    'landmark-skip.json',
+    'landmark-area-markers.json',
+  ])
+    names.push(path.relative(ROOT, path.join(translations, name)));
   try {
-    const landmarkNames = await readdir(path.join(ROOT, 'data', 'landmarks', 'tbilisi'));
-    landmarks = landmarkNames
-      .filter((name) => name.endsWith('.json'))
-      .sort()
-      .map((name) => `data/landmarks/tbilisi/${name}`);
+    const landmarkDir = path.join(ROOT, 'data', 'landmarks', city);
+    for (const name of await readdir(landmarkDir))
+      if (name.endsWith('.json')) names.push(path.relative(ROOT, path.join(landmarkDir, name)));
   } catch (error) {
     if (error?.code !== 'ENOENT') throw error;
   }
-  return [...grid, ...landmarks, ...EXTRA_INPUTS];
+  names.push(SCRIPT);
+  return [...new Set(names)].sort();
 }
 
 /** SHA-256 over every input path and its content; mtime alone is not trusted. */
-async function inputDigest(stream) {
-  const files = await inputPaths();
-  const progress = new Progress(files.length, { label: 'hash map inputs', stream });
+async function inputDigest(city, config, stream) {
+  const files = await inputPaths(city, config);
+  const progress = new Progress(files.length, { label: `hash ${city} map inputs`, stream });
   progress.start(`${files.length} files`);
   const digest = createHash('sha256');
   for (const relative of files) {
@@ -85,26 +94,26 @@ async function inputDigest(stream) {
   return digest.digest('hex');
 }
 
-async function readStamp() {
+async function readStamp(file) {
   try {
-    return JSON.parse(await readFile(STAMP, 'utf8'));
+    return JSON.parse(await readFile(file, 'utf8'));
   } catch {
     return null;
   }
 }
 
-async function writeStamp(value) {
-  await mkdir(path.dirname(STAMP), { recursive: true });
-  const temporary = `${STAMP}.${process.pid}.tmp`;
+async function writeStamp(file, value) {
+  await mkdir(path.dirname(file), { recursive: true });
+  const temporary = `${file}.${process.pid}.tmp`;
   await writeFile(temporary, `${JSON.stringify(value, null, 2)}\n`);
-  await rename(temporary, STAMP);
+  await rename(temporary, file);
 }
 
-async function runBuildData(quiet) {
+async function runBuildData(city, quiet) {
   const executable = process.env.PYTHON || 'python3';
   let output = '';
   await new Promise((resolve, reject) => {
-    const child = spawn(executable, [SCRIPT], {
+    const child = spawn(executable, [SCRIPT, `--city=${city}`], {
       cwd: ROOT,
       stdio: quiet ? ['ignore', 'pipe', 'pipe'] : 'inherit',
     });
@@ -139,62 +148,93 @@ async function runBuildData(quiet) {
 }
 
 /**
- * Ensure both map layers exist and match the current raw inputs.
+ * Ensure the city's map layers exist and match the current raw inputs.
  * @returns {{rebuilt:boolean,digest:string,reason?:string}}
  */
-export async function buildMapLayers({ fresh = false, quiet = false } = {}) {
+export async function buildMapLayers({ city, fresh = false, quiet = false } = {}) {
+  if (!city) throw new Error('buildMapLayers requires a city');
+  const config = await readCityConfig(city);
+  if (config.status !== 'ready') return { rebuilt: false, digest: '', reason: 'not-ready' };
   const stream = quiet ? silent : process.stderr;
-  const digest = await inputDigest(stream);
+  const digest = await inputDigest(city, config, stream);
+  const stampPath = stampFile(city);
+  const expected = outputs(city);
   const [stamp, missing] = await Promise.all([
-    readStamp(),
-    Promise.all(
-      OUTPUTS.map(async (name) => ({ name, present: await fileExists(path.join(ATLAS, name)) })),
-    ).then((items) => items.filter((item) => !item.present).map((item) => item.name)),
+    readStamp(stampPath),
+    Promise.all(expected.map(async (file) => ({ file, present: await fileExists(file) }))).then(
+      (items) => items.filter((item) => !item.present).map((item) => item.file),
+    ),
   ]);
   const upToDate =
     !fresh && missing.length === 0 && stamp?.version === 1 && stamp.digest === digest;
   if (upToDate) {
-    if (!quiet)
-      console.log(`Слои карты актуальны (${OUTPUTS.join(', ')}), build-data.py пропущен.`);
+    if (!quiet) console.log(`Слои карты ${city} актуальны, build-data.py пропущен.`);
     return { rebuilt: false, digest };
   }
-  if (pythonUnavailable && missing.length === 0) {
-    if (!quiet)
-      console.warn('[map-layers] Python 3 не найден, используются существующие слои карты.');
+  if (pythonUnavailable.has(city) && missing.length === 0) {
+    if (!quiet) console.warn(`[map-layers] Python 3 не найден, используются слои ${city}.`);
     return { rebuilt: false, digest, reason: 'no-python' };
   }
   if (!quiet) {
     const reason = fresh
       ? 'принудительно'
       : missing.length
-        ? `нет ${missing.join(', ')}`
+        ? `нет ${missing.map((file) => path.relative(ROOT, file)).join(', ')}`
         : stamp
           ? 'исходники изменились'
           : 'нет отметки сборки';
-    console.log(`Собираю слои карты: ${reason}.`);
+    console.log(`Собираю слои карты ${city}: ${reason}.`);
   }
   try {
-    await runBuildData(quiet);
+    await runBuildData(city, quiet);
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
-    pythonUnavailable = true;
+    pythonUnavailable.add(city);
     if (missing.length) throw error;
     if (!quiet)
       console.warn(
-        `[map-layers] ${error.message} Использую существующие ${OUTPUTS.join(' и ')}; если raw/ менялся, пересобери слои вручную.`,
+        `[map-layers] ${error.message} Использую существующие слои ${city}; если raw/ менялся, пересобери слои вручную.`,
       );
     return { rebuilt: false, digest, reason: 'no-python' };
   }
   const sizes = {};
-  for (const name of OUTPUTS) sizes[name] = (await stat(path.join(ATLAS, name))).size;
-  await writeStamp({ version: 1, digest, builtAt: new Date().toISOString(), outputs: sizes });
+  for (const file of expected) sizes[path.relative(ROOT, file)] = (await stat(file)).size;
+  await writeStamp(stampPath, {
+    version: 1,
+    city,
+    digest,
+    builtAt: new Date().toISOString(),
+    outputs: sizes,
+  });
   return { rebuilt: true, digest };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
-    const { rebuilt } = await buildMapLayers({ fresh: process.argv.includes('--force') });
-    console.log(rebuilt ? 'Слои карты пересобраны.' : 'Слои карты пересобирать не нужно.');
+    const explicit = process.argv
+      .find((value) => value.startsWith('--city='))
+      ?.slice('--city='.length);
+    const all = process.argv.includes('--all');
+    const { cities } = await readCityConfigs();
+    const selected = explicit
+      ? cities.filter((city) => city.id === explicit)
+      : all
+        ? cities.filter((city) => city.status === 'ready')
+        : [];
+    if (!selected.length) {
+      console.error('Укажите --city=<id> или --all.');
+      process.exitCode = 1;
+    } else {
+      let rebuilt = 0;
+      for (const city of selected) {
+        const result = await buildMapLayers({
+          city: city.id,
+          fresh: process.argv.includes('--force'),
+        });
+        if (result.rebuilt) rebuilt++;
+      }
+      console.log(rebuilt ? 'Слои карты пересобраны.' : 'Слои карты пересобирать не нужно.');
+    }
   } catch (error) {
     console.error(error instanceof Error ? error.message : String(error));
     process.exitCode = 1;
