@@ -1,84 +1,20 @@
-// Границы периодов — исторические вехи Тбилиси. Подпись в интерфейсе — только
-// числовой интервал; name хранит человеческое название периода и не выводится.
-export const periods = [
-  {
-    id: 'medieval',
-    label: 'До 1500',
-    name: 'Средневековье',
-    min: -Infinity,
-    max: 1499,
-    color: '#8f4432',
-  },
-  {
-    id: 'persian',
-    label: '1500–1800',
-    name: 'Позднее средневековье и персидский город',
-    min: 1500,
-    max: 1800,
-    color: '#a85c37',
-  },
-  {
-    id: 'imperial-early',
-    label: '1801–1860',
-    name: 'Раннеимперский',
-    min: 1801,
-    max: 1860,
-    color: '#bd783f',
-  },
-  {
-    id: 'capitalist',
-    label: '1861–1899',
-    name: 'Капиталистический Тбилиси',
-    min: 1861,
-    max: 1899,
-    color: '#c89a3e',
-  },
-  {
-    id: 'imperial-late',
-    label: '1900–1920',
-    name: 'Позднеимперский и первая республика',
-    min: 1900,
-    max: 1920,
-    color: '#a8a845',
-  },
-  {
-    id: 'early-soviet',
-    label: '1921–1932',
-    name: 'Раннесоветский (авангард)',
-    min: 1921,
-    max: 1932,
-    color: '#7c9b4c',
-  },
-  {
-    id: 'stalinist',
-    label: '1933–1954',
-    name: 'Сталинский',
-    min: 1933,
-    max: 1954,
-    color: '#4f8f72',
-  },
-  {
-    id: 'post-stalin',
-    label: '1955–1990',
-    name: 'Постсталинское время',
-    min: 1955,
-    max: 1990,
-    color: '#3f6f96',
-  },
-  {
-    id: 'independence',
-    label: 'С 1991',
-    name: 'Независимая Грузия',
-    min: 1991,
-    max: Infinity,
-    color: '#2f4068',
-  },
-  { id: 'unknown', label: 'Неизвестно', name: null, min: null, max: null, color: '#999b91' },
-];
-export function periodsFor(min, max) {
-  const unknown = periods[periods.length - 1];
+// Historical periods are city data: the UI stores stable ids, not labels.
+import { PERIOD_PRESETS } from './periods.js';
+
+/** @type {import('./types').CityPeriod[]} */
+export const periods = PERIOD_PRESETS.georgia;
+
+/**
+ * @param {number | null} min
+ * @param {number | null} max
+ * @param {import('./types').CityPeriod[]} [table]
+ */
+export function periodsFor(min, max, table = periods) {
+  const unknown = table.find((item) => item.id === 'unknown') ?? table[table.length - 1];
   if (min === null || max === null) return [unknown];
-  const matched = periods.filter((x) => x.min !== null && min <= x.max && max >= x.min);
+  const matched = table.filter(
+    (item) => item.min !== null && item.max !== null && min <= item.max && max >= item.min,
+  );
   return matched.length ? matched : [unknown];
 }
 /**
@@ -86,12 +22,20 @@ export function periodsFor(min, max) {
  * середину: дом 1890–1910 попадает в 1900–1920, а не в 1861–1899.
  * Правые границы включительные, поэтому `max + 1` — это начало следующего года.
  */
-export function period(min, max) {
-  if (min === null || max === null) return periods[periods.length - 1];
+/**
+ * @param {number | null} min
+ * @param {number | null} max
+ * @param {import('./types').CityPeriod[]} [table]
+ */
+export function period(min, max, table = periods) {
+  const unknown = table.find((item) => item.id === 'unknown') ?? table[table.length - 1];
+  if (min === null || max === null) return unknown;
   const middle = (min + max) / 2;
   return (
-    periods.find((x) => x.min !== null && middle >= x.min && middle < x.max + 1) ||
-    periods[periods.length - 1]
+    table.find(
+      (item) =>
+        item.min !== null && item.max !== null && middle >= item.min && middle < item.max + 1,
+    ) || unknown
   );
 }
 export function normalize(s) {

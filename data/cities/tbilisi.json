@@ -1,0 +1,39 @@
+{
+  "id": "tbilisi",
+  "status": "ready",
+  "labels": {
+    "ru": "Тбилиси",
+    "en": "Tbilisi",
+    "ka": "თბილისი",
+    "uk": "Тбілісі"
+  },
+  "country": {
+    "ru": "Грузия",
+    "en": "Georgia",
+    "ka": "საქართველო",
+    "uk": "Грузія"
+  },
+  "periods": "georgia",
+  "map": {
+    "bounds": { "west": 44.6, "south": 41.5, "east": 45.0, "north": 41.9 },
+    "center": { "lat": 41.715, "lng": 44.8 },
+    "zoom": 11.5,
+    "minZoom": 10,
+    "maxZoom": 19,
+    "start": {
+      "mobile": { "center": { "lat": 41.6993, "lng": 44.7975 }, "zoom": 14 },
+      "desktop": { "center": { "lat": 41.698, "lng": 44.796 }, "zoom": 15.5 }
+    }
+  },
+  "build": {
+    "rawDir": "raw/osm/tbilisi",
+    "gridDir": "grid",
+    "selected": "selected.json",
+    "outlines": "building-outlines.geojson",
+    "translationsDir": "data/translations/tbilisi"
+  },
+  "osm": {
+    "boundaryRelationId": 1996871,
+    "pbfUrl": "https://download.geofabrik.de/europe/georgia-latest.osm.pbf"
+  }
+}

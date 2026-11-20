@@ -51,6 +51,7 @@ export interface Photo {
 }
 export interface Building {
   id: string;
+  cityId: string;
   name: string;
   nameKa: string;
   nameEn: string;
@@ -98,7 +99,55 @@ export interface ManifestFile {
   size: number;
   sha256: string;
 }
+export interface CityPeriod {
+  id: string;
+  label: string;
+  name: string | null;
+  min: number | null;
+  max: number | null;
+  color: string;
+}
+export interface CityMap {
+  bounds: { west: number; south: number; east: number; north: number };
+  center: { lat: number; lng: number };
+  zoom: number;
+  minZoom: number;
+  maxZoom: number;
+  start: {
+    mobile: { center: { lat: number; lng: number }; zoom: number };
+    desktop: { center: { lat: number; lng: number }; zoom: number };
+  };
+}
+export interface CityPublic {
+  id: string;
+  status: 'ready' | 'coming-soon';
+  labels: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  country: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  periods: CityPeriod[];
+  map: CityMap;
+  counts?: { buildings: number };
+  manifestRevision?: string;
+}
+export interface CitiesCatalog {
+  version: number;
+  revision: string;
+  defaultCity: string;
+  cities: CityPublic[];
+}
+export interface ManifestEntry {
+  buildings: string;
+  basemap: string;
+  outlines: string;
+}
+export interface CityManifest {
+  version: number;
+  city: string;
+  revision: string;
+  entry: ManifestEntry;
+  files: ManifestFile[];
+}
 export interface Data {
+  city: CityPublic;
   buildings: Building[];
   basemap: GeoJsonObject;
   buildingOutlines: ManifestFile;

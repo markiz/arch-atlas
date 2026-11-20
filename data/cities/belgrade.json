@@ -1,0 +1,38 @@
+{
+  "id": "belgrade",
+  "status": "ready",
+  "allowEmpty": true,
+  "labels": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "ka": "ბელგრადი",
+    "uk": "Белград"
+  },
+  "country": {
+    "ru": "Сербия",
+    "en": "Serbia",
+    "ka": "სერბეთი",
+    "uk": "Сербія"
+  },
+  "periods": "belgrade",
+  "map": {
+    "bounds": { "west": 20.221, "south": 44.688, "east": 20.624, "north": 44.943 },
+    "center": { "lat": 44.817, "lng": 20.456 },
+    "zoom": 11.5,
+    "minZoom": 9,
+    "maxZoom": 19,
+    "start": {
+      "mobile": { "center": { "lat": 44.817, "lng": 20.456 }, "zoom": 12.5 },
+      "desktop": { "center": { "lat": 44.817, "lng": 20.456 }, "zoom": 11.5 }
+    }
+  },
+  "build": {
+    "rawDir": "raw/osm/belgrade",
+    "selected": "selected.json",
+    "translationsDir": "data/translations/belgrade"
+  },
+  "osm": {
+    "boundaryRelationId": 2728438,
+    "pbfUrl": "https://download.geofabrik.de/europe/serbia/serbia-latest.osm.pbf"
+  }
+}
