@@ -116,6 +116,42 @@ def polygon_centroid(ring):
  if abs(double_area)<1e-12:
   return [round(sum(p[0] for p in points)/len(points),6),round(sum(p[1] for p in points)/len(points),6)]
  return [round(cx/(3*double_area),6),round(cy/(3*double_area),6)]
+def _ring_area(ring):
+ return abs(sum(a[0]*b[1]-b[0]*a[1] for a,b in zip(ring,ring[1:])))/2
+def _point_in_ring(point,ring):
+ x,y=point;inside=False
+ for (x1,y1),(x2,y2) in zip(ring,ring[1:]):
+  if (y1>y)!=(y2>y) and x<(x2-x1)*(y-y1)/(y2-y1)+x1:inside=not inside
+ return inside
+def _close_rings(segments):
+ # OSM multipolygon members are open way fragments; a ring exists only when the
+ # fragments join end-to-end. Broken chains are dropped rather than guessed.
+ remaining=[list(segment) for segment in segments if len(segment)>=2];rings=[]
+ while remaining:
+  ring=remaining.pop(0)
+  while ring[0]!=ring[-1]:
+   match=None
+   for index,segment in enumerate(remaining):
+    if segment[0]==ring[-1]:match=(index,segment,False);break
+    if segment[-1]==ring[-1]:match=(index,segment,True);break
+   if not match:break
+   index,segment,reverse=match;remaining.pop(index)
+   ring.extend(reversed(segment[:-1]) if reverse else segment[1:])
+  if len(ring)>=4 and ring[0]==ring[-1] and _ring_area(ring)>1e-13:rings.append(ring)
+ return rings
+def assemble_water_geometry(members):
+ outers=[];inners=[]
+ for role,coords in members:
+  if role=='inner':inners.append(coords)
+  elif role in ('','outer'):outers.append(coords)
+ outer_rings=_close_rings(outers);inner_rings=_close_rings(inners)
+ if not outer_rings:return None
+ unused=list(inner_rings);polygons=[]
+ for outer in outer_rings:
+  holes=[hole for hole in unused if _point_in_ring(hole[0],outer)]
+  for hole in holes:unused.remove(hole)
+  polygons.append([outer]+holes)
+ return {'type':'Polygon','coordinates':polygons[0]} if len(polygons)==1 else {'type':'MultiPolygon','coordinates':polygons}
 def _serbian_word(value, language):
  table=street_words.get(language) or {}
  key=value.lower()
@@ -217,6 +253,32 @@ def translated_names(tags):
    if language in city_languages and isinstance(value,str) and value.strip():names[language]=value
   break
  return result
+def water_relation_feature(element):
+ tags=element.get('tags') or {}
+ if tags.get('natural')!='water' and tags.get('waterway')!='riverbank':return None
+ if tags.get('type') not in (None,'multipolygon'):return None
+ members=[]
+ for member in element.get('members') or []:
+  if member.get('type')!='way' or not member.get('geometry'):continue
+  coords=[[round(float(p['lon']),6),round(float(p['lat']),6)] for p in member['geometry']]
+  members.append((member.get('role') or 'outer',coords))
+ geometry=assemble_water_geometry(members)
+ if not geometry:return None
+ props={'kind':'water','osmId':f"relation/{element.get('id')}"}
+ props.update(translated_names(tags));name=props['names']['ru']
+ if name:props['name']=name
+ return {'type':'Feature','properties':props,'geometry':geometry}
+def water_way_feature(element):
+ tags=element.get('tags') or {}
+ if tags.get('waterway') not in ('river','stream','canal') and tags.get('natural')!='water':return None
+ coords=[[round(float(p['lon']),6),round(float(p['lat']),6)] for p in element.get('geometry') or []]
+ if len(coords)<2:return None
+ closed=len(coords)>3 and coords[0]==coords[-1]
+ geometry={'type':'Polygon','coordinates':[coords]} if (closed and tags.get('natural')=='water') else {'type':'LineString','coordinates':coords}
+ props={'kind':'water','osmId':f"way/{element.get('id')}"}
+ props.update(translated_names(tags));name=props['names']['ru']
+ if name:props['name']=name
+ return {'type':'Feature','properties':props,'geometry':geometry}
 node_progress=Progress(len(node_tags),'scan landmark nodes')
 node_progress.start()
 for index,(nid,tags) in enumerate(node_tags.items(),1):
@@ -269,6 +331,7 @@ for index,(wid,w) in enumerate(ways.items(),1):
   props['osmId']=f'way/{wid}'
   props.update(translated_names(tags));name=props['names']['ru']
   if name:props['name']=name
+ elif kind=='water':props['osmId']=f'way/{wid}'
  # Exclude extremely small generic building footprints to keep the static map light.
  if kind=='building':
   xs=[p[0] for p in coords];ys=[p[1] for p in coords]
@@ -298,6 +361,9 @@ if city_extract and city_extract.exists():
   if index%500==0:city_progress.update(index,f'{added} features')
   osm_type=element.get('type');osm_id=element.get('id')
   if (osm_type,str(osm_id)) in local_ids:continue
+  if osm_type=='relation':
+   water_feature=water_relation_feature(element)
+   if water_feature:features.append(water_feature);added+=1;continue
   tags=element.get('tags',{});kind=None;geometry=None;props={'osmId':f'{osm_type}/{osm_id}'}
   if osm_type=='way' and road_class(tags):
    road_kind=road_class(tags)
@@ -311,12 +377,9 @@ if city_extract and city_extract.exists():
    props.update(translated_names(tags));name=props['names']['ru']
    if name:props['name']=name
   elif osm_type=='way' and (tags.get('waterway') in ('river','stream','canal') or tags.get('natural')=='water'):
-   coords=city_coords(element)
-   if len(coords)<2:continue
-   closed=len(coords)>3 and coords[0]==coords[-1]
-   kind='water';geometry={'type':'Polygon','coordinates':[coords]} if (closed and tags.get('natural')=='water') else {'type':'LineString','coordinates':coords}
-   props.update(translated_names(tags));name=props['names']['ru']
-   if name:props['name']=name
+   water_feature=water_way_feature(element)
+   if water_feature:features.append(water_feature);added+=1
+   continue
   elif osm_type=='way' and (tags.get('leisure') in ('park','garden') or tags.get('landuse')=='recreation_ground'):
    coords=city_coords(element)
    if len(coords)<4 or coords[0]!=coords[-1]:continue
@@ -340,6 +403,47 @@ if city_extract and city_extract.exists():
   features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
  city_progress.finish()
  print(f'City-wide streets, parks and museums added for {city}',added)
+
+# Riverbanks and larger water bodies are multipolygons in OSM: the tags sit on
+# the relation while its member ways are untagged. A way-only extract cannot
+# see them, so the fetch saves them separately and the builder stitches the
+# member geometry into filled polygons.
+water_relations_path=raw_dir/'water-relations.json'
+if water_relations_path.exists():
+ water_relations=json.loads(water_relations_path.read_text()).get('elements',[])
+ existing_water_ids={feature['properties'].get('osmId') for feature in features if feature['properties'].get('kind')=='water'}
+ added_water_relations=0
+ water_progress=Progress(len(water_relations),'add water multipolygons')
+ water_progress.start()
+ for index,element in enumerate(water_relations,1):
+  if index%100==0:water_progress.update(index,f'{added_water_relations} polygons')
+  if element.get('type')!='relation':continue
+  if f"relation/{element.get('id')}" in existing_water_ids:continue
+  feature=water_relation_feature(element)
+  if not feature:continue
+  features.append(feature);existing_water_ids.add(feature['properties']['osmId']);added_water_relations+=1
+ water_progress.finish()
+ print(f'Water multipolygons added for {city}',added_water_relations)
+
+# Grid-based cities may have a city-wide extract without water at all. The
+# optional water-ways file fills that gap without refetching streets; ids
+# already present (from the grid or selected.json) are skipped.
+water_ways_path=raw_dir/'water-ways.json'
+if water_ways_path.exists():
+ water_ways=json.loads(water_ways_path.read_text()).get('elements',[])
+ existing_water_ids={feature['properties'].get('osmId') for feature in features if feature['properties'].get('kind')=='water'}
+ added_water_ways=0
+ ways_progress=Progress(len(water_ways),'add water ways')
+ ways_progress.start()
+ for index,element in enumerate(water_ways,1):
+  if index%200==0:ways_progress.update(index,f'{added_water_ways} features')
+  if element.get('type')!='way':continue
+  if f"way/{element.get('id')}" in existing_water_ids:continue
+  feature=water_way_feature(element)
+  if not feature:continue
+  features.append(feature);existing_water_ids.add(feature['properties']['osmId']);added_water_ways+=1
+ ways_progress.finish()
+ print(f'Water ways added for {city}',added_water_ways)
 
 # Full Tbilisi building outlines are extracted locally from the regional PBF.
 building_extract=outlines_path

@@ -1,12 +1,1 @@
-{
-  "city": "belgrade",
-  "provider": "OpenStreetMap Overpass API",
-  "endpoint": "https://overpass-api.de/api/interpreter",
-  "query": "[out:json][timeout:180];\nrel(2728438);map_to_area->.a;\n(\n  way(area.a)[\"waterway\"~\"river|stream|canal|drain\"];\n  way(area.a)[\"natural\"=\"water\"];\n  way(area.a)[\"water\"=\"river\"];\n  way(area.a)[\"highway\"];\n  way(area.a)[\"leisure\"~\"park|garden\"];\n  way(area.a)[\"landuse\"=\"recreation_ground\"];\n);\nout geom;",
-  "boundary": "relation/2728438",
-  "downloadedAt": "2026-11-20T07:58:35.552Z",
-  "osmTimestamp": "2026-11-20T07:57:21Z",
-  "elements": 61358,
-  "license": "Open Database License (ODbL)",
-  "url": "https://www.openstreetmap.org/copyright"
-}
+{"city":"belgrade","provider":"OpenStreetMap Overpass API","endpoint":"https://overpass-api.de/api/interpreter","query":"[out:json][timeout:180];\nrel(2728438);map_to_area->.a;\n(\n  way(area.a)[\"waterway\"~\"river|stream|canal|drain\"];\n  way(area.a)[\"natural\"=\"water\"];\n  way(area.a)[\"water\"=\"river\"];\n  way(area.a)[\"highway\"];\n  way(area.a)[\"leisure\"~\"park|garden\"];\n  way(area.a)[\"landuse\"=\"recreation_ground\"];\n);\nout geom;","boundary":"relation/2728438","downloadedAt":"2026-11-20T07:58:35.552Z","osmTimestamp":"2026-11-20T07:57:21Z","elements":61358,"license":"Open Database License (ODbL)","url":"https://www.openstreetmap.org/copyright","waterRelations":{"endpoint":"https://overpass-api.de/api/interpreter","query":"[out:json][timeout:120];\nrel(2728438);map_to_area->.a;\n(\n  rel(area.a)[\"natural\"=\"water\"];\n  rel(area.a)[\"waterway\"=\"riverbank\"];\n);\nout geom;","downloadedAt":"2026-11-20T15:11:47.677Z","osmTimestamp":"2026-11-20T15:10:21Z","elements":15,"file":"water-relations.json"}}

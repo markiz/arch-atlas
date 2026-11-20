@@ -51,21 +51,32 @@ data/atlas/<city>/<id>.json
 data/landmarks/<city>/<id>.json
 data/aux/<city>/{styles,architects,districts,year-labels,types}.json
 data/translations/<city>/{landmark-names,basemap-names,landmark-skip,landmark-area-markers,street-words}.json
-raw/osm/<city>/{grid/*.xml, selected.json, building-outlines.geojson, source.json}
+raw/osm/<city>/{grid/*.xml, selected.json, water-relations.json, water-ways.json, building-outlines.geojson, source.json}
 data/photos/<city>/<sha256>.webp + <sha256>.metadata.json
 ```
 
-`raw/osm/<city>/source.json` фиксирует endpoint, запрос, время загрузки, OSM timestamp, границу и лицензию. Сборка использует только сохранённые файлы и не ходит в сеть.
+`raw/osm/<city>/source.json` фиксирует endpoint, запросы, время загрузки, OSM timestamp, границу и лицензию. Сборка использует только сохранённые файлы и не ходит в сеть.
 
 ### OSM
 
 ```sh
-node scripts/fetch-osm-city.mjs --city=<city>              # Overpass: улицы, вода, зелень
-node scripts/fetch-osm-city.mjs --city=<city> --layer=water # только водные объекты
+node scripts/fetch-osm-city.mjs --city=<city>                    # улицы, вода, зелень и водные мультиполигоны
+node scripts/fetch-osm-city.mjs --city=<city> --layer=water      # только водные объекты
+node scripts/fetch-osm-city.mjs --city=<city> --layer=relations  # только водные мультиполигоны
+node scripts/fetch-osm-city.mjs --city=<city> --layer=water-ways # только водные way
+node scripts/fetch-osm-city.mjs --city=<city> --endpoint=<url>   # конкретный инстанс Overpass
 python3 scripts/extract-building-outlines.py --city=<city> --pbf=<file.osm.pbf>
 ```
 
-Загрузчик использует `User-Agent: ArchAtlas/1.0`, кэширует ответ и сохраняет provenance. Для контуров зданий нужны PyOsmium и Shapely; региональный PBF берётся с Geofabrik. Сетка `grid/` опциональна: она даёт дополнительную детализацию центра, но не обязательна для города.
+Загрузчик использует `User-Agent: ArchAtlas/1.0` и сохраняет provenance. Публичные инстансы Overpass периодически перегружены, поэтому запрос идёт по списку эндпоинтов, а в `source.json` попадает тот, который ответил; список можно сузить флагом `--endpoint`.
+
+Вода в OSM бывает двух видов: замкнутый way с тегами `natural=water` и мультиполигон (`relation` с `natural=water` или `waterway=riverbank`), у которого теги стоят на отношении, а way-члены не размечены. Второй вид не попадает в выборку `way(...)`, поэтому загрузчик делает отдельный запрос и сохраняет ответ в `water-relations.json`; `--layer=relations` обновляет только его, не перекачивая улицы. `source.json` описывает оба запроса и их OSM timestamp.
+
+Город, собранный из сетки `grid/`, может иметь городскую выборку без воды: сетка покрывает только центр, а `selected.json` бывает без водных way. Тогда `--layer=water-ways` сохраняет водные way города в `water-ways.json`; сборщик пропускает объекты, которые уже пришли из сетки или `selected.json`, поэтому дублей нет. Для городов с полной выборкой этот файл не нужен.
+
+`build-data.py` сшивает членов отношения по ролям `outer`/`inner` в `Polygon`/`MultiPolygon`: незамкнутые цепочки отбрасываются, внутренние кольца становятся дырками (острова). Замкнутые water-way остаются отдельными полигонами, осевые `waterway=*` — линиями. Если геометрию собрать нельзя, объект не добавляется: выдуманных контуров нет.
+
+Для контуров зданий нужны PyOsmium и Shapely; региональный PBF берётся с Geofabrik. Сетка `grid/` опциональна: она даёт дополнительную детализацию центра, но не обязательна для города.
 
 ## Порядок подключения
 

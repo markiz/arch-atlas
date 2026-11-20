@@ -888,8 +888,10 @@ export class AtlasCanvasMap {
     if (this.visibility.water && boxes) {
       // Water is a mix of polygons and river centerlines. LineStrings must be
       // stroked without filling: a grouped path would close each centerline back
-      // to its first point and paint a phantom polygon. Draw water
-      // feature-by-feature in source order with per-geometry fill semantics.
+      // to its first point and paint a phantom polygon. Polygons stay unstroked
+      // and opaque: OSM splits a river into touching multipolygons, so a
+      // per-polygon stroke would draw seams across the channel and a translucent
+      // fill would darken their overlaps.
       for (const index of this.baseGroups.water) {
         if (!this.boxVisible(boxes, index, view)) continue;
         const geometry = this.baseFeatures[index].geometry;
@@ -897,8 +899,9 @@ export class AtlasCanvasMap {
         context.beginPath();
         addGeometry(geometry, context);
         if (geometry.type === 'Polygon' || geometry.type === 'MultiPolygon') {
-          context.fillStyle = 'rgba(205,222,221,.8)';
+          context.fillStyle = '#d3e1de';
           context.fill('evenodd');
+          continue;
         }
         context.strokeStyle = '#c8dbd9';
         context.lineWidth = 3;

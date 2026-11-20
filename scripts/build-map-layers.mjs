@@ -12,6 +12,7 @@ import { ROOT as PROJECT_ROOT, readCityConfig, readCityConfigs } from './lib/cit
 export const ROOT = PROJECT_ROOT;
 export const ATLAS = path.join(ROOT, 'public', 'atlas');
 const SCRIPT = 'scripts/build-data.py';
+const WATER_FILES = ['water-relations.json', 'water-ways.json'];
 const silent = { write() {} };
 const pythonUnavailable = new Set();
 
@@ -53,6 +54,7 @@ async function inputPaths(city, config) {
   }
   const addIfPresent = (relative) => names.push(path.relative(ROOT, path.join(rawDir, relative)));
   addIfPresent(config.build.selected);
+  for (const file of WATER_FILES) addIfPresent(file);
   if (config.build.outlines) addIfPresent(config.build.outlines);
   const translations = path.join(ROOT, config.build.translationsDir);
   for (const name of [
