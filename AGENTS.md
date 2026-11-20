@@ -49,7 +49,7 @@ README описывает запуск, состав репозитория и �
 
 ## Что за проект
 
-- React + TypeScript + Vite; точка входа — `src/App.tsx`, карта — `src/MapView.tsx` на собственном Canvas-движке `src/map/AtlasCanvasMap.ts`.
+- Preact + TypeScript + Vite; точка входа — `src/App.tsx`, карта — `src/MapView.tsx` на собственном Canvas-движке `src/map/AtlasCanvasMap.ts`.
 - `vite.config.ts` задаёт `base: './'`, чтобы `dist/` работал в подкаталоге GitHub Pages.
 - Исходные карточки — `data/atlas/<city>/<id>.json`, по одному JSON на объект. Справочники стилей, архитекторов, районов и подписей дат — `data/aux/<city>/*.json`; они склеиваются в генерируемый `data/aux/<city>.json`.
 - Ориентиры — `data/landmarks/<city>/<id>.json`.

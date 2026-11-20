@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import type { Geometry } from 'geojson';
 import type { Building } from './types';
 import { useI18n } from './i18n';
@@ -409,7 +409,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={showRoads}
-                  onChange={(event) => setShowRoads(event.target.checked)}
+                  onChange={(event) => setShowRoads(event.currentTarget.checked)}
                 />{' '}
                 {t('Улицы')}
               </label>
@@ -417,7 +417,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={detailedStreets}
-                  onChange={(event) => setDetailedStreets(event.target.checked)}
+                  onChange={(event) => setDetailedStreets(event.currentTarget.checked)}
                 />{' '}
                 {t('Названия улиц')}
               </label>
@@ -425,7 +425,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={showGreen}
-                  onChange={(event) => setShowGreen(event.target.checked)}
+                  onChange={(event) => setShowGreen(event.currentTarget.checked)}
                 />{' '}
                 {t('Парки и природные зоны')}
               </label>
@@ -433,7 +433,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={showWater}
-                  onChange={(event) => setShowWater(event.target.checked)}
+                  onChange={(event) => setShowWater(event.currentTarget.checked)}
                 />{' '}
                 {t('Реки и водоёмы')}
               </label>
@@ -442,7 +442,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={showLandmarks}
-                  onChange={(event) => setShowLandmarks(event.target.checked)}
+                  onChange={(event) => setShowLandmarks(event.currentTarget.checked)}
                 />{' '}
                 {t('Достопримечательности')}
               </label>
@@ -450,7 +450,7 @@ export default function MapView({
                 <input
                   type="checkbox"
                   checked={showBuildings}
-                  onChange={(event) => setShowBuildings(event.target.checked)}
+                  onChange={(event) => setShowBuildings(event.currentTarget.checked)}
                 />{' '}
                 {t('Силуэты зданий')}
                 {buildingLayerLoading && ` (${t('Загружается…')})`}

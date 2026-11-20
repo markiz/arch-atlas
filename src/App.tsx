@@ -1,5 +1,5 @@
+import { Fragment, type ComponentChild } from 'preact';
 import {
-  Fragment,
   useCallback,
   useEffect,
   useId,
@@ -7,8 +7,8 @@ import {
   useMemo,
   useRef,
   useState,
-} from 'react';
-import { createPortal } from 'react-dom';
+} from 'preact/hooks';
+import { createPortal } from 'preact/compat';
 import type { FeatureCollection } from 'geojson';
 import type { Building, CitiesCatalog, CityPublic, Data, Filters, Photo } from './types';
 import { filterBuildings, normalize, period, periodsFor, styleEntries } from './domain';
@@ -52,7 +52,7 @@ function Icon({ name, size = 18 }: { name: string; size?: number }) {
     strokeLinejoin: 'round' as const,
     'aria-hidden': true as const,
   };
-  const paths: Record<string, React.ReactNode> = {
+  const paths: Record<string, ComponentChild> = {
     search: (
       <>
         <circle cx="10.8" cy="10.8" r="6.5" />
@@ -372,7 +372,7 @@ function MultiSelect({
             <input
               type="search"
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => setQuery(event.currentTarget.value)}
               placeholder={t('Найти…')}
               aria-label={t('Поиск: ') + t(label)}
             />
@@ -479,7 +479,9 @@ function PhotoLightbox({
     return () => window.removeEventListener('resize', resize);
   }, [src, gestures.zoomed]);
   const closeButton = useRef<HTMLButtonElement>(null);
-  useEffect(() => {
+  // Layout effect: the dialog takes over the keyboard immediately after the
+  // portal commits, so Escape cannot slip through before the listener exists.
+  useLayoutEffect(() => {
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     closeButton.current?.focus();
@@ -866,6 +868,12 @@ function Inspector({
   const architects = building.architectsByLanguage?.[language] || building.architects;
   const [photoIndex, setPhotoIndex] = useState(0),
     [lightboxOpen, setLightboxOpen] = useState(false);
+  // The window keydown listener is subscribed once per building, so it reads
+  // the current lightbox state from a ref: an effect closure lags behind on
+  // runtimes that flush passive effects after paint, and Escape pressed right
+  // after opening a photo would close the card too.
+  const lightboxOpenRef = useRef(lightboxOpen);
+  lightboxOpenRef.current = lightboxOpen;
   const images = photos.assets;
   const current = images[photoIndex] ?? images[0];
   const previousAsset =
@@ -893,11 +901,11 @@ function Inspector({
   }, [building.id]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !lightboxOpen) onClose();
+      if (e.key === 'Escape' && !lightboxOpenRef.current) onClose();
     };
     window.addEventListener('keydown', key);
     return () => window.removeEventListener('keydown', key);
-  }, [building.id, lightboxOpen]);
+  }, [building.id]);
   const googleMapsQuery = encodeURIComponent(
     `${building.nameEn || building.name}, ${building.addresses?.en || ''}, ${city.labels.en}, ${city.country.en}`,
   );
@@ -1453,7 +1461,7 @@ function AppContent({
             className="city-select"
             aria-label={t('ГОРОД')}
             value={city.id}
-            onChange={(e) => onCityChange(e.target.value)}
+            onChange={(e) => onCityChange(e.currentTarget.value)}
           >
             {cities.map((item) => (
               <option key={item.id} value={item.id}>
@@ -1471,7 +1479,7 @@ function AppContent({
             className="city-select language-select"
             aria-label={t('ЯЗЫК')}
             value={language}
-            onChange={(e) => setLanguage(e.target.value as CityLanguage)}
+            onChange={(e) => setLanguage(e.currentTarget.value as CityLanguage)}
           >
             <LanguageOptions city={city} />
           </select>
@@ -1485,7 +1493,7 @@ function AppContent({
               <input
                 aria-label={t('Поиск по атласу')}
                 value={filters.query}
-                onChange={(e) => update('query', e.target.value)}
+                onChange={(e) => update('query', e.currentTarget.value)}
                 placeholder={t('Название, архитектор, адрес…')}
               />
               {filters.query && (
@@ -1543,7 +1551,7 @@ function AppContent({
                   type="number"
                   placeholder={t('Например, 1800')}
                   value={filters.from}
-                  onChange={(e) => update('from', e.target.value)}
+                  onChange={(e) => update('from', e.currentTarget.value)}
                 />
               </div>
               <div>
@@ -1553,7 +1561,7 @@ function AppContent({
                   type="number"
                   placeholder={t('Например, 1920')}
                   value={filters.to}
-                  onChange={(e) => update('to', e.target.value)}
+                  onChange={(e) => update('to', e.currentTarget.value)}
                 />
               </div>
               <MultiSelect
@@ -1577,7 +1585,7 @@ function AppContent({
                   <input
                     type="checkbox"
                     checked={filters.interestingOnly}
-                    onChange={(e) => update('interestingOnly', e.target.checked)}
+                    onChange={(e) => update('interestingOnly', e.currentTarget.checked)}
                   />
                   <span>{t('Только интересные')}</span>
                 </label>
@@ -1652,7 +1660,7 @@ function AppContent({
                     </div>
                     <label>
                       {t('Сортировка')}{' '}
-                      <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                      <select value={sort} onChange={(e) => setSort(e.currentTarget.value)}>
                         <option value="name">{t('По названию')}</option>
                         <option value="old">{t('Сначала старые')}</option>
                         <option value="new">{t('Сначала новые')}</option>
@@ -1772,7 +1780,7 @@ function AppContent({
             id="city-mobile"
             className="mobile-menu-select"
             value={city.id}
-            onChange={(e) => onCityChange(e.target.value)}
+            onChange={(e) => onCityChange(e.currentTarget.value)}
           >
             {cities.map((item) => (
               <option key={item.id} value={item.id}>
@@ -1787,7 +1795,7 @@ function AppContent({
             id="language-mobile"
             className="mobile-menu-select"
             value={language}
-            onChange={(e) => setLanguage(e.target.value as CityLanguage)}
+            onChange={(e) => setLanguage(e.currentTarget.value as CityLanguage)}
           >
             <LanguageOptions city={city} />
           </select>

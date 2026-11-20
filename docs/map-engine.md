@@ -6,7 +6,7 @@
 
 ## Файлы
 
-- `src/MapView.tsx` — React-обвязка карты: загрузка контуров зданий, слои,
+- `src/MapView.tsx` — Preact-обвязка карты: загрузка контуров зданий, слои,
   кнопки, геолокация.
 - `src/map/AtlasCanvasMap.ts` — Canvas-движок.
 - `src/map/geometry.ts` — Web Mercator, bbox, hit-test полигонов.

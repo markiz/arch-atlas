@@ -1,4 +1,5 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'preact';
+import { useContext } from 'preact/hooks';
 import type { Language } from './languages.ts';
 
 export type { Language } from './languages.ts';

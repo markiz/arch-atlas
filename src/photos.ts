@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import type { Building, ManifestFile, Photo } from './types';
 import { rankPhotos } from './photo-ranking.js';
 

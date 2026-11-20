@@ -1,10 +1,5 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import type {
-  CSSProperties,
-  MouseEvent as ReactMouseEvent,
-  PointerEvent as ReactPointerEvent,
-  RefObject,
-} from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks';
+import type { CSSProperties, RefObject, TargetedMouseEvent, TargetedPointerEvent } from 'preact';
 
 /** Pixels a finger must travel before the gesture picks an axis. */
 const AXIS_LOCK = 7;
@@ -66,7 +61,7 @@ function useClickGuard() {
     suppressed.current = false;
     clear();
   }, []);
-  const consume = useCallback((event: ReactMouseEvent) => {
+  const consume = useCallback((event: TargetedMouseEvent<HTMLElement>) => {
     if (!suppressed.current || event.detail === 0) return false;
     suppressed.current = false;
     clear();
@@ -156,7 +151,7 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey, onTap }: 
     }, 0);
   };
 
-  const onPointerDown = (event: ReactPointerEvent<HTMLElement>) => {
+  const onPointerDown = (event: TargetedPointerEvent<HTMLElement>) => {
     if (event.pointerType === 'mouse' || session.current) return;
     // A new press ends the click window of the previous gesture.
     reset();
@@ -182,7 +177,7 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey, onTap }: 
     };
   };
 
-  const onPointerMove = (event: ReactPointerEvent<HTMLElement>) => {
+  const onPointerMove = (event: TargetedPointerEvent<HTMLElement>) => {
     const candidate = pendingTap.current;
     if (candidate && candidate.pointerId === event.pointerId) {
       const dx = event.clientX - candidate.startX;
@@ -205,7 +200,7 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey, onTap }: 
     setOffset(dx);
   };
 
-  const finish = (event: ReactPointerEvent<HTMLElement>, cancelled: boolean) => {
+  const finish = (event: TargetedPointerEvent<HTMLElement>, cancelled: boolean) => {
     const candidate = pendingTap.current;
     if (candidate && candidate.pointerId === event.pointerId) {
       pendingTap.current = null;
@@ -249,8 +244,8 @@ export function usePhotoSwipe({ enabled, onNext, onPrevious, resetKey, onTap }: 
     animating,
     onPointerDown,
     onPointerMove,
-    onPointerUp: (event: ReactPointerEvent<HTMLElement>) => finish(event, false),
-    onPointerCancel: (event: ReactPointerEvent<HTMLElement>) => finish(event, true),
+    onPointerUp: (event: TargetedPointerEvent<HTMLElement>) => finish(event, false),
+    onPointerCancel: (event: TargetedPointerEvent<HTMLElement>) => finish(event, true),
     consumeClick: consume,
   };
 }
@@ -352,7 +347,7 @@ export function usePhotoLightboxGestures({
     setAnimating(false);
   }, [resetKey]);
 
-  const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const onPointerDown = (event: TargetedPointerEvent<HTMLDivElement>) => {
     if (event.pointerType === 'mouse') return;
     if (event.button !== 0) return;
     // A new press ends the click window of the previous gesture, even while the
@@ -404,7 +399,7 @@ export function usePhotoLightboxGestures({
     }
   };
 
-  const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const onPointerMove = (event: TargetedPointerEvent<HTMLDivElement>) => {
     if (!pointers.current.has(event.pointerId)) return;
     pointers.current.set(event.pointerId, { x: event.clientX, y: event.clientY });
     const current = session.current;
@@ -575,9 +570,9 @@ export function usePhotoLightboxGestures({
     sliding,
     onPointerDown,
     onPointerMove,
-    onPointerUp: (event: ReactPointerEvent<HTMLDivElement>) =>
+    onPointerUp: (event: TargetedPointerEvent<HTMLDivElement>) =>
       finishPointer(event.pointerId, false),
-    onPointerCancel: (event: ReactPointerEvent<HTMLDivElement>) =>
+    onPointerCancel: (event: TargetedPointerEvent<HTMLDivElement>) =>
       finishPointer(event.pointerId, true),
     consumeClick: consume,
   };
