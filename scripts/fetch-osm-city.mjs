@@ -14,9 +14,7 @@ function selectedQuery(relationId, layer) {
   way(area.a)["water"="river"];`;
   const city = `  way(area.a)["highway"];
   way(area.a)["leisure"~"park|garden"];
-  way(area.a)["landuse"="recreation_ground"];
-  way(area.a)["tourism"="museum"];
-  way(area.a)["amenity"="museum"];`;
+  way(area.a)["landuse"="recreation_ground"];`;
   return `[out:json][timeout:180];
 rel(${relationId});map_to_area->.a;
 (
@@ -57,8 +55,17 @@ export async function fetchCityOsm({ city, layer = 'city', quiet = false } = {})
   const relationId = config.osm?.boundaryRelationId;
   if (!relationId) throw new Error(`city ${city} has no osm.boundaryRelationId`);
   const query = selectedQuery(relationId, layer);
-  if (!quiet) console.log(`Overpass: ${city}, relation/${relationId}`);
-  const response = await fetchOverpass(query);
+  if (!quiet) console.log(`Overpass: ${city}, relation/${relationId}, layer ${layer}`);
+  const started = Date.now();
+  const heartbeat = setInterval(() => {
+    if (!quiet) console.log(`  жду ответ Overpass, ${Math.round((Date.now() - started) / 1000)} с`);
+  }, 30_000);
+  let response;
+  try {
+    response = await fetchOverpass(query);
+  } finally {
+    clearInterval(heartbeat);
+  }
   const elements = Array.isArray(response.elements) ? response.elements : [];
   const rawDir = path.join(ROOT, config.build.rawDir);
   await mkdir(rawDir, { recursive: true });

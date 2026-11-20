@@ -149,6 +149,7 @@ export function validateCityConfig(config, id, file = `<${id}>`) {
         config.build.outlines === undefined || config.build.outlines === null
           ? null
           : requireRelative(config.build.outlines, file, 'build.outlines'),
+      skipUnnamedMinorRoads: config.build.skipUnnamedMinorRoads === true,
     };
   } else if (config.build !== undefined) {
     build = config.build;

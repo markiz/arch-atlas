@@ -2,11 +2,11 @@
   "city": "belgrade",
   "provider": "OpenStreetMap Overpass API",
   "endpoint": "https://overpass-api.de/api/interpreter",
-  "query": "[out:json][timeout:180];\nrel(2728438);map_to_area->.a;\n(\n  way(area.a)[\"waterway\"~\"river|stream|canal|drain\"];\n  way(area.a)[\"natural\"=\"water\"];\n  way(area.a)[\"water\"=\"river\"];\n);\nout geom;",
+  "query": "[out:json][timeout:180];\nrel(2728438);map_to_area->.a;\n(\n  way(area.a)[\"waterway\"~\"river|stream|canal|drain\"];\n  way(area.a)[\"natural\"=\"water\"];\n  way(area.a)[\"water\"=\"river\"];\n  way(area.a)[\"highway\"];\n  way(area.a)[\"leisure\"~\"park|garden\"];\n  way(area.a)[\"landuse\"=\"recreation_ground\"];\n);\nout geom;",
   "boundary": "relation/2728438",
-  "downloadedAt": "2026-11-19T22:48:21.162Z",
-  "osmTimestamp": "2026-11-19T22:46:46Z",
-  "elements": 575,
+  "downloadedAt": "2026-11-20T07:58:35.552Z",
+  "osmTimestamp": "2026-11-20T07:57:21Z",
+  "elements": 61358,
   "license": "Open Database License (ODbL)",
   "url": "https://www.openstreetmap.org/copyright"
 }

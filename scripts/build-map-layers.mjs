@@ -70,6 +70,7 @@ async function inputPaths(city, config) {
     if (error?.code !== 'ENOENT') throw error;
   }
   names.push(SCRIPT);
+  names.push(path.relative(ROOT, path.join(ROOT, 'data', 'cities', `${city}.json`)));
   return [...new Set(names)].sort();
 }
 

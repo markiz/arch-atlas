@@ -58,7 +58,7 @@ data/photos/<city>/<sha256>.webp + <sha256>.metadata.json
 ### OSM
 
 ```sh
-node scripts/fetch-osm-city.mjs --city=<city>              # Overpass: улицы, вода, зелень, музеи
+node scripts/fetch-osm-city.mjs --city=<city>              # Overpass: улицы, вода, зелень
 node scripts/fetch-osm-city.mjs --city=<city> --layer=water # только водные объекты
 python3 scripts/extract-building-outlines.py --city=<city> --pbf=<file.osm.pbf>
 ```

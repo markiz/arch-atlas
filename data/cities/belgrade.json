@@ -29,7 +29,8 @@
   "build": {
     "rawDir": "raw/osm/belgrade",
     "selected": "selected.json",
-    "translationsDir": "data/translations/belgrade"
+    "translationsDir": "data/translations/belgrade",
+    "skipUnnamedMinorRoads": true
   },
   "osm": {
     "boundaryRelationId": 2728438,

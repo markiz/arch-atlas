@@ -248,9 +248,14 @@ if city_extract and city_extract.exists():
   if (osm_type,str(osm_id)) in local_ids:continue
   tags=element.get('tags',{});kind=None;geometry=None;props={'osmId':f'{osm_type}/{osm_id}'}
   if osm_type=='way' and road_class(tags):
+   road_kind=road_class(tags)
+   # Unnamed service lanes, footways and paths add visual noise without names;
+   # keep them only when OSM actually gives the street a name to label.
+   if build_config.get('skipUnnamedMinorRoads') and road_kind in ('service','footway','path','steps') and not any(tags.get(key) for key in ('name','name:en','name:ru','name:sr')):
+    continue
    coords=city_coords(element)
    if len(coords)<2:continue
-   kind='road';props['class']=road_class(tags);geometry={'type':'LineString','coordinates':coords}
+   kind='road';props['class']=road_kind;geometry={'type':'LineString','coordinates':coords}
    props.update(translated_names(tags));name=props['names']['ru']
    if name:props['name']=name
   elif osm_type=='way' and (tags.get('waterway') in ('river','stream','canal') or tags.get('natural')=='water'):
