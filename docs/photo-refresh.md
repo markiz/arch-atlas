@@ -115,7 +115,7 @@ Flickr, Wikimedia и музеи и не требует ключа. При 429 н
   "schema": 1,
   "agent": "photo-1",
   "candidateId": "osm-…",
-  "card": "data/atlas/tbilisi/osm-….json",
+  "card": "data/atlas/<city>/osm-….json",
   "existingPhotos": [{"sha256": "…", "rating": 57}],
   "proposals": [
     {

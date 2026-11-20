@@ -54,8 +54,8 @@ README описывает запуск, состав репозитория и �
 - Исходные карточки — `data/atlas/<city>/<id>.json`, по одному JSON на объект. Справочники стилей, архитекторов, районов и подписей дат — `data/aux/<city>/*.json`; они склеиваются в генерируемый `data/aux/<city>.json`.
 - Ориентиры — `data/landmarks/<city>/<id>.json`.
 - Фотографии — `data/photos/<city>/<sha256>.webp` и sidecar `<sha256>.metadata.json`; превью для инспектора — `data/thumbnails/<city>/`, уменьшенные превью для каталога — `data/cards/<city>/`.
-- `raw/osm/` — сохранённые выгрузки OSM, из которых `scripts/build-data.py` собирает слои карты.
-- `public/atlas/` — генерируемый каталог: `buildings.json`, `landmarks.json`, `manifest.json`, `basemap.geojson`, `building-outlines.geojson`, `photos/`, `thumbnails/`, `cards/`. Не редактируй его вручную; всё это создают `npm run build`, `npm run check` и `npm run dev`.
+- `raw/osm/<city>/` — сохранённые выгрузки OSM, из которых `scripts/build-data.py --city=<city>` собирает слои карты.
+- `public/atlas/` — генерируемый каталог: `cities.json`, `cities/<city>/{buildings.json,basemap.geojson,building-outlines.bin,manifest.json}`, общие `photos/`, `thumbnails/`, `cards/`. Не редактируй его вручную; всё это создают `npm run build`, `npm run check` и `npm run dev`.
 - `dist/` — результат `npm run build`, статический сайт.
 
 ## Команды
@@ -69,7 +69,7 @@ npm run build
 npm run verify
 ```
 
-- `npm run check` собирает данные, превью и рейтинги, проверяет TypeScript и целостность данных.
+- `npm run check` собирает данные всех `ready`-городов, превью и рейтинги, проверяет TypeScript и целостность данных.
 - `npm run build` делает полную сборку в `dist/`.
 - `npm run verify` проверяет `dist/` по манифесту; запускай после сборки.
 - Для пересборки слоёв карты нужен Python 3; для превью и рейтинга фотографий — Pillow.
@@ -103,7 +103,7 @@ npm run verify
 - Свободные лицензии — приоритет (`CC0`, `PD`, `CC BY`, `CC BY-SA`, без `NC`/`ND`). Если свободного общего вида нет, допускается официальный иллюстративный fallback по [docs/photo-refresh.md](docs/photo-refresh.md): ≤1200 px, атрибуция и ссылка, `All rights reserved`, замена при появлении свободного, удаление по запросу. Google Maps/Street View, соцсети и фотостоки — нельзя.
 - Визуальная сверка обязательна: тот же корпус/фасад, а не соседний дом по похожему названию файла.
 - Дедуп по SHA-256 и dHash; слабое фото не вытесняет сильное; в карточке не больше трёх лучших снимков.
-- Импорт: WebP q82 до 1600 px, sidecar с `author/license/licenseUrl/source/modifications/width/height/rating`, затем `python3 scripts/rate-photos.py` и `npm run check`.
+- Импорт: WebP q82 до 1600 px, sidecar с `author/license/licenseUrl/source/modifications/width/height/rating`, затем `python3 scripts/rate-photos.py --all` и `npm run check`.
 - Параллельность: батчи по 5–10 карточек, но эффективно 2–3 субагента одновременно; у каждого свой `work/photo-refresh-<date>/<agent>/status.md`, общий rate-gate на Wikimedia. Пять одновременных агентов на общем IP стабильно ловят 429.
 
 ## Рабочие ограничения
