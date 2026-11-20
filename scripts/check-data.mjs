@@ -11,6 +11,113 @@ assert(
   `visual tag taxonomy must stay below 50 tags, found ${taxonomy.tags.length}`,
 );
 
+/**
+ * Every card and landmark must sit inside the road network, not next to a
+ * blank basemap. The check uses a coarse segment grid: a point farther than
+ * the threshold cannot hide in an unvisited cell.
+ */
+const ROAD_REACH_METERS = 300;
+const COVERAGE_CELL_DEGREES = 0.005;
+
+function pointToSegmentMeters(px, py, ax, ay, bx, by, lonScale, latScale) {
+  const dx = bx - ax,
+    dy = by - ay;
+  const denominator = dx * dx + dy * dy;
+  const t =
+    denominator > 0 ? Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / denominator)) : 0;
+  const x = ax + t * dx,
+    y = ay + t * dy;
+  return Math.hypot((x - px) * lonScale, (y - py) * latScale);
+}
+
+function assertRoadCoverage(cityId, geo, data) {
+  const roads = geo.features.filter((feature) => feature.properties?.kind === 'road');
+  if (!roads.length) return null;
+  const grid = new Map();
+  for (const feature of roads) {
+    if (feature.geometry?.type !== 'LineString') continue;
+    const coords = feature.geometry.coordinates;
+    for (let index = 1; index < coords.length; index++) {
+      const [ax, ay] = coords[index - 1],
+        [bx, by] = coords[index];
+      const minX = Math.floor(Math.min(ax, bx) / COVERAGE_CELL_DEGREES),
+        maxX = Math.floor(Math.max(ax, bx) / COVERAGE_CELL_DEGREES),
+        minY = Math.floor(Math.min(ay, by) / COVERAGE_CELL_DEGREES),
+        maxY = Math.floor(Math.max(ay, by) / COVERAGE_CELL_DEGREES);
+      const segment = [ax, ay, bx, by];
+      for (let x = minX; x <= maxX; x++)
+        for (let y = minY; y <= maxY; y++) {
+          const key = `${x},${y}`;
+          const bucket = grid.get(key);
+          if (bucket) bucket.push(segment);
+          else grid.set(key, [segment]);
+        }
+    }
+  }
+  const points = data.map((building) => ({
+    x: building.coordinates[0],
+    y: building.coordinates[1],
+    label: building.id,
+  }));
+  for (const feature of geo.features) {
+    if (feature.properties?.kind !== 'landmark') continue;
+    const geometry = feature.geometry;
+    if (geometry?.type === 'Point') {
+      points.push({
+        x: geometry.coordinates[0],
+        y: geometry.coordinates[1],
+        label: feature.properties.osmId ?? 'landmark',
+      });
+    } else if (geometry?.type === 'Polygon' || geometry?.type === 'MultiPolygon') {
+      const ring =
+        geometry.type === 'Polygon' ? geometry.coordinates[0] : geometry.coordinates[0][0];
+      if (!ring?.length) continue;
+      points.push({
+        x: ring.reduce((sum, point) => sum + point[0], 0) / ring.length,
+        y: ring.reduce((sum, point) => sum + point[1], 0) / ring.length,
+        label: feature.properties.osmId ?? 'landmark',
+      });
+    }
+  }
+  if (!points.length) return { count: 0, farthest: { distance: 0, label: '' } };
+  const latitude = points.reduce((sum, point) => sum + point.y, 0) / points.length;
+  const latScale =
+    111132.954 -
+    559.822 * Math.cos((2 * (latitude * Math.PI)) / 180) +
+    1.175 * Math.cos((4 * (latitude * Math.PI)) / 180);
+  const lonScale =
+    111412.84 * Math.cos((latitude * Math.PI) / 180) -
+    93.5 * Math.cos((3 * (latitude * Math.PI)) / 180);
+  let farthest = { distance: 0, label: '' };
+  for (const point of points) {
+    const cellX = Math.floor(point.x / COVERAGE_CELL_DEGREES),
+      cellY = Math.floor(point.y / COVERAGE_CELL_DEGREES);
+    let best = Infinity;
+    for (let x = cellX - 1; x <= cellX + 1; x++)
+      for (let y = cellY - 1; y <= cellY + 1; y++) {
+        for (const [ax, ay, bx, by] of grid.get(`${x},${y}`) ?? []) {
+          const distance = pointToSegmentMeters(
+            point.x,
+            point.y,
+            ax,
+            ay,
+            bx,
+            by,
+            lonScale,
+            latScale,
+          );
+          if (distance < best) best = distance;
+        }
+      }
+    if (best > farthest.distance) farthest = { distance: best, label: point.label };
+    assert(
+      best <= ROAD_REACH_METERS,
+      `${cityId}: ${point.label} is ${Number.isFinite(best) ? `${Math.round(best)} m` : 'far'} from the nearest road`,
+    );
+  }
+  return { count: points.length, farthest };
+}
+
 async function checkCity(cityId) {
   const config = await readCityConfig(cityId);
   const langs = config.languages;
@@ -92,6 +199,7 @@ async function checkCity(cityId) {
         `${props.osmId}: Georgian fallback must keep the Georgian name`,
       );
   }
+  const coverage = assertRoadCoverage(cityId, geo, data);
   const progress = new Progress(data.length, { label: `check ${cityId} atlas cards` });
   const verifiedPhotos = new Set();
   function webpSize(bytes, label) {
@@ -423,7 +531,7 @@ async function checkCity(cityId) {
   }
   progress.finish();
   console.log(
-    `[${cityId}] Validated ${ids.size} buildings with outlines; ${photos} photos (${previews} previews), ${withPhotos} buildings with photos, ${galleries} with multiple photos; Google Place ID: ${withPlaceId}/${ids.size}, ${ids.size - withPlaceId} by address search; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines.`,
+    `[${cityId}] Validated ${ids.size} buildings with outlines; ${photos} photos (${previews} previews), ${withPhotos} buildings with photos, ${galleries} with multiple photos; Google Place ID: ${withPlaceId}/${ids.size}, ${ids.size - withPlaceId} by address search; ${geo.features.length} basemap features and ${buildingOutlines.features.length} optional building outlines; road coverage: ${coverage ? `${coverage.farthest.distance.toFixed(0)} m max of ${coverage.count} points` : 'no roads'}.`,
   );
 }
 

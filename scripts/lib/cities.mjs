@@ -160,6 +160,10 @@ export function validateCityConfig(config, id, file = `<${id}>`) {
         config.build.outlines === undefined || config.build.outlines === null
           ? null
           : requireRelative(config.build.outlines, file, 'build.outlines'),
+      coverage:
+        config.build.coverage === undefined || config.build.coverage === null
+          ? null
+          : requireRelative(config.build.coverage, file, 'build.coverage'),
       skipUnnamedMinorRoads: config.build.skipUnnamedMinorRoads === true,
     };
   } else if (config.build !== undefined) {

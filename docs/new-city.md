@@ -51,7 +51,7 @@ data/atlas/<city>/<id>.json
 data/landmarks/<city>/<id>.json
 data/aux/<city>/{styles,architects,districts,year-labels,types}.json
 data/translations/<city>/{landmark-names,basemap-names,landmark-skip,landmark-area-markers,street-words}.json
-raw/osm/<city>/{grid/*.xml, selected.json, water-relations.json, water-ways.json, building-outlines.geojson, source.json}
+raw/osm/<city>/{grid/*.xml, selected.json, coverage.json, water-relations.json, water-ways.json, building-outlines.geojson, source.json}
 data/photos/<city>/<sha256>.webp + <sha256>.metadata.json
 ```
 
@@ -66,6 +66,7 @@ node scripts/fetch-osm-city.mjs --city=<city> --layer=relations  # только 
 node scripts/fetch-osm-city.mjs --city=<city> --layer=water-ways # только водные way
 node scripts/fetch-osm-city.mjs --city=<city> --endpoint=<url>   # конкретный инстанс Overpass
 python3 scripts/extract-building-outlines.py --city=<city> --pbf=<file.osm.pbf>
+python3 scripts/extract-road-coverage.py --city=<city> --pbf=<file.osm.pbf>  # дороги вокруг объектов вне городской выборки
 ```
 
 Загрузчик использует `User-Agent: ArchAtlas/1.0` и сохраняет provenance. Публичные инстансы Overpass периодически перегружены, поэтому запрос идёт по списку эндпоинтов, а в `source.json` попадает тот, который ответил; список можно сузить флагом `--endpoint`.
@@ -73,6 +74,8 @@ python3 scripts/extract-building-outlines.py --city=<city> --pbf=<file.osm.pbf>
 Вода в OSM бывает двух видов: замкнутый way с тегами `natural=water` и мультиполигон (`relation` с `natural=water` или `waterway=riverbank`), у которого теги стоят на отношении, а way-члены не размечены. Второй вид не попадает в выборку `way(...)`, поэтому загрузчик делает отдельный запрос и сохраняет ответ в `water-relations.json`; `--layer=relations` обновляет только его, не перекачивая улицы. `source.json` описывает оба запроса и их OSM timestamp.
 
 Город, собранный из сетки `grid/`, может иметь городскую выборку без воды: сетка покрывает только центр, а `selected.json` бывает без водных way. Тогда `--layer=water-ways` сохраняет водные way города в `water-ways.json`; сборщик пропускает объекты, которые уже пришли из сетки или `selected.json`, поэтому дублей нет. Для городов с полной выборкой этот файл не нужен.
+
+`selected.json` строится по границе городского населённого пункта, а карточки и ориентиры могут выходить за неё. Необязательный `coverage.json` добавляет дороги вокруг таких объектов из регионального PBF; `build.coverage` задаёт путь к файлу. Сборщик дедуплицирует дороги по `osmId`, поэтому пересечение с `selected.json` безопасно, а `source.json` хранит происхождение и список покрытых кластеров. `npm run check` проверяет, что каждая карточка и видимый маркер попадают в дорожную сеть; при провале обнови `coverage.json` этим же инструментом.
 
 `build-data.py` сшивает членов отношения по ролям `outer`/`inner` в `Polygon`/`MultiPolygon`: незамкнутые цепочки отбрасываются, внутренние кольца становятся дырками (острова). Замкнутые water-way остаются отдельными полигонами, осевые `waterway=*` — линиями. Если геометрию собрать нельзя, объект не добавляется: выдуманных контуров нет.
 

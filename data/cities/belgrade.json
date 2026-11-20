@@ -55,6 +55,7 @@
   "build": {
     "rawDir": "raw/osm/belgrade",
     "selected": "selected.json",
+    "coverage": "coverage.json",
     "translationsDir": "data/translations/belgrade",
     "skipUnnamedMinorRoads": true
   },

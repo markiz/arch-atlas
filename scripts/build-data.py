@@ -11,6 +11,7 @@ city_languages=city_config.get('languages', ['ru','en','uk','ka'])
 raw_dir=root/build_config.get('rawDir', f'raw/osm/{city}')
 translations_dir=root/build_config.get('translationsDir', f'data/translations/{city}')
 selected_path=(raw_dir/build_config['selected']) if build_config.get('selected') else None
+coverage_path=(raw_dir/build_config['coverage']) if build_config.get('coverage') else None
 outlines_path=(raw_dir/build_config['outlines']) if build_config.get('outlines') else None
 grid_dir=(raw_dir/build_config['gridDir']) if build_config.get('gridDir') else None
 landmark_cards_dir=root/'data'/'landmarks'/city
@@ -403,6 +404,36 @@ if city_extract and city_extract.exists():
   features.append({'type':'Feature','properties':props,'geometry':geometry});added+=1
  city_progress.finish()
  print(f'City-wide streets, parks and museums added for {city}',added)
+
+# Outlying cards and landmarks can sit outside the administrative settlement
+# used for selected.json. The coverage extract fills the road network around
+# those points; ids already present are skipped so the basemap stays deduped.
+coverage_extract=coverage_path
+if coverage_extract and coverage_extract.exists():
+ coverage_data=json.loads(coverage_extract.read_text())
+ existing_road_ids={feature['properties'].get('osmId') for feature in features if feature['properties'].get('kind')=='road'}
+ added_coverage=0
+ coverage_elements=coverage_data.get('elements',[])
+ coverage_progress=Progress(len(coverage_elements),'add coverage roads')
+ coverage_progress.start()
+ for index,element in enumerate(coverage_elements,1):
+  if index%500==0:coverage_progress.update(index,f'{added_coverage} features')
+  if element.get('type')!='way':continue
+  osm_id=f"way/{element.get('id')}"
+  if osm_id in existing_road_ids:continue
+  tags=element.get('tags',{});road_kind=road_class(tags)
+  if not road_kind:continue
+  if build_config.get('skipUnnamedMinorRoads') and road_kind in ('service','footway','path','steps') and not any(tags.get(key) for key in ('name','name:en','name:ru','name:sr')):
+   continue
+  coords=[[round(float(p['lon']),6),round(float(p['lat']),6)] for p in element.get('geometry',[])]
+  if len(coords)<2:continue
+  props={'kind':'road','class':road_kind,'osmId':osm_id}
+  props.update(translated_names(tags));name=props['names']['ru']
+  if name:props['name']=name
+  features.append({'type':'Feature','properties':props,'geometry':{'type':'LineString','coordinates':coords}})
+  existing_road_ids.add(osm_id);added_coverage+=1
+ coverage_progress.finish()
+ print(f'Coverage roads added for {city}',added_coverage)
 
 # Riverbanks and larger water bodies are multipolygons in OSM: the tags sit on
 # the relation while its member ways are untagged. A way-only extract cannot
