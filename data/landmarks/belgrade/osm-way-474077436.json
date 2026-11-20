@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-474077436",
+  "osmId": "way/474077436",
+  "atlasId": "osm-way-474077436",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святых архангелов Михаила и Гавриила",
+    "en": "Church of the Holy Archangels Michael and Gabriel in Batajnica",
+    "uk": "Церква Святих архангелів Михаїла і Гавриїла",
+    "sr": "Црква светих арханђела Михаила и Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Пуковника Миленка Павловича, 2b",
+    "en": "Pukovnika Milenka Pavlovića 2b",
+    "uk": "Вул. Пуковника Миленка Павловича, 2b",
+    "sr": "Пуковника Миленка Павловића 2b"
+  },
+  "descriptions": {
+    "ru": "Выстроенная в 1780–1785 годах на месте более старого храма XVIII века, церковь Святых архангелов Михаила и Гавриила и сегодня определяет центр этого пригорода Земуна — это старейший архитектурный памятник Батайницы.",
+    "en": "Built in 1780–1785 on the site of an older eighteenth-century church, the church of the Holy Archangels Michael and Gabriel still defines the centre of this Zemun suburb and is the oldest architectural monument in Batajnica.",
+    "uk": "Зведена в 1780–1785 роках на місці старішого храму XVIII століття, церква Святих архангелів Михаїла і Гавриїла й досі визначає центр цього пригороду Земуна — це найдавніша архітектурна пам'ятка Батайниці.",
+    "sr": "Подигнута између 1780. и 1785. године на месту старијег храма из 18. века, црква Светих арханђела Михаила и Гаврила и данас одређује центар овог дела Земуна — то је најстарији архитектонски споменик Батајнице."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.2747408,
+    44.9064006
+  ],
+  "source": "https://www.openstreetmap.org/way/474077436",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3583242"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3583242",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Church_of_the_Holy_Archangels_Michael_and_Gabriel%2C_Batajnica",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%B8%D1%85_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D1%92%D0%B5%D0%BB%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%B0_%D0%B8_%D0%93%D0%B0%D0%B2%D1%80%D0%B8%D0%BB%D0%B0_%D1%83_%D0%91%D0%B0%D1%82%D0%B0%D1%98%D0%BD%D0%B8%D1%86%D0%B8"
+    },
+    "commonsCategory": "Category:Crkva svetog arhangela Gavrila u Batajnici",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 43,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

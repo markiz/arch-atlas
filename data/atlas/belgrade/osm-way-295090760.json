@@ -89,8 +89,22 @@
     "uk": "Контур OpenStreetMap (way/295090760)."
   },
   "photos": [
-    "8fcef79738c59bbe3199bef0830bca140cb686674fdbaac553807a85c31a8c3d"
+    "8fcef79738c59bbe3199bef0830bca140cb686674fdbaac553807a85c31a8c3d",
+    "d6db30725182aeccc7e569b54bbc9f1ae62395b4d66877e83fb137ca71133bfe",
+    "38152f34d9a0752075fe615aa2480a70ad170c1a4c67dfb06cf96a57c17d2aad"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3401714"
+  "otherSource": "https://www.wikidata.org/wiki/Q3401714",
+  "descriptions": {
+    "ru": "Первая городская больница Белграда, построенная по проекту Йована Френцла по инициативе князя Михаила Обреновича — на пожертвования всех слоёв сербского общества. Наряду с домом Капетана Миши это самый значительный образец романтизма в развитии белградской архитектуры.",
+    "en": "Belgrade's first town hospital, built to a design by Jovan Frencl at the initiative of Prince Mihailo Obrenović, with money raised from contributions across Serbian society. Alongside the Kapetan-Mišino building it is the most significant example of romanticism in Belgrade's architecture.",
+    "uk": "Перша міська лікарня Белграда, зведена за проєктом Йована Френцла з ініціативи князя Михайла Обреновича — на пожертви всіх верств сербського суспільства. Поряд із домом Капетана Міші це найвизначніший зразок романтизму в розвитку белградської архітектури.",
+    "sr": "Прва варошка болница у Београду, подигнута по пројекту Јована Френцла на иницијативу кнеза Михаила Обреновића, новцем прикупљеним прилозима свих слојева српског друштва. Уз Капетан-Мишино здање, то је најзначајнији примерак романтизма у развоју београдске архитектуре."
+  },
+  "histories": {
+    "ru": "Здание возвели в 1868 году как первую городскую больницу; деньги на неё собирали пожертвованиями, а инициатором был князь Михаил Обренович. В больнице работали многие иностранные и сербские врачи, оставившие след в развитии медицинской науки и практики, поэтому здание считается памятником истории здравоохранения.",
+    "en": "The building went up in 1868 as the first town hospital; the funds came from contributions, and Prince Mihailo Obrenović was the driving force behind it. Many foreign and Serbian doctors who shaped the country's medical science and practice worked here, which makes the building a monument to the history of healthcare.",
+    "uk": "Будівлю звели 1868 року як першу міську лікарню; гроші на неї збирали пожертвами, а ініціатором був князь Михайло Обренович. У лікарні працювали багато іноземних і сербських лікарів, які залишили слід у розвитку медичної науки та практики, тому будівля вважається пам'яткою історії охорони здоров'я.",
+    "sr": "Зграда је подигнута 1868. као прва варошка болница Београда. Новац је обезбеђен прилозима свих слојева српског друштва, а иницијативу је дао кнез Михаило Обреновић. У болници су радили многи страни и домаћи лекари, па је зграда сведочанство о развоју медицинске науке и праксе."
+  }
 }

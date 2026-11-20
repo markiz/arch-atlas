@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-732448582",
+  "osmId": "way/732448582",
+  "atlasId": "osm-way-732448582",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святой Троицы",
+    "en": "Church of the Holy Trinity",
+    "uk": "Церква Святої Трійці",
+    "sr": "Црква Свете Тројице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Добановачка, 72a",
+    "en": "Dobanovačka 72a",
+    "uk": "Вул. Добановачка, 72a",
+    "sr": "Добановачка 72a"
+  },
+  "descriptions": {
+    "ru": "Земунская церковь Святой Троицы, выстроенная по планам Йозефа Фелбера в 1839–1842 годах. Иконостас резал Гаврило Нинкович, а образа и настенные росписи исполнил земунский живописец Живко Петрович.",
+    "en": "The Zemun church of the Holy Trinity, built to the plans of Josef Felber between 1839 and 1842. Its iconostasis was carved by Gavrilo Ninković, while the icons and the wall paintings came from the Zemun painter Živko Petrović.",
+    "uk": "Земунська церква Святої Трійці, зведена за планами Йозефа Фелбера у 1839–1842 роках. Іконостас різав Гаврило Нінкович, а образи й настінний живопис виконав земунський маляр Живко Петрович.",
+    "sr": "Земунска црква Свете Тројице, подигнута према плановима Јозефа Фелбера између 1839. и 1842. Иконостас је резао Гаврило Нинковић, а иконе и зидне слике извео је земунски сликар Живко Петровић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.3960217,
+    44.8501229
+  ],
+  "source": "https://www.openstreetmap.org/way/732448582",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1563193"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45987"
+  },
+  "recognition": {
+    "wikidata": "Q1563193",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%B5_%D0%A2%D1%80%D0%BE%D1%98%D0%B8%D1%86%D0%B5_%28%D0%97%D0%B5%D0%BC%D1%83%D0%BD%29"
+    },
+    "commonsCategory": "Category:Svetotroična church",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 52,
+    "components": {
+      "heritage": 15,
+      "recognition": 9,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

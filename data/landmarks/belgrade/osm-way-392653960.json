@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392653960",
+  "osmId": "way/392653960",
+  "atlasId": "osm-way-392653960",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дорчольская начальная школа",
+    "en": "Dorćol Primary School",
+    "uk": "Дорчольська початкова школа",
+    "sr": "Дорћолска основна школа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Дубровачка, 1",
+    "en": "Dubrovačka 1",
+    "uk": "Вул. Дубровачка, 1",
+    "sr": "Дубровачка 1"
+  },
+  "descriptions": {
+    "ru": "Дорчольская начальная школа, построенная в 1893 году по проекту Милана Капетановича, — одна из первых в Белграде школ, возведённых целиком по «Правилам о строительстве школ и школьной мебели» 1881 года, с гимнастическим залом, бассейном и актовым залом.",
+    "en": "Dorćol Primary School, built in 1893 to Milan Kapetanović's design, was among the first schools in Belgrade raised entirely under the 1881 Rules on the Building of Schools and School Furniture, complete with a gym, a pool and an assembly hall.",
+    "uk": "Дорчольська початкова школа, зведена 1893 року за проєктом Мілана Капетановича, — одна з перших у Белграді шкіл, споруджених цілком за «Правилами про будівництво шкіл і шкільні меблі» 1881 року, з гімнастичною залою, басейном і актовою залою.",
+    "sr": "Дорћолска основна школа, подигнута 1893. по пројекту Милана Капетановића, спада међу прве београдске школе подигнуте у целини по прописима о грађењу школа и о намештају школском из 1881. Уз шеснаест учионица имала је и гимнастичку салу, базен, гардеробе и свечану салу."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4598609,
+    44.8239055
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3578536"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45922"
+  },
+  "recognition": {
+    "wikidata": "Q3578536",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D1%88%D0%BA%D0%BE%D0%BB%D1%8B_%D0%B2_%D0%94%D0%BE%D1%80%D1%87%D0%BE%D0%BB%D0%B5",
+      "en": "https://en.wikipedia.org/wiki/Dor%C4%87ol_Elementary_School",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%97%D0%B3%D1%80%D0%B0%D0%B4%D0%B0_%D1%88%D0%BA%D0%BE%D0%BB%D0%B5_%D0%BD%D0%B0_%D0%94%D0%BE%D1%80%D1%9B%D0%BE%D0%BB%D1%83"
+    },
+    "commonsCategory": "Category:Zgrada škole na Dorćolu",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 64,
+    "components": {
+      "heritage": 15,
+      "recognition": 21,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -1,0 +1,73 @@
+{
+  "id": "nkd-43915",
+  "osmId": null,
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "street",
+  "names": {
+    "ru": "Улица Кнез Михаилова",
+    "en": "Knez Mihailova Street",
+    "uk": "Вулиця Кнез Михайлова",
+    "sr": "Кнез Михаилова улица"
+  },
+  "addresses": {
+    "ru": "улица Кнез Михаилова",
+    "en": "Knez Mihailova Street",
+    "uk": "вулиця Кнез Михайлова",
+    "sr": "Кнез Михаилова"
+  },
+  "descriptions": {
+    "ru": "Пешеходная улица по трассе первого регуляционного плана Белграда 1867 года — главный торговый и прогулочный коридор между крепостью и городом.",
+    "en": "Pedestrian street laid out under Belgrade's first regulation plan of 1867 — the main shopping and promenade corridor between the fortress and the town.",
+    "uk": "Пішохідна вулиця, прокладена за першим регуляційним планом Белграда 1867 року — головний торговий і прогулянковий коридор між фортецею та містом.",
+    "sr": "Пешачка улица трасирана првим регулационим планом Београда 1867 — главни трговачки и шетачки коридор између тврђаве и вароши."
+  },
+  "coordinates": [
+    20.457263,
+    44.817585
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43915",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1420986"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43915"
+  },
+  "recognition": {
+    "wikidata": "Q1420986",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Улица_Кнез_Михаилова",
+      "en": "https://en.wikipedia.org/wiki/Knez_Mihailova_Street",
+      "uk": "https://uk.wikipedia.org/wiki/Вулиця_Кнез_Михайлова",
+      "sr": "https://sr.wikipedia.org/wiki/Кнез_Михаилова"
+    },
+    "commonsCategory": "Category:Knez Mihailova Street",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 90,
+    "components": {
+      "heritage": 30,
+      "recognition": 20,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 4 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

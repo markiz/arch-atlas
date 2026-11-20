@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-156517275",
+  "osmId": "way/156517275",
+  "atlasId": "osm-way-156517275",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Хамам князя Милоша",
+    "en": "Hammam of Prince Miloš",
+    "uk": "Хамам князя Милоша",
+    "sr": "Амам кнеза Милоша"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Адмирала Гепрата, 14",
+    "en": "Admirala Geprata 14",
+    "uk": "Вул. Адмирала Гепрата, 14",
+    "sr": "Адмирала Гепрата 14"
+  },
+  "descriptions": {
+    "ru": "Единственное, что уцелело от дворцового комплекса сыновей князя Милоша Обреновича: баня, выстроенная в 1836–1837 годах по принципам турецких общественных купален. Сегодня здесь работает заведение общественного питания.",
+    "en": "The only survivor of the palace complex of Prince Miloš Obrenović’s sons: a hammam of 1836–37, laid out on the principles of Turkish public baths and now run as a catering venue.",
+    "uk": "Єдине, що вціліло від палацового комплексу синів князя Милоша Обреновича: лазня, зведена 1836–1837 років за принципами турецьких громадських купалень. Нині тут працює заклад громадського харчування.",
+    "sr": "Једино што је остало од дворског комплекса синова кнеза Милоша Обреновића јесте амам из 1836–37, саграђен по принципима турских јавних купатила. Данас у њему ради угоститељски објекат."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4602235,
+    44.8076455
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2879923"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45723"
+  },
+  "recognition": {
+    "wikidata": "Q2879923",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A5%D0%B0%D0%BC%D0%BC%D0%B0%D0%BC_%D0%BA%D0%BD%D1%8F%D0%B7%D1%8F_%D0%9C%D0%B8%D0%BB%D0%BE%D1%88%D0%B0_%D0%B2_%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%D0%B5",
+      "en": "https://en.wikipedia.org/wiki/Hammam_of_Prince_Milo%C5%A1",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%90%D0%BC%D0%B0%D0%BC_%D0%BA%D0%BD%D0%B5%D0%B7%D0%B0_%D0%9C%D0%B8%D0%BB%D0%BE%D1%88%D0%B0_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83"
+    },
+    "commonsCategory": "Category:Amam kneza Miloša (Beograd)",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 65,
+    "components": {
+      "heritage": 15,
+      "recognition": 21,
+      "architecturalRole": 11,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

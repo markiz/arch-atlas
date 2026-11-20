@@ -73,8 +73,21 @@
     "uk": "Контур OpenStreetMap (way/403077202)."
   },
   "photos": [
-    "4e7001ba15d8eae6fc74ccfdc821a4bab87cca41a475437337230ad8e641d3b4"
+    "4e7001ba15d8eae6fc74ccfdc821a4bab87cca41a475437337230ad8e641d3b4",
+    "c9763de1fd2062c03f60406951092bbc6d7a8662253f00b504e5295672fa75dd"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3280228"
+  "otherSource": "https://www.wikidata.org/wiki/Q3280228",
+  "descriptions": {
+    "ru": "Угловой дом, где в 1789 году родился Димитрие Давидович — секретарь князя Милоша, основатель «Српске новине» и автор Сретенского устава 1835 года.",
+    "en": "The corner house where Dimitrije Davidović was born in 1789: Prince Miloš’s secretary, founder of Srpske novine and the man behind the 1835 Sretenje constitution.",
+    "uk": "Наріжний дім, де 1789 року народився Димитріє Давидович — секретар князя Милоша, засновник «Српске новине» і автор Сретенського статуту 1835 року.",
+    "sr": "Угаона кућа у којој је 1789. рођен Димитрије Давидовић, секретар кнеза Милоша, оснивач „Српских новина“ и творац Сретењског устава из 1835."
+  },
+  "histories": {
+    "ru": "Дом поставили в конце XVIII века как одноэтажное жильё в два ряда комнат с внутренним двором; до конца второй половины XIX века его достраивали поэтапно, удлиняя фасады по обеим улицам и объединяя разновременные части общей отделкой. Позже жилой низ переделали под лавки, и первоначальный облик во многом утратился. Для Земуна дом важен не только архитектурой: здесь родился Димитрие Давидович, секретарь князя Милоша, писатель и журналист, дипломат и министр просвещения восстановленной Сербии, основатель «Српске новине» и автор Сретенского устава 1835 года.",
+    "en": "The house was built at the end of the eighteenth century as a one-storey dwelling of two ranges of rooms around an inner courtyard, and was extended in stages until the end of the second half of the nineteenth century, gaining longer fronts on both streets while a single treatment of the façades tied the phases together. Later the residential ground floor was turned into shops, which changed much of the original appearance. Its weight for Zemun is historical as well: Dimitrije Davidović was born here — Prince Miloš’s secretary, writer and journalist, diplomat and minister of education in restored Serbia, founder of Srpske novine and author of the 1835 Sretenje constitution.",
+    "uk": "Дім звели наприкінці XVIII століття як одноповерхове житло у два ряди кімнат із внутрішнім двором; до кінця другої половини XIX століття його добудовували поетапно, подовжуючи фасади по обох вулицях і об’єднуючи різночасні частини спільною обробкою. Пізніше житловий низ переробили під крамниці, і первісний вигляд значною мірою втратився. Для Земуна дім важливий не лише архітектурою: тут народився Димитріє Давидович, секретар князя Милоша, письменник і журналіст, дипломат і міністр освіти відновленої Сербії, засновник «Српске новине» і автор Сретенського статуту 1835 року.",
+    "sr": "Кућу су крајем XVIII века саградили као једноспратну стамбену зграду с унутрашњим двориштем; до краја друге половине XIX века дозиђивана је у више наврата, па су оба улична фронта постала дужа, а различите фазе повезала је јединствена обрада фасада. Касније су приземље претворили у локале, што је умногоме изменило првобитни изглед. У кући је 1789. рођен Димитрије Давидовић, који ће постати секретар кнеза Милоша, писац и новинар, дипломата, министар просвете обновљене Србије, оснивач „Српских новина“ и аутор Сретењског устава из 1835."
+  }
 }

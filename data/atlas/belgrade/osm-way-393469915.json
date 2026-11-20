@@ -99,8 +99,22 @@
     "uk": "Контур OpenStreetMap (way/393469915)."
   },
   "photos": [
-    "4f37ee0d9aa55a13b870b921bba7336e287c9952de45d47f59fd62a037147b0f"
+    "4f37ee0d9aa55a13b870b921bba7336e287c9952de45d47f59fd62a037147b0f",
+    "8e9619d31b6ae79ede818558fb597a02360305f177f1b0175d27fd9b1b28f732",
+    "9e07622d37253d3397a56a72b2a82d416a4617083318ee3ce39bc94df032b213"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279486"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279486",
+  "descriptions": {
+    "ru": "Дом торговца Милорада Павловича на торговой улице: внизу размещались лавки, а наверху — по одной парадной квартире. Это два корпуса с отдельными входами, объединённые общей кровлей и единым фасадом; автором проекта считают Йована Илкича.",
+    "en": "The house of the merchant Milorad Pavlović follows the logic of a trading street: shops at ground level, one grand apartment on each floor above. Two separate entrances lead into what is formally one house under a single roof, and the design is attributed to Jovan Ilkić.",
+    "uk": "Будинок торговця Милорада Павловича на торговій вулиці: унизу містилися крамниці, а на поверсі — по одній парадній квартирі. Це два корпуси з окремими входами, об’єднані спільним дахом і єдиним фасадом; автором проєкту вважають Йована Ілкича.",
+    "sr": "Кућа трговца Милорада Павловића прати логику трговачке улице: у приземљу су радње, а на спрату по један репрезентативан стан. Чине је два објекта с независним улазима, али под заједничким кровом и с јединствено обрађеним фасадама; аутором се претпоставља архитекта Јован Илкић."
+  },
+  "histories": {
+    "ru": "Дом построен в 1884 году для торговца Милорада Павловича. Автором проекта предположительно был архитектор Йован Илкич. Здание составляют два корпуса с независимыми входами, но под одной крышей и с единообразно решёнными фасадами. Торговый характер улицы определил лавки в первом этаже и по одной репрезентативной квартире выше.",
+    "en": "The house was built in 1884 for the merchant Milorad Pavlović, and its design is attributed to the architect Jovan Ilkić. Two buildings with independent entrances share one roof and a single treatment of the façades. Because the street was a trading one, the ground floor held shops and each upper floor a single representative flat. The house belongs to the small group of grand bourgeois houses built in Belgrade at the end of the 19th century.",
+    "uk": "Будинок зведено 1884 року для торговця Милорада Павловича. Автором проєкту, ймовірно, був архітектор Йован Ілкич. Споруду складають два корпуси з незалежними входами, але під одним дахом і з однаково вирішеними фасадами. Торговий характер вулиці визначив крамниці на першому поверсі й по одній репрезентативній квартирі вище.",
+    "sr": "Кућа је подигнута 1884. године за трговца Милорада Павловића, а њен аутор је, како се претпоставља, архитекта Јован Илкић. Два објекта с независним улазима деле један кров и јединствено обрађене фасаде. Трговачки карактер улице условио је радње у приземљу и по један репрезентативан стан на спрату. Кућа припада невеликом броју репрезентативних грађанских кућа Београда с краја XIX века."
+  }
 }

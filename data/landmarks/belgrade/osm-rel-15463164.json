@@ -1,0 +1,74 @@
+{
+  "id": "osm-rel-15463164",
+  "osmId": "relation/15463164",
+  "atlasId": "osm-rel-15463164",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом Народной скупщины Республики Сербии",
+    "en": "House of the National Assembly of the Republic of Serbia",
+    "uk": "Будинок Народної скупщини Республіки Сербії",
+    "sr": "Дом Народне скупштине Републике Србије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Пл. Николе Пашича, 13",
+    "en": "Nikole Pašića Square 13",
+    "uk": "Пл. Николе Пашича, 13",
+    "sr": "Трг Николе Пашића 13"
+  },
+  "descriptions": {
+    "ru": "С 2006 года здесь заседает Народная скупщина Сербии. Парламентское здание строили без малого тридцать лет, и в 1961 году оно принимало первую конференцию Движения неприсоединения.",
+    "en": "The seat of Serbia's National Assembly since 2006, built over nearly thirty years, and in 1961 the venue of the first conference of the Non-Aligned Movement.",
+    "uk": "Тут із 2006 року засідає Народна скупщина Сербії. Парламентську будівлю зводили майже тридцять років, а 1961 року вона приймала першу конференцію Руху неприєднання.",
+    "sr": "Од 2006. у њој заседа Народна скупштина Србије. Парламентарна зграда грађена је безмало тридесет година, а 1961. угостила је прву конференцију Покрета несврстаних."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4659415,
+    44.811705
+  ],
+  "source": "https://www.openstreetmap.org/relation/15463164",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1590792"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1590792",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9_%D1%81%D0%BA%D1%83%D0%BF%D1%89%D0%B8%D0%BD%D1%8B_%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8",
+      "en": "https://en.wikipedia.org/wiki/House_of_the_National_Assembly%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B5_%D1%81%D0%BA%D1%83%D0%BF%D1%88%D1%82%D0%B8%D0%BD%D0%B5_%D0%A0%D0%B5%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B5_%D0%A1%D1%80%D0%B1%D0%B8%D1%98%D0%B5"
+    },
+    "commonsCategory": "Category:National Assembly of Serbia building",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 15,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

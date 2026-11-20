@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-295106066",
+  "osmId": "way/295106066",
+  "atlasId": "osm-way-295106066",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Руины Генерального штаба, разрушенные при бомбардировке НАТО в 1999 году",
+    "en": "Ruins of the General Staff, destroyed in the 1999 NATO bombing",
+    "uk": "Руїни Генерального штабу, зруйновані під час бомбардування НАТО 1999 року",
+    "sr": "Рушевине Генералштаба из НАТО бомбардовања 1999."
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 37",
+    "en": "Kneza Miloša 37",
+    "uk": "Вул. Князя Милоша, 37",
+    "sr": "Кнеза Милоша 37"
+  },
+  "descriptions": {
+    "ru": "Ансамбль Генерального штаба и Министерства обороны на улице Князя Милоша — ключевое произведение Николы Добровича: два ступенчатых корпуса, задуманные как Государственный секретариат по делам народной обороны, каскадом спускаются к Неманиной и читаются как городские ворота.",
+    "en": "The General Staff and Ministry of Defence ensemble on Kneza Miloša Street is Nikola Dobrović's key work: two stepped blocks, conceived as the State Secretariat for National Defence, step down towards Nemanjina and read as a city gate.",
+    "uk": "Ансамбль Генерального штабу і Міністерства оборони на вулиці Князя Милоша — ключовий твір Ніколи Добровича: два ступінчасті корпуси, задумані як Державний секретаріат у справах народної оборони, каскадом спускаються до Неманіної і читаються як міська брама.",
+    "sr": "Ансамбл Генералштаба и Министарства одбране у улици Кнеза Милоша кључно је дело Николе Добровића: два степенаста тракта, замишљена као Државни секретаријат за народну одбрану, каскадно се спуштају ка Немањиној и читају се као градска капија."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4606396,
+    44.8049387
+  ],
+  "source": "https://www.openstreetmap.org/way/295106066",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q8060369"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44297"
+  },
+  "recognition": {
+    "wikidata": "Q8060369",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F_%D0%93%D0%B5%D0%BD%D1%88%D1%82%D0%B0%D0%B1%D0%B0_%D0%90%D1%80%D0%BC%D0%B8%D0%B8_%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8_%D0%B8_%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D0%B8%D0%B8_%D0%B8_%D0%9C%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D0%B5%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%9E%D0%B1%D0%BE%D1%80%D0%BE%D0%BD%D1%8B",
+      "en": "https://en.wikipedia.org/wiki/General_Staff_Building%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%97%D0%B3%D1%80%D0%B0%D0%B4%D0%B5_%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%88%D1%82%D0%B0%D0%B1%D0%B0_%28%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%29"
+    },
+    "commonsCategory": "Category:Yugoslav Ministry of Defence building",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 15,
+      "recognition": 21,
+      "architecturalRole": 10,
+      "age": 4,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

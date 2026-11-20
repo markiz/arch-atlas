@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-38572597",
+  "osmId": "way/38572597",
+  "atlasId": "osm-way-38572597",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Здание Белградской общины",
+    "en": "Belgrade Municipality Building",
+    "uk": "Будівля Белградської громади",
+    "sr": "Зграда Београдске општине"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Узун Миркова, 1",
+    "en": "Uzun Mirkova 1",
+    "uk": "Вул. Узун Миркова, 1",
+    "sr": "Узун Миркова 1"
+  },
+  "descriptions": {
+    "ru": "Здание, выстроенное около 1846 года для князя Александра Караджорджевича на месте Великого рынка; с 1853 года оно известно как второй отель Белграда — «Ново здание», или «Сербская корона». Позже почти сто лет здание служило белградскому муниципалитету.",
+    "en": "A building put up around 1846 for Prince Aleksandar Karađorđević on the site of the Great Market; from 1853 it was known as Belgrade’s second hotel, “Novo zdanje” or “Srpska kruna”. For almost a century afterwards it served the city municipality.",
+    "uk": "Будівля, зведена близько 1846 року для князя Александра Караджорджевича на місці Великого ринку; від 1853 року вона відома як другий готель Белграда — «Ново здање», або «Српска круна». Згодом майже сто років у ній працював белградський муніципалітет.",
+    "sr": "Зграда је подигнута око 1846. за кнеза Александра Карађорђевића, на простору некадашње Велике пијаце; од 1853. помиње се као други београдски хотел, „Ново здање” или „Српска круна”. Скоро читав век потом служила је Београдској општини."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4557516,
+    44.8195164
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2929274"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=46058"
+  },
+  "recognition": {
+    "wikidata": "Q2929274",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Belgrade_Town_Hall_Building",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%97%D0%B3%D1%80%D0%B0%D0%B4%D0%B0_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%B5_%D0%BE%D0%BF%D1%88%D1%82%D0%B8%D0%BD%D0%B5"
+    },
+    "commonsCategory": "Category:Zgrada Beogradske opštine",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 64,
+    "components": {
+      "heritage": 15,
+      "recognition": 15,
+      "architecturalRole": 9,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -75,8 +75,22 @@
     "uk": "Контур OpenStreetMap (way/380972114)."
   },
   "photos": [
-    "0b0949cdc781f93e5e5809e9c86f06446189570b4ce4eb1e209dc6cd3f3be77d"
+    "0b0949cdc781f93e5e5809e9c86f06446189570b4ce4eb1e209dc6cd3f3be77d",
+    "d97b5f01cea48668a378f21d0837608a2c1f5c0830cc7d5c620386045daf9039",
+    "126aa4319ade5bc51a1068adcc0b53683e4a54bd36017485b76bdc5b042af76a"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3399802"
+  "otherSource": "https://www.wikidata.org/wiki/Q3399802",
+  "descriptions": {
+    "ru": "Почтовое здание в старом ядре Земуна, возведённое в 1896 году по планам городского инженера Драгутина Капуса на месте снесённой почты XVIII века. Перестройки интерьера 1961 года и конца XX века сохранили за ним место среди главных общественных зданий исторического Земунского ядра.",
+    "en": "The post office in the old core of Zemun, built in 1896 to plans signed by the city engineer Dragutin Kapus on the site of an eighteenth-century post building that had been torn down. Interior refits in 1961 and at the end of the twentieth century left it among the principal public buildings of historic Zemun.",
+    "uk": "Поштова будівля в старому ядрі Земуна, зведена 1896 року за планами міського інженера Драгутина Капуса на місці знесеної пошти XVIII століття. Перебудови інтер’єру 1961 року й наприкінці XX століття зберегли за нею місце серед головних громадських споруд історичного Земунського ядра.",
+    "sr": "Пошта у старом језгру Земуна, подигнута 1896. према плановима које је потписао градски инжењер Драгутин Капус, на месту срушене поштанске зграде из XVIII века. Преуређења ентеријера 1961. и крајем прошлог века нису јој одузела место међу најзначајнијим јавним грађевинама старог језгра Земуна."
+  },
+  "histories": {
+    "ru": "Почту возвели в 1896 году на месте снесённого здания XVIII века; строительные работы вёл подрядчик Франя Енч, а планы подписал городской инженер Драгутин Капус. Здание двухтрактное: два ряда помещений с коридором посередине, планировка развита под почтовые нужды, а фасады выдержаны в духе неоренессанса с северным барокко в кровле. Интерьер обновляли в 1961 году и в конце XX века. Её относят к одним из самых значительных общественных построек, документирующих исторический и городской характер старого ядра Земуна.",
+    "en": "The post office went up in 1896 on the site of an eighteenth-century building that had been demolished; the works were carried out by the contractor Franja Jenč, and the plans were signed by the city engineer Dragutin Kapus. The building has two ranges of rooms with a corridor between them, a layout developed for postal needs, and its façades follow the neo-Renaissance with northern Baroque touches on the roof. The interior was modernised in 1961 and again at the end of the twentieth century. It is counted among the most important public buildings documenting the historical and urban character of Zemun’s old core.",
+    "uk": "Пошту звели 1896 року на місці знесеної будівлі XVIII століття; будівельні роботи вів підрядник Франя Єнч, а плани підписав міський інженер Драгутин Капус. Будівля двотрактна: два ряди приміщень з коридором посередині, планування розвинене під поштові потреби, а фасади витримані в дусі неоренесансу з північним бароко в оздобленні даху. Інтер’єр оновлювали 1961 року і наприкінці XX століття. Її зараховують до найвизначніших громадських споруд, що документують історичний і міський характер старого ядра Земуна.",
+    "sr": "Пошта је подигнута 1896. на месту срушене поштанске зграде из XVIII века; радове је изводио грађевинар Фрања Јенч, а планове је потписао градски инжењер Драгутин Капус. Објекат има два низа просторија с ходником између њих и диспозицију развијену према потребама поште, а обликован је у неоренесанси с утицајем северњачког барока на крову. Ентеријер је осавремењен 1961. и крајем прошлог века. Убраја се међу најзначајније јавне грађевине које документују историјски и урбани карактер Старог језгра Земуна."
+  }
 }

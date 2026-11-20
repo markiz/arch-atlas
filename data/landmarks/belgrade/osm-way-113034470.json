@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-113034470",
+  "osmId": "way/113034470",
+  "atlasId": "osm-way-113034470",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Марка",
+    "en": "Church of Saint Mark",
+    "uk": "Церква Святого Марка",
+    "sr": "Црква Светог Марка"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Святого Марка, 17",
+    "en": "Svetog Marka 17",
+    "uk": "Вул. Святого Марка, 17",
+    "sr": "Светог Марка 17"
+  },
+  "descriptions": {
+    "ru": "Церковь на плато Ташмайдан, задуманная как престольный храм столицы Королевства Югославии и крупнейшая православная церковь предвоенной Югославии. Возведена в 1931–1940 годах по проекту архитекторов Петра и Бранко Крстичей.",
+    "en": "A church on the Tašmajdan plateau, conceived as the metropolitan church of the Yugoslav capital and the largest Orthodox church in the country at the time. It was built between 1931 and 1940 to a design by the architects Petar and Branko Krstić.",
+    "uk": "Церква на плато Ташмайдан, задумана як престольний храм столиці Королівства Югославії і найбільша православна церква країни того часу. Зведена в 1931–1940 роках за проєктом архітекторів Петра і Бранка Крстичів.",
+    "sr": "Црква на плато Ташмајдан, замишљена као престона црква краљевске престонице и највећи православни храм тадашње Југославије. Подигнута је 1931–1940. по пројекту архитеката Петра и Бранка Крстића."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4689592,
+    44.8104707
+  ],
+  "source": "https://www.openstreetmap.org/way/113034470",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1254795"
+  ],
+  "districtId": "palilula",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1254795",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%9C%D0%B0%D1%80%D0%BA%D0%B0_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Church_of_Saint_Mark%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%9C%D0%B0%D1%80%D0%BA%D0%B0_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83"
+    },
+    "commonsCategory": "Category:Saint Mark church, Belgrade",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 57,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 13,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

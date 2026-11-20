@@ -79,8 +79,22 @@
     "uk": "Контур OpenStreetMap (way/393520272)."
   },
   "photos": [
-    "2459d6f1e5e9a69ecbc75e525c287d27ed2e5929c29bda18b2dd3b3abc31c3c6"
+    "2459d6f1e5e9a69ecbc75e525c287d27ed2e5929c29bda18b2dd3b3abc31c3c6",
+    "c94787e1f3f1d6b0903852358dd5230355a63a119b62d20c5c368eeeea44610c",
+    "42f9128a01e254f0f088c3b26a5c8e730c5c218e1e68a6e213b052c26411ba2d"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3149075"
+  "otherSource": "https://www.wikidata.org/wiki/Q3149075",
+  "descriptions": {
+    "ru": "Жилой дом Любомира Миладиновича, известный как «Гараж»: первый этаж отведён под автомобильные боксы, и именно это дало зданию имя. Проект Момчила Белобрка относят к самым чистым образцам белградского функционализма.",
+    "en": "The Ljubomir Miladinović building is known simply as “The Garage”, because its ground floor was designed as parking. Momčilo Belobrk’s scheme is counted among the purest examples of Belgrade functionalism.",
+    "uk": "Житловий будинок Любомира Миладиновича, відомий як «Гараж»: перший поверх відведено під автомобільні бокси, і саме це дало будівлі ім’я. Проєкт Момчила Белобрка вважають одним із найчистіших зразків белградського функціоналізму.",
+    "sr": "Зграда Љубомира Миладиновића позната је као „Гаража“ јер је приземље било намењено гаражном простору. Решење Момчила Белобрка сврстава се међу најчистије примере београдског функционализма."
+  },
+  "histories": {
+    "ru": "Здание построено в 1938 году по проекту архитектора Момчило Белобрка. Первый этаж, предназначенный для гаражей, дал дому название «Гараж». Работу считают одной из вершин в творчестве Белобрка и заметной страницей сербской архитектуры модерного направления.",
+    "en": "The building was completed in 1938 to a design by the architect Momčilo Belobrk. Its ground floor, given over to garages, earned it the name “The Garage”. The scheme is regarded as a high point in Belobrk’s own work and in Serbian modern architecture more broadly, noted for its modern handling and consistent functionalism.",
+    "uk": "Будівлю завершено 1938 року за проєктом архітектора Момчила Белобрка. Перший поверх, призначений для гаражів, дав їй назву «Гараж». Роботу вважають однією з вершин у творчості Белобрка та помітною сторінкою сербської архітектури модерного напряму.",
+    "sr": "Зграда је реализована 1938. године према пројекту архитекте Момчила Белобрка. Приземље намењено гаражном простору дало јој је назив „Гаража“. Објекат се сматра високим дометом у опусу Белобрка и у српској архитектури модерног правца, захваљујући модерној обради и доследном функционализму."
+  }
 }

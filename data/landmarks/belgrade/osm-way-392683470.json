@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392683470",
+  "osmId": "way/392683470",
+  "atlasId": "osm-way-392683470",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святых архангелов Михаила и Гавриила",
+    "en": "Church of the Holy Archangels Michael and Gabriel",
+    "uk": "Церква Святих архангелів Михаїла і Гавриїла",
+    "sr": "Црква Светих арханђела Михаила и Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Раковица, Белград",
+    "en": "Rakovica, Belgrade",
+    "uk": "Раковица, Белград",
+    "sr": "Раковица, Београд"
+  },
+  "descriptions": {
+    "ru": "Монастырь Раковица в долине одноимённой реки под Белградом поставлен в XVI веке на месте более древнего культового сооружения, а нынешний облик ему в наибольшей мере вернули Обреновичи. В притворе церкви Святых архангелов Михаила и Гавриила находится родовая усыпальница Еврема Обреновича, а у северной наружной стены похоронен воевода Васа Чарапич.",
+    "en": "Rakovica Monastery, in the valley of the Rakovica river just outside Belgrade, was built in the 16th century on the site of an older place of worship, and owes its present appearance above all to the Obrenović family. The church of the Holy Archangels Michael and Gabriel holds the family tomb of Jevrem Obrenović, while Vasa Čarapić, a commander of the First Serbian Uprising, lies buried by its northern outer wall.",
+    "uk": "Монастир Раковиця в долині однойменної річки під Белградом постав у XVI столітті на місці давнішої культової споруди, а сучасного вигляду йому найбільше надали Обреновичі. У притворі церкви Святих архангелів Михаїла і Гавриїла міститься родинна усипальниця Єврема Обреновича, а біля північної зовнішньої стіни похований воєвода Васа Чарапич.",
+    "sr": "Манастир Раковица у долини Раковичке реке под Београдом подигнут је у XVI веку на месту старије култне грађевине, а данашњи изглед у највећој мери дугује породици Обреновић. У припрати цркве Светих арханђела Михаила и Гаврила налази се породична гробница Јеврема Обреновића, а уз северни спољни зид припрате сахрањен је војвода Васа Чарапић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4471069,
+    44.73063
+  ],
+  "source": "https://www.openstreetmap.org/way/392683470",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1565917"
+  ],
+  "districtId": "rakovica",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45959"
+  },
+  "recognition": {
+    "wikidata": "Q1565917",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C_%D0%A0%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%86%D0%B0",
+      "en": "https://en.wikipedia.org/wiki/Rakovica_Monastery",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80_%D0%A0%D0%B0%D0%BA%D0%BE%D0%B2%D0%B8%D1%86%D0%B0"
+    },
+    "commonsCategory": "Category:Rakovica monastery",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 73,
+    "components": {
+      "heritage": 24,
+      "recognition": 21,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: national",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

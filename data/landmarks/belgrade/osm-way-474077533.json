@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-474077533",
+  "osmId": "way/474077533",
+  "atlasId": "osm-way-474077533",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Николая",
+    "en": "Church of Saint Nicholas",
+    "uk": "Церква Святого Миколая",
+    "sr": "Црква Светог Николе"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Угриновачка, 2",
+    "en": "Ugrinovačka 2",
+    "uk": "Вул. Угриновачка, 2",
+    "sr": "Угриновачка 2"
+  },
+  "descriptions": {
+    "ru": "Церковь Святого Николая в Добановцах освящена в честь перенесения мощей святителя Николая и с 1803 года стоит на месте храмов XVIII века. При ней основали старую вероисповедную школу — старейшее учебное заведение в округе.",
+    "en": "The Church of St Nicholas in Dobanovci is dedicated to the translation of the relics of St Nicholas and has stood since 1803 on the site of eighteenth-century churches. The old confessional school founded beside it was the earliest educational institution in the area.",
+    "uk": "Церква Святого Миколая в Добановцях освячена на честь перенесення мощей святителя Миколая і від 1803 року стоїть на місці храмів XVIII століття. При ній заснували стару віросповідну школу — найдавніший навчальний заклад в окрузі.",
+    "sr": "Црква Светог Николе у Добановцима посвећена је преносу моштију светог оца Николаја и од 1803. године стоји на месту храмова из 18. века. При њој је основана стара вероисповедна школа, најстарија просветна установа у околини."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.2231277,
+    44.8279883
+  ],
+  "source": "https://www.openstreetmap.org/way/474077533",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q24205558"
+  ],
+  "districtId": "surcin",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q24205558",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Church_of_St._Nicholas%2C_Dobanovci",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B5_%D1%83_%D0%94%D0%BE%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2%D1%86%D0%B8%D0%BC%D0%B0"
+    },
+    "commonsCategory": null,
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 43,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

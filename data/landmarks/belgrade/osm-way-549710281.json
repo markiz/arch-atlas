@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-549710281",
+  "osmId": "way/549710281",
+  "atlasId": "osm-way-549710281",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Николая",
+    "en": "Church of Saint Nicholas in Ostružnica",
+    "uk": "Церква Святого Миколая",
+    "sr": "Црква Светог Николе"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Любе Ранковича, 1",
+    "en": "Ljube Rankovića 1",
+    "uk": "Вул. Любе Ранковича, 1",
+    "sr": "Љубе Ранковића 1"
+  },
+  "descriptions": {
+    "ru": "Церковь Святого Николая в Остружнице построена в 1831–1833 годах на средства князя Милоша. Она стоит на холме в центре села, на перекрёстке, где Карагеоргий созвал Первую народную скупщину Первого сербского восстания.",
+    "en": "The Church of St Nicholas in Ostružnica was built in 1831–1833 at the expense of Knez Miloš. It stands on the hill at the crossroads in the centre of the village where Karađorđe convened the First National Assembly during the First Serbian Uprising.",
+    "uk": "Церкву Святого Миколая в Остружниці звели в 1831–1833 роках коштом князя Милоша. Вона стоїть на пагорбі в центрі села, біля перехрестя, де Карагеоргій скликав Першу народну скупщину часів Першого сербського повстання.",
+    "sr": "Црква Светог Николе у Остружници подигнута је 1831–1833. године о трошку кнеза Милоша. Стоји на брежуљку у средишту села, на раскрсници где је Карађорђе сазвао Прву народну скупштину за време Првог српског устанка."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.3202169,
+    44.7288925
+  ],
+  "source": "https://www.openstreetmap.org/way/549710281",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3583341"
+  ],
+  "districtId": "cukarica",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3583341",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B5_%D1%83_%D0%9E%D1%81%D1%82%D1%80%D1%83%D0%B6%D0%BD%D0%B8%D1%86%D0%B8"
+    },
+    "commonsCategory": "Category:Crkva Svetog Nikole u Ostružnici",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 37,
+    "components": {
+      "heritage": 0,
+      "recognition": 9,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

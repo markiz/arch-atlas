@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-116808347",
+  "osmId": "way/116808347",
+  "atlasId": "osm-way-116808347",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Университетская библиотека «Светозар Маркович»",
+    "en": "University Library \"Svetozar Marković\"",
+    "uk": "Університетська бібліотека «Светозар Маркович»",
+    "sr": "Универзитетска библиотека „Светозар Марковић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра, 71",
+    "en": "Kralja Aleksandra Boulevard 71",
+    "uk": "Бульвар Короля Александра, 71",
+    "sr": "Булевар краља Александра 71"
+  },
+  "descriptions": {
+    "ru": "Библиотека выросла из книжного собрания Белградского университета, а здание для него построили на средства Фонда Карнеги за международный мир — с этой просьбой в фонд обратились Мабел и Славко Груич, посланники Королевства сербов, хорватов и словенцев в Вашингтоне. Авторы проекта — Драгутин Джорджевич и Никола Несторович.",
+    "en": "The library grew out of the book collection of the University of Belgrade, and its building was paid for by the Carnegie Endowment for International Peace after Mabel and Slavko Grujić, the Kingdom's envoys in Washington, appealed to it. The design is by Dragutin Đorđević and Nikola Nestorović.",
+    "uk": "Бібліотека постала з книжкового фонду Белградського університету, а споруду для нього профінансував Фонд Карнегі за міжнародний мир — до нього звернулися Мабел і Славко Груїчі, посли Королівства сербів, хорватів і словенців у Вашингтоні. Проєкт створили Драгутин Джорджевич і Нікола Несторович.",
+    "sr": "Универзитетска библиотека настала је из књижног фонда Београдског универзитета, а зграду је омогућила помоћ Карнегијевог фонда за међународни мир, којој су се обратили Мабел и Славко Грујић, изасланици Краљевине Срба, Хрвата и Словенаца у Вашингтону. Пројекат су израдили Драгутин Ђорђевић и Никола Несторовић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4747427,
+    44.8061517
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/palilula/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q683389"
+  ],
+  "districtId": "palilula",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=46046"
+  },
+  "recognition": {
+    "wikidata": "Q683389",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%C2%AB%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B7%D0%B0%D1%80_%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%C2%BB",
+      "en": "https://en.wikipedia.org/wiki/Belgrade_University_Library",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%A3%D0%BD%D1%96%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%81%D1%8C%D0%BA%D0%B0_%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D1%96%D0%BC%D0%B5%D0%BD%D1%96_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B7%D0%B0%D1%80%D0%B0_%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B8%D1%87%D0%B0",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D0%B7%D0%B8%D1%82%D0%B5%D1%82%D1%81%D0%BA%D0%B0_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B7%D0%B0%D1%80_%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B"
+    },
+    "commonsCategory": "Category:University Library Svetozar Marković",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 67,
+    "components": {
+      "heritage": 15,
+      "recognition": 25,
+      "architecturalRole": 11,
+      "age": 8,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

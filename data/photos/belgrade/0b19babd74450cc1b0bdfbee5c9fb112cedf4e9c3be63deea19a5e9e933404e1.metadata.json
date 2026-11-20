@@ -1,16 +1,16 @@
 {
-  "author": "Original uploader was en:User:BoskoM at en.wikipedia Own work",
-  "license": "Public domain",
-  "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
-  "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_ethnographique_de_Belgrade.jpg",
-  "modifications": "Resized to 1280 px and converted to WebP.",
-  "width": 1280,
-  "height": 1351,
-  "rating": 81,
-  "visualTags": [
-    "facade"
-  ],
-  "tags": [
-    "building"
-  ]
+ "author": "en:User:BoskoM",
+ "license": "Public domain",
+ "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+ "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_ethnographique_de_Belgrade.jpg",
+ "modifications": "Resized to 1280 px and converted to WebP.",
+ "width": 1280,
+ "height": 1351,
+ "rating": 81,
+ "visualTags": [
+  "facade"
+ ],
+ "tags": [
+  "building"
+ ]
 }

@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-390709217",
+  "osmId": "way/390709217",
+  "atlasId": "osm-way-390709217",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Рождества Пресвятой Богородицы",
+    "en": "Church of the Nativity of the Most Holy Theotokos",
+    "uk": "Церква Різдва Пресвятої Богородиці",
+    "sr": "Црква Рођења Пресвете Богородице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Раячичева, 4",
+    "en": "Rajačićeva 4",
+    "uk": "Вул. Раячичева, 4",
+    "sr": "Рајачићева 4"
+  },
+  "descriptions": {
+    "ru": "Церковь Рождества Пресвятой Богородицы — самый большой храм старого ядра Земуна, освящённый в 1783 году. Строили его на средства православных жителей города, сербов и греков, а резной барочный иконостас резал мастер Аксентий из семьи Марковичей.",
+    "en": "The Church of the Nativity of the Theotokos is the largest church in the old core of Zemun, consecrated in 1783. It was built with money from the town’s Orthodox residents, Serbs and Greeks, and its carved Baroque iconostasis came from the workshop of Aksentije of the Marković family.",
+    "uk": "Церква Різдва Пресвятої Богородиці — найбільший храм старого ядра Земуна, освячений 1783 року. Його зводили коштом православних мешканців міста, сербів і греків, а різьблений бароковий іконостас виконав майстер Аксентій із родини Марковичів.",
+    "sr": "Богородичина црква, највећи храм у Старом језгру Земуна, освећена је 1783. Подигнута је новцем православних Земунаца, Срба и Грка, а резбарени барокни иконостас израдио је Аксентије из породице Марковић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4095985,
+    44.844784
+  ],
+  "source": "https://www.openstreetmap.org/way/390709217",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1563910"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45201"
+  },
+  "recognition": {
+    "wikidata": "Q1563910",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A0%D0%BE%D0%B6%D0%B4%D0%B5%D1%81%D1%82%D0%B2%D0%B0_%D0%9F%D1%80%D0%B5%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%86%D1%8B_%28%D0%97%D0%B5%D0%BC%D1%83%D0%BD%29",
+      "en": "https://en.wikipedia.org/wiki/Church_of_the_Nativity_of_the_Theotokos%2C_Zemun",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%A0%D1%96%D0%B7%D0%B4%D0%B2%D0%B0_%D0%9F%D1%80%D0%B5%D1%81%D0%B2%D1%8F%D1%82%D0%BE%D1%97_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%86%D1%96_%28%D0%97%D0%B5%D0%BC%D1%83%D0%BD%29",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D0%B0_%D1%86%D1%80%D0%BA%D0%B2%D0%B0_%D1%83_%D0%97%D0%B5%D0%BC%D1%83%D0%BD%D1%83"
+    },
+    "commonsCategory": "Category:Bogorodična crkva",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 68,
+    "components": {
+      "heritage": 15,
+      "recognition": 25,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

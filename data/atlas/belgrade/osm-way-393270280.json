@@ -85,8 +85,21 @@
     "uk": "Контур OpenStreetMap (way/393270280)."
   },
   "photos": [
-    "5fd5c5d56ae2fe162cfe0bede7557fb3e4fb183042ee25148ad85d6cc157be77"
+    "5fd5c5d56ae2fe162cfe0bede7557fb3e4fb183042ee25148ad85d6cc157be77",
+    "6d19b7b388dfaf7ed1cc573ed042bd45a0701e03a0733b99570b9a1153afeee1"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q60321152"
+  "otherSource": "https://www.wikidata.org/wiki/Q60321152",
+  "descriptions": {
+    "ru": "Здание Классной лотереи — первое в Сербии лотерейное здание, возведённое в 1899 году ради хозяйственных нужд: доходы лотереи поддерживали художественные и просветительские мероприятия по всей стране. Проект выполнили Милан Капетанович и инженер Милош Савчич.",
+    "en": "The Class Lottery Building, put up in 1899, was the first lottery building in Serbia and served economic ends: its revenues supported numerous artistic and educational events across the country. The design came from the architect Milan Kapetanović and the engineer Miloš Savčić.",
+    "uk": "Будівля Класної лотереї — перша в Сербії лотерейна споруда, зведена 1899 року задля господарських потреб: прибутки лотереї підтримували мистецькі та просвітницькі заходи по всій країні. Проєкт виконали Мілан Капетанович та інженер Мілош Савчич.",
+    "sr": "Зграда Класне лутрије прва је лутријска кућа у Србији подигнута за привредне потребе: од њених прихода помагане су бројне уметничке и просветне манифестације у земљи. Подигнута је 1899. године према пројекту Милана Капетановића и инжењера Милоша Савчића."
+  },
+  "histories": {
+    "ru": "Здание возвели в 1899 году для Классной лотереи — учреждения государственного значения, чьи доходы шли на художественные и просветительские мероприятия в стране. В пору постройки оно вместе с домом капитана Миши и Народным театром было одним из самых представительных зданий на отрезке от Калемегдана до нынешней площади Республики. Дом остался свидетелем хозяйственного и градостроительного подъёма столицы на рубеже XIX и XX веков.",
+    "en": "The building was raised in 1899 for the Class Lottery, an institution of state standing whose revenues funded artistic and educational events in the country. At the time of construction it stood, together with Captain Miša’s Building and the National Theatre, among the most representative buildings on the stretch from Kalemegdan to today’s Republic Square. It remains a witness to the economic and urban rise of the capital at the turn of the twentieth century.",
+    "uk": "Будівлю звели 1899 року для Класної лотереї — установи державного значення, чиї прибутки йшли на мистецькі та просвітницькі заходи в країні. За часів будівництва вона разом із домом капітана Миші та Народним театром належала до найрепрезентативніших споруд на відтинку від Калемегдана до нинішньої площі Республіки. Дім лишився свідком господарського й містобудівного піднесення столиці на межі XIX і XX століть.",
+    "sr": "Зграда је подигнута 1899. године за Класну лутрију, установу од државног значаја чији су приходи ишли на уметничке и просветне манифестације у земљи. У време градње била је, уз Капетан Мишино здање и Народно позориште, међу најрепрезентативнијим грађевинама на потезу од Калемегдана до данашњег Трга Републике. Кућа је остала сведок привредног и урбанистичког успона престонице с краја XIX и из прве половине XX века."
+  }
 }

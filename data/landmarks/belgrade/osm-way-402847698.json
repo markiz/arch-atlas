@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-402847698",
+  "osmId": "way/402847698",
+  "atlasId": "osm-way-402847698",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом Ичка",
+    "en": "Ičko House",
+    "uk": "Будинок Ічка",
+    "sr": "Ичкова кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Бежанийская, 18",
+    "en": "Bežanijska 18",
+    "uk": "Вул. Бежанийська, 18",
+    "sr": "Бежанијска 18"
+  },
+  "descriptions": {
+    "ru": "Дом, где в 1802–1803 годах жил Петар Ичко — купец и повстанческий дипломат, чьи связи готовили Первое сербское восстание. Внизу помещалась корчма «Кралевич Марко».",
+    "en": "The house where Petar Ičko lived in 1802–1803 — a merchant and rebel diplomat whose work fed into the preparations for the First Serbian Uprising. A tavern called Kraljević Marko kept the ground floor.",
+    "uk": "Дім, де в 1802–1803 роках жив Петар Ічко — купець і повстанський дипломат, чия діяльність готувала Перше сербське повстання. Унизу містилася корчма «Кралевич Марко».",
+    "sr": "Кућа у којој је 1802–1803. боравио Петар Ичко, трговац и устанички дипломата чија је улога била важна за припрему Првог српског устанка; у приземљу је радила кафана „Краљевић Марко“."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4085306,
+    44.8447869
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3279203"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43558"
+  },
+  "recognition": {
+    "wikidata": "Q3279203",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D0%98%D1%87%D0%BA%D0%BE",
+      "en": "https://en.wikipedia.org/wiki/I%C4%8Dko%27s_House",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%98%D1%87%D0%BA%D0%BE%D0%B2%D0%B0_%D0%BA%D1%83%D1%9B%D0%B0"
+    },
+    "commonsCategory": "Category:Ičko's House",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 73,
+    "components": {
+      "heritage": 24,
+      "recognition": 21,
+      "architecturalRole": 3,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: national",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

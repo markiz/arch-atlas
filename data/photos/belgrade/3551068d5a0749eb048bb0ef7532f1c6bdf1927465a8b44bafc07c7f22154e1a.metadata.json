@@ -1,16 +1,16 @@
 {
-  "author": "Original uploader was User:The Stonecutter at commons.wikipedia Own work",
-  "license": "Public domain",
-  "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
-  "source": "https://commons.wikimedia.org/wiki/File:Najstarija_zgrada_u_Beogradu.JPG",
-  "modifications": "Resized to 1280 px and converted to WebP.",
-  "width": 1280,
-  "height": 960,
-  "rating": 87,
-  "visualTags": [
-    "facade"
-  ],
-  "tags": [
-    "building"
-  ]
+ "author": "User:The Stonecutter",
+ "license": "Public domain",
+ "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+ "source": "https://commons.wikimedia.org/wiki/File:Najstarija_zgrada_u_Beogradu.JPG",
+ "modifications": "Resized to 1280 px and converted to WebP.",
+ "width": 1280,
+ "height": 960,
+ "rating": 87,
+ "visualTags": [
+  "facade"
+ ],
+ "tags": [
+  "building"
+ ]
 }

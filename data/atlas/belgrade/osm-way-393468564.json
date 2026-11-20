@@ -61,8 +61,22 @@
     "uk": "Контур OpenStreetMap (way/393468564)."
   },
   "photos": [
-    "b6a89f1d3b1ee3f164a95a5936ba7e77b9da2c22ae44bd752433688b7f32c2d5"
+    "b6a89f1d3b1ee3f164a95a5936ba7e77b9da2c22ae44bd752433688b7f32c2d5",
+    "33e766dad3b5689c6b4475c59f8a6b8876a76453e6094958de7dcb6e3e8cfb5b",
+    "8217d3a325f5048956ec9683c1c956f29dfd0ffd823f013b912b326ddc6f3eeb"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3114711"
+  "otherSource": "https://www.wikidata.org/wiki/Q3114711",
+  "descriptions": {
+    "ru": "Первый современный белградский универмаг: торговый дом, выстроенный в 1907 году по проекту инженера Виктора Азриэля и признанный самым значительным сербским произведением сецессии и по конструкции, и по форме.",
+    "en": "The first modern department store in Belgrade, built in 1907 to a design by the engineer Viktor Azriel and considered the most significant Serbian achievement of the Secession, both structurally and in form.",
+    "uk": "Перший сучасний белградський універмаг: торговий дім, зведений 1907 року за проєктом інженера Віктора Азріеля й визнаний найвизначнішим сербським твором сецесії і за конструкцією, і за формою.",
+    "sr": "Прва модерна београдска робна кућа, подигнута 1907. године према пројекту инжењера Виктора Азриела. У конструктивном и обликовном смислу сматра се најзначајнијим српским сецесијским остварењем."
+  },
+  "histories": {
+    "ru": "Универмаг построили в 1907 году; это первое торговое здание Белграда, где этажи соединены и раскрыты друг в друга, так что всё внутреннее пространство просматривается с галерей. Автор, инженер Виктор Азриэль, решил дом в духе сецессии, и поэтому его считают самым значительным сербским произведением этого стиля.",
+    "en": "The store was built in 1907 and was the first commercial building in Belgrade in which several floors were opened to one another, so that the whole interior could be taken in from the galleries. Its author, the engineer Viktor Azriel, designed it in the Secessionist manner, which is why it is held to be the most significant Serbian work of that style.",
+    "uk": "Універмаг звели 1907 року; це перша торговельна споруда Белграда, де поверхи з’єднані й розкриті одне в одне, тож увесь внутрішній простір проглядається з галерей. Автор, інженер Віктор Азріель, вирішив дім у дусі сецесії, і тому його вважають найвизначнішим сербським твором цього стилю.",
+    "sr": "Зграда је подигнута 1907. године као робна кућа и била је прва трговачка зграда у Београду у којој су спратови међусобно повезани и отворени, тако да се цео унутрашњи простор сагледава са галерија. Аутор, инжењер Виктор Азриел, обликовао ју је у духу сецесије, због чега се сматра најзначајнијим српским остварењем тог стила."
+  }
 }

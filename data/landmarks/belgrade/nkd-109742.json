@@ -1,0 +1,71 @@
+{
+  "id": "nkd-109742",
+  "osmId": null,
+  "atlasId": null,
+  "category": "theatre",
+  "subcategory": "concert_hall",
+  "names": {
+    "ru": "Сава-центр",
+    "en": "Sava Centar",
+    "uk": "Сава-центр",
+    "sr": "Сава центар"
+  },
+  "addresses": {
+    "ru": "улица Милентия Поповича, 9",
+    "en": "9 Milentija Popovića Street",
+    "uk": "вулиця Милентія Поповича, 9",
+    "sr": "Милентија Поповића 9"
+  },
+  "descriptions": {
+    "ru": "Конгрессно-концертный комплекс 1976–1978 годов по проекту Стояна Максимовича с концертным залом, отелем и деловым корпусом.",
+    "en": "Congress and concert complex built in 1976–1978 to a design by Stojan Maksimović, with a concert hall, hotel and office wing.",
+    "uk": "Конгресно-концертний комплекс 1976–1978 років за проєктом Стояна Максимовича з концертною залою, готелем і діловим корпусом.",
+    "sr": "Конгресно-концертни комплекс грађен 1976–1978. по пројекту Стојана Максимовића, са концертном салом, хотелом и пословним делом."
+  },
+  "coordinates": [
+    20.433,
+    44.80833
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=109742",
+  "otherSources": [],
+  "districtId": "novi-beograd",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=109742"
+  },
+  "recognition": {
+    "wikidata": null,
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Сава-центр",
+      "en": "https://en.wikipedia.org/wiki/Sava_Centar",
+      "uk": "https://uk.wikipedia.org/wiki/Сава-центр",
+      "sr": "https://sr.wikipedia.org/wiki/Сава_центар"
+    },
+    "commonsCategory": null,
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 79,
+    "components": {
+      "heritage": 30,
+      "recognition": 15,
+      "architecturalRole": 18,
+      "age": 4,
+      "editorial": 12
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 4 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

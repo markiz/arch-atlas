@@ -18,10 +18,11 @@
   "maxYear": 1931,
   "yearLabelId": "year-1931",
   "styleIds": [
-    "undetermined"
+    "academic-art"
   ],
   "architectIds": [
-    "architect-q3341572"
+    "architect-q3341572",
+    "architect-q2923834"
   ],
   "districtId": "palilula",
   "type": "educational",
@@ -179,8 +180,21 @@
     "uk": "Контур OpenStreetMap (relation/9491979)."
   },
   "photos": [
-    "bd97ea1e4a7f9c6a1b55c5d602316cb6d50917472a53c57955a17100c0b3a5fb"
+    "bd97ea1e4a7f9c6a1b55c5d602316cb6d50917472a53c57955a17100c0b3a5fb",
+    "3b6dba00246575ae20b6f28f1d04a81f7b22c89d42fc724008f4300ceb62680e"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/palilula/",
-  "otherSource": "https://www.wikidata.org/wiki/Q15506871"
+  "otherSource": "https://www.wikidata.org/wiki/Q15506871",
+  "descriptions": {
+    "ru": "Первое в Белграде здание, построенное специально для технических факультетов: электротехнический, строительный и архитектурный факультеты работают здесь и сегодня. Авторы проекта — Никола Несторович и Бранко Таназевич.",
+    "en": "The first building in Belgrade purpose-built for technical faculties, and still home to the schools of electrical engineering, civil engineering and architecture. It was designed by Nikola Nestorović and Branko Tanazević.",
+    "uk": "Перша в Белграді будівля, зведена спеціально для технічних факультетів: електротехнічний, будівельний і архітектурний факультети працюють тут і досі. Автори проєкту — Нікола Несторович і Бранко Таназевич.",
+    "sr": "Прва наменски зидана зграда за техничке факултете у Београду, у којој и данас раде електротехнички, грађевински и архитектонски факултети. Пројектовали су је Никола Несторовић и Бранко Таназевић."
+  },
+  "histories": {
+    "ru": "Здание возводили в 1925–1931 годах по проекту Николы Несторовича и Бранко Таназевича; до того Технический факультет занимал дом в Васиной улице. Закладной камень освятили 3 июня 1926 года, когда стены уже высоко поднялись над землёй. После Второй мировой войны по проекту Михаила Радовановича надстроили третий этаж. Первоначальное назначение сохранилось: три технических факультета работают здесь до сих пор.",
+    "en": "The building was erected in 1925–1931 to a design by Nikola Nestorović and Branko Tanazević; until then the Technical Faculty occupied premises in Vasina Street. Its foundation stone was consecrated on 3 June 1926, when the walls already stood high above ground. After the Second World War a third storey was added to a design by Mihailo Radovanović. The original purpose has survived: three technical faculties still work here.",
+    "uk": "Будівлю зводили в 1925–1931 роках за проєктом Ніколи Несторовича та Бранка Таназевича; до того Технічний факультет містився в будинку на Васиній вулиці. Наріжний камінь освятили 3 червня 1926 року, коли стіни вже високо піднялися над землею. Після Другої світової війни за проєктом Михайла Радовановича надбудували третій поверх. Початкове призначення збереглося: три технічні факультети працюють тут і досі.",
+    "sr": "Зграда је подигнута 1925–1931. по пројекту Николе Несторовића и Бранка Таназевића; до тада је Технички факултет радио у згради у Васиној улици. Камен темељац освећен је 3. јуна 1926, када су зидови већ били високо изнад земље. После Другог светског рата по пројекту Михаила Радовановића дозидан је трећи спрат. Првобитна намена је сачувана: у згради и данас раде три техничка факултета."
+  }
 }

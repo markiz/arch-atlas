@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-169469883",
+  "osmId": "way/169469883",
+  "atlasId": "osm-way-169469883",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дворец «Албания»",
+    "en": "Albania Palace",
+    "uk": "Палац «Албанія»",
+    "sr": "Палата „Албанија”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Михаила 2-4, Коларчева, 12",
+    "en": "Knez Mihailova 2-4, Kolarčeva 12",
+    "uk": "Вул. Князя Михайла 2-4, Коларчева, 12",
+    "sr": "Кнез Михаилова 2-4, Коларчева 12"
+  },
+  "descriptions": {
+    "ru": "Первый небоскрёб Белграда — дворец Ипотечного банка Торгового фонда на углу Кнез Михаиловой и Коларчевой. Его возвели на месте кафаны «Албания» 1860 года, и он надолго задал высотный ориентир центра.",
+    "en": "Belgrade's first skyscraper, the Mortgage Bank of the Trade Fund palace at the corner of Knez Mihailova and Kolarčeva. Built on the site of the 1860 Albanija kafana, it long set the height marker for the city centre.",
+    "uk": "Перший белградський хмарочос — палац Іпотечного банку Торгового фонду на розі Кнез Михайлової та Коларчевої. Його звели на місці кафани «Албанія» 1860 року, і він надовго задав висотний орієнтир центру.",
+    "sr": "Први београдски облакодер — палата Хипотекарне банке Трговачког фонда на углу Кнез Михаилове и Коларчеве. Подигнута је на месту кафане Албанија из 1860. и дуго је била висински оријентир центра."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.46004,
+    44.8151519
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1278189"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1278189",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Palace_Albanija",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%B0_%D0%90%D0%BB%D0%B1%D0%B0%D0%BD%D0%B8%D1%98%D0%B0"
+    },
+    "commonsCategory": "Category:Palace Albania",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 56,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 18,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

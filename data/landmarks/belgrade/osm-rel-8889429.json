@@ -1,0 +1,74 @@
+{
+  "id": "osm-rel-8889429",
+  "osmId": "relation/8889429",
+  "atlasId": "osm-rel-8889429",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дворец Главпочтамта (Белград)",
+    "en": "Main Post Office Palace (Belgrade)",
+    "uk": "Палац Головпоштамту (Белград)",
+    "sr": "Палата Главне поште (Београд)"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Таковская, 2",
+    "en": "Takovska 2",
+    "uk": "Вул. Таковська, 2",
+    "sr": "Таковска 2"
+  },
+  "descriptions": {
+    "ru": "Дворец, возведённый в 1935–1938 годах как единый комплекс Почтовой сберегательной кассы, Главного почтамта и Главного телеграфа — центрального почтового учреждения Королевства Югославии. Его облик определил Василий Андросов после того, как проект-победитель конкурса 1930 года Йосипа Пичмана и Андрии Барани отклонили ради более репрезентативной академической архитектуры.",
+    "en": "The palace built in 1935–1938 to house the Postal Savings Bank, the Main Post Office and the Main Telegraph under one roof — the central postal institution of the Kingdom of Yugoslavia. Its appearance was shaped by Vasilije Androsov after the winning 1930 competition entry by Josip Pičman and Andrija Baranji was set aside in favour of a more monumental academic design.",
+    "uk": "Палац, споруджений у 1935–1938 роках як єдиний комплекс Поштової ощадної каси, Головпоштамту й Головного телеграфу — центральної поштової установи Королівства Югославія. Його вигляд визначив Василіє Андросов після того, як проєкт-переможець конкурсу 1930 року Йосипа Пічмана й Андрії Барани відхилили заради репрезентативнішої академічної архітектури.",
+    "sr": "Палата подигнута 1935–1938. као јединствен објекат Поштанске штедионице, Главне поште и Главног телеграфа — централне поштанске установе Краљевине Југославије. Њен изглед одредио је Василије Андросов, након што је првонаграђени конкурсни пројекат Јосипа Пичмана и Андрије Барањија одбачен у корист репрезентативније академске архитектуре."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4673636,
+    44.8105962
+  ],
+  "source": "https://www.openstreetmap.org/relation/8889429",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q23656826"
+  ],
+  "districtId": "palilula",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q23656826",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%97%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%87%D1%82%D0%B0%D0%BC%D1%82%D0%B0_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Main_Post_Office_Palace%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%B0_%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B5_%D0%BF%D0%BE%D1%88%D1%82%D0%B5"
+    },
+    "commonsCategory": "Category:Main Post Office Palace (Belgrade)",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 15,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

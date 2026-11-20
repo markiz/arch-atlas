@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-394705986",
+  "osmId": "way/394705986",
+  "atlasId": "osm-way-394705986",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей Сербской православной церкви",
+    "en": "Museum of the Serbian Orthodox Church",
+    "uk": "Музей Сербської православної церкви",
+    "sr": "Музеј Српске православне цркве"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра, 5",
+    "en": "Kralja Petra 5",
+    "uk": "Вул. Короля Петра, 5",
+    "sr": "Краља Петра 5"
+  },
+  "descriptions": {
+    "ru": "Музей Сербской православной церкви в Патриаршем дворце в Белграде: 40 тысяч предметов церковной истории, от раннехристианских крестов и византийских печатей до икон, книг и облачений. Посетители видят лишь около 800 из них — здание не приспособлено для музея, и остальное хранится в запасниках.",
+    "en": "The Museum of the Serbian Orthodox Church occupies the Patriarchate in Belgrade and holds 40,000 objects of church history, from early Christian crosses and Byzantine seals to icons, books and vestments. Only some 800 of them are on view: the building was not designed as a museum, and the rest stays in the depot.",
+    "uk": "Музей Сербської православної церкви міститься в Патріаршому дворі в Белграді й зберігає 40 тисяч предметів церковної історії — від ранньохристиянських хрестів і візантійських печаток до ікон, книг і облачень. Відвідувачі бачать лише близько 800 з них: будівля не пристосована для музею, решта лежить у запасниках.",
+    "sr": "Музеј Српске православне цркве смештен је у Патријаршијском двору у Београду и чува 40.000 предмета црквене историје, од ранохришћанских крстова и византијских печата до икона, књига и одежди. Посетиоци виде свега око 800 експоната, јер зграда није наменски грађена за музеј и остатак је у депоу."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4514417,
+    44.8173874
+  ],
+  "source": "https://www.openstreetmap.org/way/394705986",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q13668609"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q13668609",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%A1%D0%B5%D1%80%D0%B1%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B9_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B8",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D1%98_%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B5_%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%BD%D0%B5_%D1%86%D1%80%D0%BA%D0%B2%D0%B5"
+    },
+    "commonsCategory": "Category:Museum of the Serbian Orthodox Church",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 42,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 11,
+      "age": 8,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

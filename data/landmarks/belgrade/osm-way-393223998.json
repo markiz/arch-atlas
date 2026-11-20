@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-393223998",
+  "osmId": "way/393223998",
+  "atlasId": "osm-way-393223998",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Здание Социального страхования",
+    "en": "Social Insurance Building",
+    "uk": "Будівля Соціального страхування",
+    "sr": "Зграда Социјалног осигурања"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Неманина, 30",
+    "en": "Nemanjina 30",
+    "uk": "Вул. Неманина, 30",
+    "sr": "Немањина 30"
+  },
+  "descriptions": {
+    "ru": "Здание Социального страхования на углу Неманиной улицы и улицы Светозара Марковича возведено в 1959–1962 годах по проекту Алексея Бркича. Это его главная работа и одна из построек, обозначивших новый этап послевоенного сербского зодчества.",
+    "en": "The Social Insurance Building on the corner of Nemanjina and Svetozara Markovića streets was raised in 1959–62 to a design by Aleksej Brkić. It is his most valued work and one of the buildings that marked a new stage in Serbian postwar architecture.",
+    "uk": "Будівля Соціального страхування на розі Неманіної вулиці та вулиці Светозара Марковича зведена в 1959–1962 роках за проєктом Олексія Бркича. Це його найвизначніша робота й одна зі споруд, що позначили новий етап повоєнної сербської архітектури.",
+    "sr": "Зграда Социјалног осигурања на углу Немањине и Светозара Марковића подигнута је 1959–1962. према пројекту Алексеја Бркића. То је његово највредније дело и једна од грађевина које су обележиле нову етапу послератне српске архитектуре."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4636326,
+    44.8031959
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q85994541"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43626"
+  },
+  "recognition": {
+    "wikidata": "Q85994541",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%97%D0%B3%D1%80%D0%B0%D0%B4%D0%B0_%D0%A1%D0%BE%D1%86%D0%B8%D1%98%D0%B0%D0%BB%D0%BD%D0%BE%D0%B3_%D0%BE%D1%81%D0%B8%D0%B3%D1%83%D1%80%D0%B0%D1%9A%D0%B0_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83"
+    },
+    "commonsCategory": "Category:Zgrada socijalnog osiguranja",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 45,
+    "components": {
+      "heritage": 15,
+      "recognition": 9,
+      "architecturalRole": 9,
+      "age": 4,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

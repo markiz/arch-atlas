@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-89808919",
+  "osmId": "way/89808919",
+  "atlasId": null,
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Храм Святого Саввы",
+    "en": "Church of Saint Sava",
+    "uk": "Храм Святого Сави",
+    "sr": "Храм Светог Саве"
+  },
+  "addresses": {
+    "ru": "Крушедолская, 2а",
+    "en": "2a Krušedolska Street",
+    "uk": "Крушедолська, 2а",
+    "sr": "Крушедолска 2а"
+  },
+  "descriptions": {
+    "ru": "Один из крупнейших православных храмов на Балканах, возведённый в 1935–2004 годах на месте сожжения мощей святого Саввы в 1595 году.",
+    "en": "One of the largest Orthodox churches in the Balkans, built between 1935 and 2004 on the site where the relics of Saint Sava were burned in 1595.",
+    "uk": "Один із найбільших православних храмів на Балканах, зведений у 1935–2004 роках на місці спалення мощей святого Сави 1595 року.",
+    "sr": "Један од највећих православних храмова на Балкану, грађен 1935–2004. на месту где су 1595. спаљене мошти Светог Саве."
+  },
+  "coordinates": [
+    20.4692,
+    44.79805
+  ],
+  "source": "https://hramsvetogsave.com/",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/89808919",
+    "https://www.wikidata.org/wiki/Q330385"
+  ],
+  "districtId": "vracar",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q330385",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Храм_Святого_Саввы",
+      "en": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava",
+      "uk": "https://uk.wikipedia.org/wiki/Храм_Святого_Сави",
+      "sr": "https://sr.wikipedia.org/wiki/Храм_Светог_Саве"
+    },
+    "commonsCategory": "Category:Church of Saint Sava",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 59,
+    "components": {
+      "heritage": 0,
+      "recognition": 25,
+      "architecturalRole": 15,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 4 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

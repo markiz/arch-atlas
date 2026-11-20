@@ -75,8 +75,22 @@
     "uk": "Контур OpenStreetMap (way/391994935)."
   },
   "photos": [
-    "e05c4d8aabdf860c064ab04aab66c17233d3d42afdb490868e58f16dac14f5ce"
+    "e05c4d8aabdf860c064ab04aab66c17233d3d42afdb490868e58f16dac14f5ce",
+    "5c7db31539b917d5d7beffb996bcf39cfe3cdc1b7b278b8975fe1c02f2665455",
+    "52ce0312868eafe19b2cab02124300675db67233303ab80f5eaad864c89b3607"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q16083748"
+  "otherSource": "https://www.wikidata.org/wiki/Q16083748",
+  "descriptions": {
+    "ru": "Здание Министерства юстиции, возведённое в 1883 году по проекту Светозара Ивачковича, вместе со Старым дворцом по соседству положило начало представительско-административному центру Теразий.",
+    "en": "The Ministry of Justice building went up in 1883 to a design by Svetozar Ivačković. With the Old Palace rising next door at the same moment, it helped turn the Terazije line into the capital's administrative and representative centre.",
+    "uk": "Будівлю Міністерства юстиції звели 1883 року за проєктом Светозара Івачковича. Разом зі Старим двором, що поставав поруч, вона творила новий представницько-адміністративний центр столиці.",
+    "sr": "Зграда Министарства правде подигнута је 1883. по пројекту архитекте Светозара Ивачковића. С подизањем Старог двора у непосредној близини настајао је репрезентативно-административни центар тадашње престонице."
+  },
+  "histories": {
+    "ru": "Дом возвели для Министерства юстиции по проекту Светозара Ивачковича; стройка совпала с провозглашением Королевства Сербии и с работами на Старом дворце рядом, поэтому пояс Теразий постепенно складывался как правительственный и представительский квартал. Изначально здание было одноэтажным, позже к нему пристроили дворовое крыло, а один из двух симметричных порталов заложили при расширении.",
+    "en": "It was built for the Ministry of Justice to Svetozar Ivačković's design. Construction coincided with the proclamation of the Kingdom of Serbia and with work on the Old Palace a few steps away, as the Terazije front was gradually remade into the capital's administrative and representative quarter. Planned as a single-storey building, it received a courtyard wing later, and one of its two symmetrical portals was walled up when the building was enlarged.",
+    "uk": "Дім звели для Міністерства юстиції за проєктом Светозара Івачковича. Будівництво збіглося з проголошенням Королівства Сербії та зі зведенням Старого двору неподалік, тож вулиця поступово перетворювалася на урядово-представницький квартал столиці. Спершу споруда була одноповерховою; згодом до неї прибудували дворове крило, а один із двох симетричних порталів замурували під час розширення.",
+    "sr": "Објекат је изведен за Министарство правде, према пројекту Светозара Ивачковића. Градња се поклопила с проглашењем Краљевине Србије и с радовима на Старом двору у суседству, па се потез Теразија постепено обликовао као управни и репрезентативни центар. Првобитно је то била једноспратна зграда; касније је дограђено дворишно крило, а један од двају симетричних портала затворен је при проширењу."
+  }
 }

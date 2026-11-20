@@ -1,0 +1,73 @@
+{
+  "id": "nkd-43700",
+  "osmId": null,
+  "atlasId": null,
+  "category": "monument",
+  "subcategory": "monument",
+  "names": {
+    "ru": "Памятник Победителю",
+    "en": "Pobednik",
+    "uk": "Пам’ятник Переможцю",
+    "sr": "Споменик Победнику"
+  },
+  "addresses": {
+    "ru": "Белградская крепость",
+    "en": "Belgrade Fortress",
+    "uk": "Белградська фортеця",
+    "sr": "Београдска тврђава"
+  },
+  "descriptions": {
+    "ru": "Бронзовая фигура работы Ивана Мештровича на дорской колонне Горнего града, поставленная в 1928 году к десятилетию прорыва Салоникского фронта.",
+    "en": "Ivan Meštrović's bronze figure on a Doric column in the Upper Town, erected in 1928 for the tenth anniversary of the Salonika Front breakthrough.",
+    "uk": "Бронзова фігура роботи Івана Мештровича на дорійській колоні Верхнього міста, встановлена 1928 року до десятиліття прориву Салонікського фронту.",
+    "sr": "Бронзана фигура Ивана Мештровића на дорском стубу Горњег града, подигнута 1928. поводом десетогодишњице пробоја Солунског фронта."
+  },
+  "coordinates": [
+    20.447822,
+    44.823014
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43700",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1287997"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43700"
+  },
+  "recognition": {
+    "wikidata": "Q1287997",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Памятник_Победителю",
+      "en": "https://en.wikipedia.org/wiki/Pobednik",
+      "uk": "https://uk.wikipedia.org/wiki/Пам%27ятник_Переможцю_(Белград)",
+      "sr": "https://sr.wikipedia.org/wiki/Победник_(споменик)"
+    },
+    "commonsCategory": "Category:The Victor",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 90,
+    "components": {
+      "heritage": 30,
+      "recognition": 25,
+      "architecturalRole": 12,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 4 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

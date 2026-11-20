@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392696060",
+  "osmId": "way/392696060",
+  "atlasId": "osm-way-392696060",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом Крсмановича",
+    "en": "Krsmanović House",
+    "uk": "Будинок Крсмановича",
+    "sr": "Крсмановићева кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 34",
+    "en": "Terazije 34",
+    "uk": "Вул. Теразиє, 34",
+    "sr": "Теразије 34"
+  },
+  "descriptions": {
+    "ru": "Дом Крсмановичей на Теразиях известен двумя эпизодами: в 1918 году здесь провозгласили объединение южных славян в единое государство, и некоторое время дом служил королевской резиденцией. Здание построено в 1885 году по проекту Йована Илкича для торговца Марко О. Марковича, а в 1898 году его купили братья Крсмановичи.",
+    "en": "Krsmanović House on Terazije is remembered for two things: in 1918 the unification of the South Slavs into a single state was proclaimed here, and for a time the building served as the royal Court. It was built in 1885 to Jovan Ilkić's design for the merchant Marko O. Marković and was bought by the Krsmanović brothers in 1898.",
+    "uk": "Будинок Крсмановичів на Тераціях відомий двома епізодами: 1918 року тут проголосили об'єднання південних слов'ян у єдину державу, а деякий час будинок правив за королівську резиденцію. Споруджено його 1885 року за проєктом Йована Ілкича для купця Марка О. Марковича, а 1898 року його купили брати Крсмановичі.",
+    "sr": "Крсмановићева кућа на Теразијама памти два догађаја: у њој је 1918. године проглашено уједињење јужних Словена у јединствену државу, а неко време је служила као Двор. Подигнута је 1885. године по пројекту Јована Илкића као приватна кућа трговца Марка О. Марковића, а 1898. године купила су је браћа Крсмановић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4613751,
+    44.8116904
+  ],
+  "source": "https://www.openstreetmap.org/way/392696060",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3278818"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45995"
+  },
+  "recognition": {
+    "wikidata": "Q3278818",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Krsmanovi%C4%87_House%2C_Terazije",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9A%D1%80%D1%81%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%9B%D0%B5%D0%B2%D0%B0_%D0%BA%D1%83%D1%9B%D0%B0_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83"
+    },
+    "commonsCategory": "Category:Krsmanovićeva kuća",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 70,
+    "components": {
+      "heritage": 24,
+      "recognition": 15,
+      "architecturalRole": 6,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: national",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-295106065",
+  "osmId": "way/295106065",
+  "atlasId": "osm-way-295106065",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей города Белграда",
+    "en": "Belgrade City Museum",
+    "uk": "Музей міста Белграда",
+    "sr": "Музеј града Београда"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ресавская, 40b",
+    "en": "Resavska 40b",
+    "uk": "Вул. Ресавська, 40b",
+    "sr": "Ресавска 40b"
+  },
+  "descriptions": {
+    "ru": "Музей города Белграда вырос из частного собрания: купец Самуило Стефанович предлагал городу купить его оружие, драгоценности и картины ещё в 1894 году, а в 1902-м коллекцию приобрели. В 2006 году музею передали здание Новой военной академии в Ресавской улице, которое должно стать его постоянным домом.",
+    "en": "The Belgrade City Museum grew out of a private collection: the merchant Samuilo Stefanović offered the city his weapons, jewels and paintings as early as 1894, and the purchase went through in 1902. In 2006 the museum was assigned the former Military Academy building in Resavska Street, meant to become its permanent home.",
+    "uk": "Музей міста Белграда виріс із приватної колекції: купець Самуїло Стефанович пропонував місту купити його зброю, коштовності й картини ще 1894 року, а 1902-го її придбали. 2006 року музею передали будівлю Нової військової академії в Ресавській вулиці, яка має стати його постійним домом.",
+    "sr": "Музеј града Београда израстао је из приватне збирке: трговац Самуило Стефановић је још 1894. понудио граду да откупи његово оружје, накит и слике, а 1902. збирка је купљена. Године 2006. Музеју је додељена зграда Нове војне академије у Ресавској улици, која треба да постане његов стални дом."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.461054,
+    44.8043252
+  ],
+  "source": "https://www.openstreetmap.org/way/295106065",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2403321"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2403321",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%D0%B0",
+      "en": "https://en.wikipedia.org/wiki/Belgrade_City_Museum",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/Muzej_grada_Beograda"
+    },
+    "commonsCategory": "Category:Belgrade City Museum",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 57,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 11,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

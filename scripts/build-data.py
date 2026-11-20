@@ -371,10 +371,10 @@ for card in landmark_cards.values():
  if category not in ('museum','church','castle','theatre','monument'):continue
  if card.get('status') in ('closed','demolished'):continue
  names=card.get('names') or {}
- if not all(names.get(language) for language in ('ru','en','ka','uk')):continue
+ if not all(names.get(language) for language in city_languages):continue
  point=card.get('coordinates')
  if not point:continue
- props={'kind':'landmark','category':category,'landmarkId':card.get('id'),'names':{language:names[language] for language in ('ru','en','ka','uk')},'name':names['ru']}
+ props={'kind':'landmark','category':category,'landmarkId':card.get('id'),'names':{language:names[language] for language in city_languages},'name':names['ru']}
  if osm_id:props['osmId']=osm_id
  features.append({'type':'Feature','properties':props,'geometry':{'type':'Point','coordinates':[round(float(point[0]),6),round(float(point[1]),6)]}})
  card_landmarks_added+=1

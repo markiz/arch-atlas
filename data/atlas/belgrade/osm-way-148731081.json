@@ -93,8 +93,22 @@
     "uk": "Контур OpenStreetMap (way/148731081)."
   },
   "photos": [
-    "706f0952759de8a534eb02533490bffceacad8c486851a078c1e03f4e5de7387"
+    "706f0952759de8a534eb02533490bffceacad8c486851a078c1e03f4e5de7387",
+    "05d3a5ef363f75c465943ec88188eafc4a0d3c5b16cff5deea9479516d62f287",
+    "8dafa0b679e90d1cbcf8f464fbe4500ab05d750b192ce07bb692f324b9b7bb05"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279458"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279458",
+  "descriptions": {
+    "ru": "Дом назван по владельцу — торговцу Манаку Михаиловичу — остаётся редчайшим образцом старого городского жилья Белграда первой половины XIX века. Сегодня это часть Этнографического музея, где выставлена коллекция Христифора Црниловича.",
+    "en": "The house takes its name from its owner, the merchant Manak Mihailović, and remains the rarest kind of old Belgrade town house from the first half of the 19th century. It is now part of the Ethnographic Museum and holds the Hristifor Crnilović collection.",
+    "uk": "Дім названо на честь власника — купця Манака Михаїловича, і він залишається рідкісним зразком старого міського житла Белграда першої половини XIX століття. Нині це частина Етнографічного музею з колекцією Христіфора Црниловича.",
+    "sr": "Кућа је добила назив по власнику Манаку Михаиловићу, трговцу, а данас је део Етнографског музеја у којем се чува етнографска збирка Христифора Црниловића. Представља изузетно редак примерак старе варошке куће Београда из прве половине XIX века."
+  },
+  "histories": {
+    "ru": "Дом возвели около 1830 года — в пору, когда обновлённая Сербия стремилась превратить Белград в сербский город и готовила его к столичной роли. Он отмечает старую трассу, связывавшую Варош-капию с Топчидерской дорогой, и средневековый путь от савского берега к Зелени-венцу. Сегодня это часть Этнографического музея.",
+    "en": "The house was built around 1830, when the efforts of the renewed Serbian state were focused on turning Belgrade into a Serbian town and preparing it for the role of capital. It marks the old line linking the Varoš kapija gate with the Topčider road, and the medieval route between the Sava bank and Zeleni venac. Today it forms part of the Ethnographic Museum.",
+    "uk": "Будинок звели близько 1830 року, коли оновлена Сербія докладала зусиль, щоб перетворити Белград на сербське місто й підготувати його до столичної ролі. Він позначає стару трасу, що сполучала Варош-капію з Топчидерською дорогою, і середньовічний шлях від савського берега до Зеленого венця. Сьогодні це складова Етнографічного музею.",
+    "sr": "Кућа је подигнута око 1830, док се обновљена Србија трудила да од Београда направи српску варош и припреми га за престоницу. Њен положај прати стару трасу пута од Варош капије ка Топчидеру и средњовековну везу савске обале са Зеленим венцем. Данас је део Етнографског музеја."
+  }
 }

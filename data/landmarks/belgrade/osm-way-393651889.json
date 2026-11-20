@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-393651889",
+  "osmId": "way/393651889",
+  "atlasId": "osm-way-393651889",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Народный банк Сербии (здание на улице Неманина)",
+    "en": "National Bank of Serbia (Nemanjina Street Building)",
+    "uk": "Народний банк Сербії (будівля на вулиці Неманіна)",
+    "sr": "Народна банка Србије (Немањина)"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Неманина, 17",
+    "en": "Nemanjina 17",
+    "uk": "Вул. Неманина, 17",
+    "sr": "Немањина 17"
+  },
+  "descriptions": {
+    "ru": "Штаб-квартира Народного банка Сербии на площади Славия, достроенная и открытая в 2006 году по проекту архитектора Груйо Голиянина. Сам банк ведёт историю с 1884 года, когда основали Привилегированный народный банк Сербского королевства.",
+    "en": "The headquarters of the National Bank of Serbia on Slavija Square, completed and inaugurated in 2006 to a design by the architect Grujo Golijanin. The bank it serves traces its line back to 1884, when the Privileged National Bank of the Kingdom of Serbia was founded.",
+    "uk": "Штаб-квартира Народного банку Сербії на площі Славія, добудована й відкрита 2006 року за проєктом архітектора Груйо Голиянина. Сам банк веде історію від 1884 року, коли заснували Привілейований народний банк Сербського королівства.",
+    "sr": "Седиште Народне банке Србије на Славији, довршено и отворено 2006. године према пројекту архитекте Грује Голијанина. Сама банка води историју од 1884, када је основана Привилегована народна банка Краљевине Србије."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4647354,
+    44.8035363
+  ],
+  "source": "https://www.openstreetmap.org/way/393651889",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1194664"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q1194664",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9_%D0%B1%D0%B0%D0%BD%D0%BA_%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8",
+      "en": "https://en.wikipedia.org/wiki/National_Bank_of_Serbia",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B8%D0%B9_%D0%B1%D0%B0%D0%BD%D0%BA_%D0%A1%D0%B5%D1%80%D0%B1%D1%96%D1%97",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0_%D0%B1%D0%B0%D0%BD%D0%BA%D0%B0_%D0%A1%D1%80%D0%B1%D0%B8%D1%98%D0%B5"
+    },
+    "commonsCategory": "Category:National Bank of Serbia",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 43,
+    "components": {
+      "heritage": 0,
+      "recognition": 25,
+      "architecturalRole": 9,
+      "age": 1,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

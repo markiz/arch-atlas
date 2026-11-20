@@ -85,8 +85,22 @@
     "uk": "Контур OpenStreetMap (way/394548169)."
   },
   "photos": [
-    "39168697aee49d6da9ac2b3e6e0229c959c3b06f1e173463619ec5cfbc63d0f2"
+    "39168697aee49d6da9ac2b3e6e0229c959c3b06f1e173463619ec5cfbc63d0f2",
+    "cfe852eb970289effa5aef2b94ca61ea1c66aae62829cbb50041d35e2cd9ee58",
+    "013b68c2e2088a55954f5e8928397ef371272bfe2a19a55820244b669a99b1e2"
   ],
   "source": "https://www.openstreetmap.org/way/394548169",
-  "otherSource": "https://www.wikidata.org/wiki/Q3356648"
+  "otherSource": "https://www.wikidata.org/wiki/Q3356648",
+  "descriptions": {
+    "ru": "Дом сирот — учреждение Общества воспитания и защиты детей, основанного в 1879 году: здание на улице Светозара Марковича построили на добровольные пожертвования горожан, и с 1887 по 1918 год здесь жили, учились и воспитывались военные сироты.",
+    "en": "The Home for Orphaned Children was built by the Society for the Education and Protection of Children, founded in 1879: the building in Svetozara Markovića Street was raised with voluntary donations from Belgrade citizens, and from 1887 to 1918 it took in war orphans and abandoned children.",
+    "uk": "Дім сиріт — установа Товариства виховання й захисту дітей, заснованого 1879 року: будівлю на вулиці Светозара Марковича звели на добровільні пожертви городян, і від 1887 до 1918 року тут жили, навчалися й виховувалися воєнні сироти.",
+    "sr": "Дом сиротне деце подигло је Друштво за васпитање и заштиту деце, основано 1879, од добровољних прилога београдских грађана. Од 1887. до 1918. у њему су била смештена, школована и васпитавана ратна сирочад и напуштена деца."
+  },
+  "histories": {
+    "ru": "Здание возводили в 1887–1892 годах по проекту венского архитектора Антона Хадерера, в духе академизма XIX века. Его построило Общество воспитания и защиты детей на добровольные взносы горожан. С 1887 по 1918 год в доме размещали, обучали и воспитывали военных сирот и брошенных детей с территории сербского, а позднее югославского государства; как воспитательное учреждение он был необычайно ценим в своё время и сыграл большую роль в социализации детей без родителей.",
+    "en": "The building was put up between 1887 and 1892 to a design by the Viennese architect Anton Haderer, in the spirit of nineteenth-century academicism. The Society for the Education and Protection of Children, founded in 1879, built it from voluntary contributions of Belgrade citizens as the Home for Orphaned Children. From 1887 to 1918 the house sheltered, schooled and brought up war orphans and abandoned children from the territory of the Serbian and later the Yugoslav state. As an educational institution it was unusually highly regarded in its day and played a major part in the care and socialisation of children without parents.",
+    "uk": "Будівлю зводили в 1887–1892 роках за проєктом віденського архітектора Антона Гадерера, у дусі академізму XIX століття. Її спорудило Товариство виховання й захисту дітей, засноване 1879 року, на добровільні внески городян. Від 1887 до 1918 року в домі розміщували, навчали й виховували воєнних сиріт і покинутих дітей з території сербської, а згодом югославської держави; як виховний заклад він був надзвичайно шанований у свій час і відіграв велику роль у соціалізації дітей без батьків.",
+    "sr": "Зграда је грађена од 1887. до 1892. према пројекту бечког архитекте Антона Хадерера, у духу академизма XIX века. Подигло ју је Друштво за васпитање и заштиту деце, основано 1879, од добровољних прилога грађана Београда. У дому су од 1887. до 1918. бивала збринута, школована и васпитавана ратна сирочад и напуштена деца из српске, а касније југословенске државе. Као васпитна установа била је необично цењена у своје време и одиграла је велику улогу у збрињавању деце без родитеља и њиховој социјализацији."
+  }
 }

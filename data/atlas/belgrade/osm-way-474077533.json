@@ -96,5 +96,17 @@
     "e5de7fccadcff02016b42d66958166b1528da12977bb4c9419d2f2de235aca45"
   ],
   "source": "https://www.openstreetmap.org/way/474077533",
-  "otherSource": "https://www.wikidata.org/wiki/Q24205558"
+  "otherSource": "https://www.wikidata.org/wiki/Q24205558",
+  "descriptions": {
+    "ru": "Церковь Святого Николая в Добановцах освящена в честь перенесения мощей святителя Николая и с 1803 года стоит на месте храмов XVIII века. При ней основали старую вероисповедную школу — старейшее учебное заведение в округе.",
+    "en": "The Church of St Nicholas in Dobanovci is dedicated to the translation of the relics of St Nicholas and has stood since 1803 on the site of eighteenth-century churches. The old confessional school founded beside it was the earliest educational institution in the area.",
+    "uk": "Церква Святого Миколая в Добановцях освячена на честь перенесення мощей святителя Миколая і від 1803 року стоїть на місці храмів XVIII століття. При ній заснували стару віросповідну школу — найдавніший навчальний заклад в окрузі.",
+    "sr": "Црква Светог Николе у Добановцима посвећена је преносу моштију светог оца Николаја и од 1803. године стоји на месту храмова из 18. века. При њој је основана стара вероисповедна школа, најстарија просветна установа у околини."
+  },
+  "histories": {
+    "ru": "Храм построили в 1803 году на месте более ранних церквей XVIII века. В 1836-м Георгий Девич вырезал для него иконостас и резной деревянный убор, а иконы в 1841–1842 годах написал Петар Чортанович. При церкви тогда же выстроили вероисповедную школу, и здесь же сохранились редкие иконы, старые печатные книги и метрические записи XVIII–XX веков.",
+    "en": "The church was built in 1803 on the site of earlier eighteenth-century churches. Georgije Dević, a noted Vojvodina woodcarver, made the iconostasis and its carved woodwork in 1836, and Petar Čortanović painted the icons in 1841–1842. A confessional school was founded at the church and built at the same time; the parish also keeps rare icons, old printed books and registers of births, marriages and deaths from the eighteenth to the twentieth century.",
+    "uk": "Храм звели 1803 року на місці давніших церков XVIII століття. 1836 року Георгій Девич вирізав для нього іконостас і різьблене дерев'яне оздоблення, а ікони в 1841–1842 роках написав Петар Чортанович. При церкві тоді ж звели віросповідну школу, і тут збереглися рідкісні ікони, стародруки та метричні книги XVIII–XX століть.",
+    "sr": "Храм је подигнут 1803. године на месту ранијих цркава из 18. века. Иконостас и резбарени дрвени украс израдио је 1836. Георгије Девић, а иконе је 1841–1842. сликао Петар Чортановић. При цркви је основана и у исто време саграђена стара вероисповедна школа, а у храму су сачуване ретке иконе, старе штампане књиге и протоколи рођених, венчаних и умрлих од 18. до 20. века."
+  }
 }

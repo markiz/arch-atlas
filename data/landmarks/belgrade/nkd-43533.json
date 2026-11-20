@@ -1,0 +1,73 @@
+{
+  "id": "nkd-43533",
+  "osmId": null,
+  "atlasId": null,
+  "category": "castle",
+  "subcategory": "fortress",
+  "names": {
+    "ru": "Земунская крепость",
+    "en": "Zemun Fortress",
+    "uk": "Земунська фортеця",
+    "sr": "Земунска тврђава"
+  },
+  "addresses": {
+    "ru": "Гардош",
+    "en": "Gardoš",
+    "uk": "Гардош",
+    "sr": "Гардош"
+  },
+  "descriptions": {
+    "ru": "Остатки средневекового замка на Гардоше с четырьмя угловыми башнями — древнейшее сохранившееся ядро Земуна.",
+    "en": "Remains of the medieval castle on Gardoš with four corner towers — the oldest surviving core of Zemun.",
+    "uk": "Руїни середньовічного замку на Гардоші з чотирма кутовими вежами — найдавніше збережене ядро Земуна.",
+    "sr": "Остаци средњовековног замка на Гардошу са четири угаоне куле — најстарије сачувано језгро Земуна."
+  },
+  "coordinates": [
+    20.409909,
+    44.848299
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43533",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3078449"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43533"
+  },
+  "recognition": {
+    "wikidata": "Q3078449",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Zemun_fortress",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/Земунска_тврђава"
+    },
+    "commonsCategory": "Category:Zemun Fortress",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 69,
+    "components": {
+      "heritage": 30,
+      "recognition": 9,
+      "architecturalRole": 8,
+      "age": 10,
+      "editorial": 12
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 2 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-390825124",
+  "osmId": "way/390825124",
+  "atlasId": "osm-way-390825124",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого архангела Гавриила",
+    "en": "Church of Saint Archangel Gabriel",
+    "uk": "Церква Святого архангела Гавриїла",
+    "sr": "Црква Светог архангела Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Городской парк, 3",
+    "en": "Gradski park 3",
+    "uk": "Вул. Міський парк, 3",
+    "sr": "Градски парк 3"
+  },
+  "descriptions": {
+    "ru": "Капелла Контумаца — карантинной заставы пограничного Земуна, построенная в 1786 году на средства купца и мыловара Теодора Тоши Апостоловича. Это одна из всего двух сохранившихся построек Контумаца, основанного в 1730 году.",
+    "en": "The chapel of the Kontumac, the quarantine station of what was then the border town of Zemun, built in 1786 at the expense of the merchant and soap-maker Teodor Toša Apostolović. It is one of only two surviving structures of the Kontumac, founded in 1730.",
+    "uk": "Каплиця Контумацу — карантинної застави прикордонного Земуна, зведена 1786 року коштом купця й миловара Теодора Тоши Апостоловича. Це одна з лише двох збережених споруд Контумацу, заснованого 1730 року.",
+    "sr": "Капела Контумца, карантинске установе тада пограничног Земуна, подигнута је 1786. новцем трговца и сапунџије Теодора Тоше Апостоловића. Један је од свега два сачувана објекта Контумца, основаног 1730."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4100413,
+    44.8413197
+  ],
+  "source": "https://www.openstreetmap.org/way/390825124",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3320367"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45924"
+  },
+  "recognition": {
+    "wikidata": "Q3320367",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Monastery_of_St._Archangel_Gabriel%2C_Zemun",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%B0%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D0%B0_%D0%93%D0%B0%D0%B2%D1%80%D0%B8%D0%BB%D0%B0_%28%D0%97%D0%B5%D0%BC%D1%83%D0%BD%29"
+    },
+    "commonsCategory": null,
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 15,
+      "recognition": 15,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -98,6 +98,15 @@
    "sr": "Драгиша Брашован"
   }
  },
+ "architect-jan-nevole": {
+  "source": "Јан Неволе",
+  "labels": {
+   "ru": "Ян Неволе",
+   "en": "Jan Nevole",
+   "uk": "Ян Неволе",
+   "sr": "Јан Неволе"
+  }
+ },
  "architect-q3558310": {
   "source": "Виктор Лукомски",
   "labels": {
@@ -278,6 +287,33 @@
    "sr": "Миладин Прљевић"
   }
  },
+ "architect-branko-bon": {
+  "source": "Бранко Бон",
+  "labels": {
+   "ru": "Бранко Бон",
+   "en": "Branko Bon",
+   "uk": "Бранко Бон",
+   "sr": "Бранко Бон"
+  }
+ },
+ "architect-milan-grakalic": {
+  "source": "Милан Гракалић",
+  "labels": {
+   "ru": "Милан Гракалич",
+   "en": "Milan Grakalić",
+   "uk": "Мілан Гракалич",
+   "sr": "Милан Гракалић"
+  }
+ },
+ "architect-djordje-lazarevic": {
+  "source": "Ђорђе Лазаревић",
+  "labels": {
+   "ru": "Джордже Лазаревич",
+   "en": "Đorđe Lazarević",
+   "uk": "Джордже Лазаревич",
+   "sr": "Ђорђе Лазаревић"
+  }
+ },
  "architect-q3319781": {
   "source": "Момчило Белобрк",
   "labels": {
@@ -296,6 +332,33 @@
    "sr": "Данило Владисављевић"
   }
  },
+ "architect-vasilije-androsov": {
+  "source": "Василије Андросов",
+  "labels": {
+   "ru": "Василий Андросов",
+   "en": "Vasilije Androsov",
+   "uk": "Василь Андросов",
+   "sr": "Василије Андросов"
+  }
+ },
+ "architect-josip-picman": {
+  "source": "Јосип Пичман",
+  "labels": {
+   "ru": "Йосип Пичман",
+   "en": "Josip Pičman",
+   "uk": "Йосип Пічман",
+   "sr": "Јосип Пичман"
+  }
+ },
+ "architect-andrija-baranji": {
+  "source": "Андрија Барањи",
+  "labels": {
+   "ru": "Андрия Барани",
+   "en": "Andrija Baranji",
+   "uk": "Андрія Барані",
+   "sr": "Андрија Барањи"
+  }
+ },
  "architect-q89054": {
   "source": "Милутин Миланковић",
   "labels": {
@@ -303,6 +366,24 @@
    "en": "Milutin Milanković",
    "uk": "Мілутін Міланкович",
    "sr": "Милутин Миланковић"
+  }
+ },
+ "architect-stjepan-kralj": {
+  "source": "Стјепан Краљ",
+  "labels": {
+   "ru": "Стјепан Краль",
+   "en": "Stjepan Kralj",
+   "uk": "Стєпан Краль",
+   "sr": "Стјепан Краљ"
+  }
+ },
+ "architect-ivo-kurtovic": {
+  "source": "Иво Куртовић",
+  "labels": {
+   "ru": "Иво Куртович",
+   "en": "Ivo Kurtović",
+   "uk": "Іво Куртович",
+   "sr": "Иво Куртовић"
   }
  }
 }

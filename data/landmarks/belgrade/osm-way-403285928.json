@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-403285928",
+  "osmId": "way/403285928",
+  "atlasId": "osm-way-403285928",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Димитрия",
+    "en": "Church of Saint Demetrius",
+    "uk": "Церква Святого Димитрія",
+    "sr": "Црква Светог Димитрија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Сибинянин Янка, 1a",
+    "en": "Sibinjanin Janka 1a",
+    "uk": "Вул. Сибинянин Янка, 1a",
+    "sr": "Сибињанин Јанка 1a"
+  },
+  "descriptions": {
+    "ru": "Часовня Хариша, поставленная земунским купцом Григорием Харишем по завещанию жены Марии, урождённой Петрович. Её спроектировал архитектор Светозар Ивачкович, а иконостас стал последней работой художника Павле Симича.",
+    "en": "The Hariš chapel, built by the Zemun merchant Grigorije Hariš under the will of his wife Marija, née Petrović. Svetozar Ivačković designed it, and its iconostasis was the last work of the painter Pavle Simić.",
+    "uk": "Каплиця Хариша, зведена земунським купцем Григорієм Харишем за заповітом дружини Марії, уродженої Петрович. Її спроектував архітектор Светозар Івачкович, а іконостас став останньою роботою художника Павле Симича.",
+    "sr": "Харишеву капелу подигао је земунски трговац Григорије Хариш по завештању супруге Марије, рођене Петровић. Пројектовао ју је архитекта Светозар Ивачковић, а њен иконостас последњи је рад сликара Павла Симића."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4089709,
+    44.8490289
+  ],
+  "source": "https://www.openstreetmap.org/way/403285928",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1261794"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45200"
+  },
+  "recognition": {
+    "wikidata": "Q1261794",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%94%D0%B8%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D1%98%D0%B0_%28%D0%97%D0%B5%D0%BC%D1%83%D0%BD%29"
+    },
+    "commonsCategory": "Category:Church of St. Demetrius (Zemun)",
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 55,
+    "components": {
+      "heritage": 15,
+      "recognition": 9,
+      "architecturalRole": 13,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

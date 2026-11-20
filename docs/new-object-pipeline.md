@@ -25,14 +25,14 @@
 discovery (работает непрерывно)
     │  добавляет кандидатов и обновляет discovery.json
     ▼
-identity ──────────────► facts ─────┐
-    │                              ├──► draft ──► review ──► publish
-    ├──────────► media ────────────┤
-    └──────────► links ────────────┘
+identity ──────────────► facts ──► text ──┐
+    │                                     ├──► draft ──► review ──► publish
+    ├──────────► media ───────────────────┤
+    └──────────► links ───────────────────┘
 ```
 
 - `discovery` — не этап с финальным барьером, а постоянный источник. Он может работать часами и добавлять новые объекты, пока остальные дорожки разбирают уже найденные.
-- `identity`, `facts`, `media`, `links` запускаются, как только у кандидата появился их минимальный вход. Они не ждут, пока discovery закончит обход города.
+- `identity`, `facts`, `media`, `links` запускаются, как только у кандидата появился их минимальный вход. Они не ждут, пока discovery закончит обход города. `text` стартует сразу после появления подтверждённых facts с цитатами.
 - `draft` пересобирается при изменении любого входного артефакта. Он не обязан ждать «полного» research: отсутствующие поля фиксируются как gaps.
 - `review` проверяет конкретную версию draft. Если входные артефакты изменились, review становится устаревшим и возвращается в работу.
 - `publish` берёт только approved-версию с совпадающими хешами и пишет один объект. Остальные кандидаты могут быть на любых стадиях.
@@ -44,9 +44,10 @@ identity ──────────────► facts ─────┐
 | `discovery` | сохранённая выгрузка или ответ источника | кандидат + `discovery.json` | всё остальное |
 | `identity` | identity-ключи и геометрия/точка | `identity.json`: новый объект, слияние с существующим или отказ | discovery, facts, media, links других объектов |
 | `facts` | подтверждённая identity, имя/адрес | `facts.json`: утверждения, источники, пробелы | media, links, discovery |
+| `text` | identity + facts с цитатами и снимками | `text.json`: описания и истории на языках города, claims и gaps | facts, media, links, discovery |
 | `media` | подтверждённая identity, имя, координаты | `media.json`: `candidates` → `shortlist` → `verified`; только verified идёт в карточку | facts, links, discovery |
 | `links` | подтверждённая identity, адрес/координаты | `links.json`: Google Place ID или адресный fallback | facts, media, discovery |
-| `draft` | identity + любые доступные facts/media/links | `draft.json`: черновик карточки и список пробелов | discovery, другие объекты |
+| `draft` | identity + любые доступные facts/text/media/links | `draft.json`: черновик карточки и список пробелов | discovery, другие объекты |
 | `review` | draft с обязательными полями | `review.json`: approve / hold / reject + чек-лист | discovery, обработка других объектов |
 | `publish` | approved review + совпадающие хеши | карточка и фото в `data/`, отчёт `publish.json` | discovery, остальные кандидаты |
 
@@ -140,6 +141,7 @@ work/pipeline/
 │   ├── discovery.json
 │   ├── identity.json
 │   ├── facts.json
+│   ├── text.json
 │   ├── media.json
 │   ├── links.json
 │   ├── draft.json
@@ -155,6 +157,7 @@ work/pipeline/
 - `facts.json` — `claims[]` вида `{field, value, sourceId, sourceUrl, snapshotHash, quote, confidence}` и `gaps[]` вида `{field, reason, nextStep}`. `quote` обязателен; утверждение без цитаты и сохранённого снимка источника не считается доказанным. Конфликт двух источников — отдельный gap, а не молчаливый выбор.
 - `media.json` — три уровня: `candidates` (всё, что нашёл поиск), `shortlist` (прошёл лицензию/геометрию) и `verified` (подтверждено визуально: тот объект, права, автор). Только `verified` попадает в `draft.photos`; `visualReview=pending` не даёт `mediaSelected=true`.
 - `links.json` — `googlePlaceId`, метод (Place ID / адресный поиск), расстояние до контура, проверенный адрес и результат сверки с реестром/OSM. Точка Place ID должна быть не дальше 15 м от контура (цель — 10 м); reverse-geocode без совпадения адреса не считается подтверждением. При отсутствии — явный gap.
+- `text.json` — `descriptions`/`histories` на языках города, `claims[]` с цитатой и `snapshotHash`, `gaps[]`. Текст без цитаты не считается готовым.
 - `draft.json` — карточка в форме `data/atlas/<city>/<id>.json`, ссылки на aux-ID, `missing[]` и хеши входов. В карточку попадают только verified-фото и согласованные адреса.
 - `review.json` — вердикт, чек-лист, замечания, reviewer, хеши проверенных артефактов. Проверки пересчитываются по артефактам; `approve` при незакрытом обязательном gap запрещён.
 - `publish.json` — путь карточки, коммит/время, результат проверки сборки, хеши опубликованных файлов.
@@ -336,6 +339,7 @@ work/pipeline/
 | `facts` | каждое утверждение имеет `sourceId`, `snapshotHash` и непустой `quote`; неизвестное — явный gap |
 | `media` | есть `candidates`; `verified` только после визуальной проверки, лицензии и подтверждения «тот объект» |
 | `links` | Place ID подтверждён адресом и расстоянием; reverse-geocode без совпадения адреса не считается |
+| `text` | у каждого текста есть зацепка, цитата и `snapshotHash`; все языки непустые, без сербских форм в ru/uk |
 | `draft` | в карточку попадают только verified-фото и согласованные адреса; остальное — `missing` |
 | `review` | проверки пересчитаны по артефактам; `approve` запрещён при обязательном gap |
 | `publish` | approved review, совпадающие хеши, успешная сборка |
@@ -460,6 +464,17 @@ HTTP 200 недостаточно. Для каждого claim нужен сох
 
 Если после чистки остаются только дата и тип постройки — поле `histories` удаляется: год уже есть в `minYear`/`maxYear`, а тип — в названии.
 
+### 13.11. Редакционный проход: описания и истории
+
+Текст — отдельная дорожка `text`, а не побочный результат `draft`. Полная процедура и источники — [text-pass.md](text-pass.md). Кратко:
+
+- вход — `facts.json` с цитатами и снимками; выход — `text.json` с `descriptions`, `histories`, `claims[]` и `gaps[]`;
+- описание обязано иметь зацепку, история не содержит служебных хвостов;
+- каждый факт подтверждён точной цитатой и `snapshotHash`; Wikipedia — указатель, а не единственное доказательство спорного факта;
+- тексты на всех языках города самостоятельные; сербские падежные формы не переносятся в `ru`/`uk`;
+- при отсутствии перевода или источника карточка публикуется без текста, а не с шаблоном;
+- батч 5–8 объектов на субагента, 2–3 субагента одновременно, у каждого свой `result.json` и `status.md`.
+
 ## 14. Предлагаемый интерфейс
 
 До появления CLI операции выполняются теми же шагами вручную. Целевой интерфейс:
@@ -469,6 +484,7 @@ python3 scripts/pipeline.py init
 python3 scripts/pipeline.py discovery --source osm --city tbilisi
 python3 scripts/pipeline.py worker --lane identity
 python3 scripts/pipeline.py worker --lane facts
+python3 scripts/pipeline.py worker --lane text
 python3 scripts/pipeline.py worker --lane media
 python3 scripts/pipeline.py worker --lane links
 python3 scripts/pipeline.py worker --lane draft

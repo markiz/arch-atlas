@@ -1,0 +1,74 @@
+{
+  "id": "osm-rel-8889430",
+  "osmId": "relation/8889430",
+  "atlasId": "osm-rel-8889430",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом капитана Миши",
+    "en": "Captain Miša's Building",
+    "uk": "Будинок капітана Міші",
+    "sr": "Капетан Мишино здање"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Студентская площадь, 1",
+    "en": "Studentski Square 1",
+    "uk": "Студентська площа, 1",
+    "sr": "Студентски трг 1"
+  },
+  "descriptions": {
+    "ru": "Здание на Студентской площади, подаренное капитаном Мишей Анастасиевичем государству ради учебных и просветительских заведений; сегодня здесь Ректорат Белградского университета. Возведено в 1857–1863 годах по планам чешского архитектора Яна Неволе.",
+    "en": "A building on Studentski trg, given by Captain Miša Anastasijević to his country for schools and learned institutions; today it houses the Rectorate of the University of Belgrade. It was built in 1857–1863 to plans by the Czech architect Jan Nevole.",
+    "uk": "Будинок на Студентській площі, подарований капітаном Мішою Анастасієвичем державі для навчальних і просвітницьких закладів; нині тут Ректорат Белградського університету. Зведений у 1857–1863 роках за планами чеського архітектора Яна Неволе.",
+    "sr": "Здање на Студентском тргу, које је капетан Миша Анастасијевић поклонио отаџбини за смештај школа и просветних завода, а данас је у њему Ректорат Универзитета у Београду. Грађено је 1857–1863. према плановима чешког архитекте Јана Неволе."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4574463,
+    44.8184077
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2413641"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2413641",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%D0%BA%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B0_%D0%9C%D0%B8%D1%88%D0%B8",
+      "en": "https://en.wikipedia.org/wiki/Captain_Mi%C5%A1a_Mansion",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BF%D0%B5%D1%82%D0%B0%D0%BD-%D0%9C%D0%B8%D1%88%D0%B8%D0%BD%D0%BE_%D0%B7%D0%B4%D0%B0%D1%9A%D0%B5"
+    },
+    "commonsCategory": "Category:Captain Miša's Mansion",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 56,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

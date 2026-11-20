@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-37051072",
+  "osmId": "way/37051072",
+  "atlasId": "osm-way-37051072",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Каменный дворец",
+    "en": "Stone Palace",
+    "uk": "Кам'яний палац",
+    "sr": "Камена палата"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 33",
+    "en": "Kneza Miloša 33",
+    "uk": "Вул. Князя Милоша, 33",
+    "sr": "Кнеза Милоша 33"
+  },
+  "descriptions": {
+    "ru": "Каменный дворец, он же здание Генерального штаба, возведён в 1924–1928 годах для армии Королевства Югославии по проекту русского архитектора-эмигранта Василия Баумгартена. В 1937 году его признали самым красивым зданием Белграда, а после войны здесь размещался Генеральный штаб Югославской народной армии.",
+    "en": "The Stone Palace, known as the Old General Staff Building, was raised in 1924–1928 for the army of the Kingdom of Yugoslavia to a design by the Russian émigré architect Vasily Baumgarten. In 1937 it was proclaimed the most beautiful building in Belgrade, and after the war it housed the General Staff of the Yugoslav People’s Army.",
+    "uk": "Кам’яний палац, він же будівля Генерального штабу, звели в 1924–1928 роках для армії Королівства Югославії за проєктом російського архітектора-емігранта Василя Баумгартена. 1937 року його визнали найкрасивішою будівлею Белграда, а після війни тут містився Генеральний штаб Югославської народної армії.",
+    "sr": "Камена палата, односно зграда Генералштаба, подигнута је 1924–1928. за војску Краљевине Југославије према пројекту руског емигранта Василија Баумгартена. Године 1937. проглашена је за најлепшу зграду у Београду, а после рата у њој је било седиште Генералштаба Југословенске народне армије."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4616755,
+    44.8062917
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q12752530"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q12752530",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Old_General_Staff_Building%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B0_%D0%B7%D0%B3%D1%80%D0%B0%D0%B4%D0%B0_%D0%93%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%88%D1%82%D0%B0%D0%B1%D0%B0"
+    },
+    "commonsCategory": "Category:Old general staff, Belgrade",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 38,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 7,
+      "age": 8,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

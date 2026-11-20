@@ -155,8 +155,22 @@
     "uk": "Контур OpenStreetMap (way/23671766)."
   },
   "photos": [
-    "9cc16365a9f40a42f9ca1982c96fba5b44647e51edbe9281941fc12fd20a8918"
+    "9cc16365a9f40a42f9ca1982c96fba5b44647e51edbe9281941fc12fd20a8918",
+    "f04a691d163b775233c7d04051e9e3003f033b546cd867d53337f82acb1fa60c",
+    "4dd60beb4c4ccbb6d440c04646da4f2257d0c13720dafa63269100af3c909589"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3373107"
+  "otherSource": "https://www.wikidata.org/wiki/Q3373107",
+  "descriptions": {
+    "ru": "Павильон, который Общество друзей искусства Белграда выстроило в 1928 году по проекту Бранислава Коича: до Второй мировой войны это был единственный выставочный зал города, где шли все выставки отечественного и зарубежного искусства.",
+    "en": "A pavilion built in 1928 by the Association of Friends of Art in Belgrade to a design by Branislav Kojić. Until the Second World War it remained the city’s only exhibition venue, hosting every show of domestic and foreign art.",
+    "uk": "Павільйон, який Товариство друзів мистецтва в Белграді звів 1928 року за проєктом Браніслава Коїча. До Другої світової війни це був єдиний виставковий простір міста, де відбувалися всі виставки вітчизняного й зарубіжного мистецтва.",
+    "sr": "Павиљон који је 1928. подигло Удружење пријатеља уметности у Београду, према пројекту Бранислава Којића. Све до рата то је био једини изложбени простор у граду, где су приказиване све домаће и стране изложбе."
+  },
+  "histories": {
+    "ru": "Заказчиком выступило Общество друзей искусства, а Бранислав Коич свёл в одном здании картинные залы, выставочный и концертный залы. Вестибюль украсила фреска Живорада Настасиевича с аллегориями разных видов искусства, над главным входом помещён витраж Васы Поморишца. Среди первых мероприятий здесь прошли Салон архитектуры и две большие выставки югославской модерной архитектуры — 1931 и 1933 годов.",
+    "en": "The Association of Friends of Art commissioned the building, and Branislav Kojić compressed painting galleries, an exhibition hall and a concert hall into a single structure. Živorad Nastasijević painted the vestibule ceiling with allegories of the arts, and Vasa Pomorišac made the stained glass above the main entrance. Among the first events held here were the Salon of Architecture and two large exhibitions of Yugoslav modern architecture, in 1931 and 1933.",
+    "uk": "Замовником виступило Товариство друзів мистецтва, а Браніслав Коїч поєднав в одній будівлі картинні зали, виставкову та концертну зали. Вестибюль прикрасила фреска Живорада Настасієвича з алегоріями різних видів мистецтва, над головним входом уміщено вітраж Васи Поморишця.",
+    "sr": "Павиљон је наручило Удружење пријатеља уметности, а Којић је у једну зграду сажео сликарске сале, изложбену и концертну дворану. Плафон вестибила осликао је Живорад Настасијевић фреском са алегоријским композицијама, а изнад главног улаза постављен је витраж Васе Поморишца. Међу првим манифестацијама у Павиљону одржани су Салон архитектуре и две велике изложбе југословенске модерне архитектуре, 1931. и 1933."
+  }
 }

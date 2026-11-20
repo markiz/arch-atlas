@@ -99,8 +99,22 @@
     "uk": "Контур OpenStreetMap (way/393276204)."
   },
   "photos": [
-    "a72dabbc41a052a42d56a3bb8dd915b2ead04309b75e1fc821686ba4c46fe7f8"
+    "a72dabbc41a052a42d56a3bb8dd915b2ead04309b75e1fc821686ba4c46fe7f8",
+    "bb39f92fa6b1e355daa54332dbc589637c5b8ebb888958981d1939bc59a11db5",
+    "07c2c0664f53fc78b4868ab1a948dded0445743ac7183c16874d94d3dedd735c"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279002"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279002",
+  "descriptions": {
+    "ru": "Доходный дом торговца Стаменковича, известный как «дом с зелёными плитками»: постройка 1907 года работы Андры Стевановича и Николы Несторовича, один из самых сильных образцов белградской сецессии.",
+    "en": "The merchant Stamenković’s apartment building, popularly known as “the house with green tiles”: built in 1907 to a design by Andra Stevanović and Nikola Nestorović, it is one of the high points of Secessionist architecture in Belgrade.",
+    "uk": "Прибутковий дім купця Стаменковича, знаний як «дім із зеленими плитками»: споруда 1907 року роботи Андри Стевановича та Ніколи Несторовича, один із найсильніших зразків белградської сецесії.",
+    "sr": "Кућа трговца Стаменковића, у Београду позната као „зграда са зеленим плочицама“, подигнута је 1907. године према пројекту Андре Стевановића и Николе Несторовића. Сматра се високим дометом сецесије у Београду."
+  },
+  "histories": {
+    "ru": "Дом возвели в 1907 году; он принадлежит к той группе жилых построек, какие в Белграде строили до Первой мировой войны, соединяя академическую основу с сецессионным декором. Из-за зелёных керамических плиток на фасаде его и сегодня называют «домом с зелёными плитками», и он считается одним из высших достижений этого стиля в городе.",
+    "en": "The house went up in 1907 and belongs to the group of residential buildings raised in Belgrade before the First World War, in which an academic conception was combined with Secessionist decoration. Because of the green ceramic tiles on its walls it is still popularly called the house with green tiles, and it is regarded as a high achievement of the style in the Serbian capital.",
+    "uk": "Дім звів 1907 року; він належить до тієї групи житлових споруд, які в Белграді будували до Першої світової війни, поєднуючи академічну основу із сецесійним декором. Через зелені керамічні плитки на фасаді його й досі називають «домом із зеленими плитками», і він вважається одним із найвищих досягнень цього стилю в місті.",
+    "sr": "Кућа је подигнута 1907. године и припада групи стамбених здања каква су у Београду грађена до Првог светског рата, са спојем академске концепције и сецесијске декорације. Због зелених керамичких плочица којима су обложене слободне површине фасаде објекат је популаран под називом „зграда са зеленим плочицама“, који је остао до данас."
+  }
 }

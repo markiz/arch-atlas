@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-1322289271",
+  "osmId": "way/1322289271",
+  "atlasId": "osm-way-1322289271",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого царя Константина и царицы Елены в Овче",
+    "en": "Church of Saint Emperor Constantine and Empress Helena in Ovča",
+    "uk": "Церква Святого царя Костянтина і цариці Єлени в Овчі",
+    "sr": "Црква Светог цара Константина и царице Јелене у Овчи"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Палилула, Белград",
+    "en": "Palilula, Belgrade",
+    "uk": "Палилула, Белград",
+    "sr": "Палилула, Београд"
+  },
+  "descriptions": {
+    "ru": "Румынская православная церковь в белградском предместье Овча, построенная в 1921–1933 годах по проекту архитектора Радивое Предича на деньги прихода и местных верующих. Один из немногих сохранившихся в Банате примеров сербско-византийского направления.",
+    "en": "A Romanian Orthodox church in Ovča, in Belgrade’s Palilula municipality, built between 1921 and 1933 to a design by the architect Radivoje Predić with money from the parish and the villagers. It counts among the few surviving examples of the Serbian-Byzantine manner in the Banat.",
+    "uk": "Румунська православна церква в белградському передмісті Овча, зведена в 1921–1933 роках за проєктом архітектора Радивоє Предича коштом приходу та місцевих вірян. Один із небагатьох збережених у Банаті прикладів сербсько-візантійського напряму.",
+    "sr": "Румунска православна црква у Овчи, на Палилули, зидана је 1921–1933. према пројекту архитекте Радивоја Предића, новцем цркве и верника из Овче. Један је од ретких сачуваних примера српско-византијског стила у Банату."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.5363157,
+    44.8889164
+  ],
+  "source": "https://www.openstreetmap.org/way/1322289271",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q15928943"
+  ],
+  "districtId": "palilula",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q15928943",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D1%86%D0%B0%D1%80%D0%B0_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%B0_%D0%B8_%D1%86%D0%B0%D1%80%D0%B8%D1%86%D0%B5_%D0%88%D0%B5%D0%BB%D0%B5%D0%BD%D0%B5_%D1%83_%D0%9E%D0%B2%D1%87%D0%B8"
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 35,
+    "components": {
+      "heritage": 0,
+      "recognition": 9,
+      "architecturalRole": 10,
+      "age": 8,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

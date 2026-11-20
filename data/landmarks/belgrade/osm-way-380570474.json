@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-380570474",
+  "osmId": "way/380570474",
+  "atlasId": "osm-way-380570474",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Магистрат",
+    "en": "Magistrate Building",
+    "uk": "Магістрат",
+    "sr": "Магистрат"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Магистратская площадь, 3",
+    "en": "Magistratski Square 3",
+    "uk": "Магістратська площа, 3",
+    "sr": "Магистратски трг 3"
+  },
+  "descriptions": {
+    "ru": "Здание земунского магистрата, городского управления, чья история восходит к 1751 году; дом строили в 1823–1832 годах по планам земунского строителя Йозефа Фельбера. Реестр памятников культуры называет его самым чистым образцом классицизма в архитектуре Старого ядра Земуна.",
+    "en": "The home of the Zemun magistrate, the town administration whose history reaches back to 1751; the building went up between 1823 and 1832 to plans by the Zemun builder Josef Felber. It is considered the purest example of classicism in the architecture of Zemun’s old core.",
+    "uk": "Будинок земунського магістрату, міського управління, чия історія сягає 1751 року; дім зводили в 1823–1832 роках за планами земунського будівничого Йозефа Фельбера. Реєстр пам’яток культури називає його найчистішим зразком класицизму в архітектурі Старого ядра Земуна.",
+    "sr": "Зграда земунског Магистрата, градске управе чија историја сеже до 1751, подигнута је између 1823. и 1832. по плановима земунског градитеља Јозефа Фелбера. Регистар културних добара је означава као најчистији примерак класицизма у архитектури Старог језгра Земуна."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4132273,
+    44.8443627
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3279782"
+  ],
+  "districtId": "zemun",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=43551"
+  },
+  "recognition": {
+    "wikidata": "Q3279782",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Magistrates_Building",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9C%D0%B0%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82_%D1%83_%D0%97%D0%B5%D0%BC%D1%83%D0%BD%D1%83"
+    },
+    "commonsCategory": "Category:Magistrat u Zemunu",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 61,
+    "components": {
+      "heritage": 15,
+      "recognition": 15,
+      "architecturalRole": 6,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "osm-rel-9589185",
+  "osmId": "relation/9589185",
+  "atlasId": "osm-rel-9589185",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Отель «Бристоль»",
+    "en": "Hotel Bristol",
+    "uk": "Готель «Брістоль»",
+    "sr": "Хотел Бристол"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караджорджева, 50",
+    "en": "Karađorđeva 50",
+    "uk": "Вул. Караджорджева, 50",
+    "sr": "Карађорђева 50"
+  },
+  "descriptions": {
+    "ru": "Один из первых больших современных отелей Белграда: дом возвели для Страхового и кредитного общества Белградской задруге по проекту Николы Несторовича, одного из ведущих сербских архитекторов своего времени.",
+    "en": "One of Belgrade's first large modern hotels: the house was built for the Insurance and Credit Society of the Belgrade Cooperative to a design by Nikola Nestorović, one of the leading Serbian architects of the day.",
+    "uk": "Один із перших великих модерних готелів Белграда: будинок звели для Страхового і кредитного товариства Белградської задруги за проєктом Ніколи Несторовича, одного з провідних сербських архітекторів свого часу.",
+    "sr": "Хотел „Бристол“ подигнут је као зграда Осигуравајућег и кредитног друштва Београдске задруге, по пројекту Николе Несторовића, једног од тада водећих српских архитеката. Један је од првих великих модерних београдских хотела."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4524471,
+    44.8127789
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3145438"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45294"
+  },
+  "recognition": {
+    "wikidata": "Q3145438",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Hotel_Bristol%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A5%D0%BE%D1%82%D0%B5%D0%BB_%D0%91%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%BB"
+    },
+    "commonsCategory": "Category:Hotel Bristol (Belgrade)",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 62,
+    "components": {
+      "heritage": 15,
+      "recognition": 15,
+      "architecturalRole": 9,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

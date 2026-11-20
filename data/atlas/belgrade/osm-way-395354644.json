@@ -77,8 +77,22 @@
     "uk": "Контур OpenStreetMap (way/395354644)."
   },
   "photos": [
-    "301ef833b538461b7454bd28ad84ff961cb1a66977d1f3c84614877324c974e2"
+    "301ef833b538461b7454bd28ad84ff961cb1a66977d1f3c84614877324c974e2",
+    "7de32e91f030bc91b1fc38c3d290c67bae64d9aa1ecded6102b4c14be551b982",
+    "3f0391c0c90e5ffef0a87230d7c07d1c6b14b2ab8ce1de55d6192730243dfb5f"
   ],
   "source": "https://www.openstreetmap.org/way/395354644",
-  "otherSource": "https://www.wikidata.org/wiki/Q2929280"
+  "otherSource": "https://www.wikidata.org/wiki/Q2929280",
+  "descriptions": {
+    "ru": "Угловой дом на Главной улице, где в конце XIX века работала типография Йовы Караматы и печатались значительные произведения национальной литературы. Здание принадлежало известной земунской семье Стефанович-Виловски, а одно время в нём помещалась гостиница «Европа».",
+    "en": "The corner house on Glavna Street where Jova Karamata’s printing house operated in the late nineteenth century, printing significant works of the national literature. It belonged to the well-known Zemun family Stefanović-Vilovski and for a time housed the Evropa hotel.",
+    "uk": "Наріжний будинок на Головній вулиці, де наприкінці XIX століття працювала друкарня Йови Карамати і друкувалися значні твори національної літератури. Він належав відомій земунській родині Стефанович-Виловські, а якийсь час у ньому містився готель «Європа».",
+    "sr": "Угаона кућа у Главној улици, у којој је крајем XIX века радила штампарија Јове Карамате и штампала су се значајна књижевна дела националне културе. Припадала је чувеној земунској породици Стефановић-Виловски, а једно време у њој је био хотел „Европа”."
+  },
+  "histories": {
+    "ru": "Дом возвели на рубеже XVIII и XIX веков; нижний этаж служил торговле, верхний — жилью. В конце XIX века в нём разместилась типография Йовы Караматы, где печатались значительные произведения национальной литературы, а одно время здесь работала гостиница «Европа». Как угловой дом, он закрепляет участок уличной сети, сложившейся ещё в XVIII веке.",
+    "en": "The house was raised at the turn of the eighteenth and nineteenth centuries, with trade on the ground floor and dwellings above. At the end of the nineteenth century it held Jova Karamata’s printing house, where significant works of the national literature were printed, and for a time the Evropa hotel. As a corner building it fixes a stretch of the street network laid out in the eighteenth century.",
+    "uk": "Будинок звели на межі XVIII і XIX століть; перший поверх слугував торгівлі, верхній — житлу. Наприкінці XIX століття в ньому містилася друкарня Йови Карамати, де друкували значні твори національної літератури, а якийсь час тут працював готель «Європа». Як наріжна споруда, він закріплює ділянку вуличної мережі, що склалася ще в XVIII столітті.",
+    "sr": "Кућа је подигнута на прелазу из XVIII у XIX век; приземље је било намењено трговини, а спрат становању. Крајем XIX века у њој је радила штампарија Јове Карамате, у којој су штампана значајна књижевна дела националне културе, а једно време ту је био хотел „Европа”. Као угаони објекат, кућа фиксира део регулације уличне мреже из XVIII века."
+  }
 }

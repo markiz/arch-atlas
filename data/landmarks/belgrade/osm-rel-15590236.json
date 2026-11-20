@@ -1,0 +1,74 @@
+{
+  "id": "osm-rel-15590236",
+  "osmId": "relation/15590236",
+  "atlasId": "osm-rel-15590236",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дворец Министерства финансов",
+    "en": "Palace of the Ministry of Finance",
+    "uk": "Палац Міністерства фінансів",
+    "sr": "Палата Министарства финансија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Неманина, 11",
+    "en": "Nemanjina 11",
+    "uk": "Вул. Неманина, 11",
+    "sr": "Немањина 11"
+  },
+  "descriptions": {
+    "ru": "Дворец Министерства финансов Королевства Югославии, сегодня здание правительства Сербии, — работа Николы Краснова, самого значительного из русских архитекторов, работавших в Белграде между двумя войнами. Купол над угловой частью венчает бронзовое олицетворение Югославии.",
+    "en": "The Palace of the Ministry of Finance of the Kingdom of Yugoslavia, today the seat of the Serbian government, is the work of Nikola Krasnov, the foremost of the Russian architects active in interwar Belgrade. A bronze personification of Yugoslavia crowns the dome over the corner.",
+    "uk": "Палац Міністерства фінансів Королівства Югославії, нині будинок уряду Сербії, — робота Николи Краснова, найвизначнішого з російських архітекторів, які працювали в Белграді між двома війнами. Купол над наріжною частиною увінчує бронзове уособлення Югославії.",
+    "sr": "Палата Министарства финансија Краљевине Југославије, данас зграда Владе Србије, дело је Николе Краснова, најзначајнијег међу руским архитектама који су радили у Београду између два рата. Куполу над углом крунише бронзана персонификација Југославије."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4602143,
+    44.8063195
+  ],
+  "source": "https://www.openstreetmap.org/relation/15590236",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2929306"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44364"
+  },
+  "recognition": {
+    "wikidata": "Q2929306",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Government_Building%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BB%D0%B0%D1%82%D0%B0_%D0%9C%D0%B8%D0%BD%D0%B8%D1%81%D1%82%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%B8%D1%98%D0%B0_%D0%9A%D1%80%D0%B0%D1%99%D0%B5%D0%B2%D0%B8%D0%BD%D0%B5_%D0%88%D1%83%D0%B3%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%B8%D1%98%D0%B5"
+    },
+    "commonsCategory": "Category:Government Building (Belgrade)",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 15,
+      "recognition": 15,
+      "architecturalRole": 12,
+      "age": 8,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-393648544",
+  "osmId": "way/393648544",
+  "atlasId": "osm-way-393648544",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Национальная библиотека Сербии",
+    "en": "National Library of Serbia",
+    "uk": "Національна бібліотека Сербії",
+    "sr": "Народна библиотека Србије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Скерличева, 1",
+    "en": "Skerlićeva 1",
+    "uk": "Вул. Скерличева, 1",
+    "sr": "Скерлићева 1"
+  },
+  "descriptions": {
+    "ru": "Специально построенное здание Национальной библиотеки Сербии — старейшего учреждения страны, основанного в 1832 году и не раз терявшего свои фонды в войнах. Здание, построенное по проекту Иво Куртовича, открыли 6 апреля 1973 года — в день, который библиотека до 2002 года отмечала как свой главный праздник в память о гибели фонда в 1941 году.",
+    "en": "The purpose-built home of the National Library of Serbia, the country's oldest institution, founded in 1832 and repeatedly stripped of its collections by war. Ivo Kurtović designed it, and it opened on 6 April 1973 — the date the library had long observed in memory of its destruction in 1941.",
+    "uk": "Спеціально споруджений будинок Національної бібліотеки Сербії — найстарішої установи країни, заснованої 1832 року і неодноразово позбавленої своїх фондів війнами. Його спроєктував Іво Куртович, а відкрили 6 квітня 1973 року — того дня, який бібліотека до 2002 року відзначала як своє головне свято в пам'ять про загибель фонду 1941 року.",
+    "sr": "Наменска зграда Народне библиотеке Србије, најстарије установе у земљи, основане 1832. и више пута уништаване у последња два века. Пројектовао ју је Иво Куртовић, а свечано је отворена 6. априла 1973. — на дан који је Библиотека до 2002. обележавала као свој дан у знак сећања на страдање фонда 1941."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4674369,
+    44.7974385
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q945496"
+  ],
+  "districtId": "vracar",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q945496",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%A1%D0%B5%D1%80%D0%B1%D0%B8%D0%B8",
+      "en": "https://en.wikipedia.org/wiki/National_Library_of_Serbia",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%9D%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0_%D0%B1%D1%96%D0%B1%D0%BB%D1%96%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%A1%D0%B5%D1%80%D0%B1%D1%96%D1%97",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D0%BD%D0%B0_%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0_%D0%A1%D1%80%D0%B1%D0%B8%D1%98%D0%B5"
+    },
+    "commonsCategory": "Category:National Library of Serbia building",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 0,
+      "recognition": 25,
+      "architecturalRole": 14,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

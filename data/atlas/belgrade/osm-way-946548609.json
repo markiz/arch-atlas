@@ -181,8 +181,22 @@
     "uk": "Контур OpenStreetMap (way/946548609)."
   },
   "photos": [
-    "27fa9ad4df82e8b63595f5032e4407a24cf0416f96d446dd78cd33ffa6bdbecd"
+    "27fa9ad4df82e8b63595f5032e4407a24cf0416f96d446dd78cd33ffa6bdbecd",
+    "3533becb0fd0a774d23d22ed4e2a6cea56b5a2ae6a89d16911a9b7be99497753",
+    "8045791de2ea9993c94f8d8f7c51f9a3c2582f361182afbd51a8f025a83d1e3f"
   ],
   "source": "https://www.openstreetmap.org/way/946548609",
-  "otherSource": "https://www.wikidata.org/wiki/Q3581508"
+  "otherSource": "https://www.wikidata.org/wiki/Q3581508",
+  "descriptions": {
+    "ru": "Храм, поднятый в 1939 году в честь освободителей в Первой мировой войне; имена ктиторов Милана и Радмилы Вукичевич читаются в надписи над входом. Автор проекта — архитектор Григорий Самойлов, по его же рисункам выполнены иконостас и резная мебель.",
+    "en": "Church raised in 1939 to honour the liberators of the First World War, with the names of its donors Milan and Radmila Vukićević recorded in the inscription above the entrance. The architect Grigorije Samojlov designed it, and the iconostasis and carved furniture follow his own drawings.",
+    "uk": "Храм, зведений 1939 року на честь визволителів у Першій світовій війні; імена ктиторів Мілана й Радмили Вукічевич читаються в написі над входом. Автор проекту — архітектор Григорій Самойлов, за його ж рисунками виконано іконостас і різьблені меблі.",
+    "sr": "Храм подигнут 1939. у част и славу ослободилаца из Првог светског рата; имена ктитора Милана и Радмиле Вукићевић стоје у натпису изнад улаза. Пројектовао га је архитекта Григорије Самојлов, а иконостас и дуборезни мобилијар израђени су према његовим нацртима."
+  },
+  "histories": {
+    "ru": "Церковь возвели в 1939 году по проекту Григория Самойлова. Ктиторы храма — Милан и Радмила Вукичевич: их имена вместе с посвящением освободителям Первой мировой войны названы в надписи над входом. Резной иконостас и убранство храма исполнили по чертежам самого зодчего. Престольные иконы написал Драгомир Глишич, он же автор росписи 1985–1987 годов.",
+    "en": "The church was built in 1939 to a design by Grigorije Samojlov. Its ktitors, Milan and Radmila Vukićević, have their names set in the inscription above the entrance, together with the dedication to the liberators of the First World War. The carved iconostasis and the church furniture were made to the architect’s own drawings. The throne icons were painted by Dragomir Glišić, who also produced the wall paintings of 1985–1987.",
+    "uk": "Церкву звели 1939 року за проектом Григорія Самойлова. Ктитори храму — Мілан і Радмила Вукічевич: їхні імена разом із присвятою визволителям Першої світової війни названі в написі над входом. Різьблений іконостас і оздоблення храму виконали за кресленнями самого зодчого. Престольні ікони написав Драгомир Глішич, він же автор розпису 1985–1987 років.",
+    "sr": "Црква је саграђена 1939. према пројекту Григорија Самојлова. Ктитори су били Милан и Радмила Вукићевић, чија имена стоје у натпису над улазом, уз посвету ослободиоцима из Првог светског рата. Дуборезни иконостас и мобилијар израђени су по нацртима самог архитекте. Живопис из 1985–1987. године и престоне иконе дело су Драгомира Глишића."
+  }
 }

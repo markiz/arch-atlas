@@ -75,8 +75,22 @@
     "uk": "Контур OpenStreetMap (way/393469914)."
   },
   "photos": [
-    "65c8d58cd0c0f468eba781e967376891b824ccc5aa93bdb2f3e415dac193b179"
+    "65c8d58cd0c0f468eba781e967376891b824ccc5aa93bdb2f3e415dac193b179",
+    "d3def69d5d7f1ee6678358717ac8e2b343b4701384eace43231062b141af0c39",
+    "b6a64613ff27f89793d00a7926b44876821109a54260b2ec393300146178b15c"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3278680"
+  "otherSource": "https://www.wikidata.org/wiki/Q3278680",
+  "descriptions": {
+    "ru": "Дом торговца Црвенчанина в одной из старейших торговых улиц Белграда: первый этаж и мезонин здесь с самого начала отводились под лавки, а верхние — под жильё. Автор проекта — архитектор Йован Илкич, и именно в этом доме мезонин над первым этажом впервые появился в белградской архитектуре.",
+    "en": "The house of the merchant Crvenčanin stands in one of Belgrade’s oldest trading streets, where the ground floor and mezzanine were meant for shops from the start and the upper floors for living. It was designed by the architect Jovan Ilkić, and this is the first building in Belgrade to put a mezzanine above the ground floor.",
+    "uk": "Будинок торговця Црвенчанина стоїть на одній із найстаріших торгових вулиць Белграда: перший поверх і мезонін тут від початку призначалися для крамниць, а верхні — для житла. Автор проєкту — архітектор Йован Ілкич, і саме в цьому будинку мезонін над першим поверхом уперше з’явився в белградській архітектурі.",
+    "sr": "Кућа трговца Црвенчанина стоји у једној од најстаријих трговачких улица Београда, због чега су приземље и мезанин од почетка били намењени трговини, а спратови становању. Пројекат је израдио архитекта Јован Илкић, а овде се мезанин изнад приземља први пут јавља у београдској архитектури."
+  },
+  "histories": {
+    "ru": "Дом возведён в 1887 году по проекту архитектора Йована Илкича для торговца Црвенчанина. Улица была торговой, поэтому первый этаж и мезонин отвели под лавки, а верхние этажи — под квартиры. Здание относят к академическому направлению XIX века и к числу заметных работ Илкича.",
+    "en": "The house was built in 1887 to a design by the architect Jovan Ilkić for the merchant Crvenčanin. Because the street was a trading one, the ground floor and mezzanine held shops while the floors above were given over to flats. The building is counted among Ilkić’s notable works and as an outstanding example of 19th-century academic architecture in Belgrade.",
+    "uk": "Будинок зведено 1887 року за проєктом архітектора Йована Ілкича для торговця Црвенчанина. Вулиця була торговою, тому перший поверх і мезонін відвели під крамниці, а верхні поверхи — під квартири. Споруду відносять до академічного напряму XIX століття і до помітних робіт Ілкича.",
+    "sr": "Кућа је подигнута 1887. године по пројекту архитекте Јована Илкића за трговца Црвенчанина. Пошто је улица била трговачка, приземље и мезанин служили су за трговину, а спратови за становање. Објекат се сврстава међу значајна остварења Јована Илкића и у академски стил XIX века."
+  }
 }

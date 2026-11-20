@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392696067",
+  "osmId": "way/392696067",
+  "atlasId": "osm-way-392696067",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом Фонда Вука",
+    "en": "House of the Vuk Foundation",
+    "uk": "Будинок Фонду Вука",
+    "sr": "Дом Вукове задужбине"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Милана, 2",
+    "en": "Kralja Milana 2",
+    "uk": "Вул. Короля Милана, 2",
+    "sr": "Краља Милана 2"
+  },
+  "descriptions": {
+    "ru": "Дом Фонда Вука на Теразиях: с 1988 года здесь работает фонд Вука Караджича, а до того здание почти три четверти века занимало Министерство просвещения Сербии. Построено оно в 1870–1871 годах для судьи Димитрия Миты Голубовича по проекту архитектора Александра Бугарского.",
+    "en": "The Vuk Foundation House on Terazije has housed the Vuk Karadžić foundation since 1988; before that the Ministry of Education occupied it for nearly three-quarters of a century. It was built in 1870–71 for the judge Dimitrije Mita Golubović to a design by the architect Aleksandar Bugarski.",
+    "uk": "Будинок Фонду Вука на Тераціях: від 1988 року тут працює фонд Вука Караджича, а перед тим будівлю майже три чверті століття займало Міністерство освіти Сербії. Збудовано її в 1870–1871 роках для судді Димитрія Міти Голубовича за проєктом архітектора Александра Бугарського.",
+    "sr": "Дом Вукове задужбине на Теразијама: од 1988. године у њему ради Вукова задужбина, а пре тога је зграду скоро три четврти века заузимало Министарство просвете. Подигнута је 1870–1871. за судију Димитрија Миту Голубовића према пројекту архитекте Александра Бугарског."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4616694,
+    44.8109801
+  ],
+  "source": "https://www.openstreetmap.org/way/392696067",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q3075594"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q3075594",
+    "wikipedia": {
+      "ru": "",
+      "en": "https://en.wikipedia.org/wiki/Vuk_Foundation_House",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D0%92%D1%83%D0%BA%D0%BE%D0%B2%D0%B5_%D0%B7%D0%B0%D0%B4%D1%83%D0%B6%D0%B1%D0%B8%D0%BD%D0%B5"
+    },
+    "commonsCategory": "Category:Dom Vukove zadužbine",
+    "languageCount": 2
+  },
+  "significance": {
+    "score": 50,
+    "components": {
+      "heritage": 0,
+      "recognition": 15,
+      "architecturalRole": 17,
+      "age": 10,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 2 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

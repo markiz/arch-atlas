@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-37052159",
+  "osmId": "way/37052159",
+  "atlasId": "osm-way-37052159",
+  "category": "church",
+  "subcategory": "cathedral",
+  "names": {
+    "ru": "Соборный храм Святого архангела Михаила",
+    "en": "Cathedral Church of Saint Archangel Michael",
+    "uk": "Соборний храм Святого архангела Михаїла",
+    "sr": "Саборни храм Светог архангела Михаила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Симе Марковича, 3",
+    "en": "Kneza Sime Markovića 3",
+    "uk": "Вул. Князя Симе Марковича, 3",
+    "sr": "Кнеза Симе Марковића 3"
+  },
+  "descriptions": {
+    "ru": "Кафедральный собор Белграда, связанный с ключевыми событиями сербской истории: здесь покоятся мощи царя Уроша и деспота Стефана Штиляновича, находятся гробницы князей Милоша и Михаила Обреновичей, а перед входом похоронены Доситей Обрадович и Вук Караджич. Один из крупнейших церковных храмов, возведённых в Княжестве Сербии.",
+    "en": "Belgrade’s cathedral church, tied to the central events of Serbian history: it keeps the relics of Tsar Uroš and despot Stefan Štiljanović and the tombs of Prince Miloš and Prince Mihailo Obrenović, while Dositej Obradović and Vuk Karadžić lie buried before its entrance. It is one of the largest church buildings raised in the Principality of Serbia.",
+    "uk": "Кафедральний собор Белграда, пов’язаний із ключовими подіями сербської історії: тут зберігаються мощі царя Уроша й деспота Стефана Штиляновича, містяться гробниці князів Милоша та Михайла Обреновичів, а перед входом поховані Доситей Обрадович і Вук Караджич. Одна з найбільших церковних споруд, зведених у Князівстві Сербія.",
+    "sr": "Београдска Саборна црква била је поприште кључних догађаја српске историје. У њој се чувају мошти цара Уроша и деспота Стефана Штиљановића, ту су гробнице кнеза Милоша и кнеза Михаила Обреновића, а пред улазом почивају Доситеј Обрадовић и Вук Караџић. По величини спада међу најкрупније црквене грађевине Кнежевине Србије."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4521842,
+    44.8180795
+  ],
+  "source": "https://www.openstreetmap.org/way/37052159",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q1265998"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45951"
+  },
+  "recognition": {
+    "wikidata": "Q1265998",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%B0_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Cathedral_of_Saint_Archangel_Michael%2C_Belgrade",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%A1%D0%BE%D0%B1%D0%BE%D1%80_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D0%B0_%D0%9C%D0%B8%D1%85%D0%B0%D1%97%D0%BB%D0%B0_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A1%D0%B0%D0%B1%D0%BE%D1%80%D0%BD%D0%B0_%D1%86%D1%80%D0%BA%D0%B2%D0%B0_%D1%83_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%83"
+    },
+    "commonsCategory": "Category:Belgrade Cathedral Church",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 90,
+    "components": {
+      "heritage": 30,
+      "recognition": 25,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: national",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

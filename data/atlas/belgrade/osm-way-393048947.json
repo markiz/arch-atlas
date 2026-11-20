@@ -71,8 +71,21 @@
     "uk": "Контур OpenStreetMap (way/393048947)."
   },
   "photos": [
-    "268e4a201602c3eb3cf8dd81d3f52d674f2cfd2214d5ac80006a57e5930f70fc"
+    "268e4a201602c3eb3cf8dd81d3f52d674f2cfd2214d5ac80006a57e5930f70fc",
+    "6cb7c22c006b61daf0b19761b9226434c7981657bf1396599327071efd2e68ed"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279440"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279440",
+  "descriptions": {
+    "ru": "Дом Леоны Панайот — семейный дом, выстроенный в 1908 году по проекту Петра Баяловича; как яркое произведение сецессии его представили на IV югославской художественной выставке 1912 года в Белграде. Позднее здание оценили и как заметную авторскую работу, важную для развития белградской архитектуры первой половины XX века.",
+    "en": "The Leona Panajot House is a family house built in 1908 to a design by Petar Bajalović; as a striking work of the Secession it was shown at the Fourth Yugoslav Art Exhibition in Belgrade in 1912. It has since been recognised as a notable authorial work, important for the development of Belgrade architecture in the first half of the 20th century.",
+    "uk": "Будинок Леони Панайот — родинний дім, зведений 1908 року за проєктом Петра Баяловича; як яскравий твір сецесії його показали на IV югославській художній виставці 1912 року в Белграді. Згодом будівлю оцінили і як помітну авторську роботу, важливу для розвитку белградської архітектури першої половини XX століття.",
+    "sr": "Кућа Леоне Панајот је породична кућа саграђена 1908. године по пројекту Петра Бајаловића; као изразито дело сецесије представљена је на IV југословенској уметничкој изложби 1912. године у Београду. Објекат је значајан и као истакнуто ауторско дело, важно за развој београдске архитектуре прве половине XX века."
+  },
+  "histories": {
+    "ru": "Дом возвели в 1908 году по проекту архитектора Петра Баяловича. Уже в 1912 году его показали на IV югославской художественной выставке в Белграде как выдающееся произведение сецессии. С тех пор дом числят среди работ, определивших развитие белградской архитектуры первой половины XX века.",
+    "en": "The house was built in 1908 to a design by architect Petar Bajalović. Only four years later it was shown at the Fourth Yugoslav Art Exhibition in Belgrade as an outstanding work of the Secession. Ever since, it has been counted among the works that shaped Belgrade architecture in the first half of the 20th century.",
+    "uk": "Будинок звели 1908 року за проєктом архітектора Петра Баяловича. Уже 1912 року його показали на IV югославській художній виставці в Белграді як визначний твір сецесії. Відтоді дім зараховують до робіт, що визначили розвиток белградської архітектури першої половини XX століття.",
+    "sr": "Кућа је саграђена 1908. године према пројекту архитекте Петра Бајаловића. Већ 1912. године представљена је на IV југословенској уметничкој изложби у Београду као изразито дело сецесије. Од тада се убраја међу остварења која су одредила развој београдске архитектуре прве половине XX века."
+  }
 }

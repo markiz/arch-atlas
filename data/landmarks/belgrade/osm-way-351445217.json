@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-351445217",
+  "osmId": "way/351445217",
+  "atlasId": "osm-way-351445217",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святой Петки",
+    "en": "Church of Saint Petka",
+    "uk": "Церква Святої Петки",
+    "sr": "Црква Свете Петке"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Воеводинская",
+    "en": "Vojvođanska",
+    "uk": "Вул. Войводжанська",
+    "sr": "Војвођанска"
+  },
+  "descriptions": {
+    "ru": "Барочная церковь в Сурчине, поставленная в 1777 году на месте старой деревянной церкви. Её резной иконостас новосадской работы и 37 икон карловацкого живописца относят к памятникам сербского искусства XVIII–XIX веков.",
+    "en": "A baroque church raised in Surčin in 1777 on the site of an older wooden one. Its carved iconostasis, the work of a Novi Sad master, and thirty-seven icons by a Karlovac painter rank among the valuable monuments of Serbian art of the eighteenth and nineteenth centuries.",
+    "uk": "Барочна церква в Сурчині, зведена 1777 року на місці старішої дерев’яної. Її різьблений іконостас новосадської роботи та 37 ікон карловацького живописця належать до пам’яток сербського мистецтва XVIII–XIX століть.",
+    "sr": "Барокна црква у Сурчину, подигнута 1777. на месту старије дрвене цркве. Њен резбарени иконостас новосадске израде и 37 икона карловачког сликара убрајају се у вредна дела српске уметности XVIII и XIX века."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.2712891,
+    44.7915307
+  ],
+  "source": "https://www.openstreetmap.org/way/351445217",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q25469194"
+  ],
+  "districtId": "surcin",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45473"
+  },
+  "recognition": {
+    "wikidata": "Q25469194",
+    "wikipedia": {
+      "ru": "",
+      "en": "",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%B5_%D0%9F%D0%B5%D1%82%D0%BA%D0%B5_%D1%83_%D0%A1%D1%83%D1%80%D1%87%D0%B8%D0%BD%D1%83"
+    },
+    "commonsCategory": null,
+    "languageCount": 1
+  },
+  "significance": {
+    "score": 49,
+    "components": {
+      "heritage": 15,
+      "recognition": 9,
+      "architecturalRole": 10,
+      "age": 10,
+      "editorial": 5
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 1 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

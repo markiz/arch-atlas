@@ -21,12 +21,16 @@ for (const file of files) {
     const card = JSON.parse(await readFile(path.join(atlasDir, file), 'utf8'));
     for (const marker of ['Zgrada', 'Kuća', 'Crkva', 'Palata', 'Vila'])
       assert.ok(!card.names.en.includes(marker), `en name contains Serbian marker ${marker}: ${card.names.en}`);
-    for (const language of ['ru', 'uk']) {
-      const name = card.names[language];
-      assert.ok(name && name.trim(), `${language} name is empty`);
-      assert.ok(!/[A-Za-z]/.test(name.replace(/\b[IVXLCDM]+\b/g, '')), `${language} name contains Latin text: ${name}`);
-      for (const marker of serbianMarkers)
-        assert.ok(!name.includes(marker), `${language} name contains Serbian marker ${marker}: ${name}`);
+    for (const field of ['names', 'descriptions', 'histories']) {
+      const values = card[field];
+      if (!values) continue;
+      for (const language of ['ru', 'uk']) {
+        const text = values[language];
+        assert.ok(text && text.trim(), `${field}.${language} is empty`);
+        assert.ok(!/[A-Za-z]/.test(text.replace(/\b[IVXLCDM]+\b/g, '')), `${field}.${language} contains Latin text: ${text}`);
+        for (const marker of serbianMarkers)
+          assert.ok(!text.includes(marker), `${field}.${language} contains Serbian marker ${marker}: ${text}`);
+      }
     }
   });
 }

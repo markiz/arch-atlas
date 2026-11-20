@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-146656819",
+  "osmId": "way/146656819",
+  "atlasId": "osm-way-146656819",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Дом цветов",
+    "en": "House of Flowers",
+    "uk": "Будинок квітів",
+    "sr": "Кућа цвећа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Михаила Мике Янковича, 6",
+    "en": "Mihaila Mike Jankovića 6",
+    "uk": "Вул. Михаила Мике Янковича, 6",
+    "sr": "Михаила Мике Јанковића 6"
+  },
+  "descriptions": {
+    "ru": "Зимний сад, выстроенный для Иосипа Броза Тито и превращённый в его место погребения; сегодня часть Музея истории Югославии. Сооружён в 1975 году по проекту архитектора Стјепана Краля.",
+    "en": "A winter garden built for Josip Broz Tito and later turned into his burial place; it is now part of the Museum of Yugoslavia. It was built in 1975 to a design by the architect Stjepan Kralj.",
+    "uk": "Зимовий сад, збудований для Йосипа Броза Тіто і перетворений на його місце поховання; нині частина Музею історії Югославії. Споруджений у 1975 році за проєктом архітектора Стєпана Краля.",
+    "sr": "Зимска башта подигнута за Јосипа Броза Тита и претворена у његово место сахране; данас је део Музеја историје Југославије. Саграђена је 1975. по пројекту архитекте Стјепана Краља."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.451627,
+    44.7867559
+  ],
+  "source": "https://www.openstreetmap.org/way/146656819",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q734539"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q734539",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC_%D1%86%D0%B2%D0%B5%D1%82%D0%BE%D0%B2",
+      "en": "https://en.wikipedia.org/wiki/House_of_Flowers_%28mausoleum%29",
+      "uk": "https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%B4%D0%B8%D0%BD%D0%BE%D0%BA_%D0%BA%D0%B2%D1%96%D1%82%D1%96%D0%B2",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9A%D1%83%D1%9B%D0%B0_%D1%86%D0%B2%D0%B5%D1%9B%D0%B0"
+    },
+    "commonsCategory": "Category:House of Flowers",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 0,
+      "recognition": 25,
+      "architecturalRole": 14,
+      "age": 4,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 4 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

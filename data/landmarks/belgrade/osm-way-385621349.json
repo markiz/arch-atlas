@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-385621349",
+  "osmId": "way/385621349",
+  "atlasId": "osm-way-385621349",
+  "category": "church",
+  "subcategory": "church",
+  "names": {
+    "ru": "Церковь Святого Антония Падуанского",
+    "en": "Church of Saint Anthony of Padua",
+    "uk": "Церква Святого Антонія Падуанського",
+    "sr": "Црква Светог Антуна Падованског"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Поп Стоянова, 13",
+    "en": "Pop Stojanova 13",
+    "uk": "Вул. Поп Стоянова, 13",
+    "sr": "Поп Стојанова 13"
+  },
+  "descriptions": {
+    "ru": "Единственное в Белграде подлинное авторское произведение словенского архитектора Йосипа Плечника: церковь на одном из окраинных Врачарских холмов, обращённых к Звездаре, он спроектировал в конце 1920-х. Бронзовую статую патрона храма с младенцем Иисусом изваял Иван Мештрович.",
+    "en": "The only authentic work by the Slovenian architect Josip Plečnik in Belgrade: he designed this church on the edge of the Vračar hills facing Zvezdara in the late 1920s. The bronze statue of the patron holding the infant Jesus is by Ivan Meštrović.",
+    "uk": "Єдиний у Белграді справжній авторський твір словенського архітектора Йосипа Плечника: церкву на одному з окраїнних Врачарських пагорбів, обернених до Звездари, він спроєктував наприкінці 1920-х. Бронзову статую патрона храму з немовлям Ісусом створив Іван Мештрович.",
+    "sr": "Једино оригинално ауторско дело словеначког архитекте Јосипа Плечника у Београду: цркву на ободу врачарских брежуљака према Звездари пројектовао је крајем двадесетих. Бронзану скулптуру патрона са малим Христом извајао је Иван Мештровић."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4905208,
+    44.796818
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zvezdara/",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q20438349"
+  ],
+  "districtId": "zvezdara",
+  "heritage": {
+    "status": "local",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44417"
+  },
+  "recognition": {
+    "wikidata": "Q20438349",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D1%8F_%D0%9F%D0%B0%D0%B4%D1%83%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Church_of_St._Anthony_of_Padua%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A6%D1%80%D0%BA%D0%B2%D0%B0_%D0%A1%D0%B2%D0%B5%D1%82%D0%BE%D0%B3_%D0%90%D0%BD%D1%82%D1%83%D0%BD%D0%B0_%D0%9F%D0%B0%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3_%28%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%29"
+    },
+    "commonsCategory": "Category:Crkva Svetog Antuna Padovanskog u Beogradu",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 72,
+    "components": {
+      "heritage": 15,
+      "recognition": 21,
+      "architecturalRole": 13,
+      "age": 8,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: local",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

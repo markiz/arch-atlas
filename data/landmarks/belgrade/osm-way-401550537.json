@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-401550537",
+  "osmId": "way/401550537",
+  "atlasId": "osm-way-401550537",
+  "category": "museum",
+  "subcategory": "museum",
+  "names": {
+    "ru": "Музей африканского искусства",
+    "en": "Museum of African Art",
+    "uk": "Музей африканського мистецтва",
+    "sr": "Музеј афричке уметности"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Андре Николича, 14",
+    "en": "Andre Nikolića 14",
+    "uk": "Вул. Андре Николича, 14",
+    "sr": "Андре Николића 14"
+  },
+  "descriptions": {
+    "ru": "Первый и единственный в Юго-Восточной Европе музей, посвящённый исключительно культурам и искусствам Африки: он вырос из коллекции Веды Загорац и дипломата Здравко Печара, переданной Белграду. Музей открылся 23 мая 1977 года в бывшей мастерской Моши Пияде на Сеньяке.",
+    "en": "The first and only museum in South-East Europe devoted exclusively to the cultures and arts of Africa, it grew out of the collection of Veda Zagorac and the diplomat Zdravko Pečar, given to Belgrade. It opened on 23 May 1977 in Moša Pijade's former studio in Senjak.",
+    "uk": "Перший і єдиний у Південно-Східній Європі музей, присвячений виключно культурам і мистецтвам Африки: він постав із колекції Веди Загорац і дипломата Здравка Печара, переданої Белграду. Музей відкрився 23 травня 1977 року в колишній майстерні Моші Піяде на Сеньяку.",
+    "sr": "Први и једини музеј у југоисточној Европи посвећен искључиво културама и уметностима Африке настао је из збирке Веде Загорац и дипломате Здравка Печара, коју је брачни пар поклонио Београду. Отворен је 23. маја 1977. године у некадашњем атељеу Моше Пијаде на Сењаку."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4350874,
+    44.789175
+  ],
+  "source": "https://www.openstreetmap.org/way/401550537",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2291222"
+  ],
+  "districtId": "savski-venac",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2291222",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D0%B9_%D0%B0%D1%84%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B0_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Museum_of_African_Art%2C_Belgrade",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%9C%D1%83%D0%B7%D0%B5%D1%98_%D0%B0%D1%84%D1%80%D0%B8%D1%87%D0%BA%D0%B5_%D1%83%D0%BC%D0%B5%D1%82%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%28%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%29"
+    },
+    "commonsCategory": "Category:Museum of African Art (Belgrade)",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 44,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 11,
+      "age": 4,
+      "editorial": 8
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

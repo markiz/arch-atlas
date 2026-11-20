@@ -65,8 +65,21 @@
     "uk": "Контур OpenStreetMap (way/679769741)."
   },
   "photos": [
-    "8e3597b7bd14b7eba2e3fdcf113050598d9fae2296e93b979cf7c9973faaa50e"
+    "8e3597b7bd14b7eba2e3fdcf113050598d9fae2296e93b979cf7c9973faaa50e",
+    "49512c296375e62f37ce81778d6fb1622b76d7ebe1013808af4224a77feb5fd5"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/cukarica/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3276581"
+  "otherSource": "https://www.wikidata.org/wiki/Q3276581",
+  "descriptions": {
+    "ru": "Здание в центре Остружницы построили в первой половине XIX века как кафану, а в начале XX века оно получило торговое назначение и стало известно как Лавки Янича. Это один из сохранившихся образцов так называемого нового моравского дома.",
+    "en": "Built in the first half of the nineteenth century as a kafana, this building in the centre of Ostružnica took on a commercial role at the beginning of the twentieth century and is known as Janić's Shops. It is a surviving example of the so-called newer Moravian house.",
+    "uk": "Будівлю в центрі Остружниці звели в першій половині XIX століття як кафану, а на початку XX століття вона дістала торгове призначення і стала відома як Крамниці Янича. Це один зі збережених зразків так званого нового моравського дому.",
+    "sr": "Зграда у центру Остружнице подигнута је у првој половини 19. века као кафана, а почетком 20. века добија нову трговачку намену и позната је као Јанићеви дућани. Представља аутентичан пример тако званог новијег моравског типа куће."
+  },
+  "histories": {
+    "ru": "Дом возвели в первой половине XIX века под кафану: два обеденных зала занимали переднюю часть, кухня и кладовые — заднюю, а в восточном крыле, отделённом коридором, были комнаты владельца. В начале XX века здание перешло на торговлю, и при переделке его лишь слегка адаптировали. Сегодня оно охраняется как памятник культуры и остаётся одним из характерных образцов нового моравского дома.",
+    "en": "The building was raised in the first half of the nineteenth century as a kafana, with two dining halls at the front, a kitchen and storerooms at the back, and the owner's two rooms in the eastern wing, cut off by a corridor. At the beginning of the twentieth century it took on a commercial role and underwent minor adaptations. It is protected as a cultural monument and remains one of the characteristic examples of the newer Moravian house.",
+    "uk": "Будинок звели в першій половині XIX століття під кафану: дві обідні зали займали передню частину, кухня й комори — задню, а у східному крилі, відділеному коридором, були кімнати власника. На початку XX століття будівля перейшла на торгівлю, і під час переробки її лише трохи адаптували. Нині вона має статус пам'ятки культури і залишається одним із характерних зразків нового моравського дому.",
+    "sr": "Зграда је подигнута у првој половини 19. века за кафану: две кафанске сале биле су у предњем делу, кухиња са оставама у задњем, а источно крило, одвојено ходником, имало је две собе за становање власника. Почетком 20. века добија нову трговачку намену и тада трпи мање адаптације. Данас је заштићена као споменик културе и представља аутентичан пример новије моравске куће."
+  }
 }

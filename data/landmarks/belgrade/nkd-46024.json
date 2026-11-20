@@ -1,0 +1,74 @@
+{
+  "id": "nkd-46024",
+  "osmId": "way/450824126",
+  "atlasId": null,
+  "category": "castle",
+  "subcategory": "fortress",
+  "names": {
+    "ru": "Белградская крепость",
+    "en": "Belgrade Fortress",
+    "uk": "Белградська фортеця",
+    "sr": "Београдска тврђава"
+  },
+  "addresses": {
+    "ru": "Калемегдан, Верхний город",
+    "en": "Kalemegdan, Upper Town",
+    "uk": "Калемегдан, Верхнє місто",
+    "sr": "Калемегдан, Горњи град"
+  },
+  "descriptions": {
+    "ru": "Крепость на холме над слиянием Савы и Дуная — историческое ядро Белграда: римский лагерь, столица деспота Стефана и австрийские бастионы XVIII века.",
+    "en": "Fortress on the hill above the confluence of the Sava and Danube, the historic core of Belgrade: a Roman camp, the capital of Despot Stefan and eighteenth-century Austrian bastions.",
+    "uk": "Фортеця на пагорбі над злиттям Сави й Дунаю — історичне ядро Белграда: римський табір, столиця деспота Стефана й австрійські бастіони XVIII століття.",
+    "sr": "Тврђава на брегу изнад ушћа Саве у Дунав — историјско језгро Београда: римски логор, престоница деспота Стефана и аустријски бастиони XVIII века."
+  },
+  "coordinates": [
+    20.452686,
+    44.823912
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=46024",
+  "otherSources": [
+    "https://www.openstreetmap.org/way/450824126",
+    "https://www.wikidata.org/wiki/Q1409017"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "national",
+    "registryId": null,
+    "osm": null,
+    "url": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=46024"
+  },
+  "recognition": {
+    "wikidata": "Q1409017",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/Белградская_крепость",
+      "en": "https://en.wikipedia.org/wiki/Belgrade_Fortress",
+      "uk": "https://uk.wikipedia.org/wiki/Белградська_фортеця",
+      "sr": "https://sr.wikipedia.org/wiki/Београдска_тврђава"
+    },
+    "commonsCategory": "Category:Belgrade Fortress",
+    "languageCount": 4
+  },
+  "significance": {
+    "score": 95,
+    "components": {
+      "heritage": 30,
+      "recognition": 25,
+      "architecturalRole": 15,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "официальная карточка НКД",
+      "Wikipedia: 4 яз."
+    ],
+    "status": "provisional"
+  },
+  "originalLanguage": "sr",
+  "descriptionStatus": "reviewed",
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; описание сокращено по официальной карточке."
+}

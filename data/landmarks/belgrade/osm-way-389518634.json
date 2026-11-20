@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-389518634",
+  "osmId": "way/389518634",
+  "atlasId": "osm-way-389518634",
+  "category": "monument",
+  "subcategory": "historic_building",
+  "names": {
+    "ru": "Старый дворец",
+    "en": "Old Palace",
+    "uk": "Старий двір",
+    "sr": "Стари двор"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Драгослава Йовановича, 2",
+    "en": "Dragoslava Jovanovića 2",
+    "uk": "Вул. Драгослава Йовановича, 2",
+    "sr": "Драгослава Јовановића 2"
+  },
+  "descriptions": {
+    "ru": "Бывшая резиденция Обреновичей и Карагеоргиевичей, а с 1961 года — Скупщина города Белграда. Построена в 1881–1884 годах по проекту Александра Бугарского для короля Милана I.",
+    "en": "The former residence of the Obrenović and Karađorđević dynasties and, since 1961, the seat of the Belgrade City Assembly. It was built in 1881–1884 to a design by Aleksandar Bugarski for King Milan I.",
+    "uk": "Колишня резиденція Обреновичів і Карагеоргієвичів, а від 1961 року — Скупщина міста Белграда. Зведена в 1881–1884 роках за проєктом Александра Бугарського для короля Милана I.",
+    "sr": "Некадашња резиденција Обреновића и Карађорђевића, а од 1961. седиште Скупштине града Београда. Подигнута је 1881–1884. по пројекту Александра Бугарског за краља Милана I."
+  },
+  "descriptionStatus": "reviewed",
+  "coordinates": [
+    20.4626066,
+    44.8108412
+  ],
+  "source": "https://www.openstreetmap.org/way/389518634",
+  "otherSources": [
+    "https://www.wikidata.org/wiki/Q2288132"
+  ],
+  "districtId": "stari-grad",
+  "heritage": {
+    "status": "unknown",
+    "registryId": null,
+    "osm": null,
+    "url": null
+  },
+  "recognition": {
+    "wikidata": "Q2288132",
+    "wikipedia": {
+      "ru": "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D1%8B%D0%B9_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5%D1%86_%28%D0%91%D0%B5%D0%BB%D0%B3%D1%80%D0%B0%D0%B4%29",
+      "en": "https://en.wikipedia.org/wiki/Stari_dvor",
+      "uk": "",
+      "sr": "https://sr.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D1%80%D0%B8_%D0%B4%D0%B2%D0%BE%D1%80"
+    },
+    "commonsCategory": "Category:Old Palace (Belgrade)",
+    "languageCount": 3
+  },
+  "significance": {
+    "score": 58,
+    "components": {
+      "heritage": 0,
+      "recognition": 21,
+      "architecturalRole": 12,
+      "age": 10,
+      "editorial": 15
+    },
+    "reasons": [
+      "охранный статус: unknown",
+      "Wikipedia: 3 яз.",
+      "карточка атласа"
+    ],
+    "status": "provisional"
+  },
+  "status": "active",
+  "access": "public",
+  "reviewStatus": "draft",
+  "updatedAt": "2026-11-20",
+  "notes": "Топ-100 ориентиров Белграда; запись собрана из карточки атласа."
+}

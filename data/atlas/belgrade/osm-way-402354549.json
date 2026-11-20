@@ -89,8 +89,22 @@
     "uk": "Контур OpenStreetMap (way/402354549)."
   },
   "photos": [
-    "ba99316923ee3b3e18c237d1dd1f30e55cfd3fddb2c165627d86cf93c2df965f"
+    "ba99316923ee3b3e18c237d1dd1f30e55cfd3fddb2c165627d86cf93c2df965f",
+    "288073d47bf9946e5a709046ebeb7af2d6a29af759b817e3a277c8c71b57f426",
+    "32b26fe52c58b0ee016a166df3f3f0a6421a0da15375a2e2ee6cafc13c9fa49a"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279138"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279138",
+  "descriptions": {
+    "ru": "Один из лучших образцов зажиточного городского дома Земуна около 1800 года: вместе с соседними домами квартала он образует единую среду старого ядра.",
+    "en": "One of the finest examples of a well-off Zemun household around 1800: with the neighbouring houses of the block it forms a single setting in the old core.",
+    "uk": "Один із найкращих зразків заможного міського дому Земуна близько 1800 року: разом із сусідніми будинками кварталу він творить єдине середовище старого ядра.",
+    "sr": "Један од најлепших примерака имућније грађанске куће Земуна око 1800. године: са суседним кућама у блоку чини јединствену амбијенталну целину Старог језгра."
+  },
+  "histories": {
+    "ru": "Дом возвели около 1800 года как здание двойного назначения — жильё и торговля. Он двухрядный, с подвалом под частью здания и высоким кровом. Ворота главного проезда во двор принадлежат к лучшим сохранившимся образцам стилевых ворот старого ядра Земуна, а вместе с соседними домами квартала здание образует единую среду.",
+    "en": "The house was built around 1800 for two purposes at once, dwelling and trade. It has two ranges of rooms, a basement under part of the building and a high roof. The gate of its main carriage entrance is counted among the best preserved period gates in Zemun’s old core, and with the neighbouring houses of the block it forms a single setting.",
+    "uk": "Дім звели близько 1800 року як споруду подвійного призначення — житло й торгівля. Він дворядний, з підвалом під частиною будівлі та високим дахом. Ворота головного проїзду у двір належать до найкраще збережених зразків стильових воріт старого ядра Земуна, а разом із сусідніми будинками кварталу споруда творить єдине середовище.",
+    "sr": "Кућа је подигнута око 1800. као стамбено-трговачка, двотрактна грађевина двојне намене, с подрумом испод дела зграде и високим кровом. Капија главног колског улаза спада међу најлепше сачуване стилске капије Старог језгра Земуна, а са суседним кућама у блоку кућа чини јединствену амбијенталну целину."
+  }
 }

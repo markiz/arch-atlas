@@ -40,6 +40,10 @@ const SUBCATEGORIES = new Set([
   'bath',
   'pantheon',
   'funicular',
+  'street',
+  'square',
+  'park',
+  'embankment',
 ]);
 const HERITAGE_STATUSES = new Set(['national', 'local', 'listed', 'none', 'unknown']);
 const STATUSES = new Set(['active', 'closed', 'ruined', 'demolished', 'unknown']);

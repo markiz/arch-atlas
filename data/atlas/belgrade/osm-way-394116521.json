@@ -65,8 +65,22 @@
     "uk": "Контур OpenStreetMap (way/394116521)."
   },
   "photos": [
-    "2e2e21a7b41a5d375b26f7899f17cded806aa0ba41d08ea3e31449eddd738236"
+    "2e2e21a7b41a5d375b26f7899f17cded806aa0ba41d08ea3e31449eddd738236",
+    "644f81950ff688cc5158c55327a2fc688396d22e09e387539f785c1cfed16e98",
+    "fc841a6ca3ff01aad5b5a89858b4c3236f383e7e6b8f8761d36e02c6afe2a4e1"
   ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
-  "otherSource": "https://www.wikidata.org/wiki/Q3279274"
+  "otherSource": "https://www.wikidata.org/wiki/Q3279274",
+  "descriptions": {
+    "ru": "Дом математика Богдана Гавриловича — скромный городской дом, в котором учёный, профессор и ректор Белградского университета, а затем президент Сербской академии наук и искусств прожил более полувека. Здесь сохранились его личные вещи и бумаги.",
+    "en": "The house of the mathematician Bogdan Gavrilović — a modest civic home where the professor, rector of Belgrade University and later president of the Serbian Academy of Sciences and Arts lived for more than half a century. His personal papers and belongings are still kept there.",
+    "uk": "Будинок математика Богдана Гавриловича — скромний міський дім, у якому вчений, професор і ректор Белградського університету, а згодом президент Сербської академії наук і мистецтв прожив понад півстоліття. Тут збереглися його особисті речі й папери.",
+    "sr": "Кућа математичара Богдана Гавриловића — скромна грађанска кућа у којој је научник, професор и ректор Београдског универзитета, а потом председник Српске академије наука и уметности провео више од пола века. У њој је сачувана његова лична заоставштина."
+  },
+  "histories": {
+    "ru": "Дом построили на рубеже XIX и XX веков, в 1898–1899 годах, как жильё для семьи. В нём жил и работал доктор Богдан Гаврилович (1863–1947), видный математик и гуманист, более полувека занимавшийся культурной, просветительской и научной деятельностью. Личные вещи и бумаги учёного сохранились в доме, а сама постройка считается добротным образцом белградской академической архитектуры конца XIX века.",
+    "en": "The house was raised at the turn of the twentieth century, in 1898–99, as a family home. Dr Bogdan Gavrilović (1863–1947), a distinguished mathematician and humanist, lived and worked in it and for more than fifty years took an active part in the cultural, educational and scientific life of the country. His personal legacy survives in the house, which is also a solid example of Belgrade academic architecture at the close of the nineteenth century.",
+    "uk": "Будинок звели на межі XIX і XX століть, у 1898–1899 роках, як родинне житло. У ньому жив і працював доктор Богдан Гаврилович (1863–1947), визначний математик і гуманіст, який понад півстоліття активно займався культурною, просвітницькою та науковою діяльністю. Його особиста спадщина збереглася в домі, а сама будівля є добрим зразком белградської академічної архітектури кінця XIX століття.",
+    "sr": "Кућа је изграђена на прелазу из XIX у XX век, 1898–1899, као породични дом. У њој је живео и радио др Богдан Гавриловић (1863–1947), угледни математичар и хуманиста, који се више од пола столећа бавио културним, просветним и научним радом. Његова лична заоставштина сачувана је у кући, која је истовремено солидно остварење београдске академске архитектуре с краја XIX века."
+  }
 }
