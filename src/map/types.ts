@@ -1,4 +1,4 @@
-import type { Building, ManifestFile } from '../types';
+import type { Building, CityPublic, ManifestFile } from '../types';
 
 export type LatLng = { lat: number; lng: number };
 export type Point = { x: number; y: number };
@@ -21,6 +21,7 @@ export interface OutlineBinary {
 }
 
 export interface MapViewProps {
+  city: CityPublic;
   buildings: Building[];
   allBuildings: Building[];
   basemap: GeoJSON.FeatureCollection;

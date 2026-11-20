@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { readCityConfigs } from '../scripts/lib/cities.mjs';
 import { fileURLToPath } from 'node:url';
 import {
   TBILISI_DESKTOP_START,
@@ -59,6 +60,17 @@ test('start views are fresh copies', () => {
     assert.deepEqual(next.center, constant.center);
     assert.equal(next.zoom, constant.zoom);
   }
+});
+
+test('city configs override the default Tbilisi launch cameras', async () => {
+  const { byId } = await readCityConfigs();
+  const belgrade = byId.get('belgrade');
+  const view = mobileStartView(belgrade);
+  assert.deepEqual(view.center, belgrade.map.start.mobile.center);
+  assert.equal(view.zoom, belgrade.map.start.mobile.zoom);
+  const desktop = desktopStartView(belgrade);
+  assert.deepEqual(desktop.center, belgrade.map.start.desktop.center);
+  assert.equal(desktop.zoom, belgrade.map.start.desktop.zoom);
 });
 
 test('mobile start view is off outside the browser', () => {

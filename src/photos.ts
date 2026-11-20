@@ -167,7 +167,8 @@ function startBuildingRun(building: Building, files: ReadonlyMap<string, Manifes
     promise: Promise.resolve({ status: 'loading', phase: null, assets: [], total: 0, loaded: 0 }),
     listeners: new Set(),
   };
-  runs.set(building.id, run);
+  const runKey = `${building.cityId}:${building.id}`;
+  runs.set(runKey, run);
   run.promise = (async () => {
     const photos = rankPhotos(
       building.photos ?? (building.photo ? [building.photo] : []),
@@ -252,9 +253,9 @@ export function useBuildingPhotos(
     run.listeners.add(setState);
     return () => {
       run.listeners.delete(setState);
-      if (!run.listeners.size) runs.delete(building.id);
+      if (!run.listeners.size) runs.delete(`${building.cityId}:${building.id}`);
     };
-  }, [building?.id, files, attempt]);
+  }, [building?.id, building?.cityId, files, attempt]);
   // Keep every file of the open gallery in memory; navigation between its
   // photos must not hit an evicted URL.
   useEffect(() => {
@@ -275,7 +276,7 @@ export function useBuildingPhotos(
   );
   const retry = () => {
     if (!building) return;
-    runs.delete(building.id);
+    runs.delete(`${building.cityId}:${building.id}`);
     setAttempt((value) => value + 1);
   };
   return { ...state, retry };

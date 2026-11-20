@@ -1,12 +1,22 @@
-import { Fragment, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import {
+  Fragment,
+  useCallback,
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { createPortal } from 'react-dom';
 import type { FeatureCollection } from 'geojson';
-import type { Building, Data, Filters, Photo } from './types';
-import { filterBuildings, normalize, period, periods, periodsFor, styleEntries } from './domain';
+import type { Building, CitiesCatalog, CityPublic, Data, Filters, Photo } from './types';
+import { filterBuildings, normalize, period, periodsFor, styleEntries } from './domain';
 import MapView from './MapView';
 import type { MapViewProps } from './map/types';
 import { isMobileMapLayout } from './map/start-view';
-import { I18nContext, translate, type Language, useI18n } from './i18n';
+import { I18nContext, cityTitle, translate, type Language, useI18n } from './i18n';
+import { buildHash, isLanguage, parseHash, type View } from './routing';
 import {
   rankPhotos,
   useBuildingPhotos,
@@ -17,7 +27,6 @@ import {
 } from './photos';
 import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
 
-type View = 'map' | 'catalog';
 const initialFilters: Filters = {
   query: '',
   from: '',
@@ -239,14 +248,16 @@ function photoCreditText(photo: Photo, t: (value: string) => string) {
   return license;
 }
 function PeriodChoices({
+  periods,
   selected,
   onToggle,
   onHover,
   className,
 }: {
+  periods: { id: string; label: string; color: string }[];
   selected: string[];
-  onToggle: (label: string) => void;
-  onHover: (label: string | null) => void;
+  onToggle: (id: string) => void;
+  onHover: (id: string | null) => void;
   className: string;
 }) {
   const { t } = useI18n();
@@ -255,14 +266,14 @@ function PeriodChoices({
       {periods.map((p) => (
         <button
           type="button"
-          key={p.label}
-          className={selected.includes(p.label) ? 'active' : ''}
-          aria-pressed={selected.includes(p.label)}
-          onMouseEnter={() => onHover(p.label)}
+          key={p.id}
+          className={selected.includes(p.id) ? 'active' : ''}
+          aria-pressed={selected.includes(p.id)}
+          onMouseEnter={() => onHover(p.id)}
           onMouseLeave={() => onHover(null)}
-          onFocus={() => onHover(p.label)}
+          onFocus={() => onHover(p.id)}
           onBlur={() => onHover(null)}
-          onClick={() => onToggle(p.label)}
+          onClick={() => onToggle(p.id)}
         >
           <i style={{ background: p.color }} />
           {t(p.label)}
@@ -272,20 +283,23 @@ function PeriodChoices({
   );
 }
 function PeriodPicker({
+  periods,
   selected,
   onToggle,
   onHover,
 }: {
+  periods: { id: string; label: string; color: string }[];
   selected: string[];
-  onToggle: (label: string) => void;
-  onHover: (label: string | null) => void;
+  onToggle: (id: string) => void;
+  onHover: (id: string | null) => void;
 }) {
   const { t } = useI18n();
+  const selectedLabel = periods.find((p) => p.id === selected[0])?.label;
   const summary =
     selected.length === 0
       ? t('Все периоды')
       : selected.length === 1
-        ? t(selected[0])
+        ? t(selectedLabel ?? 'Неизвестно')
         : `${t('Выбрано: ')}${selected.length}`;
   return (
     <details className="period-picker">
@@ -295,15 +309,11 @@ function PeriodPicker({
       </summary>
       <div className="period-picker-menu">
         {periods.map((p) => (
-          <label
-            key={p.label}
-            onMouseEnter={() => onHover(p.label)}
-            onMouseLeave={() => onHover(null)}
-          >
+          <label key={p.id} onMouseEnter={() => onHover(p.id)} onMouseLeave={() => onHover(null)}>
             <input
               type="checkbox"
-              checked={selected.includes(p.label)}
-              onChange={() => onToggle(p.label)}
+              checked={selected.includes(p.id)}
+              onChange={() => onToggle(p.id)}
             />
             <i style={{ background: p.color }} />
             {t(p.label)}
@@ -599,17 +609,29 @@ function PhotoLightbox({
     document.body,
   );
 }
-function parseHash() {
-  const p = new URLSearchParams(location.hash.slice(1));
-  return {
-    view: p.get('view') === 'catalog' ? ('catalog' as View) : ('map' as View),
-    id: p.get('building'),
-    language: isLanguage(p.get('lang')) ? (p.get('lang') as Language) : null,
-  };
-}
-function Loader({ onReady }: { onReady: (d: Data) => void }) {
+function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void }) {
   const { t } = useI18n();
-  const [status, setStatus] = useState('Подготавливаем карту'),
+  return (
+    <div className="loading">
+      <div className="loading-mark">
+        ა<span>•</span>
+      </div>
+      <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
+      <h1>{t('АРХИТЕКТУРНЫЙ АТЛАС')}</h1>
+      <div className="loader-line" />
+      <p>{error || t('Загружаем карту и данные…')}</p>
+      {error && (
+        <button className="primary-button" onClick={onRetry}>
+          {t('Попробовать снова')}
+        </button>
+      )}
+    </div>
+  );
+}
+
+function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data) => void }) {
+  const { t, language } = useI18n();
+  const [status, setStatus] = useState('Загружаем карту и данные…'),
     [error, setError] = useState(''),
     [attempt, setAttempt] = useState(0);
   useEffect(() => {
@@ -619,48 +641,58 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
       try {
         setError('');
         setStatus('Загружаем карту и данные…');
-        const get = async (path: string, revision = __ATLAS_REVISION__) => {
-          const r = await fetch(`${base}${path}?v=${encodeURIComponent(revision)}`, {
+        const revision = import.meta.env.DEV
+          ? String(Date.now())
+          : (city.manifestRevision ?? __ATLAS_REVISION__);
+        const get = async (path: string, version = revision) => {
+          const r = await fetch(`${base}${path}?v=${encodeURIComponent(version)}`, {
             signal: controller.signal,
           });
           if (!r.ok) throw new Error(`Не удалось загрузить ${path}`);
           return r;
         };
-        const manifest = (await (await get('manifest.json')).json()) as {
+        const manifest = (await (await get(`cities/${city.id}/manifest.json`)).json()) as {
           version: number;
+          city: string;
           revision: string;
+          entry: { buildings: string; basemap: string; outlines: string };
           files: { path: string; size: number; sha256: string }[];
         };
-        if (manifest.version !== 1 || !Array.isArray(manifest.files))
+        if (
+          manifest.version !== 2 ||
+          manifest.city !== city.id ||
+          !manifest.entry ||
+          !Array.isArray(manifest.files)
+        )
           throw new Error('Неизвестная версия пакета');
         if (!crypto.subtle)
           throw new Error('Для проверки пакета откройте атлас через HTTPS или localhost');
-        const optionalOutlines =
-          manifest.files.find((f) => f.path === 'building-outlines.bin') ??
-          manifest.files.find((f) => f.path === 'building-outlines.geojson');
-        if (!optionalOutlines) throw new Error('В пакете нет контуров зданий');
-        const corePaths = new Set(['buildings.json', 'basemap.geojson']);
-        const initialFiles = manifest.files.filter((f) => corePaths.has(f.path));
-        const photoFiles = new Map(manifest.files.map((f) => [f.path, f]));
+        const byPath = new Map(manifest.files.map((file) => [file.path, file]));
+        const outlines = byPath.get(manifest.entry.outlines);
+        if (!outlines) throw new Error('В пакете нет контуров зданий');
+        const corePaths = new Set([manifest.entry.buildings, manifest.entry.basemap]);
+        const initialFiles = manifest.files.filter((file) => corePaths.has(file.path));
+        if (initialFiles.length !== corePaths.size) throw new Error('В пакете нет данных города');
+        const photoFiles = new Map(manifest.files.map((file) => [file.path, file]));
         const files = new Map<string, ArrayBuffer>();
         let done = 0;
-        const total = initialFiles.reduce((n, f) => n + f.size, 0);
+        const total = initialFiles.reduce((n, file) => n + file.size, 0);
         let loaded = 0;
         let nextFile = 0;
         const loadNext = async () => {
           while (nextFile < initialFiles.length) {
-            const f = initialFiles[nextFile++];
-            if (f.path.includes('..') || f.path.startsWith('/'))
+            const file = initialFiles[nextFile++];
+            if (file.path.includes('..') || file.path.startsWith('/'))
               throw new Error('Некорректный путь в пакете');
-            const bytes = await (await get(f.path, f.sha256)).arrayBuffer();
+            const bytes = await (await get(file.path, file.sha256)).arrayBuffer();
             const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
               .map((x) => x.toString(16).padStart(2, '0'))
               .join('');
-            if (bytes.byteLength !== f.size || hash !== f.sha256)
-              throw new Error(`Поврежден файл ${f.path}`);
-            files.set(f.path, bytes);
+            if (bytes.byteLength !== file.size || hash !== file.sha256)
+              throw new Error(`Поврежден файл ${file.path}`);
+            files.set(file.path, bytes);
             done++;
-            loaded += f.size;
+            loaded += file.size;
             if (!cancelled)
               setStatus(
                 `Загружено ${(loaded / 1048576).toFixed(1)} из ${(total / 1048576).toFixed(1)} МБ · ${done}/${initialFiles.length}`,
@@ -673,8 +705,8 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
           if (!bytes) throw new Error(`В пакете нет ${path}`);
           return JSON.parse(new TextDecoder().decode(bytes));
         };
-        const buildings: Building[] = decode('buildings.json'),
-          basemap: FeatureCollection = decode('basemap.geojson');
+        const buildings: Building[] = decode(manifest.entry.buildings),
+          basemap: FeatureCollection = decode(manifest.entry.basemap);
         for (const item of buildings)
           for (const photo of item.photos ?? (item.photo ? [item.photo] : []))
             if (
@@ -685,9 +717,10 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
               throw new Error(`В пакете нет фото ${item.name}`);
         if (!cancelled) {
           onReady({
+            city,
             buildings,
             basemap,
-            buildingOutlines: optionalOutlines,
+            buildingOutlines: outlines,
             photoFiles,
           });
         }
@@ -701,14 +734,14 @@ function Loader({ onReady }: { onReady: (d: Data) => void }) {
       cancelled = true;
       controller.abort();
     };
-  }, [attempt]);
+  }, [attempt, city, onReady]);
   return (
     <div className="loading">
       <div className="loading-mark">
         ა<span>•</span>
       </div>
       <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
-      <h1>{t('Атлас Тбилиси')}</h1>
+      <h1>{cityTitle(city.labels[language], language)}</h1>
       <div className="loader-line" />
       <p>{error || t(status)}</p>
       {error && (
@@ -750,6 +783,7 @@ function CardPhoto({
 type InspectorPhotos = BuildingPhotos & { retry: () => void };
 function Inspector({
   building,
+  city,
   photos,
   photoFiles,
   onClose,
@@ -757,6 +791,7 @@ function Inspector({
   onFilter,
 }: {
   building: Building;
+  city: CityPublic;
   photos: InspectorPhotos;
   photoFiles: Data['photoFiles'];
   onClose: () => void;
@@ -811,7 +846,7 @@ function Inspector({
     return () => window.removeEventListener('keydown', key);
   }, [building.id, lightboxOpen]);
   const googleMapsQuery = encodeURIComponent(
-    `${building.nameEn || building.name}, ${building.addresses?.en || ''}, Tbilisi, Georgia`,
+    `${building.nameEn || building.name}, ${building.addresses?.en || ''}, ${city.labels.en}, ${city.country.en}`,
   );
   const googleMapsUrl = building.googlePlaceId
     ? `https://www.google.com/maps/search/?api=1&query=${googleMapsQuery}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`
@@ -822,7 +857,7 @@ function Inspector({
   function previousPhoto() {
     setPhotoIndex((i) => (images.length ? (i + images.length - 1) % images.length : 0));
   }
-  const p = period(building.minYear, building.maxYear)!;
+  const p = period(building.minYear, building.maxYear, city.periods)!;
   return (
     <>
       <aside className="inspector" aria-label={t('Информация: ') + name}>
@@ -1102,12 +1137,22 @@ function Inspector({
     </>
   );
 }
-function AppContent({ data }: { data: Data }) {
+function AppContent({
+  data,
+  city,
+  cities,
+  onCityChange,
+}: {
+  data: Data;
+  city: CityPublic;
+  cities: CityPublic[];
+  onCityChange: (id: string) => void;
+}) {
   const { language, t, setLanguage } = useI18n();
+  const periods = city.periods;
   const init = useMemo(parseHash, []),
-    [city, setCity] = useState('tbilisi'),
     [view, setView] = useState<View>(init.view),
-    [selected, setSelected] = useState<string | null>(init.id),
+    [selected, setSelected] = useState<string | null>(init.building),
     [filters, setFilters] = useState<Filters>(initialFilters),
     [showFilters, setShowFilters] = useState(false),
     [showLegend, setShowLegend] = useState(
@@ -1135,10 +1180,10 @@ function AppContent({ data }: { data: Data }) {
     const results = filterBuildings(data.buildings, filters) as Building[];
     return selectedPeriods.length
       ? results.filter((b) =>
-          periodsFor(b.minYear, b.maxYear).some((p) => selectedPeriods.includes(p.label)),
+          periodsFor(b.minYear, b.maxYear, periods).some((p) => selectedPeriods.includes(p.id)),
         )
       : results;
-  }, [data.buildings, filters, selectedPeriods]);
+  }, [data.buildings, filters, selectedPeriods, periods]);
   const architects = useMemo(() => {
     const byId = new Map<string, { value: string; label: string; count: number }>();
     for (const building of data.buildings)
@@ -1187,23 +1232,24 @@ function AppContent({ data }: { data: Data }) {
     setVisibleCount(CATALOG_PAGE_SIZE);
   }, [filters, selectedPeriods, sort, view]);
   useEffect(() => {
-    const p = new URLSearchParams();
-    p.set('view', view);
     // A hidden card is closed for the reader, so its id leaves the address bar
     // too; on phones the selection stays to keep the outline on the map.
-    if (selected && !inspectorHidden) p.set('building', selected);
-    p.set('lang', language);
-    const hash = '#' + p.toString();
+    const hash = buildHash({
+      city: city.id,
+      view,
+      building: selected && !inspectorHidden ? selected : null,
+      language,
+    });
     if (firstHash.current) {
       firstHash.current = false;
       if (location.hash !== hash) history.replaceState(null, '', hash);
     } else if (location.hash !== hash) history.pushState(null, '', hash);
-  }, [view, selected, language, inspectorHidden]);
+  }, [city.id, view, selected, language, inspectorHidden]);
   useEffect(() => {
     const pop = () => {
       const h = parseHash();
       setView(h.view);
-      setSelected(h.id);
+      setSelected(h.building);
       // A history entry with a building means an open card, even on phones.
       setInspectorHidden(false);
     };
@@ -1301,10 +1347,10 @@ function AppContent({ data }: { data: Data }) {
     setSelectedPeriods([]);
     setHoveredPeriod(null);
   }
-  function togglePeriod(label: string) {
+  function togglePeriod(id: string) {
     setHoveredPeriod(null);
     setSelectedPeriods((current) =>
-      current.includes(label) ? current.filter((x) => x !== label) : [...current, label],
+      current.includes(id) ? current.filter((x) => x !== id) : [...current, id],
     );
   }
   const activeCount =
@@ -1314,6 +1360,7 @@ function AppContent({ data }: { data: Data }) {
     Number(selectedPeriods.length > 0);
   const hasActiveFilters = !!filters.query.trim() || activeCount > 0;
   const mapProps: MapViewProps = {
+    city,
     buildings: filtered,
     allBuildings: data.buildings,
     basemap: data.basemap as FeatureCollection,
@@ -1334,7 +1381,7 @@ function AppContent({ data }: { data: Data }) {
       <header className="header">
         <a
           className="brand"
-          href={`#view=map&lang=${language}`}
+          href={buildHash({ city: city.id, view: 'map', building: null, language })}
           onClick={(event) => {
             event.preventDefault();
             setView('map');
@@ -1350,10 +1397,14 @@ function AppContent({ data }: { data: Data }) {
             id="city"
             className="city-select"
             aria-label={t('ГОРОД')}
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+            value={city.id}
+            onChange={(e) => onCityChange(e.target.value)}
           >
-            <option value="tbilisi">{t('Тбилиси')}</option>
+            {cities.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.labels[language]}
+              </option>
+            ))}
           </select>
         </div>
         <div className="header-right">
@@ -1375,264 +1426,272 @@ function AppContent({ data }: { data: Data }) {
         </div>
       </header>
       <main className="workspace">
-        {city === 'tbilisi' ? (
-          <>
-            <div className="toolbar">
-              <label className="search">
-                <Icon name="search" size={18} />
-                <input
-                  aria-label={t('Поиск по атласу')}
-                  value={filters.query}
-                  onChange={(e) => update('query', e.target.value)}
-                  placeholder={t('Название, архитектор, адрес…')}
-                />
-                {filters.query && (
-                  <button onClick={() => update('query', '')} aria-label={t('Очистить поиск')}>
-                    <Icon name="close" size={14} />
-                  </button>
-                )}
-              </label>
-              <button
-                type="button"
-                className="mobile-menu-button"
-                aria-label={t('Открыть меню')}
-                aria-haspopup="dialog"
-                aria-expanded={menuOpen}
-                aria-controls="atlas-mobile-menu"
-                onClick={() => setMenuOpen(true)}
-              >
-                <Icon name="menu" size={20} />
+        <>
+          <div className="toolbar">
+            <label className="search">
+              <Icon name="search" size={18} />
+              <input
+                aria-label={t('Поиск по атласу')}
+                value={filters.query}
+                onChange={(e) => update('query', e.target.value)}
+                placeholder={t('Название, архитектор, адрес…')}
+              />
+              {filters.query && (
+                <button onClick={() => update('query', '')} aria-label={t('Очистить поиск')}>
+                  <Icon name="close" size={14} />
+                </button>
+              )}
+            </label>
+            <button
+              type="button"
+              className="mobile-menu-button"
+              aria-label={t('Открыть меню')}
+              aria-haspopup="dialog"
+              aria-expanded={menuOpen}
+              aria-controls="atlas-mobile-menu"
+              onClick={() => setMenuOpen(true)}
+            >
+              <Icon name="menu" size={20} />
+            </button>
+            <button
+              className={'filter-button ' + (showFilters ? 'active' : '')}
+              onClick={() => setShowFilters(!showFilters)}
+              aria-expanded={showFilters}
+            >
+              <Icon name="sliders" size={17} /> {t('Фильтры')}{' '}
+              {activeCount > 0 && <span className="filter-count">{activeCount}</span>}
+            </button>
+            <div className="view-toggle" role="group" aria-label={t('Вид атласа')}>
+              <button className={view === 'map' ? 'active' : ''} onClick={() => setView('map')}>
+                <Icon name="map" size={16} /> {t('Карта')}
               </button>
               <button
-                className={'filter-button ' + (showFilters ? 'active' : '')}
-                onClick={() => setShowFilters(!showFilters)}
-                aria-expanded={showFilters}
+                className={view === 'catalog' ? 'active' : ''}
+                onClick={() => setView('catalog')}
               >
-                <Icon name="sliders" size={17} /> {t('Фильтры')}{' '}
-                {activeCount > 0 && <span className="filter-count">{activeCount}</span>}
+                <Icon name="list" size={16} /> {t('Каталог')}
               </button>
-              <div className="view-toggle" role="group" aria-label={t('Вид атласа')}>
-                <button className={view === 'map' ? 'active' : ''} onClick={() => setView('map')}>
-                  <Icon name="map" size={16} /> {t('Карта')}
-                </button>
-                <button
-                  className={view === 'catalog' ? 'active' : ''}
-                  onClick={() => setView('catalog')}
-                >
-                  <Icon name="list" size={16} /> {t('Каталог')}
-                </button>
-              </div>
             </div>
-            {showFilters && (
-              <div className="filter-panel">
-                <div className="period-filter">
-                  <span className="period-filter-label">{t('Период постройки')}</span>
-                  <PeriodPicker
-                    selected={selectedPeriods}
-                    onToggle={togglePeriod}
-                    onHover={setHoveredPeriod}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="from">{t('Год от')}</label>
-                  <input
-                    id="from"
-                    type="number"
-                    placeholder={t('Например, 1800')}
-                    value={filters.from}
-                    onChange={(e) => update('from', e.target.value)}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="to">{t('Год до')}</label>
-                  <input
-                    id="to"
-                    type="number"
-                    placeholder={t('Например, 1920')}
-                    value={filters.to}
-                    onChange={(e) => update('to', e.target.value)}
-                  />
-                </div>
-                <MultiSelect
-                  id="architect"
-                  label="Архитектор"
-                  allLabel="Все архитекторы"
-                  options={architects}
-                  selected={filters.architect}
-                  onToggle={(value) => toggleMultiFilter('architect', value)}
+          </div>
+          {showFilters && (
+            <div className="filter-panel">
+              <div className="period-filter">
+                <span className="period-filter-label">{t('Период постройки')}</span>
+                <PeriodPicker
+                  periods={periods}
+                  selected={selectedPeriods}
+                  onToggle={togglePeriod}
+                  onHover={setHoveredPeriod}
                 />
-                <MultiSelect
-                  id="style"
-                  label="Стиль"
-                  allLabel="Все стили"
-                  options={styleOptions}
-                  selected={filters.style}
-                  onToggle={(value) => toggleMultiFilter('style', value)}
-                />
-                <div className="interesting-filter">
-                  <label title={t('Прячет жилые дома без описания и истории')}>
-                    <input
-                      type="checkbox"
-                      checked={filters.interestingOnly}
-                      onChange={(e) => update('interestingOnly', e.target.checked)}
-                    />
-                    <span>{t('Только интересные')}</span>
-                  </label>
-                </div>
-                <button className="reset-filter" onClick={resetFilters}>
-                  {t('Сбросить')}
-                </button>
               </div>
-            )}
-            <div className={'content ' + (selectedBuilding ? 'has-selection' : '')}>
-              <div className="view-main">
-                {view === 'map' ? (
-                  <>
-                    <MapView {...mapProps} />
-                    <div className="map-caption">
-                      <span className="caption-dot" /> {t('ТБИЛИСИ, ГРУЗИЯ')}{' '}
-                      <span className="caption-line" />{' '}
-                      {filtered.length !== data.buildings.length
-                        ? `${filtered.length}/${data.buildings.length}`
-                        : data.buildings.length}{' '}
-                      {t('ОБЪЕКТОВ')}
-                    </div>
+              <div>
+                <label htmlFor="from">{t('Год от')}</label>
+                <input
+                  id="from"
+                  type="number"
+                  placeholder={t('Например, 1800')}
+                  value={filters.from}
+                  onChange={(e) => update('from', e.target.value)}
+                />
+              </div>
+              <div>
+                <label htmlFor="to">{t('Год до')}</label>
+                <input
+                  id="to"
+                  type="number"
+                  placeholder={t('Например, 1920')}
+                  value={filters.to}
+                  onChange={(e) => update('to', e.target.value)}
+                />
+              </div>
+              <MultiSelect
+                id="architect"
+                label="Архитектор"
+                allLabel="Все архитекторы"
+                options={architects}
+                selected={filters.architect}
+                onToggle={(value) => toggleMultiFilter('architect', value)}
+              />
+              <MultiSelect
+                id="style"
+                label="Стиль"
+                allLabel="Все стили"
+                options={styleOptions}
+                selected={filters.style}
+                onToggle={(value) => toggleMultiFilter('style', value)}
+              />
+              <div className="interesting-filter">
+                <label title={t('Прячет жилые дома без описания и истории')}>
+                  <input
+                    type="checkbox"
+                    checked={filters.interestingOnly}
+                    onChange={(e) => update('interestingOnly', e.target.checked)}
+                  />
+                  <span>{t('Только интересные')}</span>
+                </label>
+              </div>
+              <button className="reset-filter" onClick={resetFilters}>
+                {t('Сбросить')}
+              </button>
+            </div>
+          )}
+          <div className={'content ' + (selectedBuilding ? 'has-selection' : '')}>
+            <div className="view-main">
+              {view === 'map' ? (
+                <>
+                  <MapView {...mapProps} />
+                  <div className="map-caption">
+                    <span className="caption-dot" /> {city.labels[language]},{' '}
+                    {city.country[language]} <span className="caption-line" />{' '}
+                    {filtered.length !== data.buildings.length
+                      ? `${filtered.length}/${data.buildings.length}`
+                      : data.buildings.length}{' '}
+                    {t('ОБЪЕКТОВ')}
+                  </div>
+                  <button
+                    className="overview"
+                    onClick={() => setReset((x) => x + 1)}
+                    title={t('Вернуться к центру')}
+                  >
+                    ⌖
+                  </button>
+                  <div className={'legend ' + (!showLegend ? 'compact' : '')}>
                     <button
-                      className="overview"
-                      onClick={() => setReset((x) => x + 1)}
-                      title={t('Вернуться к центру')}
+                      type="button"
+                      className="legend-head"
+                      onClick={() => setShowLegend(!showLegend)}
+                      aria-expanded={showLegend}
+                      aria-controls="legend-details"
                     >
-                      ⌖
+                      <span>{t('Период постройки')}</span>
+                      <span className="legend-toggle" aria-hidden="true">
+                        {showLegend ? '−' : '+'}
+                      </span>
                     </button>
-                    <div className={'legend ' + (!showLegend ? 'compact' : '')}>
-                      <button
-                        type="button"
-                        className="legend-head"
-                        onClick={() => setShowLegend(!showLegend)}
-                        aria-expanded={showLegend}
-                        aria-controls="legend-details"
-                      >
-                        <span>{t('Период постройки')}</span>
-                        <span className="legend-toggle" aria-hidden="true">
-                          {showLegend ? '−' : '+'}
-                        </span>
-                      </button>
-                      {showLegend && (
-                        <div id="legend-details">
-                          <div className="legend-colors">
-                            {periods
-                              .filter((p) => p.min !== null)
-                              .map((p) => (
-                                <span key={p.label} style={{ background: p.color }} />
-                              ))}
-                          </div>
-                          <div className="legend-range">
-                            <span>{t(periods[0].label)}</span>
-                            <span>{t(periods[periods.length - 2].label)}</span>
-                          </div>
-                          <PeriodChoices
-                            className="legend-list legend-period-options"
-                            selected={selectedPeriods}
-                            onToggle={togglePeriod}
-                            onHover={setHoveredPeriod}
-                          />
+                    {showLegend && (
+                      <div id="legend-details">
+                        <div className="legend-colors">
+                          {periods
+                            .filter((p) => p.min !== null)
+                            .map((p) => (
+                              <span key={p.label} style={{ background: p.color }} />
+                            ))}
                         </div>
-                      )}
-                    </div>
-                  </>
-                ) : (
-                  <div className="catalog">
-                    <div className="catalog-head">
-                      <div>
-                        <h2>{t('Каталог')}</h2>
-                      </div>
-                      <label>
-                        {t('Сортировка')}{' '}
-                        <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                          <option value="name">{t('По названию')}</option>
-                          <option value="old">{t('Сначала старые')}</option>
-                          <option value="new">{t('Сначала новые')}</option>
-                        </select>
-                      </label>
-                    </div>
-                    {!sorted.length ? (
-                      <div className="empty">
-                        <h3>{t('Ничего не найдено')}</h3>
-                        <p>{t('Попробуйте изменить запрос или сбросить фильтры.')}</p>
-                        <button onClick={resetFilters}>{t('Сбросить фильтры')}</button>
-                      </div>
-                    ) : (
-                      <>
-                        <div className="cards" lang={language}>
-                          {sorted.slice(0, visibleCount).map((b) => (
-                            <article key={b.id} className="card">
-                              <button
-                                className="card-image"
-                                onClick={() => select(b.id)}
-                                aria-label={t('Подробнее: ') + (b.names?.[language] || b.name)}
-                              >
-                                <CardPhoto building={b} photoFiles={data.photoFiles} />
-                                <span className="card-year">
-                                  <i style={{ background: period(b.minYear, b.maxYear)!.color }} />
-                                  {b.yearLabels?.[language] || b.yearLabel}
-                                </span>
-                              </button>
-                              <div className="card-body">
-                                <span className="card-district">
-                                  {b.districts?.[language] || b.district}
-                                  {!b.styleIds?.includes('undetermined') && (
-                                    <> / {b.styles?.[language] || b.style}</>
-                                  )}
-                                </span>
-                                <button className="card-title" onClick={() => select(b.id)}>
-                                  {b.names?.[language] || b.name}
-                                </button>
-                                <p>{b.addresses?.[language] || t('Адрес не установлен')}</p>
-                                <button className="text-link" onClick={() => goMap(b.id)}>
-                                  {t('На карте')} <Icon name="arrow" size={15} />
-                                </button>
-                              </div>
-                            </article>
-                          ))}
+                        <div className="legend-range">
+                          <span>{t(periods[0].label)}</span>
+                          <span>{t(periods[periods.length - 2].label)}</span>
                         </div>
-                        {visibleCount < sorted.length && (
-                          <div className="catalog-more">
-                            <button
-                              type="button"
-                              onClick={() => setVisibleCount((count) => count + CATALOG_PAGE_SIZE)}
-                            >
-                              {t('Показать ещё')}
-                            </button>
-                            <span>
-                              {visibleCount} / {sorted.length}
-                            </span>
-                          </div>
-                        )}
-                      </>
+                        <PeriodChoices
+                          periods={periods}
+                          className="legend-list legend-period-options"
+                          selected={selectedPeriods}
+                          onToggle={togglePeriod}
+                          onHover={setHoveredPeriod}
+                        />
+                      </div>
                     )}
                   </div>
-                )}
-              </div>
-              {selectedBuilding && !inspectorHidden && (
-                <Inspector
-                  key={selectedBuilding.id}
-                  building={selectedBuilding}
-                  photos={selectedPhotos}
-                  photoFiles={data.photoFiles}
-                  onClose={close}
-                  onMap={() => goMap(selectedBuilding.id)}
-                  onFilter={filterBy}
-                />
+                </>
+              ) : (
+                <div className="catalog">
+                  <div className="catalog-head">
+                    <div>
+                      <h2>{t('Каталог')}</h2>
+                    </div>
+                    <label>
+                      {t('Сортировка')}{' '}
+                      <select value={sort} onChange={(e) => setSort(e.target.value)}>
+                        <option value="name">{t('По названию')}</option>
+                        <option value="old">{t('Сначала старые')}</option>
+                        <option value="new">{t('Сначала новые')}</option>
+                      </select>
+                    </label>
+                  </div>
+                  {!sorted.length ? (
+                    <div className="empty">
+                      {data.buildings.length === 0 ? (
+                        <>
+                          <h3>{t('В этом городе пока нет объектов.')}</h3>
+                          <p>{t('Данные об архитектуре этого города пока не добавлены.')}</p>
+                        </>
+                      ) : (
+                        <>
+                          <h3>{t('Ничего не найдено')}</h3>
+                          <p>{t('Попробуйте изменить запрос или сбросить фильтры.')}</p>
+                          <button onClick={resetFilters}>{t('Сбросить фильтры')}</button>
+                        </>
+                      )}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="cards" lang={language}>
+                        {sorted.slice(0, visibleCount).map((b) => (
+                          <article key={b.id} className="card">
+                            <button
+                              className="card-image"
+                              onClick={() => select(b.id)}
+                              aria-label={t('Подробнее: ') + (b.names?.[language] || b.name)}
+                            >
+                              <CardPhoto building={b} photoFiles={data.photoFiles} />
+                              <span className="card-year">
+                                <i
+                                  style={{
+                                    background: period(b.minYear, b.maxYear, periods)!.color,
+                                  }}
+                                />
+                                {b.yearLabels?.[language] || b.yearLabel}
+                              </span>
+                            </button>
+                            <div className="card-body">
+                              <span className="card-district">
+                                {b.districts?.[language] || b.district}
+                                {!b.styleIds?.includes('undetermined') && (
+                                  <> / {b.styles?.[language] || b.style}</>
+                                )}
+                              </span>
+                              <button className="card-title" onClick={() => select(b.id)}>
+                                {b.names?.[language] || b.name}
+                              </button>
+                              <p>{b.addresses?.[language] || t('Адрес не установлен')}</p>
+                              <button className="text-link" onClick={() => goMap(b.id)}>
+                                {t('На карте')} <Icon name="arrow" size={15} />
+                              </button>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                      {visibleCount < sorted.length && (
+                        <div className="catalog-more">
+                          <button
+                            type="button"
+                            onClick={() => setVisibleCount((count) => count + CATALOG_PAGE_SIZE)}
+                          >
+                            {t('Показать ещё')}
+                          </button>
+                          <span>
+                            {visibleCount} / {sorted.length}
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
               )}
             </div>
-          </>
-        ) : (
-          <div className="city-empty">
-            <h1>{city === 'batumi' ? 'Батуми' : 'Кутаиси'}</h1>
-            <p>{t('Данные об архитектуре этого города пока не добавлены.')}</p>
-            <button onClick={() => setCity('tbilisi')}>{t('Вернуться к карте Тбилиси')}</button>
+            {selectedBuilding && !inspectorHidden && (
+              <Inspector
+                key={selectedBuilding.id}
+                building={selectedBuilding}
+                city={city}
+                photos={selectedPhotos}
+                photoFiles={data.photoFiles}
+                onClose={close}
+                onMap={() => goMap(selectedBuilding.id)}
+                onFilter={filterBy}
+              />
+            )}
           </div>
-        )}
+        </>
       </main>
       <div
         className={'mobile-menu-scrim' + (menuOpen ? ' open' : '')}
@@ -1660,10 +1719,14 @@ function AppContent({ data }: { data: Data }) {
           <select
             id="city-mobile"
             className="mobile-menu-select"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+            value={city.id}
+            onChange={(e) => onCityChange(e.target.value)}
           >
-            <option value="tbilisi">{t('Тбилиси')}</option>
+            {cities.map((item) => (
+              <option key={item.id} value={item.id}>
+                {item.labels[language]}
+              </option>
+            ))}
           </select>
         </div>
         <div className="mobile-menu-field">
@@ -1684,9 +1747,6 @@ function AppContent({ data }: { data: Data }) {
     </div>
   );
 }
-function isLanguage(value: string | null): value is Language {
-  return value === 'ru' || value === 'en' || value === 'ka' || value === 'uk';
-}
 function savedLanguage(): Language {
   try {
     const saved = localStorage.getItem('atlas-language');
@@ -1695,45 +1755,193 @@ function savedLanguage(): Language {
     return 'ru';
   }
 }
-function urlLanguage(): Language | null {
-  const value = new URLSearchParams(location.hash.slice(1)).get('lang');
-  return isLanguage(value) ? value : null;
+
+function CityPlaceholder({
+  city,
+  fallback,
+  onCityChange,
+}: {
+  city: CityPublic;
+  fallback: CityPublic | null;
+  onCityChange: (id: string) => void;
+}) {
+  const { t, language } = useI18n();
+  return (
+    <div className="city-empty">
+      <h1>{city.labels[language]}</h1>
+      <p>{t('Данные об архитектуре этого города пока не добавлены.')}</p>
+      {fallback && fallback.id !== city.id && (
+        <button onClick={() => onCityChange(fallback.id)}>
+          {t('К карте')}: {fallback.labels[language]}
+        </button>
+      )}
+    </div>
+  );
 }
+
 export default function App() {
-  const [data, setData] = useState<Data | null>(null);
-  const [language, setLanguageState] = useState<Language>(() => urlLanguage() || savedLanguage());
+  const initial = useMemo(parseHash, []);
+  const [catalog, setCatalog] = useState<CitiesCatalog | null>(null);
+  const [catalogError, setCatalogError] = useState('');
+  const [catalogAttempt, setCatalogAttempt] = useState(0);
+  const [cityId, setCityId] = useState<string | null>(initial.city);
+  const [cityData, setCityData] = useState<{ id: string; data: Data } | null>(null);
+  const cache = useRef(new Map<string, Data>());
+  const [language, setLanguageState] = useState<Language>(
+    () => initial.language ?? savedLanguage(),
+  );
+
   const setLanguage = (next: Language) => {
     setLanguageState(next);
     try {
       localStorage.setItem('atlas-language', next);
     } catch {}
-    const params = new URLSearchParams(location.hash.slice(1));
-    params.set('lang', next);
-    const hash = '#' + params.toString();
+    const route = parseHash();
+    const hash = buildHash({ ...route, city: cityId ?? route.city, language: next });
     if (location.hash !== hash) history.pushState(null, '', hash);
   };
   const t = (value: string) => translate(value, language);
+
   useEffect(() => {
-    const syncFromUrl = () => {
-      const next = urlLanguage();
-      if (next) {
-        setLanguageState(next);
-        try {
-          localStorage.setItem('atlas-language', next);
-        } catch {}
+    let cancelled = false;
+    const controller = new AbortController();
+    async function run() {
+      try {
+        setCatalogError('');
+        const revision = import.meta.env.DEV ? String(Date.now()) : __ATLAS_REVISION__;
+        const response = await fetch(`${base}cities.json?v=${encodeURIComponent(revision)}`, {
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error('Не удалось загрузить список городов');
+        const value = (await response.json()) as CitiesCatalog;
+        if (!value || value.version !== 1 || !Array.isArray(value.cities) || !value.defaultCity)
+          throw new Error('Неизвестный формат списка городов');
+        if (!cancelled) {
+          setCatalog(value);
+          const desired =
+            cityId && value.cities.some((city) => city.id === cityId) ? cityId : value.defaultCity;
+          setCityId(desired);
+          if (parseHash().city !== desired) {
+            const route = parseHash();
+            history.replaceState(
+              null,
+              '',
+              buildHash({
+                ...route,
+                city: desired,
+                building: route.city === desired ? route.building : null,
+              }),
+            );
+          }
+        }
+      } catch (error) {
+        if (!cancelled && !(error instanceof DOMException && error.name === 'AbortError'))
+          setCatalogError(error instanceof Error ? error.message : 'Ошибка загрузки');
+      }
+    }
+    void run();
+    return () => {
+      cancelled = true;
+      controller.abort();
+    };
+  }, [catalogAttempt]);
+
+  const handleReady = useCallback((data: Data) => {
+    cache.current.set(data.city.id, data);
+    if (cache.current.size > 3) {
+      const first = cache.current.keys().next().value;
+      if (first) cache.current.delete(first);
+    }
+    setCityData({ id: data.city.id, data });
+  }, []);
+
+  useEffect(() => {
+    if (!catalog) return;
+    if (!cityId) return;
+    const city = catalog.cities.find((item) => item.id === cityId);
+    if (!city || city.status !== 'ready') {
+      setCityData(null);
+      return;
+    }
+    const cached = cache.current.get(city.id);
+    if (cached) setCityData({ id: city.id, data: cached });
+    else setCityData(null);
+  }, [catalog, cityId]);
+
+  useEffect(() => {
+    const pop = () => {
+      const route = parseHash();
+      if (route.language) setLanguageState(route.language);
+      const next = route.city ?? catalog?.defaultCity ?? null;
+      if (next && next !== cityId) {
+        setCityId(next);
+        setCityData(null);
       }
     };
-    if (!urlLanguage()) {
-      const params = new URLSearchParams(location.hash.slice(1));
-      params.set('lang', language);
-      history.replaceState(null, '', '#' + params.toString());
-    }
-    window.addEventListener('popstate', syncFromUrl);
-    return () => window.removeEventListener('popstate', syncFromUrl);
-  }, []);
+    window.addEventListener('popstate', pop);
+    return () => window.removeEventListener('popstate', pop);
+  }, [cityId, catalog]);
+
+  useEffect(() => {
+    const city = catalog?.cities.find((item) => item.id === cityId) ?? null;
+    const suffix = t('архитектура и её истории');
+    const title = city
+      ? `${cityTitle(city.labels[language], language)} — ${suffix}`
+      : `${t('Архитектурный атлас')} — ${suffix}`;
+    document.title = title;
+    const description = city
+      ? `Интерактивный атлас архитектуры ${city.labels.ru}: история, архитекторы и стили зданий.`
+      : 'Интерактивный атлас архитектуры: история, архитекторы и стили зданий.';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+    document.documentElement.lang = language;
+  }, [catalog, cityId, language]);
+
+  const changeCity = (id: string) => {
+    const route = parseHash();
+    const hash = buildHash({ ...route, city: id, building: null });
+    if (location.hash !== hash) history.pushState(null, '', hash);
+    setCityId(id);
+    setCityData(null);
+  };
+
+  const city = catalog?.cities.find((item) => item.id === cityId) ?? null;
+
   return (
     <I18nContext.Provider value={{ language, t, setLanguage }}>
-      {data ? <AppContent data={data} /> : <Loader onReady={setData} />}
+      {!catalog ? (
+        <CatalogLoader
+          error={catalogError}
+          onRetry={() => {
+            setCatalogError('');
+            setCatalogAttempt((value) => value + 1);
+          }}
+        />
+      ) : city && city.status === 'coming-soon' ? (
+        <CityPlaceholder
+          city={city}
+          fallback={catalog.cities.find((item) => item.id === catalog.defaultCity) ?? null}
+          onCityChange={changeCity}
+        />
+      ) : city && cityData?.id === city.id ? (
+        <AppContent
+          key={city.id}
+          data={cityData.data}
+          city={city}
+          cities={catalog.cities}
+          onCityChange={changeCity}
+        />
+      ) : city ? (
+        <CityLoader
+          key={`${city.id}:${city.manifestRevision ?? ''}`}
+          city={city}
+          onReady={handleReady}
+        />
+      ) : (
+        <CatalogLoader
+          error={catalogError || 'Город не выбран'}
+          onRetry={() => setCatalogAttempt((value) => value + 1)}
+        />
+      )}
     </I18nContext.Provider>
   );
 }

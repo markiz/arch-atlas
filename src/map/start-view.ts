@@ -1,3 +1,4 @@
+import type { CityPublic } from '../types';
 import type { LatLng } from './types';
 
 /**
@@ -29,12 +30,16 @@ export function isMobileMapLayout(): boolean {
   return typeof window !== 'undefined' && window.matchMedia(MOBILE_MAP_MEDIA).matches;
 }
 
-/** Fresh copy of the mobile launch camera. */
-export function mobileStartView(): { center: LatLng; zoom: number } {
-  return { center: { ...TBILISI_MOBILE_START.center }, zoom: TBILISI_MOBILE_START.zoom };
+function copy(view: { center: LatLng; zoom: number }) {
+  return { center: { ...view.center }, zoom: view.zoom };
+}
+
+/** Launch camera for a city; the old Tbilisi constants remain the default. */
+export function mobileStartView(city?: CityPublic) {
+  return copy(city?.map.start.mobile ?? TBILISI_MOBILE_START);
 }
 
 /** Fresh copy of the desktop launch camera. */
-export function desktopStartView(): { center: LatLng; zoom: number } {
-  return { center: { ...TBILISI_DESKTOP_START.center }, zoom: TBILISI_DESKTOP_START.zoom };
+export function desktopStartView(city?: CityPublic) {
+  return copy(city?.map.start.desktop ?? TBILISI_DESKTOP_START);
 }

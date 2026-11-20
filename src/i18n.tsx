@@ -481,9 +481,42 @@ Object.assign(extras.ka, {
   'фотография ': 'ფოტო ',
 });
 Object.assign(extras.uk, { 'Ширина сохранена: ': 'Ширину збережено: ', 'фотография ': 'фото ' });
-Object.assign(extras.en, { Приблизить: 'Zoom in', Отдалить: 'Zoom out' });
-Object.assign(extras.ka, { Приблизить: 'გადიდება', Отдалить: 'დაპატარავება' });
-Object.assign(extras.uk, { Приблизить: 'Наблизити', Отдалить: 'Віддалити' });
+Object.assign(extras.en, {
+  Приблизить: 'Zoom in',
+  Отдалить: 'Zoom out',
+  'В этом городе пока нет объектов.': 'This city has no atlas objects yet.',
+  'До 1400': 'Before 1400',
+  'архитектура и её истории': 'architecture and its stories',
+  'Архитектурный атлас': 'Architecture Atlas',
+  'К карте': 'To the map',
+  Города: 'Cities',
+});
+Object.assign(extras.ka, {
+  Приблизить: 'გადიდება',
+  Отдалить: 'დაპატარავება',
+  'В этом городе пока нет объектов.': 'ამ ქალაქში ჯერ ატლასის ობიექტები არ არის.',
+  'До 1400': '1400-მდე',
+  'архитектура и её истории': 'არქიტექტურა და მისი ისტორიები',
+  'Архитектурный атлас': 'არქიტექტურული ატლასი',
+  'К карте': 'რუკაზე',
+  Города: 'ქალაქები',
+});
+Object.assign(extras.uk, {
+  Приблизить: 'Наблизити',
+  Отдалить: 'Віддалити',
+  'В этом городе пока нет объектов.': 'У цьому місті ще немає об’єктів атласу.',
+  'До 1400': 'До 1400',
+  'архитектура и её истории': 'архітектура та її історії',
+  'Архитектурный атлас': 'Архітектурний атлас',
+  'К карте': 'До мапи',
+  Города: 'Міста',
+});
+export function cityTitle(cityName: string, language: Language): string {
+  if (language === 'en') return `${cityName} Atlas`;
+  if (language === 'ka') return `${cityName} ატლასი`;
+  return `Атлас ${cityName}`;
+}
+
 export function translate(value: string, language: Language): string {
   if (language === 'ru') return value;
   const direct = messages[language][value] ?? extras[language][value];

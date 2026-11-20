@@ -49,6 +49,7 @@ function boundsOfBuildings(buildings: Building[]): Bounds | null {
 }
 
 export default function MapView({
+  city,
   buildings,
   allBuildings,
   basemap,
@@ -117,19 +118,20 @@ export default function MapView({
   }, [showRoads, showBuildings, showWater, detailedStreets, showGreen]);
   useEffect(() => {
     if (!container.current) return;
-    const saved = savedMapView();
+    const saved = savedMapView(city.id);
     const map = new AtlasCanvasMap(container.current, {
-      center: saved?.center ?? { lat: 41.715, lng: 44.8 },
-      zoom: saved?.zoom ?? 11.5,
-      minZoom: 10,
-      maxZoom: 19,
+      center: saved?.center ?? city.map.center,
+      zoom: saved?.zoom ?? city.map.zoom,
+      minZoom: city.map.minZoom,
+      maxZoom: city.map.maxZoom,
       zoomSnap: 0.5,
       onSelect: (id) => selectionRef.current(id),
-      onViewChange: (center, zoom) => rememberMapView(center, zoom),
+      onViewChange: (center, zoom) => rememberMapView(city.id, center, zoom),
     });
     mapRef.current = map;
     map.setBasemap(basemap);
     map.setLanguage(language);
+    map.setPeriods(city.periods);
     map.setLayerVisibility({
       roads: showRoads,
       water: showWater,
@@ -146,14 +148,14 @@ export default function MapView({
       map.setBuildingsVisible(true);
     }
     if (!saved) {
-      const view = isMobileMapLayout() ? mobileStartView() : desktopStartView();
+      const view = isMobileMapLayout() ? mobileStartView(city) : desktopStartView(city);
       map.setView(view.center, view.zoom, { animate: false });
     }
     return () => {
       mapRef.current = null;
       map.destroy();
     };
-  }, [basemap, atlasBounds]);
+  }, [basemap, atlasBounds, city]);
   useEffect(() => {
     mapRef.current?.setLayerVisibility({
       roads: showRoads,
@@ -287,10 +289,10 @@ export default function MapView({
     if (!map) return;
     handledReset.current = reset;
     if (isMobileMapLayout()) {
-      const view = mobileStartView();
+      const view = mobileStartView(city);
       map.setView(view.center, view.zoom, { animate: true, duration: 450 });
     } else {
-      map.reset(atlasBounds);
+      map.reset(atlasBounds, { center: city.map.center, zoom: city.map.zoom });
     }
   }, [reset, atlasBounds]);
   function locate() {

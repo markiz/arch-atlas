@@ -22,7 +22,17 @@ export function parseOutlineBinary(buffer: ArrayBuffer): OutlineBinary {
   const featureCount = header.getUint32(12, true);
   const ringCount = header.getUint32(16, true);
   const pointCount = header.getUint32(20, true);
-  if (!featureCount || !ringCount || !pointCount) throw new Error('Пустой файл контуров');
+  if (!featureCount || !ringCount || !pointCount) {
+    if (featureCount || ringCount || pointCount || buffer.byteLength !== HEADER_BYTES + 4 + 4)
+      throw new Error('Пустой файл контуров');
+    return {
+      points: new Float32Array(),
+      ringStarts: new Uint32Array([0]),
+      featureRings: new Uint32Array([0]),
+      boxes: new Float32Array(),
+      featureCount: 0,
+    };
+  }
   const pointsBytes = pointCount * 2 * Float32Array.BYTES_PER_ELEMENT;
   const ringBytes = (ringCount + 1) * Uint32Array.BYTES_PER_ELEMENT;
   const featureBytes = (featureCount + 1) * Uint32Array.BYTES_PER_ELEMENT;

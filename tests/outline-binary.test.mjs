@@ -44,6 +44,22 @@ test('parses the compact outline file', () => {
   );
 });
 
+test('parses the header-only outline file of an empty city', () => {
+  const header = Buffer.alloc(40);
+  header.write('ATLOUT01', 0, 'ascii');
+  header.writeUInt32LE(1, 8);
+  header.writeUInt32LE(0, 12);
+  header.writeUInt32LE(0, 16);
+  header.writeUInt32LE(0, 20);
+  const outline = parseOutlineBinary(
+    header.buffer.slice(header.byteOffset, header.byteOffset + header.byteLength),
+  );
+  assert.equal(outline.featureCount, 0);
+  assert.equal(outline.points.length, 0);
+  assert.deepEqual([...outline.ringStarts], [0]);
+  assert.deepEqual([...outline.featureRings], [0]);
+});
+
 test('rejects an unknown magic or a truncated file', () => {
   const { buffer } = fixture();
   const unknown = new Uint8Array(buffer.slice(0));
