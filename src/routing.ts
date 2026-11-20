@@ -1,4 +1,4 @@
-import type { Language } from './i18n';
+import { isLanguage, type Language } from './languages.ts';
 
 export type View = 'map' | 'catalog';
 
@@ -9,9 +9,7 @@ export interface AtlasRoute {
   language: Language | null;
 }
 
-export function isLanguage(value: string | null | undefined): value is Language {
-  return value === 'ru' || value === 'en' || value === 'ka' || value === 'uk';
-}
+export { isLanguage };
 
 export function parseHash(hash: string = typeof location === 'undefined' ? '' : location.hash) {
   const params = new URLSearchParams(hash.replace(/^#/, ''));

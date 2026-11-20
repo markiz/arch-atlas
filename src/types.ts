@@ -1,4 +1,5 @@
 import type { GeoJsonObject, Geometry } from 'geojson';
+import type { Language } from './languages.ts';
 export type GeometryRole =
   | 'above_ground'
   | 'heritage_boundary'
@@ -43,7 +44,7 @@ export interface Photo {
   width: number;
   height: number;
   rating: number;
-  descriptions?: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  descriptions?: Partial<Record<Language, string>>;
   sourceTags?: string[];
   visualTags?: string[];
   /** Documentary tags; `stamp` marks postage-stamp scans. */
@@ -53,33 +54,34 @@ export interface Building {
   id: string;
   cityId: string;
   name: string;
-  nameKa: string;
-  nameEn: string;
-  nameUk: string;
-  names: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  nameKa?: string;
+  nameEn?: string;
+  nameUk?: string;
+  nameSr?: string;
+  names: Partial<Record<Language, string>>;
   originalLanguage: string;
   address: string;
-  addresses: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  addresses: Partial<Record<Language, string>>;
   district: string;
   districtId: string;
-  districts: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  districts: Partial<Record<Language, string>>;
   type: BuildingType;
-  typeLabels: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  typeLabels: Partial<Record<Language, string>>;
   minYear: number | null;
   maxYear: number | null;
   yearLabel: string;
   yearLabelId: string;
-  yearLabels: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  yearLabels: Partial<Record<Language, string>>;
   architects: string[];
   architectIds: string[];
-  architectsByLanguage: Record<'ru' | 'en' | 'ka' | 'uk', string[]>;
+  architectsByLanguage: Partial<Record<Language, string[]>>;
   style: string;
   styleIds: string[];
-  styles: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  styles: Partial<Record<Language, string>>;
   description: string;
-  descriptions?: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  descriptions?: Partial<Record<Language, string>>;
   history: string;
-  histories?: Partial<Record<'ru' | 'en' | 'ka' | 'uk', string>>;
+  histories?: Partial<Record<Language, string>>;
   coordinates: [number, number];
   photo?: Photo;
   photos?: Photo[];
@@ -91,7 +93,7 @@ export interface Building {
   geometryRole?: GeometryRole;
   geometryVariants?: GeometryVariant[];
   geometryQuality: string;
-  geometryQualityTranslations?: Partial<Record<'en' | 'ka' | 'uk', string>>;
+  geometryQualityTranslations?: Partial<Record<Exclude<Language, 'ru'>, string>>;
   osmId?: string;
 }
 export interface ManifestFile {
@@ -121,8 +123,9 @@ export interface CityMap {
 export interface CityPublic {
   id: string;
   status: 'ready' | 'coming-soon';
-  labels: Record<'ru' | 'en' | 'ka' | 'uk', string>;
-  country: Record<'ru' | 'en' | 'ka' | 'uk', string>;
+  languages: Language[];
+  labels: Partial<Record<Language, string>>;
+  country: Partial<Record<Language, string>>;
   periods: CityPeriod[];
   map: CityMap;
   counts?: { buildings: number };

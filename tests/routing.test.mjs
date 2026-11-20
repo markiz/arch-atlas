@@ -29,5 +29,6 @@ test('default route is a plain map URL', () => {
     language: null,
   });
   assert.equal(isLanguage('ka'), true);
-  assert.equal(isLanguage('sr'), false);
+  assert.equal(isLanguage('sr'), true);
+  assert.equal(isLanguage('de'), false);
 });

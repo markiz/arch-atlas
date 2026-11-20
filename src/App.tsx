@@ -17,6 +17,7 @@ import type { MapViewProps } from './map/types';
 import { isMobileMapLayout } from './map/start-view';
 import { I18nContext, cityTitle, translate, type Language, useI18n } from './i18n';
 import { buildHash, isLanguage, parseHash, type View } from './routing';
+import { LANGUAGE_NAMES, type Language as CityLanguage } from './languages.ts';
 import {
   rankPhotos,
   useBuildingPhotos,
@@ -741,7 +742,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
         ა<span>•</span>
       </div>
       <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
-      <h1>{cityTitle(city.labels[language], language)}</h1>
+      <h1>{cityTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)}</h1>
       <div className="loader-line" />
       <p>{error || t(status)}</p>
       {error && (
@@ -752,6 +753,18 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
     </div>
   );
 }
+function LanguageOptions({ city }: { city: CityPublic }) {
+  return (
+    <>
+      {city.languages.map((code) => (
+        <option key={code} value={code}>
+          {LANGUAGE_NAMES[code]}
+        </option>
+      ))}
+    </>
+  );
+}
+
 function CardPhoto({
   building,
   photoFiles,
@@ -1194,7 +1207,9 @@ function AppContent({
           byId.set(id, {
             value: id,
             label:
-              building.architectsByLanguage[language][index] || building.architects[index] || id,
+              building.architectsByLanguage?.[language]?.[index] ||
+              building.architects[index] ||
+              id,
             count: 1,
           });
       });
@@ -1402,7 +1417,7 @@ function AppContent({
           >
             {cities.map((item) => (
               <option key={item.id} value={item.id}>
-                {item.labels[language]}
+                {item.labels[language] ?? item.labels.ru ?? item.id}
               </option>
             ))}
           </select>
@@ -1416,12 +1431,9 @@ function AppContent({
             className="city-select language-select"
             aria-label={t('ЯЗЫК')}
             value={language}
-            onChange={(e) => setLanguage(e.target.value as Language)}
+            onChange={(e) => setLanguage(e.target.value as CityLanguage)}
           >
-            <option value="ru">Русский</option>
-            <option value="en">English</option>
-            <option value="ka">ქართული</option>
-            <option value="uk">Українська</option>
+            <LanguageOptions city={city} />
           </select>
         </div>
       </header>
@@ -1724,7 +1736,7 @@ function AppContent({
           >
             {cities.map((item) => (
               <option key={item.id} value={item.id}>
-                {item.labels[language]}
+                {item.labels[language] ?? item.labels.ru ?? item.id}
               </option>
             ))}
           </select>
@@ -1735,12 +1747,9 @@ function AppContent({
             id="language-mobile"
             className="mobile-menu-select"
             value={language}
-            onChange={(e) => setLanguage(e.target.value as Language)}
+            onChange={(e) => setLanguage(e.target.value as CityLanguage)}
           >
-            <option value="ru">Русский</option>
-            <option value="en">English</option>
-            <option value="ka">ქართული</option>
-            <option value="uk">Українська</option>
+            <LanguageOptions city={city} />
           </select>
         </div>
       </section>
@@ -1768,11 +1777,11 @@ function CityPlaceholder({
   const { t, language } = useI18n();
   return (
     <div className="city-empty">
-      <h1>{city.labels[language]}</h1>
+      <h1>{city.labels[language] ?? city.labels.ru ?? city.id}</h1>
       <p>{t('Данные об архитектуре этого города пока не добавлены.')}</p>
       {fallback && fallback.id !== city.id && (
         <button onClick={() => onCityChange(fallback.id)}>
-          {t('К карте')}: {fallback.labels[language]}
+          {t('К карте')}: {fallback.labels[language] ?? fallback.labels.ru ?? fallback.id}
         </button>
       )}
     </div>
@@ -1792,6 +1801,8 @@ export default function App() {
   );
 
   const setLanguage = (next: Language) => {
+    const currentCity = catalog?.cities.find((item) => item.id === cityId);
+    if (currentCity && !currentCity.languages.includes(next)) return;
     setLanguageState(next);
     try {
       localStorage.setItem('atlas-language', next);
@@ -1883,14 +1894,27 @@ export default function App() {
   }, [cityId, catalog]);
 
   useEffect(() => {
+    if (!catalog || !cityId) return;
+    const city = catalog.cities.find((item) => item.id === cityId);
+    if (!city || city.languages.includes(language)) return;
+    setLanguageState('ru');
+    try {
+      localStorage.setItem('atlas-language', 'ru');
+    } catch {}
+    const route = parseHash();
+    const hash = buildHash({ ...route, city: city.id, language: 'ru' });
+    if (location.hash !== hash) history.replaceState(null, '', hash);
+  }, [catalog, cityId, language]);
+
+  useEffect(() => {
     const city = catalog?.cities.find((item) => item.id === cityId) ?? null;
     const suffix = t('архитектура и её истории');
     const title = city
-      ? `${cityTitle(city.labels[language], language)} — ${suffix}`
+      ? `${cityTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)} — ${suffix}`
       : `${t('Архитектурный атлас')} — ${suffix}`;
     document.title = title;
     const description = city
-      ? `Интерактивный атлас архитектуры ${city.labels.ru}: история, архитекторы и стили зданий.`
+      ? `Интерактивный атлас архитектуры ${city.labels.ru ?? city.id}: история, архитекторы и стили зданий.`
       : 'Интерактивный атлас архитектуры: история, архитекторы и стили зданий.';
     document.querySelector('meta[name="description"]')?.setAttribute('content', description);
     document.documentElement.lang = language;
@@ -1898,8 +1922,17 @@ export default function App() {
 
   const changeCity = (id: string) => {
     const route = parseHash();
-    const hash = buildHash({ ...route, city: id, building: null });
+    const nextCity = catalog?.cities.find((item) => item.id === id);
+    const nextLanguage =
+      nextCity && nextCity.languages.includes(language) ? language : ('ru' as Language);
+    const hash = buildHash({ ...route, city: id, building: null, language: nextLanguage });
     if (location.hash !== hash) history.pushState(null, '', hash);
+    if (nextLanguage !== language) {
+      setLanguageState(nextLanguage);
+      try {
+        localStorage.setItem('atlas-language', nextLanguage);
+      } catch {}
+    }
     setCityId(id);
     setCityData(null);
   };
