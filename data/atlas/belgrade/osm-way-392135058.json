@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-392135058",
+  "osmId": "way/392135058",
+  "names": {
+    "ru": "Топчидерская церковь Святых апостолов Петра и Павла",
+    "en": "Topčider Church of the Holy Apostles Peter and Paul",
+    "uk": "Топчидерська церква Святих апостолів Петра і Павла",
+    "sr": "Топчидерска црква Светих апостола Петра и Павла"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Воеводы Путника, 11",
+    "en": "Vojvode Putnika Boulevard 11",
+    "uk": "Бульвар Воєводи Путника, 11",
+    "sr": "Булевар војводе Путника 11"
+  },
+  "minYear": 1834,
+  "maxYear": 1834,
+  "yearLabelId": "year-1834",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [
+    "architect-q3162032"
+  ],
+  "districtId": "savski-venac",
+  "type": "religious",
+  "coordinates": [
+    20.4438532,
+    44.7812003
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4437226,
+          44.7812466
+        ],
+        [
+          20.4437337,
+          44.7811431
+        ],
+        [
+          20.4439369,
+          44.7811525
+        ],
+        [
+          20.4439767,
+          44.7811682
+        ],
+        [
+          20.4439956,
+          44.7811952
+        ],
+        [
+          20.4439912,
+          44.781224
+        ],
+        [
+          20.4439656,
+          44.7812434
+        ],
+        [
+          20.4439258,
+          44.781255
+        ],
+        [
+          20.4437226,
+          44.7812466
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392135058).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392135058).",
+    "sr": "Контура OpenStreetMap (way/392135058).",
+    "uk": "Контур OpenStreetMap (way/392135058)."
+  },
+  "photos": [
+    "6e2e7acb7e060e19a4d6b91faa10fb0ef8fb0c54ca1474ac925982ce31100d66"
+  ],
+  "source": "https://www.openstreetmap.org/way/392135058",
+  "otherSource": "https://www.wikidata.org/wiki/Q3584203"
+}

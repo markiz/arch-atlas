@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-392852573",
+  "osmId": "way/392852573",
+  "names": {
+    "ru": "Дом Аэроклуба",
+    "en": "Aero Club Building",
+    "uk": "Будинок Аероклубу",
+    "sr": "Дом Аеро Клуба"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Узун Миркова 4 и Короля Петра, 36",
+    "en": "Uzun Mirkova 4 i Kralja Petra 36",
+    "uk": "Вул. Узун Миркова 4 и Короля Петра, 36",
+    "sr": "Узун Миркова 4 и Краља Петра 36"
+  },
+  "minYear": 1934,
+  "maxYear": 1934,
+  "yearLabelId": "year-1934",
+  "styleIds": [
+    "art-deco"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4558624,
+    44.8201305
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4559517,
+          44.8199617
+        ],
+        [
+          20.4560663,
+          44.8200436
+        ],
+        [
+          20.4558818,
+          44.8201734
+        ],
+        [
+          20.4559531,
+          44.8202243
+        ],
+        [
+          20.4558441,
+          44.820301
+        ],
+        [
+          20.4557987,
+          44.8202686
+        ],
+        [
+          20.4556583,
+          44.8201681
+        ],
+        [
+          20.4558097,
+          44.8200616
+        ],
+        [
+          20.4559517,
+          44.8199617
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392852573).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392852573).",
+    "sr": "Контура OpenStreetMap (way/392852573).",
+    "uk": "Контур OpenStreetMap (way/392852573)."
+  },
+  "photos": [
+    "8228ca091a392b755fb2fe97e33c64461209e40212badfd9875221bdb3cb84be"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929271"
+}

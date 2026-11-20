@@ -1,0 +1,90 @@
+{
+  "id": "osm-way-403285928",
+  "osmId": "way/403285928",
+  "names": {
+    "ru": "Церковь Святого Димитрия",
+    "en": "Church of Saint Demetrius",
+    "uk": "Церква Святого Димитрія",
+    "sr": "Црква Светог Димитрија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Сибинянин Янка, 1a",
+    "en": "Sibinjanin Janka 1a",
+    "uk": "Вул. Сибинянин Янка, 1a",
+    "sr": "Сибињанин Јанка 1a"
+  },
+  "minYear": 1878,
+  "maxYear": 1878,
+  "yearLabelId": "year-1878",
+  "styleIds": [
+    "byzantine-revival"
+  ],
+  "architectIds": [
+    "architect-q3506336"
+  ],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.4089709,
+    44.8490289
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4090719,
+          44.8490229
+        ],
+        [
+          20.4089629,
+          44.8489456
+        ],
+        [
+          20.4089068,
+          44.8489854
+        ],
+        [
+          20.4088536,
+          44.8490231
+        ],
+        [
+          20.4089665,
+          44.8491031
+        ],
+        [
+          20.4090019,
+          44.8490781
+        ],
+        [
+          20.4090316,
+          44.8490992
+        ],
+        [
+          20.4090747,
+          44.8490686
+        ],
+        [
+          20.4090411,
+          44.8490448
+        ],
+        [
+          20.4090719,
+          44.8490229
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/403285928).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/403285928).",
+    "sr": "Контура OpenStreetMap (way/403285928).",
+    "uk": "Контур OpenStreetMap (way/403285928)."
+  },
+  "photos": [
+    "3d585d8302efbd33297fc813be7435cf4624a65daa24985ceb601f27d5e1ec3a"
+  ],
+  "source": "https://www.openstreetmap.org/way/403285928",
+  "otherSource": "https://www.wikidata.org/wiki/Q1261794"
+}

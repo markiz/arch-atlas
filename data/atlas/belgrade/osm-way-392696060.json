@@ -1,0 +1,90 @@
+{
+  "id": "osm-way-392696060",
+  "osmId": "way/392696060",
+  "names": {
+    "ru": "Дом Крсмановича",
+    "en": "Krsmanović House",
+    "uk": "Будинок Крсмановича",
+    "sr": "Крсмановићева кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 34",
+    "en": "Terazije 34",
+    "uk": "Вул. Теразиє, 34",
+    "sr": "Теразије 34"
+  },
+  "minYear": 1885,
+  "maxYear": 1885,
+  "yearLabelId": "year-1885",
+  "styleIds": [
+    "baroque-revival"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4613751,
+    44.8116904
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4612635,
+          44.8117937
+        ],
+        [
+          20.461293,
+          44.8117486
+        ],
+        [
+          20.4611775,
+          44.8117107
+        ],
+        [
+          20.4612578,
+          44.8115877
+        ],
+        [
+          20.4613651,
+          44.811623
+        ],
+        [
+          20.4614089,
+          44.8115559
+        ],
+        [
+          20.4614431,
+          44.8115672
+        ],
+        [
+          20.4615685,
+          44.8116084
+        ],
+        [
+          20.4614088,
+          44.8118448
+        ],
+        [
+          20.4612635,
+          44.8117937
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392696060).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392696060).",
+    "sr": "Контура OpenStreetMap (way/392696060).",
+    "uk": "Контур OpenStreetMap (way/392696060)."
+  },
+  "photos": [
+    "78d1907ad1ed0b4a9de6fd4365d5bcfa533394919e192d92fc44332d802da7cb"
+  ],
+  "source": "https://www.openstreetmap.org/way/392696060",
+  "otherSource": "https://www.wikidata.org/wiki/Q3278818"
+}

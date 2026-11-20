@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-397549017",
+  "osmId": "way/397549017",
+  "names": {
+    "ru": "Дом Поповича",
+    "en": "House of the Popović Family",
+    "uk": "Будинок Поповича",
+    "sr": "Кућа Поповића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Радивоя Корача, 7",
+    "en": "Radivoja Koraća 7",
+    "uk": "Вул. Радивоя Корача, 7",
+    "sr": "Радивоја Кораћа 7"
+  },
+  "minYear": 1928,
+  "maxYear": 1928,
+  "yearLabelId": "year-1928",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4842994,
+    44.7989122
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4842254,
+          44.7989984
+        ],
+        [
+          20.4841572,
+          44.7989045
+        ],
+        [
+          20.484198,
+          44.7988903
+        ],
+        [
+          20.4843741,
+          44.7988262
+        ],
+        [
+          20.4844416,
+          44.7989194
+        ],
+        [
+          20.484417,
+          44.798928
+        ],
+        [
+          20.4842254,
+          44.7989984
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/397549017).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/397549017).",
+    "sr": "Контура OpenStreetMap (way/397549017).",
+    "uk": "Контур OpenStreetMap (way/397549017)."
+  },
+  "photos": [
+    "8be2ad6804f6b9abeaba4a2d19b63dc07ed41de74543563ec798c34154ac8ac6"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279779"
+}

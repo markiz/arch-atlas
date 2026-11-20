@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-393223998",
+  "osmId": "way/393223998",
+  "names": {
+    "ru": "Здание Социального страхования",
+    "en": "Social Insurance Building",
+    "uk": "Будівля Соціального страхування",
+    "sr": "Зграда Социјалног осигурања"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Неманина, 30",
+    "en": "Nemanjina 30",
+    "uk": "Вул. Неманина, 30",
+    "sr": "Немањина 30"
+  },
+  "minYear": 1962,
+  "maxYear": 1962,
+  "yearLabelId": "year-1962",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4636326,
+    44.8031959
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.463354,
+          44.8031354
+        ],
+        [
+          20.4636694,
+          44.8034067
+        ],
+        [
+          20.463926,
+          44.8032566
+        ],
+        [
+          20.4638072,
+          44.8031544
+        ],
+        [
+          20.4636841,
+          44.8032265
+        ],
+        [
+          20.463607,
+          44.8031602
+        ],
+        [
+          20.4637492,
+          44.803077
+        ],
+        [
+          20.4636297,
+          44.8029741
+        ],
+        [
+          20.4635698,
+          44.8030091
+        ],
+        [
+          20.463354,
+          44.8031354
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393223998).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393223998).",
+    "sr": "Контура OpenStreetMap (way/393223998).",
+    "uk": "Контур OpenStreetMap (way/393223998)."
+  },
+  "photos": [
+    "e95ab5de6a523fed37ea48e605075b0b0ade025eec275215474e3dc537de6a45"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85994541"
+}

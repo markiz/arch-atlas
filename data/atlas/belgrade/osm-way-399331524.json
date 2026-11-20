@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-399331524",
+  "osmId": "way/399331524",
+  "names": {
+    "ru": "Музей «4 июля» (дом Владислава Рибникара)",
+    "en": "Museum \"4 July\" (House of Vladislav Ribnikar)",
+    "uk": "Музей «4 липня» (будинок Владислава Рибникара)",
+    "sr": "Музеј „4. јули” (Кућа Владислава Рибникара)"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Михаила Мике Янковича, 5",
+    "en": "Mihaila Mike Jankovića 5",
+    "uk": "Вул. Михаила Мике Янковича, 5",
+    "sr": "Михаила Мике Јанковића 5"
+  },
+  "minYear": 1934,
+  "maxYear": 1934,
+  "yearLabelId": "year-1934",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4544619,
+    44.7876424
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4544676,
+          44.7877285
+        ],
+        [
+          20.4544294,
+          44.787703
+        ],
+        [
+          20.4543404,
+          44.7876435
+        ],
+        [
+          20.4544563,
+          44.7875562
+        ],
+        [
+          20.4545834,
+          44.7876412
+        ],
+        [
+          20.4544676,
+          44.7877285
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399331524).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399331524).",
+    "sr": "Контура OpenStreetMap (way/399331524).",
+    "uk": "Контур OpenStreetMap (way/399331524)."
+  },
+  "photos": [
+    "f492fbb995b591bb7965b58958a6771b3943bc3d8daafe3e302c4c1228a9eee2"
+  ],
+  "source": "https://www.openstreetmap.org/way/399331524",
+  "otherSource": "https://www.wikidata.org/wiki/Q1263910"
+}

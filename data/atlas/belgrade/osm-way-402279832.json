@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-402279832",
+  "osmId": "way/402279832",
+  "names": {
+    "ru": "Дом Биндера",
+    "en": "Binder House",
+    "uk": "Будинок Біндера",
+    "sr": "Биндерова кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Д-ра Петра Марковича, 4",
+    "en": "Dr Petra Markovića 4",
+    "uk": "Вул. Д-ра Петра Марковича, 4",
+    "sr": "Др Петра Марковића 4"
+  },
+  "minYear": 1911,
+  "maxYear": 1911,
+  "yearLabelId": "year-1911",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4144303,
+    44.8418959
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.414417,
+          44.8420299
+        ],
+        [
+          20.4143491,
+          44.8419848
+        ],
+        [
+          20.4143769,
+          44.8419637
+        ],
+        [
+          20.4143066,
+          44.841917
+        ],
+        [
+          20.4142873,
+          44.8419315
+        ],
+        [
+          20.4142254,
+          44.8418904
+        ],
+        [
+          20.4143686,
+          44.841782
+        ],
+        [
+          20.4145235,
+          44.841885
+        ],
+        [
+          20.4146335,
+          44.8418018
+        ],
+        [
+          20.4146788,
+          44.8418319
+        ],
+        [
+          20.4145347,
+          44.8419401
+        ],
+        [
+          20.414417,
+          44.8420299
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/402279832).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/402279832).",
+    "sr": "Контура OpenStreetMap (way/402279832).",
+    "uk": "Контур OpenStreetMap (way/402279832)."
+  },
+  "photos": [
+    "f63338f4e9a0e4964902e8703db5a2f4d86cd5a67ed6bdac3affa37c7a0c0397"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85992036"
+}

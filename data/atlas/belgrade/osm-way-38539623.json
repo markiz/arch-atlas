@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-38539623",
+  "osmId": "way/38539623",
+  "names": {
+    "ru": "Белградская синагога Суккат Шалом",
+    "en": "Belgrade Synagogue Sukkat Shalom",
+    "uk": "Белградська синагога Суккат Шалом",
+    "sr": "Београдска синагога Сукат Шалом"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Маршала Бирюзова, 19",
+    "en": "Maršala Birjuzova 19",
+    "uk": "Вул. Маршала Бирюзова, 19",
+    "sr": "Маршала Бирјузова 19"
+  },
+  "minYear": 1925,
+  "maxYear": 1925,
+  "yearLabelId": "year-1925",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "religious",
+  "coordinates": [
+    20.4571458,
+    44.8148966
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4570205,
+          44.8150023
+        ],
+        [
+          20.4569602,
+          44.814837
+        ],
+        [
+          20.4572568,
+          44.8147826
+        ],
+        [
+          20.4573275,
+          44.8149762
+        ],
+        [
+          20.4572311,
+          44.8149939
+        ],
+        [
+          20.4572208,
+          44.8149655
+        ],
+        [
+          20.4571735,
+          44.8149742
+        ],
+        [
+          20.4570205,
+          44.8150023
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38539623).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38539623).",
+    "sr": "Контура OpenStreetMap (way/38539623).",
+    "uk": "Контур OpenStreetMap (way/38539623)."
+  },
+  "photos": [
+    "f9c5177635a05406f0497e2e516d3eaf26c36bfc21450c3f8ea67323c786c88b"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q736135"
+}

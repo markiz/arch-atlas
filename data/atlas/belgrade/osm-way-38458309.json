@@ -1,0 +1,116 @@
+{
+  "id": "osm-way-38458309",
+  "osmId": "way/38458309",
+  "names": {
+    "ru": "Здание Якова Челебоновича",
+    "en": "Building of Jakov Čelebonović",
+    "uk": "Будівля Якова Челебоновича",
+    "sr": "Зграда Јакова Челебоновића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Вука Караджича, 18",
+    "en": "Vuka Karadžića 18",
+    "uk": "Вул. Вука Караджича, 18",
+    "sr": "Вука Караџића 18"
+  },
+  "minYear": 1929,
+  "maxYear": 1929,
+  "yearLabelId": "year-1929",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "other",
+  "coordinates": [
+    20.4544306,
+    44.8170953
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4546635,
+          44.8170887
+        ],
+        [
+          20.4545109,
+          44.8169912
+        ],
+        [
+          20.4543588,
+          44.8168941
+        ],
+        [
+          20.4543364,
+          44.816886
+        ],
+        [
+          20.4543113,
+          44.8168869
+        ],
+        [
+          20.4542901,
+          44.8168966
+        ],
+        [
+          20.4541957,
+          44.8169694
+        ],
+        [
+          20.4543917,
+          44.8170976
+        ],
+        [
+          20.454472,
+          44.8170358
+        ],
+        [
+          20.4544964,
+          44.8170531
+        ],
+        [
+          20.4543882,
+          44.8171329
+        ],
+        [
+          20.4543146,
+          44.8171871
+        ],
+        [
+          20.4542789,
+          44.8171937
+        ],
+        [
+          20.454244,
+          44.8172205
+        ],
+        [
+          20.4545155,
+          44.8173092
+        ],
+        [
+          20.4546092,
+          44.8171266
+        ],
+        [
+          20.4546635,
+          44.8170887
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38458309).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38458309).",
+    "sr": "Контура OpenStreetMap (way/38458309).",
+    "uk": "Контур OpenStreetMap (way/38458309)."
+  },
+  "photos": [
+    "be683a06b1c4da148dc667c1b43dbd684e6aeaa7891ac4abad56b1f0936f704a"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279399"
+}

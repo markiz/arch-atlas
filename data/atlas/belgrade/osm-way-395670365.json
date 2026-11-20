@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-395670365",
+  "osmId": "way/395670365",
+  "names": {
+    "ru": "Дом скульптора Джордже Йовановича",
+    "en": "House of Sculptor Đorđe Jovanović",
+    "uk": "Будинок скульптора Джордже Йовановича",
+    "sr": "Кућа вајара Ђорђа Јовановића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Скерличева, 6",
+    "en": "Skerlićeva 6",
+    "uk": "Вул. Скерличева, 6",
+    "sr": "Скерлићева 6"
+  },
+  "minYear": 1926,
+  "maxYear": 1926,
+  "yearLabelId": "year-1926",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4669455,
+    44.7966401
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4670345,
+          44.7967253
+        ],
+        [
+          20.4668861,
+          44.7967374
+        ],
+        [
+          20.4668564,
+          44.796555
+        ],
+        [
+          20.4670048,
+          44.7965428
+        ],
+        [
+          20.4670345,
+          44.7967253
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395670365).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395670365).",
+    "sr": "Контура OpenStreetMap (way/395670365).",
+    "uk": "Контур OpenStreetMap (way/395670365)."
+  },
+  "photos": [
+    "ffcf94261040ff8e542c2941d0b69259162c9a06c4e137a3dc8d39e1837edfd8"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279824"
+}

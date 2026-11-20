@@ -1,0 +1,102 @@
+{
+  "id": "osm-rel-10572941",
+  "osmId": "relation/10572941",
+  "names": {
+    "ru": "Метрополь Палас",
+    "en": "Metropol Palace",
+    "uk": "Метрополь Палас",
+    "sr": "Метропол Палас"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра, 69",
+    "en": "Kralja Aleksandra Boulevard 69",
+    "uk": "Бульвар Короля Александра, 69",
+    "sr": "Булевар краља Александра 69"
+  },
+  "minYear": 1957,
+  "maxYear": 1957,
+  "yearLabelId": "year-1957",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q1273105"
+  ],
+  "districtId": "palilula",
+  "type": "hospitality",
+  "coordinates": [
+    20.4738371,
+    44.806783
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4730837,
+          44.8068761
+        ],
+        [
+          20.4732272,
+          44.8068137
+        ],
+        [
+          20.4732737,
+          44.8068675
+        ],
+        [
+          20.4738118,
+          44.8066334
+        ],
+        [
+          20.473668,
+          44.8064669
+        ],
+        [
+          20.4740009,
+          44.8063221
+        ],
+        [
+          20.4745033,
+          44.8069035
+        ],
+        [
+          20.4741614,
+          44.8070522
+        ],
+        [
+          20.4739753,
+          44.8068368
+        ],
+        [
+          20.4734552,
+          44.8070631
+        ],
+        [
+          20.4735278,
+          44.807147
+        ],
+        [
+          20.4733752,
+          44.8072134
+        ],
+        [
+          20.4730837,
+          44.8068761
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/10572941).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/10572941).",
+    "sr": "Контура OpenStreetMap (relation/10572941).",
+    "uk": "Контур OpenStreetMap (relation/10572941)."
+  },
+  "photos": [
+    "9bf844d65b3c24e045f98a14a0169f4c3e2daa3351d91ba9c361166c3a4ecf5b"
+  ],
+  "source": "https://www.openstreetmap.org/relation/10572941",
+  "otherSource": "https://www.wikidata.org/wiki/Q428429"
+}

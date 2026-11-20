@@ -1,0 +1,110 @@
+{
+  "id": "osm-way-299408087",
+  "osmId": "way/299408087",
+  "names": {
+    "ru": "Дом Общества Красного Креста",
+    "en": "Red Cross Society House",
+    "uk": "Будинок Товариства Червоного Хреста",
+    "sr": "Дом друштва Црвеног крста"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Симина, 19",
+    "en": "Simina 19",
+    "uk": "Вул. Симина, 19",
+    "sr": "Симина 19"
+  },
+  "minYear": 1879,
+  "maxYear": 1879,
+  "yearLabelId": "year-1879",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q2832490"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4609913,
+    44.8191172
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4609945,
+          44.8193227
+        ],
+        [
+          20.460918,
+          44.8192612
+        ],
+        [
+          20.4607004,
+          44.8190864
+        ],
+        [
+          20.4610047,
+          44.8188958
+        ],
+        [
+          20.4611004,
+          44.8189727
+        ],
+        [
+          20.4609638,
+          44.8190583
+        ],
+        [
+          20.4610065,
+          44.8190926
+        ],
+        [
+          20.4609682,
+          44.8191166
+        ],
+        [
+          20.4610478,
+          44.8191805
+        ],
+        [
+          20.4612704,
+          44.819041
+        ],
+        [
+          20.4613257,
+          44.8190854
+        ],
+        [
+          20.4613466,
+          44.8191022
+        ],
+        [
+          20.4611757,
+          44.8192093
+        ],
+        [
+          20.4611461,
+          44.8192278
+        ],
+        [
+          20.4609945,
+          44.8193227
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/299408087).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/299408087).",
+    "sr": "Контура OpenStreetMap (way/299408087).",
+    "uk": "Контур OpenStreetMap (way/299408087)."
+  },
+  "photos": [
+    "3e952f83561a63602268d0fcc4db05ecb95c3195ac168eceb1a6c9f508abdb70"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929277"
+}

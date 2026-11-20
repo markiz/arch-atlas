@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-572464205",
+  "osmId": "way/572464205",
+  "names": {
+    "ru": "Музыкальная школа «Станкович»",
+    "en": "Stanković Music School",
+    "uk": "Музична школа «Станкович»",
+    "sr": "Музичка школа Станковић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 1a",
+    "en": "Kneza Miloša 1a",
+    "uk": "Вул. Князя Милоша, 1a",
+    "sr": "Кнеза Милоша 1a"
+  },
+  "minYear": 1911,
+  "maxYear": 1911,
+  "yearLabelId": "year-1911",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3376329"
+  ],
+  "districtId": "vracar",
+  "type": "educational",
+  "coordinates": [
+    20.465867,
+    44.8100394
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4658535,
+          44.8101268
+        ],
+        [
+          20.4659908,
+          44.8100414
+        ],
+        [
+          20.4658805,
+          44.8099521
+        ],
+        [
+          20.4657432,
+          44.8100375
+        ],
+        [
+          20.4658535,
+          44.8101268
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/572464205).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/572464205).",
+    "sr": "Контура OpenStreetMap (way/572464205).",
+    "uk": "Контур OpenStreetMap (way/572464205)."
+  },
+  "photos": [
+    "decc924e5cdf35b6e2a79d3c02dcf6c83731c4cbe527902f437ca468a39a92f4"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q1565896"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-391994936",
+  "osmId": "way/391994936",
+  "names": {
+    "ru": "Здание Смедеревского банка",
+    "en": "Smederevo Bank Building",
+    "uk": "Будівля Смедеревського банку",
+    "sr": "Зграда Смедеревске банке"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 39",
+    "en": "Terazije 39",
+    "uk": "Вул. Теразиє, 39",
+    "sr": "Теразије 39"
+  },
+  "minYear": 1912,
+  "maxYear": 1912,
+  "yearLabelId": "year-1912",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q3314435"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4621341,
+    44.8116342
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4619159,
+          44.8116521
+        ],
+        [
+          20.4619616,
+          44.8115387
+        ],
+        [
+          20.4623515,
+          44.8116157
+        ],
+        [
+          20.4623065,
+          44.8117301
+        ],
+        [
+          20.4619159,
+          44.8116521
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/391994936).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/391994936).",
+    "sr": "Контура OpenStreetMap (way/391994936).",
+    "uk": "Контур OpenStreetMap (way/391994936)."
+  },
+  "photos": [
+    "37f1d37fbebfa8860043785ac484abfcdce13b74019363f9b3b59f258129eeac"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16084700"
+}

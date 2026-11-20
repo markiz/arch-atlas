@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-399189191",
+  "osmId": "way/399189191",
+  "names": {
+    "ru": "Дом Бранислава Нушича",
+    "en": "House of Branislav Nušić",
+    "uk": "Будинок Бранислава Нушича",
+    "sr": "Кућа Бранислава Нушића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Шекспирова, 1",
+    "en": "Šekspirova 1",
+    "uk": "Вул. Шекспирова, 1",
+    "sr": "Шекспирова 1"
+  },
+  "minYear": 1937,
+  "maxYear": 1937,
+  "yearLabelId": "year-1937",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4580334,
+    44.7872881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.457927,
+          44.7873137
+        ],
+        [
+          20.4579853,
+          44.7872161
+        ],
+        [
+          20.4581399,
+          44.7872626
+        ],
+        [
+          20.4580816,
+          44.7873601
+        ],
+        [
+          20.457927,
+          44.7873137
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399189191).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399189191).",
+    "sr": "Контура OpenStreetMap (way/399189191).",
+    "uk": "Контур OpenStreetMap (way/399189191)."
+  },
+  "photos": [
+    "e7bd03b9d18603a92dadf4c07e329170426f571f6ea0b3320a4c87e15075039e"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279294"
+}

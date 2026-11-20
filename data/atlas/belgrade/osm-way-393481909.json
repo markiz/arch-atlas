@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-393481909",
+  "osmId": "way/393481909",
+  "names": {
+    "ru": "Дом Димитрия Живадиновича",
+    "en": "House of Dimitrije Živadinović",
+    "uk": "Будинок Димитрія Живадиновича",
+    "sr": "Кућа Димитрија Живадиновића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Грачаничка, 16",
+    "en": "Gračanička 16",
+    "uk": "Вул. Грачаничка, 16",
+    "sr": "Грачаничка 16"
+  },
+  "minYear": 1904,
+  "maxYear": 1904,
+  "yearLabelId": "year-1904",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3313980"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4544401,
+    44.8174124
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4544775,
+          44.8175192
+        ],
+        [
+          20.4546622,
+          44.8173923
+        ],
+        [
+          20.4545155,
+          44.8173092
+        ],
+        [
+          20.4544855,
+          44.8173006
+        ],
+        [
+          20.4543949,
+          44.8173648
+        ],
+        [
+          20.4543264,
+          44.8173413
+        ],
+        [
+          20.4542071,
+          44.817415
+        ],
+        [
+          20.4543154,
+          44.8174808
+        ],
+        [
+          20.4544775,
+          44.8175192
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393481909).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393481909).",
+    "sr": "Контура OpenStreetMap (way/393481909).",
+    "uk": "Контур OpenStreetMap (way/393481909)."
+  },
+  "photos": [
+    "b451a6459e311fb89eea008abcbdbb827c6dacae650a72ac1667d7d1d1ef91dd"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279342"
+}

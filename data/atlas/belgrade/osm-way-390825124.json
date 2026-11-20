@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-390825124",
+  "osmId": "way/390825124",
+  "names": {
+    "ru": "Церковь Святого архангела Гавриила",
+    "en": "Church of Saint Archangel Gabriel",
+    "uk": "Церква Святого архангела Гавриїла",
+    "sr": "Црква Светог архангела Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Городской парк, 3",
+    "en": "Gradski park 3",
+    "uk": "Вул. Міський парк, 3",
+    "sr": "Градски парк 3"
+  },
+  "minYear": 1786,
+  "maxYear": 1786,
+  "yearLabelId": "year-1786",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.4100413,
+    44.8413197
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4099851,
+          44.841251
+        ],
+        [
+          20.4101279,
+          44.841299
+        ],
+        [
+          20.4101467,
+          44.8413313
+        ],
+        [
+          20.4101199,
+          44.8413665
+        ],
+        [
+          20.4100769,
+          44.8413817
+        ],
+        [
+          20.4099306,
+          44.8413325
+        ],
+        [
+          20.4099851,
+          44.841251
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/390825124).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/390825124).",
+    "sr": "Контура OpenStreetMap (way/390825124).",
+    "uk": "Контур OpenStreetMap (way/390825124)."
+  },
+  "photos": [
+    "aa451d05751aa9bdabbcb91c3b45b5a919df7ad3d0301fe03e183a746febd875"
+  ],
+  "source": "https://www.openstreetmap.org/way/390825124",
+  "otherSource": "https://www.wikidata.org/wiki/Q3320367"
+}

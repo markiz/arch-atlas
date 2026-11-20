@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-410271588",
+  "osmId": "way/410271588",
+  "names": {
+    "ru": "Сербская школа в Горней вароши",
+    "en": "Serbian School in Gornja Varoš",
+    "uk": "Сербська школа у Горній вароші",
+    "sr": "Српска школа у Горњој вароши"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светотроицкая, 4",
+    "en": "Svetotrojčina 4",
+    "uk": "Вул. Светотроїцька, 4",
+    "sr": "Светотројчина 4"
+  },
+  "minYear": 1872,
+  "maxYear": 1872,
+  "yearLabelId": "year-1872",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "educational",
+  "coordinates": [
+    20.3966864,
+    44.8503559
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.396387,
+          44.8501091
+        ],
+        [
+          20.3965287,
+          44.8500502
+        ],
+        [
+          20.3969857,
+          44.8506027
+        ],
+        [
+          20.3968441,
+          44.8506616
+        ],
+        [
+          20.396387,
+          44.8501091
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/410271588).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/410271588).",
+    "sr": "Контура OpenStreetMap (way/410271588).",
+    "uk": "Контур OpenStreetMap (way/410271588)."
+  },
+  "photos": [
+    "ad02cdbfa0572485bc98290d49a6a42c832cc4e71f49017021d499466832a1eb"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3578368"
+}

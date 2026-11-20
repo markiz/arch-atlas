@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-38575518",
+  "osmId": "way/38575518",
+  "names": {
+    "ru": "Резиденция княгини Любицы",
+    "en": "Konak of Princess Ljubica",
+    "uk": "Резиденція княгині Любиці",
+    "sr": "Конак кнегиње Љубице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Симе Марковича, 8",
+    "en": "Kneza Sime Markovića 8",
+    "uk": "Вул. Князя Симе Марковича, 8",
+    "sr": "Кнеза Симе Марковића 8"
+  },
+  "minYear": 1830,
+  "maxYear": 1830,
+  "yearLabelId": "year-1830",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q1567529"
+  ],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4522353,
+    44.8171048
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.452186,
+          44.8172533
+        ],
+        [
+          20.4523205,
+          44.8171682
+        ],
+        [
+          20.4524486,
+          44.8170871
+        ],
+        [
+          20.4523953,
+          44.8170447
+        ],
+        [
+          20.4523446,
+          44.8170035
+        ],
+        [
+          20.4522939,
+          44.8169632
+        ],
+        [
+          20.452285,
+          44.8169562
+        ],
+        [
+          20.4520218,
+          44.8171228
+        ],
+        [
+          20.452186,
+          44.8172533
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38575518).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38575518).",
+    "sr": "Контура OpenStreetMap (way/38575518).",
+    "uk": "Контур OpenStreetMap (way/38575518)."
+  },
+  "photos": [
+    "2788d4e15b0845175925959ec38d90d9738eb818a9bff1981f33de9daa21b20d"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2338245"
+}

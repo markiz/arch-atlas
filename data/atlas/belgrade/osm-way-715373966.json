@@ -1,0 +1,78 @@
+{
+  "id": "osm-way-715373966",
+  "osmId": "way/715373966",
+  "names": {
+    "ru": "Памятник Неизвестному герою",
+    "en": "Monument to the Unknown Hero",
+    "uk": "Пам'ятник Невідомому герою",
+    "sr": "Споменик Незнаном јунаку"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Авала, Бели Поток",
+    "en": "Avala, Beli Potok",
+    "uk": "Вул. Авала, Бели Поток",
+    "sr": "Авала, Бели Поток"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [
+    "architect-q313828"
+  ],
+  "districtId": "vozdovac",
+  "type": "memorial",
+  "coordinates": [
+    20.5159203,
+    44.6890762
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.5156764,
+          44.6890835
+        ],
+        [
+          20.5157643,
+          44.6891595
+        ],
+        [
+          20.515863,
+          44.6892449
+        ],
+        [
+          20.5161642,
+          44.6890689
+        ],
+        [
+          20.5160723,
+          44.6889893
+        ],
+        [
+          20.5159777,
+          44.6889075
+        ],
+        [
+          20.5156764,
+          44.6890835
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/715373966).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/715373966).",
+    "sr": "Контура OpenStreetMap (way/715373966).",
+    "uk": "Контур OpenStreetMap (way/715373966)."
+  },
+  "photos": [
+    "c59813041e8c6089765cbef60a412364c650e7053d02b21779dfb72f2f20b3c1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vozdovac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q1187994"
+}

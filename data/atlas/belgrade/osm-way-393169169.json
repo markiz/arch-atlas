@@ -1,0 +1,125 @@
+{
+  "id": "osm-way-393169169",
+  "osmId": "way/393169169",
+  "names": {
+    "ru": "Дворец Пенсионного фонда",
+    "en": "Pension Fund Palace",
+    "uk": "Палац Пенсійного фонду",
+    "sr": "Палата Пензионог фонда"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Пл. Николе Пашича 3, Теразие, 29",
+    "en": "Nikole Pašića 3, Terazije Square 29",
+    "uk": "Пл. Николе Пашича 3, Теразиє, 29",
+    "sr": "Трг Николе Пашића 3, Теразије 29"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "modern-architecture",
+    "art-deco"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4618459,
+    44.8127292
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4615225,
+          44.8127031
+        ],
+        [
+          20.4615478,
+          44.8126557
+        ],
+        [
+          20.4615832,
+          44.8126166
+        ],
+        [
+          20.4616561,
+          44.8125837
+        ],
+        [
+          20.461945,
+          44.8125482
+        ],
+        [
+          20.4621155,
+          44.8125272
+        ],
+        [
+          20.4621162,
+          44.8125318
+        ],
+        [
+          20.4621406,
+          44.8127027
+        ],
+        [
+          20.4621528,
+          44.8127884
+        ],
+        [
+          20.4621641,
+          44.8128673
+        ],
+        [
+          20.4619852,
+          44.8129065
+        ],
+        [
+          20.4618438,
+          44.8129049
+        ],
+        [
+          20.4618406,
+          44.8128642
+        ],
+        [
+          20.4617157,
+          44.8128736
+        ],
+        [
+          20.4616486,
+          44.8128604
+        ],
+        [
+          20.4616313,
+          44.8128888
+        ],
+        [
+          20.4614599,
+          44.8128473
+        ],
+        [
+          20.4614848,
+          44.81279
+        ],
+        [
+          20.4615225,
+          44.8127031
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393169169).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393169169).",
+    "sr": "Контура OpenStreetMap (way/393169169).",
+    "uk": "Контур OpenStreetMap (way/393169169)."
+  },
+  "photos": [
+    "2f65ef3f0f3bcc5dd89f5a4a6687ce5057b9fbf71472b560bed0b2ac8dda8454"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929301"
+}

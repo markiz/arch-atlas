@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-708602085",
+  "osmId": "way/708602085",
+  "names": {
+    "ru": "Старая капитанская канцелярия",
+    "en": "Old Captaincy Building",
+    "uk": "Стара капітанська канцелярія",
+    "sr": "Стара капетанија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Набережная Освобождения, 8",
+    "en": "Oslobođenja Quay 8",
+    "uk": "Набережна Визволення, 8",
+    "sr": "Кеј ослобођења 8"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "government",
+  "coordinates": [
+    20.4150043,
+    44.8465399
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4147826,
+          44.8467171
+        ],
+        [
+          20.4151382,
+          44.8463229
+        ],
+        [
+          20.4152259,
+          44.8463627
+        ],
+        [
+          20.4148704,
+          44.8467569
+        ],
+        [
+          20.4147826,
+          44.8467171
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/708602085).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/708602085).",
+    "sr": "Контура OpenStreetMap (way/708602085).",
+    "uk": "Контур OpenStreetMap (way/708602085)."
+  },
+  "photos": [
+    "c69601bb8254f48535ef625e634813f5aea53cf37c11681f847484e7931865c7"
+  ],
+  "source": "https://www.openstreetmap.org/way/708602085",
+  "otherSource": "https://www.wikidata.org/wiki/Q61130101"
+}

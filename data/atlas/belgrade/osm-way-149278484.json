@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-149278484",
+  "osmId": "way/149278484",
+  "names": {
+    "ru": "Дом Божича в Белграде",
+    "en": "Božić House in Belgrade",
+    "uk": "Будинок Божича в Белграді",
+    "sr": "Божићева кућа у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господаря Еврема, 19",
+    "en": "Gospodar Jevremova 19",
+    "uk": "Вул. Господаря Єврема, 19",
+    "sr": "Господар Јевремова 19"
+  },
+  "minYear": 1836,
+  "maxYear": 1836,
+  "yearLabelId": "year-1836",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4585982,
+    44.8213138
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4584551,
+          44.8213307
+        ],
+        [
+          20.458597,
+          44.8214168
+        ],
+        [
+          20.4587414,
+          44.8212969
+        ],
+        [
+          20.4585995,
+          44.8212109
+        ],
+        [
+          20.4584551,
+          44.8213307
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/149278484).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/149278484).",
+    "sr": "Контура OpenStreetMap (way/149278484).",
+    "uk": "Контур OpenStreetMap (way/149278484)."
+  },
+  "photos": [
+    "88dfedbf1308cd617111ce547eabb0bcf8e8881d2208769657dbca73559d896f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16086473"
+}

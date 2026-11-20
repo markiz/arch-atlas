@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-436419957",
+  "osmId": "way/436419957",
+  "names": {
+    "ru": "Башня Доктора",
+    "en": "Doctor's Tower",
+    "uk": "Вежа Доктора",
+    "sr": "Докторова кула"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 103",
+    "en": "Kneza Miloša 103",
+    "uk": "Вул. Князя Милоша, 103",
+    "sr": "Кнеза Милоша 103"
+  },
+  "minYear": 1824,
+  "maxYear": 1824,
+  "yearLabelId": "year-1824",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "healthcare",
+  "coordinates": [
+    20.4546606,
+    44.7979631
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4545853,
+          44.7980962
+        ],
+        [
+          20.4544903,
+          44.7978861
+        ],
+        [
+          20.4547359,
+          44.7978301
+        ],
+        [
+          20.4548309,
+          44.7980401
+        ],
+        [
+          20.4545853,
+          44.7980962
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/436419957).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/436419957).",
+    "sr": "Контура OpenStreetMap (way/436419957).",
+    "uk": "Контур OpenStreetMap (way/436419957)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q12751004"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "osm-way-402333737",
+  "osmId": "way/402333737",
+  "names": {
+    "ru": "Здание таможни",
+    "en": "Customs House",
+    "uk": "Будівля митниці",
+    "sr": "Зграда царинарнице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караджорджева, 8",
+    "en": "Karađorđeva 8",
+    "uk": "Вул. Караджорджева, 8",
+    "sr": "Карађорђева 8"
+  },
+  "minYear": 1781,
+  "maxYear": 1781,
+  "yearLabelId": "year-1781",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4141739,
+    44.8464639
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4143866,
+          44.8466557
+        ],
+        [
+          20.4141121,
+          44.8465297
+        ],
+        [
+          20.4138375,
+          44.8464036
+        ],
+        [
+          20.4139766,
+          44.8462513
+        ],
+        [
+          20.4140347,
+          44.846278
+        ],
+        [
+          20.4140098,
+          44.8463052
+        ],
+        [
+          20.4144498,
+          44.8465072
+        ],
+        [
+          20.4144842,
+          44.8464696
+        ],
+        [
+          20.4145351,
+          44.846493
+        ],
+        [
+          20.4144516,
+          44.8465845
+        ],
+        [
+          20.4143866,
+          44.8466557
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/402333737).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/402333737).",
+    "sr": "Контура OpenStreetMap (way/402333737).",
+    "uk": "Контур OpenStreetMap (way/402333737)."
+  },
+  "photos": [
+    "693018bf1bae720e5ac316af8d2c05ca936d86a5a2773e52a70af686b0136f9d"
+  ],
+  "source": "https://www.openstreetmap.org/way/402333737",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929291"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-393522394",
+  "osmId": "way/393522394",
+  "names": {
+    "ru": "Мастерская Уроша Предича",
+    "en": "Atelier of Uroš Predić",
+    "uk": "Майстерня Уроша Предича",
+    "sr": "Атеље Уроша Предића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светогорская, 27",
+    "en": "Svetogorska 27",
+    "uk": "Вул. Светогорська, 27",
+    "sr": "Светогорска 27"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3341572"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4685211,
+    44.8139459
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.468351,
+          44.8138585
+        ],
+        [
+          20.4684589,
+          44.8138026
+        ],
+        [
+          20.4685236,
+          44.8138706
+        ],
+        [
+          20.4686917,
+          44.8140345
+        ],
+        [
+          20.4685894,
+          44.8140888
+        ],
+        [
+          20.468517,
+          44.8140199
+        ],
+        [
+          20.4684676,
+          44.8139729
+        ],
+        [
+          20.468351,
+          44.8138585
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393522394).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393522394).",
+    "sr": "Контура OpenStreetMap (way/393522394).",
+    "uk": "Контур OpenStreetMap (way/393522394)."
+  },
+  "photos": [
+    "780446e289d0fd5d5e30ecbf356b96de09f57d91fa8f46a62be53d437bb0e979"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2868840"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-401550537",
+  "osmId": "way/401550537",
+  "names": {
+    "ru": "Музей африканского искусства",
+    "en": "Museum of African Art",
+    "uk": "Музей африканського мистецтва",
+    "sr": "Музеј афричке уметности"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Андре Николича, 14",
+    "en": "Andre Nikolića 14",
+    "uk": "Вул. Андре Николича, 14",
+    "sr": "Андре Николића 14"
+  },
+  "minYear": 1977,
+  "maxYear": 1977,
+  "yearLabelId": "year-1977",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4350874,
+    44.789175
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4349692,
+          44.7893517
+        ],
+        [
+          20.434935,
+          44.7892352
+        ],
+        [
+          20.4348413,
+          44.7891834
+        ],
+        [
+          20.434801,
+          44.7890462
+        ],
+        [
+          20.435145,
+          44.7889953
+        ],
+        [
+          20.4352221,
+          44.7889839
+        ],
+        [
+          20.4353202,
+          44.7893177
+        ],
+        [
+          20.4353795,
+          44.789309
+        ],
+        [
+          20.4353942,
+          44.7893591
+        ],
+        [
+          20.4352519,
+          44.7893802
+        ],
+        [
+          20.435232,
+          44.7893128
+        ],
+        [
+          20.4349692,
+          44.7893517
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401550537).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401550537).",
+    "sr": "Контура OpenStreetMap (way/401550537).",
+    "uk": "Контур OpenStreetMap (way/401550537)."
+  },
+  "photos": [
+    "5134b698e98b0baa4330efc538855e297b2e70b35c03b63e283c7240542651e0"
+  ],
+  "source": "https://www.openstreetmap.org/way/401550537",
+  "otherSource": "https://www.wikidata.org/wiki/Q2291222"
+}

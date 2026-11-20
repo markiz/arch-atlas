@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-399386414",
+  "osmId": "way/399386414",
+  "names": {
+    "ru": "Вилла Стевки Миличевич",
+    "en": "Villa of Stevka Milićević",
+    "uk": "Вілла Стевки Миличевич",
+    "sr": "Вила Стевке Милићевић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ужичка, 54",
+    "en": "Užička 54",
+    "uk": "Вул. Ужичка, 54",
+    "sr": "Ужичка 54"
+  },
+  "minYear": 1930,
+  "maxYear": 1930,
+  "yearLabelId": "year-1930",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3376345"
+  ],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4565709,
+    44.7801249
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4564832,
+          44.7801769
+        ],
+        [
+          20.4565083,
+          44.7800571
+        ],
+        [
+          20.4566587,
+          44.780073
+        ],
+        [
+          20.4566336,
+          44.7801928
+        ],
+        [
+          20.4564832,
+          44.7801769
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399386414).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399386414).",
+    "sr": "Контура OpenStreetMap (way/399386414).",
+    "uk": "Контур OpenStreetMap (way/399386414)."
+  },
+  "photos": [
+    "56bde58b203c0a53b3aa5bdf173684f77c53fefc63b6b665e92f882c3d9b8d47"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3558828"
+}

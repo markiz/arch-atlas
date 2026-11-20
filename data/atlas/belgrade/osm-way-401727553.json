@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-401727553",
+  "osmId": "way/401727553",
+  "names": {
+    "ru": "Вилла Лазича и Митровича",
+    "en": "Villa of Lazić and Mitrović",
+    "uk": "Вілла Лазича і Митровича",
+    "sr": "Вила Лазића и Митровића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Милована Глишича 4-4а",
+    "en": "Milovana Glišića 4-4a",
+    "uk": "Вул. Милована Глишича 4-4а",
+    "sr": "Милована Глишића 4-4а"
+  },
+  "minYear": 1931,
+  "maxYear": 1931,
+  "yearLabelId": "year-1931",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4308307,
+    44.7925517
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4306134,
+          44.7924862
+        ],
+        [
+          20.4306521,
+          44.7924504
+        ],
+        [
+          20.4306726,
+          44.7924616
+        ],
+        [
+          20.4307146,
+          44.7924229
+        ],
+        [
+          20.43084,
+          44.7924913
+        ],
+        [
+          20.4307981,
+          44.79253
+        ],
+        [
+          20.430879,
+          44.7925741
+        ],
+        [
+          20.4309208,
+          44.7925356
+        ],
+        [
+          20.431035,
+          44.7925979
+        ],
+        [
+          20.4309933,
+          44.7926364
+        ],
+        [
+          20.4310182,
+          44.7926499
+        ],
+        [
+          20.4309794,
+          44.7926858
+        ],
+        [
+          20.4308982,
+          44.7926415
+        ],
+        [
+          20.4306962,
+          44.7925314
+        ],
+        [
+          20.4306134,
+          44.7924862
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401727553).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401727553).",
+    "sr": "Контура OpenStreetMap (way/401727553).",
+    "uk": "Контур OpenStreetMap (way/401727553)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85992780"
+}

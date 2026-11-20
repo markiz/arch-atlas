@@ -1,1 +1,200 @@
-{}
+{
+ "modern-architecture": {
+  "source": "Modern architecture",
+  "labels": {
+   "ru": "Архитектура модерна",
+   "en": "Modern architecture",
+   "uk": "Архітектура модерну",
+   "sr": "Архитектура модерне"
+  }
+ },
+ "art-nouveau": {
+  "source": "Art Nouveau",
+  "labels": {
+   "ru": "Модерн",
+   "en": "Art Nouveau",
+   "uk": "Модерн",
+   "sr": "Сецесија"
+  }
+ },
+ "neoclassicism": {
+  "source": "Neoclassicism",
+  "labels": {
+   "ru": "Неоклассицизм",
+   "en": "Neoclassicism",
+   "uk": "Неокласицизм",
+   "sr": "Неокласицизам"
+  }
+ },
+ "academic-art": {
+  "source": "Academic art",
+  "labels": {
+   "ru": "Академизм",
+   "en": "Academic art",
+   "uk": "Академізм",
+   "sr": "Академізам"
+  }
+ },
+ "baroque": {
+  "source": "Baroque",
+  "labels": {
+   "ru": "Барокко",
+   "en": "Baroque",
+   "uk": "Бароко",
+   "sr": "Барок"
+  }
+ },
+ "classical": {
+  "source": "Classical architecture",
+  "labels": {
+   "ru": "Классицизм",
+   "en": "Classical architecture",
+   "uk": "Класицизм",
+   "sr": "Класицизам"
+  }
+ },
+ "eclecticism": {
+  "source": "Eclecticism",
+  "labels": {
+   "ru": "Эклектика",
+   "en": "Eclecticism",
+   "uk": "Еклектика",
+   "sr": "Еклектицизам"
+  }
+ },
+ "serbo-byzantine": {
+  "source": "Serbo-Byzantine style",
+  "labels": {
+   "ru": "Сербско-византийский стиль",
+   "en": "Serbo-Byzantine style",
+   "uk": "Сербсько-візантійський стиль",
+   "sr": "Српско-византијски стил"
+  }
+ },
+ "art-deco": {
+  "source": "Art Deco",
+  "labels": {
+   "ru": "Ар-деко",
+   "en": "Art Deco",
+   "uk": "Ар-деко",
+   "sr": "Арт деко"
+  }
+ },
+ "renaissance-revival": {
+  "source": "Renaissance Revival",
+  "labels": {
+   "ru": "Неоренессанс",
+   "en": "Renaissance Revival",
+   "uk": "Неоренесанс",
+   "sr": "Неоренесанса"
+  }
+ },
+ "baroque-revival": {
+  "source": "Baroque Revival",
+  "labels": {
+   "ru": "Необарокко",
+   "en": "Baroque Revival",
+   "uk": "Необароко",
+   "sr": "Необарок"
+  }
+ },
+ "byzantine-revival": {
+  "source": "Byzantine Revival",
+  "labels": {
+   "ru": "Неовизантийский стиль",
+   "en": "Byzantine Revival",
+   "uk": "Неовізантійський стиль",
+   "sr": "Неовизантијски стил"
+  }
+ },
+ "russian-revival": {
+  "source": "Russian Revival",
+  "labels": {
+   "ru": "Неорусский стиль",
+   "en": "Russian Revival",
+   "uk": "Неоросійський стиль",
+   "sr": "Руски неостил"
+  }
+ },
+ "stripped-classicism": {
+  "source": "Stripped Classicism",
+  "labels": {
+   "ru": "Стрип-классицизм",
+   "en": "Stripped Classicism",
+   "uk": "Стрип-класицизм",
+   "sr": "Стрип класицизам"
+  }
+ },
+ "beaux-arts": {
+  "source": "Beaux-Arts",
+  "labels": {
+   "ru": "Боз-ар",
+   "en": "Beaux-Arts",
+   "uk": "Боз-ар",
+   "sr": "Боз-ар"
+  }
+ },
+ "constructivism": {
+  "source": "Constructivism",
+  "labels": {
+   "ru": "Конструктивизм",
+   "en": "Constructivism",
+   "uk": "Конструктивізм",
+   "sr": "Конструктивизам"
+  }
+ },
+ "bauhaus": {
+  "source": "Bauhaus",
+  "labels": {
+   "ru": "Баухаус",
+   "en": "Bauhaus",
+   "uk": "Баухаус",
+   "sr": "Баухаус"
+  }
+ },
+ "stalinist": {
+  "source": "Stalinist architecture",
+  "labels": {
+   "ru": "Сталинский ампир",
+   "en": "Stalinist architecture",
+   "uk": "Сталінський ампір",
+   "sr": "Стаљинистичка архитектура"
+  }
+ },
+ "modernism": {
+  "source": "Modernism",
+  "labels": {
+   "ru": "Модернизм",
+   "en": "Modernism",
+   "uk": "Модернізм",
+   "sr": "Модернизам"
+  }
+ },
+ "gothic-revival": {
+  "source": "Gothic Revival",
+  "labels": {
+   "ru": "Неоготика",
+   "en": "Gothic Revival",
+   "uk": "Неоготика",
+   "sr": "Неоготика"
+  }
+ },
+ "ottoman": {
+  "source": "Ottoman architecture",
+  "labels": {
+   "ru": "Османская архитектура",
+   "en": "Ottoman architecture",
+   "uk": "Османська архітектура",
+   "sr": "Османска архитектура"
+  }
+ },
+ "undetermined": {
+  "source": "Не определён",
+  "labels": {
+   "ru": "Не определён",
+   "en": "Not established",
+   "uk": "Не встановлено",
+   "sr": "Није утврђен"
+  }
+ }
+}

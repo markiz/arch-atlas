@@ -1,0 +1,87 @@
+{
+  "id": "osm-rel-3973864",
+  "osmId": "relation/3973864",
+  "names": {
+    "ru": "Отель «Москва»",
+    "en": "Hotel Moskva",
+    "uk": "Готель «Москва»",
+    "sr": "Хотел Москва"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 20",
+    "en": "Terazije 20",
+    "uk": "Вул. Теразиє, 20",
+    "sr": "Теразије 20"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "art-nouveau",
+    "russian-revival"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "hospitality",
+  "coordinates": [
+    20.4605148,
+    44.8128632
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4603055,
+          44.8130415
+        ],
+        [
+          20.4603745,
+          44.8126455
+        ],
+        [
+          20.4604469,
+          44.8126606
+        ],
+        [
+          20.4604858,
+          44.8126687
+        ],
+        [
+          20.4607543,
+          44.8127268
+        ],
+        [
+          20.4608126,
+          44.8127394
+        ],
+        [
+          20.4605207,
+          44.8131079
+        ],
+        [
+          20.4604131,
+          44.8130747
+        ],
+        [
+          20.4603055,
+          44.8130415
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/3973864).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/3973864).",
+    "sr": "Контура OpenStreetMap (relation/3973864).",
+    "uk": "Контур OpenStreetMap (relation/3973864)."
+  },
+  "photos": [
+    "dd3a9bc8f2828d03808856717969ce310f252facc05a891d18b06bc05d095e33"
+  ],
+  "source": "https://www.openstreetmap.org/relation/3973864",
+  "otherSource": "https://www.wikidata.org/wiki/Q3145608"
+}

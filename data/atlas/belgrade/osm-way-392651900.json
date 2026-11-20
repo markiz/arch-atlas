@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392651900",
+  "osmId": "way/392651900",
+  "names": {
+    "ru": "Дом Беты и Ристы Вуканович",
+    "en": "House of Beta and Rista Vukanović",
+    "uk": "Будинок Бети і Рісти Вуканович",
+    "sr": "Кућа Бете и Ристе Вукановића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Капитана Миши, 13",
+    "en": "Kapetan Mišina 13",
+    "uk": "Вул. Капітана Міші, 13",
+    "sr": "Капетан Мишина 13"
+  },
+  "minYear": 1901,
+  "maxYear": 1901,
+  "yearLabelId": "year-1901",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3313989"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4608478,
+    44.8211567
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4609856,
+          44.8211859
+        ],
+        [
+          20.460841,
+          44.8210561
+        ],
+        [
+          20.4607114,
+          44.8211278
+        ],
+        [
+          20.4608094,
+          44.8212174
+        ],
+        [
+          20.4608503,
+          44.8212571
+        ],
+        [
+          20.4609856,
+          44.8211859
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392651900).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392651900).",
+    "sr": "Контура OpenStreetMap (way/392651900).",
+    "uk": "Контур OpenStreetMap (way/392651900)."
+  },
+  "photos": [
+    "e9865a99268bbe09425a1c9cac8c5101138e0bfdb50dd94f0981b9c961a3c180"
+  ],
+  "source": "https://www.openstreetmap.org/way/392651900",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279269"
+}

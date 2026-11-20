@@ -1,0 +1,78 @@
+{
+  "id": "osm-way-393048947",
+  "osmId": "way/393048947",
+  "names": {
+    "ru": "Дом Леоны Панайот",
+    "en": "House of Leona Panajot",
+    "uk": "Будинок Леони Панайот",
+    "sr": "Кућа Леоне Панајот"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Французская, 31",
+    "en": "Francuska 31",
+    "uk": "Вул. Французька, 31",
+    "sr": "Француска 31"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q3376329"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4646298,
+    44.8191949
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4646105,
+          44.8190679
+        ],
+        [
+          20.4647807,
+          44.8191881
+        ],
+        [
+          20.4645889,
+          44.8193302
+        ],
+        [
+          20.4645118,
+          44.8192783
+        ],
+        [
+          20.4646046,
+          44.8192103
+        ],
+        [
+          20.4645024,
+          44.8191468
+        ],
+        [
+          20.4646105,
+          44.8190679
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393048947).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393048947).",
+    "sr": "Контура OpenStreetMap (way/393048947).",
+    "uk": "Контур OpenStreetMap (way/393048947)."
+  },
+  "photos": [
+    "268e4a201602c3eb3cf8dd81d3f52d674f2cfd2214d5ac80006a57e5930f70fc"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279440"
+}

@@ -1,0 +1,127 @@
+{
+  "id": "osm-way-169469883",
+  "osmId": "way/169469883",
+  "names": {
+    "ru": "Дворец «Албания»",
+    "en": "Albania Palace",
+    "uk": "Палац «Албанія»",
+    "sr": "Палата „Албанија”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Михаила 2-4, Коларчева, 12",
+    "en": "Knez Mihailova 2-4, Kolarčeva 12",
+    "uk": "Вул. Князя Михайла 2-4, Коларчева, 12",
+    "sr": "Кнез Михаилова 2-4, Коларчева 12"
+  },
+  "minYear": 1939,
+  "maxYear": 1939,
+  "yearLabelId": "year-1939",
+  "styleIds": [
+    "modern-architecture",
+    "art-deco"
+  ],
+  "architectIds": [
+    "architect-q65200248"
+  ],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.46004,
+    44.8151519
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4597784,
+          44.8153242
+        ],
+        [
+          20.4598372,
+          44.8153484
+        ],
+        [
+          20.4598523,
+          44.8153299
+        ],
+        [
+          20.459882,
+          44.8153421
+        ],
+        [
+          20.4600391,
+          44.8151498
+        ],
+        [
+          20.4601176,
+          44.8151562
+        ],
+        [
+          20.4601397,
+          44.8152121
+        ],
+        [
+          20.4602653,
+          44.815187
+        ],
+        [
+          20.4602474,
+          44.8151419
+        ],
+        [
+          20.460231,
+          44.8151005
+        ],
+        [
+          20.4602026,
+          44.8150291
+        ],
+        [
+          20.4601834,
+          44.8150166
+        ],
+        [
+          20.4601552,
+          44.8150099
+        ],
+        [
+          20.4601212,
+          44.8150078
+        ],
+        [
+          20.4600886,
+          44.8150078
+        ],
+        [
+          20.460056,
+          44.8150099
+        ],
+        [
+          20.4600313,
+          44.8150149
+        ],
+        [
+          20.4599905,
+          44.8150648
+        ],
+        [
+          20.4597784,
+          44.8153242
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/169469883).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/169469883).",
+    "sr": "Контура OpenStreetMap (way/169469883).",
+    "uk": "Контур OpenStreetMap (way/169469883)."
+  },
+  "photos": [
+    "e740eaa6ef4b9e3596a6d310e39bfd52b593e6aa712e09d0900d8ac37de8f03c"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q1278189"
+}

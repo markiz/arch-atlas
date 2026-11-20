@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-395354644",
+  "osmId": "way/395354644",
+  "names": {
+    "ru": "Здание типографии Карамата",
+    "en": "Karamata Printing House",
+    "uk": "Будівля друкарні Карамата",
+    "sr": "Зграда штампарије Карамата"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Главна, 7",
+    "en": "Glavna 7",
+    "uk": "Вул. Главна, 7",
+    "sr": "Главна 7"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4123474,
+    44.8429438
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4123057,
+          44.8428202
+        ],
+        [
+          20.412502,
+          44.8429025
+        ],
+        [
+          20.4123559,
+          44.8430731
+        ],
+        [
+          20.4121936,
+          44.843
+        ],
+        [
+          20.4122221,
+          44.8429683
+        ],
+        [
+          20.412276,
+          44.8429922
+        ],
+        [
+          20.4123118,
+          44.84295
+        ],
+        [
+          20.4122265,
+          44.8429142
+        ],
+        [
+          20.4123057,
+          44.8428202
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395354644).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395354644).",
+    "sr": "Контура OpenStreetMap (way/395354644).",
+    "uk": "Контур OpenStreetMap (way/395354644)."
+  },
+  "photos": [
+    "301ef833b538461b7454bd28ad84ff961cb1a66977d1f3c84614877324c974e2"
+  ],
+  "source": "https://www.openstreetmap.org/way/395354644",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929280"
+}

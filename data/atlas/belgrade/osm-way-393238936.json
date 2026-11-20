@@ -1,0 +1,98 @@
+{
+  "id": "osm-way-393238936",
+  "osmId": "way/393238936",
+  "names": {
+    "ru": "Дом братьев Николич",
+    "en": "House of the Nikolić Brothers",
+    "uk": "Будинок братів Николич",
+    "sr": "Кућа браће Николић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Негошева, 11",
+    "en": "Njegoševa 11",
+    "uk": "Вул. Негошева, 11",
+    "sr": "Његошева 11"
+  },
+  "minYear": 1914,
+  "maxYear": 1914,
+  "yearLabelId": "year-1914",
+  "styleIds": [
+    "serbo-byzantine"
+  ],
+  "architectIds": [
+    "architect-q2923834"
+  ],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4658185,
+    44.8057808
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4656393,
+          44.8057609
+        ],
+        [
+          20.4658249,
+          44.8056505
+        ],
+        [
+          20.4659434,
+          44.8057504
+        ],
+        [
+          20.4660191,
+          44.8058143
+        ],
+        [
+          20.4659771,
+          44.8058389
+        ],
+        [
+          20.465928,
+          44.8057976
+        ],
+        [
+          20.4658412,
+          44.8058509
+        ],
+        [
+          20.465892,
+          44.8058942
+        ],
+        [
+          20.4658352,
+          44.8059279
+        ],
+        [
+          20.4658173,
+          44.8059127
+        ],
+        [
+          20.4657883,
+          44.8058874
+        ],
+        [
+          20.4656393,
+          44.8057609
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393238936).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393238936).",
+    "sr": "Контура OpenStreetMap (way/393238936).",
+    "uk": "Контур OpenStreetMap (way/393238936)."
+  },
+  "photos": [
+    "3e0809c9547d5e902f4ccadcbdc2541d07639f81cbc72098b8c72a36a50693ac"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279940"
+}

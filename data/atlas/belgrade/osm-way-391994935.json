@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-391994935",
+  "osmId": "way/391994935",
+  "names": {
+    "ru": "Здание Министерства юстиции",
+    "en": "Building of the Ministry of Justice",
+    "uk": "Будівля Міністерства юстиції",
+    "sr": "Зграда Министарства правде"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 41",
+    "en": "Terazije 41",
+    "uk": "Вул. Теразиє, 41",
+    "sr": "Теразије 41"
+  },
+  "minYear": 1883,
+  "maxYear": 1883,
+  "yearLabelId": "year-1883",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3506336"
+  ],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.4621474,
+    44.8114924
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4619616,
+          44.8115387
+        ],
+        [
+          20.4620435,
+          44.8113432
+        ],
+        [
+          20.4620792,
+          44.8113529
+        ],
+        [
+          20.4622163,
+          44.8113905
+        ],
+        [
+          20.4621782,
+          44.8114927
+        ],
+        [
+          20.4623821,
+          44.8115345
+        ],
+        [
+          20.4623515,
+          44.8116157
+        ],
+        [
+          20.4619616,
+          44.8115387
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/391994935).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/391994935).",
+    "sr": "Контура OpenStreetMap (way/391994935).",
+    "uk": "Контур OpenStreetMap (way/391994935)."
+  },
+  "photos": [
+    "e05c4d8aabdf860c064ab04aab66c17233d3d42afdb490868e58f16dac14f5ce"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16083748"
+}

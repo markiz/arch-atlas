@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-393196853",
+  "osmId": "way/393196853",
+  "names": {
+    "ru": "Дом Общества журналистов Сербии",
+    "en": "House of the Journalists' Association of Serbia",
+    "uk": "Будинок Товариства журналістів Сербії",
+    "sr": "Дом Удружења новинара Србије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ресавская, 28",
+    "en": "Resavska 28",
+    "uk": "Вул. Ресавська, 28",
+    "sr": "Ресавска 28"
+  },
+  "minYear": 1934,
+  "maxYear": 1934,
+  "yearLabelId": "year-1934",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "cultural",
+  "coordinates": [
+    20.4652499,
+    44.8076717
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4652133,
+          44.8075433
+        ],
+        [
+          20.4654022,
+          44.8076967
+        ],
+        [
+          20.4653037,
+          44.8077872
+        ],
+        [
+          20.4650978,
+          44.8076753
+        ],
+        [
+          20.4651126,
+          44.8076572
+        ],
+        [
+          20.4652133,
+          44.8075433
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393196853).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393196853).",
+    "sr": "Контура OpenStreetMap (way/393196853).",
+    "uk": "Контур OpenStreetMap (way/393196853)."
+  },
+  "photos": [
+    "4c32f2e20f28029d1478623c62da639fbe370d7223fd0f9253081fc2cae230bd"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929270"
+}

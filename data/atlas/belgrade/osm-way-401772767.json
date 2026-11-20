@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-401772767",
+  "osmId": "way/401772767",
+  "names": {
+    "ru": "Дом Исидоры Секулич",
+    "en": "House of Isidora Sekulić",
+    "uk": "Будинок Ісидори Секулич",
+    "sr": "Кућа Исидоре Секулић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Завише Црног, 24",
+    "en": "Zaviše Crnog 24",
+    "uk": "Вул. Завише Црног, 24",
+    "sr": "Завише Црног 24"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4393929,
+    44.7859425
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4393098,
+          44.7859894
+        ],
+        [
+          20.4392875,
+          44.7859334
+        ],
+        [
+          20.4394759,
+          44.7858956
+        ],
+        [
+          20.4394983,
+          44.7859515
+        ],
+        [
+          20.4393098,
+          44.7859894
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401772767).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401772767).",
+    "sr": "Контура OpenStreetMap (way/401772767).",
+    "uk": "Контур OpenStreetMap (way/401772767)."
+  },
+  "photos": [
+    "6e8a375bb6fdebc1e2fdf8bfffd39a99f99f9dc59bdf3fceb7140eb1650f46b2"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279202"
+}

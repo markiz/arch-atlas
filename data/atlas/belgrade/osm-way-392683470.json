@@ -1,0 +1,116 @@
+{
+  "id": "osm-way-392683470",
+  "osmId": "way/392683470",
+  "names": {
+    "ru": "Церковь Святых архангелов Михаила и Гавриила",
+    "en": "Church of the Holy Archangels Michael and Gabriel",
+    "uk": "Церква Святих архангелів Михаїла і Гавриїла",
+    "sr": "Црква Светих арханђела Михаила и Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Раковица, Белград",
+    "en": "Rakovica, Belgrade",
+    "uk": "Раковица, Белград",
+    "sr": "Раковица, Београд"
+  },
+  "minYear": 1300,
+  "maxYear": 1399,
+  "yearLabelId": "period-1300-1399",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "rakovica",
+  "type": "religious",
+  "coordinates": [
+    20.4471069,
+    44.73063
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4470009,
+          44.7306671
+        ],
+        [
+          20.4469987,
+          44.7305926
+        ],
+        [
+          20.447057,
+          44.7305942
+        ],
+        [
+          20.4470716,
+          44.7305782
+        ],
+        [
+          20.4471174,
+          44.7305733
+        ],
+        [
+          20.4471589,
+          44.7305806
+        ],
+        [
+          20.4471654,
+          44.7305914
+        ],
+        [
+          20.4471838,
+          44.7306007
+        ],
+        [
+          20.4472155,
+          44.7306103
+        ],
+        [
+          20.4472304,
+          44.730631
+        ],
+        [
+          20.4472158,
+          44.7306523
+        ],
+        [
+          20.447181,
+          44.7306618
+        ],
+        [
+          20.4471591,
+          44.7306818
+        ],
+        [
+          20.4471215,
+          44.7306845
+        ],
+        [
+          20.4470807,
+          44.7306812
+        ],
+        [
+          20.4470601,
+          44.730668
+        ],
+        [
+          20.4470009,
+          44.7306671
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392683470).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392683470).",
+    "sr": "Контура OpenStreetMap (way/392683470).",
+    "uk": "Контур OpenStreetMap (way/392683470)."
+  },
+  "photos": [
+    "718b8409c30d1a0a332b79a8a3588f87a22bb2b333743ec1e432b20b469f8dcd"
+  ],
+  "source": "https://www.openstreetmap.org/way/392683470",
+  "otherSource": "https://www.wikidata.org/wiki/Q1565917"
+}

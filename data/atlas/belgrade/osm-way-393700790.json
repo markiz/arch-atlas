@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-393700790",
+  "osmId": "way/393700790",
+  "names": {
+    "ru": "Государственная химическая лаборатория",
+    "en": "State Chemical Laboratory",
+    "uk": "Державна хімічна лабораторія",
+    "sr": "Државна хемијска лабораторија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Негошева, 12",
+    "en": "Njegoševa 12",
+    "uk": "Вул. Негошева, 12",
+    "sr": "Његошева 12"
+  },
+  "minYear": 1882,
+  "maxYear": 1882,
+  "yearLabelId": "year-1882",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "industrial",
+  "coordinates": [
+    20.4670968,
+    44.8044342
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4668859,
+          44.8043899
+        ],
+        [
+          20.4670991,
+          44.804572
+        ],
+        [
+          20.467279,
+          44.8044659
+        ],
+        [
+          20.4673203,
+          44.8044416
+        ],
+        [
+          20.467227,
+          44.8043619
+        ],
+        [
+          20.4671562,
+          44.8044036
+        ],
+        [
+          20.4670363,
+          44.8043013
+        ],
+        [
+          20.4668859,
+          44.8043899
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393700790).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393700790).",
+    "sr": "Контура OpenStreetMap (way/393700790).",
+    "uk": "Контур OpenStreetMap (way/393700790)."
+  },
+  "photos": [
+    "0f00d1368dda6895a1b828827b0f3c8951a8f2ae44f005e280406da505ec8159"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3214500"
+}

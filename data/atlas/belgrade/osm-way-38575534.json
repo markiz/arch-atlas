@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-38575534",
+  "osmId": "way/38575534",
+  "names": {
+    "ru": "Здание Реалки",
+    "en": "Realka Building",
+    "uk": "Будівля Реалки",
+    "sr": "Зграда Реалке"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Узун Миркова, 14",
+    "en": "Uzun Mirkova 14",
+    "uk": "Вул. Узун Миркова, 14",
+    "sr": "Узун Миркова 14"
+  },
+  "minYear": 1837,
+  "maxYear": 1837,
+  "yearLabelId": "year-1837",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "other",
+  "coordinates": [
+    20.4546724,
+    44.8209333
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4546149,
+          44.8210417
+        ],
+        [
+          20.4546075,
+          44.8210322
+        ],
+        [
+          20.4544985,
+          44.8209581
+        ],
+        [
+          20.4547,
+          44.8208148
+        ],
+        [
+          20.4547334,
+          44.8208367
+        ],
+        [
+          20.4548464,
+          44.820911
+        ],
+        [
+          20.4546879,
+          44.8210238
+        ],
+        [
+          20.4546149,
+          44.8210417
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38575534).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38575534).",
+    "sr": "Контура OpenStreetMap (way/38575534).",
+    "uk": "Контур OpenStreetMap (way/38575534)."
+  },
+  "photos": [
+    "ef0383d20077849a7b6c6eaf3db456e9cb117d6c208d5e39126a9ebbfc5087be"
+  ],
+  "source": "https://www.openstreetmap.org/way/38575534",
+  "otherSource": "https://www.wikidata.org/wiki/Q16085465"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-392653962",
+  "osmId": "way/392653962",
+  "names": {
+    "ru": "Дом скульптора Драгомира Арамбашича",
+    "en": "House of Sculptor Dragomir Arambašić",
+    "uk": "Будинок скульптора Драгомира Арамбашича",
+    "sr": "Кућа вајара Драгомира Арамбашића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господаря Еврема, 20",
+    "en": "Gospodar Jevremova 20",
+    "uk": "Вул. Господаря Єврема, 20",
+    "sr": "Господар Јевремова 20"
+  },
+  "minYear": 1906,
+  "maxYear": 1906,
+  "yearLabelId": "year-1906",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q2923834"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4582011,
+    44.8208529
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4581911,
+          44.8209369
+        ],
+        [
+          20.4580828,
+          44.8208438
+        ],
+        [
+          20.458211,
+          44.8207689
+        ],
+        [
+          20.4583193,
+          44.820862
+        ],
+        [
+          20.4581911,
+          44.8209369
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392653962).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392653962).",
+    "sr": "Контура OpenStreetMap (way/392653962).",
+    "uk": "Контур OpenStreetMap (way/392653962)."
+  },
+  "photos": [
+    "54b3171cb7f5e2f858207e1e591fd45b8a3e512e0f948ad4d0a2a09cfde981fc"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279347"
+}

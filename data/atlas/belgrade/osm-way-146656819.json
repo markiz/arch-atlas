@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-146656819",
+  "osmId": "way/146656819",
+  "names": {
+    "ru": "Дом цветов",
+    "en": "House of Flowers",
+    "uk": "Будинок квітів",
+    "sr": "Кућа цвећа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Михаила Мике Янковича, 6",
+    "en": "Mihaila Mike Jankovića 6",
+    "uk": "Вул. Михаила Мике Янковича, 6",
+    "sr": "Михаила Мике Јанковића 6"
+  },
+  "minYear": 1975,
+  "maxYear": 1975,
+  "yearLabelId": "year-1975",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.451627,
+    44.7867559
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4519292,
+          44.7868232
+        ],
+        [
+          20.4516311,
+          44.7869791
+        ],
+        [
+          20.4513239,
+          44.7866884
+        ],
+        [
+          20.4514972,
+          44.7865994
+        ],
+        [
+          20.4516236,
+          44.7865324
+        ],
+        [
+          20.4519292,
+          44.7868232
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/146656819).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/146656819).",
+    "sr": "Контура OpenStreetMap (way/146656819).",
+    "uk": "Контур OpenStreetMap (way/146656819)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/146656819",
+  "otherSource": "https://www.wikidata.org/wiki/Q734539"
+}

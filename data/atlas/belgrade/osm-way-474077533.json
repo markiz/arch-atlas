@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-474077533",
+  "osmId": "way/474077533",
+  "names": {
+    "ru": "Церковь Святого Николая",
+    "en": "Church of Saint Nicholas",
+    "uk": "Церква Святого Миколая",
+    "sr": "Црква Светог Николе"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Угриновачка, 2",
+    "en": "Ugrinovačka 2",
+    "uk": "Вул. Угриновачка, 2",
+    "sr": "Угриновачка 2"
+  },
+  "minYear": 1803,
+  "maxYear": 1803,
+  "yearLabelId": "year-1803",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "surcin",
+  "type": "religious",
+  "coordinates": [
+    20.2231277,
+    44.8279883
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.2232583,
+          44.8279784
+        ],
+        [
+          20.2232839,
+          44.8279913
+        ],
+        [
+          20.2232998,
+          44.8280105
+        ],
+        [
+          20.2233035,
+          44.8280326
+        ],
+        [
+          20.2232942,
+          44.8280539
+        ],
+        [
+          20.2232735,
+          44.8280706
+        ],
+        [
+          20.223245,
+          44.82808
+        ],
+        [
+          20.2232136,
+          44.8280803
+        ],
+        [
+          20.2231847,
+          44.8280716
+        ],
+        [
+          20.2229394,
+          44.8279756
+        ],
+        [
+          20.2229755,
+          44.8279292
+        ],
+        [
+          20.2230123,
+          44.827882
+        ],
+        [
+          20.2232583,
+          44.8279784
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/474077533).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/474077533).",
+    "sr": "Контура OpenStreetMap (way/474077533).",
+    "uk": "Контур OpenStreetMap (way/474077533)."
+  },
+  "photos": [
+    "e5de7fccadcff02016b42d66958166b1528da12977bb4c9419d2f2de235aca45"
+  ],
+  "source": "https://www.openstreetmap.org/way/474077533",
+  "otherSource": "https://www.wikidata.org/wiki/Q24205558"
+}

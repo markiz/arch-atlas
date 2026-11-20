@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-402392364",
+  "osmId": "way/402392364",
+  "names": {
+    "ru": "Литейный завод Пантелича",
+    "en": "Pantelić Foundry",
+    "uk": "Ливарний завод Пантелича",
+    "sr": "Ливница Пантелић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Лагумская, 15",
+    "en": "Lagumska 15",
+    "uk": "Вул. Лагумська, 15",
+    "sr": "Лагумска 15"
+  },
+  "minYear": 1854,
+  "maxYear": 1854,
+  "yearLabelId": "year-1854",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "industrial",
+  "coordinates": [
+    20.4112694,
+    44.8462423
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.411363,
+          44.8463827
+        ],
+        [
+          20.4113075,
+          44.8463586
+        ],
+        [
+          20.4113384,
+          44.8463076
+        ],
+        [
+          20.4110742,
+          44.8461941
+        ],
+        [
+          20.4110931,
+          44.8461721
+        ],
+        [
+          20.4111288,
+          44.8461296
+        ],
+        [
+          20.4114366,
+          44.8462592
+        ],
+        [
+          20.411363,
+          44.8463827
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/402392364).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/402392364).",
+    "sr": "Контура OpenStreetMap (way/402392364).",
+    "uk": "Контур OpenStreetMap (way/402392364)."
+  },
+  "photos": [
+    "c61fb6347ce7b0c70648c0a3ed4605c32b5c39ae67fe4fca6182055eb7bc1571"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3075750"
+}

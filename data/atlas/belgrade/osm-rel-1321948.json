@@ -1,0 +1,80 @@
+{
+  "id": "osm-rel-1321948",
+  "osmId": "relation/1321948",
+  "names": {
+    "ru": "Здание «Сербская корона»",
+    "en": "\"Serbian Crown\" Building",
+    "uk": "Будівля «Сербська корона»",
+    "sr": "Зграда „Српска круна”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Михаила, 56",
+    "en": "Kneza Mihaila 56",
+    "uk": "Вул. Князя Михаила, 56",
+    "sr": "Кнеза Михаила 56"
+  },
+  "minYear": 1869,
+  "maxYear": 1869,
+  "yearLabelId": "year-1869",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "government",
+  "coordinates": [
+    20.4535868,
+    44.8201182
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4533089,
+          44.8200828
+        ],
+        [
+          20.4535244,
+          44.8199321
+        ],
+        [
+          20.4537012,
+          44.8200461
+        ],
+        [
+          20.4538831,
+          44.8201637
+        ],
+        [
+          20.4537752,
+          44.8202446
+        ],
+        [
+          20.4537246,
+          44.8202102
+        ],
+        [
+          20.4536022,
+          44.8202974
+        ],
+        [
+          20.4533089,
+          44.8200828
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/1321948).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/1321948).",
+    "sr": "Контура OpenStreetMap (relation/1321948).",
+    "uk": "Контур OpenStreetMap (relation/1321948)."
+  },
+  "photos": [
+    "06844e9d14dcd8837b1dce633680a752dcfbf3b10e9a631012142c8e3794343a"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3145676"
+}

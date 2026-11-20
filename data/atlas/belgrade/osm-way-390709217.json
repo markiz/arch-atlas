@@ -1,0 +1,108 @@
+{
+  "id": "osm-way-390709217",
+  "osmId": "way/390709217",
+  "names": {
+    "ru": "Церковь Рождества Пресвятой Богородицы",
+    "en": "Church of the Nativity of the Most Holy Theotokos",
+    "uk": "Церква Різдва Пресвятої Богородиці",
+    "sr": "Црква Рођења Пресвете Богородице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Раячичева, 4",
+    "en": "Rajačićeva 4",
+    "uk": "Вул. Раячичева, 4",
+    "sr": "Рајачићева 4"
+  },
+  "minYear": 1774,
+  "maxYear": 1774,
+  "yearLabelId": "year-1774",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.4095985,
+    44.844784
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4096812,
+          44.844919
+        ],
+        [
+          20.409674,
+          44.8449248
+        ],
+        [
+          20.4093392,
+          44.8447172
+        ],
+        [
+          20.4094047,
+          44.8446642
+        ],
+        [
+          20.4094708,
+          44.8446106
+        ],
+        [
+          20.4098028,
+          44.8448164
+        ],
+        [
+          20.4097941,
+          44.8448234
+        ],
+        [
+          20.4098206,
+          44.8448423
+        ],
+        [
+          20.4098337,
+          44.844867
+        ],
+        [
+          20.4098314,
+          44.8448933
+        ],
+        [
+          20.4098141,
+          44.8449166
+        ],
+        [
+          20.4097847,
+          44.8449328
+        ],
+        [
+          20.4097486,
+          44.8449391
+        ],
+        [
+          20.409712,
+          44.8449342
+        ],
+        [
+          20.4096812,
+          44.844919
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/390709217).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/390709217).",
+    "sr": "Контура OpenStreetMap (way/390709217).",
+    "uk": "Контур OpenStreetMap (way/390709217)."
+  },
+  "photos": [
+    "f93dd8a924dab7dc82ca06143dcbc49e80d608d2610f98942f10540db3e28f25"
+  ],
+  "source": "https://www.openstreetmap.org/way/390709217",
+  "otherSource": "https://www.wikidata.org/wiki/Q1563910"
+}

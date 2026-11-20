@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-393068156",
+  "osmId": "way/393068156",
+  "names": {
+    "ru": "Кинотеатр «Балкан»",
+    "en": "Balkan Cinema",
+    "uk": "Кінотеатр «Балкан»",
+    "sr": "Биоскоп „Балкан”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Братьев Юговичей, 16",
+    "en": "Braće Jugovića 16",
+    "uk": "Вул. Братів Юговичів, 16",
+    "sr": "Браће Југовића 16"
+  },
+  "minYear": 1870,
+  "maxYear": 1870,
+  "yearLabelId": "year-1870",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3313980"
+  ],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4621123,
+    44.816476
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4620464,
+          44.8166109
+        ],
+        [
+          20.4621951,
+          44.8166061
+        ],
+        [
+          20.4621783,
+          44.8163412
+        ],
+        [
+          20.4620816,
+          44.8163443
+        ],
+        [
+          20.4620295,
+          44.816346
+        ],
+        [
+          20.4620464,
+          44.8166109
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393068156).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393068156).",
+    "sr": "Контура OpenStreetMap (way/393068156).",
+    "uk": "Контур OpenStreetMap (way/393068156)."
+  },
+  "photos": [
+    "bcd5639b67f93b0a51548c1153f74e85c30961ba6ce5e66f5f74881ad55518e1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2973107"
+}

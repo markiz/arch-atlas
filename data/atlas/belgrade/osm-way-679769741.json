@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-679769741",
+  "osmId": "way/679769741",
+  "names": {
+    "ru": "Лавки Янича",
+    "en": "Janić Shops in Ostružnica",
+    "uk": "Крамниці Янича",
+    "sr": "Јанићеви дућани"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Пл. Карагеоргиевих устаника, 4",
+    "en": "Karađorđevih ustanika Square 4",
+    "uk": "Пл. Карагеоргієвих устаника, 4",
+    "sr": "Трг Карађорђевих устаника 4"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "residential",
+  "coordinates": [
+    20.3190414,
+    44.7288507
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3189583,
+          44.7289366
+        ],
+        [
+          20.3188997,
+          44.7288237
+        ],
+        [
+          20.3191244,
+          44.7287649
+        ],
+        [
+          20.319169,
+          44.7288508
+        ],
+        [
+          20.319183,
+          44.7288778
+        ],
+        [
+          20.3189583,
+          44.7289366
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/679769741).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/679769741).",
+    "sr": "Контура OpenStreetMap (way/679769741).",
+    "uk": "Контур OpenStreetMap (way/679769741)."
+  },
+  "photos": [
+    "8e3597b7bd14b7eba2e3fdcf113050598d9fae2296e93b979cf7c9973faaa50e"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/cukarica/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3276581"
+}

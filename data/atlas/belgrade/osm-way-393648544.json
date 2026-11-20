@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-393648544",
+  "osmId": "way/393648544",
+  "names": {
+    "ru": "Национальная библиотека Сербии",
+    "en": "National Library of Serbia",
+    "uk": "Національна бібліотека Сербії",
+    "sr": "Народна библиотека Србије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Скерличева, 1",
+    "en": "Skerlićeva 1",
+    "uk": "Вул. Скерличева, 1",
+    "sr": "Скерлићева 1"
+  },
+  "minYear": 1972,
+  "maxYear": 1972,
+  "yearLabelId": "year-1972",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "cultural",
+  "coordinates": [
+    20.4674369,
+    44.7974385
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.466672,
+          44.7972559
+        ],
+        [
+          20.4665716,
+          44.7976578
+        ],
+        [
+          20.4676818,
+          44.7977975
+        ],
+        [
+          20.4677824,
+          44.7973946
+        ],
+        [
+          20.4676326,
+          44.7973758
+        ],
+        [
+          20.4676493,
+          44.7973089
+        ],
+        [
+          20.4687204,
+          44.7974436
+        ],
+        [
+          20.4687559,
+          44.7973015
+        ],
+        [
+          20.4671991,
+          44.7971057
+        ],
+        [
+          20.4671646,
+          44.7972439
+        ],
+        [
+          20.4672605,
+          44.797256
+        ],
+        [
+          20.4672426,
+          44.7973276
+        ],
+        [
+          20.466672,
+          44.7972559
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393648544).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393648544).",
+    "sr": "Контура OpenStreetMap (way/393648544).",
+    "uk": "Контур OpenStreetMap (way/393648544)."
+  },
+  "photos": [
+    "b968ba74bf1bdc0c14213ba9669608ff7e3548ace1a756757ddce2279ce75633"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q945496"
+}

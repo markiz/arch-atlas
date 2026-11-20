@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-392954545",
+  "osmId": "way/392954545",
+  "names": {
+    "ru": "Дом Николы Пашича",
+    "en": "House of Nikola Pašić",
+    "uk": "Будинок Ніколи Пашича",
+    "sr": "Кућа Николе Пашића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Французская, 21",
+    "en": "Francuska 21",
+    "uk": "Вул. Французька, 21",
+    "sr": "Француска 21"
+  },
+  "minYear": 1872,
+  "maxYear": 1872,
+  "yearLabelId": "year-1872",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4634312,
+    44.8184341
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4634012,
+          44.818516
+        ],
+        [
+          20.4635616,
+          44.8184261
+        ],
+        [
+          20.4634594,
+          44.8183563
+        ],
+        [
+          20.463304,
+          44.8184338
+        ],
+        [
+          20.4634012,
+          44.818516
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392954545).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392954545).",
+    "sr": "Контура OpenStreetMap (way/392954545).",
+    "uk": "Контур OpenStreetMap (way/392954545)."
+  },
+  "photos": [
+    "b0a441c1714e35445d2045076834e3d061d41cdd6bcbb75d6982881b6f90e04d"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279515"
+}

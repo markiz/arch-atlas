@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-396325060",
+  "osmId": "way/396325060",
+  "names": {
+    "ru": "Паровое купальное заведение братьев Крсманович",
+    "en": "Steam Bath of the Krsmanović Brothers",
+    "uk": "Парова купальня братів Крсманович",
+    "sr": "Парно купатило браће Крсмановић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Царя Душана, 45",
+    "en": "Cara Dušana 45",
+    "uk": "Вул. Царя Душана, 45",
+    "sr": "Цара Душана 45"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "healthcare",
+  "coordinates": [
+    20.463027,
+    44.8220938
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4627693,
+          44.82211
+        ],
+        [
+          20.4630722,
+          44.8219534
+        ],
+        [
+          20.4632573,
+          44.8221335
+        ],
+        [
+          20.4630933,
+          44.8222184
+        ],
+        [
+          20.4629914,
+          44.8221192
+        ],
+        [
+          20.4628526,
+          44.822191
+        ],
+        [
+          20.4627693,
+          44.82211
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396325060).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396325060).",
+    "sr": "Контура OpenStreetMap (way/396325060).",
+    "uk": "Контур OpenStreetMap (way/396325060)."
+  },
+  "photos": [
+    "746af771cab604a1ff5147b73dadbf21c2d2625cd3c64e6a5f654b70317b4101"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2879919"
+}

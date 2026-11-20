@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-549710281",
+  "osmId": "way/549710281",
+  "names": {
+    "ru": "Церковь Святого Николая",
+    "en": "Church of Saint Nicholas in Ostružnica",
+    "uk": "Церква Святого Миколая",
+    "sr": "Црква Светог Николе"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Любе Ранковича, 1",
+    "en": "Ljube Rankovića 1",
+    "uk": "Вул. Любе Ранковича, 1",
+    "sr": "Љубе Ранковића 1"
+  },
+  "minYear": 1831,
+  "maxYear": 1831,
+  "yearLabelId": "year-1831",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "religious",
+  "coordinates": [
+    20.3202169,
+    44.7288925
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3200914,
+          44.7288984
+        ],
+        [
+          20.3202822,
+          44.7289689
+        ],
+        [
+          20.3203423,
+          44.7288866
+        ],
+        [
+          20.3201515,
+          44.7288161
+        ],
+        [
+          20.3200914,
+          44.7288984
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/549710281).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/549710281).",
+    "sr": "Контура OpenStreetMap (way/549710281).",
+    "uk": "Контур OpenStreetMap (way/549710281)."
+  },
+  "photos": [
+    "e9dd13e4cee00e78924108f8382870f8b69bae4b9a9fc37ac65fb1626bb9121a"
+  ],
+  "source": "https://www.openstreetmap.org/way/549710281",
+  "otherSource": "https://www.wikidata.org/wiki/Q3583341"
+}

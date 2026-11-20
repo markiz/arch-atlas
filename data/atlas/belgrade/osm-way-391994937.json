@@ -1,0 +1,114 @@
+{
+  "id": "osm-way-391994937",
+  "osmId": "way/391994937",
+  "names": {
+    "ru": "Дворец Игуманова",
+    "en": "Igumanov Palace",
+    "uk": "Палац Ігуманова",
+    "sr": "Палата Игуманов"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 31",
+    "en": "Terazije 31",
+    "uk": "Вул. Теразиє, 31",
+    "sr": "Теразије 31"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "art-deco"
+  ],
+  "architectIds": [
+    "architect-q3376345"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4619054,
+    44.8122375
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4616623,
+          44.8122926
+        ],
+        [
+          20.4617233,
+          44.8121293
+        ],
+        [
+          20.4617439,
+          44.8120743
+        ],
+        [
+          20.4619216,
+          44.812111
+        ],
+        [
+          20.4618803,
+          44.8122172
+        ],
+        [
+          20.461912,
+          44.8122116
+        ],
+        [
+          20.4621374,
+          44.81218
+        ],
+        [
+          20.4622752,
+          44.8122888
+        ],
+        [
+          20.462162,
+          44.8123024
+        ],
+        [
+          20.4619803,
+          44.8123242
+        ],
+        [
+          20.4617975,
+          44.812346
+        ],
+        [
+          20.4617528,
+          44.8123473
+        ],
+        [
+          20.4617142,
+          44.8123422
+        ],
+        [
+          20.4616893,
+          44.8123351
+        ],
+        [
+          20.4616673,
+          44.8123162
+        ],
+        [
+          20.4616623,
+          44.8122926
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/391994937).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/391994937).",
+    "sr": "Контура OpenStreetMap (way/391994937).",
+    "uk": "Контур OpenStreetMap (way/391994937)."
+  },
+  "photos": [
+    "f4ba35fbb2358813e357c4b6cd5a679be102ee660af0357796931cbd2771338c"
+  ],
+  "source": "https://www.openstreetmap.org/way/391994937",
+  "otherSource": "https://www.wikidata.org/wiki/Q3149057"
+}

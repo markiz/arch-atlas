@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-394116521",
+  "osmId": "way/394116521",
+  "names": {
+    "ru": "Дом Богдана Гавриловича",
+    "en": "House of Bogdan Gavrilović",
+    "uk": "Будинок Богдана Гавриловича",
+    "sr": "Кућа Богдана Гавриловића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Мишарская, 11",
+    "en": "Mišarska 11",
+    "uk": "Вул. Мишарська, 11",
+    "sr": "Мишарска 11"
+  },
+  "minYear": 1928,
+  "maxYear": 1928,
+  "yearLabelId": "year-1928",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4666155,
+    44.8065469
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4666818,
+          44.8066855
+        ],
+        [
+          20.4667983,
+          44.8066106
+        ],
+        [
+          20.466682,
+          44.8065163
+        ],
+        [
+          20.4665454,
+          44.8064098
+        ],
+        [
+          20.4664315,
+          44.8064791
+        ],
+        [
+          20.4666818,
+          44.8066855
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394116521).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394116521).",
+    "sr": "Контура OpenStreetMap (way/394116521).",
+    "uk": "Контур OpenStreetMap (way/394116521)."
+  },
+  "photos": [
+    "2e2e21a7b41a5d375b26f7899f17cded806aa0ba41d08ea3e31449eddd738236"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279274"
+}

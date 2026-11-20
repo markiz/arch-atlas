@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-393255595",
+  "osmId": "way/393255595",
+  "names": {
+    "ru": "Отель «Мажестик»",
+    "en": "Majestic Hotel",
+    "uk": "Готель «Мажестик»",
+    "sr": "Мажестик"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Обиличев венац, 28",
+    "en": "Obilićev venac 28",
+    "uk": "Вул. Обиличев венац, 28",
+    "sr": "Обилићев венац 28"
+  },
+  "minYear": 1937,
+  "maxYear": 1937,
+  "yearLabelId": "year-1937",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "hospitality",
+  "coordinates": [
+    20.4588642,
+    44.8150903
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.458788,
+          44.8152845
+        ],
+        [
+          20.4586263,
+          44.8151825
+        ],
+        [
+          20.4585901,
+          44.8151578
+        ],
+        [
+          20.4586306,
+          44.8151291
+        ],
+        [
+          20.458658,
+          44.8151086
+        ],
+        [
+          20.4587877,
+          44.8150147
+        ],
+        [
+          20.4589548,
+          44.8148956
+        ],
+        [
+          20.4591369,
+          44.8150241
+        ],
+        [
+          20.4589657,
+          44.8151445
+        ],
+        [
+          20.458788,
+          44.8152845
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393255595).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393255595).",
+    "sr": "Контура OpenStreetMap (way/393255595).",
+    "uk": "Контур OpenStreetMap (way/393255595)."
+  },
+  "photos": [
+    "0c64c52f7ba401a9a494cde19f04bf0a20d44205e7f8b3e86b639752770c1085"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3145582"
+}

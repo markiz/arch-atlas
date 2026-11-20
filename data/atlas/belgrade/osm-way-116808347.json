@@ -1,0 +1,116 @@
+{
+  "id": "osm-way-116808347",
+  "osmId": "way/116808347",
+  "names": {
+    "ru": "Университетская библиотека «Светозар Маркович»",
+    "en": "University Library \"Svetozar Marković\"",
+    "uk": "Університетська бібліотека «Светозар Маркович»",
+    "sr": "Универзитетска библиотека „Светозар Марковић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра, 71",
+    "en": "Kralja Aleksandra Boulevard 71",
+    "uk": "Бульвар Короля Александра, 71",
+    "sr": "Булевар краља Александра 71"
+  },
+  "minYear": 1926,
+  "maxYear": 1926,
+  "yearLabelId": "year-1926",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "cultural",
+  "coordinates": [
+    20.4747427,
+    44.8061517
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4745465,
+          44.8060546
+        ],
+        [
+          20.4746956,
+          44.8059924
+        ],
+        [
+          20.474743,
+          44.8060496
+        ],
+        [
+          20.4750121,
+          44.8059373
+        ],
+        [
+          20.4750693,
+          44.8060063
+        ],
+        [
+          20.47503,
+          44.8060227
+        ],
+        [
+          20.4750519,
+          44.8060492
+        ],
+        [
+          20.4749696,
+          44.8060836
+        ],
+        [
+          20.4750493,
+          44.8061797
+        ],
+        [
+          20.4746304,
+          44.8063545
+        ],
+        [
+          20.4745433,
+          44.8062494
+        ],
+        [
+          20.474455,
+          44.8062862
+        ],
+        [
+          20.4744348,
+          44.8062618
+        ],
+        [
+          20.4743924,
+          44.8062795
+        ],
+        [
+          20.47434,
+          44.8062163
+        ],
+        [
+          20.474593,
+          44.8061107
+        ],
+        [
+          20.4745465,
+          44.8060546
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/116808347).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/116808347).",
+    "sr": "Контура OpenStreetMap (way/116808347).",
+    "uk": "Контур OpenStreetMap (way/116808347)."
+  },
+  "photos": [
+    "8e9bdd780431fd1a6fc2dc99e73b93c6a5aa7062d12d1ababc9b46a3824d43f7"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/palilula/",
+  "otherSource": "https://www.wikidata.org/wiki/Q683389"
+}

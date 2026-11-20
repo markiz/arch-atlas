@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-398052955",
+  "osmId": "way/398052955",
+  "names": {
+    "ru": "Дом Флашара в Белграде",
+    "en": "Flašar House in Belgrade",
+    "uk": "Будинок Флашара в Белграді",
+    "sr": "Кућа Флашар у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Корнелия Станковича, 16",
+    "en": "Kornelija Stankovića 16",
+    "uk": "Вул. Корнелия Станковича, 16",
+    "sr": "Корнелија Станковића 16"
+  },
+  "minYear": 1932,
+  "maxYear": 1932,
+  "yearLabelId": "year-1932",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4706356,
+    44.7928838
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4705558,
+          44.7929355
+        ],
+        [
+          20.4705668,
+          44.7928246
+        ],
+        [
+          20.4707155,
+          44.7928321
+        ],
+        [
+          20.4707045,
+          44.7929429
+        ],
+        [
+          20.4706254,
+          44.792939
+        ],
+        [
+          20.4705558,
+          44.7929355
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/398052955).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/398052955).",
+    "sr": "Контура OpenStreetMap (way/398052955).",
+    "uk": "Контур OpenStreetMap (way/398052955)."
+  },
+  "photos": [
+    "997b2817f881b510e0a24e5dd95f9d8c91ad5bb840b4a3d27fbd2850c3d8de94"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3278717"
+}

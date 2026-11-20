@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-483534953",
+  "osmId": "way/483534953",
+  "names": {
+    "ru": "Старое здание начальной школы «Бошко Палковлевич Пинки», Батайница",
+    "en": "Old Building of the Primary School \"Boško Palkovljević Pinki\", Batajnica",
+    "uk": "Стара будівля початкової школи «Бошко Палковлєвич Пінкі», Батайниця",
+    "sr": "Стара зграда ОШ „Бошко Палковљевић Пинки” Батајница"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Пуковника Миленка Павловича, 5",
+    "en": "Pukovnika Milenka Pavlovića 5",
+    "uk": "Вул. Пуковника Миленка Павловича, 5",
+    "sr": "Пуковника Миленка Павловића 5"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "educational",
+  "coordinates": [
+    20.273726,
+    44.906515
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.2736463,
+          44.9066373
+        ],
+        [
+          20.2735531,
+          44.9065516
+        ],
+        [
+          20.2736336,
+          44.9065077
+        ],
+        [
+          20.2736044,
+          44.9064808
+        ],
+        [
+          20.2737158,
+          44.90642
+        ],
+        [
+          20.273744,
+          44.906446
+        ],
+        [
+          20.2738178,
+          44.9064058
+        ],
+        [
+          20.273912,
+          44.9064925
+        ],
+        [
+          20.2736463,
+          44.9066373
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/483534953).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/483534953).",
+    "sr": "Контура OpenStreetMap (way/483534953).",
+    "uk": "Контур OpenStreetMap (way/483534953)."
+  },
+  "photos": [
+    "68b51de0301642b946b70980bcfdd464154e5615d0a1b1a4913a85d8fa98307f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85999453"
+}

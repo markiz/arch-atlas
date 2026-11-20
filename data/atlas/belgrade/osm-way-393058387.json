@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393058387",
+  "osmId": "way/393058387",
+  "names": {
+    "ru": "Старейший дом в Белграде",
+    "en": "The Oldest House in Belgrade",
+    "uk": "Найстаріший будинок у Белграді",
+    "sr": "Најстарија кућа у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Царя Душана, 10",
+    "en": "Cara Dušana 10",
+    "uk": "Вул. Царя Душана, 10",
+    "sr": "Цара Душана 10"
+  },
+  "minYear": 1727,
+  "maxYear": 1727,
+  "yearLabelId": "year-1727",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4568841,
+    44.8248336
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4568703,
+          44.8249211
+        ],
+        [
+          20.4570096,
+          44.824846
+        ],
+        [
+          20.4568953,
+          44.8247457
+        ],
+        [
+          20.45676,
+          44.8248214
+        ],
+        [
+          20.4568703,
+          44.8249211
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393058387).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393058387).",
+    "sr": "Контура OpenStreetMap (way/393058387).",
+    "uk": "Контур OpenStreetMap (way/393058387)."
+  },
+  "photos": [
+    "3551068d5a0749eb048bb0ef7532f1c6bdf1927465a8b44bafc07c7f22154e1a"
+  ],
+  "source": "https://www.openstreetmap.org/way/393058387",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279185"
+}

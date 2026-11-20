@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-378664200",
+  "osmId": "way/378664200",
+  "names": {
+    "ru": "Дом семьи Маркович",
+    "en": "Family House of the Marković Family",
+    "uk": "Будинок родини Маркович",
+    "sr": "Кућа породице Марковић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господская, 14",
+    "en": "Gospodska 14",
+    "uk": "Вул. Господська, 14",
+    "sr": "Господска 14"
+  },
+  "minYear": 1801,
+  "maxYear": 1801,
+  "yearLabelId": "year-1801",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4127454,
+    44.8449819
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4125721,
+          44.8450112
+        ],
+        [
+          20.4126183,
+          44.8449404
+        ],
+        [
+          20.4127299,
+          44.844977
+        ],
+        [
+          20.4127502,
+          44.8449458
+        ],
+        [
+          20.4125562,
+          44.8448823
+        ],
+        [
+          20.4125792,
+          44.8448471
+        ],
+        [
+          20.4129286,
+          44.8449616
+        ],
+        [
+          20.4128895,
+          44.8450216
+        ],
+        [
+          20.4128392,
+          44.8450987
+        ],
+        [
+          20.4125721,
+          44.8450112
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/378664200).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/378664200).",
+    "sr": "Контура OpenStreetMap (way/378664200).",
+    "uk": "Контур OpenStreetMap (way/378664200)."
+  },
+  "photos": [
+    "2045c00d4db8e923f5fd2abbb713a2a72982fb0026a2aa3c637293f7bb3c1f03"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279775"
+}

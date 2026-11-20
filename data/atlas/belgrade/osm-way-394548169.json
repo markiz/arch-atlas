@@ -1,0 +1,92 @@
+{
+  "id": "osm-way-394548169",
+  "osmId": "way/394548169",
+  "names": {
+    "ru": "Дом сирот",
+    "en": "Orphanage",
+    "uk": "Будинок сиріт",
+    "sr": "Дом сироте деце"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светозара Марковича, 72",
+    "en": "Svetozara Markovića 72",
+    "uk": "Вул. Светозара Марковича, 72",
+    "sr": "Светозара Марковића 72"
+  },
+  "minYear": 1892,
+  "maxYear": 1892,
+  "yearLabelId": "year-1892",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4602858,
+    44.8010485
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4605852,
+          44.8011563
+        ],
+        [
+          20.4604119,
+          44.8010071
+        ],
+        [
+          20.4602087,
+          44.800832
+        ],
+        [
+          20.4600898,
+          44.8009015
+        ],
+        [
+          20.4599662,
+          44.8009737
+        ],
+        [
+          20.4600932,
+          44.8010831
+        ],
+        [
+          20.460184,
+          44.80103
+        ],
+        [
+          20.460361,
+          44.8011825
+        ],
+        [
+          20.4602797,
+          44.80123
+        ],
+        [
+          20.4603522,
+          44.8012924
+        ],
+        [
+          20.4605852,
+          44.8011563
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394548169).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394548169).",
+    "sr": "Контура OpenStreetMap (way/394548169).",
+    "uk": "Контур OpenStreetMap (way/394548169)."
+  },
+  "photos": [
+    "39168697aee49d6da9ac2b3e6e0229c959c3b06f1e173463619ec5cfbc63d0f2"
+  ],
+  "source": "https://www.openstreetmap.org/way/394548169",
+  "otherSource": "https://www.wikidata.org/wiki/Q3356648"
+}

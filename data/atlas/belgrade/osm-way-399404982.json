@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-399404982",
+  "osmId": "way/399404982",
+  "names": {
+    "ru": "Дом торговца Душана Лазича",
+    "en": "House of Merchant Dušan Lazić",
+    "uk": "Будинок торговця Душана Лазича",
+    "sr": "Кућа трговца Душана Лазића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Князя Александра Карагеоргиевича, 47",
+    "en": "Kneza Aleksandra Karađorđevića Boulevard 47",
+    "uk": "Бульвар Князя Александра Карагеоргієвича, 47",
+    "sr": "Булевар кнеза Александра Карађорђевића 47"
+  },
+  "minYear": 1932,
+  "maxYear": 1932,
+  "yearLabelId": "year-1932",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q1273105"
+  ],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4562925,
+    44.7739986
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4562697,
+          44.7740931
+        ],
+        [
+          20.4561623,
+          44.7739731
+        ],
+        [
+          20.4563154,
+          44.7739041
+        ],
+        [
+          20.4564228,
+          44.774024
+        ],
+        [
+          20.4562697,
+          44.7740931
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399404982).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399404982).",
+    "sr": "Контура OpenStreetMap (way/399404982).",
+    "uk": "Контур OpenStreetMap (way/399404982)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279355"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-395187342",
+  "osmId": "way/395187342",
+  "names": {
+    "ru": "Дом Михаила Поповича",
+    "en": "House of Mihailo Popović",
+    "uk": "Будинок Михайла Поповича",
+    "sr": "Кућа Михаила Поповића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Курсулина, 35",
+    "en": "Kursulina 35",
+    "uk": "Вул. Курсулина, 35",
+    "sr": "Курсулина 35"
+  },
+  "minYear": 1905,
+  "maxYear": 1905,
+  "yearLabelId": "year-1905",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q3499618"
+  ],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4746828,
+    44.8012377
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4746567,
+          44.8011491
+        ],
+        [
+          20.4747947,
+          44.801219
+        ],
+        [
+          20.474719,
+          44.8012944
+        ],
+        [
+          20.4747181,
+          44.8012952
+        ],
+        [
+          20.4746826,
+          44.8013306
+        ],
+        [
+          20.4745964,
+          44.8012869
+        ],
+        [
+          20.4746399,
+          44.8012437
+        ],
+        [
+          20.474588,
+          44.8012174
+        ],
+        [
+          20.4746567,
+          44.8011491
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395187342).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395187342).",
+    "sr": "Контура OpenStreetMap (way/395187342).",
+    "uk": "Контур OpenStreetMap (way/395187342)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279471"
+}

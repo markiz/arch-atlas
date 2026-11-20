@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-396473086",
+  "osmId": "way/396473086",
+  "names": {
+    "ru": "Здание автосервиса «Фиат» в Белграде",
+    "en": "Fiat Car Service Building in Belgrade",
+    "uk": "Будівля автосервісу «Фіат» у Белграді",
+    "sr": "Зграда ауто сервиса „Фиат” у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Освобождения, 61",
+    "en": "Oslobođenja Boulevard 61",
+    "uk": "Бульвар Визволення, 61",
+    "sr": "Булевар ослобођења 61"
+  },
+  "minYear": 1942,
+  "maxYear": 1942,
+  "yearLabelId": "year-1942",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3079336"
+  ],
+  "districtId": "vracar",
+  "type": "industrial",
+  "coordinates": [
+    20.4668877,
+    44.7927494
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4667474,
+          44.7928695
+        ],
+        [
+          20.4668594,
+          44.7926413
+        ],
+        [
+          20.4669249,
+          44.7926052
+        ],
+        [
+          20.4669922,
+          44.7925987
+        ],
+        [
+          20.4669981,
+          44.7927762
+        ],
+        [
+          20.4669382,
+          44.7927756
+        ],
+        [
+          20.4668876,
+          44.792882
+        ],
+        [
+          20.4668781,
+          44.7929019
+        ],
+        [
+          20.4667474,
+          44.7928695
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396473086).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396473086).",
+    "sr": "Контура OpenStreetMap (way/396473086).",
+    "uk": "Контур OpenStreetMap (way/396473086)."
+  },
+  "photos": [
+    "48f9c67d9c278282b68e32c828b9c023d982679aff5953f187bad49f9261cbdf"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85994547"
+}

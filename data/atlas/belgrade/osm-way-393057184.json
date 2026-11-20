@@ -1,0 +1,94 @@
+{
+  "id": "osm-way-393057184",
+  "osmId": "way/393057184",
+  "names": {
+    "ru": "Дом Андре Джорджевича",
+    "en": "House of Andra Đorđević",
+    "uk": "Будинок Андре Джорджевича",
+    "sr": "Кућа Андре Ђорђевића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Княгини Любице, 21",
+    "en": "Kneginje Ljubice 21",
+    "uk": "Вул. Княгині Любице, 21",
+    "sr": "Кнегиње Љубице 21"
+  },
+  "minYear": 1888,
+  "maxYear": 1888,
+  "yearLabelId": "year-1888",
+  "styleIds": [
+    "beaux-arts"
+  ],
+  "architectIds": [
+    "architect-q2846199"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4623329,
+    44.8206753
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4623232,
+          44.820657
+        ],
+        [
+          20.4622582,
+          44.8205995
+        ],
+        [
+          20.4621388,
+          44.8206674
+        ],
+        [
+          20.4622766,
+          44.8207893
+        ],
+        [
+          20.4625408,
+          44.820639
+        ],
+        [
+          20.462463,
+          44.8205701
+        ],
+        [
+          20.4623525,
+          44.820633
+        ],
+        [
+          20.4623852,
+          44.8206619
+        ],
+        [
+          20.4623194,
+          44.8206993
+        ],
+        [
+          20.4622918,
+          44.8206749
+        ],
+        [
+          20.4623232,
+          44.820657
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393057184).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393057184).",
+    "sr": "Контура OpenStreetMap (way/393057184).",
+    "uk": "Контур OpenStreetMap (way/393057184)."
+  },
+  "photos": [
+    "e3ba115dab0c244d7c5ab7d10cf4a102fc283406037849f5f3f8e9c6782bcacd"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279158"
+}

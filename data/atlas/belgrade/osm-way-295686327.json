@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-295686327",
+  "osmId": "way/295686327",
+  "names": {
+    "ru": "Здание «Хемпро»",
+    "en": "Hempro Building",
+    "uk": "Будівля «Хемпро»",
+    "sr": "Зграда Хемпро"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 8",
+    "en": "Terazije 8",
+    "uk": "Вул. Теразиє, 8",
+    "sr": "Теразије 8"
+  },
+  "minYear": 1957,
+  "maxYear": 1957,
+  "yearLabelId": "year-1957",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "other",
+  "coordinates": [
+    20.4600366,
+    44.8142614
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4601583,
+          44.8143783
+        ],
+        [
+          20.4602591,
+          44.8141913
+        ],
+        [
+          20.4600125,
+          44.8141707
+        ],
+        [
+          20.4600105,
+          44.8141857
+        ],
+        [
+          20.4598808,
+          44.8141672
+        ],
+        [
+          20.4598044,
+          44.8142963
+        ],
+        [
+          20.459923,
+          44.8143291
+        ],
+        [
+          20.4601583,
+          44.8143783
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/295686327).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/295686327).",
+    "sr": "Контура OpenStreetMap (way/295686327).",
+    "uk": "Контур OpenStreetMap (way/295686327)."
+  },
+  "photos": [
+    "58d1d98d4e905f88f68f1e3f0b0416c0dcf47e289081eb7c51fa9ec1fa99f331"
+  ],
+  "source": "https://www.openstreetmap.org/way/295686327",
+  "otherSource": "https://www.wikidata.org/wiki/Q64049210"
+}

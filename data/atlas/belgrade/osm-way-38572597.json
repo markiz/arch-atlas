@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-38572597",
+  "osmId": "way/38572597",
+  "names": {
+    "ru": "Здание Белградской общины",
+    "en": "Belgrade Municipality Building",
+    "uk": "Будівля Белградської громади",
+    "sr": "Зграда Београдске општине"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Узун Миркова, 1",
+    "en": "Uzun Mirkova 1",
+    "uk": "Вул. Узун Миркова, 1",
+    "sr": "Узун Миркова 1"
+  },
+  "minYear": 1846,
+  "maxYear": 1846,
+  "yearLabelId": "year-1846",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "government",
+  "coordinates": [
+    20.4557516,
+    44.8195164
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4560932,
+          44.8196192
+        ],
+        [
+          20.4557486,
+          44.8193842
+        ],
+        [
+          20.455583,
+          44.8192823
+        ],
+        [
+          20.4554149,
+          44.8194092
+        ],
+        [
+          20.4555653,
+          44.8195158
+        ],
+        [
+          20.4558921,
+          44.81975
+        ],
+        [
+          20.4559868,
+          44.8196884
+        ],
+        [
+          20.4560932,
+          44.8196192
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38572597).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38572597).",
+    "sr": "Контура OpenStreetMap (way/38572597).",
+    "uk": "Контур OpenStreetMap (way/38572597)."
+  },
+  "photos": [
+    "5e34198723b2577b0fb9f39fd56c1d2877264242d7c5b4e726df9b7b09cb3a3a"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929274"
+}

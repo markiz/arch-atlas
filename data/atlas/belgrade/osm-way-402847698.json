@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-402847698",
+  "osmId": "way/402847698",
+  "names": {
+    "ru": "Дом Ичка",
+    "en": "Ičko House",
+    "uk": "Будинок Ічка",
+    "sr": "Ичкова кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Бежанийская, 18",
+    "en": "Bežanijska 18",
+    "uk": "Вул. Бежанийська, 18",
+    "sr": "Бежанијска 18"
+  },
+  "minYear": 1793,
+  "maxYear": 1793,
+  "yearLabelId": "year-1793",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4085306,
+    44.8447869
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4085614,
+          44.8448894
+        ],
+        [
+          20.4084443,
+          44.8448151
+        ],
+        [
+          20.4084232,
+          44.8448296
+        ],
+        [
+          20.4083815,
+          44.8447921
+        ],
+        [
+          20.4084686,
+          44.8447261
+        ],
+        [
+          20.4085266,
+          44.8446851
+        ],
+        [
+          20.4086689,
+          44.8447869
+        ],
+        [
+          20.4085927,
+          44.8448591
+        ],
+        [
+          20.4085614,
+          44.8448894
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/402847698).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/402847698).",
+    "sr": "Контура OpenStreetMap (way/402847698).",
+    "uk": "Контур OpenStreetMap (way/402847698)."
+  },
+  "photos": [
+    "bb90f2855f61e2dd394d1c9502d52b714dceb361177364db1d64e3e1b1a6d9e4"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279203"
+}

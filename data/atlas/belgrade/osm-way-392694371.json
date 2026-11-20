@@ -1,0 +1,98 @@
+{
+  "id": "osm-way-392694371",
+  "osmId": "way/392694371",
+  "names": {
+    "ru": "Дом Врачарской сберегательной кассы",
+    "en": "Vračar Savings Bank House",
+    "uk": "Будинок Врачарської ощадної каси",
+    "sr": "Дом Врачарске штедионице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Милана, 9",
+    "en": "Kralja Milana Street 9",
+    "uk": "Вул. Короля Милана, 9",
+    "sr": "Улица краља Милана 9"
+  },
+  "minYear": 1906,
+  "maxYear": 1906,
+  "yearLabelId": "year-1906",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3015098"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4636189,
+    44.8087556
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4634964,
+          44.8085851
+        ],
+        [
+          20.4635395,
+          44.8085711
+        ],
+        [
+          20.463591,
+          44.8085786
+        ],
+        [
+          20.4637158,
+          44.8086812
+        ],
+        [
+          20.4638672,
+          44.8088056
+        ],
+        [
+          20.4639254,
+          44.8088535
+        ],
+        [
+          20.4638227,
+          44.8089237
+        ],
+        [
+          20.4636523,
+          44.808789
+        ],
+        [
+          20.4635974,
+          44.8088851
+        ],
+        [
+          20.4633658,
+          44.8088254
+        ],
+        [
+          20.4634371,
+          44.8086943
+        ],
+        [
+          20.4634964,
+          44.8085851
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392694371).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392694371).",
+    "sr": "Контура OpenStreetMap (way/392694371).",
+    "uk": "Контур OpenStreetMap (way/392694371)."
+  },
+  "photos": [
+    "bc13a0f540a20ccf5f15f11a932220fb0264a6463857060ecdbf7d23b38df5aa"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3149079"
+}

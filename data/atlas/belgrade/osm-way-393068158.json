@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-393068158",
+  "osmId": "way/393068158",
+  "names": {
+    "ru": "Дом Союза закупочных кооперативов государственных служащих в Белграде",
+    "en": "House of the Association of Purchasing Cooperatives of Civil Servants in Belgrade",
+    "uk": "Будинок Союзу закупівельних кооперативів державних службовців у Белграді",
+    "sr": "Дом Савеза набављачких задруга државних службеника у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светозара Марковича, 72",
+    "en": "Svetozara Markovića 72",
+    "uk": "Вул. Светозара Марковича, 72",
+    "sr": "Светозара Марковића 72"
+  },
+  "minYear": 1930,
+  "maxYear": 1930,
+  "yearLabelId": "year-1930",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4635748,
+    44.8158628
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4633928,
+          44.8160868
+        ],
+        [
+          20.4633753,
+          44.8158257
+        ],
+        [
+          20.4633491,
+          44.8158265
+        ],
+        [
+          20.4633422,
+          44.8157239
+        ],
+        [
+          20.4638061,
+          44.8156831
+        ],
+        [
+          20.4638061,
+          44.8157843
+        ],
+        [
+          20.4637464,
+          44.815785
+        ],
+        [
+          20.4637527,
+          44.8160882
+        ],
+        [
+          20.463637,
+          44.8160896
+        ],
+        [
+          20.4636272,
+          44.8158354
+        ],
+        [
+          20.4634888,
+          44.8158382
+        ],
+        [
+          20.4634957,
+          44.8160861
+        ],
+        [
+          20.4633928,
+          44.8160868
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393068158).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393068158).",
+    "sr": "Контура OpenStreetMap (way/393068158).",
+    "uk": "Контур OpenStreetMap (way/393068158)."
+  },
+  "photos": [
+    "9d4fad6287bd3d2643f7f4769c7e414d232d361a38254a53661be2bb812d244a"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85993684"
+}

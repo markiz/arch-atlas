@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-393057176",
+  "osmId": "way/393057176",
+  "names": {
+    "ru": "Дом книготорговца Марка Марковича",
+    "en": "House of Bookseller Marko Marković",
+    "uk": "Будинок книготорговця Марка Марковича",
+    "sr": "Кућа књижара Марка Марковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господаря Йована, 45а",
+    "en": "Gospodar Jovanova 45а",
+    "uk": "Вул. Господаря Йована, 45а",
+    "sr": "Господар Јованова 45а"
+  },
+  "minYear": 1904,
+  "maxYear": 1904,
+  "yearLabelId": "year-1904",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3176891"
+  ],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.461093,
+    44.820978
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.460955,
+          44.8209825
+        ],
+        [
+          20.4610097,
+          44.8210303
+        ],
+        [
+          20.4610588,
+          44.8210732
+        ],
+        [
+          20.4611893,
+          44.8209986
+        ],
+        [
+          20.4612317,
+          44.8209744
+        ],
+        [
+          20.4611256,
+          44.8208825
+        ],
+        [
+          20.461042,
+          44.8209315
+        ],
+        [
+          20.460955,
+          44.8209825
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393057176).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393057176).",
+    "sr": "Контура OpenStreetMap (way/393057176).",
+    "uk": "Контур OpenStreetMap (way/393057176)."
+  },
+  "photos": [
+    "5fcfa601b25e300bfc96bb8a23068ee13bc9376585b057a0f1c1f95a66fa4a73"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85995585"
+}

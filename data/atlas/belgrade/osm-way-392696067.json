@@ -1,0 +1,111 @@
+{
+  "id": "osm-way-392696067",
+  "osmId": "way/392696067",
+  "names": {
+    "ru": "Дом Фонда Вука",
+    "en": "House of the Vuk Foundation",
+    "uk": "Будинок Фонду Вука",
+    "sr": "Дом Вукове задужбине"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Милана, 2",
+    "en": "Kralja Milana 2",
+    "uk": "Вул. Короля Милана, 2",
+    "sr": "Краља Милана 2"
+  },
+  "minYear": 1879,
+  "maxYear": 1879,
+  "yearLabelId": "year-1879",
+  "styleIds": [
+    "serbo-byzantine"
+  ],
+  "architectIds": [
+    "architect-q2832490",
+    "architect-q2923834"
+  ],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4616694,
+    44.8109801
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4614071,
+          44.8109819
+        ],
+        [
+          20.4614386,
+          44.8109221
+        ],
+        [
+          20.4614838,
+          44.81084
+        ],
+        [
+          20.4615786,
+          44.8108684
+        ],
+        [
+          20.4615368,
+          44.8109424
+        ],
+        [
+          20.4616073,
+          44.810962
+        ],
+        [
+          20.461636,
+          44.81097
+        ],
+        [
+          20.4617067,
+          44.8109637
+        ],
+        [
+          20.4617179,
+          44.8109414
+        ],
+        [
+          20.4617324,
+          44.8109126
+        ],
+        [
+          20.4619208,
+          44.8109613
+        ],
+        [
+          20.461906,
+          44.81099
+        ],
+        [
+          20.4618521,
+          44.8110949
+        ],
+        [
+          20.4616732,
+          44.8110503
+        ],
+        [
+          20.4614071,
+          44.8109819
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392696067).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392696067).",
+    "sr": "Контура OpenStreetMap (way/392696067).",
+    "uk": "Контур OpenStreetMap (way/392696067)."
+  },
+  "photos": [
+    "2b36f9861bcd84e51a96ddee6d02f63ca296a2e51d4bfa42f82dec25cc2bd8c3"
+  ],
+  "source": "https://www.openstreetmap.org/way/392696067",
+  "otherSource": "https://www.wikidata.org/wiki/Q3075594"
+}

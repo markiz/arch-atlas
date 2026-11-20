@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393224005",
+  "osmId": "way/393224005",
+  "names": {
+    "ru": "Павильон Велькович",
+    "en": "Veljković Pavilion",
+    "uk": "Павільйон Велькович",
+    "sr": "Павиљон Вељковић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Бирчанинова, 21",
+    "en": "Birčaninova 21",
+    "uk": "Вул. Бирчанинова, 21",
+    "sr": "Бирчанинова 21"
+  },
+  "minYear": 1883,
+  "maxYear": 1883,
+  "yearLabelId": "year-1883",
+  "styleIds": [
+    "academic-art"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4637219,
+    44.8021757
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4635507,
+          44.8021643
+        ],
+        [
+          20.4637119,
+          44.8022928
+        ],
+        [
+          20.4638909,
+          44.8021894
+        ],
+        [
+          20.4637362,
+          44.8020577
+        ],
+        [
+          20.4635507,
+          44.8021643
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393224005).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393224005).",
+    "sr": "Контура OpenStreetMap (way/393224005).",
+    "uk": "Контур OpenStreetMap (way/393224005)."
+  },
+  "photos": [
+    "4a0e10dedf14626d0748b7eb44811aa2e07cff832816a99d6b95f1741fe9c517"
+  ],
+  "source": "https://www.openstreetmap.org/way/393224005",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279050"
+}

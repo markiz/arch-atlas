@@ -1,0 +1,92 @@
+{
+  "id": "osm-way-393270280",
+  "osmId": "way/393270280",
+  "names": {
+    "ru": "Здание Классной лотереи",
+    "en": "Class Lottery Building",
+    "uk": "Будівля Класної лотереї",
+    "sr": "Зграда Класне лутрије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Васе Чарапича, 20",
+    "en": "Vase Čarapića 20",
+    "uk": "Вул. Васе Чарапича, 20",
+    "sr": "Васе Чарапића 20"
+  },
+  "minYear": 1899,
+  "maxYear": 1899,
+  "yearLabelId": "year-1899",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "other",
+  "coordinates": [
+    20.4590035,
+    44.8181965
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4592719,
+          44.8182965
+        ],
+        [
+          20.4589328,
+          44.8180446
+        ],
+        [
+          20.4588994,
+          44.8180454
+        ],
+        [
+          20.4588661,
+          44.8180463
+        ],
+        [
+          20.4587114,
+          44.8181577
+        ],
+        [
+          20.458803,
+          44.8182214
+        ],
+        [
+          20.4589271,
+          44.8181316
+        ],
+        [
+          20.4590339,
+          44.8182065
+        ],
+        [
+          20.4589784,
+          44.8182445
+        ],
+        [
+          20.4591558,
+          44.8183751
+        ],
+        [
+          20.4592719,
+          44.8182965
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393270280).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393270280).",
+    "sr": "Контура OpenStreetMap (way/393270280).",
+    "uk": "Контур OpenStreetMap (way/393270280)."
+  },
+  "photos": [
+    "5fd5c5d56ae2fe162cfe0bede7557fb3e4fb183042ee25148ad85d6cc157be77"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q60321152"
+}

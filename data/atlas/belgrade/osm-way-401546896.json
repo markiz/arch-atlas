@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-401546896",
+  "osmId": "way/401546896",
+  "names": {
+    "ru": "Дом Драголюба Гошича",
+    "en": "House of Dragoljub Gošić",
+    "uk": "Будинок Драголюба Гошича",
+    "sr": "Кућа Драгољуба Гошића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Воеводы Дойчина, 7",
+    "en": "Vojvode Dojčina 7",
+    "uk": "Вул. Воєводи Дойчина, 7",
+    "sr": "Војводе Дојчина 7"
+  },
+  "minYear": 1928,
+  "maxYear": 1928,
+  "yearLabelId": "year-1928",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4331527,
+    44.7912848
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4331318,
+          44.7913407
+        ],
+        [
+          20.433064,
+          44.7912925
+        ],
+        [
+          20.4331622,
+          44.7912229
+        ],
+        [
+          20.4332268,
+          44.7912689
+        ],
+        [
+          20.4332141,
+          44.7912779
+        ],
+        [
+          20.4332337,
+          44.7912917
+        ],
+        [
+          20.4331774,
+          44.7913316
+        ],
+        [
+          20.4331611,
+          44.79132
+        ],
+        [
+          20.4331318,
+          44.7913407
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401546896).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401546896).",
+    "sr": "Контура OpenStreetMap (way/401546896).",
+    "uk": "Контур OpenStreetMap (way/401546896)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279346"
+}

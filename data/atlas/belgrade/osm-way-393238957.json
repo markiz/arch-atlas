@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-393238957",
+  "osmId": "way/393238957",
+  "names": {
+    "ru": "Дом Общества благоустройства Врачара",
+    "en": "House of the Vračar Beautification Society",
+    "uk": "Будинок Товариства благоустрою Врачара",
+    "sr": "Дом Друштва за улепшавање Врачара"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Негошева, 1",
+    "en": "Njegoševa 1",
+    "uk": "Вул. Негошева, 1",
+    "sr": "Његошева 1"
+  },
+  "minYear": 1902,
+  "maxYear": 1902,
+  "yearLabelId": "year-1902",
+  "styleIds": [
+    "academic-art"
+  ],
+  "architectIds": [
+    "architect-q3313980"
+  ],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4651234,
+    44.8062576
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4648941,
+          44.8062041
+        ],
+        [
+          20.4650852,
+          44.8060904
+        ],
+        [
+          20.4653489,
+          44.8063095
+        ],
+        [
+          20.465169,
+          44.8064269
+        ],
+        [
+          20.4648941,
+          44.8062041
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393238957).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393238957).",
+    "sr": "Контура OpenStreetMap (way/393238957).",
+    "uk": "Контур OpenStreetMap (way/393238957)."
+  },
+  "photos": [
+    "7808e3c16eb662edc28d0ad28758d3c2786c6df6d256fa458f211a10ede313a9"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279732"
+}

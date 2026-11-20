@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393057185",
+  "osmId": "way/393057185",
+  "names": {
+    "ru": "Дом художника Джордже Крстича в Белграде",
+    "en": "House of Painter Đorđe Krstić in Belgrade",
+    "uk": "Будинок художника Джордже Крстича в Белграді",
+    "sr": "Кућа сликара Ђорђа Крстића у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Княгини Любице, 23",
+    "en": "Kneginje Ljubice 23",
+    "uk": "Вул. Княгині Любице, 23",
+    "sr": "Кнегиње Љубице 23"
+  },
+  "minYear": 1890,
+  "maxYear": 1890,
+  "yearLabelId": "year-1890",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4625773,
+    44.8207661
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4626082,
+          44.8206889
+        ],
+        [
+          20.4626898,
+          44.8207568
+        ],
+        [
+          20.4625464,
+          44.8208434
+        ],
+        [
+          20.4624649,
+          44.8207755
+        ],
+        [
+          20.4626082,
+          44.8206889
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393057185).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393057185).",
+    "sr": "Контура OpenStreetMap (way/393057185).",
+    "uk": "Контур OpenStreetMap (way/393057185)."
+  },
+  "photos": [
+    "c17f40e6964b2d1cb2d1e0d4666d9be37f06400bbd274b0c26e6fe1877d3aafb"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279826"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-394549441",
+  "osmId": "way/394549441",
+  "names": {
+    "ru": "Дом архитектора Йована Илкича",
+    "en": "House of Architect Jovan Ilkić",
+    "uk": "Будинок архітектора Йована Ілкіча",
+    "sr": "Кућа архитекте Јована Илкића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Милоша Поцерца, 32",
+    "en": "Miloša Pocerca 32",
+    "uk": "Вул. Милоша Поцерца, 32",
+    "sr": "Милоша Поцерца 32"
+  },
+  "minYear": 1896,
+  "maxYear": 1896,
+  "yearLabelId": "year-1896",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4576852,
+    44.8019053
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4578793,
+          44.8019471
+        ],
+        [
+          20.4577126,
+          44.802048
+        ],
+        [
+          20.457491,
+          44.8018635
+        ],
+        [
+          20.4576577,
+          44.8017626
+        ],
+        [
+          20.4577284,
+          44.8018214
+        ],
+        [
+          20.4578793,
+          44.8019471
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394549441).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394549441).",
+    "sr": "Контура OpenStreetMap (way/394549441).",
+    "uk": "Контур OpenStreetMap (way/394549441)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/394549441",
+  "otherSource": "https://www.wikidata.org/wiki/Q108211941"
+}

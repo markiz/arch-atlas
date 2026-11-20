@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-395354645",
+  "osmId": "way/395354645",
+  "names": {
+    "ru": "Дом Шпирты",
+    "en": "Spirta House",
+    "uk": "Будинок Шпірти",
+    "sr": "Спиртина кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Главна, 9",
+    "en": "Glavna 9",
+    "uk": "Вул. Главна, 9",
+    "sr": "Главна 9"
+  },
+  "minYear": 1855,
+  "maxYear": 1855,
+  "yearLabelId": "year-1855",
+  "styleIds": [
+    "gothic-revival"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4120877,
+    44.8431063
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4118529,
+          44.8429738
+        ],
+        [
+          20.4118641,
+          44.8429646
+        ],
+        [
+          20.4121198,
+          44.8430907
+        ],
+        [
+          20.4121409,
+          44.8430647
+        ],
+        [
+          20.4121936,
+          44.843
+        ],
+        [
+          20.4123559,
+          44.8430731
+        ],
+        [
+          20.4121975,
+          44.8432623
+        ],
+        [
+          20.4120463,
+          44.8431922
+        ],
+        [
+          20.4117943,
+          44.8430626
+        ],
+        [
+          20.4118529,
+          44.8429738
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395354645).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395354645).",
+    "sr": "Контура OpenStreetMap (way/395354645).",
+    "uk": "Контур OpenStreetMap (way/395354645)."
+  },
+  "photos": [
+    "e8e924cfff7c3c2f6027af7b1092223dfba3488ffc5e6610575eff19d7390ce1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3329766"
+}

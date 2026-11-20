@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393725065",
+  "osmId": "way/393725065",
+  "names": {
+    "ru": "Дом братьев Крстич",
+    "en": "House of the Krstić Brothers",
+    "uk": "Будинок братів Крстич",
+    "sr": "Дом браће Крстић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Милутина, 5",
+    "en": "Kralja Milutina 5",
+    "uk": "Вул. Короля Милутина, 5",
+    "sr": "Краља Милутина 5"
+  },
+  "minYear": 1895,
+  "maxYear": 1895,
+  "yearLabelId": "year-1895",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "vracar",
+  "type": "other",
+  "coordinates": [
+    20.4685165,
+    44.8056896
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4685097,
+          44.8057569
+        ],
+        [
+          20.4684217,
+          44.8056873
+        ],
+        [
+          20.4685231,
+          44.8056226
+        ],
+        [
+          20.4686115,
+          44.8056913
+        ],
+        [
+          20.4685097,
+          44.8057569
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393725065).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393725065).",
+    "sr": "Контура OpenStreetMap (way/393725065).",
+    "uk": "Контур OpenStreetMap (way/393725065)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279939"
+}

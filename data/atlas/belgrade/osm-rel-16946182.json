@@ -1,0 +1,130 @@
+{
+  "id": "osm-rel-16946182",
+  "osmId": "relation/16946182",
+  "names": {
+    "ru": "Здание Командования ВВС",
+    "en": "Air Force Command Building",
+    "uk": "Будівля Командування ВПС",
+    "sr": "Зграда Команде ваздухопловства"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Главна, 1",
+    "en": "Glavna 1",
+    "uk": "Вул. Главна, 1",
+    "sr": "Главна 1"
+  },
+  "minYear": 1935,
+  "maxYear": 1935,
+  "yearLabelId": "year-1935",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [
+    "architect-q1273105"
+  ],
+  "districtId": "zemun",
+  "type": "military",
+  "coordinates": [
+    20.4130497,
+    44.8416434
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4125124,
+          44.8417165
+        ],
+        [
+          20.4125748,
+          44.8416403
+        ],
+        [
+          20.4129347,
+          44.8412009
+        ],
+        [
+          20.4129839,
+          44.8412211
+        ],
+        [
+          20.4129642,
+          44.8412453
+        ],
+        [
+          20.4130786,
+          44.8412923
+        ],
+        [
+          20.4130462,
+          44.8413319
+        ],
+        [
+          20.41301,
+          44.8413169
+        ],
+        [
+          20.4129611,
+          44.8413766
+        ],
+        [
+          20.413167,
+          44.8414613
+        ],
+        [
+          20.4134338,
+          44.8415712
+        ],
+        [
+          20.4134786,
+          44.8415165
+        ],
+        [
+          20.4134401,
+          44.8415007
+        ],
+        [
+          20.4134751,
+          44.8414579
+        ],
+        [
+          20.413583,
+          44.8415023
+        ],
+        [
+          20.4136034,
+          44.8414774
+        ],
+        [
+          20.4136497,
+          44.8414964
+        ],
+        [
+          20.4135747,
+          44.8415881
+        ],
+        [
+          20.4132283,
+          44.8420112
+        ],
+        [
+          20.4125124,
+          44.8417165
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/16946182).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/16946182).",
+    "sr": "Контура OpenStreetMap (relation/16946182).",
+    "uk": "Контур OpenStreetMap (relation/16946182)."
+  },
+  "photos": [
+    "3e62afc7f79a2bf2adce6bf1f5d03a80965b0c16b7430c126091002ac18e5c81"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2929295"
+}

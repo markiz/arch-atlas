@@ -1,0 +1,116 @@
+{
+  "id": "osm-way-484400444",
+  "osmId": "way/484400444",
+  "names": {
+    "ru": "Ангар Милутина Миланковича",
+    "en": "Hangar of Milutin Milanković",
+    "uk": "Ангар Мілутина Міланковича",
+    "sr": "Хангар Милутина Миланковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Нови-Београд, Белград",
+    "en": "Novi Beograd, Belgrade",
+    "uk": "Нови-Београд, Белград",
+    "sr": "Нови Београд, Београд"
+  },
+  "minYear": 1929,
+  "maxYear": 1929,
+  "yearLabelId": "year-1929",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q89054"
+  ],
+  "districtId": "novi-beograd",
+  "type": "transport",
+  "coordinates": [
+    20.39685,
+    44.8136476
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3966577,
+          44.814066
+        ],
+        [
+          20.3970214,
+          44.8140482
+        ],
+        [
+          20.3970162,
+          44.8139947
+        ],
+        [
+          20.3971262,
+          44.8139893
+        ],
+        [
+          20.3971044,
+          44.8137655
+        ],
+        [
+          20.3971552,
+          44.813763
+        ],
+        [
+          20.3971359,
+          44.8135651
+        ],
+        [
+          20.3971266,
+          44.8134692
+        ],
+        [
+          20.3970713,
+          44.8134719
+        ],
+        [
+          20.3970494,
+          44.8132461
+        ],
+        [
+          20.3968796,
+          44.8132544
+        ],
+        [
+          20.3965672,
+          44.8132697
+        ],
+        [
+          20.3965893,
+          44.8134973
+        ],
+        [
+          20.3965519,
+          44.8134991
+        ],
+        [
+          20.3965804,
+          44.8137928
+        ],
+        [
+          20.3966309,
+          44.8137903
+        ],
+        [
+          20.3966577,
+          44.814066
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/484400444).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/484400444).",
+    "sr": "Контура OpenStreetMap (way/484400444).",
+    "uk": "Контур OpenStreetMap (way/484400444)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/484400444",
+  "otherSource": "https://www.wikidata.org/wiki/Q61130549"
+}

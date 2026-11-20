@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-295106066",
+  "osmId": "way/295106066",
+  "names": {
+    "ru": "Руины Генерального штаба, разрушенные при бомбардировке НАТО в 1999 году",
+    "en": "Ruins of the General Staff, destroyed in the 1999 NATO bombing",
+    "uk": "Руїни Генерального штабу, зруйновані під час бомбардування НАТО 1999 року",
+    "sr": "Рушевине Генералштаба из НАТО бомбардовања 1999."
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 37",
+    "en": "Kneza Miloša 37",
+    "uk": "Вул. Князя Милоша, 37",
+    "sr": "Кнеза Милоша 37"
+  },
+  "minYear": 1965,
+  "maxYear": 1965,
+  "yearLabelId": "year-1965",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [
+    "architect-q4163556"
+  ],
+  "districtId": "savski-venac",
+  "type": "military",
+  "coordinates": [
+    20.4606396,
+    44.8049387
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4600437,
+          44.8047291
+        ],
+        [
+          20.4602093,
+          44.8046244
+        ],
+        [
+          20.4606676,
+          44.8050036
+        ],
+        [
+          20.4610234,
+          44.8047871
+        ],
+        [
+          20.46107,
+          44.8047587
+        ],
+        [
+          20.461237,
+          44.8048938
+        ],
+        [
+          20.4606709,
+          44.8052396
+        ],
+        [
+          20.4600437,
+          44.8047291
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/295106066).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/295106066).",
+    "sr": "Контура OpenStreetMap (way/295106066).",
+    "uk": "Контур OpenStreetMap (way/295106066)."
+  },
+  "photos": [
+    "4e89e893e5837ba5d8c21bbb60c20f91f15e159cc259dae1074f8f136b90e9f3"
+  ],
+  "source": "https://www.openstreetmap.org/way/295106066",
+  "otherSource": "https://www.wikidata.org/wiki/Q8060369"
+}

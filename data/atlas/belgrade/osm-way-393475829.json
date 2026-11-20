@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-393475829",
+  "osmId": "way/393475829",
+  "names": {
+    "ru": "Здание с художественными мастерскими и галереей салона Музея современного искусства в Белграде",
+    "en": "Building with Painter Studios and the Salon Gallery of the Museum of Contemporary Art in Belgrade",
+    "uk": "Будівля з художніми майстернями і галереєю салону Музею сучасного мистецтва в Белграді",
+    "sr": "Зграда са сликарским атељеима и галеријом Салона Музеја савремене уметности у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Париская, 14",
+    "en": "Pariska 14",
+    "uk": "Вул. Париська, 14",
+    "sr": "Париска 14"
+  },
+  "minYear": 1960,
+  "maxYear": 1960,
+  "yearLabelId": "year-1960",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4528335,
+    44.8194165
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4527094,
+          44.819426
+        ],
+        [
+          20.4528589,
+          44.8195029
+        ],
+        [
+          20.4529556,
+          44.8194064
+        ],
+        [
+          20.452812,
+          44.8193302
+        ],
+        [
+          20.4527094,
+          44.819426
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393475829).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393475829).",
+    "sr": "Контура OpenStreetMap (way/393475829).",
+    "uk": "Контур OpenStreetMap (way/393475829)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85994556"
+}

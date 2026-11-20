@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-410277686",
+  "osmId": "way/410277686",
+  "names": {
+    "ru": "Здание Детского дома королевы Марии",
+    "en": "Queen Maria's Children's Home",
+    "uk": "Будівля Дитячого будинку королеви Марії",
+    "sr": "Зграда Дечјег дома краљице Марије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Царя Душана, 57",
+    "en": "Cara Dušana 57",
+    "uk": "Вул. Царя Душана, 57",
+    "sr": "Цара Душана 57"
+  },
+  "minYear": 1919,
+  "maxYear": 1919,
+  "yearLabelId": "year-1919",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4010561,
+    44.8494778
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4009617,
+          44.8495982
+        ],
+        [
+          20.4008932,
+          44.8495073
+        ],
+        [
+          20.4009885,
+          44.8494712
+        ],
+        [
+          20.4009287,
+          44.8493919
+        ],
+        [
+          20.4010317,
+          44.8493528
+        ],
+        [
+          20.4010915,
+          44.8494321
+        ],
+        [
+          20.4011793,
+          44.8493988
+        ],
+        [
+          20.4012479,
+          44.8494897
+        ],
+        [
+          20.4009617,
+          44.8495982
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/410277686).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/410277686).",
+    "sr": "Контура OpenStreetMap (way/410277686).",
+    "uk": "Контур OpenStreetMap (way/410277686)."
+  },
+  "photos": [
+    "f93c96c745e0d8d7087c7726c3a11585c14e6ed76dc776f251f6a05d33d26984"
+  ],
+  "source": "https://www.openstreetmap.org/way/410277686",
+  "otherSource": "https://www.wikidata.org/wiki/Q3280251"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-238589774",
+  "osmId": "way/238589774",
+  "names": {
+    "ru": "Дом Еврема Груича",
+    "en": "Jevrem Grujić House",
+    "uk": "Будинок Єврема Груїча",
+    "sr": "Дом Јеврема Грујића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светогорская, 17",
+    "en": "Svetogorska 17",
+    "uk": "Вул. Светогорська, 17",
+    "sr": "Светогорска 17"
+  },
+  "minYear": 1896,
+  "maxYear": 1896,
+  "yearLabelId": "year-1896",
+  "styleIds": [
+    "eclecticism"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4677859,
+    44.8142571
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4678192,
+          44.814147
+        ],
+        [
+          20.4676521,
+          44.8142325
+        ],
+        [
+          20.4678037,
+          44.8143816
+        ],
+        [
+          20.4678789,
+          44.8143431
+        ],
+        [
+          20.4678123,
+          44.8142776
+        ],
+        [
+          20.4679042,
+          44.8142306
+        ],
+        [
+          20.4678192,
+          44.814147
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/238589774).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/238589774).",
+    "sr": "Контура OpenStreetMap (way/238589774).",
+    "uk": "Контур OpenStreetMap (way/238589774)."
+  },
+  "photos": [
+    "87e62910fb8f7120822a9e91a62c9ea1e482abc192fd861e1588c09b6425ac08"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16086766"
+}

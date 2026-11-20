@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393481906",
+  "osmId": "way/393481906",
+  "names": {
+    "ru": "Старый дом у Варошских ворот",
+    "en": "Old House at the Varoš Gate",
+    "uk": "Старий будинок біля Варошської брами",
+    "sr": "Стара кућа на Варош капији"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Грачаничка, 10",
+    "en": "Gračanička 10",
+    "uk": "Вул. Грачаничка, 10",
+    "sr": "Грачаничка 10"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4540296,
+    44.8177484
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4540225,
+          44.8178379
+        ],
+        [
+          20.4541556,
+          44.8177456
+        ],
+        [
+          20.454005,
+          44.8176637
+        ],
+        [
+          20.4539187,
+          44.8177407
+        ],
+        [
+          20.4540225,
+          44.8178379
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393481906).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393481906).",
+    "sr": "Контура OpenStreetMap (way/393481906).",
+    "uk": "Контур OpenStreetMap (way/393481906)."
+  },
+  "photos": [
+    "a886a764875cdc72d5d6161e822c3ec35f766cb4431b6488b6537d91a5fd5f30"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279073"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "osm-rel-9589185",
+  "osmId": "relation/9589185",
+  "names": {
+    "ru": "Отель «Бристоль»",
+    "en": "Hotel Bristol",
+    "uk": "Готель «Брістоль»",
+    "sr": "Хотел Бристол"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караджорджева, 50",
+    "en": "Karađorđeva 50",
+    "uk": "Вул. Караджорджева, 50",
+    "sr": "Карађорђева 50"
+  },
+  "minYear": 1912,
+  "maxYear": 1912,
+  "yearLabelId": "year-1912",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3341572"
+  ],
+  "districtId": "savski-venac",
+  "type": "hospitality",
+  "coordinates": [
+    20.4524471,
+    44.8127789
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.451961,
+          44.8129145
+        ],
+        [
+          20.4527325,
+          44.8123906
+        ],
+        [
+          20.4527532,
+          44.8123894
+        ],
+        [
+          20.4527758,
+          44.8123985
+        ],
+        [
+          20.4529089,
+          44.8125538
+        ],
+        [
+          20.4523711,
+          44.8131085
+        ],
+        [
+          20.4522114,
+          44.8131247
+        ],
+        [
+          20.451961,
+          44.8129145
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/9589185).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/9589185).",
+    "sr": "Контура OpenStreetMap (relation/9589185).",
+    "uk": "Контур OpenStreetMap (relation/9589185)."
+  },
+  "photos": [
+    "d0f9750f5b897acc1bad41282bc19a2d094faeddda6627d8cf658e3e30e81f51"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3145438"
+}

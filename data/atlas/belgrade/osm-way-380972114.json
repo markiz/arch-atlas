@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-380972114",
+  "osmId": "way/380972114",
+  "names": {
+    "ru": "Земунская почта",
+    "en": "Zemun Post Office",
+    "uk": "Земунська пошта",
+    "sr": "Земунска пошта"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Главна, 8",
+    "en": "Glavna 8",
+    "uk": "Вул. Главна, 8",
+    "sr": "Главна 8"
+  },
+  "minYear": 1896,
+  "maxYear": 1896,
+  "yearLabelId": "year-1896",
+  "styleIds": [
+    "renaissance-revival"
+  ],
+  "architectIds": [
+    "architect-q3082465"
+  ],
+  "districtId": "zemun",
+  "type": "commercial",
+  "coordinates": [
+    20.4131341,
+    44.8426892
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4130545,
+          44.8429171
+        ],
+        [
+          20.4134043,
+          44.8425105
+        ],
+        [
+          20.4133019,
+          44.8424776
+        ],
+        [
+          20.4132264,
+          44.8424533
+        ],
+        [
+          20.4130233,
+          44.8426819
+        ],
+        [
+          20.4128657,
+          44.8428593
+        ],
+        [
+          20.412977,
+          44.8429059
+        ],
+        [
+          20.4130545,
+          44.8429171
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/380972114).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/380972114).",
+    "sr": "Контура OpenStreetMap (way/380972114).",
+    "uk": "Контур OpenStreetMap (way/380972114)."
+  },
+  "photos": [
+    "0b0949cdc781f93e5e5809e9c86f06446189570b4ce4eb1e209dc6cd3f3be77d"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3399802"
+}

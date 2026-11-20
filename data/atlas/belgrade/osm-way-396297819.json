@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-396297819",
+  "osmId": "way/396297819",
+  "names": {
+    "ru": "Дом Милутина Миланковича",
+    "en": "House of Milutin Milanković",
+    "uk": "Будинок Мілутина Міланковича",
+    "sr": "Кућа Милутина Миланковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Любомира Стояновича, 9",
+    "en": "Ljubomira Stojanovića 9",
+    "uk": "Вул. Любомира Стояновича, 9",
+    "sr": "Љубомира Стојановића 9"
+  },
+  "minYear": 1927,
+  "maxYear": 1927,
+  "yearLabelId": "year-1927",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "residential",
+  "coordinates": [
+    20.4787566,
+    44.8155693
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4786541,
+          44.8156237
+        ],
+        [
+          20.4786546,
+          44.8155308
+        ],
+        [
+          20.4789,
+          44.8155315
+        ],
+        [
+          20.4788997,
+          44.8155784
+        ],
+        [
+          20.4787709,
+          44.815578
+        ],
+        [
+          20.4787707,
+          44.815624
+        ],
+        [
+          20.4786541,
+          44.8156237
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396297819).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396297819).",
+    "sr": "Контура OpenStreetMap (way/396297819).",
+    "uk": "Контур OpenStreetMap (way/396297819)."
+  },
+  "photos": [
+    "605549e5c7bf45015e3d2193fd0c4aeb1f8c8a6d69faeb1cd3c7dc8502859652"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/palilula/",
+  "otherSource": "https://www.wikidata.org/wiki/Q12754376"
+}

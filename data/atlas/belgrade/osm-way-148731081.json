@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-148731081",
+  "osmId": "way/148731081",
+  "names": {
+    "ru": "Дом Манака",
+    "en": "Manak's House",
+    "uk": "Будинок Манака",
+    "sr": "Манакова кућа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Кралевича Марка, 12",
+    "en": "Kraljevića Marka 12",
+    "uk": "Вул. Кралевича Марка, 12",
+    "sr": "Краљевића Марка 12"
+  },
+  "minYear": 1830,
+  "maxYear": 1830,
+  "yearLabelId": "year-1830",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.454393,
+    44.8137567
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4542469,
+          44.8137799
+        ],
+        [
+          20.4543154,
+          44.8137214
+        ],
+        [
+          20.4543741,
+          44.8136713
+        ],
+        [
+          20.4544388,
+          44.8137137
+        ],
+        [
+          20.4544441,
+          44.8137092
+        ],
+        [
+          20.4545131,
+          44.813759
+        ],
+        [
+          20.4545062,
+          44.8137651
+        ],
+        [
+          20.4545209,
+          44.8137753
+        ],
+        [
+          20.4544713,
+          44.8138203
+        ],
+        [
+          20.4544586,
+          44.8138134
+        ],
+        [
+          20.4544491,
+          44.8138207
+        ],
+        [
+          20.4543602,
+          44.8138028
+        ],
+        [
+          20.4542469,
+          44.8137799
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/148731081).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/148731081).",
+    "sr": "Контура OpenStreetMap (way/148731081).",
+    "uk": "Контур OpenStreetMap (way/148731081)."
+  },
+  "photos": [
+    "706f0952759de8a534eb02533490bffceacad8c486851a078c1e03f4e5de7387"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279458"
+}

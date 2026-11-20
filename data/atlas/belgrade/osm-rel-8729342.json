@@ -1,0 +1,113 @@
+{
+  "id": "osm-rel-8729342",
+  "osmId": "relation/8729342",
+  "names": {
+    "ru": "Студенческое общежитие имени короля Александра I",
+    "en": "Student Dormitory \"King Alexander I\"",
+    "uk": "Студентський гуртожиток імені короля Олександра I",
+    "sr": "Студентски дом „Краљ Александар Први”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра, 75",
+    "en": "Kralja Aleksandra Boulevard 75",
+    "uk": "Бульвар Короля Александра, 75",
+    "sr": "Булевар краља Александра 75"
+  },
+  "minYear": 1928,
+  "maxYear": 1928,
+  "yearLabelId": "year-1928",
+  "styleIds": [
+    "eclecticism",
+    "russian-revival"
+  ],
+  "architectIds": [],
+  "districtId": "zvezdara",
+  "type": "educational",
+  "coordinates": [
+    20.479879,
+    44.8039582
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4794737,
+          44.8039498
+        ],
+        [
+          20.4799914,
+          44.8037005
+        ],
+        [
+          20.4800039,
+          44.8037097
+        ],
+        [
+          20.4800673,
+          44.8037561
+        ],
+        [
+          20.4801271,
+          44.8037175
+        ],
+        [
+          20.4802197,
+          44.8037897
+        ],
+        [
+          20.4801599,
+          44.8038283
+        ],
+        [
+          20.4802274,
+          44.8038813
+        ],
+        [
+          20.4799188,
+          44.8042299
+        ],
+        [
+          20.4798651,
+          44.8042042
+        ],
+        [
+          20.479841,
+          44.8042289
+        ],
+        [
+          20.4798007,
+          44.8042004
+        ],
+        [
+          20.4797833,
+          44.8042099
+        ],
+        [
+          20.4795446,
+          44.8040386
+        ],
+        [
+          20.4795634,
+          44.8040139
+        ],
+        [
+          20.4794737,
+          44.8039498
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/8729342).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/8729342).",
+    "sr": "Контура OpenStreetMap (relation/8729342).",
+    "uk": "Контур OpenStreetMap (relation/8729342)."
+  },
+  "photos": [
+    "e0a77cf5f85aba1df5fe634d1c14b9c7d41724e15e4765758adc30276c795573"
+  ],
+  "source": "https://www.openstreetmap.org/relation/8729342",
+  "otherSource": "https://www.wikidata.org/wiki/Q16089454"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-380570474",
+  "osmId": "way/380570474",
+  "names": {
+    "ru": "Магистрат",
+    "en": "Magistrate Building",
+    "uk": "Магістрат",
+    "sr": "Магистрат"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Магистратская площадь, 3",
+    "en": "Magistratski Square 3",
+    "uk": "Магістратська площа, 3",
+    "sr": "Магистратски трг 3"
+  },
+  "minYear": 1836,
+  "maxYear": 1836,
+  "yearLabelId": "year-1836",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "commercial",
+  "coordinates": [
+    20.4132273,
+    44.8443627
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4134675,
+          44.8441628
+        ],
+        [
+          20.4133195,
+          44.8441111
+        ],
+        [
+          20.4132354,
+          44.8442338
+        ],
+        [
+          20.4131944,
+          44.8442943
+        ],
+        [
+          20.4131045,
+          44.8442637
+        ],
+        [
+          20.4130606,
+          44.8443285
+        ],
+        [
+          20.4131531,
+          44.84436
+        ],
+        [
+          20.4130056,
+          44.8445776
+        ],
+        [
+          20.4130376,
+          44.8445893
+        ],
+        [
+          20.4131477,
+          44.8446254
+        ],
+        [
+          20.4133828,
+          44.8442833
+        ],
+        [
+          20.4134675,
+          44.8441628
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/380570474).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/380570474).",
+    "sr": "Контура OpenStreetMap (way/380570474).",
+    "uk": "Контур OpenStreetMap (way/380570474)."
+  },
+  "photos": [
+    "1c5ba31eea8a041f5aca3d1adbec5dedade62e6cbad20baae027fff044cf03e6"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279782"
+}

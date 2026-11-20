@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-317039801",
+  "osmId": "way/317039801",
+  "names": {
+    "ru": "Дом Стевана Качанского",
+    "en": "House of Stevan Kaćanski",
+    "uk": "Будинок Стевана Качанського",
+    "sr": "Кућа Стевана Каћанског"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Симина, 18",
+    "en": "Simina 18",
+    "uk": "Вул. Симина, 18",
+    "sr": "Симина 18"
+  },
+  "minYear": 1880,
+  "maxYear": 1880,
+  "yearLabelId": "year-1880",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4617665,
+    44.8180232
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4617797,
+          44.8181222
+        ],
+        [
+          20.461906,
+          44.8180331
+        ],
+        [
+          20.4617533,
+          44.8179242
+        ],
+        [
+          20.4616479,
+          44.8179986
+        ],
+        [
+          20.461627,
+          44.8180133
+        ],
+        [
+          20.4616533,
+          44.8180321
+        ],
+        [
+          20.4617797,
+          44.8181222
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/317039801).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/317039801).",
+    "sr": "Контура OpenStreetMap (way/317039801).",
+    "uk": "Контур OpenStreetMap (way/317039801)."
+  },
+  "photos": [
+    "c45cb32cf4f107c543c37551da78eaac99aa9318ce75fd05374867b438d91917"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279580"
+}

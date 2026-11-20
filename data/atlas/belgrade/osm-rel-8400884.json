@@ -1,0 +1,102 @@
+{
+  "id": "osm-rel-8400884",
+  "osmId": "relation/8400884",
+  "names": {
+    "ru": "Народный банк Сербии (здание на улице Краля Петра)",
+    "en": "National Bank of Serbia (Kralja Petra Street Building)",
+    "uk": "Народний банк Сербії (будівля на вулиці Короля Петра)",
+    "sr": "Народна банка Србије (Краља Петра)"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра, 12",
+    "en": "Kralja Petra 12",
+    "uk": "Вул. Короля Петра, 12",
+    "sr": "Краља Петра 12"
+  },
+  "minYear": 1890,
+  "maxYear": 1890,
+  "yearLabelId": "year-1890",
+  "styleIds": [
+    "renaissance-revival"
+  ],
+  "architectIds": [
+    "architect-q376805"
+  ],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.4538762,
+    44.8183799
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4534456,
+          44.8183907
+        ],
+        [
+          20.4536425,
+          44.8182395
+        ],
+        [
+          20.4538531,
+          44.8180946
+        ],
+        [
+          20.4542668,
+          44.8182449
+        ],
+        [
+          20.454285,
+          44.8182772
+        ],
+        [
+          20.4542128,
+          44.8183854
+        ],
+        [
+          20.454191,
+          44.818418
+        ],
+        [
+          20.4539427,
+          44.8186496
+        ],
+        [
+          20.4538996,
+          44.8186917
+        ],
+        [
+          20.4538678,
+          44.8186999
+        ],
+        [
+          20.4538379,
+          44.8186942
+        ],
+        [
+          20.4536621,
+          44.8185577
+        ],
+        [
+          20.4534456,
+          44.8183907
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/8400884).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/8400884).",
+    "sr": "Контура OpenStreetMap (relation/8400884).",
+    "uk": "Контур OpenStreetMap (relation/8400884)."
+  },
+  "photos": [
+    "a1d001fbc2708e01c9aca61dff90d2e17b2a141737a50dc4b742ffb8c8bc4b6b"
+  ],
+  "source": "https://www.openstreetmap.org/relation/8400884",
+  "otherSource": "https://www.wikidata.org/wiki/Q16087649"
+}

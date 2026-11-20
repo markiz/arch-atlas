@@ -1,0 +1,104 @@
+{
+  "id": "osm-way-403118336",
+  "osmId": "way/403118336",
+  "names": {
+    "ru": "Дом семьи Карамата",
+    "en": "Family House of the Karamata Family",
+    "uk": "Будинок родини Карамата",
+    "sr": "Кућа породице Карамата"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караматина, 17",
+    "en": "Karamatina 17",
+    "uk": "Вул. Караматина, 17",
+    "sr": "Караматина 17"
+  },
+  "minYear": 1763,
+  "maxYear": 1763,
+  "yearLabelId": "year-1763",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4117603,
+    44.8467563
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4117367,
+          44.8466772
+        ],
+        [
+          20.4119371,
+          44.8467034
+        ],
+        [
+          20.4119054,
+          44.8468254
+        ],
+        [
+          20.4118935,
+          44.8468709
+        ],
+        [
+          20.4118306,
+          44.8468627
+        ],
+        [
+          20.4118387,
+          44.8468316
+        ],
+        [
+          20.4117835,
+          44.8468244
+        ],
+        [
+          20.4117755,
+          44.846855
+        ],
+        [
+          20.4116932,
+          44.8468442
+        ],
+        [
+          20.411705,
+          44.8467988
+        ],
+        [
+          20.41157,
+          44.8467816
+        ],
+        [
+          20.4115775,
+          44.8467525
+        ],
+        [
+          20.4116017,
+          44.8466596
+        ],
+        [
+          20.4117367,
+          44.8466772
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/403118336).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/403118336).",
+    "sr": "Контура OpenStreetMap (way/403118336).",
+    "uk": "Контур OpenStreetMap (way/403118336)."
+  },
+  "photos": [
+    "bb772ac6b54ff5b3e7e451b7292157fa9efa2fd3637319e03e9c390c5d8e06d2"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279774"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-288912955",
+  "osmId": "way/288912955",
+  "names": {
+    "ru": "Резиденция князя Милоша Обреновича",
+    "en": "Konak of Prince Miloš Obrenović",
+    "uk": "Резиденція князя Милоша Обреновича",
+    "sr": "Конак кнеза Милоша Обреновића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Патриярха Павла, 2",
+    "en": "Patrijarha Pavla Boulevard 2",
+    "uk": "Бульвар Патриярха Павла, 2",
+    "sr": "Булевар патријарха Павла 2"
+  },
+  "minYear": 1833,
+  "maxYear": 1833,
+  "yearLabelId": "year-1833",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4424058,
+    44.7805389
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4426079,
+          44.7805998
+        ],
+        [
+          20.4424005,
+          44.7803829
+        ],
+        [
+          20.4423027,
+          44.78043
+        ],
+        [
+          20.4423172,
+          44.7804451
+        ],
+        [
+          20.44221,
+          44.7804968
+        ],
+        [
+          20.4423874,
+          44.7806823
+        ],
+        [
+          20.4424844,
+          44.7806355
+        ],
+        [
+          20.4424999,
+          44.7806518
+        ],
+        [
+          20.4426079,
+          44.7805998
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/288912955).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/288912955).",
+    "sr": "Контура OpenStreetMap (way/288912955).",
+    "uk": "Контур OpenStreetMap (way/288912955)."
+  },
+  "photos": [
+    "18029cf282c06140b46b932f44fbda79611f561f16ddd17b3b45e7cec8018a22"
+  ],
+  "source": "https://www.openstreetmap.org/way/288912955",
+  "otherSource": "https://www.wikidata.org/wiki/Q1259799"
+}

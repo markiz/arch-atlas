@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-400115377",
+  "osmId": "way/400115377",
+  "names": {
+    "ru": "Вилла Райх в Белграде",
+    "en": "Villa Reich in Belgrade",
+    "uk": "Вілла Райх у Белграді",
+    "sr": "Вила Рајх у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Сане Живановича, 2a",
+    "en": "Sanje Živanovića 2a",
+    "uk": "Вул. Сане Живановича, 2a",
+    "sr": "Сање Живановића 2a"
+  },
+  "minYear": 1931,
+  "maxYear": 1931,
+  "yearLabelId": "year-1931",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4368638,
+    44.7931179
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4368097,
+          44.7932209
+        ],
+        [
+          20.4367094,
+          44.7931637
+        ],
+        [
+          20.4368802,
+          44.7930127
+        ],
+        [
+          20.4370188,
+          44.7930917
+        ],
+        [
+          20.4369228,
+          44.7931766
+        ],
+        [
+          20.4368845,
+          44.7931548
+        ],
+        [
+          20.4368097,
+          44.7932209
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/400115377).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/400115377).",
+    "sr": "Контура OpenStreetMap (way/400115377).",
+    "uk": "Контур OpenStreetMap (way/400115377)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85992792"
+}

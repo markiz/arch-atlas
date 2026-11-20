@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-391994949",
+  "osmId": "way/391994949",
+  "names": {
+    "ru": "Дворец «Атина»",
+    "en": "Atina Palace",
+    "uk": "Палац «Атіна»",
+    "sr": "Палата „Атина”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Теразие, 28",
+    "en": "Terazije 28",
+    "uk": "Вул. Теразиє, 28",
+    "sr": "Теразије 28"
+  },
+  "minYear": 1902,
+  "maxYear": 1902,
+  "yearLabelId": "year-1902",
+  "styleIds": [
+    "renaissance-revival"
+  ],
+  "architectIds": [
+    "architect-q3028170"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4610186,
+    44.8121903
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4608918,
+          44.8122871
+        ],
+        [
+          20.4609345,
+          44.8122273
+        ],
+        [
+          20.4608292,
+          44.8121889
+        ],
+        [
+          20.4609033,
+          44.8120878
+        ],
+        [
+          20.4610069,
+          44.812126
+        ],
+        [
+          20.4610549,
+          44.8120589
+        ],
+        [
+          20.4612069,
+          44.8121136
+        ],
+        [
+          20.4610437,
+          44.8123418
+        ],
+        [
+          20.4608918,
+          44.8122871
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/391994949).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/391994949).",
+    "sr": "Контура OpenStreetMap (way/391994949).",
+    "uk": "Контур OpenStreetMap (way/391994949)."
+  },
+  "photos": [
+    "f63cc02dc3632fe9afa5dfc94acc6fc8c3a4d8fc1953ed512341292abf049715"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3360815"
+}

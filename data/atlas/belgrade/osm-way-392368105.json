@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-392368105",
+  "osmId": "way/392368105",
+  "names": {
+    "ru": "Байракли-мечеть",
+    "en": "Bajrakli Mosque",
+    "uk": "Байраклі-мечеть",
+    "sr": "Бајракли џамија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господаря Еврема, 11a",
+    "en": "Gospodar Jevremova 11a",
+    "uk": "Вул. Господаря Єврема, 11a",
+    "sr": "Господар Јевремова 11a"
+  },
+  "minYear": 1668,
+  "maxYear": 1668,
+  "yearLabelId": "year-1668",
+  "styleIds": [
+    "ottoman"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "religious",
+  "coordinates": [
+    20.4573426,
+    44.8220679
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4574,
+          44.8221434
+        ],
+        [
+          20.4574532,
+          44.8220297
+        ],
+        [
+          20.4572898,
+          44.8219911
+        ],
+        [
+          20.4572444,
+          44.8220881
+        ],
+        [
+          20.4572324,
+          44.8220851
+        ],
+        [
+          20.4572225,
+          44.8220856
+        ],
+        [
+          20.457216,
+          44.8220909
+        ],
+        [
+          20.4572168,
+          44.8220979
+        ],
+        [
+          20.4572242,
+          44.8221025
+        ],
+        [
+          20.4574,
+          44.8221434
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392368105).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392368105).",
+    "sr": "Контура OpenStreetMap (way/392368105).",
+    "uk": "Контур OpenStreetMap (way/392368105)."
+  },
+  "photos": [
+    "7f8f4b103a354681656f9be5ed2d026cb10ff4351832cef3f74d44405492d72f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q804208"
+}

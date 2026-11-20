@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-156517275",
+  "osmId": "way/156517275",
+  "names": {
+    "ru": "Хамам князя Милоша",
+    "en": "Hammam of Prince Miloš",
+    "uk": "Хамам князя Милоша",
+    "sr": "Амам кнеза Милоша"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Адмирала Гепрата, 14",
+    "en": "Admirala Geprata 14",
+    "uk": "Вул. Адмирала Гепрата, 14",
+    "sr": "Адмирала Гепрата 14"
+  },
+  "minYear": 1836,
+  "maxYear": 1836,
+  "yearLabelId": "year-1836",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4602235,
+    44.8076455
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4601261,
+          44.8076372
+        ],
+        [
+          20.460196,
+          44.8077123
+        ],
+        [
+          20.4603209,
+          44.8076538
+        ],
+        [
+          20.460251,
+          44.8075787
+        ],
+        [
+          20.4601261,
+          44.8076372
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/156517275).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/156517275).",
+    "sr": "Контура OpenStreetMap (way/156517275).",
+    "uk": "Контур OpenStreetMap (way/156517275)."
+  },
+  "photos": [
+    "aebce6d9e59f6e1493d588cbd71d3b75af5dba692fd17022e34f34d214e922cc"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q2879923"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-395620037",
+  "osmId": "way/395620037",
+  "names": {
+    "ru": "Дом воеводы Петра Бойовича",
+    "en": "House of Vojvoda Petar Bojović",
+    "uk": "Будинок воєводи Петра Бойовича",
+    "sr": "Кућа војводе Петра Бојовића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Трнская, 25",
+    "en": "Trnska 25",
+    "uk": "Вул. Трнська, 25",
+    "sr": "Трнска 25"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "commercial",
+  "coordinates": [
+    20.4773416,
+    44.8031156
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4773391,
+          44.8030301
+        ],
+        [
+          20.477263,
+          44.8030743
+        ],
+        [
+          20.4772239,
+          44.803097
+        ],
+        [
+          20.477344,
+          44.8032011
+        ],
+        [
+          20.4774592,
+          44.8031342
+        ],
+        [
+          20.4773391,
+          44.8030301
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395620037).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395620037).",
+    "sr": "Контура OpenStreetMap (way/395620037).",
+    "uk": "Контур OpenStreetMap (way/395620037)."
+  },
+  "photos": [
+    "e4d1c506ee94546703074c8f911d70537f965cd2e20626e80acf8137e16b6c39"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3280130"
+}

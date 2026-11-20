@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-393700786",
+  "osmId": "way/393700786",
+  "names": {
+    "ru": "Дом Йосифа Шоята",
+    "en": "House of Josif Šojat",
+    "uk": "Будинок Йосифа Шоята",
+    "sr": "Кућа Јосифа Шојата"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Милутина, 33",
+    "en": "Kralja Milutina 33",
+    "uk": "Вул. Короля Милутина, 33",
+    "sr": "Краља Милутина 33"
+  },
+  "minYear": 1927,
+  "maxYear": 1927,
+  "yearLabelId": "year-1927",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4665395,
+    44.8040061
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4663855,
+          44.8040257
+        ],
+        [
+          20.4664975,
+          44.8041171
+        ],
+        [
+          20.4666294,
+          44.8040349
+        ],
+        [
+          20.4666129,
+          44.8040215
+        ],
+        [
+          20.4666907,
+          44.8039733
+        ],
+        [
+          20.466595,
+          44.8038955
+        ],
+        [
+          20.4665329,
+          44.8039324
+        ],
+        [
+          20.4663855,
+          44.8040257
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393700786).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393700786).",
+    "sr": "Контура OpenStreetMap (way/393700786).",
+    "uk": "Контур OpenStreetMap (way/393700786)."
+  },
+  "photos": [
+    "3f54d57931f14ecc5f021b0233ea1562805a5ad900cec110e3de8db1584bec75"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85995558"
+}

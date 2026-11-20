@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-23070171",
+  "osmId": "way/23070171",
+  "names": {
+    "ru": "«Русский царь» (таверна)",
+    "en": "Russian Tsar Tavern",
+    "uk": "«Руський цар» (таверна)",
+    "sr": "Руски цар"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Михаила, 7",
+    "en": "Knez Mihailova 7",
+    "uk": "Вул. Князя Михайла, 7",
+    "sr": "Кнез Михаилова 7"
+  },
+  "minYear": 1926,
+  "maxYear": 1926,
+  "yearLabelId": "year-1926",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4589856,
+    44.8157128
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4592348,
+          44.8157643
+        ],
+        [
+          20.4589446,
+          44.8155894
+        ],
+        [
+          20.4588936,
+          44.8155586
+        ],
+        [
+          20.4587707,
+          44.8156621
+        ],
+        [
+          20.4587502,
+          44.8156779
+        ],
+        [
+          20.4587164,
+          44.8157075
+        ],
+        [
+          20.458802,
+          44.8157597
+        ],
+        [
+          20.4588889,
+          44.8156879
+        ],
+        [
+          20.4589975,
+          44.8157541
+        ],
+        [
+          20.4589621,
+          44.8157833
+        ],
+        [
+          20.4591043,
+          44.8158713
+        ],
+        [
+          20.4591411,
+          44.8158411
+        ],
+        [
+          20.4592348,
+          44.8157643
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/23070171).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/23070171).",
+    "sr": "Контура OpenStreetMap (way/23070171).",
+    "uk": "Контур OpenStreetMap (way/23070171)."
+  },
+  "photos": [
+    "61801d3fd2fb0e86a4a45c4a4634782163f6e0dd817dcea64798e7a2d94d34c3"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3191827"
+}

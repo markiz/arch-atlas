@@ -1,0 +1,68 @@
+{
+  "id": "osm-rel-9387915",
+  "osmId": "relation/9387915",
+  "names": {
+    "ru": "Старое здание Сельскохозяйственного факультета в Земуне",
+    "en": "Old Building of the Faculty of Agriculture in Zemun",
+    "uk": "Стара будівля Сільськогосподарського факультету в Земуні",
+    "sr": "Стара зграда Пољопривредног факултета у Земуну"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Неманина, 6",
+    "en": "Nemanjina 6",
+    "uk": "Вул. Неманина, 6",
+    "sr": "Немањина 6"
+  },
+  "minYear": 1932,
+  "maxYear": 1932,
+  "yearLabelId": "year-1932",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "educational",
+  "coordinates": [
+    20.4119993,
+    44.8399765
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4113337,
+          44.8400801
+        ],
+        [
+          20.4118376,
+          44.8395072
+        ],
+        [
+          20.4126649,
+          44.839873
+        ],
+        [
+          20.412161,
+          44.8404459
+        ],
+        [
+          20.4113337,
+          44.8400801
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/9387915).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/9387915).",
+    "sr": "Контура OpenStreetMap (relation/9387915).",
+    "uk": "Контур OpenStreetMap (relation/9387915)."
+  },
+  "photos": [
+    "d61c6821ba34f2852d7f4ed0498457c984e55fe818850afe9c91b6af15284ed8"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85999458"
+}

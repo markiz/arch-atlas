@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-96683044",
+  "osmId": "way/96683044",
+  "names": {
+    "ru": "Дом Здравко Джурича",
+    "en": "House of Zdravko Đurić",
+    "uk": "Будинок Здравка Джурича",
+    "sr": "Кућа Здравка Ђурића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Призренская, 7",
+    "en": "Prizrenska 7",
+    "uk": "Вул. Призренська, 7",
+    "sr": "Призренска 7"
+  },
+  "minYear": 1934,
+  "maxYear": 1934,
+  "yearLabelId": "year-1934",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [
+    "architect-q2923820"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4588391,
+    44.8136789
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4587172,
+          44.8136396
+        ],
+        [
+          20.4587723,
+          44.8137046
+        ],
+        [
+          20.4588532,
+          44.8138
+        ],
+        [
+          20.4589599,
+          44.8137559
+        ],
+        [
+          20.459002,
+          44.8137385
+        ],
+        [
+          20.4589668,
+          44.813703
+        ],
+        [
+          20.458916,
+          44.8137273
+        ],
+        [
+          20.4588585,
+          44.8136666
+        ],
+        [
+          20.4589083,
+          44.8136443
+        ],
+        [
+          20.4588952,
+          44.8136312
+        ],
+        [
+          20.4588221,
+          44.8135527
+        ],
+        [
+          20.4587227,
+          44.8136005
+        ],
+        [
+          20.4587437,
+          44.8136279
+        ],
+        [
+          20.4587172,
+          44.8136396
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/96683044).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/96683044).",
+    "sr": "Контура OpenStreetMap (way/96683044).",
+    "uk": "Контур OpenStreetMap (way/96683044)."
+  },
+  "photos": [
+    "7e43f036b9fc35c92278f2934cdecd8b9d0133c85bcc35552364efff07e83363"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279624"
+}

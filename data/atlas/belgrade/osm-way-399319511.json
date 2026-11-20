@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-399319511",
+  "osmId": "way/399319511",
+  "names": {
+    "ru": "Нелегальная партийная типография",
+    "en": "Illegal Partisan Printing House",
+    "uk": "Нелегальна партійна друкарня",
+    "sr": "Илегална партијска штампарија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Райка Митича, 12",
+    "en": "Rajka Mitića 12",
+    "uk": "Вул. Райка Митича, 12",
+    "sr": "Рајка Митића 12"
+  },
+  "minYear": 1941,
+  "maxYear": 1941,
+  "yearLabelId": "year-1941",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "industrial",
+  "coordinates": [
+    20.4639656,
+    44.7810316
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4638368,
+          44.7810422
+        ],
+        [
+          20.4639154,
+          44.7809468
+        ],
+        [
+          20.4640943,
+          44.781021
+        ],
+        [
+          20.4640157,
+          44.7811165
+        ],
+        [
+          20.4638368,
+          44.7810422
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399319511).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399319511).",
+    "sr": "Контура OpenStreetMap (way/399319511).",
+    "uk": "Контур OpenStreetMap (way/399319511)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q12752253"
+}

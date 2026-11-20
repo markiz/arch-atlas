@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-393469915",
+  "osmId": "way/393469915",
+  "names": {
+    "ru": "Дом Милорада Павловича",
+    "en": "House of Milorad Pavlović",
+    "uk": "Будинок Милорада Павловича",
+    "sr": "Кућа Милорада Павловића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра 11-13",
+    "en": "Kralja Petra 11-13",
+    "uk": "Вул. Короля Петра 11-13",
+    "sr": "Краља Петра 11-13"
+  },
+  "minYear": 1884,
+  "maxYear": 1884,
+  "yearLabelId": "year-1884",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.4534045,
+    44.8187912
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4536195,
+          44.8187998
+        ],
+        [
+          20.4535256,
+          44.8187283
+        ],
+        [
+          20.4534599,
+          44.8186781
+        ],
+        [
+          20.4534244,
+          44.818651
+        ],
+        [
+          20.4533173,
+          44.8187247
+        ],
+        [
+          20.4532911,
+          44.8187402
+        ],
+        [
+          20.4533466,
+          44.8187783
+        ],
+        [
+          20.4533203,
+          44.8187977
+        ],
+        [
+          20.4532731,
+          44.8187663
+        ],
+        [
+          20.4531826,
+          44.8188139
+        ],
+        [
+          20.4533266,
+          44.8189177
+        ],
+        [
+          20.4534489,
+          44.8188381
+        ],
+        [
+          20.4534975,
+          44.8188757
+        ],
+        [
+          20.4536195,
+          44.8187998
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393469915).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393469915).",
+    "sr": "Контура OpenStreetMap (way/393469915).",
+    "uk": "Контур OpenStreetMap (way/393469915)."
+  },
+  "photos": [
+    "4f37ee0d9aa55a13b870b921bba7336e287c9952de45d47f59fd62a037147b0f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279486"
+}

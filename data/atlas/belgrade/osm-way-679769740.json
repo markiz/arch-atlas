@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-679769740",
+  "osmId": "way/679769740",
+  "names": {
+    "ru": "Кафана Янича",
+    "en": "Janić Kafana in Ostružnica",
+    "uk": "Кафана Янича",
+    "sr": "Јанићева кафана"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караджорджева, 19",
+    "en": "Karađorđeva 19",
+    "uk": "Вул. Караджорджева, 19",
+    "sr": "Карађорђева 19"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "residential",
+  "coordinates": [
+    20.3180875,
+    44.7294311
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3180616,
+          44.7295484
+        ],
+        [
+          20.3182464,
+          44.7293942
+        ],
+        [
+          20.3181134,
+          44.7293137
+        ],
+        [
+          20.3179286,
+          44.7294679
+        ],
+        [
+          20.3180616,
+          44.7295484
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/679769740).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/679769740).",
+    "sr": "Контура OpenStreetMap (way/679769740).",
+    "uk": "Контур OpenStreetMap (way/679769740)."
+  },
+  "photos": [
+    "b297fd5a9af34e066765b40e72eee617f33edcf13f7ef764f528977a5b250798"
+  ],
+  "source": "https://www.openstreetmap.org/way/679769740",
+  "otherSource": "https://www.wikidata.org/wiki/Q3191824"
+}

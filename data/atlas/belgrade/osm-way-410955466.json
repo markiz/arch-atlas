@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-410955466",
+  "osmId": "way/410955466",
+  "names": {
+    "ru": "Дом Драгомира Глишича",
+    "en": "House of Dragomir Glišić",
+    "uk": "Будинок Драгомира Глішича",
+    "sr": "Кућа Драгомира Глишића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Биничког, 4",
+    "en": "Biničkog 4",
+    "uk": "Вул. Биничког, 4",
+    "sr": "Биничког 4"
+  },
+  "minYear": 1800,
+  "maxYear": 1899,
+  "yearLabelId": "period-1800-1899",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.460859,
+    44.7926253
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4608536,
+          44.7926912
+        ],
+        [
+          20.4607668,
+          44.7926246
+        ],
+        [
+          20.4608116,
+          44.7925952
+        ],
+        [
+          20.4608006,
+          44.7925867
+        ],
+        [
+          20.4608493,
+          44.7925548
+        ],
+        [
+          20.4609564,
+          44.7926369
+        ],
+        [
+          20.460905,
+          44.7926706
+        ],
+        [
+          20.4608957,
+          44.7926635
+        ],
+        [
+          20.4608536,
+          44.7926912
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/410955466).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/410955466).",
+    "sr": "Контура OpenStreetMap (way/410955466).",
+    "uk": "Контур OpenStreetMap (way/410955466)."
+  },
+  "photos": [
+    "1e2a23a413d21d00a1ae703e2bf411c1778f38e22873d09808d13acfd3a91001"
+  ],
+  "source": "https://www.openstreetmap.org/way/410955466",
+  "otherSource": "https://www.wikidata.org/wiki/Q3075430"
+}

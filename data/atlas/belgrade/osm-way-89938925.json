@@ -1,0 +1,78 @@
+{
+  "id": "osm-way-89938925",
+  "osmId": "way/89938925",
+  "names": {
+    "ru": "Дом Святого Саввы",
+    "en": "House of Saint Sava",
+    "uk": "Будинок Святого Сави",
+    "sr": "Дом Светог Саве"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Царя Душана, 13",
+    "en": "Cara Dušana 13",
+    "uk": "Вул. Царя Душана, 13",
+    "sr": "Цара Душана 13"
+  },
+  "minYear": 1890,
+  "maxYear": 1890,
+  "yearLabelId": "year-1890",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4581856,
+    44.8246767
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4580741,
+          44.8248263
+        ],
+        [
+          20.4579502,
+          44.824713
+        ],
+        [
+          20.4580944,
+          44.8246353
+        ],
+        [
+          20.4581563,
+          44.824602
+        ],
+        [
+          20.4582966,
+          44.8245264
+        ],
+        [
+          20.4584203,
+          44.8246419
+        ],
+        [
+          20.4580741,
+          44.8248263
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/89938925).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/89938925).",
+    "sr": "Контура OpenStreetMap (way/89938925).",
+    "uk": "Контур OpenStreetMap (way/89938925)."
+  },
+  "photos": [
+    "d2474f519ff4a16d29f4701f1f2f54fc9f401244722edd05c5fb08fde55056ce"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279555"
+}

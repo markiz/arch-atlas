@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-404647860",
+  "osmId": "way/404647860",
+  "names": {
+    "ru": "Здание монетного двора",
+    "en": "Mint Building",
+    "uk": "Будівля монетного двору",
+    "sr": "Зграда ковнице новца"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Пионирская, 2",
+    "en": "Pionirska 2",
+    "uk": "Вул. Пионирська, 2",
+    "sr": "Пионирска 2"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "industrial",
+  "coordinates": [
+    20.4347651,
+    44.7821162
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4341837,
+          44.7823485
+        ],
+        [
+          20.4341925,
+          44.7822381
+        ],
+        [
+          20.4342125,
+          44.7822389
+        ],
+        [
+          20.4342434,
+          44.7818517
+        ],
+        [
+          20.4344148,
+          44.7818586
+        ],
+        [
+          20.4344136,
+          44.781874
+        ],
+        [
+          20.4351855,
+          44.7819051
+        ],
+        [
+          20.4351868,
+          44.7818887
+        ],
+        [
+          20.4353361,
+          44.7818948
+        ],
+        [
+          20.4352978,
+          44.7823742
+        ],
+        [
+          20.4351314,
+          44.7823675
+        ],
+        [
+          20.4351324,
+          44.7823553
+        ],
+        [
+          20.4343655,
+          44.7823244
+        ],
+        [
+          20.434363,
+          44.7823557
+        ],
+        [
+          20.4341837,
+          44.7823485
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/404647860).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/404647860).",
+    "sr": "Контура OpenStreetMap (way/404647860).",
+    "uk": "Контур OpenStreetMap (way/404647860)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/cukarica/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16082940"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-390825125",
+  "osmId": "way/390825125",
+  "names": {
+    "ru": "Церковь Святого Роха",
+    "en": "Church of Saint Roch",
+    "uk": "Церква Святого Роха",
+    "sr": "Црква Светог Рока"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Городской парк, 5",
+    "en": "Gradski park 5",
+    "uk": "Вул. Міський парк, 5",
+    "sr": "Градски парк 5"
+  },
+  "minYear": 1836,
+  "maxYear": 1836,
+  "yearLabelId": "year-1836",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.4096583,
+    44.8411903
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4095662,
+          44.8412507
+        ],
+        [
+          20.4096558,
+          44.8411059
+        ],
+        [
+          20.4096746,
+          44.8411059
+        ],
+        [
+          20.4096974,
+          44.8411097
+        ],
+        [
+          20.4097336,
+          44.8411221
+        ],
+        [
+          20.4097417,
+          44.8411449
+        ],
+        [
+          20.4096585,
+          44.8412794
+        ],
+        [
+          20.4095662,
+          44.8412507
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/390825125).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/390825125).",
+    "sr": "Контура OpenStreetMap (way/390825125).",
+    "uk": "Контур OpenStreetMap (way/390825125)."
+  },
+  "photos": [
+    "afd3282cfd85615d2e9a62e10167cee3d1420fe56d3fd9fbe5ce41e2c6b680d8"
+  ],
+  "source": "https://www.openstreetmap.org/way/390825125",
+  "otherSource": "https://www.wikidata.org/wiki/Q386421"
+}

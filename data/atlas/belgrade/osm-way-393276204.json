@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-393276204",
+  "osmId": "way/393276204",
+  "names": {
+    "ru": "Здание торговца Стаменковича",
+    "en": "Merchant Stamenković Building",
+    "uk": "Будівля торговця Стаменковича",
+    "sr": "Зграда трговца Стаменковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра, 41",
+    "en": "Kralja Petra 41",
+    "uk": "Вул. Короля Петра, 41",
+    "sr": "Краља Петра 41"
+  },
+  "minYear": 1907,
+  "maxYear": 1907,
+  "yearLabelId": "year-1907",
+  "styleIds": [
+    "academic-art"
+  ],
+  "architectIds": [
+    "architect-q2846199"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4550851,
+    44.820213
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.455208,
+          44.8202537
+        ],
+        [
+          20.4553351,
+          44.8201705
+        ],
+        [
+          20.4552589,
+          44.8201108
+        ],
+        [
+          20.4551767,
+          44.8200465
+        ],
+        [
+          20.4548399,
+          44.8202687
+        ],
+        [
+          20.4548918,
+          44.8203081
+        ],
+        [
+          20.4550018,
+          44.8203915
+        ],
+        [
+          20.4550546,
+          44.8203556
+        ],
+        [
+          20.4551085,
+          44.820319
+        ],
+        [
+          20.45504,
+          44.8202669
+        ],
+        [
+          20.4549863,
+          44.8202262
+        ],
+        [
+          20.4550856,
+          44.8201604
+        ],
+        [
+          20.4551418,
+          44.8202018
+        ],
+        [
+          20.455208,
+          44.8202537
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393276204).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393276204).",
+    "sr": "Контура OpenStreetMap (way/393276204).",
+    "uk": "Контур OpenStreetMap (way/393276204)."
+  },
+  "photos": [
+    "a72dabbc41a052a42d56a3bb8dd915b2ead04309b75e1fc821686ba4c46fe7f8"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279002"
+}

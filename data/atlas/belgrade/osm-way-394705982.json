@@ -1,0 +1,94 @@
+{
+  "id": "osm-way-394705982",
+  "osmId": "way/394705982",
+  "names": {
+    "ru": "Дом Мики Аласа",
+    "en": "House of Mika Alas",
+    "uk": "Будинок Міки Аласа",
+    "sr": "Дом Мике Аласа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Косанчичев венац, 22",
+    "en": "Kosančićev venac 22",
+    "uk": "Вул. Косанчичев венац, 22",
+    "sr": "Косанчићев венац 22"
+  },
+  "minYear": 1910,
+  "maxYear": 1910,
+  "yearLabelId": "year-1910",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q3376329"
+  ],
+  "districtId": "stari-grad",
+  "type": "other",
+  "coordinates": [
+    20.4511803,
+    44.8172374
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4510522,
+          44.8172448
+        ],
+        [
+          20.451135,
+          44.8171505
+        ],
+        [
+          20.4511432,
+          44.8171407
+        ],
+        [
+          20.4512577,
+          44.8171849
+        ],
+        [
+          20.4512365,
+          44.8172101
+        ],
+        [
+          20.4512061,
+          44.8172435
+        ],
+        [
+          20.4513204,
+          44.81731
+        ],
+        [
+          20.4512966,
+          44.8173393
+        ],
+        [
+          20.4512484,
+          44.8173207
+        ],
+        [
+          20.4511527,
+          44.8172836
+        ],
+        [
+          20.4510522,
+          44.8172448
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394705982).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394705982).",
+    "sr": "Контура OpenStreetMap (way/394705982).",
+    "uk": "Контур OpenStreetMap (way/394705982)."
+  },
+  "photos": [
+    "b62a043deb3e0f93181e1aa13041bc18f774e025a0f5dae268c71dee7751a090"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q16086861"
+}

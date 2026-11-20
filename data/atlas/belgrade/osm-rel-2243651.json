@@ -1,0 +1,102 @@
+{
+  "id": "osm-rel-2243651",
+  "osmId": "relation/2243651",
+  "names": {
+    "ru": "Здание фонда Николы Спасича",
+    "en": "Nikola Spasić Endowment Building",
+    "uk": "Будівля фонду Ніколи Спасича",
+    "sr": "Зграда задужбине Николе Спасића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Михаила, 33",
+    "en": "Kneza Mihaila 33",
+    "uk": "Вул. Князя Михаила, 33",
+    "sr": "Кнеза Михаила 33"
+  },
+  "minYear": 1889,
+  "maxYear": 1889,
+  "yearLabelId": "year-1889",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [
+    "architect-q376805"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4569874,
+    44.8174464
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4566469,
+          44.8175107
+        ],
+        [
+          20.4567429,
+          44.8174341
+        ],
+        [
+          20.4568533,
+          44.8173461
+        ],
+        [
+          20.4569733,
+          44.8174218
+        ],
+        [
+          20.4570889,
+          44.8173296
+        ],
+        [
+          20.4569755,
+          44.8172581
+        ],
+        [
+          20.4570638,
+          44.8171881
+        ],
+        [
+          20.4570939,
+          44.8172071
+        ],
+        [
+          20.457324,
+          44.8173514
+        ],
+        [
+          20.4571042,
+          44.8175277
+        ],
+        [
+          20.4569141,
+          44.8176793
+        ],
+        [
+          20.4567461,
+          44.8175733
+        ],
+        [
+          20.4566469,
+          44.8175107
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (relation/2243651).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (relation/2243651).",
+    "sr": "Контура OpenStreetMap (relation/2243651).",
+    "uk": "Контур OpenStreetMap (relation/2243651)."
+  },
+  "photos": [
+    "267387e52fdd5e946037fdbff20f62d0a5b0c535975c0f00d125840163f767c9"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3075518"
+}

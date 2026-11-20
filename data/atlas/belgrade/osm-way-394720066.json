@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-394720066",
+  "osmId": "way/394720066",
+  "names": {
+    "ru": "Здание Йосифа Шоята",
+    "en": "Building of Josif Šojat",
+    "uk": "Будівля Йосифа Шоята",
+    "sr": "Зграда Јосифа Шојата"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Бранкова, 14",
+    "en": "Brankova 14",
+    "uk": "Вул. Бранкова, 14",
+    "sr": "Бранкова 14"
+  },
+  "minYear": 1935,
+  "maxYear": 1935,
+  "yearLabelId": "year-1935",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [
+    "architect-q3376345"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4555014,
+    44.8148687
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.455576,
+          44.8147837
+        ],
+        [
+          20.4553757,
+          44.8148265
+        ],
+        [
+          20.4554243,
+          44.8149524
+        ],
+        [
+          20.4556283,
+          44.8149121
+        ],
+        [
+          20.4556213,
+          44.8148964
+        ],
+        [
+          20.455576,
+          44.8147837
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394720066).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394720066).",
+    "sr": "Контура OpenStreetMap (way/394720066).",
+    "uk": "Контур OpenStreetMap (way/394720066)."
+  },
+  "photos": [
+    "e13387319368b36ec201c305ca2a064c334df8e8bbd6553b286a2dd716852022"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279410"
+}

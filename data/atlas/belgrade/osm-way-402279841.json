@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-402279841",
+  "osmId": "way/402279841",
+  "names": {
+    "ru": "Здание Водного общества в Земуне",
+    "en": "Building of the Water Community in Zemun",
+    "uk": "Будівля Водного товариства в Земуні",
+    "sr": "Зграда Водне заједнице у Земуну"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Авиационная площадь, 10",
+    "en": "Avijatičarski Square 10",
+    "uk": "Авіаційна площа, 10",
+    "sr": "Авијатичарски трг 10"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4140508,
+    44.8415383
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.414054,
+          44.8414294
+        ],
+        [
+          20.4139139,
+          44.8416047
+        ],
+        [
+          20.4139845,
+          44.8416328
+        ],
+        [
+          20.4140326,
+          44.8416155
+        ],
+        [
+          20.4140694,
+          44.8416381
+        ],
+        [
+          20.4141186,
+          44.8415756
+        ],
+        [
+          20.4140787,
+          44.8415598
+        ],
+        [
+          20.4141001,
+          44.8415327
+        ],
+        [
+          20.4141393,
+          44.8415483
+        ],
+        [
+          20.4141901,
+          44.8414839
+        ],
+        [
+          20.4141586,
+          44.8414713
+        ],
+        [
+          20.414054,
+          44.8414294
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/402279841).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/402279841).",
+    "sr": "Контура OpenStreetMap (way/402279841).",
+    "uk": "Контур OpenStreetMap (way/402279841)."
+  },
+  "photos": [
+    "3ccec6cc7425901f5762ce966dd7fc964cf02c22b143ab55681cd845cd085ab9"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q61133610"
+}

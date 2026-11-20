@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-399386392",
+  "osmId": "way/399386392",
+  "names": {
+    "ru": "Вилла Ольги Мос",
+    "en": "Villa of Olga Mos",
+    "uk": "Вілла Ольги Мос",
+    "sr": "Вила Олге Мос"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Толстоева, 29",
+    "en": "Tolstojeva 29",
+    "uk": "Вул. Толстоєва, 29",
+    "sr": "Толстојева 29"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4514502,
+    44.7825072
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.451458,
+          44.7826448
+        ],
+        [
+          20.4512786,
+          44.7824428
+        ],
+        [
+          20.4514424,
+          44.7823695
+        ],
+        [
+          20.4516218,
+          44.7825715
+        ],
+        [
+          20.451458,
+          44.7826448
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399386392).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399386392).",
+    "sr": "Контура OpenStreetMap (way/399386392).",
+    "uk": "Контур OpenStreetMap (way/399386392)."
+  },
+  "photos": [
+    "4b97680528862d607548fa20615e4e27264c7f0d57a1b83d6d4937adbbad3cb1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3558805"
+}

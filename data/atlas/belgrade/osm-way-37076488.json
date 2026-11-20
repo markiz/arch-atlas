@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-37076488",
+  "osmId": "way/37076488",
+  "names": {
+    "ru": "Министерство внутренних дел Республики Сербии",
+    "en": "Ministry of Internal Affairs of the Republic of Serbia",
+    "uk": "Міністерство внутрішніх справ Республіки Сербії",
+    "sr": "Министарство унутрашњих послова Републике Србије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 101",
+    "en": "Kneza Miloša 101",
+    "uk": "Вул. Князя Милоша, 101",
+    "sr": "Кнеза Милоша 101"
+  },
+  "minYear": 1933,
+  "maxYear": 1933,
+  "yearLabelId": "year-1933",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.453785,
+    44.7998371
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4537419,
+          44.7995647
+        ],
+        [
+          20.4541606,
+          44.7999011
+        ],
+        [
+          20.453828,
+          44.8001095
+        ],
+        [
+          20.4534094,
+          44.799773
+        ],
+        [
+          20.4537419,
+          44.7995647
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/37076488).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/37076488).",
+    "sr": "Контура OpenStreetMap (way/37076488).",
+    "uk": "Контур OpenStreetMap (way/37076488)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/37076488",
+  "otherSource": "https://www.wikidata.org/wiki/Q85994532"
+}

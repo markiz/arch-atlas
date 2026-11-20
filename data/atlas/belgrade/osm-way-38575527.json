@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-38575527",
+  "osmId": "way/38575527",
+  "names": {
+    "ru": "Этнографический музей",
+    "en": "Ethnographic Museum",
+    "uk": "Етнографічний музей",
+    "sr": "Етнографски музеј"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Студентская площадь, 13",
+    "en": "Studentski Square 13",
+    "uk": "Студентська площа, 13",
+    "sr": "Студентски трг 13"
+  },
+  "minYear": 1934,
+  "maxYear": 1934,
+  "yearLabelId": "year-1934",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4562838,
+    44.8198766
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.456592,
+          44.8198822
+        ],
+        [
+          20.4564601,
+          44.8197856
+        ],
+        [
+          20.4563361,
+          44.8196947
+        ],
+        [
+          20.4561484,
+          44.8198251
+        ],
+        [
+          20.4559517,
+          44.8199617
+        ],
+        [
+          20.4560663,
+          44.8200436
+        ],
+        [
+          20.4563254,
+          44.8198634
+        ],
+        [
+          20.4563818,
+          44.8199044
+        ],
+        [
+          20.456324,
+          44.8199444
+        ],
+        [
+          20.4564099,
+          44.8200067
+        ],
+        [
+          20.4564638,
+          44.8199684
+        ],
+        [
+          20.456592,
+          44.8198822
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38575527).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38575527).",
+    "sr": "Контура OpenStreetMap (way/38575527).",
+    "uk": "Контур OpenStreetMap (way/38575527)."
+  },
+  "photos": [
+    "0b19babd74450cc1b0bdfbee5c9fb112cedf4e9c3be63deea19a5e9e933404e1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q1291533"
+}

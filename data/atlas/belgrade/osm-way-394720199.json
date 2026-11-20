@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-394720199",
+  "osmId": "way/394720199",
+  "names": {
+    "ru": "Дом Миладина Печинара",
+    "en": "House of Miladin Pećinar",
+    "uk": "Будинок Міладина Печинара",
+    "sr": "Кућа Миладина Пећинара"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Поп Лукина, 5",
+    "en": "Pop Lukina 5",
+    "uk": "Вул. Поп Лукина, 5",
+    "sr": "Поп Лукина 5"
+  },
+  "minYear": 1928,
+  "maxYear": 1928,
+  "yearLabelId": "year-1928",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4537279,
+    44.8156814
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4537032,
+          44.8156059
+        ],
+        [
+          20.453657,
+          44.8156416
+        ],
+        [
+          20.4536147,
+          44.8156744
+        ],
+        [
+          20.4537582,
+          44.815761
+        ],
+        [
+          20.4538252,
+          44.8157001
+        ],
+        [
+          20.4538024,
+          44.8156564
+        ],
+        [
+          20.4537032,
+          44.8156059
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394720199).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394720199).",
+    "sr": "Контура OpenStreetMap (way/394720199).",
+    "uk": "Контур OpenStreetMap (way/394720199)."
+  },
+  "photos": [
+    "d0085ac0a17cb08c9ed500c7487737854b364822dbd4fd3db16533e4aa7157e6"
+  ],
+  "source": "https://www.openstreetmap.org/way/394720199",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279476"
+}

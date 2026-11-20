@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-263788583",
+  "osmId": "way/263788583",
+  "names": {
+    "ru": "Семейный дом Николы Несторовича",
+    "en": "Family House of Nikola Nestorović",
+    "uk": "Родинний будинок Ніколи Несторовича",
+    "sr": "Породична кућа Николе Несторовића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Князя Милоша, 40",
+    "en": "Kneza Miloša 40",
+    "uk": "Вул. Князя Милоша, 40",
+    "sr": "Кнеза Милоша 40"
+  },
+  "minYear": 1903,
+  "maxYear": 1903,
+  "yearLabelId": "year-1903",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3341572"
+  ],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4578331,
+    44.8041291
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4578579,
+          44.8040213
+        ],
+        [
+          20.4579871,
+          44.804128
+        ],
+        [
+          20.4578083,
+          44.804237
+        ],
+        [
+          20.4576792,
+          44.8041303
+        ],
+        [
+          20.4578579,
+          44.8040213
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/263788583).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/263788583).",
+    "sr": "Контура OpenStreetMap (way/263788583).",
+    "uk": "Контур OpenStreetMap (way/263788583)."
+  },
+  "photos": [
+    "9c0109bfe352b97d14a0cebf0869cbc4f05376aad8ef89b154b39f70beffc89d"
+  ],
+  "source": "https://www.openstreetmap.org/way/263788583",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279513"
+}

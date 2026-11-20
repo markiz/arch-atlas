@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-404140178",
+  "osmId": "way/404140178",
+  "names": {
+    "ru": "Старая школа в Жаркове",
+    "en": "Old School in Žarkovo",
+    "uk": "Стара школа в Жаркові",
+    "sr": "Стара школа у Жаркову"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Аце Йоксимовича, 2",
+    "en": "Ace Joksimovića 2",
+    "uk": "Вул. Аце Йоксимовича, 2",
+    "sr": "Аце Јоксимовића 2"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "educational",
+  "coordinates": [
+    20.4168367,
+    44.7582381
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4168672,
+          44.7583285
+        ],
+        [
+          20.4167058,
+          44.7582371
+        ],
+        [
+          20.4168062,
+          44.7581477
+        ],
+        [
+          20.416892,
+          44.7581963
+        ],
+        [
+          20.4169676,
+          44.7582391
+        ],
+        [
+          20.4168672,
+          44.7583285
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/404140178).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/404140178).",
+    "sr": "Контура OpenStreetMap (way/404140178).",
+    "uk": "Контур OpenStreetMap (way/404140178)."
+  },
+  "photos": [
+    "554a908a24f9739836437f8089f2ff2a52bb0f6720e2a58b828383337a047219"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/cukarica/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3557943"
+}

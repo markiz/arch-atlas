@@ -1,0 +1,120 @@
+{
+  "id": "osm-way-31804624",
+  "osmId": "way/31804624",
+  "names": {
+    "ru": "Архив Югославии",
+    "en": "Archives of Yugoslavia",
+    "uk": "Архів Югославії",
+    "sr": "Архив Југославије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Васе Пелагича, 33",
+    "en": "Vase Pelagića 33",
+    "uk": "Вул. Васе Пелагича, 33",
+    "sr": "Васе Пелагића 33"
+  },
+  "minYear": 1933,
+  "maxYear": 1933,
+  "yearLabelId": "year-1933",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4419512,
+    44.7891899
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4417904,
+          44.7888972
+        ],
+        [
+          20.4419586,
+          44.7889275
+        ],
+        [
+          20.4418787,
+          44.7891098
+        ],
+        [
+          20.4414796,
+          44.7891241
+        ],
+        [
+          20.4414914,
+          44.7892783
+        ],
+        [
+          20.4418927,
+          44.789266
+        ],
+        [
+          20.4420109,
+          44.7894625
+        ],
+        [
+          20.4418559,
+          44.7895045
+        ],
+        [
+          20.4419281,
+          44.789621
+        ],
+        [
+          20.4422735,
+          44.7895238
+        ],
+        [
+          20.4421205,
+          44.7892737
+        ],
+        [
+          20.4421615,
+          44.7892714
+        ],
+        [
+          20.4421538,
+          44.7891744
+        ],
+        [
+          20.442146,
+          44.7890764
+        ],
+        [
+          20.4421006,
+          44.789078
+        ],
+        [
+          20.4421953,
+          44.7888324
+        ],
+        [
+          20.4418404,
+          44.7887683
+        ],
+        [
+          20.4417904,
+          44.7888972
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/31804624).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/31804624).",
+    "sr": "Контура OpenStreetMap (way/31804624).",
+    "uk": "Контур OpenStreetMap (way/31804624)."
+  },
+  "photos": [
+    "5b86fd7b361945ad114a22cfa199f00b6d62c5b76eb9b3c71d60c95dfc023c11"
+  ],
+  "source": "https://www.openstreetmap.org/way/31804624",
+  "otherSource": "https://www.wikidata.org/wiki/Q85994526"
+}

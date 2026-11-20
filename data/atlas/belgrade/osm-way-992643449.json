@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-992643449",
+  "osmId": "way/992643449",
+  "names": {
+    "ru": "Дом Лазы Пачуа",
+    "en": "House of Laza Paču",
+    "uk": "Будинок Лази Пачуа",
+    "sr": "Кућа Лазе Пачуа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Симина, 14",
+    "en": "Simina 14",
+    "uk": "Вул. Симина, 14",
+    "sr": "Симина 14"
+  },
+  "minYear": 1880,
+  "maxYear": 1889,
+  "yearLabelId": "period-1880-1889",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4614789,
+    44.818243
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4614695,
+          44.8183381
+        ],
+        [
+          20.4616135,
+          44.8182391
+        ],
+        [
+          20.4614871,
+          44.8181479
+        ],
+        [
+          20.461345,
+          44.8182472
+        ],
+        [
+          20.4613763,
+          44.81827
+        ],
+        [
+          20.4614695,
+          44.8183381
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/992643449).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/992643449).",
+    "sr": "Контура OpenStreetMap (way/992643449).",
+    "uk": "Контур OpenStreetMap (way/992643449)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/992643449",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279437"
+}

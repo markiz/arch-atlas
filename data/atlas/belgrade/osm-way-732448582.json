@@ -1,0 +1,108 @@
+{
+  "id": "osm-way-732448582",
+  "osmId": "way/732448582",
+  "names": {
+    "ru": "Церковь Святой Троицы",
+    "en": "Church of the Holy Trinity",
+    "uk": "Церква Святої Трійці",
+    "sr": "Црква Свете Тројице"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Добановачка, 72a",
+    "en": "Dobanovačka 72a",
+    "uk": "Вул. Добановачка, 72a",
+    "sr": "Добановачка 72a"
+  },
+  "minYear": 1842,
+  "maxYear": 1842,
+  "yearLabelId": "year-1842",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.3960217,
+    44.8501229
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3961361,
+          44.8501716
+        ],
+        [
+          20.3961517,
+          44.850165
+        ],
+        [
+          20.3960144,
+          44.850002
+        ],
+        [
+          20.3959444,
+          44.8500316
+        ],
+        [
+          20.3958749,
+          44.850061
+        ],
+        [
+          20.396012,
+          44.850224
+        ],
+        [
+          20.3960303,
+          44.8502163
+        ],
+        [
+          20.3960469,
+          44.850227
+        ],
+        [
+          20.3960678,
+          44.8502328
+        ],
+        [
+          20.3960903,
+          44.850233
+        ],
+        [
+          20.3961113,
+          44.8502274
+        ],
+        [
+          20.3961282,
+          44.8502169
+        ],
+        [
+          20.3961388,
+          44.8502028
+        ],
+        [
+          20.3961415,
+          44.850187
+        ],
+        [
+          20.3961361,
+          44.8501716
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/732448582).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/732448582).",
+    "sr": "Контура OpenStreetMap (way/732448582).",
+    "uk": "Контур OpenStreetMap (way/732448582)."
+  },
+  "photos": [
+    "1a61992c5ec89893a52984a711a5dd0a2225a57e244f29db08cf6c2514c4e611"
+  ],
+  "source": "https://www.openstreetmap.org/way/732448582",
+  "otherSource": "https://www.wikidata.org/wiki/Q1563193"
+}

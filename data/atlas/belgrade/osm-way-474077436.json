@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-474077436",
+  "osmId": "way/474077436",
+  "names": {
+    "ru": "Церковь Святых архангелов Михаила и Гавриила",
+    "en": "Church of the Holy Archangels Michael and Gabriel in Batajnica",
+    "uk": "Церква Святих архангелів Михаїла і Гавриїла",
+    "sr": "Црква светих арханђела Михаила и Гаврила"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Пуковника Миленка Павловича, 2b",
+    "en": "Pukovnika Milenka Pavlovića 2b",
+    "uk": "Вул. Пуковника Миленка Павловича, 2b",
+    "sr": "Пуковника Миленка Павловића 2b"
+  },
+  "minYear": 1785,
+  "maxYear": 1785,
+  "yearLabelId": "year-1785",
+  "styleIds": [
+    "baroque"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.2747408,
+    44.9064006
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.274835,
+          44.9063744
+        ],
+        [
+          20.2748573,
+          44.9063817
+        ],
+        [
+          20.274874,
+          44.9063945
+        ],
+        [
+          20.2748824,
+          44.9064109
+        ],
+        [
+          20.2748811,
+          44.9064284
+        ],
+        [
+          20.2748704,
+          44.9064441
+        ],
+        [
+          20.2748519,
+          44.9064556
+        ],
+        [
+          20.2748286,
+          44.9064612
+        ],
+        [
+          20.274804,
+          44.9064599
+        ],
+        [
+          20.2745967,
+          44.9064164
+        ],
+        [
+          20.2746145,
+          44.9063738
+        ],
+        [
+          20.2746321,
+          44.9063318
+        ],
+        [
+          20.274835,
+          44.9063744
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/474077436).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/474077436).",
+    "sr": "Контура OpenStreetMap (way/474077436).",
+    "uk": "Контур OpenStreetMap (way/474077436)."
+  },
+  "photos": [
+    "561b3a736c738ed4ab2638df02334aa9f9e84a9be4bd042ac202c58136870d2d"
+  ],
+  "source": "https://www.openstreetmap.org/way/474077436",
+  "otherSource": "https://www.wikidata.org/wiki/Q3583242"
+}

@@ -1,0 +1,112 @@
+{
+  "id": "osm-way-36896244",
+  "osmId": "way/36896244",
+  "names": {
+    "ru": "Здание БИГЗ",
+    "en": "BIGZ Building",
+    "uk": "Будівля БІГЗ",
+    "sr": "Зграда БИГЗ-а"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Воеводы Мишича, 17",
+    "en": "Vojvode Mišića Boulevard 17",
+    "uk": "Бульвар Воєводи Мишича, 17",
+    "sr": "Булевар војводе Мишића 17"
+  },
+  "minYear": 1941,
+  "maxYear": 1941,
+  "yearLabelId": "year-1941",
+  "styleIds": [
+    "modern-architecture",
+    "constructivism",
+    "bauhaus"
+  ],
+  "architectIds": [
+    "architect-q1273105"
+  ],
+  "districtId": "savski-venac",
+  "type": "commercial",
+  "coordinates": [
+    20.4463405,
+    44.7970923
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4460512,
+          44.7966475
+        ],
+        [
+          20.4462998,
+          44.7967139
+        ],
+        [
+          20.4461519,
+          44.7969928
+        ],
+        [
+          20.4462254,
+          44.7970124
+        ],
+        [
+          20.4461809,
+          44.7970964
+        ],
+        [
+          20.4464247,
+          44.7971615
+        ],
+        [
+          20.4464668,
+          44.797082
+        ],
+        [
+          20.4465489,
+          44.7971039
+        ],
+        [
+          20.4466971,
+          44.7968243
+        ],
+        [
+          20.4469434,
+          44.79689
+        ],
+        [
+          20.4467434,
+          44.7972672
+        ],
+        [
+          20.4468069,
+          44.7972842
+        ],
+        [
+          20.4467151,
+          44.7974573
+        ],
+        [
+          20.4457574,
+          44.7972016
+        ],
+        [
+          20.4460512,
+          44.7966475
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/36896244).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/36896244).",
+    "sr": "Контура OpenStreetMap (way/36896244).",
+    "uk": "Контур OpenStreetMap (way/36896244)."
+  },
+  "photos": [
+    "4ae1b79b0cd088eb1cef939f49dcd47dbbb7c7605cfe4ed9eb32dc5ffb5a2e1f"
+  ],
+  "source": "https://www.openstreetmap.org/way/36896244",
+  "otherSource": "https://www.wikidata.org/wiki/Q1258485"
+}

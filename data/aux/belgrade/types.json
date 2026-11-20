@@ -1,1 +1,119 @@
-{}
+{
+ "residential": {
+  "source": "Residential",
+  "labels": {
+   "ru": "Жилой",
+   "en": "Residential",
+   "uk": "Житловий",
+   "sr": "Стамбена"
+  }
+ },
+ "commercial": {
+  "source": "Commercial",
+  "labels": {
+   "ru": "Коммерческий",
+   "en": "Commercial",
+   "uk": "Комерційний",
+   "sr": "Пословна"
+  }
+ },
+ "government": {
+  "source": "Government",
+  "labels": {
+   "ru": "Государственный",
+   "en": "Government",
+   "uk": "Державний",
+   "sr": "Државна"
+  }
+ },
+ "educational": {
+  "source": "Educational",
+  "labels": {
+   "ru": "Образовательный",
+   "en": "Educational",
+   "uk": "Освітній",
+   "sr": "Образовна"
+  }
+ },
+ "cultural": {
+  "source": "Cultural",
+  "labels": {
+   "ru": "Культурный",
+   "en": "Cultural",
+   "uk": "Культурний",
+   "sr": "Културна"
+  }
+ },
+ "healthcare": {
+  "source": "Healthcare",
+  "labels": {
+   "ru": "Медицинский",
+   "en": "Healthcare",
+   "uk": "Медичний",
+   "sr": "Здравствена"
+  }
+ },
+ "religious": {
+  "source": "Religious",
+  "labels": {
+   "ru": "Религиозный",
+   "en": "Religious",
+   "uk": "Релігійний",
+   "sr": "Верска"
+  }
+ },
+ "hospitality": {
+  "source": "Hospitality",
+  "labels": {
+   "ru": "Гостиничный",
+   "en": "Hospitality",
+   "uk": "Готельний",
+   "sr": "Хотелска"
+  }
+ },
+ "industrial": {
+  "source": "Industrial",
+  "labels": {
+   "ru": "Промышленный",
+   "en": "Industrial",
+   "uk": "Промисловий",
+   "sr": "Индустријска"
+  }
+ },
+ "military": {
+  "source": "Military",
+  "labels": {
+   "ru": "Военный",
+   "en": "Military",
+   "uk": "Військовий",
+   "sr": "Војна"
+  }
+ },
+ "transport": {
+  "source": "Transport",
+  "labels": {
+   "ru": "Транспортный",
+   "en": "Transport",
+   "uk": "Транспортний",
+   "sr": "Транспортна"
+  }
+ },
+ "memorial": {
+  "source": "Memorial",
+  "labels": {
+   "ru": "Мемориальный",
+   "en": "Memorial",
+   "uk": "Меморіальний",
+   "sr": "Меморијална"
+  }
+ },
+ "other": {
+  "source": "Other",
+  "labels": {
+   "ru": "Другой",
+   "en": "Other",
+   "uk": "Інший",
+   "sr": "Остало"
+  }
+ }
+}

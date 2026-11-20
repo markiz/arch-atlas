@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-392954544",
+  "osmId": "way/392954544",
+  "names": {
+    "ru": "Дом Стевана Мокраняца",
+    "en": "House of Stevan Mokranjac",
+    "uk": "Будинок Стевана Мокраньця",
+    "sr": "Кућа Стевана Мокрањца"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Доситеева, 16",
+    "en": "Dositejeva 16",
+    "uk": "Вул. Доситеєва, 16",
+    "sr": "Доситејева 16"
+  },
+  "minYear": 1872,
+  "maxYear": 1872,
+  "yearLabelId": "year-1872",
+  "styleIds": [
+    "neoclassicism"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4631293,
+    44.8185107
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4628512,
+          44.8185101
+        ],
+        [
+          20.4630787,
+          44.8186837
+        ],
+        [
+          20.4634012,
+          44.818516
+        ],
+        [
+          20.463304,
+          44.8184338
+        ],
+        [
+          20.4631825,
+          44.8183311
+        ],
+        [
+          20.463039,
+          44.8184079
+        ],
+        [
+          20.4631428,
+          44.8185004
+        ],
+        [
+          20.4630721,
+          44.8185333
+        ],
+        [
+          20.4630213,
+          44.8184925
+        ],
+        [
+          20.4630522,
+          44.8184628
+        ],
+        [
+          20.4629882,
+          44.8184126
+        ],
+        [
+          20.4628512,
+          44.8185101
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392954544).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392954544).",
+    "sr": "Контура OpenStreetMap (way/392954544).",
+    "uk": "Контур OpenStreetMap (way/392954544)."
+  },
+  "photos": [
+    "050e6f1352b007dd5ca805099b406e205b2319f0714b4feb86330dab356e212a"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279581"
+}

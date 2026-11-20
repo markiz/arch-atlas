@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-493778645",
+  "osmId": "way/493778645",
+  "names": {
+    "ru": "Бумажная фабрика Милана Вапе",
+    "en": "Paper Mill of Milan Vapa",
+    "uk": "Паперова фабрика Мілана Вапе",
+    "sr": "Фабрика хартије Милана Вапе"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Воеводы Мишича, 10",
+    "en": "Vojvode Mišića Boulevard 10",
+    "uk": "Бульвар Воєводи Мишича, 10",
+    "sr": "Булевар војводе Мишића 10"
+  },
+  "minYear": 1924,
+  "maxYear": 1924,
+  "yearLabelId": "year-1924",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "industrial",
+  "coordinates": [
+    20.4442664,
+    44.7976467
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4436602,
+          44.7977301
+        ],
+        [
+          20.4439033,
+          44.7973059
+        ],
+        [
+          20.4449378,
+          44.7976043
+        ],
+        [
+          20.44487,
+          44.7977226
+        ],
+        [
+          20.4444667,
+          44.7979628
+        ],
+        [
+          20.4443036,
+          44.7979157
+        ],
+        [
+          20.4436602,
+          44.7977301
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/493778645).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/493778645).",
+    "sr": "Контура OpenStreetMap (way/493778645).",
+    "uk": "Контур OpenStreetMap (way/493778645)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q61362238"
+}

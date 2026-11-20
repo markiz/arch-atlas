@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-393468564",
+  "osmId": "way/393468564",
+  "names": {
+    "ru": "Универмаг",
+    "en": "Department Store",
+    "uk": "Універмаг",
+    "sr": "Робни магазин"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра, 16",
+    "en": "Kralja Petra 16",
+    "uk": "Вул. Короля Петра, 16",
+    "sr": "Краља Петра 16"
+  },
+  "minYear": 1907,
+  "maxYear": 1907,
+  "yearLabelId": "year-1907",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "commercial",
+  "coordinates": [
+    20.4542502,
+    44.8189396
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4542217,
+          44.819009
+        ],
+        [
+          20.4541526,
+          44.8189567
+        ],
+        [
+          20.4542685,
+          44.8188714
+        ],
+        [
+          20.4543525,
+          44.8189228
+        ],
+        [
+          20.4542217,
+          44.819009
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393468564).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393468564).",
+    "sr": "Контура OpenStreetMap (way/393468564).",
+    "uk": "Контур OpenStreetMap (way/393468564)."
+  },
+  "photos": [
+    "b6a89f1d3b1ee3f164a95a5936ba7e77b9da2c22ae44bd752433688b7f32c2d5"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3114711"
+}

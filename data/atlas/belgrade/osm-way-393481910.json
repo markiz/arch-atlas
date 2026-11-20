@@ -1,0 +1,110 @@
+{
+  "id": "osm-way-393481910",
+  "osmId": "way/393481910",
+  "names": {
+    "ru": "Дом Милана А. Павловича",
+    "en": "House of Milan A. Pavlović",
+    "uk": "Будинок Мілана А. Павловича",
+    "sr": "Кућа Милана А. Павловића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Грачаничка, 18",
+    "en": "Gračanička 18",
+    "uk": "Вул. Грачаничка, 18",
+    "sr": "Грачаничка 18"
+  },
+  "minYear": 1912,
+  "maxYear": 1912,
+  "yearLabelId": "year-1912",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3341572"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4546804,
+    44.8172444
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4546635,
+          44.8170887
+        ],
+        [
+          20.4548424,
+          44.817208
+        ],
+        [
+          20.4548495,
+          44.8172136
+        ],
+        [
+          20.4548555,
+          44.8172197
+        ],
+        [
+          20.4548592,
+          44.8172257
+        ],
+        [
+          20.454861,
+          44.8172322
+        ],
+        [
+          20.4548614,
+          44.817239
+        ],
+        [
+          20.4548592,
+          44.8172453
+        ],
+        [
+          20.4548545,
+          44.8172513
+        ],
+        [
+          20.4548488,
+          44.8172564
+        ],
+        [
+          20.4547116,
+          44.8173563
+        ],
+        [
+          20.4546622,
+          44.8173923
+        ],
+        [
+          20.4545155,
+          44.8173092
+        ],
+        [
+          20.4546092,
+          44.8171266
+        ],
+        [
+          20.4546635,
+          44.8170887
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393481910).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393481910).",
+    "sr": "Контура OpenStreetMap (way/393481910).",
+    "uk": "Контур OpenStreetMap (way/393481910)."
+  },
+  "photos": [
+    "396f110cb05ed3f5b6c3f0f818328d11b3b991cbbbc26e858d91b9eaea31c2fc"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279477"
+}

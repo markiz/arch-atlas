@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-398052908",
+  "osmId": "way/398052908",
+  "names": {
+    "ru": "Дом архитектора Момира Коруновича",
+    "en": "House of Architect Momir Korunović",
+    "uk": "Будинок архітектора Момира Коруновича",
+    "sr": "Кућа архитекте Момира Коруновића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ламартинова, 10",
+    "en": "Lamartinova 10",
+    "uk": "Вул. Ламартинова, 10",
+    "sr": "Ламартинова 10"
+  },
+  "minYear": 1924,
+  "maxYear": 1924,
+  "yearLabelId": "year-1924",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [
+    "architect-q3319760"
+  ],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4683922,
+    44.7937298
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4682912,
+          44.7937913
+        ],
+        [
+          20.46828,
+          44.7937263
+        ],
+        [
+          20.4683651,
+          44.7937189
+        ],
+        [
+          20.4683555,
+          44.7936634
+        ],
+        [
+          20.468463,
+          44.7936541
+        ],
+        [
+          20.4684837,
+          44.7937746
+        ],
+        [
+          20.4683746,
+          44.7937841
+        ],
+        [
+          20.4682912,
+          44.7937913
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/398052908).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/398052908).",
+    "sr": "Контура OpenStreetMap (way/398052908).",
+    "uk": "Контур OpenStreetMap (way/398052908)."
+  },
+  "photos": [
+    "0d25d58167cebf116383ef1602be711fe6cf76def5df27d003cf3b91efc20264"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279489"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-471565769",
+  "osmId": "way/471565769",
+  "names": {
+    "ru": "Здание старой начальной школы в Бежании",
+    "en": "Building of the Old Primary School in Bežanija",
+    "uk": "Будівля старої початкової школи в Бежанії",
+    "sr": "Зграда Старе основне школе у Бежанији"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Воеводинская, 68",
+    "en": "Vojvođanska 68",
+    "uk": "Вул. Войводжанська, 68",
+    "sr": "Војвођанска 68"
+  },
+  "minYear": 1891,
+  "maxYear": 1891,
+  "yearLabelId": "year-1891",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "novi-beograd",
+  "type": "residential",
+  "coordinates": [
+    20.3749387,
+    44.8075366
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3747927,
+          44.8075228
+        ],
+        [
+          20.3748587,
+          44.8074358
+        ],
+        [
+          20.3750891,
+          44.8075238
+        ],
+        [
+          20.3750227,
+          44.8076113
+        ],
+        [
+          20.3750037,
+          44.8076041
+        ],
+        [
+          20.3749775,
+          44.8076387
+        ],
+        [
+          20.3748533,
+          44.8075913
+        ],
+        [
+          20.3748799,
+          44.8075561
+        ],
+        [
+          20.3747927,
+          44.8075228
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/471565769).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/471565769).",
+    "sr": "Контура OpenStreetMap (way/471565769).",
+    "uk": "Контур OpenStreetMap (way/471565769)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/novi-beograd/",
+  "otherSource": "https://www.wikidata.org/wiki/Q65202411"
+}

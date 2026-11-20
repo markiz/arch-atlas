@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-317039793",
+  "osmId": "way/317039793",
+  "names": {
+    "ru": "Дом семьи Милованович",
+    "en": "Family House of the Milovanović Family",
+    "uk": "Будинок родини Милованович",
+    "sr": "Кућа породице Миловановић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Добрачина, 15",
+    "en": "Dobračina 15",
+    "uk": "Вул. Добрачина, 15",
+    "sr": "Добрачина 15"
+  },
+  "minYear": 1884,
+  "maxYear": 1884,
+  "yearLabelId": "year-1884",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4609593,
+    44.8184873
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4607658,
+          44.8184877
+        ],
+        [
+          20.460826,
+          44.8184458
+        ],
+        [
+          20.4609633,
+          44.8183501
+        ],
+        [
+          20.4610107,
+          44.8183843
+        ],
+        [
+          20.4611528,
+          44.818487
+        ],
+        [
+          20.4610565,
+          44.818554
+        ],
+        [
+          20.4609553,
+          44.8186245
+        ],
+        [
+          20.4608223,
+          44.8185285
+        ],
+        [
+          20.4607841,
+          44.8185008
+        ],
+        [
+          20.4607658,
+          44.8184877
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/317039793).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/317039793).",
+    "sr": "Контура OpenStreetMap (way/317039793).",
+    "uk": "Контур OpenStreetMap (way/317039793)."
+  },
+  "photos": [
+    "9de3826cde46dd78e6f2ab7a5fa23e7f6daba8834f1a32ff0071efeaefc3d36b"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3278899"
+}

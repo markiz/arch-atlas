@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-403232801",
+  "osmId": "way/403232801",
+  "names": {
+    "ru": "Дом д-ра Савы Недельковича",
+    "en": "House of Dr Sava Nedeljković",
+    "uk": "Будинок д-ра Сави Недельковича",
+    "sr": "Кућа др Саве Недељковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Царя Душана, 41",
+    "en": "Cara Dušana 41",
+    "uk": "Вул. Царя Душана, 41",
+    "sr": "Цара Душана 41"
+  },
+  "minYear": 1905,
+  "maxYear": 1905,
+  "yearLabelId": "year-1905",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4036841,
+    44.8486115
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4036554,
+          44.848722
+        ],
+        [
+          20.4035193,
+          44.8485266
+        ],
+        [
+          20.4036146,
+          44.8484932
+        ],
+        [
+          20.4036783,
+          44.8485847
+        ],
+        [
+          20.403784,
+          44.8485477
+        ],
+        [
+          20.4038564,
+          44.8486517
+        ],
+        [
+          20.4036554,
+          44.848722
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/403232801).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/403232801).",
+    "sr": "Контура OpenStreetMap (way/403232801).",
+    "uk": "Контур OpenStreetMap (way/403232801)."
+  },
+  "photos": [
+    "affe0c8ce5b757be9b79c940d5a9964dce8dc8beb29c83d08908e05312a3854d"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279570"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-295090760",
+  "osmId": "way/295090760",
+  "names": {
+    "ru": "Первая городская больница в Белграде",
+    "en": "First Town Hospital in Belgrade",
+    "uk": "Перша міська лікарня в Белграді",
+    "sr": "Прва варошка болница у Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Джорджа Вашингтона, 19",
+    "en": "Džordža Vašingtona 19",
+    "uk": "Вул. Джорджа Вашингтона, 19",
+    "sr": "Џорџа Вашингтона 19"
+  },
+  "minYear": 1868,
+  "maxYear": 1868,
+  "yearLabelId": "year-1868",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "healthcare",
+  "coordinates": [
+    20.4703465,
+    44.8162561
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.47017,
+          44.8164782
+        ],
+        [
+          20.470325,
+          44.816358
+        ],
+        [
+          20.4704256,
+          44.8164232
+        ],
+        [
+          20.470495,
+          44.8163694
+        ],
+        [
+          20.4705721,
+          44.8163096
+        ],
+        [
+          20.4704705,
+          44.8162437
+        ],
+        [
+          20.4706455,
+          44.816108
+        ],
+        [
+          20.4704849,
+          44.8160038
+        ],
+        [
+          20.4702463,
+          44.8161889
+        ],
+        [
+          20.4702416,
+          44.8161925
+        ],
+        [
+          20.4700084,
+          44.8163734
+        ],
+        [
+          20.47017,
+          44.8164782
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/295090760).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/295090760).",
+    "sr": "Контура OpenStreetMap (way/295090760).",
+    "uk": "Контур OpenStreetMap (way/295090760)."
+  },
+  "photos": [
+    "8fcef79738c59bbe3199bef0830bca140cb686674fdbaac553807a85c31a8c3d"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3401714"
+}

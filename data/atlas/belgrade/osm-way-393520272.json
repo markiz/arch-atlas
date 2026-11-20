@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-393520272",
+  "osmId": "way/393520272",
+  "names": {
+    "ru": "Здание Любомира Миладиновича",
+    "en": "Building of Ljubomir Miladinović",
+    "uk": "Будівля Любомира Миладиновича",
+    "sr": "Зграда Љубомира Миладиновића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Светогорская 6-8",
+    "en": "Svetogorska 6-8",
+    "uk": "Вул. Светогорська 6-8",
+    "sr": "Светогорска 6-8"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "modernism"
+  ],
+  "architectIds": [
+    "architect-q3319781"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4661728,
+    44.814665
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4661741,
+          44.8148101
+        ],
+        [
+          20.4662211,
+          44.8147857
+        ],
+        [
+          20.4663073,
+          44.8147409
+        ],
+        [
+          20.4663464,
+          44.8147205
+        ],
+        [
+          20.466179,
+          44.8145253
+        ],
+        [
+          20.4659967,
+          44.8146011
+        ],
+        [
+          20.4660359,
+          44.8146485
+        ],
+        [
+          20.4660683,
+          44.8146878
+        ],
+        [
+          20.4661741,
+          44.8148101
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393520272).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393520272).",
+    "sr": "Контура OpenStreetMap (way/393520272).",
+    "uk": "Контур OpenStreetMap (way/393520272)."
+  },
+  "photos": [
+    "2459d6f1e5e9a69ecbc75e525c287d27ed2e5929c29bda18b2dd3b3abc31c3c6"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3149075"
+}

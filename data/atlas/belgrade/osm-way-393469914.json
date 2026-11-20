@@ -1,0 +1,82 @@
+{
+  "id": "osm-way-393469914",
+  "osmId": "way/393469914",
+  "names": {
+    "ru": "Дом торговца Црвенчанина",
+    "en": "House of Merchant Crvenčanin",
+    "uk": "Будинок торговця Црвенчанина",
+    "sr": "Кућа трговца Црвенчанина"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Короля Петра, 15",
+    "en": "Kralja Petra 15",
+    "uk": "Вул. Короля Петра, 15",
+    "sr": "Краља Петра 15"
+  },
+  "minYear": 1887,
+  "maxYear": 1887,
+  "yearLabelId": "year-1887",
+  "styleIds": [
+    "beaux-arts"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "hospitality",
+  "coordinates": [
+    20.4535338,
+    44.8189052
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4536928,
+          44.8188557
+        ],
+        [
+          20.4536628,
+          44.8188329
+        ],
+        [
+          20.4536195,
+          44.8187998
+        ],
+        [
+          20.4534975,
+          44.8188757
+        ],
+        [
+          20.4533757,
+          44.8189527
+        ],
+        [
+          20.4534489,
+          44.8190112
+        ],
+        [
+          20.4535672,
+          44.8189365
+        ],
+        [
+          20.4536928,
+          44.8188557
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393469914).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393469914).",
+    "sr": "Контура OpenStreetMap (way/393469914).",
+    "uk": "Контур OpenStreetMap (way/393469914)."
+  },
+  "photos": [
+    "65c8d58cd0c0f468eba781e967376891b824ccc5aa93bdb2f3e415dac193b179"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3278680"
+}

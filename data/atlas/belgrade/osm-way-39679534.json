@@ -1,0 +1,122 @@
+{
+  "id": "osm-way-39679534",
+  "osmId": "way/39679534",
+  "names": {
+    "ru": "Новый дворец",
+    "en": "New Palace",
+    "uk": "Новий двір",
+    "sr": "Нови двор"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Андричев венац, 1",
+    "en": "Andrićev venac 1",
+    "uk": "Вул. Андричев венац, 1",
+    "sr": "Андрићев венац 1"
+  },
+  "minYear": 1922,
+  "maxYear": 1922,
+  "yearLabelId": "year-1922",
+  "styleIds": [
+    "academic-art"
+  ],
+  "architectIds": [
+    "architect-q3499618"
+  ],
+  "districtId": "stari-grad",
+  "type": "government",
+  "coordinates": [
+    20.4631673,
+    44.8099069
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4627665,
+          44.8099846
+        ],
+        [
+          20.4632932,
+          44.8101332
+        ],
+        [
+          20.4633253,
+          44.8100755
+        ],
+        [
+          20.463437,
+          44.8101068
+        ],
+        [
+          20.4635094,
+          44.8099769
+        ],
+        [
+          20.4635817,
+          44.8098471
+        ],
+        [
+          20.4633236,
+          44.809774
+        ],
+        [
+          20.4633169,
+          44.8097632
+        ],
+        [
+          20.4633085,
+          44.809753
+        ],
+        [
+          20.4632953,
+          44.8097424
+        ],
+        [
+          20.463278,
+          44.8097335
+        ],
+        [
+          20.4632587,
+          44.8097318
+        ],
+        [
+          20.4632391,
+          44.8097328
+        ],
+        [
+          20.463222,
+          44.8097357
+        ],
+        [
+          20.4632058,
+          44.8097404
+        ],
+        [
+          20.4629642,
+          44.8096711
+        ],
+        [
+          20.4629268,
+          44.8096827
+        ],
+        [
+          20.4627665,
+          44.8099846
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/39679534).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/39679534).",
+    "sr": "Контура OpenStreetMap (way/39679534).",
+    "uk": "Контур OpenStreetMap (way/39679534)."
+  },
+  "photos": [
+    "c2ed2e1cd495587bf568c3abbc580fa841ca6758d12412197597eba046f2a7a6"
+  ],
+  "source": "https://www.openstreetmap.org/way/39679534",
+  "otherSource": "https://www.wikidata.org/wiki/Q18810542"
+}

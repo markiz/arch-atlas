@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-399379995",
+  "osmId": "way/399379995",
+  "names": {
+    "ru": "Вилла Душана Томича",
+    "en": "Villa of Dušan Tomić",
+    "uk": "Вілла Душана Томича",
+    "sr": "Вила Душана Томића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ужичка, 8",
+    "en": "Užička 8",
+    "uk": "Вул. Ужичка, 8",
+    "sr": "Ужичка 8"
+  },
+  "minYear": 1931,
+  "maxYear": 1931,
+  "yearLabelId": "year-1931",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3376345"
+  ],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4473301,
+    44.7869871
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.447348,
+          44.7870935
+        ],
+        [
+          20.4471792,
+          44.7869926
+        ],
+        [
+          20.4473122,
+          44.7868806
+        ],
+        [
+          20.4474809,
+          44.7869816
+        ],
+        [
+          20.447348,
+          44.7870935
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399379995).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399379995).",
+    "sr": "Контура OpenStreetMap (way/399379995).",
+    "uk": "Контур OpenStreetMap (way/399379995)."
+  },
+  "photos": [
+    "578374382c6e7362216a6702452aa7c695df295706166dcb81a1c29a9b4dca4f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3558815"
+}

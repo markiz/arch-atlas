@@ -1,0 +1,108 @@
+{
+  "id": "osm-way-407080813",
+  "osmId": "way/407080813",
+  "names": {
+    "ru": "Евангелическая церковь",
+    "en": "Evangelical Church",
+    "uk": "Євангельська церква",
+    "sr": "Евангеличка црква"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Тошин бунар, 2",
+    "en": "Tošin bunar 2",
+    "uk": "Вул. Тошин бунар, 2",
+    "sr": "Тошин бунар 2"
+  },
+  "minYear": 1930,
+  "maxYear": 1930,
+  "yearLabelId": "year-1930",
+  "styleIds": [
+    "modern-architecture"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.403974,
+    44.8413194
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4038879,
+          44.8413688
+        ],
+        [
+          20.403904,
+          44.8413825
+        ],
+        [
+          20.4039266,
+          44.8413899
+        ],
+        [
+          20.404021,
+          44.8413988
+        ],
+        [
+          20.4040487,
+          44.8413931
+        ],
+        [
+          20.4040812,
+          44.8413796
+        ],
+        [
+          20.4041022,
+          44.8412563
+        ],
+        [
+          20.4040327,
+          44.8412504
+        ],
+        [
+          20.4040266,
+          44.841286
+        ],
+        [
+          20.4039291,
+          44.8412777
+        ],
+        [
+          20.4039359,
+          44.8412379
+        ],
+        [
+          20.4038594,
+          44.8412313
+        ],
+        [
+          20.4038424,
+          44.8413308
+        ],
+        [
+          20.4038936,
+          44.8413352
+        ],
+        [
+          20.4038879,
+          44.8413688
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/407080813).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/407080813).",
+    "sr": "Контура OpenStreetMap (way/407080813).",
+    "uk": "Контур OpenStreetMap (way/407080813)."
+  },
+  "photos": [
+    "15719d7d8ad895b66c2d61c40df300a069c33bf315ba91622218a7b558d791b3"
+  ],
+  "source": "https://www.openstreetmap.org/way/407080813",
+  "otherSource": "https://www.wikidata.org/wiki/Q1272761"
+}

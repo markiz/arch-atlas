@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-295686322",
+  "osmId": "way/295686322",
+  "names": {
+    "ru": "Дом семьи Найданович",
+    "en": "Family House of the Najdanović Family",
+    "uk": "Будинок родини Найданович",
+    "sr": "Кућа породице Најдановић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Гаврила Принципа, 35",
+    "en": "Gavrila Principa 35",
+    "uk": "Вул. Гаврила Принципа, 35",
+    "sr": "Гаврила Принципа 35"
+  },
+  "minYear": 1830,
+  "maxYear": 1830,
+  "yearLabelId": "year-1830",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4560615,
+    44.8121458
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4560336,
+          44.8120686
+        ],
+        [
+          20.4559518,
+          44.8121625
+        ],
+        [
+          20.4560894,
+          44.8122229
+        ],
+        [
+          20.4561334,
+          44.8121724
+        ],
+        [
+          20.4561712,
+          44.812129
+        ],
+        [
+          20.4560336,
+          44.8120686
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/295686322).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/295686322).",
+    "sr": "Контура OpenStreetMap (way/295686322).",
+    "uk": "Контур OpenStreetMap (way/295686322)."
+  },
+  "photos": [
+    "798b763cfb715cdaded8dddcec877f145504773f6668ba031ee3a2d35d0d7328"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279777"
+}

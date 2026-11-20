@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-403077202",
+  "osmId": "way/403077202",
+  "names": {
+    "ru": "Дом, в котором родился Димитрие Давидович",
+    "en": "House Where Dimitrije Davidović Was Born",
+    "uk": "Будинок, у якому народився Димитріє Давидович",
+    "sr": "Кућа у којој се родио Димитрије Давидовић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Главна, 6",
+    "en": "Glavna 6",
+    "uk": "Вул. Главна, 6",
+    "sr": "Главна 6"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "classical"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "residential",
+  "coordinates": [
+    20.4135095,
+    44.8422731
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4135472,
+          44.8424179
+        ],
+        [
+          20.413382,
+          44.8423732
+        ],
+        [
+          20.4133634,
+          44.8423443
+        ],
+        [
+          20.4135159,
+          44.842119
+        ],
+        [
+          20.4136566,
+          44.8421664
+        ],
+        [
+          20.4135478,
+          44.8423303
+        ],
+        [
+          20.4135941,
+          44.8423437
+        ],
+        [
+          20.4135472,
+          44.8424179
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/403077202).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/403077202).",
+    "sr": "Контура OpenStreetMap (way/403077202).",
+    "uk": "Контур OpenStreetMap (way/403077202)."
+  },
+  "photos": [
+    "4e7001ba15d8eae6fc74ccfdc821a4bab87cca41a475437337230ad8e641d3b4"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/zemun/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3280228"
+}

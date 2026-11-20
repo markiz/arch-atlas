@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-400115399",
+  "osmId": "way/400115399",
+  "names": {
+    "ru": "Вилла актрисы Марицы Попович",
+    "en": "Villa of Actress Marica Popović",
+    "uk": "Вілла акторки Мариці Попович",
+    "sr": "Вила глумице Марице Поповић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Сенячка, 35",
+    "en": "Senjačka 35",
+    "uk": "Вул. Сенячка, 35",
+    "sr": "Сењачка 35"
+  },
+  "minYear": 1939,
+  "maxYear": 1939,
+  "yearLabelId": "year-1939",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4378974,
+    44.7921648
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4378849,
+          44.792261
+        ],
+        [
+          20.4377967,
+          44.7922074
+        ],
+        [
+          20.4378517,
+          44.7921618
+        ],
+        [
+          20.4378057,
+          44.7921338
+        ],
+        [
+          20.4378822,
+          44.7920703
+        ],
+        [
+          20.4380165,
+          44.7921519
+        ],
+        [
+          20.4378849,
+          44.792261
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/400115399).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/400115399).",
+    "sr": "Контура OpenStreetMap (way/400115399).",
+    "uk": "Контур OpenStreetMap (way/400115399)."
+  },
+  "photos": [
+    "7642186cb71fe57c849e8f9ba580bd9d8c918f07d8ddc874b9ed1fb1b65b9b00"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85992813"
+}

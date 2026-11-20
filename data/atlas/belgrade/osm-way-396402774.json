@@ -1,0 +1,94 @@
+{
+  "id": "osm-way-396402774",
+  "osmId": "way/396402774",
+  "names": {
+    "ru": "Дом архитектора Милана Злоковича",
+    "en": "House of Architect Milan Zloković",
+    "uk": "Будинок архітектора Мілана Злоковича",
+    "sr": "Кућа архитекте Милана Злоковића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Интернациональных бригад, 76",
+    "en": "Internacionalnih brigada 76",
+    "uk": "Вул. Інтернаціональних бригад, 76",
+    "sr": "Интернационалних бригада 76"
+  },
+  "minYear": 1927,
+  "maxYear": 1927,
+  "yearLabelId": "year-1927",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3079336"
+  ],
+  "districtId": "vracar",
+  "type": "residential",
+  "coordinates": [
+    20.4766311,
+    44.7947292
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4765395,
+          44.7947914
+        ],
+        [
+          20.4766728,
+          44.7947912
+        ],
+        [
+          20.4766729,
+          44.7947705
+        ],
+        [
+          20.4766998,
+          44.7947691
+        ],
+        [
+          20.476751,
+          44.7947136
+        ],
+        [
+          20.4766753,
+          44.7946776
+        ],
+        [
+          20.4766089,
+          44.794646
+        ],
+        [
+          20.4765643,
+          44.7946906
+        ],
+        [
+          20.4765623,
+          44.7947196
+        ],
+        [
+          20.4765416,
+          44.794718
+        ],
+        [
+          20.4765395,
+          44.7947914
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396402774).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396402774).",
+    "sr": "Контура OpenStreetMap (way/396402774).",
+    "uk": "Контур OpenStreetMap (way/396402774)."
+  },
+  "photos": [
+    "e8e625de0a2cfef3fa7e460c301060113f5e1ca5d94da904d9fac8de72431520"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279481"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-392941599",
+  "osmId": "way/392941599",
+  "names": {
+    "ru": "Дом Йована Скерлича",
+    "en": "House of Jovan Skerlić",
+    "uk": "Будинок Йована Скерлича",
+    "sr": "Кућа Јована Скерлића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Господаря Йована, 42",
+    "en": "Gospodar Jovanova 42",
+    "uk": "Вул. Господаря Йована, 42",
+    "sr": "Господар Јованова 42"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4618351,
+    44.8202275
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4617038,
+          44.8202408
+        ],
+        [
+          20.4618012,
+          44.8203186
+        ],
+        [
+          20.4619669,
+          44.8202143
+        ],
+        [
+          20.461868,
+          44.8201365
+        ],
+        [
+          20.4617038,
+          44.8202408
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392941599).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392941599).",
+    "sr": "Контура OpenStreetMap (way/392941599).",
+    "uk": "Контур OpenStreetMap (way/392941599)."
+  },
+  "photos": [
+    "ff1315fd4a44ce93f591c3ad464726c9649264b362dc5748ec4540a581187b20"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279411"
+}

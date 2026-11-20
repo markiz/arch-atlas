@@ -1,0 +1,114 @@
+{
+  "id": "osm-way-527970702",
+  "osmId": "way/527970702",
+  "names": {
+    "ru": "Дом Вучины на Саве",
+    "en": "Vučina House on the Sava",
+    "uk": "Будинок Вучини на Саві",
+    "sr": "Вучина кућа на Сави"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Караджорджева 61-61а",
+    "en": "Karađorđeva 61-61a",
+    "uk": "Вул. Караджорджева 61-61а",
+    "sr": "Карађорђева 61-61а"
+  },
+  "minYear": 1908,
+  "maxYear": 1908,
+  "yearLabelId": "year-1908",
+  "styleIds": [
+    "art-nouveau"
+  ],
+  "architectIds": [
+    "architect-q3028170"
+  ],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4528008,
+    44.8132159
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4530596,
+          44.8130811
+        ],
+        [
+          20.4530413,
+          44.8131022
+        ],
+        [
+          20.4529864,
+          44.8131658
+        ],
+        [
+          20.4529169,
+          44.8132384
+        ],
+        [
+          20.4528024,
+          44.8132018
+        ],
+        [
+          20.4527603,
+          44.813231
+        ],
+        [
+          20.4528801,
+          44.8132426
+        ],
+        [
+          20.4528496,
+          44.8134062
+        ],
+        [
+          20.4526101,
+          44.8133822
+        ],
+        [
+          20.4525775,
+          44.8133583
+        ],
+        [
+          20.4525505,
+          44.8133181
+        ],
+        [
+          20.4526266,
+          44.8132409
+        ],
+        [
+          20.4528054,
+          44.8130595
+        ],
+        [
+          20.4528666,
+          44.8129974
+        ],
+        [
+          20.4529937,
+          44.8130525
+        ],
+        [
+          20.4530596,
+          44.8130811
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/527970702).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/527970702).",
+    "sr": "Контура OpenStreetMap (way/527970702).",
+    "uk": "Контур OpenStreetMap (way/527970702)."
+  },
+  "photos": [
+    "de0c1cf65f408528c909606c3e8f7b0c13381647785b16d2e2491696ec50b56f"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279059"
+}

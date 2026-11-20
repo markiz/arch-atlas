@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-393061453",
+  "osmId": "way/393061453",
+  "names": {
+    "ru": "Дом семьи Рибар",
+    "en": "Family House of the Ribar Family",
+    "uk": "Будинок родини Рибар",
+    "sr": "Кућа породице Рибар"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Французская, 32",
+    "en": "Francuska 32",
+    "uk": "Вул. Французька, 32",
+    "sr": "Француска 32"
+  },
+  "minYear": 1922,
+  "maxYear": 1922,
+  "yearLabelId": "year-1922",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4655561,
+    44.8193118
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4655832,
+          44.8194293
+        ],
+        [
+          20.4656269,
+          44.8193676
+        ],
+        [
+          20.4656554,
+          44.8193275
+        ],
+        [
+          20.4656144,
+          44.8192946
+        ],
+        [
+          20.4656736,
+          44.8192649
+        ],
+        [
+          20.4655999,
+          44.8191981
+        ],
+        [
+          20.465427,
+          44.8193049
+        ],
+        [
+          20.4654215,
+          44.8193269
+        ],
+        [
+          20.4655832,
+          44.8194293
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393061453).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393061453).",
+    "sr": "Контура OpenStreetMap (way/393061453).",
+    "uk": "Контур OpenStreetMap (way/393061453)."
+  },
+  "photos": [
+    "4b558c10f33173c7bd68b1b5425c658a9d948e8c4db06e7e6e37b766e10b788c"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3278961"
+}

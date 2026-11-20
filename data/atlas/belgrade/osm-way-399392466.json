@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-399392466",
+  "osmId": "way/399392466",
+  "names": {
+    "ru": "Церковный гостевой дом в Топчидере",
+    "en": "Church Guesthouse in Topčider",
+    "uk": "Церковний гостьовий будинок у Топчидері",
+    "sr": "Црквени конак у Топчидеру"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Воеводы Путника, 11",
+    "en": "Vojvode Putnika Boulevard 11",
+    "uk": "Бульвар Воєводи Путника, 11",
+    "sr": "Булевар војводе Путника 11"
+  },
+  "minYear": 1832,
+  "maxYear": 1832,
+  "yearLabelId": "year-1832",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "religious",
+  "coordinates": [
+    20.4437907,
+    44.781675
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.443735,
+          44.7817615
+        ],
+        [
+          20.4436687,
+          44.7816345
+        ],
+        [
+          20.4438455,
+          44.781589
+        ],
+        [
+          20.4439139,
+          44.7817144
+        ],
+        [
+          20.443735,
+          44.7817615
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399392466).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399392466).",
+    "sr": "Контура OpenStreetMap (way/399392466).",
+    "uk": "Контур OpenStreetMap (way/399392466)."
+  },
+  "photos": [
+    "b4b82454704e4b19cf3a53191271ff275ebbe3d1fe3755f8e4401aaebfe9c9e1"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3280248"
+}

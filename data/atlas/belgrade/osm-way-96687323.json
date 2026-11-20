@@ -1,0 +1,78 @@
+{
+  "id": "osm-way-96687323",
+  "osmId": "way/96687323",
+  "names": {
+    "ru": "Дом Милана Пирочанца",
+    "en": "House of Milan Piroćanac",
+    "uk": "Будинок Мілана Пірочанця",
+    "sr": "Кућа Милана Пироћанца"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Французская 7, Симина, 20",
+    "en": "Francuska 7, Simina 20",
+    "uk": "Вул. Французька 7, Симина, 20",
+    "sr": "Француска 7, Симина 20"
+  },
+  "minYear": 1884,
+  "maxYear": 1884,
+  "yearLabelId": "year-1884",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-q3187158"
+  ],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4621841,
+    44.8176974
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4620043,
+          44.8177071
+        ],
+        [
+          20.4621871,
+          44.8178253
+        ],
+        [
+          20.4622767,
+          44.8177556
+        ],
+        [
+          20.4623639,
+          44.8176877
+        ],
+        [
+          20.4622824,
+          44.8176351
+        ],
+        [
+          20.462181,
+          44.8175695
+        ],
+        [
+          20.4620043,
+          44.8177071
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/96687323).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/96687323).",
+    "sr": "Контура OpenStreetMap (way/96687323).",
+    "uk": "Контур OpenStreetMap (way/96687323)."
+  },
+  "photos": [
+    "1d813e038c39fdd74a9633b0eabf33e251a4a19a8ec47f6e30b0cc39fb86dc1c"
+  ],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279480"
+}

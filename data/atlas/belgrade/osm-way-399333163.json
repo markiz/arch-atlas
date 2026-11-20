@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-399333163",
+  "osmId": "way/399333163",
+  "names": {
+    "ru": "Вилла Штерич",
+    "en": "Villa Šterić",
+    "uk": "Вілла Штерич",
+    "sr": "Вила Штерић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Генерала Штурма, 4",
+    "en": "Generala Šturma 4",
+    "uk": "Вул. Генерала Штурма, 4",
+    "sr": "Генерала Штурма 4"
+  },
+  "minYear": 1932,
+  "maxYear": 1932,
+  "yearLabelId": "year-1932",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "residential",
+  "coordinates": [
+    20.4565992,
+    44.78231
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4564605,
+          44.7823635
+        ],
+        [
+          20.4565255,
+          44.782211
+        ],
+        [
+          20.4567378,
+          44.7822565
+        ],
+        [
+          20.4566729,
+          44.7824091
+        ],
+        [
+          20.4564605,
+          44.7823635
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399333163).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399333163).",
+    "sr": "Контура OpenStreetMap (way/399333163).",
+    "uk": "Контур OpenStreetMap (way/399333163)."
+  },
+  "photos": [],
+  "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
+  "otherSource": "https://www.wikidata.org/wiki/Q85992809"
+}
