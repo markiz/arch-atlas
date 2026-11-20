@@ -27,6 +27,7 @@ import {
   type BuildingPhotos,
 } from './photos';
 import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
+import { readResponseBytes } from './fetch-progress';
 
 const initialFilters: Filters = {
   query: '',
@@ -610,6 +611,23 @@ function PhotoLightbox({
     document.body,
   );
 }
+function LoaderLine({ value }: { value?: number }) {
+  const { t } = useI18n();
+  const determinate = value !== undefined;
+  const percent = determinate ? Math.round(Math.max(0, Math.min(1, value)) * 100) : null;
+  return (
+    <div
+      className={`loader-line${determinate ? '' : ' indeterminate'}`}
+      role={determinate ? 'progressbar' : undefined}
+      aria-label={determinate ? t('Загрузка данных') : undefined}
+      aria-valuemin={determinate ? 0 : undefined}
+      aria-valuemax={determinate ? 100 : undefined}
+      aria-valuenow={percent ?? undefined}
+    >
+      <span style={percent === null ? undefined : { width: `${percent}%` }} />
+    </div>
+  );
+}
 function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void }) {
   const { t } = useI18n();
   return (
@@ -619,7 +637,7 @@ function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void 
       </div>
       <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
       <h1>{t('АРХИТЕКТУРНЫЙ АТЛАС')}</h1>
-      <div className="loader-line" />
+      <LoaderLine />
       <p>{error || t('Загружаем карту и данные…')}</p>
       {error && (
         <button className="primary-button" onClick={onRetry}>
@@ -633,6 +651,7 @@ function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void 
 function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data) => void }) {
   const { t, language } = useI18n();
   const [status, setStatus] = useState('Загружаем карту и данные…'),
+    [progress, setProgress] = useState<number | null>(null),
     [error, setError] = useState(''),
     [attempt, setAttempt] = useState(0);
   useEffect(() => {
@@ -642,6 +661,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
       try {
         setError('');
         setStatus('Загружаем карту и данные…');
+        setProgress(null);
         const revision = import.meta.env.DEV
           ? String(Date.now())
           : (city.manifestRevision ?? __ATLAS_REVISION__);
@@ -675,32 +695,50 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
         const initialFiles = manifest.files.filter((file) => corePaths.has(file.path));
         if (initialFiles.length !== corePaths.size) throw new Error('В пакете нет данных города');
         const photoFiles = new Map(manifest.files.map((file) => [file.path, file]));
-        const files = new Map<string, ArrayBuffer>();
+        const files = new Map<string, Uint8Array>();
         let done = 0;
         const total = initialFiles.reduce((n, file) => n + file.size, 0);
         let loaded = 0;
         let nextFile = 0;
+        let lastReport = -Infinity;
+        const report = (force = false) => {
+          if (cancelled) return;
+          const now = performance.now();
+          if (!force && now - lastReport < 100) return;
+          lastReport = now;
+          setProgress(total > 0 ? loaded / total : 0);
+          setStatus(
+            `Загружено ${(loaded / 1048576).toFixed(1)} из ${(total / 1048576).toFixed(1)} МБ · ${done}/${initialFiles.length}`,
+          );
+        };
+        report(true);
         const loadNext = async () => {
           while (nextFile < initialFiles.length) {
             const file = initialFiles[nextFile++];
             if (file.path.includes('..') || file.path.startsWith('/'))
               throw new Error('Некорректный путь в пакете');
-            const bytes = await (await get(file.path, file.sha256)).arrayBuffer();
+            let fileLoaded = 0;
+            const response = await get(file.path, file.sha256);
+            const bytes = await readResponseBytes(response, file.size, (value) => {
+              loaded += value - fileLoaded;
+              fileLoaded = value;
+              report();
+            });
             const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
               .map((x) => x.toString(16).padStart(2, '0'))
               .join('');
-            if (bytes.byteLength !== file.size || hash !== file.sha256)
-              throw new Error(`Поврежден файл ${file.path}`);
+            if (hash !== file.sha256) throw new Error(`Поврежден файл ${file.path}`);
             files.set(file.path, bytes);
             done++;
-            loaded += file.size;
-            if (!cancelled)
-              setStatus(
-                `Загружено ${(loaded / 1048576).toFixed(1)} из ${(total / 1048576).toFixed(1)} МБ · ${done}/${initialFiles.length}`,
-              );
+            report(true);
           }
         };
         await Promise.all(Array.from({ length: Math.min(6, initialFiles.length) }, loadNext));
+        if (cancelled) return;
+        setProgress(1);
+        setStatus('Подготавливаем карту и фотографии');
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        if (cancelled) return;
         const decode = (path: string) => {
           const bytes = files.get(path);
           if (!bytes) throw new Error(`В пакете нет ${path}`);
@@ -743,8 +781,10 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
       </div>
       <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
       <h1>{cityTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)}</h1>
-      <div className="loader-line" />
-      <p>{error || t(status)}</p>
+      <LoaderLine value={error ? undefined : (progress ?? undefined)} />
+      <p>
+        {error || (progress !== null ? `${Math.round(progress * 100)}% · ${t(status)}` : t(status))}
+      </p>
       {error && (
         <button className="primary-button" onClick={() => setAttempt((x) => x + 1)}>
           {t('Попробовать снова')}

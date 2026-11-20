@@ -875,8 +875,27 @@ footer b {
 .loader-line {
   width: 150px;
   height: 2px;
-  background: linear-gradient(to right, #708f75 65%, #e0e6dc 65%);
+  background: #e0e6dc;
   margin: 27px 0 10px;
+  overflow: hidden;
+}
+.loader-line > span {
+  display: block;
+  height: 100%;
+  background: #708f75;
+  transition: width 120ms linear;
+}
+.loader-line.indeterminate > span {
+  width: 40%;
+  animation: loader-sweep 1.3s ease-in-out infinite;
+}
+@keyframes loader-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
 }
 .loading > p:last-of-type {
   font-size: 12px;
@@ -1146,6 +1165,9 @@ footer b {
     scroll-behavior: auto !important;
     transition: none !important;
     animation: none !important;
+  }
+  .loader-line.indeterminate > span {
+    width: 65%;
   }
 }
 .landmark-icon {
