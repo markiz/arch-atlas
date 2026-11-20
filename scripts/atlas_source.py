@@ -47,20 +47,20 @@ def fit_width(image, width: int = FREE_PHOTO_WIDTH):
     return image.resize((width, height))
 
 
-def read_cards() -> dict[str, dict[str, Any]]:
+def read_cards(city: str = CITY) -> dict[str, dict[str, Any]]:
     cards: dict[str, dict[str, Any]] = {}
-    for path in sorted(SOURCE_DIR.glob('*.json')):
+    for path in sorted((ROOT / 'data/atlas' / city).glob('*.json')):
         card = json.loads(path.read_text(encoding='utf-8'))
         cards[card['id']] = card
     return cards
 
 
-def card_path(card_id: str) -> Path:
-    return SOURCE_DIR / f'{card_id}.json'
+def source_card_path(card_id: str, city: str = CITY) -> Path:
+    return ROOT / 'data/atlas' / city / f'{card_id}.json'
 
 
-def write_card(card: dict[str, Any]) -> None:
-    path = card_path(card['id'])
+def write_card(card: dict[str, Any], city: str = CITY) -> None:
+    path = source_card_path(card['id'], city)
     temporary = path.with_name(f'.{path.name}.{uuid.uuid4().hex}.tmp')
     temporary.write_text(
         json.dumps(card, ensure_ascii=False, indent=2) + '\n',
@@ -69,9 +69,9 @@ def write_card(card: dict[str, Any]) -> None:
     temporary.replace(path)
 
 
-def write_cards(cards: Iterable[dict[str, Any]]) -> None:
+def write_cards(cards: Iterable[dict[str, Any]], city: str = CITY) -> None:
     for card in cards:
-        write_card(card)
+        write_card(card, city)
 
 
 def photo_path(photo_id: str, city: str = CITY) -> Path:
@@ -92,7 +92,7 @@ def thumb_path(photo_id: str, city: str = CITY) -> Path:
     return THUMBNAILS_DIR / city / f'{photo_id}.webp'
 
 
-def card_path(photo_id: str, city: str = CITY) -> Path:
+def photo_card_path(photo_id: str, city: str = CITY) -> Path:
     """Small catalog-only preview; the 720 px thumb stays for the inspector."""
     if not PHOTO_ID_RE.fullmatch(photo_id):
         raise ValueError(f'photo id must be a lowercase sha256: {photo_id}')
@@ -291,7 +291,11 @@ def _record_photo_id(record: dict[str, Any]) -> str:
     return photo_id
 
 
-def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, Any] | None]) -> int:
+def attach_photos(
+    cards: dict[str, dict[str, Any]],
+    photos: dict[str, dict[str, Any] | None],
+    city: str = CITY,
+) -> int:
     """Attach downloaded photos to cards as ordered sha256 identifiers."""
     added = 0
     for card_id, record in photos.items():
@@ -303,7 +307,7 @@ def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, 
             continue
         photo_id = _record_photo_id(record)
         metadata = {field: record.get(field) for field in PHOTO_METADATA_FIELDS + PHOTO_OPTIONAL_FIELDS}
-        write_photo_metadata(photo_id, metadata)
+        write_photo_metadata(photo_id, metadata, city)
         current = card.setdefault('photos', [])
         if photo_id in current:
             print('already attached', card_id)
@@ -317,6 +321,6 @@ def attach_photos(cards: dict[str, dict[str, Any]], photos: dict[str, dict[str, 
             print('already attached', card_id)
             continue
         current.append(photo_id)
-        write_card(card)
+        write_card(card, city)
         added += 1
     return added

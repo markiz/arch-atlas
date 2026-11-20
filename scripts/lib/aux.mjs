@@ -42,8 +42,6 @@ function requireLabels(file, value, field) {
 
 function validateTable(file, table) {
   if (!isPlainObject(table)) fail(file, 'must be an object with id -> entry');
-  const ids = Object.keys(table);
-  if (!ids.length) fail(file, 'must not be empty');
   for (const [id, entry] of Object.entries(table)) {
     requireString(file, id, 'id');
     if (!isPlainObject(entry)) fail(file, `${id} must be an object`);

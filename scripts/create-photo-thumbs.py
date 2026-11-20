@@ -31,6 +31,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import shutil
 import sys
@@ -44,7 +45,7 @@ from atlas_source import (
     CITY,
     PHOTO_ID_RE,
     THUMBNAILS_DIR,
-    card_path,
+    photo_card_path,
     photo_path,
     read_cards,
     thumb_path,
@@ -117,13 +118,8 @@ def prune_previews(directory: Path, expected: set[Path]) -> int:
     return removed
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--dry-run', action='store_true')
-    parser.add_argument('--force', action='store_true', help='regenerate existing previews too')
-    args = parser.parse_args()
-
-    cards = read_cards()
+def process_city(city: str, args) -> int:
+    cards = read_cards(city)
     jobs: dict[str, tuple[Path, Path, Path]] = {}
     expected_thumbs: set[Path] = set()
     expected_cards: set[Path] = set()
@@ -136,9 +132,9 @@ def main() -> int:
                 continue
             if photo_id in jobs:
                 continue
-            source = photo_path(photo_id)
-            thumb = thumb_path(photo_id)
-            card_target = card_path(photo_id)
+            source = photo_path(photo_id, city)
+            thumb = thumb_path(photo_id, city)
+            card_target = photo_card_path(photo_id, city)
             jobs[photo_id] = (source, thumb, card_target)
             expected_thumbs.add(thumb)
             expected_cards.add(card_target)
@@ -206,14 +202,46 @@ def main() -> int:
 
     removed = removed_cards = 0
     if not args.dry_run:
-        removed = prune_previews(THUMBNAILS_DIR / CITY, expected_thumbs)
-        removed_cards = prune_previews(CARDS_DIR / CITY, expected_cards)
+        removed = prune_previews(THUMBNAILS_DIR / city, expected_thumbs)
+        removed_cards = prune_previews(CARDS_DIR / city, expected_cards)
     print(
-        f'Photo previews: {created} {"would be " if args.dry_run else ""}created, '
+        f'Photo previews {city}: {created} {"would be " if args.dry_run else ""}created, '
         f'{skipped} up to date, {removed} stale previews removed, '
         f'{removed_cards} stale cards removed, {errors} errors.'
     )
     return 1 if errors else 0
+
+
+def city_ids(only: str | None) -> list[str]:
+    root = Path(__file__).resolve().parent.parent
+    index = json.loads((root / 'data/cities/index.json').read_text(encoding='utf-8'))
+    cities = []
+    for city in index.get('order', []):
+        if only and city != only:
+            continue
+        config = json.loads((root / f'data/cities/{city}.json').read_text(encoding='utf-8'))
+        if config.get('status') == 'ready':
+            cities.append(city)
+    return cities
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--force', action='store_true', help='regenerate existing previews too')
+    parser.add_argument('--city')
+    parser.add_argument('--all', action='store_true')
+    args = parser.parse_args()
+    if args.city and args.all:
+        parser.error('--city and --all are mutually exclusive')
+    cities = city_ids(args.city)
+    if not cities:
+        print(f'No ready cities for {args.city or "--all"}', file=sys.stderr)
+        return 1
+    status = 0
+    for city in cities:
+        status = max(status, process_city(city, args))
+    return status
 
 
 if __name__ == '__main__':

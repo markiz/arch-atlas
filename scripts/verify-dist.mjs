@@ -2,48 +2,82 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { Progress } from './lib/progress.mjs';
+
 const root = 'dist/atlas/';
-const manifest = JSON.parse(await readFile(root + 'manifest.json', 'utf8'));
-const paths = new Set();
-const progress = new Progress(manifest.files.length, { label: 'verify dist files' });
-progress.start();
-for (const f of manifest.files) {
-  assert(!paths.has(f.path), 'duplicate manifest path: ' + f.path);
-  paths.add(f.path);
-  const bytes = await readFile(root + f.path);
-  assert.equal(bytes.length, f.size, f.path + ' size');
-  assert.equal(createHash('sha256').update(bytes).digest('hex'), f.sha256, f.path + ' hash');
-  if (f.path.endsWith('.webp'))
-    assert(
-      bytes.subarray(0, 4).toString() === 'RIFF' && bytes.subarray(8, 12).toString() === 'WEBP',
-      f.path + ' image format',
-    );
-  progress.advance(f.path);
-}
-progress.finish();
-const buildings = JSON.parse(await readFile(root + 'buildings.json', 'utf8'));
-assert(buildings.length > 0, 'the atlas has no buildings');
-assert(paths.has('building-outlines.geojson'), 'optional building outlines missing from manifest');
-const basemap = JSON.parse(await readFile(root + 'basemap.geojson', 'utf8'));
-assert(
-  basemap.features.every((feature) => feature.properties?.kind !== 'building'),
-  'ordinary buildings leaked into the initial basemap',
-);
-const outlines = JSON.parse(await readFile(root + 'building-outlines.geojson', 'utf8'));
-assert(
-  outlines.features.length > 0 &&
-    outlines.features.every((feature) => feature.properties?.kind === 'building'),
-  'invalid optional building outlines',
-);
-for (const b of buildings) {
-  assert(b.geometry, `${b.id} missing outline`);
-  for (const photo of b.photos ?? []) {
-    assert(paths.has(photo.file), `${b.id} photo not in manifest`);
-    assert(photo.thumb && paths.has(photo.thumb), `${b.id} photo preview not in manifest`);
+const catalog = JSON.parse(await readFile(`${root}cities.json`, 'utf8'));
+assert.equal(catalog.version, 1, 'catalog version');
+assert(Array.isArray(catalog.cities) && catalog.cities.length > 0, 'catalog has no cities');
+const defaultCity = catalog.cities.find((city) => city.id === catalog.defaultCity);
+assert(defaultCity && defaultCity.status === 'ready', 'default city must be ready');
+
+let totalFiles = 0;
+let totalBuildings = 0;
+for (const city of catalog.cities) {
+  if (city.status !== 'ready') {
+    assert(!city.manifestRevision, `${city.id}: coming-soon city must not have a package`);
+    continue;
   }
+  const base = `${root}cities/${city.id}/`;
+  const manifest = JSON.parse(await readFile(`${base}manifest.json`, 'utf8'));
+  assert.equal(manifest.version, 2, `${city.id}: manifest version`);
+  assert.equal(manifest.city, city.id, `${city.id}: manifest city`);
+  assert(
+    manifest.entry && manifest.entry.buildings && manifest.entry.basemap && manifest.entry.outlines,
+    `${city.id}: manifest entry`,
+  );
+  const paths = new Set();
+  const progress = new Progress(manifest.files.length, { label: `verify ${city.id} files` });
+  progress.start();
+  for (const file of manifest.files) {
+    assert(!paths.has(file.path), `${city.id}: duplicate manifest path ${file.path}`);
+    assert(!file.path.includes('..') && !file.path.startsWith('/'), `${city.id}: unsafe path`);
+    paths.add(file.path);
+    const bytes = await readFile(`${root}${file.path}`);
+    assert.equal(bytes.length, file.size, `${file.path}: size`);
+    assert.equal(
+      createHash('sha256').update(bytes).digest('hex'),
+      file.sha256,
+      `${file.path}: hash`,
+    );
+    if (file.path.endsWith('.webp'))
+      assert(
+        bytes.subarray(0, 4).toString() === 'RIFF' && bytes.subarray(8, 12).toString() === 'WEBP',
+        `${file.path}: image format`,
+      );
+    progress.advance(file.path);
+  }
+  progress.finish();
+  for (const entry of Object.values(manifest.entry))
+    assert(paths.has(entry), `${city.id}: entry ${entry} is not in the manifest`);
+  const buildings = JSON.parse(await readFile(`${root}${manifest.entry.buildings}`, 'utf8'));
+  assert(Array.isArray(buildings), `${city.id}: buildings must be an array`);
+  if (!city.counts?.buildings)
+    assert.equal(buildings.length, 0, `${city.id}: empty city has cards`);
+  for (const building of buildings) {
+    assert.equal(building.cityId, city.id, `${building.id}: cityId`);
+    assert(building.geometry, `${building.id}: missing outline`);
+    for (const photo of building.photos ?? []) {
+      assert(paths.has(photo.file), `${building.id}: photo not in manifest`);
+      assert(
+        photo.thumb && paths.has(photo.thumb),
+        `${building.id}: photo preview not in manifest`,
+      );
+    }
+  }
+  const basemap = JSON.parse(await readFile(`${root}${manifest.entry.basemap}`, 'utf8'));
+  assert.equal(basemap.type, 'FeatureCollection', `${city.id}: basemap type`);
+  assert(
+    basemap.features.every((feature) => feature.properties?.kind !== 'building'),
+    `${city.id}: ordinary buildings leaked into basemap`,
+  );
+  const outlineBytes = await readFile(`${root}${manifest.entry.outlines}`);
+  assert(outlineBytes.subarray(0, 8).toString() === 'ATLOUT01', `${city.id}: outline magic`);
+  assert(outlineBytes.byteLength >= 32, `${city.id}: outline header`);
+  totalFiles += manifest.files.length;
+  totalBuildings += buildings.length;
 }
 const html = await readFile('dist/index.html', 'utf8');
 assert(!/\b(?:src|href)="https?:\/\//i.test(html), 'external asset in HTML');
 console.log(
-  `Verified dist: ${buildings.length} buildings, ${manifest.files.length} local resources and their SHA-256 hashes.`,
+  `Verified dist: ${catalog.cities.length} cities, ${totalBuildings} buildings, ${totalFiles} local resources and their SHA-256 hashes.`,
 );

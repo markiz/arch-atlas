@@ -36,6 +36,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import subprocess
 import sys
 import time
 import uuid
@@ -159,6 +160,7 @@ def load_stats_cache() -> dict[str, dict[str, Any]]:
 
 
 def save_stats_cache(images: dict[str, dict[str, Any]]) -> None:
+    images = {**load_stats_cache(), **images}
     """Write the cache atomically; a cache failure must not fail the build."""
     try:
         STATS_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -391,6 +393,7 @@ def distribution(values: list[int]) -> dict[str, int]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--city', default='tbilisi')
+    parser.add_argument('--all', action='store_true', help='process every ready city')
     parser.add_argument('--dry-run', action='store_true', help='compute without writing')
     parser.add_argument('--check', action='store_true', help='fail if any stored rating is stale or missing')
     parser.add_argument('--explain', metavar='PREFIX', help='print the breakdown for matching photo ids')
@@ -398,12 +401,30 @@ def main() -> int:
     args = parser.parse_args()
     if args.dry_run and args.check:
         parser.error('--dry-run and --check are mutually exclusive')
+    if args.all:
+        if args.city != 'tbilisi':
+            parser.error('--all and --city are mutually exclusive')
+        index = json.loads((ROOT / 'data/cities/index.json').read_text(encoding='utf-8'))
+        status = 0
+        for city in index.get('order', []):
+            config = json.loads((ROOT / f'data/cities/{city}.json').read_text(encoding='utf-8'))
+            if config.get('status') != 'ready':
+                continue
+            command = [sys.executable, __file__, '--city', city]
+            for flag in ('--dry-run', '--check'):
+                if getattr(args, flag[2:].replace('-', '_')):
+                    command.append(flag)
+            if args.report:
+                command.extend(['--report', str(args.report.with_name(f'{args.report.stem}-{city}{args.report.suffix}'))])
+            status = max(status, subprocess.run(command).returncode)
+        return status
 
     directory = PHOTOS_DIR / args.city
     images = sorted(directory.glob('*.webp'))
     if not images:
         print(f'No images in {directory.relative_to(ROOT)}', file=sys.stderr)
-        return 1
+        config = json.loads((ROOT / 'data/cities' / f'{args.city}.json').read_text(encoding='utf-8'))
+        return 0 if config.get('allowEmpty') else 1
 
     stats_cache = load_stats_cache()
 
