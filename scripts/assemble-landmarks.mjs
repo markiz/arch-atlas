@@ -67,15 +67,16 @@ function requireString(file, value, field, { allowEmpty = false } = {}) {
     fail(file, `${field} must be a ${allowEmpty ? '' : 'non-empty '}string`);
   return value;
 }
-function requireLabels(file, value, field, { allowEmpty = false } = {}) {
-  if (!isPlainObject(value)) fail(file, `${field} must be an object with ru/en/ka/uk`);
+function requireLabels(file, value, field, { allowEmpty = false, languages = LANGS } = {}) {
+  if (!isPlainObject(value)) fail(file, `${field} must be an object with ${languages.join('/')}`);
   if (
-    Object.keys(value).length !== LANGS.length ||
-    !LANGS.every((lang) => Object.hasOwn(value, lang))
+    Object.keys(value).length !== languages.length ||
+    !languages.every((lang) => Object.hasOwn(value, lang))
   )
-    fail(file, `${field} must contain exactly ru/en/ka/uk`);
-  for (const lang of LANGS) requireString(file, value[lang], `${field}.${lang}`, { allowEmpty });
-  return { ru: value.ru, en: value.en, ka: value.ka, uk: value.uk };
+    fail(file, `${field} must contain exactly ${languages.join('/')}`);
+  for (const lang of languages)
+    requireString(file, value[lang], `${field}.${lang}`, { allowEmpty });
+  return Object.fromEntries(languages.map((lang) => [lang, value[lang]]));
 }
 function requireUrl(file, value, field) {
   requireString(file, value, field);
@@ -94,7 +95,10 @@ function requireCoordinate(file, value, bounds) {
   if (!Array.isArray(value) || value.length !== 2 || !value.every(Number.isFinite))
     fail(file, 'coordinates must be [longitude, latitude]');
   const [lon, lat] = value;
-  if (bounds && (lon < bounds.west || lon > bounds.east || lat < bounds.south || lat > bounds.north))
+  if (
+    bounds &&
+    (lon < bounds.west || lon > bounds.east || lat < bounds.south || lat > bounds.north)
+  )
     fail(file, 'coordinates are outside the city bounds');
   return [lon, lat];
 }
@@ -112,23 +116,27 @@ function validateHeritage(file, value) {
   requireOptionalUrl(file, value.url, 'heritage.url');
   return value;
 }
-function validateRecognition(file, value) {
+function validateRecognition(file, value, languages = LANGS) {
   if (!isPlainObject(value)) fail(file, 'recognition must be an object');
   if (value.wikidata !== null && value.wikidata !== undefined && !/^Q[0-9]+$/.test(value.wikidata))
     fail(file, 'recognition.wikidata must be a QID or null');
   const wikipedia = value.wikipedia;
   if (!isPlainObject(wikipedia))
-    fail(file, 'recognition.wikipedia must be an object with ru/en/ka/uk');
+    fail(file, `recognition.wikipedia must be an object with ${languages.join('/')}`);
   if (
-    Object.keys(wikipedia).length !== LANGS.length ||
-    !LANGS.every((lang) => Object.hasOwn(wikipedia, lang))
+    Object.keys(wikipedia).length !== languages.length ||
+    !languages.every((lang) => Object.hasOwn(wikipedia, lang))
   )
-    fail(file, 'recognition.wikipedia must contain exactly ru/en/ka/uk');
-  for (const lang of LANGS)
+    fail(file, `recognition.wikipedia must contain exactly ${languages.join('/')}`);
+  for (const lang of languages)
     requireString(file, wikipedia[lang], `recognition.wikipedia.${lang}`, { allowEmpty: true });
   requireNullableString(file, value.commonsCategory, 'recognition.commonsCategory');
-  if (!Number.isInteger(value.languageCount) || value.languageCount < 0 || value.languageCount > 4)
-    fail(file, 'recognition.languageCount must be an integer from 0 to 4');
+  if (
+    !Number.isInteger(value.languageCount) ||
+    value.languageCount < 0 ||
+    value.languageCount > languages.length
+  )
+    fail(file, `recognition.languageCount must be an integer from 0 to ${languages.length}`);
   return value;
 }
 function validateSignificance(file, value) {
@@ -185,22 +193,26 @@ async function writeFileAtomic(file, contents) {
   await rename(temporary, file);
 }
 
-export function hydrateLandmark(record, file, rank) {
+export function hydrateLandmark(record, file, rank, languages = LANGS) {
   if (!isPlainObject(record)) fail(file, 'record must be an object');
   const id = requireString(file, record.id, 'id');
   const category = requireString(file, record.category, 'category');
   if (!CATEGORIES.has(category)) fail(file, `unknown category "${category}"`);
   const subcategory = requireString(file, record.subcategory, 'subcategory');
   if (!SUBCATEGORIES.has(subcategory)) fail(file, `unknown subcategory "${subcategory}"`);
-  const names = requireLabels(file, record.names, 'names');
-  requireLabels(file, record.addresses, 'addresses', { allowEmpty: true });
+  const names = requireLabels(file, record.names, 'names', { languages });
+  requireLabels(file, record.addresses, 'addresses', { allowEmpty: true, languages });
   const descriptions = requireLabels(file, record.descriptions, 'descriptions', {
     allowEmpty: true,
+    languages,
   });
   if (!DESCRIPTION_STATUSES.has(record.descriptionStatus))
     fail(file, `unknown descriptionStatus "${record.descriptionStatus}"`);
-  if (record.descriptionStatus === 'reviewed' && !LANGS.every((lang) => descriptions[lang].trim()))
-    fail(file, 'reviewed descriptions must be non-empty in all four languages');
+  if (
+    record.descriptionStatus === 'reviewed' &&
+    !languages.every((lang) => descriptions[lang].trim())
+  )
+    fail(file, `reviewed descriptions must be non-empty in all ${languages.length} languages`);
   const coordinates = requireCoordinate(file, record.coordinates);
   const source = requireUrl(file, record.source, 'source');
   if (!Array.isArray(record.otherSources)) fail(file, 'otherSources must be an array');
@@ -208,7 +220,7 @@ export function hydrateLandmark(record, file, rank) {
     requireUrl(file, url, `otherSources[${index}]`);
   if (record.otherSources.includes(source)) fail(file, 'source must not repeat in otherSources');
   const heritage = validateHeritage(file, record.heritage);
-  const recognition = validateRecognition(file, record.recognition);
+  const recognition = validateRecognition(file, record.recognition, languages);
   const significance = validateSignificance(file, record.significance);
   if (!STATUSES.has(record.status)) fail(file, `unknown status "${record.status}"`);
   if (!ACCESSES.has(record.access)) fail(file, `unknown access "${record.access}"`);
@@ -223,9 +235,10 @@ export function hydrateLandmark(record, file, rank) {
   const out = {
     id,
     name: names.ru,
-    nameKa: names.ka,
-    nameEn: names.en,
-    nameUk: names.uk,
+    nameKa: names.ka ?? '',
+    nameEn: names.en ?? '',
+    nameUk: names.uk ?? '',
+    ...(names.sr !== undefined ? { nameSr: names.sr } : {}),
     names,
     description: descriptions.ru,
     descriptions,
@@ -265,7 +278,7 @@ export async function assembleLandmarks({
   outFile,
   quiet = false,
   allowEmpty = false,
-  bounds = null,
+  languages = LANGS,
 } = {}) {
   if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
   const destination = outFile ?? path.join(root, '.cache', 'atlas', city, 'landmarks.json');
@@ -325,7 +338,12 @@ export async function assembleLandmarks({
       a.id.localeCompare(b.id),
   );
   const packed = landmarks.map((record, index) =>
-    hydrateLandmark(record, path.join('data', 'landmarks', city, `${record.id}.json`), index + 1, bounds),
+    hydrateLandmark(
+      record,
+      path.join('data', 'landmarks', city, `${record.id}.json`),
+      index + 1,
+      languages,
+    ),
   );
   // Catch exact duplicates that the id/osmId checks cannot see.
   for (let i = 0; i < packed.length; i++) {
@@ -358,18 +376,18 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     process.argv.find((value) => value.startsWith(`--${name}=`))?.slice(name.length + 3);
   const city = argument('city') ?? DEFAULT_CITY;
   const out = argument('out');
-  let bounds = null;
   let allowEmpty = false;
+  let languages = LANGS;
   try {
     const { readCityConfig } = await import('./lib/cities.mjs');
     const config = await readCityConfig(city);
-    bounds = { ...config.map.bounds };
     allowEmpty = config.allowEmpty;
+    languages = config.languages;
   } catch {}
   const result = await assembleLandmarks({
     city,
-    bounds,
     allowEmpty,
+    languages,
     outFile: out ? path.resolve(ROOT, out) : undefined,
   });
   console.log(

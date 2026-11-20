@@ -63,20 +63,21 @@ export async function buildAll({ mode = 'build', city: onlyCity, quiet = false }
     console.log(`[${city.id}] компактные контуры`);
     await buildOutlinesBinary({ city: city.id, quiet });
     console.log(`[${city.id}] справочники`);
-    await mergeAux({ city: city.id });
+    await mergeAux({ city: city.id, languages: city.languages });
     console.log(`[${city.id}] карточки`);
     await assembleAtlas({
       city: city.id,
       quiet,
       allowEmpty: city.allowEmpty,
       bounds: { ...city.map.bounds, city: city.id },
+      languages: city.languages,
     });
     console.log(`[${city.id}] ориентиры`);
     await assembleLandmarks({
       city: city.id,
       quiet,
       allowEmpty: true,
-      bounds: city.map.bounds,
+      languages: city.languages,
       outFile: path.join(ROOT, '.cache', 'atlas', city.id, 'landmarks.json'),
     });
     console.log(`[${city.id}] манифест`);

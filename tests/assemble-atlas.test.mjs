@@ -440,3 +440,57 @@ test('hydrated cards carry the city id', async () => {
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test('hydrates a Serbian city from its city language set', () => {
+  const sr = (ru, en, uk, value) => ({ ru, en, uk, sr: value });
+  const attributes = {
+    styles: { modern: { labels: sr('Модерн', 'Modern', 'Модерн', 'Модерна') } },
+    yearLabels: { 'year-2000': { labels: sr('2000', '2000', '2000', '2000') } },
+    districts: { centre: { labels: sr('Центр', 'Centre', 'Центр', 'Центар') } },
+    architects: { author: { labels: sr('Автор', 'Author', 'Автор', 'Аутор') } },
+    types: { public: { labels: sr('Общественный', 'Public', 'Громадський', 'Јавни') } },
+  };
+  const out = hydrateCard(
+    card('osm-sr', {
+      names: sr('Дом', 'House', 'Будинок', 'Кућа'),
+      addresses: sr('Улица 1', '1 Street', 'Вулиця 1', 'Улица 1'),
+      descriptions: sr('Описание', 'Description', 'Опис', 'Опис'),
+      histories: sr('История', 'History', 'Історія', 'Историја'),
+      yearLabelId: 'year-2000',
+      styleIds: ['modern'],
+      architectIds: ['author'],
+      districtId: 'centre',
+      type: 'public',
+      coordinates: [20.46, 44.81],
+      geometry: {
+        type: 'Polygon',
+        coordinates: [
+          [
+            [20.46, 44.81],
+            [20.461, 44.81],
+            [20.461, 44.811],
+            [20.46, 44.81],
+          ],
+        ],
+      },
+    }),
+    attributes,
+    'serbian-card',
+    'belgrade',
+    new Map(),
+    null,
+    ['ru', 'en', 'uk', 'sr'],
+  );
+  assert.equal(out.name, 'Дом');
+  assert.equal(out.nameSr, 'Кућа');
+  assert.equal(out.nameKa, '');
+  assert.deepEqual(Object.keys(out.names), ['ru', 'en', 'uk', 'sr']);
+  assert.deepEqual(out.architectsByLanguage, {
+    ru: ['Автор'],
+    en: ['Author'],
+    uk: ['Автор'],
+    sr: ['Аутор'],
+  });
+  assert.equal(out.districts.sr, 'Центар');
+  assert.equal(out.typeLabels.sr, 'Јавни');
+});

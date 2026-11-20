@@ -7,6 +7,7 @@ parser.add_argument('--city', default='tbilisi')
 city=parser.parse_args().city
 city_config=json.loads((root/'data'/'cities'/f'{city}.json').read_text())
 build_config=city_config.get('build') or {}
+city_languages=city_config.get('languages', ['ru','en','uk','ka'])
 raw_dir=root/build_config.get('rawDir', f'raw/osm/{city}')
 translations_dir=root/build_config.get('translationsDir', f'data/translations/{city}')
 selected_path=(raw_dir/build_config['selected']) if build_config.get('selected') else None
@@ -90,7 +91,7 @@ def georgian_label(value,language):
  return (transliterated+' '+suffix).strip()
 def name_candidates(tags):
  values=[]
- for key in ('name:ka','name','name:ru','name:en','name:uk'):
+ for key in ('name:ka','name:sr','name','name:ru','name:en','name:uk'):
   value=tags.get(key)
   if value and value not in values:values.append(value)
  return values
@@ -100,8 +101,8 @@ def apply_landmark_card(props,osm_id):
  props['landmarkId']=card.get('id')
  if card.get('category'):props['category']=card['category']
  names=card.get('names') or {}
- if all(names.get(language) for language in ('ru','en','ka','uk')):
-  props['names']={language:names[language] for language in ('ru','en','ka','uk')}
+ if all(names.get(language) for language in city_languages):
+  props['names']={language:names[language] for language in city_languages}
   props['name']=props['names']['ru']
  return props
 def polygon_centroid(ring):
@@ -134,8 +135,12 @@ def translated_names(tags):
   names['en']=georgian_label(original,'en');sources['en']='translit'
  else:
   names['en']=names['ru'];sources['en']='osm'
- names['ka']=tags.get('name:ka') or (tags.get('name') if is_georgian else original)
- sources['ka']='osm' if tags.get('name:ka') else ('ka' if is_georgian else 'osm')
+ if 'ka' in city_languages:
+  names['ka']=tags.get('name:ka') or (tags.get('name') if is_georgian else original)
+  sources['ka']='osm' if tags.get('name:ka') else ('ka' if is_georgian else 'osm')
+ if 'sr' in city_languages:
+  names['sr']=tags.get('name:sr') or tags.get('name') or names['ru']
+  sources['sr']='osm'
  if tags.get('name:uk'):
   names['uk']=tags['name:uk'];sources['uk']='osm'
  elif sources['ru']=='osm':
@@ -147,7 +152,7 @@ def translated_names(tags):
   entry=curated_name_variants.get(source)
   if not entry:continue
   if isinstance(entry,str):entry={'ru':entry}
-  for language in ('ru','en','ka','uk'):
+  for language in city_languages:
    value=entry.get(language)
    if isinstance(value,str) and value.strip():names[language]=value;sources[language]='curated'
   if not entry.get('uk') and names.get('ru'):names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
@@ -162,7 +167,7 @@ def translated_names(tags):
   if not entry:continue
   if isinstance(entry,str):entry={'ru':entry}
   for language,value in entry.items():
-   if language in names and isinstance(value,str) and value.strip():names[language]=value
+   if language in city_languages and isinstance(value,str) and value.strip():names[language]=value
   break
  return result
 node_progress=Progress(len(node_tags),'scan landmark nodes')

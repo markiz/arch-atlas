@@ -6,10 +6,10 @@ import { mkdir, readFile, readdir, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolvePeriods } from '../../src/periods.js';
+import { BASE_LANGUAGES, LANGUAGES } from './languages.mjs';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const CITIES_DIR = 'data/cities';
-export const LANGS = ['ru', 'en', 'ka', 'uk'];
 const ID_RE = /^[a-z0-9-]+$/;
 
 function fail(file, message) {
@@ -20,17 +20,27 @@ function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-function requireLabels(file, value, field) {
-  if (!isPlainObject(value)) fail(file, `${field} must be an object with ru/en/ka/uk`);
+function requireLabels(file, value, field, languages) {
+  if (!isPlainObject(value)) fail(file, `${field} must be an object with ${languages.join('/')}`);
   if (
-    Object.keys(value).length !== LANGS.length ||
-    !LANGS.every((lang) => Object.hasOwn(value, lang))
+    Object.keys(value).length !== languages.length ||
+    !languages.every((lang) => Object.hasOwn(value, lang))
   )
-    fail(file, `${field} must contain exactly ru/en/ka/uk`);
-  for (const lang of LANGS)
+    fail(file, `${field} must contain exactly ${languages.join('/')}`);
+  for (const lang of languages)
     if (typeof value[lang] !== 'string' || !value[lang].trim())
       fail(file, `${field}.${lang} must be a non-empty string`);
-  return { ru: value.ru, en: value.en, ka: value.ka, uk: value.uk };
+  return Object.fromEntries(languages.map((lang) => [lang, value[lang]]));
+}
+
+function validateLanguages(file, value) {
+  if (!Array.isArray(value) || !value.length) fail(file, 'languages must be a non-empty array');
+  if (new Set(value).size !== value.length) fail(file, 'languages must not contain duplicates');
+  for (const language of value)
+    if (!LANGUAGES.includes(language)) fail(file, `unknown language "${language}"`);
+  for (const language of BASE_LANGUAGES)
+    if (!value.includes(language)) fail(file, `languages must include "${language}"`);
+  return [...value];
 }
 
 function requireFinite(value, file, field) {
@@ -128,8 +138,9 @@ export function validateCityConfig(config, id, file = `<${id}>`) {
   if (!ID_RE.test(id)) fail(file, `invalid city id "${id}"`);
   if (!['ready', 'coming-soon'].includes(config.status))
     fail(file, 'status must be "ready" or "coming-soon"');
-  const labels = requireLabels(file, config.labels, 'labels');
-  const country = requireLabels(file, config.country, 'country');
+  const languages = validateLanguages(file, config.languages);
+  const labels = requireLabels(file, config.labels, 'labels', languages);
+  const country = requireLabels(file, config.country, 'country', languages);
   const periods = validatePeriods(file, resolvePeriods(config.periods));
   if (config.allowEmpty !== undefined && typeof config.allowEmpty !== 'boolean')
     fail(file, 'allowEmpty must be a boolean');
@@ -158,6 +169,7 @@ export function validateCityConfig(config, id, file = `<${id}>`) {
     id,
     status: config.status,
     allowEmpty: config.allowEmpty === true,
+    languages,
     labels,
     country,
     periods,
@@ -224,6 +236,7 @@ export function publicCity(city, extra = {}) {
     status: city.status,
     labels: city.labels,
     country: city.country,
+    languages: city.languages,
     periods: city.periods,
     map: city.map,
     ...(extra.counts ? { counts: extra.counts } : {}),

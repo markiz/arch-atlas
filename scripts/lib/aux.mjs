@@ -29,30 +29,30 @@ function requireString(file, value, field, { allowEmpty = false } = {}) {
   return value;
 }
 
-function requireLabels(file, value, field) {
-  if (!isPlainObject(value)) fail(file, `${field} must be an object with ru/en/ka/uk`);
+function requireLabels(file, value, field, languages) {
+  if (!isPlainObject(value)) fail(file, `${field} must be an object with ${languages.join('/')}`);
   if (
-    Object.keys(value).length !== LANGS.length ||
-    !LANGS.every((lang) => Object.hasOwn(value, lang))
+    Object.keys(value).length !== languages.length ||
+    !languages.every((lang) => Object.hasOwn(value, lang))
   )
-    fail(file, `${field} must contain exactly ru/en/ka/uk`);
-  for (const lang of LANGS) requireString(file, value[lang], `${field}.${lang}`);
-  return { ru: value.ru, en: value.en, ka: value.ka, uk: value.uk };
+    fail(file, `${field} must contain exactly ${languages.join('/')}`);
+  for (const lang of languages) requireString(file, value[lang], `${field}.${lang}`);
+  return Object.fromEntries(languages.map((lang) => [lang, value[lang]]));
 }
 
-function validateTable(file, table) {
+function validateTable(file, table, languages) {
   if (!isPlainObject(table)) fail(file, 'must be an object with id -> entry');
   for (const [id, entry] of Object.entries(table)) {
     requireString(file, id, 'id');
     if (!isPlainObject(entry)) fail(file, `${id} must be an object`);
-    requireLabels(file, entry.labels, `${id}.labels`);
+    requireLabels(file, entry.labels, `${id}.labels`, languages);
     if (entry.source !== undefined) requireString(file, entry.source, `${id}.source`);
   }
   return table;
 }
 
 /** Read data/aux/<city>/*.json and return the merged city dictionary. */
-export async function readCityAux({ root = ROOT, city = 'tbilisi' } = {}) {
+export async function readCityAux({ root = ROOT, city = 'tbilisi', languages = LANGS } = {}) {
   if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
   const aux = { version: 1, city };
   for (const { key, file } of AUX_TABLES) {
@@ -63,7 +63,7 @@ export async function readCityAux({ root = ROOT, city = 'tbilisi' } = {}) {
     } catch (error) {
       throw new Error(`${relative}: ${error.message}`, { cause: error });
     }
-    aux[key] = validateTable(relative, parsed);
+    aux[key] = validateTable(relative, parsed, languages);
   }
   return aux;
 }
@@ -78,8 +78,8 @@ async function atomicWrite(file, contents) {
  * Merge data/aux/<city>/*.json into data/aux/<city>.json. The merged file is a build
  * artifact, not a published resource and not a hand-edited source.
  */
-export async function ensureMergedAux({ root = ROOT, city = 'tbilisi' } = {}) {
-  const aux = await readCityAux({ root, city });
+export async function ensureMergedAux({ root = ROOT, city = 'tbilisi', languages = LANGS } = {}) {
+  const aux = await readCityAux({ root, city, languages });
   const destination = path.join(root, 'data', 'aux', `${city}.json`);
   const contents = `${JSON.stringify(aux, null, 2)}\n`;
   let current = null;
@@ -95,7 +95,7 @@ export async function ensureMergedAux({ root = ROOT, city = 'tbilisi' } = {}) {
 }
 
 /** Refresh data/aux/<city>.json and read the single file back for the build. */
-export async function loadCityAux({ root = ROOT, city = 'tbilisi' } = {}) {
-  const { file } = await ensureMergedAux({ root, city });
+export async function loadCityAux({ root = ROOT, city = 'tbilisi', languages = LANGS } = {}) {
+  const { file } = await ensureMergedAux({ root, city, languages });
   return JSON.parse(await readFile(file, 'utf8'));
 }

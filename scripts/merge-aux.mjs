@@ -4,8 +4,8 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { ensureMergedAux, ROOT } from './lib/aux.mjs';
 
-export async function mergeAux({ city = 'tbilisi' } = {}) {
-  const result = await ensureMergedAux({ city });
+export async function mergeAux({ city = 'tbilisi', languages } = {}) {
+  const result = await ensureMergedAux({ city, languages });
   return {
     city,
     file: result.file,
@@ -21,7 +21,12 @@ export async function mergeAux({ city = 'tbilisi' } = {}) {
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const city =
     process.argv.find((value) => value.startsWith('--city='))?.slice('--city='.length) ?? 'tbilisi';
-  const result = await mergeAux({ city });
+  let languages;
+  try {
+    const { readCityConfig } = await import('./lib/cities.mjs');
+    languages = (await readCityConfig(city)).languages;
+  } catch {}
+  const result = await mergeAux({ city, languages });
   const counts = result.counts;
   const summary = `${counts.styles ?? 0} styles, ${counts.architects ?? 0} architects, ${counts.districts ?? 0} districts, ${counts.yearLabels ?? 0} year labels, ${counts.types ?? 0} types`;
   console.log(

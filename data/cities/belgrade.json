@@ -1,29 +1,55 @@
 {
   "id": "belgrade",
   "status": "ready",
+  "languages": [
+    "ru",
+    "en",
+    "uk",
+    "sr"
+  ],
   "allowEmpty": true,
   "labels": {
     "ru": "Белград",
     "en": "Belgrade",
-    "ka": "ბელგრადი",
-    "uk": "Белград"
+    "uk": "Белград",
+    "sr": "Београд"
   },
   "country": {
     "ru": "Сербия",
     "en": "Serbia",
-    "ka": "სერბეთი",
-    "uk": "Сербія"
+    "uk": "Сербія",
+    "sr": "Србија"
   },
   "periods": "belgrade",
   "map": {
-    "bounds": { "west": 20.221, "south": 44.688, "east": 20.624, "north": 44.943 },
-    "center": { "lat": 44.817, "lng": 20.456 },
+    "bounds": {
+      "west": 20.221,
+      "south": 44.688,
+      "east": 20.624,
+      "north": 44.943
+    },
+    "center": {
+      "lat": 44.817,
+      "lng": 20.456
+    },
     "zoom": 11.5,
     "minZoom": 9,
     "maxZoom": 19,
     "start": {
-      "mobile": { "center": { "lat": 44.817, "lng": 20.456 }, "zoom": 12.5 },
-      "desktop": { "center": { "lat": 44.817, "lng": 20.456 }, "zoom": 11.5 }
+      "mobile": {
+        "center": {
+          "lat": 44.817,
+          "lng": 20.456
+        },
+        "zoom": 12.5
+      },
+      "desktop": {
+        "center": {
+          "lat": 44.817,
+          "lng": 20.456
+        },
+        "zoom": 11.5
+      }
     }
   },
   "build": {

@@ -13,8 +13,12 @@ test('city registry exposes Tbilisi and the empty Belgrade package', async () =>
   assert.equal(byId.get('tbilisi').allowEmpty, false);
   assert.equal(byId.get('belgrade').status, 'ready');
   assert.equal(byId.get('belgrade').allowEmpty, true);
+  assert.deepEqual(byId.get('tbilisi').languages, ['ru', 'en', 'uk', 'ka']);
+  assert.deepEqual(byId.get('belgrade').languages, ['ru', 'en', 'uk', 'sr']);
   for (const city of cities) {
-    assert.deepEqual(Object.keys(city.labels).sort(), ['en', 'ka', 'ru', 'uk']);
+    assert.deepEqual(Object.keys(city.labels).sort(), [...city.languages].sort());
+    assert.deepEqual(Object.keys(city.country).sort(), [...city.languages].sort());
+    for (const language of ['ru', 'en', 'uk']) assert.ok(city.languages.includes(language));
     assert.ok(city.periods.length >= 2);
     assert.equal(city.periods.at(-1).id, 'unknown');
     assert.ok(city.map.bounds.west < city.map.bounds.east);

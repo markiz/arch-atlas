@@ -13,6 +13,7 @@ assert(
 
 async function checkCity(cityId) {
   const config = await readCityConfig(cityId);
+  const langs = config.languages;
   const data = JSON.parse(await readFile(`public/atlas/cities/${cityId}/buildings.json`, 'utf8'));
   const geo = JSON.parse(await readFile(`public/atlas/cities/${cityId}/basemap.geojson`, 'utf8'));
   const buildingOutlines = JSON.parse(
@@ -45,9 +46,7 @@ async function checkCity(cityId) {
   );
   for (const feature of geo.features.filter((feature) => feature.properties?.kind === 'landmark')) {
     const names = feature.properties?.names ?? {},
-      filled = ['ru', 'en', 'ka', 'uk'].filter(
-        (lang) => typeof names[lang] === 'string' && names[lang].trim(),
-      );
+      filled = langs.filter((lang) => typeof names[lang] === 'string' && names[lang].trim());
     if (!filled.length) continue;
     assert.equal(
       filled.length,
@@ -127,31 +126,29 @@ async function checkCity(cityId) {
     );
     assert(
       b.typeLabels &&
-        ['ru', 'en', 'ka', 'uk'].every(
-          (lang) => typeof b.typeLabels[lang] === 'string' && b.typeLabels[lang].trim(),
-        ),
+        langs.every((lang) => typeof b.typeLabels[lang] === 'string' && b.typeLabels[lang].trim()),
       `${b.id}: translated building type`,
     );
     if (b.geometryQualityTranslations)
       assert(
-        ['en', 'ka', 'uk'].every(
-          (lang) =>
-            typeof b.geometryQualityTranslations[lang] === 'string' &&
-            b.geometryQualityTranslations[lang].trim(),
-        ),
+        langs
+          .filter((lang) => lang !== 'ru')
+          .every(
+            (lang) =>
+              typeof b.geometryQualityTranslations[lang] === 'string' &&
+              b.geometryQualityTranslations[lang].trim(),
+          ),
         `${b.id}: translated geometry quality`,
       );
     assert(
       typeof b.address === 'string' &&
         b.address === b.addresses?.ru &&
         b.addresses &&
-        ['ru', 'en', 'ka', 'uk'].every((lang) => typeof b.addresses[lang] === 'string'),
+        langs.every((lang) => typeof b.addresses[lang] === 'string'),
       `${b.id}: translated addresses`,
     );
     assert(
-      ['ru', 'en', 'ka', 'uk'].every(
-        (lang) => b.addresses[lang] === '' || b.addresses[lang].trim(),
-      ),
+      langs.every((lang) => b.addresses[lang] === '' || b.addresses[lang].trim()),
       `${b.id}: invalid empty address`,
     );
     if (b.googlePlaceId) {
@@ -194,24 +191,20 @@ async function checkCity(cityId) {
         b.styleIds.length > 0 &&
         b.styleIds.every((id) => typeof id === 'string' && id.trim()) &&
         b.styles &&
-        ['ru', 'en', 'ka', 'uk'].every(
-          (lang) => typeof b.styles[lang] === 'string' && b.styles[lang].trim(),
-        ),
+        langs.every((lang) => typeof b.styles[lang] === 'string' && b.styles[lang].trim()),
       `${b.id}: translated style`,
     );
     assert(
       typeof b.districtId === 'string' &&
         b.districts &&
-        ['ru', 'en', 'ka', 'uk'].every(
-          (lang) => typeof b.districts[lang] === 'string' && b.districts[lang].trim(),
-        ),
+        langs.every((lang) => typeof b.districts[lang] === 'string' && b.districts[lang].trim()),
       `${b.id}: translated district`,
     );
     assert(
       Array.isArray(b.architectIds) &&
         b.architectIds.length === b.architects.length &&
         b.architectsByLanguage &&
-        ['ru', 'en', 'ka', 'uk'].every(
+        langs.every(
           (lang) =>
             Array.isArray(b.architectsByLanguage[lang]) &&
             b.architectsByLanguage[lang].length === b.architects.length &&
@@ -222,14 +215,12 @@ async function checkCity(cityId) {
     assert(
       typeof b.yearLabelId === 'string' &&
         b.yearLabels &&
-        ['ru', 'en', 'ka', 'uk'].every(
-          (lang) => typeof b.yearLabels[lang] === 'string' && b.yearLabels[lang].trim(),
-        ),
+        langs.every((lang) => typeof b.yearLabels[lang] === 'string' && b.yearLabels[lang].trim()),
       `${b.id}: translated construction label`,
     );
     if (b.descriptions)
       assert(
-        ['ru', 'en', 'ka', 'uk'].every(
+        langs.every(
           (lang) => typeof b.descriptions[lang] === 'string' && b.descriptions[lang].trim(),
         ),
         `${b.id}: translated descriptions`,
@@ -237,16 +228,14 @@ async function checkCity(cityId) {
     assert.equal(b.description, b.descriptions?.ru ?? '', `${b.id}: Russian description fallback`);
     if (b.histories) {
       assert(
-        ['ru', 'en', 'ka', 'uk'].every(
-          (lang) => typeof b.histories[lang] === 'string' && b.histories[lang].trim(),
-        ),
+        langs.every((lang) => typeof b.histories[lang] === 'string' && b.histories[lang].trim()),
         `${b.id}: translated history`,
       );
       assert.equal(b.history, b.histories.ru, `${b.id}: Russian history fallback`);
     } else
       assert.equal(b.history, '', `${b.id}: history should be empty when translations are absent`);
     assert(
-      typeof b.nameKa === 'string' && typeof b.nameEn === 'string',
+      b.names && langs.every((lang) => typeof b.names[lang] === 'string' && b.names[lang].trim()),
       `${b.id}: localized names`,
     );
     assert(Array.isArray(b.architects), `${b.id}: architects`);
@@ -350,11 +339,11 @@ async function checkCity(cityId) {
           assert(visualTagIds.has(tag), `${b.id}: unknown visual tag ${tag}`);
       if (p.descriptions !== undefined)
         assert(
-          Object.keys(p.descriptions).length === 4 &&
-            ['ru', 'en', 'ka', 'uk'].every(
+          Object.keys(p.descriptions).length === langs.length &&
+            langs.every(
               (lang) => typeof p.descriptions[lang] === 'string' && p.descriptions[lang].trim(),
             ),
-          `${b.id}: photo.descriptions must contain non-empty ru/en/ka/uk`,
+          `${b.id}: photo.descriptions must contain non-empty ${langs.join('/')}`,
         );
       assert(/^[a-f0-9]{64}$/.test(p.id), `${b.id}: photo id must be a lowercase sha256`);
       const expectedFile = `photos/${cityId}/${p.id}.webp`;

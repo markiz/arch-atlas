@@ -20,7 +20,7 @@ export function cityBuildDir(root, city) {
 }
 export const DEFAULT_OUT = cityBuildDir(ROOT, DEFAULT_CITY) + '/buildings.json';
 const LANGS = ['ru', 'en', 'ka', 'uk'];
-const GEOMETRY_TRANSLATION_LANGS = ['en', 'ka', 'uk'];
+const geometryLangs = (languages) => languages.filter((language) => language !== 'ru');
 const GEOMETRY_ROLES = new Set([
   'above_ground',
   'heritage_boundary',
@@ -65,28 +65,30 @@ function requireTags(file, value, field) {
   return value;
 }
 
-function requireLabels(file, value, field, { allowEmpty = false } = {}) {
-  if (!isPlainObject(value)) fail(file, `${field} must be an object with ru/en/ka/uk`);
+function requireLabels(file, value, field, { allowEmpty = false, languages = LANGS } = {}) {
+  if (!isPlainObject(value)) fail(file, `${field} must be an object with ${languages.join('/')}`);
   if (
-    Object.keys(value).length !== LANGS.length ||
-    !LANGS.every((lang) => Object.hasOwn(value, lang))
+    Object.keys(value).length !== languages.length ||
+    !languages.every((lang) => Object.hasOwn(value, lang))
   )
-    fail(file, `${field} must contain exactly ru/en/ka/uk`);
-  for (const lang of LANGS) requireString(file, value[lang], `${field}.${lang}`, { allowEmpty });
-  return { ru: value.ru, en: value.en, ka: value.ka, uk: value.uk };
+    fail(file, `${field} must contain exactly ${languages.join('/')}`);
+  for (const lang of languages)
+    requireString(file, value[lang], `${field}.${lang}`, { allowEmpty });
+  return Object.fromEntries(languages.map((lang) => [lang, value[lang]]));
 }
 
-function requireGeometryQualityTranslations(file, value) {
+function requireGeometryQualityTranslations(file, value, languages) {
+  const expected = geometryLangs(languages);
   if (!isPlainObject(value))
-    fail(file, 'geometryQualityTranslations must be an object with en/ka/uk');
+    fail(file, `geometryQualityTranslations must be an object with ${expected.join('/')}`);
   if (
-    Object.keys(value).length !== GEOMETRY_TRANSLATION_LANGS.length ||
-    !GEOMETRY_TRANSLATION_LANGS.every((lang) => Object.hasOwn(value, lang))
+    Object.keys(value).length !== expected.length ||
+    !expected.every((lang) => Object.hasOwn(value, lang))
   )
-    fail(file, 'geometryQualityTranslations must contain exactly en/ka/uk');
-  for (const lang of GEOMETRY_TRANSLATION_LANGS)
+    fail(file, `geometryQualityTranslations must contain exactly ${expected.join('/')}`);
+  for (const lang of expected)
     requireString(file, value[lang], `geometryQualityTranslations.${lang}`);
-  return { en: value.en, ka: value.ka, uk: value.uk };
+  return Object.fromEntries(expected.map((lang) => [lang, value[lang]]));
 }
 
 function requireReference(file, id, table, kind) {
@@ -96,17 +98,17 @@ function requireReference(file, id, table, kind) {
   return id;
 }
 
-function referenceLabels(file, table, id, kind) {
+function referenceLabels(file, table, id, kind, languages = LANGS) {
   const entry = table[id];
   if (!entry || !isPlainObject(entry.labels))
     fail(file, `${kind} "${id}" has no labels in the shared dictionary`);
-  return requireLabels(file, entry.labels, `${kind} "${id}" labels`);
+  return requireLabels(file, entry.labels, `${kind} "${id}" labels`, { languages });
 }
 
-function styleLabels(file, table, values) {
+function styleLabels(file, table, values, languages = LANGS) {
   if (!Array.isArray(values) || !values.length) fail(file, 'styleIds must be a non-empty array');
   if (new Set(values).size !== values.length) fail(file, 'styleIds must not contain duplicates');
-  const labels = { ru: [], en: [], ka: [], uk: [] };
+  const labels = Object.fromEntries(languages.map((lang) => [lang, []]));
   for (const part of values) {
     if (typeof part !== 'string' || !part.trim())
       fail(file, 'styleIds must contain non-empty strings');
@@ -114,15 +116,12 @@ function styleLabels(file, table, values) {
     if (!entry) fail(file, `unknown style reference "${part}"`);
     if (!isPlainObject(entry.labels))
       fail(file, `style "${part}" has no labels in the shared dictionary`);
-    const partLabels = requireLabels(file, entry.labels, `style "${part}" labels`);
-    for (const lang of LANGS) labels[lang].push(partLabels[lang]);
+    const partLabels = requireLabels(file, entry.labels, `style "${part}" labels`, {
+      languages,
+    });
+    for (const lang of languages) labels[lang].push(partLabels[lang]);
   }
-  return {
-    ru: labels.ru.join(', '),
-    en: labels.en.join(', '),
-    ka: labels.ka.join(', '),
-    uk: labels.uk.join(', '),
-  };
+  return Object.fromEntries(languages.map((lang) => [lang, labels[lang].join(', ')]));
 }
 
 function validateGeometry(file, geometry, field, bounds) {
@@ -148,7 +147,7 @@ function validateGeometry(file, geometry, field, bounds) {
   return geometry;
 }
 
-async function loadPhotoMetadata(root, city) {
+async function loadPhotoMetadata(root, city, languages = LANGS) {
   const directory = path.join(root, 'data', 'photos', city);
   let names;
   try {
@@ -185,7 +184,7 @@ async function loadPhotoMetadata(root, city) {
     for (const field of PHOTO_TAG_FIELDS)
       if (metadata[field] !== undefined) requireTags(file, metadata[field], field);
     if (metadata.descriptions !== undefined)
-      requireLabels(file, metadata.descriptions, 'descriptions');
+      requireLabels(file, metadata.descriptions, 'descriptions', { languages });
     if (
       metadata.rating !== undefined &&
       (!Number.isInteger(metadata.rating) || metadata.rating < 0 || metadata.rating > 100)
@@ -238,15 +237,23 @@ export function hydrateCard(
   city,
   photoMetadata = new Map(),
   bounds,
+  languages = LANGS,
 ) {
   if (!isPlainObject(card)) fail(file, 'record must be an object');
   const id = requireString(file, card.id, 'id');
-  const names = requireLabels(file, card.names, 'names');
-  const addresses = requireLabels(file, card.addresses, 'addresses', { allowEmpty: true });
+  const names = requireLabels(file, card.names, 'names', { languages });
+  const addresses = requireLabels(file, card.addresses, 'addresses', {
+    allowEmpty: true,
+    languages,
+  });
   const descriptions =
-    card.descriptions === undefined ? null : requireLabels(file, card.descriptions, 'descriptions');
+    card.descriptions === undefined
+      ? null
+      : requireLabels(file, card.descriptions, 'descriptions', { languages });
   const histories =
-    card.histories === undefined ? null : requireLabels(file, card.histories, 'histories');
+    card.histories === undefined
+      ? null
+      : requireLabels(file, card.histories, 'histories', { languages });
 
   const yearLabelId = requireReference(
     file,
@@ -283,7 +290,7 @@ export function hydrateCard(
   const geometryQualityTranslations =
     card.geometryQualityTranslations === undefined
       ? null
-      : requireGeometryQualityTranslations(file, card.geometryQualityTranslations);
+      : requireGeometryQualityTranslations(file, card.geometryQualityTranslations, languages);
   requireString(file, card.source, 'source');
   if (!/^https?:\/\//.test(card.source)) fail(file, 'source must be an http(s) URL');
   if (
@@ -317,31 +324,45 @@ export function hydrateCard(
   );
 
   const styleIds = card.styleIds;
-  const styles = styleLabels(file, attributes.styles, styleIds);
+  const styles = styleLabels(file, attributes.styles, styleIds, languages);
   const yearLabels = referenceLabels(
     file,
     attributes.yearLabels,
     yearLabelId,
     'construction label',
+    languages,
   );
-  const districts = referenceLabels(file, attributes.districts, districtId, 'district');
-  const typeLabels = referenceLabels(file, attributes.types, type, 'type');
-  const architectsByLanguage = { ru: [], en: [], ka: [], uk: [] };
+  const districts = referenceLabels(file, attributes.districts, districtId, 'district', languages);
+  const typeLabels = referenceLabels(file, attributes.types, type, 'type', languages);
+  const architectsByLanguage = Object.fromEntries(languages.map((lang) => [lang, []]));
   for (const architectId of architectIds) {
-    const labels = referenceLabels(file, attributes.architects, architectId, 'architect');
-    for (const lang of LANGS) architectsByLanguage[lang].push(labels[lang]);
+    const labels = referenceLabels(
+      file,
+      attributes.architects,
+      architectId,
+      'architect',
+      languages,
+    );
+    for (const lang of languages) architectsByLanguage[lang].push(labels[lang]);
   }
 
-  if (bounds && (card.coordinates[0] < bounds.west || card.coordinates[0] > bounds.east || card.coordinates[1] < bounds.south || card.coordinates[1] > bounds.north))
+  if (
+    bounds &&
+    (card.coordinates[0] < bounds.west ||
+      card.coordinates[0] > bounds.east ||
+      card.coordinates[1] < bounds.south ||
+      card.coordinates[1] > bounds.north)
+  )
     fail(file, 'coordinates are outside the city bounds');
 
   const out = {
     id,
     cityId: city,
     name: names.ru,
-    nameKa: names.ka,
-    nameEn: names.en,
-    nameUk: names.uk,
+    nameKa: names.ka ?? '',
+    nameEn: names.en ?? '',
+    nameUk: names.uk ?? '',
+    ...(names.sr !== undefined ? { nameSr: names.sr } : {}),
     names,
     address: addresses.ru,
     addresses,
@@ -394,12 +415,13 @@ export async function assembleAtlas({
   quiet = false,
   allowEmpty = false,
   bounds = null,
+  languages = LANGS,
 } = {}) {
   if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
   const destination = outFile ?? path.join(cityBuildDir(root, city), 'buildings.json');
   const sourceDir = path.join(root, 'data', 'atlas', city);
-  const attributes = await loadCityAux({ root, city });
-  const photoMetadata = await loadPhotoMetadata(root, city);
+  const attributes = await loadCityAux({ root, city, languages });
+  const photoMetadata = await loadPhotoMetadata(root, city, languages);
 
   let files;
   try {
@@ -429,7 +451,7 @@ export async function assembleAtlas({
     if (card.id !== id) fail(relative, `id "${card.id}" does not match filename "${id}.json"`);
     if (ids.has(id)) fail(relative, `duplicate id "${id}"`);
     ids.add(id);
-    cards.push(hydrateCard(card, attributes, relative, city, photoMetadata, bounds));
+    cards.push(hydrateCard(card, attributes, relative, city, photoMetadata, bounds, languages));
     progress.advance(file);
   }
   progress.finish();
@@ -446,16 +468,19 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   const out = argument('out');
   let bounds = null;
   let allowEmpty = false;
+  let languages = LANGS;
   try {
     const { readCityConfig } = await import('./lib/cities.mjs');
     const config = await readCityConfig(city);
     bounds = { ...config.map.bounds, city };
     allowEmpty = config.allowEmpty;
+    languages = config.languages;
   } catch {}
   const result = await assembleAtlas({
     city,
     bounds,
     allowEmpty,
+    languages,
     outFile: out ? path.resolve(ROOT, out) : undefined,
   });
   console.log(

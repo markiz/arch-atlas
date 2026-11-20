@@ -164,7 +164,16 @@ def is_latin_credit(value: str) -> bool:
     return True
 
 
-def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
+def city_languages(city: str = CITY) -> list[str]:
+    path = ROOT / 'data/cities' / f'{city}.json'
+    if path.exists():
+        value = json.loads(path.read_text(encoding='utf-8')).get('languages')
+        if isinstance(value, list) and value:
+            return value
+    return ['ru', 'en', 'ka', 'uk']
+
+
+def _normalized_metadata(metadata: dict[str, Any], languages: list[str]) -> dict[str, Any]:
     normalized: dict[str, Any] = {}
     for field in PHOTO_METADATA_FIELDS:
         value = metadata.get(field)
@@ -178,13 +187,16 @@ def _normalized_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
         normalized[field] = value
     descriptions = metadata.get('descriptions')
     if descriptions is not None:
-        if not isinstance(descriptions, dict) or set(descriptions) != {'ru', 'en', 'ka', 'uk'}:
-            raise ValueError('photo metadata field descriptions must be an object with exactly ru/en/ka/uk')
-        for lang in ('ru', 'en', 'ka', 'uk'):
+        if not isinstance(descriptions, dict) or set(descriptions) != set(languages):
+            raise ValueError(
+                'photo metadata field descriptions must be an object with exactly '
+                + '/'.join(languages)
+            )
+        for lang in languages:
             value = descriptions[lang]
             if not isinstance(value, str) or not value.strip():
                 raise ValueError(f'photo metadata field descriptions.{lang} must be a non-empty string')
-        normalized['descriptions'] = {lang: descriptions[lang] for lang in ('ru', 'en', 'ka', 'uk')}
+        normalized['descriptions'] = {lang: descriptions[lang] for lang in languages}
     rating = metadata.get('rating')
     if rating is not None:
         if not isinstance(rating, int) or isinstance(rating, bool) or not 0 <= rating <= 100:
@@ -217,7 +229,7 @@ def write_photo_metadata(
     if not replace_tag_set <= set(PHOTO_TAG_FIELDS):
         raise ValueError(f'unknown tag fields: {", ".join(sorted(replace_tag_set - set(PHOTO_TAG_FIELDS)))}')
     path = photo_metadata_path(photo_id, city)
-    normalized = _normalized_metadata(metadata)
+    normalized = _normalized_metadata(metadata, city_languages(city))
     normalized['width'], normalized['height'] = photo_size(photo_id, city)
     current = read_photo_metadata(photo_id, city)
     if current is not None:
