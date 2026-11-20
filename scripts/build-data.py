@@ -25,6 +25,7 @@ def road_class(tags):
  return value if value in ROAD_CLASSES else None
 landmark_names=json.loads((translations_dir/'landmark-names.json').read_text()) if (translations_dir/'landmark-names.json').exists() else {}
 curated_name_variants=json.loads((translations_dir/'basemap-names.json').read_text()) if (translations_dir/'basemap-names.json').exists() else {}
+street_words=json.loads((translations_dir/'street-words.json').read_text()) if (translations_dir/'street-words.json').exists() else {}
 landmark_cards={}
 landmark_skips=set()
 landmark_skip_path=translations_dir/'landmark-skip.json'
@@ -115,6 +116,43 @@ def polygon_centroid(ring):
  if abs(double_area)<1e-12:
   return [round(sum(p[0] for p in points)/len(points),6),round(sum(p[1] for p in points)/len(points),6)]
  return [round(cx/(3*double_area),6),round(cy/(3*double_area),6)]
+def _serbian_word(value, language):
+ table=street_words.get(language) or {}
+ key=value.lower()
+ translated=table.get(key)
+ if translated is None:return None
+ if value.isupper():return translated.upper()
+ if value[:1].isupper():return translated[:1].upper()+translated[1:]
+ return translated
+
+def _serbian_transliteration(value, language):
+ table={
+  'ru':{'Ђ':'Дж','ђ':'дж','Ћ':'Ч','ћ':'ч','Љ':'Ль','љ':'ль','Њ':'Нь','њ':'нь','Ј':'Й','ј':'й','Џ':'Дж','џ':'дж','Ѕ':'З','ѕ':'з'},
+  'uk':{'Ђ':'Дж','ђ':'дж','Ћ':'Ч','ћ':'ч','Љ':'Ль','љ':'ль','Њ':'Нь','њ':'нь','Ј':'Й','ј':'й','Џ':'Дж','џ':'дж','Ѕ':'З','ѕ':'з','И':'І','и':'і','Ы':'И','ы':'и','Э':'Е','э':'е','Ъ':'','ъ':''},
+  'en':{'Ђ':'Dj','ђ':'dj','Ћ':'C','ћ':'c','Љ':'Lj','љ':'lj','Њ':'Nj','њ':'nj','Ј':'J','ј':'j','Џ':'Dz','џ':'dz','Ѕ':'Z','ѕ':'z'},
+ }.get(language,{})
+ iotation={
+  'ru':{'Ја':'Я','ја':'я','Је':'Е','је':'е','Ји':'И','ји':'и','Јо':'Ё','јо':'ё','Ју':'Ю','ју':'ю'},
+  'uk':{'Ја':'Я','ја':'я','Је':'Є','је':'є','Ји':'Ї','ји':'ї','Јо':'Йо','јо':'йо','Ју':'Ю','ју':'ю'},
+ }.get(language,{})
+ for source,target in iotation.items():value=value.replace(source,target)
+ result=value.translate(str.maketrans(table))
+ if language in ('ru','uk'):
+  if result.endswith('ска'):result=result[:-3]+('ская' if language=='ru' else 'ська')
+  elif result.endswith('ски') and language=='ru':result=result[:-3]+'ский'
+  elif result.endswith('цка'):result=result[:-3]+('цкая' if language=='ru' else 'цька')
+ return result
+
+def _serbian_label(value, language):
+ parts=re.split(r'([^0-9A-Za-zА-Яа-яЁёЂђЈјЉљЊњЋћЏџЅѕ]+)', value)
+ out=[]
+ for part in parts:
+  if not part or re.fullmatch(r'[^0-9A-Za-zА-Яа-яЁёЂђЈјЉљЊњЋћЏџЅѕ]+',part):
+   out.append(part);continue
+  translated=_serbian_word(part,language)
+  out.append(translated if translated is not None else _serbian_transliteration(part,language))
+ return ''.join(out)
+
 def translated_names(tags):
  candidates=name_candidates(tags)
  original=tags.get('name:ka') or (tags.get('name') if re.search('[\u10a0-\u10ff]',tags.get('name','')) else '') or tags.get('name:ru') or tags.get('name:en') or tags.get('name') or ''
@@ -138,15 +176,24 @@ def translated_names(tags):
  if 'ka' in city_languages:
   names['ka']=tags.get('name:ka') or (tags.get('name') if is_georgian else original)
   sources['ka']='osm' if tags.get('name:ka') else ('ka' if is_georgian else 'osm')
- if 'sr' in city_languages:
-  names['sr']=tags.get('name:sr') or tags.get('name') or names['ru']
-  sources['sr']='osm'
  if tags.get('name:uk'):
   names['uk']=tags['name:uk'];sources['uk']='osm'
  elif sources['ru']=='osm':
   names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
  else:
   names['uk']=original;sources['uk']='ka'
+ if 'sr' in city_languages:
+  original=tags.get('name:sr') or tags.get('name') or tags.get('name:ru') or tags.get('name:en') or ''
+  latin=tags.get('int_name') or tags.get('name:sr-Latn')
+  names['ru']=tags.get('name:ru') or _serbian_label(original,'ru')
+  sources['ru']='osm' if tags.get('name:ru') else 'derived'
+  names['en']=tags.get('name:en') or latin or _serbian_label(original,'en')
+  sources['en']='osm' if tags.get('name:en') else ('int_name' if latin else 'derived')
+  names['uk']=tags.get('name:uk') or _serbian_label(original,'uk')
+  sources['uk']='osm' if tags.get('name:uk') else 'derived'
+  names['sr']=original
+  sources['sr']='osm'
+  original_language='sr'
  # Curated translations may fill any subset of languages; derive the rest.
  for source in candidates:
   entry=curated_name_variants.get(source)
@@ -155,7 +202,7 @@ def translated_names(tags):
   for language in city_languages:
    value=entry.get(language)
    if isinstance(value,str) and value.strip():names[language]=value;sources[language]='curated'
-  if not entry.get('uk') and names.get('ru'):names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
+  if 'sr' not in city_languages and not entry.get('uk') and names.get('ru'):names['uk']=ukrainian_name(names['ru']);sources['uk']='derived'
   break
  result={'originalLanguage':original_language,'names':names}
  if sources['ru']!='osm':result['nameSource']=sources['ru']

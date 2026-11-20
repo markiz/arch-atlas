@@ -60,6 +60,7 @@ async function inputPaths(city, config) {
     'basemap-names.json',
     'landmark-skip.json',
     'landmark-area-markers.json',
+    'street-words.json',
   ])
     names.push(path.relative(ROOT, path.join(translations, name)));
   try {

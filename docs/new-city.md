@@ -50,7 +50,7 @@ node scripts/create-manifest.mjs --city=belgrade
 data/atlas/<city>/<id>.json
 data/landmarks/<city>/<id>.json
 data/aux/<city>/{styles,architects,districts,year-labels,types}.json
-data/translations/<city>/{landmark-names,basemap-names,landmark-skip,landmark-area-markers}.json
+data/translations/<city>/{landmark-names,basemap-names,landmark-skip,landmark-area-markers,street-words}.json
 raw/osm/<city>/{grid/*.xml, selected.json, building-outlines.geojson, source.json}
 data/photos/<city>/<sha256>.webp + <sha256>.metadata.json
 ```
