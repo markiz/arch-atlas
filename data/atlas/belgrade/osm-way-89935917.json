@@ -1,0 +1,96 @@
+{
+  "id": "osm-way-89935917",
+  "osmId": "way/89935917",
+  "names": {
+    "ru": "Факультет специального образования и реабилитации Университета",
+    "en": "Faculty of Special Education and Rehabilitation",
+    "uk": "Факультет спеціальної освіти і реабілітації Університету",
+    "sr": "Факултет за специјалну едукацију и рехабилитацију Универзитета"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Високог Стевана, 2",
+    "en": "Visokog Stevana 2",
+    "uk": "Вул. Високог Стевана, 2",
+    "sr": "Високог Стевана 2"
+  },
+  "minYear": 1975,
+  "maxYear": 1975,
+  "yearLabelId": "year-1975",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "educational",
+  "coordinates": [
+    20.4561467,
+    44.8261661
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4559678,
+          44.8260843
+        ],
+        [
+          20.4560648,
+          44.826074
+        ],
+        [
+          20.4561636,
+          44.8260693
+        ],
+        [
+          20.456291,
+          44.8260645
+        ],
+        [
+          20.4563124,
+          44.8261044
+        ],
+        [
+          20.4563691,
+          44.8261955
+        ],
+        [
+          20.4560581,
+          44.8262918
+        ],
+        [
+          20.4560365,
+          44.8262921
+        ],
+        [
+          20.4560234,
+          44.8262886
+        ],
+        [
+          20.456008,
+          44.8262764
+        ],
+        [
+          20.4559968,
+          44.8262649
+        ],
+        [
+          20.4559678,
+          44.8260843
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/89935917).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/89935917).",
+    "sr": "Контура OpenStreetMap (way/89935917).",
+    "uk": "Контур OpenStreetMap (way/89935917)."
+  },
+  "photos": [
+    "d124fec3f4c63d50b337196bc8621e2e07c9020b6b0e8375c2284bd89d84a39e"
+  ],
+  "source": "https://www.openstreetmap.org/way/89935917",
+  "otherSource": "https://www.wikidata.org/wiki/Q12760551"
+}

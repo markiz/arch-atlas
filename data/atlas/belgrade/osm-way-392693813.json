@@ -1,0 +1,74 @@
+{
+  "id": "osm-way-392693813",
+  "osmId": "way/392693813",
+  "names": {
+    "ru": "Церковь Христа Короля",
+    "en": "Church of Christ the King",
+    "uk": "Церква Христа Короля",
+    "sr": "Црква Криста Краља"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Крунская, 23b",
+    "en": "Krunska 23b",
+    "uk": "Вул. Крунська, 23b",
+    "sr": "Крунска 23b"
+  },
+  "minYear": 1924,
+  "maxYear": 1924,
+  "yearLabelId": "year-1924",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "religious",
+  "coordinates": [
+    20.4673503,
+    44.8075967
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4672656,
+          44.8075117
+        ],
+        [
+          20.4671906,
+          44.8075649
+        ],
+        [
+          20.4673954,
+          44.8077097
+        ],
+        [
+          20.4675099,
+          44.8076282
+        ],
+        [
+          20.467306,
+          44.8074841
+        ],
+        [
+          20.4672656,
+          44.8075117
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392693813).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392693813).",
+    "sr": "Контура OpenStreetMap (way/392693813).",
+    "uk": "Контур OpenStreetMap (way/392693813)."
+  },
+  "photos": [
+    "2b2cd05c7b2646f4a6ebe5ca90d03c70ad5e445cdf38532ed4b9b609ce14be14",
+    "ef722a33fb56c06c265c6bd60c14d24368aefbac2bb29a0ae79629e0f0d342cf",
+    "62701f16acb308af4683cef49e61ae7950e270600bd2d4887644ac1574c8581f"
+  ],
+  "source": "https://www.openstreetmap.org/way/392693813",
+  "otherSource": "https://www.wikidata.org/wiki/Q3685981"
+}

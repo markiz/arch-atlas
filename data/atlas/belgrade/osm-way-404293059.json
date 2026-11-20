@@ -1,0 +1,117 @@
+{
+  "id": "osm-way-404293059",
+  "osmId": "way/404293059",
+  "names": {
+    "ru": "Здание на улице Тургенева, 1",
+    "en": "1 Turgenjev Street",
+    "uk": "Будівля на вулиці Тургенєва, 1",
+    "sr": "Зграда у улици Тургењевљевој 1"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Тургенева, 1",
+    "en": "Turgenjeva 1",
+    "uk": "Вул. Тургенева, 1",
+    "sr": "Тургењева 1"
+  },
+  "minYear": 1935,
+  "maxYear": 1935,
+  "yearLabelId": "year-1935",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "residential",
+  "coordinates": [
+    20.417657,
+    44.7840175
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4176036,
+          44.7840897
+        ],
+        [
+          20.4175577,
+          44.7840423
+        ],
+        [
+          20.4175076,
+          44.7839906
+        ],
+        [
+          20.4175643,
+          44.7839629
+        ],
+        [
+          20.4175736,
+          44.7839725
+        ],
+        [
+          20.4176115,
+          44.783954
+        ],
+        [
+          20.4176563,
+          44.7840002
+        ],
+        [
+          20.4176696,
+          44.7839977
+        ],
+        [
+          20.4176708,
+          44.7839515
+        ],
+        [
+          20.4177717,
+          44.7839529
+        ],
+        [
+          20.4177703,
+          44.7840034
+        ],
+        [
+          20.4177688,
+          44.7840574
+        ],
+        [
+          20.4177233,
+          44.7840568
+        ],
+        [
+          20.4177227,
+          44.7840819
+        ],
+        [
+          20.4176572,
+          44.7840932
+        ],
+        [
+          20.4176377,
+          44.7840731
+        ],
+        [
+          20.4176036,
+          44.7840897
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/404293059).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/404293059).",
+    "sr": "Контура OpenStreetMap (way/404293059).",
+    "uk": "Контур OpenStreetMap (way/404293059)."
+  },
+  "photos": [
+    "8a4ef56222eb83fc5f8bb6d560912efae87df2ee2e312f18f978634ff3dbc9c6",
+    "e342b38cd60c1b7e16f26c96abd51f409978c02bd369c87597b888e37cfd26cf"
+  ],
+  "source": "https://www.openstreetmap.org/way/404293059",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279534"
+}

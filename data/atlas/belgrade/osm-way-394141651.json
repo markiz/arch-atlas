@@ -1,0 +1,92 @@
+{
+  "id": "osm-way-394141651",
+  "osmId": "way/394141651",
+  "names": {
+    "ru": "Белградский детский культурный центр",
+    "en": "Belgrade Children's Cultural Center",
+    "uk": "Белградський дитячий культурний центр",
+    "sr": "Дечји културни центар Београд"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Таковская, 8",
+    "en": "Takovska 8",
+    "uk": "Вул. Таковська, 8",
+    "sr": "Таковска 8"
+  },
+  "minYear": 1952,
+  "maxYear": 1952,
+  "yearLabelId": "year-1952",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "cultural",
+  "coordinates": [
+    20.4698432,
+    44.8113595
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4700371,
+          44.8115918
+        ],
+        [
+          20.4701528,
+          44.8115204
+        ],
+        [
+          20.469942,
+          44.8113469
+        ],
+        [
+          20.4696756,
+          44.8111275
+        ],
+        [
+          20.4695614,
+          44.8111973
+        ],
+        [
+          20.4696816,
+          44.8112963
+        ],
+        [
+          20.469623,
+          44.8113321
+        ],
+        [
+          20.4697148,
+          44.8114093
+        ],
+        [
+          20.4697726,
+          44.811374
+        ],
+        [
+          20.4698233,
+          44.8114158
+        ],
+        [
+          20.4700371,
+          44.8115918
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394141651).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394141651).",
+    "sr": "Контура OpenStreetMap (way/394141651).",
+    "uk": "Контур OpenStreetMap (way/394141651)."
+  },
+  "photos": [
+    "a3537e4a54772055a21edeba1007aa2938f1a8b94fdcd2c28c6974cb40fc8f3e"
+  ],
+  "source": "https://www.openstreetmap.org/way/394141651",
+  "otherSource": "https://www.wikidata.org/wiki/Q16627517"
+}

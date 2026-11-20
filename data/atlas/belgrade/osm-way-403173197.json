@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-403173197",
+  "osmId": "way/403173197",
+  "names": {
+    "ru": "Храм Рождества Святого Иоанна Крестителя в Вождоваце",
+    "en": "Church of the Nativity of Saint John the Baptist in Voždovac",
+    "uk": "Храм Різдва Святого Іоанна Хрестителя у Вождоваці",
+    "sr": "Храм Рођења Светог Јована Крститеља на Вождовцу"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "uk": "Белград",
+    "sr": "Београд"
+  },
+  "minYear": 1948,
+  "maxYear": 1948,
+  "yearLabelId": "year-1948",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "religious",
+  "coordinates": [
+    20.4928074,
+    44.7749391
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4926416,
+          44.7750001
+        ],
+        [
+          20.4926389,
+          44.7748818
+        ],
+        [
+          20.4929732,
+          44.774878
+        ],
+        [
+          20.4929759,
+          44.7749963
+        ],
+        [
+          20.4926416,
+          44.7750001
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/403173197).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/403173197).",
+    "sr": "Контура OpenStreetMap (way/403173197).",
+    "uk": "Контур OpenStreetMap (way/403173197)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/403173197",
+  "otherSource": "https://www.wikidata.org/wiki/Q16088428"
+}

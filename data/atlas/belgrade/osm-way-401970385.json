@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-401970385",
+  "osmId": "way/401970385",
+  "names": {
+    "ru": "Факультет политических наук Белградского университета",
+    "en": "Faculty of Political Sciences, University of Belgrade",
+    "uk": "Факультет політичних наук Белградського університету",
+    "sr": "Факултет политичких наука Универзитета"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Йове Илича, 165",
+    "en": "Jove Ilića 165",
+    "uk": "Вул. Йове Илича, 165",
+    "sr": "Јове Илића 165"
+  },
+  "minYear": 1968,
+  "maxYear": 1968,
+  "yearLabelId": "year-1968",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "educational",
+  "coordinates": [
+    20.4755425,
+    44.7733986
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4750045,
+          44.7740436
+        ],
+        [
+          20.4755253,
+          44.7726323
+        ],
+        [
+          20.4761273,
+          44.7728342
+        ],
+        [
+          20.4754575,
+          44.7742095
+        ],
+        [
+          20.4750045,
+          44.7740436
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401970385).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401970385).",
+    "sr": "Контура OpenStreetMap (way/401970385).",
+    "uk": "Контур OpenStreetMap (way/401970385)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/401970385",
+  "otherSource": "https://www.wikidata.org/wiki/Q6592266"
+}

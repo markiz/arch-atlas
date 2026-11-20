@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-393213847",
+  "osmId": "way/393213847",
+  "names": {
+    "ru": "Здание посольства Италии",
+    "en": "Italian Embassy Building",
+    "uk": "Будівля посольства Італії",
+    "sr": "Зграда амбасаде Италије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Бирчанинова, 11",
+    "en": "Birčaninova 11",
+    "uk": "Вул. Бирчанинова, 11",
+    "sr": "Бирчанинова 11"
+  },
+  "minYear": 1926,
+  "maxYear": 1926,
+  "yearLabelId": "year-1926",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4620342,
+    44.8032292
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4621346,
+          44.8030456
+        ],
+        [
+          20.4617563,
+          44.8032793
+        ],
+        [
+          20.4618928,
+          44.8033921
+        ],
+        [
+          20.4620293,
+          44.8033084
+        ],
+        [
+          20.4620696,
+          44.8033294
+        ],
+        [
+          20.4621219,
+          44.8033408
+        ],
+        [
+          20.4621809,
+          44.8033294
+        ],
+        [
+          20.4622091,
+          44.8033056
+        ],
+        [
+          20.4622198,
+          44.8032808
+        ],
+        [
+          20.4622158,
+          44.8032456
+        ],
+        [
+          20.4621916,
+          44.8032076
+        ],
+        [
+          20.4622723,
+          44.8031577
+        ],
+        [
+          20.4621346,
+          44.8030456
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393213847).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393213847).",
+    "sr": "Контура OpenStreetMap (way/393213847).",
+    "uk": "Контур OpenStreetMap (way/393213847)."
+  },
+  "photos": [
+    "d64064faf1e9966ee252cf97d99702d086ba1449be1e1463a76643855eea2aeb"
+  ],
+  "source": "https://www.openstreetmap.org/way/393213847",
+  "otherSource": "https://www.wikidata.org/wiki/Q105061867"
+}

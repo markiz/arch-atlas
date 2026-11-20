@@ -1,0 +1,88 @@
+{
+  "id": "osm-way-776865371",
+  "osmId": "way/776865371",
+  "names": {
+    "ru": "Молодёжный театр ДАДОВ",
+    "en": "Youth Theatre DADOV",
+    "uk": "Молодіжний театр ДАДОВ",
+    "sr": "Омладинско позориште ДАДОВ"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Десанке Максимович, 6a",
+    "en": "Desanke Maksimović 6a",
+    "uk": "Вул. Десанке Максимович, 6a",
+    "sr": "Десанке Максимовић 6a"
+  },
+  "minYear": 1958,
+  "maxYear": 1958,
+  "yearLabelId": "year-1958",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "cultural",
+  "coordinates": [
+    20.4695035,
+    44.8074037
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4693802,
+          44.8075993
+        ],
+        [
+          20.4697098,
+          44.8074025
+        ],
+        [
+          20.4694699,
+          44.8072002
+        ],
+        [
+          20.4693729,
+          44.8072581
+        ],
+        [
+          20.4695099,
+          44.8073736
+        ],
+        [
+          20.469443,
+          44.8074136
+        ],
+        [
+          20.4694666,
+          44.8074336
+        ],
+        [
+          20.4694301,
+          44.8074554
+        ],
+        [
+          20.469301,
+          44.8075325
+        ],
+        [
+          20.4693802,
+          44.8075993
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/776865371).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/776865371).",
+    "sr": "Контура OpenStreetMap (way/776865371).",
+    "uk": "Контур OpenStreetMap (way/776865371)."
+  },
+  "photos": [
+    "8210caab0378c06d126ede5dfc5d687f47c61e618dd85d8d8b7f138134c9017c"
+  ],
+  "source": "https://www.openstreetmap.org/way/776865371",
+  "otherSource": "https://www.wikidata.org/wiki/Q25460370"
+}

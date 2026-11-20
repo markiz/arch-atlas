@@ -1,0 +1,108 @@
+{
+  "id": "osm-way-394874367",
+  "osmId": "way/394874367",
+  "names": {
+    "ru": "Отель „Астория“",
+    "en": "“Astoria” Hotel",
+    "uk": "Готель „Асторія“",
+    "sr": "Хотел „Асториа”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Милована Миловановича, 1",
+    "en": "Milovana Milovanovića 1",
+    "uk": "Вул. Милована Миловановича, 1",
+    "sr": "Милована Миловановића 1"
+  },
+  "minYear": 1937,
+  "maxYear": 1937,
+  "yearLabelId": "year-1937",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-ivan-savkovic"
+  ],
+  "districtId": "savski-venac",
+  "type": "hospitality",
+  "coordinates": [
+    20.4574612,
+    44.8092901
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4576294,
+          44.8091583
+        ],
+        [
+          20.4573433,
+          44.8091563
+        ],
+        [
+          20.4573403,
+          44.8092287
+        ],
+        [
+          20.4574417,
+          44.8092304
+        ],
+        [
+          20.4574389,
+          44.8093053
+        ],
+        [
+          20.4574005,
+          44.8093489
+        ],
+        [
+          20.4573392,
+          44.8093224
+        ],
+        [
+          20.4572876,
+          44.8093884
+        ],
+        [
+          20.457478,
+          44.809472
+        ],
+        [
+          20.4575293,
+          44.8094169
+        ],
+        [
+          20.4574866,
+          44.8093983
+        ],
+        [
+          20.4575456,
+          44.8093302
+        ],
+        [
+          20.4575481,
+          44.8092296
+        ],
+        [
+          20.4576291,
+          44.8092299
+        ],
+        [
+          20.4576294,
+          44.8091583
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394874367).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394874367).",
+    "sr": "Контура OpenStreetMap (way/394874367).",
+    "uk": "Контур OpenStreetMap (way/394874367)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/394874367",
+  "otherSource": "https://www.wikidata.org/wiki/Q5911205"
+}

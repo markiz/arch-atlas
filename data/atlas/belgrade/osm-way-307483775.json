@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-307483775",
+  "osmId": "way/307483775",
+  "names": {
+    "ru": "Факультет стоматологии Белградского университета",
+    "en": "Faculty of Dental Medicine, University of Belgrade",
+    "uk": "Стоматологічний факультет Белградського університету",
+    "sr": "Стоматолошки факултет Универзитета"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Ранкеова, 4",
+    "en": "Rankeova 4",
+    "uk": "Вул. Ранкеова, 4",
+    "sr": "Ранкеова 4"
+  },
+  "minYear": 1948,
+  "maxYear": 1948,
+  "yearLabelId": "year-1948",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "educational",
+  "coordinates": [
+    20.4673502,
+    44.7960541
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4670876,
+          44.7959958
+        ],
+        [
+          20.4671143,
+          44.7961532
+        ],
+        [
+          20.4671181,
+          44.7961758
+        ],
+        [
+          20.4672615,
+          44.7961636
+        ],
+        [
+          20.4672563,
+          44.7961332
+        ],
+        [
+          20.4676311,
+          44.7961012
+        ],
+        [
+          20.4676057,
+          44.7959516
+        ],
+        [
+          20.4670876,
+          44.7959958
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/307483775).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/307483775).",
+    "sr": "Контура OpenStreetMap (way/307483775).",
+    "uk": "Контур OpenStreetMap (way/307483775)."
+  },
+  "photos": [
+    "51fa6c08cd7a528ad83f4b82454ed35e565076fa7d96f1930085b811ec078d9f"
+  ],
+  "source": "https://www.openstreetmap.org/way/307483775",
+  "otherSource": "https://www.wikidata.org/wiki/Q12759731"
+}

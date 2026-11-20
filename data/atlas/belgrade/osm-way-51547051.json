@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-51547051",
+  "osmId": "way/51547051",
+  "names": {
+    "ru": "Большой пороховой склад на Калемегдане",
+    "en": "Great Gunpowder Magazine at Kalemegdan",
+    "uk": "Великий пороховий склад на Калемегдані",
+    "sr": "Велики барутни магацин на Калемегдану"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Стари-Град, Белград",
+    "en": "Stari Grad, Belgrade",
+    "uk": "Стари-Град, Белград",
+    "sr": "Стари град, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "fortification",
+  "coordinates": [
+    20.4475598,
+    44.8235805
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4475536,
+          44.8237972
+        ],
+        [
+          20.4473309,
+          44.8234404
+        ],
+        [
+          20.4476073,
+          44.8233721
+        ],
+        [
+          20.4477267,
+          44.8236557
+        ],
+        [
+          20.4477644,
+          44.8237451
+        ],
+        [
+          20.4475536,
+          44.8237972
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/51547051).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/51547051).",
+    "sr": "Контура OpenStreetMap (way/51547051).",
+    "uk": "Контур OpenStreetMap (way/51547051)."
+  },
+  "photos": [
+    "4d9e1fd4d7780c85ea7e86d8e81398841d29782c298d0ddec64cbe51e77c8cc7"
+  ],
+  "source": "https://www.openstreetmap.org/way/51547051",
+  "otherSource": "https://www.wikidata.org/wiki/Q12956321"
+}

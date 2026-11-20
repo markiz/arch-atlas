@@ -1,0 +1,101 @@
+{
+  "id": "osm-way-32809082",
+  "osmId": "way/32809082",
+  "names": {
+    "ru": "Музей 25 мая",
+    "en": "25 May Museum",
+    "uk": "Музей 25 травня",
+    "sr": "Музеј 25. мај"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Михаила Мике Янковича, 6",
+    "en": "Mihaila Mike Jankovića 6",
+    "uk": "Вул. Михаила Мике Янковича, 6",
+    "sr": "Михаила Мике Јанковића 6"
+  },
+  "minYear": 1962,
+  "maxYear": 1962,
+  "yearLabelId": "year-1962",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4519779,
+    44.7879645
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4517873,
+          44.7879481
+        ],
+        [
+          20.4517101,
+          44.7878768
+        ],
+        [
+          20.4516578,
+          44.7879053
+        ],
+        [
+          20.4515932,
+          44.7878455
+        ],
+        [
+          20.4517045,
+          44.7877848
+        ],
+        [
+          20.4518566,
+          44.7877019
+        ],
+        [
+          20.4519521,
+          44.7877901
+        ],
+        [
+          20.4520013,
+          44.7878356
+        ],
+        [
+          20.4522043,
+          44.7877249
+        ],
+        [
+          20.4524381,
+          44.7879409
+        ],
+        [
+          20.4520935,
+          44.7881288
+        ],
+        [
+          20.4518363,
+          44.7882689
+        ],
+        [
+          20.4515998,
+          44.7880503
+        ],
+        [
+          20.4517873,
+          44.7879481
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/32809082).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/32809082).",
+    "sr": "Контура OpenStreetMap (way/32809082).",
+    "uk": "Контур OpenStreetMap (way/32809082)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/32809082"
+}

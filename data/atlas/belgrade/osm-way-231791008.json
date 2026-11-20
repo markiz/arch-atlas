@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-231791008",
+  "osmId": "way/231791008",
+  "names": {
+    "ru": "Часовня святых бессребреников Космы и Дамиана",
+    "en": "Chapel of the Holy Unmercenaries Cosmas and Damian",
+    "uk": "Каплиця святих безсрібників Косми і Даміана",
+    "sr": "Капела Светих врачева Козме и Дамјана"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Делиградская, 38",
+    "en": "Deligradska 38",
+    "uk": "Вул. Делиградська, 38",
+    "sr": "Делиградска 38"
+  },
+  "minYear": 1929,
+  "maxYear": 1929,
+  "yearLabelId": "year-1929",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "religious",
+  "coordinates": [
+    20.460149,
+    44.7979018
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4601576,
+          44.7979497
+        ],
+        [
+          20.4600828,
+          44.7979967
+        ],
+        [
+          20.4600748,
+          44.7979903
+        ],
+        [
+          20.460065,
+          44.7979965
+        ],
+        [
+          20.4600386,
+          44.7979919
+        ],
+        [
+          20.4600097,
+          44.7979681
+        ],
+        [
+          20.4600065,
+          44.7979496
+        ],
+        [
+          20.4600177,
+          44.7979425
+        ],
+        [
+          20.4600103,
+          44.7979366
+        ],
+        [
+          20.4600834,
+          44.7978907
+        ],
+        [
+          20.4600271,
+          44.7978456
+        ],
+        [
+          20.460134,
+          44.7977784
+        ],
+        [
+          20.4603196,
+          44.7979271
+        ],
+        [
+          20.460213,
+          44.7979941
+        ],
+        [
+          20.4601576,
+          44.7979497
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/231791008).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/231791008).",
+    "sr": "Контура OpenStreetMap (way/231791008).",
+    "uk": "Контур OpenStreetMap (way/231791008)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/231791008",
+  "otherSource": "https://www.wikidata.org/wiki/Q85995135"
+}

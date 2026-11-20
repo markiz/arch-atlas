@@ -1,0 +1,106 @@
+{
+  "id": "osm-way-89572129",
+  "osmId": "way/89572129",
+  "names": {
+    "ru": "Церковь Ружица",
+    "en": "Ružica Church",
+    "uk": "Церква Ружиця",
+    "sr": "Црква Ружица"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Калемегдан дони град, 1",
+    "en": "Kalemegdan donji grad 1",
+    "uk": "Вул. Калемегдан дони град, 1",
+    "sr": "Калемегдан доњи град 1"
+  },
+  "minYear": 1869,
+  "maxYear": 1869,
+  "yearLabelId": "year-1869",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "religious",
+  "coordinates": [
+    20.4512894,
+    44.8254897
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.451212,
+          44.8254124
+        ],
+        [
+          20.45117,
+          44.8254261
+        ],
+        [
+          20.4512,
+          44.8254735
+        ],
+        [
+          20.4512622,
+          44.8255683
+        ],
+        [
+          20.4512713,
+          44.8255653
+        ],
+        [
+          20.4512793,
+          44.8255769
+        ],
+        [
+          20.4513322,
+          44.8255897
+        ],
+        [
+          20.4513776,
+          44.8255748
+        ],
+        [
+          20.4513914,
+          44.8255396
+        ],
+        [
+          20.4513843,
+          44.8255291
+        ],
+        [
+          20.4513928,
+          44.8255263
+        ],
+        [
+          20.4512982,
+          44.8253859
+        ],
+        [
+          20.4512674,
+          44.8253954
+        ],
+        [
+          20.451212,
+          44.8254124
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/89572129).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/89572129).",
+    "sr": "Контура OpenStreetMap (way/89572129).",
+    "uk": "Контур OpenStreetMap (way/89572129)."
+  },
+  "photos": [
+    "77cc720e967fa29d8b67e81ed87c6988b293de1490185534ba4185596dc6378d",
+    "419b6b54e167712cdb3df0441099e7e8bdc066d11c02eea619ae01911bcb5d02",
+    "583a4085d2b059ecd87e042c744157285a934fd576596965cd65181cdf445ee1"
+  ],
+  "source": "https://www.openstreetmap.org/way/89572129",
+  "otherSource": "https://www.wikidata.org/wiki/Q383098"
+}

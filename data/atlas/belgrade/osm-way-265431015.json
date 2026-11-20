@@ -1,0 +1,108 @@
+{
+  "id": "osm-way-265431015",
+  "osmId": "way/265431015",
+  "names": {
+    "ru": "Театр Вук",
+    "en": "Vuk Theatre",
+    "uk": "Театр Вук",
+    "sr": "Театар Вук"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра, 77a",
+    "en": "Kralja Aleksandra Boulevard 77a",
+    "uk": "Бульвар Короля Александра, 77a",
+    "sr": "Булевар краља Александра 77a"
+  },
+  "minYear": 2005,
+  "maxYear": 2005,
+  "yearLabelId": "year-2005",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zvezdara",
+  "type": "cultural",
+  "coordinates": [
+    20.4812732,
+    44.8037569
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4814178,
+          44.8040356
+        ],
+        [
+          20.4815359,
+          44.8039561
+        ],
+        [
+          20.4815222,
+          44.8039437
+        ],
+        [
+          20.4814976,
+          44.8039276
+        ],
+        [
+          20.481565,
+          44.8038803
+        ],
+        [
+          20.4815454,
+          44.803867
+        ],
+        [
+          20.4816207,
+          44.8038371
+        ],
+        [
+          20.4814918,
+          44.803676
+        ],
+        [
+          20.4814078,
+          44.8037119
+        ],
+        [
+          20.4812252,
+          44.8034887
+        ],
+        [
+          20.4809069,
+          44.8036196
+        ],
+        [
+          20.4810364,
+          44.8037744
+        ],
+        [
+          20.4811015,
+          44.8038339
+        ],
+        [
+          20.4814043,
+          44.8040273
+        ],
+        [
+          20.4814178,
+          44.8040356
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/265431015).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/265431015).",
+    "sr": "Контура OpenStreetMap (way/265431015).",
+    "uk": "Контур OpenStreetMap (way/265431015)."
+  },
+  "photos": [
+    "d615dab3d9c71ea9e6d2e19421ff0b6f17b62be72a8033a80f3545acb248f2eb"
+  ],
+  "source": "https://www.openstreetmap.org/way/265431015",
+  "otherSource": "https://www.wikidata.org/wiki/Q110047924"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-393233961",
+  "osmId": "way/393233961",
+  "names": {
+    "ru": "Третья Белградская гимназия",
+    "en": "Third Belgrade Gymnasium",
+    "uk": "Третя белградська гімназія",
+    "sr": "Трећа београдска гимназија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Негошева, 15",
+    "en": "Njegoševa 15",
+    "uk": "Вул. Негошева, 15",
+    "sr": "Његошева 15"
+  },
+  "minYear": 1891,
+  "maxYear": 1891,
+  "yearLabelId": "year-1891",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "educational",
+  "coordinates": [
+    20.466888,
+    44.8053693
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4661111,
+          44.8054265
+        ],
+        [
+          20.4671129,
+          44.804831
+        ],
+        [
+          20.4676552,
+          44.8053147
+        ],
+        [
+          20.466681,
+          44.8059056
+        ],
+        [
+          20.4666674,
+          44.8058937
+        ],
+        [
+          20.4661111,
+          44.8054265
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393233961).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393233961).",
+    "sr": "Контура OpenStreetMap (way/393233961).",
+    "uk": "Контур OpenStreetMap (way/393233961)."
+  },
+  "photos": [
+    "c83adfe025d6d9e247c68fc01c5f8b1ed1f4867af9a8975fbda64f6d480fee32"
+  ],
+  "source": "https://www.openstreetmap.org/way/393233961",
+  "otherSource": "https://www.wikidata.org/wiki/Q11201856"
+}

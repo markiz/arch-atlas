@@ -1,0 +1,104 @@
+{
+  "id": "osm-way-688879360",
+  "osmId": "way/688879360",
+  "names": {
+    "ru": "Церковь Святого деспота Стефана Лазаревича на Авале",
+    "en": "Church of Saint Despot Stefan Lazarević on Avala",
+    "uk": "Церква Святого деспота Стефана Лазаревича на Авалі",
+    "sr": "Црква Светог деспота Стефана Лазаревића на Авали"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "uk": "Белград",
+    "sr": "Београд"
+  },
+  "minYear": 2017,
+  "maxYear": 2017,
+  "yearLabelId": "year-2017",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "religious",
+  "coordinates": [
+    20.5131979,
+    44.6948843
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.5130949,
+          44.6948781
+        ],
+        [
+          20.5131733,
+          44.694863
+        ],
+        [
+          20.5131679,
+          44.6948488
+        ],
+        [
+          20.5132371,
+          44.6948355
+        ],
+        [
+          20.5132423,
+          44.6948492
+        ],
+        [
+          20.5132722,
+          44.6948497
+        ],
+        [
+          20.5132907,
+          44.6948634
+        ],
+        [
+          20.5132859,
+          44.6948851
+        ],
+        [
+          20.5132626,
+          44.6948957
+        ],
+        [
+          20.5132691,
+          44.6949129
+        ],
+        [
+          20.5131965,
+          44.6949268
+        ],
+        [
+          20.5131902,
+          44.6949103
+        ],
+        [
+          20.5131128,
+          44.6949252
+        ],
+        [
+          20.5130949,
+          44.6948781
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/688879360).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/688879360).",
+    "sr": "Контура OpenStreetMap (way/688879360).",
+    "uk": "Контур OpenStreetMap (way/688879360)."
+  },
+  "photos": [
+    "f26e7e90f64725b766806f8eda94ae3f85599330ecc350074903cba3581d3c79"
+  ],
+  "source": "https://www.openstreetmap.org/way/688879360",
+  "otherSource": "https://www.wikidata.org/wiki/Q69330402"
+}

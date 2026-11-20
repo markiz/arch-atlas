@@ -1,0 +1,67 @@
+{
+  "id": "osm-way-394368771",
+  "osmId": "way/394368771",
+  "names": {
+    "ru": "Студенческий стационар",
+    "en": "Student Infirmary",
+    "uk": "Студентський стаціонар",
+    "sr": "Студентски стационар"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Проте Матее, 29",
+    "en": "Prote Mateje 29",
+    "uk": "Вул. Проте Матеє, 29",
+    "sr": "Проте Матеје 29"
+  },
+  "minYear": 1932,
+  "maxYear": 1932,
+  "yearLabelId": "year-1932",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [
+    "architect-momcilo-belobrk"
+  ],
+  "districtId": "vracar",
+  "type": "healthcare",
+  "coordinates": [
+    20.4692034,
+    44.8042195
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4693644,
+          44.8042154
+        ],
+        [
+          20.469242,
+          44.8041086
+        ],
+        [
+          20.4690424,
+          44.8042236
+        ],
+        [
+          20.4691647,
+          44.8043304
+        ],
+        [
+          20.4693644,
+          44.8042154
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394368771).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394368771).",
+    "sr": "Контура OpenStreetMap (way/394368771).",
+    "uk": "Контур OpenStreetMap (way/394368771)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/394368771"
+}

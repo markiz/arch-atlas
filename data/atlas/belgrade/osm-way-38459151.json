@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-38459151",
+  "osmId": "way/38459151",
+  "names": {
+    "ru": "Дом Николы Предича",
+    "en": "Nikola Predić House",
+    "uk": "Будинок Ніколи Предича",
+    "sr": "Кућа Николе Предића"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Вука Караджича, 14",
+    "en": "Vuka Karadžića 14",
+    "uk": "Вул. Вука Караджича, 14",
+    "sr": "Вука Караџића 14"
+  },
+  "minYear": 1871,
+  "maxYear": 1871,
+  "yearLabelId": "year-1871",
+  "styleIds": [
+    "academic-art"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "residential",
+  "coordinates": [
+    20.4551709,
+    44.8174581
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4553096,
+          44.8175519
+        ],
+        [
+          20.4553718,
+          44.8175044
+        ],
+        [
+          20.4552431,
+          44.8174226
+        ],
+        [
+          20.455129,
+          44.817351
+        ],
+        [
+          20.4550982,
+          44.817355
+        ],
+        [
+          20.4550682,
+          44.8174007
+        ],
+        [
+          20.4550044,
+          44.8174956
+        ],
+        [
+          20.4551489,
+          44.8175327
+        ],
+        [
+          20.4551969,
+          44.8174738
+        ],
+        [
+          20.4553096,
+          44.8175519
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/38459151).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/38459151).",
+    "sr": "Контура OpenStreetMap (way/38459151).",
+    "uk": "Контур OpenStreetMap (way/38459151)."
+  },
+  "photos": [
+    "067dffdbdc3542193d58a67aededed7ef0b6347d4bc26cf154711e0f57a18d41"
+  ],
+  "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45367",
+  "otherSource": "https://www.wikidata.org/wiki/Q3279516",
+  "descriptions": {
+    "ru": "Дом купца Николы Предича, компаньона капитана Миши Анастасиевича, был среди первых частных построек, появившихся в Белграде после того, как турки распродали свои владения и покинули город. Он встал на новой линии застройки, которую задал план вароши в шанце, — с таких домов начиналось городское ядро. Внизу помещались лавки и склады, а наверху жила семья.",
+    "en": "The house of the merchant Nikola Predić, a partner of Captain Miša Anastasijević, was among the first private buildings to rise in Belgrade after the Turks sold off their estates and left the city. It stood on the new building line laid down by the plan for the town within the trench, and houses like it marked the beginning of the city core. Shops and warehouses occupied the ground floor, with the family living above.",
+    "uk": "Дім купця Ніколи Предича, компаньйона капітана Міші Анастасієвича, був серед перших приватних споруд, що постали в Белграді після того, як турки розпродали свої володіння й залишили місто. Він став на новій лінії забудови, яку задав план міста в шанці, — з таких домів починалося міське ядро. Унизу містилися крамниці й склади, а нагорі жила родина.",
+    "sr": "Никола Предић, трговац и компањон капетана Мише Анастасијевића, подигао је ову кућу међу првима после распродаје турских имања и одласка Турака из Београда. Подигнута је на новој регулацији плана вароши у шанцу и сведочи о зачецима градског језгра. У приземљу су биле дућани и магазини, а породица је живела на спрату."
+  },
+  "histories": {
+    "ru": "Дом поставили вскоре после ухода турской власти, когда Белград только начинал получать регулярную планировку. Его выстроили в соответствии с требованиями академической архитектуры, а угловое положение подчёркивал сильно выступающий эркер. В 1906 году дом купил Мияило Павлович и превратил его в доходный: тогда же фасады получили сдержанный сецессионный декор, и в таком виде здание дошло до наших дней.",
+    "en": "The house went up soon after the Turkish withdrawal, when Belgrade was only beginning to acquire a regular street plan. It was designed wholly by the rules of academic architecture, its corner site stressed by a deep projecting bay. In 1906 the merchant Mijailo Pavlović bought it and turned it to rent, and at that point the facades were brought up to date with a restrained Secession ornament. That is the form in which the house has come down to us.",
+    "uk": "Дім поставили невдовзі після відходу турків, коли Белград лише починав набувати регулярного планування. Його звели цілком за правилами академічної архітектури, а наріжне положення підкреслював глибокий виступ еркера. 1906 року дім купив Міяїло Павлович і призначив його під оренду; тоді ж фасади отримали стриманий сецесійний декор. У такому вигляді споруда й дійшла до наших днів.",
+    "sr": "Кућа је подигнута убрзо после одласка Турака, у време када је Београд тек добијао правилну регулацију. Њен пројект у потпуности следи правила академизма, а угаони положај наглашавао је јако истурен еркер. Године 1906. кућа је прешла у руке Ћир-Мијаила Павловића, који ју је уредио за изнајмљивање, па су тада фасаде „осавремењене“ сведеном сецесијском пластиком. У таквом облику кућа је сачувана до данас."
+  }
+}

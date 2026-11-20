@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-1350045138",
+  "osmId": "way/1350045138",
+  "names": {
+    "ru": "Факультет безопасности Университета",
+    "en": "Faculty of Security Studies",
+    "uk": "Факультет безпеки Університету",
+    "sr": "Факултет безбедности Универзитета"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "uk": "Белград",
+    "sr": "Београд"
+  },
+  "minYear": 1978,
+  "maxYear": 1978,
+  "yearLabelId": "year-1978",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "educational",
+  "coordinates": [
+    20.4784852,
+    44.7911088
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4787806,
+          44.7909295
+        ],
+        [
+          20.4782997,
+          44.7908685
+        ],
+        [
+          20.478204,
+          44.7912924
+        ],
+        [
+          20.4786554,
+          44.7913541
+        ],
+        [
+          20.4786921,
+          44.7912189
+        ],
+        [
+          20.4787806,
+          44.7909295
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1350045138).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1350045138).",
+    "sr": "Контура OpenStreetMap (way/1350045138).",
+    "uk": "Контур OpenStreetMap (way/1350045138)."
+  },
+  "photos": [
+    "c605441f6224aec8d3c641bb8edd1be65f4dbb3a39d5c5a4f293f6261240baac"
+  ],
+  "source": "https://www.openstreetmap.org/way/1350045138",
+  "otherSource": "https://www.wikidata.org/wiki/Q6590687"
+}

@@ -1,0 +1,120 @@
+{
+  "id": "osm-way-411475407",
+  "osmId": "way/411475407",
+  "names": {
+    "ru": "Храм Святого Симеона Мироточивого в Новом Београде",
+    "en": "Temple of Saint Simeon the Myrrh-Streaming in New Belgrade",
+    "uk": "Храм Святого Симеона Мироточивого в Новому Белграді",
+    "sr": "Храм Светог Симеона Мироточивог на Новом Београду"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Антифашистичке борбе, 2a",
+    "en": "Antifašističke borbe 2a",
+    "uk": "Вул. Антифашистичке борбе, 2a",
+    "sr": "Антифашистичке борбе 2a"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "novi-beograd",
+  "type": "religious",
+  "coordinates": [
+    20.4252985,
+    44.816288
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4250705,
+          44.8163018
+        ],
+        [
+          20.4251016,
+          44.8162
+        ],
+        [
+          20.425151,
+          44.8162075
+        ],
+        [
+          20.4251579,
+          44.8161847
+        ],
+        [
+          20.4254945,
+          44.8162364
+        ],
+        [
+          20.4254847,
+          44.8162687
+        ],
+        [
+          20.4255063,
+          44.8162767
+        ],
+        [
+          20.4255207,
+          44.8162899
+        ],
+        [
+          20.4255283,
+          44.8163057
+        ],
+        [
+          20.4255282,
+          44.8163224
+        ],
+        [
+          20.4255204,
+          44.8163382
+        ],
+        [
+          20.4255058,
+          44.8163514
+        ],
+        [
+          20.425486,
+          44.8163604
+        ],
+        [
+          20.4254574,
+          44.8163648
+        ],
+        [
+          20.425449,
+          44.8163923
+        ],
+        [
+          20.4250985,
+          44.8163385
+        ],
+        [
+          20.425108,
+          44.8163076
+        ],
+        [
+          20.4250705,
+          44.8163018
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/411475407).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/411475407).",
+    "sr": "Контура OpenStreetMap (way/411475407).",
+    "uk": "Контур OpenStreetMap (way/411475407)."
+  },
+  "photos": [
+    "abbebb88fcefef0d125da90e1a729027bc8f62554fa425c8d80613c13db8b53e"
+  ],
+  "source": "https://www.openstreetmap.org/way/411475407",
+  "otherSource": "https://www.wikidata.org/wiki/Q16087243"
+}

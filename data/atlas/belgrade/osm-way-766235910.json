@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-766235910",
+  "osmId": "way/766235910",
+  "names": {
+    "ru": "Земунская синагога",
+    "en": "Zemun Synagogue",
+    "uk": "Земунська синагога",
+    "sr": "Земунска синагога"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Рабина Алкалая, 5a",
+    "en": "Rabina Alkalaja 5a",
+    "uk": "Вул. Рабина Алкалая, 5a",
+    "sr": "Рабина Алкалаја 5a"
+  },
+  "minYear": 1863,
+  "maxYear": 1863,
+  "yearLabelId": "year-1863",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "religious",
+  "coordinates": [
+    20.4086063,
+    44.8428282
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4084692,
+          44.8428961
+        ],
+        [
+          20.4086141,
+          44.8427088
+        ],
+        [
+          20.4087428,
+          44.842762
+        ],
+        [
+          20.4085993,
+          44.8429465
+        ],
+        [
+          20.4084692,
+          44.8428961
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/766235910).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/766235910).",
+    "sr": "Контура OpenStreetMap (way/766235910).",
+    "uk": "Контур OpenStreetMap (way/766235910)."
+  },
+  "photos": [
+    "bf3e9a18e185a0e59b7d756f9e08e888339cdd07d4963f0295055480298b08dc",
+    "84a58494434a520526ef60f820c16c836201fb75c15e36b4578ca9cee9c0bfab",
+    "bb70978498bd23ec480a3cde81d8b3f6aacb432f43d5f0b1b993be5559f0daed"
+  ],
+  "source": "https://www.openstreetmap.org/way/766235910",
+  "otherSource": "https://www.wikidata.org/wiki/Q1140625"
+}

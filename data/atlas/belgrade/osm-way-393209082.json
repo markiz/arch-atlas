@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-393209082",
+  "osmId": "way/393209082",
+  "names": {
+    "ru": "Посольство Ватикана в Сербии",
+    "en": "Apostolic Nunciature to Serbia",
+    "uk": "Посольство Ватикану в Сербії",
+    "sr": "Амбасада Ватикана"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Святого Савы, 24",
+    "en": "Svetog Save 24",
+    "uk": "Вул. Святого Сави, 24",
+    "sr": "Светог Саве 24"
+  },
+  "minYear": 2006,
+  "maxYear": 2006,
+  "yearLabelId": "year-2006",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "government",
+  "coordinates": [
+    20.4676347,
+    44.8002194
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4675289,
+          44.8002836
+        ],
+        [
+          20.4676283,
+          44.8003101
+        ],
+        [
+          20.4677189,
+          44.8003342
+        ],
+        [
+          20.4677575,
+          44.8002613
+        ],
+        [
+          20.4677959,
+          44.8001888
+        ],
+        [
+          20.4674953,
+          44.8001087
+        ],
+        [
+          20.4674594,
+          44.8001764
+        ],
+        [
+          20.46757,
+          44.8002059
+        ],
+        [
+          20.4675289,
+          44.8002836
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393209082).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393209082).",
+    "sr": "Контура OpenStreetMap (way/393209082).",
+    "uk": "Контур OpenStreetMap (way/393209082)."
+  },
+  "photos": [
+    "712a8cff98065a4d089946452302eb0e60d3735c5405804146276781ba644af6"
+  ],
+  "source": "https://www.openstreetmap.org/way/393209082",
+  "otherSource": "https://www.wikidata.org/wiki/Q19932632"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "osm-way-730684538",
+  "osmId": "way/730684538",
+  "names": {
+    "ru": "Факультет изящных искусств Университета искусств",
+    "en": "Faculty of Fine Arts of the University of Arts",
+    "uk": "Факультет образотворчих мистецтв Університету мистецтв",
+    "sr": "Факултет ликовних уметности Универзитета уметности"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "uk": "Белград",
+    "sr": "Београд"
+  },
+  "minYear": 1973,
+  "maxYear": 1973,
+  "yearLabelId": "year-1973",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.4407276,
+    44.7852333
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.441184,
+          44.7846795
+        ],
+        [
+          20.4413914,
+          44.7847411
+        ],
+        [
+          20.4415603,
+          44.7848849
+        ],
+        [
+          20.441705,
+          44.7851931
+        ],
+        [
+          20.4405231,
+          44.7856485
+        ],
+        [
+          20.4402481,
+          44.785758
+        ],
+        [
+          20.4400647,
+          44.7858162
+        ],
+        [
+          20.4400165,
+          44.785782
+        ],
+        [
+          20.4397608,
+          44.7852855
+        ],
+        [
+          20.4405954,
+          44.7849397
+        ],
+        [
+          20.4410405,
+          44.7847429
+        ],
+        [
+          20.441184,
+          44.7846795
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/730684538).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/730684538).",
+    "sr": "Контура OpenStreetMap (way/730684538).",
+    "uk": "Контур OpenStreetMap (way/730684538)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/730684538",
+  "otherSource": "https://www.wikidata.org/wiki/Q4671453"
+}

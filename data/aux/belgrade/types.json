@@ -115,5 +115,14 @@
    "uk": "Інший",
    "sr": "Остало"
   }
+ },
+ "fortification": {
+  "source": "Fortification",
+  "labels": {
+   "ru": "Фортификационный",
+   "en": "Fortification",
+   "uk": "Фортифікаційний",
+   "sr": "Фортификацијска"
+  }
  }
 }

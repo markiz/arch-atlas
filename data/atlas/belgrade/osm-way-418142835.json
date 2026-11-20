@@ -1,0 +1,110 @@
+{
+  "id": "osm-way-418142835",
+  "osmId": "way/418142835",
+  "names": {
+    "ru": "Факультет драматического искусства",
+    "en": "Faculty of Dramatic Arts",
+    "uk": "Факультет драматичного мистецтва",
+    "sr": "Факултет драмских уметности"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Уметности, 20",
+    "en": "Umetnosti Boulevard 20",
+    "uk": "Бульвар Уметности, 20",
+    "sr": "Булевар уметности 20"
+  },
+  "minYear": 1948,
+  "maxYear": 1948,
+  "yearLabelId": "year-1948",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "novi-beograd",
+  "type": "educational",
+  "coordinates": [
+    20.4087477,
+    44.8145932
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4077853,
+          44.8151061
+        ],
+        [
+          20.4081923,
+          44.8149141
+        ],
+        [
+          20.4082496,
+          44.8149753
+        ],
+        [
+          20.4083272,
+          44.8149387
+        ],
+        [
+          20.4083434,
+          44.8149561
+        ],
+        [
+          20.4091603,
+          44.8145707
+        ],
+        [
+          20.4092766,
+          44.8146948
+        ],
+        [
+          20.4095746,
+          44.8145543
+        ],
+        [
+          20.4094655,
+          44.8144379
+        ],
+        [
+          20.4097056,
+          44.8143247
+        ],
+        [
+          20.4095068,
+          44.8141127
+        ],
+        [
+          20.4093802,
+          44.8141724
+        ],
+        [
+          20.4093283,
+          44.814117
+        ],
+        [
+          20.4076154,
+          44.8149248
+        ],
+        [
+          20.4077853,
+          44.8151061
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/418142835).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/418142835).",
+    "sr": "Контура OpenStreetMap (way/418142835).",
+    "uk": "Контур OpenStreetMap (way/418142835)."
+  },
+  "photos": [
+    "ea6694471089d6d169c76ff14783834b4e160d4a8e2793d48a92185734262510",
+    "c644f820425b57177b5aef9722df1bc62c0c23c04e00acc3710ab366927b200b",
+    "08337301f01d20926cd7059f098323d98ab3fa417137c358535ee1820f583819"
+  ],
+  "source": "https://www.openstreetmap.org/way/418142835",
+  "otherSource": "https://www.wikidata.org/wiki/Q1126523"
+}

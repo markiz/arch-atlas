@@ -1,0 +1,114 @@
+{
+  "id": "osm-way-252857116",
+  "osmId": "way/252857116",
+  "names": {
+    "ru": "Кафедральный собор Блаженной Девы Марии на Врачаре",
+    "en": "Cathedral of the Blessed Virgin Mary in Vračar",
+    "uk": "Собор Блаженної Діви Марії на Врачарі",
+    "sr": "Катедрала Блажене Девице Марије на Врачару"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Белград",
+    "en": "Belgrade",
+    "uk": "Белград",
+    "sr": "Београд"
+  },
+  "minYear": 1938,
+  "maxYear": 1938,
+  "yearLabelId": "year-1938",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "religious",
+  "coordinates": [
+    20.4751754,
+    44.7945355
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4749619,
+          44.7946618
+        ],
+        [
+          20.4749771,
+          44.7945482
+        ],
+        [
+          20.4750432,
+          44.7945527
+        ],
+        [
+          20.4750666,
+          44.7943773
+        ],
+        [
+          20.4751402,
+          44.7943823
+        ],
+        [
+          20.4751454,
+          44.7943435
+        ],
+        [
+          20.4752277,
+          44.794349
+        ],
+        [
+          20.4752627,
+          44.7943514
+        ],
+        [
+          20.4752573,
+          44.794392
+        ],
+        [
+          20.4753297,
+          44.7943969
+        ],
+        [
+          20.4753065,
+          44.7945705
+        ],
+        [
+          20.4753606,
+          44.7945742
+        ],
+        [
+          20.4753454,
+          44.7946877
+        ],
+        [
+          20.4752422,
+          44.7946807
+        ],
+        [
+          20.4750618,
+          44.7946685
+        ],
+        [
+          20.4749619,
+          44.7946618
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/252857116).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/252857116).",
+    "sr": "Контура OpenStreetMap (way/252857116).",
+    "uk": "Контур OpenStreetMap (way/252857116)."
+  },
+  "photos": [
+    "5aecba47c3c29d31c71f11b67584fdec65b4b74979fb36a8c619974152136624",
+    "bed9b561a7077837317f65213986bc96709502a36ea5d6a3a95ce02b45088973",
+    "e3d01ea858ad5c78081de0591e81d1daf278f34781a6603d55d16f1812ef1ee1"
+  ],
+  "source": "https://www.openstreetmap.org/way/252857116",
+  "otherSource": "https://www.wikidata.org/wiki/Q16538404"
+}

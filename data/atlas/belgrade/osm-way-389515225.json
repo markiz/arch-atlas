@@ -1,0 +1,93 @@
+{
+  "id": "osm-way-389515225",
+  "osmId": "way/389515225",
+  "names": {
+    "ru": "Дворец правосудия",
+    "en": "Palace of Justice",
+    "uk": "Палац правосуддя",
+    "sr": "Палата правде"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Бульвар Короля Александра I Карагеоргиевича, 17a",
+    "en": "Kralja Aleksandra I Karađorđevića Boulevard 17a",
+    "uk": "Бульвар Короля Александра I Карагеоргієвича, 17a",
+    "sr": "Булевар краља Александра I Карађорђевића 17a"
+  },
+  "minYear": 1973,
+  "maxYear": 1973,
+  "yearLabelId": "year-1973",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4544421,
+    44.8049285
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4536884,
+          44.8047678
+        ],
+        [
+          20.4540032,
+          44.8051335
+        ],
+        [
+          20.4542227,
+          44.8050412
+        ],
+        [
+          20.4545877,
+          44.8054735
+        ],
+        [
+          20.4551859,
+          44.8052193
+        ],
+        [
+          20.4548209,
+          44.8047869
+        ],
+        [
+          20.4547537,
+          44.8048155
+        ],
+        [
+          20.4543616,
+          44.804348
+        ],
+        [
+          20.4540875,
+          44.8045103
+        ],
+        [
+          20.4539657,
+          44.8045825
+        ],
+        [
+          20.4540149,
+          44.8046336
+        ],
+        [
+          20.4536884,
+          44.8047678
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/389515225).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/389515225).",
+    "sr": "Контура OpenStreetMap (way/389515225).",
+    "uk": "Контур OpenStreetMap (way/389515225)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/389515225"
+}

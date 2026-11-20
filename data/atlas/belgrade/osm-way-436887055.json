@@ -1,0 +1,102 @@
+{
+  "id": "osm-way-436887055",
+  "osmId": "way/436887055",
+  "names": {
+    "ru": "Церковь Святой Петки",
+    "en": "Church of Saint Petka",
+    "uk": "Церква Святої Петки",
+    "sr": "Црква Свете Петке"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Калемегдан дони град, 2",
+    "en": "Kalemegdan donji grad 2",
+    "uk": "Вул. Калемегдан дони град, 2",
+    "sr": "Калемегдан доњи град 2"
+  },
+  "minYear": 1937,
+  "maxYear": 1937,
+  "yearLabelId": "year-1937",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "religious",
+  "coordinates": [
+    20.4510592,
+    44.8257432
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4511403,
+          44.8257536
+        ],
+        [
+          20.4511505,
+          44.8257379
+        ],
+        [
+          20.4510175,
+          44.8256943
+        ],
+        [
+          20.4509835,
+          44.8256825
+        ],
+        [
+          20.4509652,
+          44.8257095
+        ],
+        [
+          20.4509466,
+          44.825739
+        ],
+        [
+          20.4511135,
+          44.8257945
+        ],
+        [
+          20.4511312,
+          44.8257996
+        ],
+        [
+          20.4511499,
+          44.8257967
+        ],
+        [
+          20.4511632,
+          44.825787
+        ],
+        [
+          20.4511665,
+          44.8257731
+        ],
+        [
+          20.4511578,
+          44.8257603
+        ],
+        [
+          20.4511403,
+          44.8257536
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/436887055).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/436887055).",
+    "sr": "Контура OpenStreetMap (way/436887055).",
+    "uk": "Контур OpenStreetMap (way/436887055)."
+  },
+  "photos": [
+    "b73f3cb7701fd66173f96670585ca362b265f288aa3fb24c9c77fc175a139f66",
+    "ca4064220f25b3b949ff92159eb01ebdd9f0d888521388333038a89440b0b71c",
+    "f0c47fc93986c659dd411ffa0fcbed4ea1b7fabb604172e84b780e7cac63fda0"
+  ],
+  "source": "https://www.openstreetmap.org/way/436887055",
+  "otherSource": "https://www.wikidata.org/wiki/Q1639822"
+}

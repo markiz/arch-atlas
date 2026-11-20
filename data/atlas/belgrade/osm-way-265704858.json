@@ -1,0 +1,68 @@
+{
+  "id": "osm-way-265704858",
+  "osmId": "way/265704858",
+  "names": {
+    "ru": "Театр Звездара",
+    "en": "Zvezdara Theatre",
+    "uk": "Театр Звездара",
+    "sr": "Звездара театар"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Ул. Милана Ракича, 38",
+    "en": "Milana Rakića 38",
+    "uk": "Вул. Милана Ракича, 38",
+    "sr": "Милана Ракића 38"
+  },
+  "minYear": 1984,
+  "maxYear": 1984,
+  "yearLabelId": "year-1984",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zvezdara",
+  "type": "cultural",
+  "coordinates": [
+    20.4976518,
+    44.7976598
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4974381,
+          44.7978972
+        ],
+        [
+          20.4980201,
+          44.7977649
+        ],
+        [
+          20.4978655,
+          44.7974224
+        ],
+        [
+          20.4972835,
+          44.7975546
+        ],
+        [
+          20.4974381,
+          44.7978972
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/265704858).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/265704858).",
+    "sr": "Контура OpenStreetMap (way/265704858).",
+    "uk": "Контур OpenStreetMap (way/265704858)."
+  },
+  "photos": [
+    "105c56b2fc315ba7adc1fdc279e21e322d1bec0ccda34b63fea7b22384ce006d"
+  ],
+  "source": "https://www.openstreetmap.org/way/265704858",
+  "otherSource": "https://www.wikidata.org/wiki/Q11229854"
+}
