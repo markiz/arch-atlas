@@ -1265,6 +1265,32 @@ footer b {
   margin: 0;
   accent-color: #477456;
 }
+.map-layers-panel .layer-progress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -2px 0 7px 22px;
+  color: #91a092;
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.layer-progress-track {
+  flex: 1;
+  height: 2px;
+  background: #e0e6dc;
+  overflow: hidden;
+}
+.layer-progress-track i {
+  display: block;
+  height: 100%;
+  background: #708f75;
+  transition: width 120ms linear;
+}
+.layer-progress-percent {
+  min-width: 26px;
+  text-align: right;
+  line-height: 1;
+}
 .map-layers-panel p:not(:first-child) {
   border-top: 1px solid #e7eae1;
   padding-top: 12px;

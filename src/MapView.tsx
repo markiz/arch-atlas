@@ -9,6 +9,7 @@ import { parseOutlineBinary } from './map/outline-binary';
 import { layerMemory } from './map/layer-state';
 import { desktopStartView, isMobileMapLayout, mobileStartView } from './map/start-view';
 import { rememberMapView, savedMapView } from './map/view-memory';
+import { readResponseBytes } from './fetch-progress';
 
 type Props = MapViewProps;
 
@@ -91,6 +92,7 @@ export default function MapView({
     [locating, setLocating] = useState(false),
     [layersOpen, setLayersOpen] = useState(false),
     [buildingLayerLoading, setBuildingLayerLoading] = useState(false),
+    [buildingLayerProgress, setBuildingLayerProgress] = useState<number | null>(null),
     [buildingLayerError, setBuildingLayerError] = useState(false);
   const [showRoads, setShowRoads] = useState(() => layerMemory.showRoads),
     [showBuildings, setShowBuildings] = useState(() => layerMemory.showBuildings),
@@ -177,6 +179,7 @@ export default function MapView({
     let cancelled = false;
     if (!showBuildings) {
       setBuildingLayerLoading(false);
+      setBuildingLayerProgress(null);
       setBuildingLayerError(false);
       map.setBuildingsVisible(false);
       return;
@@ -185,17 +188,25 @@ export default function MapView({
     setBuildingLayerError(false);
     const load = async () => {
       if (!buildingData.current) {
+        setBuildingLayerProgress(0);
         buildingData.current = (async () => {
           if (buildingOutlines.path.includes('..') || buildingOutlines.path.startsWith('/'))
             throw new Error('Некорректный путь в пакете');
           const url = `${import.meta.env.BASE_URL}atlas/${buildingOutlines.path}?v=${encodeURIComponent(buildingOutlines.sha256)}`;
           const response = await fetch(url);
           if (!response.ok) throw new Error(`Не удалось загрузить ${buildingOutlines.path}`);
-          const bytes = await response.arrayBuffer();
+          let lastReport = 0;
+          const bytes = await readResponseBytes(response, buildingOutlines.size, (loaded) => {
+            const now = performance.now();
+            if (now - lastReport < 100 && loaded < buildingOutlines.size) return;
+            lastReport = now;
+            setBuildingLayerProgress(buildingOutlines.size ? loaded / buildingOutlines.size : 1);
+          });
+          setBuildingLayerProgress(1);
           const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
             .map((value) => value.toString(16).padStart(2, '0'))
             .join('');
-          if (bytes.byteLength !== buildingOutlines.size || hash !== buildingOutlines.sha256)
+          if (hash !== buildingOutlines.sha256)
             throw new Error(`Поврежден файл ${buildingOutlines.path}`);
           if (buildingOutlines.path.endsWith('.bin')) return parseOutlineBinary(bytes);
           return JSON.parse(new TextDecoder().decode(bytes)) as GeoJSON.FeatureCollection;
@@ -214,6 +225,7 @@ export default function MapView({
           map.setBuildingOutlinesBinary(data);
         }
         map.setBuildingsVisible(true);
+        setBuildingLayerProgress(null);
         setBuildingLayerLoading(false);
       } catch {
         buildingData.current = null;
@@ -222,6 +234,7 @@ export default function MapView({
         if (cancelled) return;
         map.setBuildingOutlines(null);
         map.setBuildingsVisible(false);
+        setBuildingLayerProgress(null);
         setBuildingLayerLoading(false);
         setBuildingLayerError(true);
       }
@@ -327,6 +340,8 @@ export default function MapView({
       { enableHighAccuracy: false, timeout: 12000, maximumAge: 60000 },
     );
   }
+  const buildingLayerPercent =
+    buildingLayerProgress === null ? null : Math.round(buildingLayerProgress * 100);
   return (
     <>
       <div className="map-canvas atlas-map-canvas">
@@ -440,6 +455,23 @@ export default function MapView({
                 {t('Силуэты зданий')}
                 {buildingLayerLoading && ` (${t('Загружается…')})`}
               </label>
+              {buildingLayerLoading && buildingLayerPercent !== null && (
+                <div
+                  className="layer-progress"
+                  role="progressbar"
+                  aria-label={t('Силуэты зданий')}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={buildingLayerPercent}
+                >
+                  <span className="layer-progress-track" aria-hidden="true">
+                    <i style={{ width: `${buildingLayerPercent}%` }} />
+                  </span>
+                  <span className="layer-progress-percent" aria-hidden="true">
+                    {buildingLayerPercent}%
+                  </span>
+                </div>
+              )}
               {buildingLayerError && (
                 <small className="layer-status" role="alert">
                   {t('Не удалось загрузить силуэты зданий.')}

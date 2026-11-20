@@ -9,13 +9,13 @@ export async function readResponseBytes(
   response: Response,
   expectedSize: number,
   onProgress?: (loaded: number, total: number) => void,
-): Promise<Uint8Array> {
+): Promise<ArrayBuffer> {
   if (!response.body) {
     const buffer = await response.arrayBuffer();
     if (buffer.byteLength !== expectedSize)
       throw new Error('Размер файла не совпадает с манифестом');
     onProgress?.(buffer.byteLength, expectedSize);
-    return new Uint8Array(buffer);
+    return buffer;
   }
 
   const bytes = new Uint8Array(expectedSize);
@@ -38,5 +38,5 @@ export async function readResponseBytes(
     reader.releaseLock();
   }
   if (loaded !== expectedSize) throw new Error('Размер файла не совпадает с манифестом');
-  return bytes;
+  return bytes.buffer;
 }

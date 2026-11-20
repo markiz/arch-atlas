@@ -695,7 +695,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
         const initialFiles = manifest.files.filter((file) => corePaths.has(file.path));
         if (initialFiles.length !== corePaths.size) throw new Error('В пакете нет данных города');
         const photoFiles = new Map(manifest.files.map((file) => [file.path, file]));
-        const files = new Map<string, Uint8Array>();
+        const files = new Map<string, ArrayBuffer>();
         let done = 0;
         const total = initialFiles.reduce((n, file) => n + file.size, 0);
         let loaded = 0;

@@ -21,7 +21,7 @@ test('reports cumulative bytes while reading a response body', async () => {
     (loaded, total) => seen.push([loaded, total]),
   );
 
-  assert.deepEqual([...bytes], [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual([...new Uint8Array(bytes)], [1, 2, 3, 4, 5, 6]);
   assert.deepEqual(seen, [
     [2, 6],
     [3, 6],
@@ -37,7 +37,7 @@ test('falls back to arrayBuffer when the response has no stream', async () => {
     (loaded, total) => seen.push([loaded, total]),
   );
 
-  assert.deepEqual([...bytes], [7, 8, 9]);
+  assert.deepEqual([...new Uint8Array(bytes)], [7, 8, 9]);
   assert.deepEqual(seen, [[3, 3]]);
 });
 
