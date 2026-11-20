@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const translations = JSON.parse(
-  await readFile(new URL('../data/basemap-name-translations.json', import.meta.url), 'utf8'),
+  await readFile(new URL('../data/translations/tbilisi/basemap-names.json', import.meta.url), 'utf8'),
 );
 const entries = Object.entries(translations);
 
