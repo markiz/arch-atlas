@@ -484,6 +484,19 @@ for card in landmark_cards.values():
  card_landmarks_added+=1
 print('Curated card-only landmarks added',card_landmarks_added)
 
+# Museums, churches and fortresses stay as markers even when the atlas has their
+# card. Other landmark categories are shown only outside the atlas: for an atlas
+# building the pin duplicates the card that already opens from its outline.
+marker_categories={'museum','church','castle'}
+def marker_needed(feature):
+ props=feature['properties']
+ card=landmark_cards.get(props.get('osmId')) or landmark_cards.get(props.get('landmarkId'))
+ return props.get('category') in marker_categories or not (card and card.get('atlasId'))
+landmark_points_before=sum(1 for f in features if f['properties'].get('kind')=='landmark' and f['geometry']['type']=='Point')
+features=[f for f in features if f['properties'].get('kind')!='landmark' or f['geometry']['type']!='Point' or marker_needed(f)]
+landmark_points_after=sum(1 for f in features if f['properties'].get('kind')=='landmark' and f['geometry']['type']=='Point')
+print('Atlas building markers hidden',landmark_points_before-landmark_points_after,f'({landmark_points_after} markers left)')
+
 # Atlas cards are stored one JSON per object in data/atlas/<city>/ and packed by
 # scripts/assemble-atlas.mjs. This builder owns only the basemap and the
 # city-wide building outlines; it must not create or edit card records.
