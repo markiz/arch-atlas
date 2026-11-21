@@ -68,7 +68,9 @@
     "sr": "Контура OpenStreetMap (way/409038651).",
     "uk": "Контур OpenStreetMap (way/409038651)."
   },
-  "photos": [],
+  "photos": [
+    "4f3839ac002360b69c408d6542fb8f6a4212e86299f6ac456583c847bc60aabd"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=115489",
   "otherSource": "https://www.openstreetmap.org/way/409038651",
   "descriptions": {
