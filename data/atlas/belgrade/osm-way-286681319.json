@@ -120,7 +120,9 @@
     "sr": "Контура OpenStreetMap (way/286681319).",
     "uk": "Контур OpenStreetMap (way/286681319)."
   },
-  "photos": [],
+  "photos": [
+    "4cf95d8f80ed21c55de1b9a123a58135292675269c886009df2300a0ba631896"
+  ],
   "source": "https://www.openstreetmap.org/way/286681319",
   "otherSource": "https://www.wikidata.org/wiki/Q31183387"
 }

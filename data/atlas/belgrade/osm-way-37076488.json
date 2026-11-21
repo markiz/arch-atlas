@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/37076488).",
     "uk": "Контур OpenStreetMap (way/37076488)."
   },
-  "photos": [],
+  "photos": [
+    "ed1a5f460644e6fd41a1b112e0cbda8a4c44625d1d796906f764b9a1bc438a8b"
+  ],
   "source": "https://www.openstreetmap.org/way/37076488",
   "otherSource": "https://www.wikidata.org/wiki/Q85994532",
   "descriptions": {
