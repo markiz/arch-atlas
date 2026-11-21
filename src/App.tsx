@@ -43,9 +43,13 @@ import {
 import MapView from './MapView';
 import type { MapViewProps } from './map/types';
 import { isMobileMapLayout } from './map/start-view';
-import { I18nContext, cityTitle, translate, type Language, useI18n } from './i18n';
+import { I18nContext, atlasTitle, translate, type Language, useI18n } from './i18n';
 import { buildHash, isLanguage, parseHash, type View } from './routing';
-import { LANGUAGE_NAMES, type Language as CityLanguage } from './languages.ts';
+import {
+  LANGUAGE_NAMES,
+  preferredBrowserLanguage,
+  type Language as CityLanguage,
+} from './languages.ts';
 import {
   rankPhotos,
   useBuildingPhotos,
@@ -663,14 +667,13 @@ function LoaderLine({ value }: { value?: number }) {
   );
 }
 function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void }) {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   return (
     <div className="loading">
       <div className="loading-mark">
         ა<span>•</span>
       </div>
-      <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
-      <h1>{t('АРХИТЕКТУРНЫЙ АТЛАС')}</h1>
+      <h1>{atlasTitle(null, language)}</h1>
       <LoaderLine />
       <p>{error || t('Загружаем карту и данные…')}</p>
       {error && (
@@ -873,8 +876,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
       <div className="loading-mark">
         ა<span>•</span>
       </div>
-      <p className="eyebrow">{t('АРХИТЕКТУРНЫЙ АТЛАС')}</p>
-      <h1>{cityTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)}</h1>
+      <h1>{atlasTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)}</h1>
       <LoaderLine value={error ? undefined : (progress ?? undefined)} />
       <p>
         {error || (progress !== null ? `${Math.round(progress * 100)}% · ${t(status)}` : t(status))}
@@ -1940,12 +1942,12 @@ function AppContent({
     </div>
   );
 }
-function savedLanguage(): Language {
+function savedLanguage(): Language | null {
   try {
     const saved = localStorage.getItem('atlas-language');
-    return isLanguage(saved) ? saved : 'ru';
+    return isLanguage(saved) ? saved : null;
   } catch {
-    return 'ru';
+    return null;
   }
 }
 
@@ -1981,7 +1983,7 @@ export default function App() {
   const [cityData, setCityData] = useState<{ id: string; data: Data } | null>(null);
   const cache = useRef(new Map<string, Data>());
   const [language, setLanguageState] = useState<Language>(
-    () => initial.language ?? savedLanguage(),
+    () => initial.language ?? savedLanguage() ?? preferredBrowserLanguage() ?? 'ru',
   );
 
   const setLanguage = (next: Language) => {
@@ -2092,11 +2094,10 @@ export default function App() {
 
   useEffect(() => {
     const city = catalog?.cities.find((item) => item.id === cityId) ?? null;
-    const suffix = t('архитектура и её истории');
-    const title = city
-      ? `${cityTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)} — ${suffix}`
-      : `${t('Архитектурный атлас')} — ${suffix}`;
-    document.title = title;
+    const fallback = catalog?.cities.find((item) => item.id === catalog.defaultCity) ?? null;
+    const named = city ?? fallback;
+    const name = named ? (named.labels[language] ?? named.labels.ru ?? named.id) : null;
+    document.title = atlasTitle(name, language);
     const description = city
       ? `Интерактивный атлас архитектуры ${city.labels.ru ?? city.id}: история, архитекторы и стили зданий.`
       : 'Интерактивный атлас архитектуры: история, архитекторы и стили зданий.';

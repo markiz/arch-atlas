@@ -11,14 +11,19 @@ export interface AtlasRoute {
 
 export { isLanguage };
 
-export function parseHash(hash: string = typeof location === 'undefined' ? '' : location.hash) {
+export function parseHash(
+  hash: string = typeof location === 'undefined' ? '' : location.hash,
+  search: string = typeof location === 'undefined' ? '' : location.search,
+) {
   const params = new URLSearchParams(hash.replace(/^#/, ''));
   const city = params.get('city');
+  // Shared links may carry the interface language in the query string; the hash route wins.
+  const lang = params.get('lang') ?? new URLSearchParams(search).get('lang');
   return {
     city: city && /^[a-z0-9-]+$/.test(city) ? city : null,
     view: params.get('view') === 'catalog' ? ('catalog' as View) : ('map' as View),
     building: params.get('building'),
-    language: isLanguage(params.get('lang')) ? (params.get('lang') as Language) : null,
+    language: isLanguage(lang) ? lang : null,
   } satisfies AtlasRoute;
 }
 

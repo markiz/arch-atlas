@@ -32,3 +32,9 @@ test('default route is a plain map URL', () => {
   assert.equal(isLanguage('sr'), true);
   assert.equal(isLanguage('de'), false);
 });
+
+test('reads the language from the query string when the hash has none', () => {
+  assert.equal(parseHash('#city=belgrade', '?lang=sr').language, 'sr');
+  assert.equal(parseHash('#city=belgrade&lang=en', '?lang=sr').language, 'en');
+  assert.equal(parseHash('', '?lang=de').language, null);
+});

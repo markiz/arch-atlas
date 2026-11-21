@@ -16,3 +16,18 @@ export const LANGUAGE_NAMES: Record<Language, string> = {
 export function isLanguage(value: string | null | undefined): value is Language {
   return value === 'ru' || value === 'en' || value === 'uk' || value === 'ka' || value === 'sr';
 }
+
+/** The first atlas language in the browser's preference list, or `null` when none match. */
+export function preferredBrowserLanguage(
+  tags: readonly string[] = typeof navigator === 'undefined'
+    ? []
+    : navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language],
+): Language | null {
+  for (const tag of tags) {
+    const code = tag.toLowerCase().split('-')[0];
+    if (isLanguage(code)) return code;
+  }
+  return null;
+}

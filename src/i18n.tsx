@@ -6,7 +6,6 @@ export type { Language } from './languages.ts';
 const messages: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
   en: {
     'АРХИТЕКТУРНЫЙ АТЛАС': 'ARCHITECTURE ATLAS',
-    'Атлас Тбилиси': 'Tbilisi Atlas',
     'Подготавливаем карту и фотографии': 'Preparing map and photos',
     'Загружаем карту и данные…': 'Loading map and data…',
     'Загрузка данных': 'Loading data',
@@ -116,7 +115,6 @@ const messages: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
   },
   ka: {
     'АРХИТЕКТУРНЫЙ АТЛАС': 'არქიტექტურის ატლასი',
-    'Атлас Тбилиси': 'თბილისის ატლასი',
     'Подготавливаем карту и фотографии': 'რუკისა და ფოტოების მომზადება',
     'Загружаем карту и данные…': 'რუკისა და მონაცემების ჩატვირთვა…',
     'Загрузка данных': 'მონაცემების ჩატვირთვა',
@@ -221,7 +219,6 @@ const messages: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
   },
   uk: {
     'АРХИТЕКТУРНЫЙ АТЛАС': 'АРХІТЕКТУРНИЙ АТЛАС',
-    'Атлас Тбилиси': 'Атлас Тбілісі',
     'Подготавливаем карту и фотографии': 'Підготовка мапи та фотографій',
     'Загружаем карту и данные…': 'Завантаження мапи й даних…',
     'Загрузка данных': 'Завантаження даних',
@@ -326,7 +323,6 @@ const messages: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
   },
   sr: {
     'АРХИТЕКТУРНЫЙ АТЛАС': 'АРХИТЕКТОНСКИ АТЛАС',
-    'Атлас Тбилиси': 'Атлас Тбилисија',
     'Подготавливаем карту и фотографии': 'Припремамо карту и фотографије',
     'Загружаем карту и данные…': 'Учитавамо карту и податке…',
     'Загрузка данных': 'Учитавање података',
@@ -607,8 +603,7 @@ const extras: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
     'К карте': 'На карту',
     Города: 'Градови',
     'До 1400': 'До 1400',
-    'архитектура и её истории': 'архитектура и њене приче',
-    'Архитектурный атлас': 'Архитектонски атлас',
+    'Архитектурный Атлас': 'Архитектонски Атлас',
   },
 };
 Object.assign(extras.en, {
@@ -664,8 +659,7 @@ Object.assign(extras.en, {
   Отдалить: 'Zoom out',
   'В этом городе пока нет объектов.': 'This city has no atlas objects yet.',
   'До 1400': 'Before 1400',
-  'архитектура и её истории': 'architecture and its stories',
-  'Архитектурный атлас': 'Architecture Atlas',
+  'Архитектурный Атлас': 'Architecture Atlas',
   'К карте': 'To the map',
   Города: 'Cities',
 });
@@ -674,8 +668,7 @@ Object.assign(extras.ka, {
   Отдалить: 'დაპატარავება',
   'В этом городе пока нет объектов.': 'ამ ქალაქში ჯერ ატლასის ობიექტები არ არის.',
   'До 1400': '1400-მდე',
-  'архитектура и её истории': 'არქიტექტურა და მისი ისტორიები',
-  'Архитектурный атлас': 'არქიტექტურული ატლასი',
+  'Архитектурный Атлас': 'არქიტექტურის ატლასი',
   'К карте': 'რუკაზე',
   Города: 'ქალაქები',
 });
@@ -684,16 +677,13 @@ Object.assign(extras.uk, {
   Отдалить: 'Віддалити',
   'В этом городе пока нет объектов.': 'У цьому місті ще немає об’єктів атласу.',
   'До 1400': 'До 1400',
-  'архитектура и её истории': 'архітектура та її історії',
-  'Архитектурный атлас': 'Архітектурний атлас',
+  'Архитектурный Атлас': 'Архітектурний Атлас',
   'К карте': 'До мапи',
   Города: 'Міста',
 });
-export function cityTitle(cityName: string, language: Language): string {
-  if (language === 'en') return `${cityName} Atlas`;
-  if (language === 'ka') return `${cityName} ატლასი`;
-  if (language === 'sr') return `Атлас ${cityName}`;
-  return `Атлас ${cityName}`;
+export function atlasTitle(cityName: string | null, language: Language): string {
+  const brand = translate('Архитектурный Атлас', language);
+  return cityName ? `${cityName} // ${brand}` : brand;
 }
 
 export function translate(value: string, language: Language): string {
