@@ -139,7 +139,7 @@
       "counts": {
         "buildings": 502
       },
-      "manifestRevision": "618b1c9ad9cfbb85"
+      "manifestRevision": "9bc544e99eb997e7"
     },
     {
       "id": "belgrade",
@@ -237,25 +237,25 @@
         "start": {
           "mobile": {
             "center": {
-              "lat": 44.817,
-              "lng": 20.456
+              "lat": 44.8163,
+              "lng": 20.4602
             },
-            "zoom": 12.5
+            "zoom": 14
           },
           "desktop": {
             "center": {
-              "lat": 44.817,
-              "lng": 20.456
+              "lat": 44.8163,
+              "lng": 20.4602
             },
-            "zoom": 11.5
+            "zoom": 15.5
           }
         }
       },
       "counts": {
         "buildings": 412
       },
-      "manifestRevision": "a8278035d4f1e1e2"
+      "manifestRevision": "12646a8ab2c984e2"
     }
   ],
-  "revision": "9ca76d4b382776cf"
+  "revision": "cf31eb8dadde0485"
 }

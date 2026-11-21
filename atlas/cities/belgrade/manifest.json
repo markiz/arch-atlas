@@ -1,7 +1,7 @@
 {
   "version": 2,
   "city": "belgrade",
-  "revision": "432790b7ade4e9e3",
+  "revision": "a5839b30cdd15af5",
   "entry": {
     "buildings": "cities/belgrade/buildings.json",
     "basemap": "cities/belgrade/basemap.geojson",
@@ -10,8 +10,8 @@
   "files": [
     {
       "path": "cities/belgrade/buildings.json",
-      "size": 4054466,
-      "sha256": "8e8c6ae1b120da884ae41e1cc96232016476354eafe3b3172844fa2c4de1ce23"
+      "size": 4071197,
+      "sha256": "6b78b2eec04e5c809a456b38a7ce2e3d72bd149f7a3d866a3365835d9dd90678"
     },
     {
       "path": "cities/belgrade/basemap.geojson",
@@ -20,8 +20,8 @@
     },
     {
       "path": "cities/belgrade/building-outlines.bin",
-      "size": 11315176,
-      "sha256": "73112e1134c9bf16fb5572157aeb9966dcfd29002a270568e210334b2e6b3bcc"
+      "size": 3382466,
+      "sha256": "1533fdaac113d2e620bc056394afd26a13332c422da1915e56dc13b934a46b40"
     },
     {
       "path": "photos/belgrade/9bf844d65b3c24e045f98a14a0169f4c3e2daa3351d91ba9c361166c3a4ecf5b.webp",
@@ -262,21 +262,6 @@
       "path": "cards/belgrade/2b813cee6bd23ddd6cb7ad3d0927bf4055a217ad3b071551516bb52d3e7cade7.webp",
       "size": 18092,
       "sha256": "ac00cd25af29cf10eb995fa08ba3eb85796e6a707c1f749c44597372fd7096b1"
-    },
-    {
-      "path": "photos/belgrade/25e82554ba6b10e96a646a10060dadd351920ee8ff3442c279b83765b461d5f0.webp",
-      "size": 269270,
-      "sha256": "25e82554ba6b10e96a646a10060dadd351920ee8ff3442c279b83765b461d5f0"
-    },
-    {
-      "path": "thumbnails/belgrade/25e82554ba6b10e96a646a10060dadd351920ee8ff3442c279b83765b461d5f0.webp",
-      "size": 70064,
-      "sha256": "944e58c202ed8011b1664797dd41598ead815f2f56c2a19a0f6af25a6b0aa5ca"
-    },
-    {
-      "path": "cards/belgrade/25e82554ba6b10e96a646a10060dadd351920ee8ff3442c279b83765b461d5f0.webp",
-      "size": 18618,
-      "sha256": "eac6cdf37320c7467b71b2f04e749c784b490897456fc42d58e5a2c84ef08e02"
     },
     {
       "path": "photos/belgrade/67eb1587613c90e9325474cb7a166fe97d28cce998f2441eb792abc59f43b365.webp",
@@ -1719,19 +1704,19 @@
       "sha256": "90b67eb8f40b8d2c5d6152acd307febef5acd43f2ebca07cb5035188633eb93f"
     },
     {
-      "path": "photos/belgrade/15a940e2108e4a6c90fb94f2da4fe4c5a0bf38a9ed3f63025e093ab643be8e1b.webp",
-      "size": 344378,
-      "sha256": "15a940e2108e4a6c90fb94f2da4fe4c5a0bf38a9ed3f63025e093ab643be8e1b"
+      "path": "photos/belgrade/ad6352320d2547888c99d83a30bb5ed2a8daa45243048150557bf1dd969427e5.webp",
+      "size": 149002,
+      "sha256": "ad6352320d2547888c99d83a30bb5ed2a8daa45243048150557bf1dd969427e5"
     },
     {
-      "path": "thumbnails/belgrade/15a940e2108e4a6c90fb94f2da4fe4c5a0bf38a9ed3f63025e093ab643be8e1b.webp",
-      "size": 37698,
-      "sha256": "4db4785e2d9a5a5ee113dd95e3830941b3fa79122a8b2bdfcdb2cba480ba2a10"
+      "path": "thumbnails/belgrade/ad6352320d2547888c99d83a30bb5ed2a8daa45243048150557bf1dd969427e5.webp",
+      "size": 31364,
+      "sha256": "748c5f1111e35be6f44f2bc24062b178848df24dca94c8cbfa010b822d305be5"
     },
     {
-      "path": "cards/belgrade/15a940e2108e4a6c90fb94f2da4fe4c5a0bf38a9ed3f63025e093ab643be8e1b.webp",
-      "size": 13678,
-      "sha256": "77e19185facdf1f0a312beb77def51e2df3aae9b8b3d69c9015445926c7daee4"
+      "path": "cards/belgrade/ad6352320d2547888c99d83a30bb5ed2a8daa45243048150557bf1dd969427e5.webp",
+      "size": 11638,
+      "sha256": "f36df146c2ca7f413525037b3427257f56cf48638ddfd4ba0372501625bb58b4"
     },
     {
       "path": "photos/belgrade/0cd8205e6c593c98a555157924cd49c99e0e1b00e9418af595cf58fe05dcd95e.webp",
@@ -6849,21 +6834,6 @@
       "sha256": "59ec5600180e39dc1567d86d63217299a0db484760af423e84c92ee4a9f5e9b9"
     },
     {
-      "path": "photos/belgrade/65fc2361be17d3945585815f9fc47fe9499b97df921b907da99413cafb213ee1.webp",
-      "size": 94438,
-      "sha256": "65fc2361be17d3945585815f9fc47fe9499b97df921b907da99413cafb213ee1"
-    },
-    {
-      "path": "thumbnails/belgrade/65fc2361be17d3945585815f9fc47fe9499b97df921b907da99413cafb213ee1.webp",
-      "size": 28118,
-      "sha256": "3b8343d6b94c3555b07faa05fd0cb1b31c668d0df02bb8bc1176294f96a9b2cc"
-    },
-    {
-      "path": "cards/belgrade/65fc2361be17d3945585815f9fc47fe9499b97df921b907da99413cafb213ee1.webp",
-      "size": 8484,
-      "sha256": "a52e1384dd29fb1678840012014f7642421e9ef161d4a4b35c56de54f1d42f10"
-    },
-    {
       "path": "photos/belgrade/706be01e9eea94873b61cbc641ff3b753845db276512336303b0f0138a7fce9c.webp",
       "size": 353894,
       "sha256": "706be01e9eea94873b61cbc641ff3b753845db276512336303b0f0138a7fce9c"
@@ -7794,21 +7764,6 @@
       "sha256": "e4f78954f3a744374e72dc96042769090ed7fe3ef563c9bf5adf0961d0df25ac"
     },
     {
-      "path": "photos/belgrade/e61f14a086b358a035a3c7b99c115156a7a5ad71ed4777cae0d34148bb3307b0.webp",
-      "size": 282616,
-      "sha256": "e61f14a086b358a035a3c7b99c115156a7a5ad71ed4777cae0d34148bb3307b0"
-    },
-    {
-      "path": "thumbnails/belgrade/e61f14a086b358a035a3c7b99c115156a7a5ad71ed4777cae0d34148bb3307b0.webp",
-      "size": 50376,
-      "sha256": "481800aff1899d4129e558dbdf19b62dfa6e382710fc7e9bcdf18d4b6e6298bc"
-    },
-    {
-      "path": "cards/belgrade/e61f14a086b358a035a3c7b99c115156a7a5ad71ed4777cae0d34148bb3307b0.webp",
-      "size": 14378,
-      "sha256": "9ba4d5655c658a861f35143977f4c4a19ee4628d6d49bf9e06d4dada790202c5"
-    },
-    {
       "path": "photos/belgrade/85c502beb2e9243c83884146fb20e773cff3b64c15e5c86f0f3cdee0433b704b.webp",
       "size": 245166,
       "sha256": "85c502beb2e9243c83884146fb20e773cff3b64c15e5c86f0f3cdee0433b704b"
@@ -8289,19 +8244,19 @@
       "sha256": "ce0b08ef162c1ed6eed6b502c3cc515a3cba51ea3f21805f3b7d70543eceb643"
     },
     {
-      "path": "photos/belgrade/28299b831c1d243e1f41ae357f42514b05792be3cc01d71d8c90d41e808c5d64.webp",
-      "size": 238104,
-      "sha256": "28299b831c1d243e1f41ae357f42514b05792be3cc01d71d8c90d41e808c5d64"
+      "path": "photos/belgrade/4a7642b7f46b8a9044bd387525232f8a8dd640ef517c94ba9694058db11eab4d.webp",
+      "size": 236280,
+      "sha256": "4a7642b7f46b8a9044bd387525232f8a8dd640ef517c94ba9694058db11eab4d"
     },
     {
-      "path": "thumbnails/belgrade/28299b831c1d243e1f41ae357f42514b05792be3cc01d71d8c90d41e808c5d64.webp",
-      "size": 20616,
-      "sha256": "30244d1ec5b0d71a999c9266a53fabff28bdb3be1b991bec9cb275243c32ce6b"
+      "path": "thumbnails/belgrade/4a7642b7f46b8a9044bd387525232f8a8dd640ef517c94ba9694058db11eab4d.webp",
+      "size": 27552,
+      "sha256": "2df6448c20be37d61aab5fd06484004a72cf3a969b57f5336682014210b1cf2f"
     },
     {
-      "path": "cards/belgrade/28299b831c1d243e1f41ae357f42514b05792be3cc01d71d8c90d41e808c5d64.webp",
-      "size": 20616,
-      "sha256": "30244d1ec5b0d71a999c9266a53fabff28bdb3be1b991bec9cb275243c32ce6b"
+      "path": "cards/belgrade/4a7642b7f46b8a9044bd387525232f8a8dd640ef517c94ba9694058db11eab4d.webp",
+      "size": 27552,
+      "sha256": "2df6448c20be37d61aab5fd06484004a72cf3a969b57f5336682014210b1cf2f"
     },
     {
       "path": "photos/belgrade/f63338f4e9a0e4964902e8703db5a2f4d86cd5a67ed6bdac3affa37c7a0c0397.webp",
@@ -8994,21 +8949,6 @@
       "sha256": "0169e5249025215294bc83ff6c8c46be7c4b8b1d8057773e99e976cbd15a6dd4"
     },
     {
-      "path": "photos/belgrade/c48ccbda1bd57b8480cd8578fcf20eacac6ff231e9d4b94252de91a404da6656.webp",
-      "size": 224174,
-      "sha256": "c48ccbda1bd57b8480cd8578fcf20eacac6ff231e9d4b94252de91a404da6656"
-    },
-    {
-      "path": "thumbnails/belgrade/c48ccbda1bd57b8480cd8578fcf20eacac6ff231e9d4b94252de91a404da6656.webp",
-      "size": 31372,
-      "sha256": "7909cab71694aaae3a6a5e4bcadc7fa36c21580b3c58db20c782dba452999830"
-    },
-    {
-      "path": "cards/belgrade/c48ccbda1bd57b8480cd8578fcf20eacac6ff231e9d4b94252de91a404da6656.webp",
-      "size": 11486,
-      "sha256": "ed87699489f84cf2caae67856ed8c053bf6401cb92710a790d9c16e54f1bc805"
-    },
-    {
       "path": "photos/belgrade/fd24ecfaca4c45ed3aae7fb08bfc55b2eafc5811bd299a9a57c371de3ac10af8.webp",
       "size": 14742,
       "sha256": "fd24ecfaca4c45ed3aae7fb08bfc55b2eafc5811bd299a9a57c371de3ac10af8"
@@ -9112,21 +9052,6 @@
       "path": "cards/belgrade/b0ee29eaf8d9739d9c5b3036dc91ef104f408d8e658b832044e74bcaccb0d7fc.webp",
       "size": 10984,
       "sha256": "3f21294431f3bca28491e62b30c1c5771d8f6e14ed723e9cada8474976081b19"
-    },
-    {
-      "path": "photos/belgrade/5aac8d15a6a43c74e8b09d5b8af2c170d7c74dcd782a016f170b38dfc9c8d364.webp",
-      "size": 342848,
-      "sha256": "5aac8d15a6a43c74e8b09d5b8af2c170d7c74dcd782a016f170b38dfc9c8d364"
-    },
-    {
-      "path": "thumbnails/belgrade/5aac8d15a6a43c74e8b09d5b8af2c170d7c74dcd782a016f170b38dfc9c8d364.webp",
-      "size": 49700,
-      "sha256": "a99304d8f1f2feadf27bf24ddf44d9cb5a4d3be2bd47eabbc17bace0f9d6f788"
-    },
-    {
-      "path": "cards/belgrade/5aac8d15a6a43c74e8b09d5b8af2c170d7c74dcd782a016f170b38dfc9c8d364.webp",
-      "size": 14842,
-      "sha256": "4433ec95f7bfc5eb38787a530bd27cf1a7105bc73bbb8c65391c690da15ac24f"
     },
     {
       "path": "photos/belgrade/b567de14cf52c6e3f3a91e45483d374078d5d77dcb00736b915cf5867ce80073.webp",
@@ -10477,21 +10402,6 @@
       "path": "cards/belgrade/3782ef7c75e77448982318e47d9e31d14a2ff2c615eececbda8cbe915403f571.webp",
       "size": 2816,
       "sha256": "a9758de8e92be80216d2d86045656eb3bf07f94b8e1dbe67120bb359f31fb6c7"
-    },
-    {
-      "path": "photos/belgrade/e2200763a5c08bd7d098d3e9706b9993a786e82c6664784345cadf18194c47cb.webp",
-      "size": 240122,
-      "sha256": "e2200763a5c08bd7d098d3e9706b9993a786e82c6664784345cadf18194c47cb"
-    },
-    {
-      "path": "thumbnails/belgrade/e2200763a5c08bd7d098d3e9706b9993a786e82c6664784345cadf18194c47cb.webp",
-      "size": 39896,
-      "sha256": "0db87ff89b3c495992ea2a7ac366ad9d0f0d6de816e8e8616c03e37d73bdd455"
-    },
-    {
-      "path": "cards/belgrade/e2200763a5c08bd7d098d3e9706b9993a786e82c6664784345cadf18194c47cb.webp",
-      "size": 11212,
-      "sha256": "d5fdd34f7ff8a06f9319d7e0e35775bc2cb19b4e310ba785e42270cd4f4c3ae6"
     },
     {
       "path": "photos/belgrade/77cc720e967fa29d8b67e81ed87c6988b293de1490185534ba4185596dc6378d.webp",
