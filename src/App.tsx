@@ -42,6 +42,7 @@ import {
   buildingYearLabel,
 } from './building-text';
 import MapView from './MapView';
+import { FpsMeter, isLocalhost } from './FpsMeter';
 import type { MapViewProps } from './map/types';
 import { isMobileMapLayout } from './map/start-view';
 import { I18nContext, atlasTitle, translate, type Language, useI18n } from './i18n';
@@ -1792,6 +1793,7 @@ function AppContent({
                       </div>
                     )}
                   </div>
+                  {isLocalhost() && <FpsMeter />}
                 </>
               ) : (
                 <div className="catalog">

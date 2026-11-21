@@ -422,6 +422,25 @@ a {
 .legend.compact {
   width: 190px;
 }
+/* Local-only frame-rate badge: it fills the strip between the legend and the
+   bottom edge, so the legend itself never moves. */
+.fps-meter {
+  position: absolute;
+  z-index: 401;
+  left: 18px;
+  bottom: 0;
+  padding: 1px 8px 2px;
+  background: #fffef8e6;
+  border: 1px solid #dce1d5;
+  border-bottom: 0;
+  color: #486451;
+  font-size: 9.5px;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  user-select: none;
+}
 .legend-head {
   position: relative;
   width: 100%;
@@ -1051,6 +1070,12 @@ footer b {
   }
   .legend.compact {
     width: 180px;
+  }
+  .fps-meter {
+    left: 10px;
+    bottom: 0;
+    padding: 0 6px 1px;
+    font-size: 9px;
   }
   .legend-list {
     font-size: 9px;
