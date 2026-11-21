@@ -1,0 +1,17 @@
+{
+  "author": "Church of the Ascension in Žarkovo",
+  "license": "All rights reserved",
+  "licenseUrl": "https://vaznesenjska.rs/galerija/",
+  "source": "https://vaznesenjska.rs/galerija/",
+  "modifications": "Converted to WebP at native resolution; no upscale; temporary illustrative use, rights not cleared.",
+  "width": 650,
+  "height": 300,
+  "rating": 53,
+  "visualTags": [
+    "facade"
+  ],
+  "tags": [
+    "building",
+    "fallback"
+  ]
+}

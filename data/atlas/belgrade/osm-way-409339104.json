@@ -140,7 +140,9 @@
     "sr": "Контура OpenStreetMap (way/409339104).",
     "uk": "Контур OpenStreetMap (way/409339104)."
   },
-  "photos": [],
+  "photos": [
+    "5c391e05a2de575bc9b66e25699600529061ddc39eb1358c65813c2dee8017b6"
+  ],
   "source": "https://www.openstreetmap.org/way/409339104",
   "otherSource": "https://www.wikidata.org/wiki/Q31183334",
   "descriptions": {

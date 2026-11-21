@@ -82,6 +82,8 @@
     "sr": "Контура OpenStreetMap (way/973580640).",
     "uk": "Контур OpenStreetMap (way/973580640)."
   },
-  "photos": [],
+  "photos": [
+    "3ff61ec7d03eb5bd79b75c606a5ab8acc2e14bbc568de260a0dd30d3aa289626"
+  ],
   "source": "https://www.openstreetmap.org/way/973580640"
 }
