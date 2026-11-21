@@ -103,7 +103,12 @@ type RoadGroups = { major: number[]; secondary: number[]; minor: number[] };
 
 const MAX_CANVAS_PIXELS = 11_000_000;
 const CANVAS_PADDING = 0.15;
-const DOT_THRESHOLD = 1.15;
+/**
+ * Buildings projected below this many CSS pixels are painted as one-pixel dots
+ * instead of outlines: below ~2 px the outline is unreadable anyway, and the
+ * polygon pass costs an order of magnitude more per building.
+ */
+const DOT_THRESHOLD = 2;
 const MIN_DRAG = 3;
 /**
  * A finger lands within roughly 2.5-3 mm of the aim point; at typical phone CSS
