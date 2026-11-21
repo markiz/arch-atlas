@@ -32,52 +32,60 @@ function cityFromPath(relative: string): string | null {
   return null;
 }
 
-// The production host gzips GeoJSON/JSON, but Vite's dev server does not. Without
-// this middleware the loader honestly reports the 11.8 MiB uncompressed package
-// and Fast 4G checks cannot reproduce production behaviour.
+// The production host gzips GeoJSON/JSON, but Vite's dev and preview servers do
+// not. Without this middleware the loader honestly reports the 11.8 MiB
+// uncompressed package and local checks cannot reproduce production behaviour.
+function atlasGzipMiddleware(
+  root: string,
+  cache: Map<string, { mtimeMs: number; body: Buffer; type: string }>,
+) {
+  return async (request: any, response: any, next: (error?: unknown) => void) => {
+    try {
+      if (request.method !== 'GET' && request.method !== 'HEAD') return next();
+      if (!String(request.headers['accept-encoding'] ?? '').includes('gzip')) return next();
+      const url = new URL(request.url ?? '/', 'http://localhost');
+      const pathname = decodeURIComponent(url.pathname);
+      if (!pathname.startsWith('/atlas/') || !/\.(?:json|geojson)$/.test(pathname)) return next();
+      const file = path.resolve(root, `.${pathname}`);
+      const atlasRoot = path.resolve(root, 'atlas');
+      if (!file.startsWith(atlasRoot + path.sep)) return next();
+      const info = await stat(file);
+      if (!info.isFile()) return next();
+      let entry = cache.get(file);
+      if (!entry || entry.mtimeMs !== info.mtimeMs) {
+        entry = {
+          mtimeMs: info.mtimeMs,
+          body: gzipSync(await readFile(file), { level: 9 }),
+          type: pathname.endsWith('.geojson')
+            ? 'application/geo+json; charset=utf-8'
+            : 'application/json; charset=utf-8',
+        };
+        cache.set(file, entry);
+      }
+      response.statusCode = 200;
+      response.setHeader('Content-Type', entry.type);
+      response.setHeader('Content-Encoding', 'gzip');
+      response.setHeader('Content-Length', String(entry.body.length));
+      response.setHeader('Vary', 'Accept-Encoding');
+      response.setHeader('Cache-Control', 'no-cache');
+      if (request.method === 'HEAD') response.end();
+      else response.end(entry.body);
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code === 'ENOENT') return next();
+      next(error);
+    }
+  };
+}
+
 function atlasGzip(): Plugin {
   const cache = new Map<string, { mtimeMs: number; body: Buffer; type: string }>();
   return {
     name: 'atlas-gzip',
-    apply: 'serve',
     configureServer(server) {
-      server.middlewares.use(async (request, response, next) => {
-        try {
-          if (request.method !== 'GET' && request.method !== 'HEAD') return next();
-          if (!String(request.headers['accept-encoding'] ?? '').includes('gzip')) return next();
-          const url = new URL(request.url ?? '/', 'http://localhost');
-          const pathname = decodeURIComponent(url.pathname);
-          if (!pathname.startsWith('/atlas/') || !/\.(?:json|geojson)$/.test(pathname))
-            return next();
-          const file = path.resolve(PROJECT_ROOT, 'public', `.${pathname}`);
-          const atlasRoot = path.resolve(PROJECT_ROOT, 'public', 'atlas');
-          if (!file.startsWith(atlasRoot + path.sep)) return next();
-          const info = await stat(file);
-          if (!info.isFile()) return next();
-          let entry = cache.get(file);
-          if (!entry || entry.mtimeMs !== info.mtimeMs) {
-            entry = {
-              mtimeMs: info.mtimeMs,
-              body: gzipSync(await readFile(file), { level: 9 }),
-              type: pathname.endsWith('.geojson')
-                ? 'application/geo+json; charset=utf-8'
-                : 'application/json; charset=utf-8',
-            };
-            cache.set(file, entry);
-          }
-          response.statusCode = 200;
-          response.setHeader('Content-Type', entry.type);
-          response.setHeader('Content-Encoding', 'gzip');
-          response.setHeader('Content-Length', String(entry.body.length));
-          response.setHeader('Vary', 'Accept-Encoding');
-          response.setHeader('Cache-Control', 'no-cache');
-          if (request.method === 'HEAD') response.end();
-          else response.end(entry.body);
-        } catch (error) {
-          if ((error as NodeJS.ErrnoException).code === 'ENOENT') return next();
-          next(error);
-        }
-      });
+      server.middlewares.use(atlasGzipMiddleware(path.resolve(PROJECT_ROOT, 'public'), cache));
+    },
+    configurePreviewServer(server) {
+      server.middlewares.use(atlasGzipMiddleware(path.resolve(PROJECT_ROOT, 'dist'), cache));
     },
   };
 }
