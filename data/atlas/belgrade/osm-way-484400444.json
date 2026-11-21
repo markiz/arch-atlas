@@ -110,7 +110,9 @@
     "sr": "Контура OpenStreetMap (way/484400444).",
     "uk": "Контур OpenStreetMap (way/484400444)."
   },
-  "photos": [],
+  "photos": [
+    "bfb7e2834c6083259e4682cf823328d189bcbeafd3a234b2b913fa7f3e5d27a7"
+  ],
   "source": "https://www.openstreetmap.org/way/484400444",
   "otherSource": "https://www.wikidata.org/wiki/Q61130549",
   "descriptions": {

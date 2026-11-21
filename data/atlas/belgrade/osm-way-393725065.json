@@ -62,7 +62,9 @@
     "sr": "Контура OpenStreetMap (way/393725065).",
     "uk": "Контур OpenStreetMap (way/393725065)."
   },
-  "photos": [],
+  "photos": [
+    "710669b1d1b85dbe202215c6df50a27cedb3314f096c4f59f217a64552c9198b"
+  ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/vracar/",
   "otherSource": "https://www.wikidata.org/wiki/Q3279939",
   "descriptions": {

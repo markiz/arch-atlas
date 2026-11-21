@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/393475829).",
     "uk": "Контур OpenStreetMap (way/393475829)."
   },
-  "photos": [],
+  "photos": [
+    "7c7adb8c99e9f9d91c75888cd2abf632e70712257ae407d01c0c875b5e2d2267"
+  ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/stari-grad/",
   "otherSource": "https://www.wikidata.org/wiki/Q85994556",
   "descriptions": {

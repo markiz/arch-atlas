@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/399333163).",
     "uk": "Контур OpenStreetMap (way/399333163)."
   },
-  "photos": [],
+  "photos": [
+    "fd39125173cad2fe5c6886c5953982ccb97457afd309d1186bdef1f3993f9b42"
+  ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/savski-venac/",
   "otherSource": "https://www.wikidata.org/wiki/Q85992809",
   "descriptions": {

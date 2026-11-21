@@ -156,7 +156,9 @@
     "sr": "Контура OpenStreetMap (way/351445217).",
     "uk": "Контур OpenStreetMap (way/351445217)."
   },
-  "photos": [],
+  "photos": [
+    "25380d7f47f09182186360c1822a26f90ba834dc1ede74916bbc000d3dda4a8a"
+  ],
   "source": "https://www.openstreetmap.org/way/351445217",
   "otherSource": "https://www.wikidata.org/wiki/Q25469194",
   "descriptions": {
