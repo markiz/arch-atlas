@@ -40,23 +40,22 @@ export interface PhotoRef {
   rating: number;
   /** Documentary tags; `stamp` marks postage-stamp scans. */
   tags?: string[];
-}
-
-/** Full photo record: a ref plus the attribution loaded from the credits pack. */
-export interface Photo extends PhotoRef {
-  author: string;
-  license: string;
-  licenseUrl: string;
-  source: string;
-  modifications: string;
-  width: number;
-  height: number;
+  /** v2 bundles carried attribution inline; v3 keeps it in the credits pack. */
+  author?: string;
+  license?: string;
+  licenseUrl?: string;
+  source?: string;
+  modifications?: string;
+  width?: number;
+  height?: number;
   descriptions?: Partial<Record<Language, string>>;
   sourceTags?: string[];
   visualTags?: string[];
 }
+
+/** Full photo record: a ref plus the attribution loaded from the credits pack. */
+export interface Photo extends PhotoRef {}
 export interface Building extends BuildingCore {
-  photos?: Photo[];
   /** v2 bundles carried the inspector text inline; v3 keeps it in details packs. */
   descriptions?: Partial<Record<Language, string>>;
   histories?: Partial<Record<Language, string>>;

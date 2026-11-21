@@ -598,6 +598,9 @@ a {
   color: #607463;
   margin: 21px 0;
 }
+.description-loading {
+  opacity: 0.72;
+}
 .geometry-note {
   font-size: 11px;
   line-height: 1.5;

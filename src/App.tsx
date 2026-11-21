@@ -10,8 +10,21 @@ import {
 } from 'preact/hooks';
 import { createPortal } from 'preact/compat';
 import type { FeatureCollection } from 'geojson';
-import type { Building, CitiesCatalog, CityPublic, Data, Filters, Photo } from './types';
-import { filterBuildings, normalize, period, periodsFor, styleEntries } from './domain';
+import type {
+  AtlasCoreBundle,
+  Building,
+  BuildingDetails,
+  CitiesCatalog,
+  CityManifest,
+  CityManifestV3,
+  CityPublic,
+  Data,
+  Filters,
+  ManifestFile,
+  Photo,
+  PhotoCredit,
+} from './types';
+import { filterBuildings, isInteresting, normalize, period, periodsFor, styleEntries } from './domain';
 import {
   buildingAddress,
   buildingArchitects,
@@ -37,6 +50,7 @@ import {
 } from './photos';
 import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
 import { readResponseBytes } from './fetch-progress';
+import { useCityDetails, usePhotoCredits } from './city-details';
 
 const initialFilters: Filters = {
   query: '',
@@ -251,7 +265,7 @@ function photoTechnicalNote(modifications: string, t: (value: string) => string)
   if (other) parts.push(other);
   return parts.length ? parts.join(' · ') : clean;
 }
-function photoCreditText(photo: Photo, t: (value: string) => string) {
+function photoCreditText(photo: { author?: string; license?: string }, t: (value: string) => string) {
   const author = (photo.author || '').trim(),
     license = (photo.license || '').trim();
   if (author && license) return `${t('Фото: ')}${author} · ${license}`;
@@ -445,7 +459,7 @@ function PhotoLightbox({
   index: number;
   total: number;
   description?: string;
-  credit?: Photo;
+  credit?: PhotoCredit;
   onClose: () => void;
   onNext: () => void;
   onPrevious: () => void;
@@ -453,7 +467,7 @@ function PhotoLightbox({
 }) {
   const { t, language } = useI18n();
   const name = buildingName(building, language);
-  const sourceHost = credit ? photoSourceHost(credit.source) : '';
+  const sourceHost = credit ? photoSourceHost(credit.source ?? '') : '';
   const creditText = credit ? photoCreditText(credit, t) : '';
   const viewRef = useRef<HTMLDivElement>(null),
     imgRef = useRef<HTMLImageElement>(null),
@@ -462,7 +476,7 @@ function PhotoLightbox({
     enabled: total > 1,
     onNext,
     onPrevious,
-    resetKey: `${building.id}:${credit?.file ?? index}`,
+    resetKey: `${building.id}:${credit?.id ?? index}`,
     viewRef,
     imgRef,
   });
@@ -683,29 +697,55 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
           if (!r.ok) throw new Error(`Не удалось загрузить ${path}`);
           return r;
         };
-        const manifest = (await (await get(`cities/${city.id}/manifest.json`)).json()) as {
-          version: number;
-          city: string;
-          revision: string;
-          entry: { buildings: string; basemap: string; outlines: string };
-          files: { path: string; size: number; sha256: string }[];
+        const optional = async (path: string) => {
+          const response = await fetch(`${base}${path}?v=${encodeURIComponent(revision)}`, {
+            signal: controller.signal,
+          });
+          return response.ok ? response : null;
         };
-        if (
-          manifest.version !== 2 ||
-          manifest.city !== city.id ||
-          !manifest.entry ||
-          !Array.isArray(manifest.files)
-        )
+        const splitResponse = await optional(`cities/${city.id}/manifest.v3.json`);
+        const manifest = splitResponse
+          ? ((await splitResponse.json()) as CityManifestV3)
+          : ((await (await get(`cities/${city.id}/manifest.json`)).json()) as CityManifest);
+        if (manifest.city !== city.id || !manifest.entry || !Array.isArray(manifest.files))
           throw new Error('Неизвестная версия пакета');
         if (!crypto.subtle)
           throw new Error('Для проверки пакета откройте атлас через HTTPS или localhost');
         const byPath = new Map(manifest.files.map((file) => [file.path, file]));
+        const photoFiles = new Map(manifest.files.map((file) => [file.path, file]));
         const outlines = byPath.get(manifest.entry.outlines);
         if (!outlines) throw new Error('В пакете нет контуров зданий');
-        const corePaths = new Set([manifest.entry.buildings, manifest.entry.basemap]);
-        const initialFiles = manifest.files.filter((file) => corePaths.has(file.path));
-        if (initialFiles.length !== corePaths.size) throw new Error('В пакете нет данных города');
-        const photoFiles = new Map(manifest.files.map((file) => [file.path, file]));
+
+        let v3: CityManifestV3['entry'] | null = null;
+        let legacy: CityManifest['entry'] | null = null;
+        let detailsFiles: Data['detailsFiles'] = {};
+        let creditsFile: ManifestFile | undefined;
+        if (manifest.version === 3) {
+          const entry = (manifest as CityManifestV3).entry;
+          const core = byPath.get(entry.core);
+          const basemap = byPath.get(entry.basemap);
+          if (!core || !basemap) throw new Error('В пакете нет данных города');
+          detailsFiles = {};
+          for (const [language, path] of Object.entries(entry.details ?? {})) {
+            const file = byPath.get(path);
+            if (!file) throw new Error(`В пакете нет описаний ${language}`);
+            detailsFiles[language as Language] = file;
+          }
+          creditsFile = byPath.get(entry.credits);
+          if (!creditsFile) throw new Error('В пакете нет атрибуции фото');
+          v3 = entry;
+        } else if (manifest.version === 2) {
+          const entry = (manifest as CityManifest).entry;
+          if (!byPath.has(entry.buildings) || !byPath.has(entry.basemap))
+            throw new Error('В пакете нет данных города');
+          legacy = entry;
+        } else {
+          throw new Error('Неизвестная версия пакета');
+        }
+
+        const initialFiles = v3
+          ? [byPath.get(v3.core)!, byPath.get(v3.basemap)!]
+          : [byPath.get(legacy!.buildings)!, byPath.get(legacy!.basemap)!];
         const files = new Map<string, ArrayBuffer>();
         let done = 0;
         const total = initialFiles.reduce((n, file) => n + file.size, 0);
@@ -755,9 +795,18 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
           if (!bytes) throw new Error(`В пакете нет ${path}`);
           return JSON.parse(new TextDecoder().decode(bytes));
         };
-        const buildings: Building[] = decode(manifest.entry.buildings),
-          basemap: FeatureCollection = decode(manifest.entry.basemap);
-        for (const item of buildings)
+        let buildings: Building[];
+        if (v3) {
+          const bundle = decode(v3.core) as AtlasCoreBundle;
+          if (!bundle || bundle.version !== 1 || !Array.isArray(bundle.buildings))
+            throw new Error('Неизвестный формат данных города');
+          buildings = bundle.buildings as Building[];
+        } else {
+          buildings = decode(legacy!.buildings) as Building[];
+        }
+        for (const item of buildings) {
+          item.cityId = item.cityId || city.id;
+          item.hasStory = item.hasStory ?? isInteresting(item);
           for (const photo of item.photos ?? (item.photo ? [item.photo] : []))
             if (
               !photoFiles.has(photo.file) ||
@@ -765,6 +814,8 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
               (photo.card && !photoFiles.has(photo.card))
             )
               throw new Error(`В пакете нет фото ${item.names?.ru || item.id}`);
+        }
+        const basemap: FeatureCollection = decode(v3 ? v3.basemap : legacy!.basemap);
         if (!cancelled) {
           onReady({
             city,
@@ -772,7 +823,8 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
             basemap,
             buildingOutlines: outlines,
             photoFiles,
-            detailsFiles: {},
+            detailsFiles,
+            creditsFile,
           });
         }
       } catch (e) {
@@ -851,6 +903,11 @@ function Inspector({
   city,
   photos,
   photoFiles,
+  details,
+  photoCredits,
+  textStatus,
+  textError,
+  onRetryText,
   onClose,
   onMap,
   onFilter,
@@ -859,13 +916,18 @@ function Inspector({
   city: CityPublic;
   photos: InspectorPhotos;
   photoFiles: Data['photoFiles'];
+  details?: BuildingDetails;
+  photoCredits?: Map<string, PhotoCredit>;
+  textStatus: 'idle' | 'loading' | 'ready' | 'error' | 'unavailable';
+  textError: string;
+  onRetryText: () => void;
   onClose: () => void;
   onMap: () => void;
   onFilter: (key: 'architect' | 'style', value: string) => void;
 }) {
   const { t, language } = useI18n();
   const name = buildingName(building, language);
-  const text = buildingText(building, undefined, language);
+  const text = buildingText(building, details, language);
   const description = text.description.trim();
   const history = text.history;
   const individualStyles = styleEntries(building, language) as { id: string; label: string }[];
@@ -889,9 +951,24 @@ function Inspector({
   const nextAsset = images.length > 1 ? images[(photoIndex + 1) % images.length] : undefined;
   const previousPreview = previousAsset?.thumb;
   const nextPreview = nextAsset?.thumb;
-  const credits = current?.photo;
-  const photoNote = credits ? photoTechnicalNote(credits.modifications, t) : '';
-  const creditText = credits ? photoCreditText(credits, t) : '';
+  const photoRef = current?.photo;
+  const inlineCredit: PhotoCredit | undefined =
+    photoRef && (photoRef.author || photoRef.license)
+      ? {
+          id: photoRef.id,
+          author: photoRef.author ?? '',
+          license: photoRef.license ?? '',
+          licenseUrl: photoRef.licenseUrl ?? '',
+          source: photoRef.source ?? '',
+          modifications: photoRef.modifications ?? '',
+          width: photoRef.width ?? 0,
+          height: photoRef.height ?? 0,
+          descriptions: photoRef.descriptions,
+        }
+      : undefined;
+  const credit = (photoRef && photoCredits?.get(photoRef.id)) || inlineCredit;
+  const photoNote = credit ? photoTechnicalNote(credit.modifications, t) : '';
+  const creditText = credit ? photoCreditText(credit, t) : '';
   const { url: fullUrl } = useFullPhoto(current?.photo, photoFiles);
   const preview = current?.thumb ?? fullUrl;
   const gallery = fullUrl ?? current?.thumb;
@@ -977,7 +1054,7 @@ function Inspector({
                         <img
                           src={preview}
                           alt={`${name}, ${t('фотография ')}${photoIndex + 1}`}
-                          className={credits?.tags?.includes('stamp') ? 'stamp-photo' : undefined}
+                          className={photoRef?.tags?.includes('stamp') ? 'stamp-photo' : undefined}
                           draggable={false}
                         />
                       </div>
@@ -1008,7 +1085,7 @@ function Inspector({
                     {String(photoIndex + 1).padStart(2, '0')} /{' '}
                     {String(images.length).padStart(2, '0')}
                   </span>
-                  {credits?.tags?.includes('stamp') && (
+                  {photoRef?.tags?.includes('stamp') && (
                     <span className="photo-stamp-badge">{t('МАРКА')}</span>
                   )}
                   {photos.phase === 'preview' && (
@@ -1087,6 +1164,17 @@ function Inspector({
               <Icon name="external" size={12} />
             </a>
             {description && <p className="description">{description}</p>}
+            {!description && building.hasStory && textStatus === 'loading' && (
+              <p className="description description-loading">{t('Загружаем текст…')}</p>
+            )}
+            {!description && building.hasStory && textStatus === 'error' && (
+              <p className="description description-loading">
+                {textError || t('Не удалось загрузить текст')}{' '}
+                <button type="button" className="text-link" onClick={onRetryText}>
+                  {t('Повторить')}
+                </button>
+              </p>
+            )}
             {building.geometryRole === 'heritage_boundary' && (
               <p className="geometry-note">
                 {t('Показана охраняемая граница памятника, а не надземный контур здания.')}
@@ -1160,16 +1248,16 @@ function Inspector({
                   {t('Дополнительный источник')} <Icon name="external" size={12} />
                 </a>
               )}
-              {credits && (
+              {credit && (
                 <>
                   {creditText && (
-                    <a href={credits.source} target="_blank" rel="noreferrer">
+                    <a href={credit.source} target="_blank" rel="noreferrer">
                       {creditText} <Icon name="external" size={12} />
                     </a>
                   )}
                   <span className="credit-line">
-                    <a href={credits.licenseUrl} target="_blank" rel="noreferrer">
-                      {t(credits.license ? 'Условия лицензии' : 'Источник фото')}
+                    <a href={credit.licenseUrl} target="_blank" rel="noreferrer">
+                      {t(credit.license ? 'Условия лицензии' : 'Источник фото')}
                     </a>
                     {photoNote && (
                       <InfoTip text={photoNote} label={t('Технические сведения о фотографии')} />
@@ -1177,7 +1265,7 @@ function Inspector({
                   </span>
                 </>
               )}
-              {building.geometryQuality && (
+              {geometryQuality && (
                 <span className="credit-line credit-contour">
                   <span>{t('Контур')}</span>
                   <InfoTip text={geometryQuality} label={t('Технические сведения о контуре')} />
@@ -1187,7 +1275,7 @@ function Inspector({
           </div>
         </div>
       </aside>
-      {lightboxOpen && credits && gallery && (
+      {lightboxOpen && credit && gallery && (
         <PhotoLightbox
           building={building}
           src={gallery}
@@ -1195,8 +1283,8 @@ function Inspector({
           nextSrc={nextPreview}
           index={photoIndex}
           total={images.length}
-          description={credits.descriptions?.[language]}
-          credit={credits}
+          description={credit.descriptions?.[language]}
+          credit={credit}
           onClose={() => setLightboxOpen(false)}
           onNext={nextPhoto}
           onPrevious={previousPhoto}
@@ -1288,6 +1376,9 @@ function AppContent({
     return [...byId.values()].sort((a, b) => a.label.localeCompare(b.label, language));
   }, [data.buildings, language]);
   const selectedBuilding = data.buildings.find((x) => x.id === selected) || null;
+  const detailsState = useCityDetails(data, language);
+  const creditsState = usePhotoCredits(data, !!selectedBuilding);
+  const selectedDetails = selectedBuilding ? detailsState.value.get(selectedBuilding.id) : undefined;
   const selectedPhotos = useBuildingPhotos(selectedBuilding, data.photoFiles);
   const sortName = (building: Building) => buildingName(building, language);
   const sorted = [...filtered].sort((a, b) =>
@@ -1753,6 +1844,11 @@ function AppContent({
                 city={city}
                 photos={selectedPhotos}
                 photoFiles={data.photoFiles}
+                details={selectedDetails}
+                photoCredits={creditsState.value}
+                textStatus={detailsState.status}
+                textError={detailsState.error}
+                onRetryText={detailsState.retry}
                 onClose={close}
                 onMap={() => goMap(selectedBuilding.id)}
                 onFilter={filterBy}
