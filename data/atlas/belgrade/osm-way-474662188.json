@@ -92,7 +92,9 @@
     "sr": "Контура OpenStreetMap (way/474662188).",
     "uk": "Контур OpenStreetMap (way/474662188)."
   },
-  "photos": [],
+  "photos": [
+    "0ed046ca9b43c7efa5112cd4c51ad2c322fd9d625be5080bb9269b270d5a9fa5"
+  ],
   "source": "https://www.openstreetmap.org/way/474662188",
   "otherSource": "https://www.wikidata.org/wiki/Q61135002",
   "descriptions": {
