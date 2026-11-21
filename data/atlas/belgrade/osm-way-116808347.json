@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3038869",
+    "architect-q3341572"
+  ],
   "districtId": "palilula",
   "type": "cultural",
   "coordinates": [

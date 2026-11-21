@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-svetomir-lazic"
+  ],
   "districtId": "savski-venac",
   "type": "residential",
   "coordinates": [

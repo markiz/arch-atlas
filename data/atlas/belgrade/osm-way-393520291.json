@@ -21,7 +21,9 @@
     "art-nouveau",
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-valerij-vladimirovich-stashevski"
+  ],
   "districtId": "stari-grad",
   "type": "industrial",
   "coordinates": [

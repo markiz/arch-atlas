@@ -20,7 +20,11 @@
   "styleIds": [
     "neoclassicism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-franja-urban",
+    "architect-milan-shlang",
+    "architect-milutin-jovanovic"
+  ],
   "districtId": "stari-grad",
   "type": "religious",
   "coordinates": [

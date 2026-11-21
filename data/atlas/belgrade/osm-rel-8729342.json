@@ -21,7 +21,9 @@
     "eclecticism",
     "russian-revival"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-georgije-pavlovich-kovaljevski"
+  ],
   "districtId": "zvezdara",
   "type": "educational",
   "coordinates": [

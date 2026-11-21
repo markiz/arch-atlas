@@ -20,7 +20,9 @@
   "styleIds": [
     "romanticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3313980"
+  ],
   "districtId": "stari-grad",
   "type": "industrial",
   "coordinates": [

@@ -20,7 +20,10 @@
   "styleIds": [
     "art-nouveau"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3015098",
+    "architect-milosh-savchic"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

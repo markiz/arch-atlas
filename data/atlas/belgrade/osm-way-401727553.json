@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-petar-krstic",
+    "architect-branko-krstic"
+  ],
   "districtId": "savski-venac",
   "type": "residential",
   "coordinates": [

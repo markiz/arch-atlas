@@ -20,7 +20,9 @@
   "styleIds": [
     "serbo-byzantine"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q2923834"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

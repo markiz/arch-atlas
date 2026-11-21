@@ -20,7 +20,9 @@
   "styleIds": [
     "art-nouveau"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-vladimir-simic"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

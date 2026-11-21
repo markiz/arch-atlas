@@ -20,7 +20,11 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-svetozar-jovanovic",
+    "architect-petar-krstic",
+    "architect-mihailo-radovanovic"
+  ],
   "districtId": "palilula",
   "type": "residential",
   "coordinates": [

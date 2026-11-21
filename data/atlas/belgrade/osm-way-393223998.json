@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-aleksej-brkic"
+  ],
   "districtId": "savski-venac",
   "type": "government",
   "coordinates": [

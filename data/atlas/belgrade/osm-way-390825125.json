@@ -20,7 +20,9 @@
   "styleIds": [
     "baroque"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-jozef-felber"
+  ],
   "districtId": "zemun",
   "type": "religious",
   "coordinates": [

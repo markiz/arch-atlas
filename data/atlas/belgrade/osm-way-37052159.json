@@ -20,7 +20,9 @@
   "styleIds": [
     "neoclassicism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-a-f-kverfeld"
+  ],
   "districtId": "stari-grad",
   "type": "religious",
   "coordinates": [

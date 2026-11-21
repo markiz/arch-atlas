@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-milorad-macura"
+  ],
   "districtId": "palilula",
   "type": "military",
   "coordinates": [

@@ -21,7 +21,9 @@
     "art-nouveau",
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3313980"
+  ],
   "districtId": "stari-grad",
   "type": "cultural",
   "coordinates": [

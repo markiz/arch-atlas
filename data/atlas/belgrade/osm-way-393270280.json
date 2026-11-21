@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3313989",
+    "architect-milosh-savchic"
+  ],
   "districtId": "stari-grad",
   "type": "other",
   "coordinates": [

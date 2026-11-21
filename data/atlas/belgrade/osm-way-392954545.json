@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-marijan-vujovic"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

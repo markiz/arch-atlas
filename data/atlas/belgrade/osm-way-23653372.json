@@ -21,7 +21,9 @@
     "academic-art",
     "neoclassicism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-dragisha-milutinovic"
+  ],
   "districtId": "savski-venac",
   "type": "transport",
   "coordinates": [

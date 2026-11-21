@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-miladin-pecinar"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

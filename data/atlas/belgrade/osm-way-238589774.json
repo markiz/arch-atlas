@@ -20,7 +20,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3313989"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

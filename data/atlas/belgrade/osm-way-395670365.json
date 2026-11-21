@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-dragutin-shidjanski",
+    "architect-stojan-veljkovic"
+  ],
   "districtId": "vracar",
   "type": "residential",
   "coordinates": [

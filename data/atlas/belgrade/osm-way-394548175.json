@@ -100,9 +100,7 @@
     "sr": "Контура OpenStreetMap (way/394548175).",
     "uk": "Контур OpenStreetMap (way/394548175)."
   },
-  "photos": [
-    "65fc2361be17d3945585815f9fc47fe9499b97df921b907da99413cafb213ee1"
-  ],
+  "photos": [],
   "source": "https://www.openstreetmap.org/way/394548175",
   "otherSource": "https://www.wikidata.org/wiki/Q50035338"
 }

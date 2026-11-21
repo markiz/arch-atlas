@@ -20,7 +20,9 @@
   "styleIds": [
     "modernism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-aleksandar-pop"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

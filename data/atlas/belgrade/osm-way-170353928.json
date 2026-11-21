@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-radoslav-todorovic"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

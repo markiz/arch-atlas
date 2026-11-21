@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-mihailo-radovanovic"
+  ],
   "districtId": "savski-venac",
   "type": "residential",
   "coordinates": [

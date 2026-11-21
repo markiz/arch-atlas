@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3187158",
+    "architect-q3314435"
+  ],
   "districtId": "savski-venac",
   "type": "military",
   "coordinates": [

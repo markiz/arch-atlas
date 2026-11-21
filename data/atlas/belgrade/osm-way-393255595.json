@@ -20,7 +20,9 @@
   "styleIds": [
     "modern-architecture"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-milan-s-minic"
+  ],
   "districtId": "stari-grad",
   "type": "hospitality",
   "coordinates": [

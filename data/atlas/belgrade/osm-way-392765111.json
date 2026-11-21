@@ -21,7 +21,9 @@
     "academic-art",
     "romanticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3319760"
+  ],
   "districtId": "savski-venac",
   "type": "cultural",
   "coordinates": [

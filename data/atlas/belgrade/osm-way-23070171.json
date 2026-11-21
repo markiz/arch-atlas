@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-petar-popovic",
+    "architect-dragisa-brasovan"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

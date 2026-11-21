@@ -20,7 +20,9 @@
   "styleIds": [
     "serbo-byzantine"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-grigorije-samojlov"
+  ],
   "districtId": "savski-venac",
   "type": "religious",
   "coordinates": [

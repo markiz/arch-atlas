@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-petar-vulovic"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

@@ -20,7 +20,9 @@
   "styleIds": [
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-aleksandar-sekulic"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

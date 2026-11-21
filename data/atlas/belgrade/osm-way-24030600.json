@@ -20,7 +20,10 @@
   "styleIds": [
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3038869",
+    "architect-bozhidar-vukicevic"
+  ],
   "districtId": "savski-venac",
   "type": "military",
   "coordinates": [

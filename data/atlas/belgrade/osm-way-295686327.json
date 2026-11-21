@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-aleksej-brkic"
+  ],
   "districtId": "stari-grad",
   "type": "other",
   "coordinates": [

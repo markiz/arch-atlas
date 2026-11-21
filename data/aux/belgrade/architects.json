@@ -63,12 +63,12 @@
   }
  },
  "architect-q3028170": {
-  "source": "Димитрије Т. Леко",
+  "source": "Димитрије Леко",
   "labels": {
-   "ru": "Димитрий Т. Леко",
-   "en": "Dimitrije T. Leko",
-   "uk": "Димитриє Т. Леко",
-   "sr": "Димитрије Т. Леко"
+   "ru": "Димитрий Леко",
+   "en": "Dimitrije Leko",
+   "uk": "Димитріє Леко",
+   "sr": "Димитрије Леко"
   }
  },
  "architect-q2832490": {
@@ -110,9 +110,9 @@
  "architect-q3558310": {
   "source": "Виктор Лукомски",
   "labels": {
-   "ru": "Лукомский, Виктор Викторович",
+   "ru": "Виктор Лукомский",
    "en": "Viktor Lukomski",
-   "uk": "Віктор  Вікторович Лукомський",
+   "uk": "Віктор Лукомський",
    "sr": "Виктор Лукомски"
   }
  },
@@ -130,17 +130,8 @@
   "labels": {
    "ru": "Николай Краснов",
    "en": "Nikolay Krasnov",
-   "uk": "Краснов Микола Петрович",
+   "uk": "Микола Краснов",
    "sr": "Николај Краснов"
-  }
- },
- "architect-q3376345": {
-  "source": "Браћа Крстић",
-  "labels": {
-   "ru": "Петар и Бранко Крстич",
-   "en": "Petar and Branko Krstić",
-   "uk": "Брача Крстич",
-   "sr": "Браћа Крстић"
   }
  },
  "architect-q4163556": {
@@ -386,15 +377,6 @@
    "sr": "Иво Куртовић"
   }
  },
- "architect-q19364746": {
-  "source": "Манастир Ваведење Пресвете Богородице у Београду",
-  "labels": {
-   "ru": "Введенский монастырь",
-   "en": "Vavedenje Monastery",
-   "uk": "Манастир Ваведене Пресвете Богородице у Белграді",
-   "sr": "Манастир Ваведење Пресвете Богородице у Београду"
-  }
- },
  "architect-dragisa-brasovan": {
   "source": "Драгиша Брашован",
   "labels": {
@@ -404,24 +386,6 @@
    "sr": "Драгиша Брашован"
   }
  },
- "architect-m-savcic-i-e-gulin": {
-  "source": "М. Савчић и Е. Гулин",
-  "labels": {
-   "ru": "М. Савчич и Е. Гулин",
-   "en": "M. Savčić i E. Gulin",
-   "uk": "М. Савчич и Е. Гулин",
-   "sr": "М. Савчић и Е. Гулин"
-  }
- },
- "architect-q139613100": {
-  "source": "Хотел „Праг” у Београду",
-  "labels": {
-   "ru": "Отель „Праг” в Београде",
-   "en": "Hotel Prag",
-   "uk": "Готель „Праг” у Белграді",
-   "sr": "Хотел „Праг” у Београду"
-  }
- },
  "architect-ratomir-bogojevic": {
   "source": "Ратомир Богојевић",
   "labels": {
@@ -429,51 +393,6 @@
    "en": "Ratomir Bogojević",
    "uk": "Ратомир Богоєвич",
    "sr": "Ратомир Богојевић"
-  }
- },
- "architect-n-nestorovic": {
-  "source": "Н. Несторовић",
-  "labels": {
-   "ru": "Н. Несторович",
-   "en": "N. Nestorović",
-   "uk": "Н. Несторович",
-   "sr": "Н. Несторовић"
-  }
- },
- "architect-q4362181": {
-  "source": "Црква Свете Петке на Чукаричкој падини",
-  "labels": {
-   "ru": "Церковь Святой Петке на Чукаричкой падини",
-   "en": "St. Paraskeva Church in Čukarička padina",
-   "uk": "Церква Святої Петке на Чукаричкой падини",
-   "sr": "Црква Свете Петке на Чукаричкој падини"
-  }
- },
- "architect-q3278798": {
-  "source": "Бели двор",
-  "labels": {
-   "ru": "Белый двор",
-   "en": "Beli dvor",
-   "uk": "Білий двір",
-   "sr": "Бели двор"
-  }
- },
- "architect-q58154256": {
-  "source": "Црква Светог Јована Владимира (Београд)",
-  "labels": {
-   "ru": "Церковь Святого Йована Владимира (Београд)",
-   "en": "Hram Svetog Jovana Vladimira",
-   "uk": "Церква Святого Йована Владимира (Београд)",
-   "sr": "Црква Светог Јована Владимира (Београд)"
-  }
- },
- "architect-q2945453": {
-  "source": "Црква Светог Василија Острошког на Новом Београду",
-  "labels": {
-   "ru": "Церковь Святого Василия Острожского",
-   "en": "Church of St. Basil of Ostrog, Belgrade",
-   "uk": "Церква Святого Василия Острошког на Новом Београду",
-   "sr": "Црква Светог Василија Острошког на Новом Београду"
   }
  },
  "architect-momcilo-belobrk": {
@@ -512,13 +431,706 @@
    "sr": "Милица Крстић"
   }
  },
- "architect-q3594454": {
-  "source": "Краљевски двор",
+ "architect-djordje-v-stashevski": {
+  "source": "Ђорђе Сташевски",
   "labels": {
-   "ru": "Королевский дворец",
-   "en": "Royal Palace",
-   "uk": "Кралевски двор",
-   "sr": "Краљевски двор"
+   "ru": "Джордже Сташевский",
+   "en": "Đorđe Staševski",
+   "uk": "Джордже Сташевський",
+   "sr": "Ђорђе Сташевски"
+  }
+ },
+ "architect-djordje-stanic": {
+  "source": "Ђорђе Станић",
+  "labels": {
+   "ru": "Джордже Станич",
+   "en": "Đorđe Stanić",
+   "uk": "Джордже Станич",
+   "sr": "Ђорђе Станић"
+  }
+ },
+ "architect-djura-bajalovic": {
+  "source": "Ђура Бајаловић",
+  "labels": {
+   "ru": "Джура Баялович",
+   "en": "Đura Bajalović",
+   "uk": "Джура Баялович",
+   "sr": "Ђура Бајаловић"
+  }
+ },
+ "architect-jan-dubovi": {
+  "source": "Јан Дубови",
+  "labels": {
+   "ru": "Ян Дубови",
+   "en": "Jan Dubový",
+   "uk": "Ян Дубови",
+   "sr": "Јан Дубови"
+  }
+ },
+ "architect-jezdimir-denic": {
+  "source": "Јездимир Денић",
+  "labels": {
+   "ru": "Ездимир Денич",
+   "en": "Jezdimir Denić",
+   "uk": "Єздимир Денич",
+   "sr": "Јездимир Денић"
+  }
+ },
+ "architect-jovan-ristic": {
+  "source": "Јован Ристић",
+  "labels": {
+   "ru": "Йован Ристич",
+   "en": "Jovan Ristić",
+   "uk": "Йован Ристич",
+   "sr": "Јован Ристић"
+  }
+ },
+ "architect-jovan-frencl": {
+  "source": "Јован Френцл",
+  "labels": {
+   "ru": "Йован Френцл",
+   "en": "Jovan Frencl",
+   "uk": "Йован Френцл",
+   "sr": "Јован Френцл"
+  }
+ },
+ "architect-jozef-marks": {
+  "source": "Јозеф Маркс",
+  "labels": {
+   "ru": "Йозеф Маркс",
+   "en": "Josef Marks",
+   "uk": "Йозеф Маркс",
+   "sr": "Јозеф Маркс"
+  }
+ },
+ "architect-jozef-felber": {
+  "source": "Јозеф Фелбер",
+  "labels": {
+   "ru": "Йозеф Фелбер",
+   "en": "Jozef Felber",
+   "uk": "Йозеф Фелбер",
+   "sr": "Јозеф Фелбер"
+  }
+ },
+ "architect-josif-najman": {
+  "source": "Јосиф Најман",
+  "labels": {
+   "ru": "Йосиф Найман",
+   "en": "Josif Najman",
+   "uk": "Йосиф Найман",
+   "sr": "Јосиф Најман"
+  }
+ },
+ "architect-ljubisha-mangov": {
+  "source": "Љубиша Мангов",
+  "labels": {
+   "ru": "Любиша Мангов",
+   "en": "Ljubiša Mangov",
+   "uk": "Любиша Мангов",
+   "sr": "Љубиша Мангов"
+  }
+ },
+ "architect-a-f-kverfeld": {
+  "source": "А. Ф. Кверфелд",
+  "labels": {
+   "ru": "А. Ф. Кверфелд",
+   "en": "A. F. Kverfeld",
+   "uk": "А. Ф. Кверфелд",
+   "sr": "А. Ф. Кверфелд"
+  }
+ },
+ "architect-aleksandar-djordjevic": {
+  "source": "Александар Ђорђевић",
+  "labels": {
+   "ru": "Александар Джорджевич",
+   "en": "Aleksandar Đorđević",
+   "uk": "Александар Джорджевич",
+   "sr": "Александар Ђорђевић"
+  }
+ },
+ "architect-aleksandar-gavrilovic": {
+  "source": "Александар Гавриловић",
+  "labels": {
+   "ru": "Александар Гаврилович",
+   "en": "Aleksandar Gavrilović",
+   "uk": "Александар Гаврилович",
+   "sr": "Александар Гавриловић"
+  }
+ },
+ "architect-aleksandar-deroko": {
+  "source": "Александар Дероко",
+  "labels": {
+   "ru": "Александар Дероко",
+   "en": "Aleksandar Deroko",
+   "uk": "Александар Дероко",
+   "sr": "Александар Дероко"
+  }
+ },
+ "architect-aleksandar-pop": {
+  "source": "Александар Поп",
+  "labels": {
+   "ru": "Александар Поп",
+   "en": "Alexander Popp",
+   "uk": "Александар Поп",
+   "sr": "Александар Поп"
+  }
+ },
+ "architect-aleksandar-sekulic": {
+  "source": "Александар Секулић",
+  "labels": {
+   "ru": "Александар Секулич",
+   "en": "Aleksandar Sekulić",
+   "uk": "Александар Секулич",
+   "sr": "Александар Секулић"
+  }
+ },
+ "architect-aleksej-brkic": {
+  "source": "Алексеј Бркић",
+  "labels": {
+   "ru": "Алексей Бркич",
+   "en": "Aleksej Brkić",
+   "uk": "Алексей Бркич",
+   "sr": "Алексеј Бркић"
+  }
+ },
+ "architect-anton-haderer": {
+  "source": "Антон Хадерер",
+  "labels": {
+   "ru": "Антон Хадерер",
+   "en": "Anton Haderer",
+   "uk": "Антон Хадерер",
+   "sr": "Антон Хадерер"
+  }
+ },
+ "architect-bozhidar-vukicevic": {
+  "source": "Божидар Вукићевић",
+  "labels": {
+   "ru": "Божидар Вукичевич",
+   "en": "Božidar Vukićević",
+   "uk": "Божидар Вукичевич",
+   "sr": "Божидар Вукићевић"
+  }
+ },
+ "architect-branko-krstic": {
+  "source": "Бранко Крстић",
+  "labels": {
+   "ru": "Бранко Крстич",
+   "en": "Branko Krstić",
+   "uk": "Бранко Крстич",
+   "sr": "Бранко Крстић"
+  }
+ },
+ "architect-valerij-vladimirovich-stashevski": {
+  "source": "Валериј Сташевски",
+  "labels": {
+   "ru": "Валерий Сташевский",
+   "en": "Valery Stashevsky",
+   "uk": "Валерій Сташевський",
+   "sr": "Валериј Сташевски"
+  }
+ },
+ "architect-viktor-azriel": {
+  "source": "Виктор Азриел",
+  "labels": {
+   "ru": "Виктор Азриел",
+   "en": "Viktor Azriel",
+   "uk": "Виктор Азриел",
+   "sr": "Виктор Азриел"
+  }
+ },
+ "architect-vladimir-popovic": {
+  "source": "Владимир Поповић",
+  "labels": {
+   "ru": "Владимир Попович",
+   "en": "Vladimir Popović",
+   "uk": "Владимир Попович",
+   "sr": "Владимир Поповић"
+  }
+ },
+ "architect-vladimir-simic": {
+  "source": "Владимир Симић",
+  "labels": {
+   "ru": "Владимир Симич",
+   "en": "Vladimir Simić",
+   "uk": "Владимир Симич",
+   "sr": "Владимир Симић"
+  }
+ },
+ "architect-vojin-petrovic": {
+  "source": "Војин Петровић",
+  "labels": {
+   "ru": "Воин Петрович",
+   "en": "Vojin Petrović",
+   "uk": "Воїн Петрович",
+   "sr": "Војин Петровић"
+  }
+ },
+ "architect-vojin-simeonovic": {
+  "source": "Војин Симеоновић",
+  "labels": {
+   "ru": "Воин Симеонович",
+   "en": "Vojin Simeonović",
+   "uk": "Воїн Симеонович",
+   "sr": "Војин Симеоновић"
+  }
+ },
+ "architect-vojislav-djokic": {
+  "source": "Војислав Ђокић",
+  "labels": {
+   "ru": "Воислав Джокич",
+   "en": "Vojislav Đokić",
+   "uk": "Воїслав Джокич",
+   "sr": "Војислав Ђокић"
+  }
+ },
+ "architect-vojislav-kostic": {
+  "source": "Војислав Костић",
+  "labels": {
+   "ru": "Воислав Костич",
+   "en": "Vojislav Kostić",
+   "uk": "Воїслав Костич",
+   "sr": "Војислав Костић"
+  }
+ },
+ "architect-georgije-pavlovich-kovaljevski": {
+  "source": "Георгије Коваљевски",
+  "labels": {
+   "ru": "Георгий Ковалевский",
+   "en": "Georgy Kovaljevsky",
+   "uk": "Георгій Ковалевський",
+   "sr": "Георгије Коваљевски"
+  }
+ },
+ "architect-grigorije-samojlov": {
+  "source": "Григорије Самојлов",
+  "labels": {
+   "ru": "Григорий Самойлов",
+   "en": "Grigorije Samojlov",
+   "uk": "Григорій Самойлов",
+   "sr": "Григорије Самојлов"
+  }
+ },
+ "architect-dejan-miljkovic": {
+  "source": "Дејан Миљковић",
+  "labels": {
+   "ru": "Деян Милькович",
+   "en": "Dejan Miljković",
+   "uk": "Деян Милькович",
+   "sr": "Дејан Миљковић"
+  }
+ },
+ "architect-dragisha-milutinovic": {
+  "source": "Драгиша Милутиновић",
+  "labels": {
+   "ru": "Драгиша Милутинович",
+   "en": "Dragiša Milutinović",
+   "uk": "Драгиша Милутинович",
+   "sr": "Драгиша Милутиновић"
+  }
+ },
+ "architect-dragoljub-a-popovic": {
+  "source": "Драгољуб Поповић",
+  "labels": {
+   "ru": "Драголюб Попович",
+   "en": "Dragoljub Popović",
+   "uk": "Драголюб Попович",
+   "sr": "Драгољуб Поповић"
+  }
+ },
+ "architect-dragutin-shidjanski": {
+  "source": "Драгутин Шиђански",
+  "labels": {
+   "ru": "Драгутин Шиджанский",
+   "en": "Dragutin Šiđanski",
+   "uk": "Драгутин Шиджанський",
+   "sr": "Драгутин Шиђански"
+  }
+ },
+ "architect-dushan-babic": {
+  "source": "Душан Бабић",
+  "labels": {
+   "ru": "Душан Бабич",
+   "en": "Dušan Babić",
+   "uk": "Душан Бабич",
+   "sr": "Душан Бабић"
+  }
+ },
+ "architect-ernest-vajsman": {
+  "source": "Ернест Вајсман",
+  "labels": {
+   "ru": "Ернест Вайсман",
+   "en": "Ernest Vajsman",
+   "uk": "Ернест Вайсман",
+   "sr": "Ернест Вајсман"
+  }
+ },
+ "architect-zarija-markovic": {
+  "source": "Зарија Марковић",
+  "labels": {
+   "ru": "Зария Маркович",
+   "en": "Zarija Marković",
+   "uk": "Зария Маркович",
+   "sr": "Зарија Марковић"
+  }
+ },
+ "architect-zoran-radojichic": {
+  "source": "Зоран Радојичић",
+  "labels": {
+   "ru": "Зоран Радоичич",
+   "en": "Zoran Radojičić",
+   "uk": "Зоран Радоїчич",
+   "sr": "Зоран Радојичић"
+  }
+ },
+ "architect-zoran-tomic": {
+  "source": "Зоран Томић",
+  "labels": {
+   "ru": "Зоран Томич",
+   "en": "Zoran Tomić",
+   "uk": "Зоран Томич",
+   "sr": "Зоран Томић"
+  }
+ },
+ "architect-ivan-antic": {
+  "source": "Иван Антић",
+  "labels": {
+   "ru": "Иван Антич",
+   "en": "Ivan Antić",
+   "uk": "Иван Антич",
+   "sr": "Иван Антић"
+  }
+ },
+ "architect-ivan-shtraus": {
+  "source": "Иван Штраус",
+  "labels": {
+   "ru": "Иван Штраус",
+   "en": "Ivan Štraus",
+   "uk": "Иван Штраус",
+   "sr": "Иван Штраус"
+  }
+ },
+ "architect-ivanka-raspopovic": {
+  "source": "Иванка Распоповић",
+  "labels": {
+   "ru": "Иванка Распопович",
+   "en": "Ivanka Raspopović",
+   "uk": "Иванка Распопович",
+   "sr": "Иванка Распоповић"
+  }
+ },
+ "architect-isak-azriel": {
+  "source": "Исак Азриел",
+  "labels": {
+   "ru": "Исак Азриел",
+   "en": "Isak Azriel",
+   "uk": "Исак Азриел",
+   "sr": "Исак Азриел"
+  }
+ },
+ "architect-karl-hanish": {
+  "source": "Карл Ханиш",
+  "labels": {
+   "ru": "Карл Ханиш",
+   "en": "Karl Haniš",
+   "uk": "Карл Ханиш",
+   "sr": "Карл Ханиш"
+  }
+ },
+ "architect-kosta-atanackovic-stanishic": {
+  "source": "Коста Атанацковић-Станишић",
+  "labels": {
+   "ru": "Коста Атанацкович-Станишич",
+   "en": "Kosta Atanacković-Stanišić",
+   "uk": "Коста Атанацкович-Станишич",
+   "sr": "Коста Атанацковић-Станишић"
+  }
+ },
+ "architect-lazar-lackovic": {
+  "source": "Лазар Лацковић",
+  "labels": {
+   "ru": "Лазар Лацкович",
+   "en": "Lazar Lacković",
+   "uk": "Лазар Лацкович",
+   "sr": "Лазар Лацковић"
+  }
+ },
+ "architect-marijan-vujovic": {
+  "source": "Маријан Вујовић",
+  "labels": {
+   "ru": "Мариян Вуйович",
+   "en": "Marijan Vujović",
+   "uk": "Мариян Вуйович",
+   "sr": "Маријан Вујовић"
+  }
+ },
+ "architect-miladin-pecinar": {
+  "source": "Миладин Пећинар",
+  "labels": {
+   "ru": "Миладин Печинар",
+   "en": "Miladin Pećinar",
+   "uk": "Миладин Печинар",
+   "sr": "Миладин Пећинар"
+  }
+ },
+ "architect-milan-j-jeremic": {
+  "source": "Милан Јеремић",
+  "labels": {
+   "ru": "Милан Еремич",
+   "en": "Milan Jeremić",
+   "uk": "Милан Єремич",
+   "sr": "Милан Јеремић"
+  }
+ },
+ "architect-milan-manojlovic": {
+  "source": "Милан Манојловић",
+  "labels": {
+   "ru": "Милан Манойлович",
+   "en": "Milan Manojlović",
+   "uk": "Милан Манойлович",
+   "sr": "Милан Манојловић"
+  }
+ },
+ "architect-milan-s-minic": {
+  "source": "Милан Минић",
+  "labels": {
+   "ru": "Милан Минич",
+   "en": "Milan Minić",
+   "uk": "Милан Мініч",
+   "sr": "Милан Минић"
+  }
+ },
+ "architect-milan-shlang": {
+  "source": "Милан Шланг",
+  "labels": {
+   "ru": "Милан Шланг",
+   "en": "Milan Šlang",
+   "uk": "Милан Шланг",
+   "sr": "Милан Шланг"
+  }
+ },
+ "architect-milorad-macura": {
+  "source": "Милорад Мацура",
+  "labels": {
+   "ru": "Милорад Мацура",
+   "en": "Milorad Macura",
+   "uk": "Милорад Мацура",
+   "sr": "Милорад Мацура"
+  }
+ },
+ "architect-milorad-pantovic": {
+  "source": "Милорад Пантовић",
+  "labels": {
+   "ru": "Милорад Пантович",
+   "en": "Milorad Pantović",
+   "uk": "Милорад Пантович",
+   "sr": "Милорад Пантовић"
+  }
+ },
+ "architect-milosh-savchic": {
+  "source": "Милош Савчић",
+  "labels": {
+   "ru": "Милош Савчич",
+   "en": "Miloš Savčić",
+   "uk": "Милош Савчич",
+   "sr": "Милош Савчић"
+  }
+ },
+ "architect-milutin-jovanovic": {
+  "source": "Милутин Јовановић",
+  "labels": {
+   "ru": "Милутин Йованович",
+   "en": "Milutin Jovanović",
+   "uk": "Милутин Йованович",
+   "sr": "Милутин Јовановић"
+  }
+ },
+ "architect-milutin-borisavljevic": {
+  "source": "Милутин Борисављевић",
+  "labels": {
+   "ru": "Милутин Борисавлевич",
+   "en": "Milutin Borisavljević",
+   "uk": "Милутин Борисавлевич",
+   "sr": "Милутин Борисављевић"
+  }
+ },
+ "architect-miodrag-mirkovic": {
+  "source": "Миодраг Мирковић",
+  "labels": {
+   "ru": "Миодраг Миркович",
+   "en": "Miodrag Mirković",
+   "uk": "Миодраг Миркович",
+   "sr": "Миодраг Мирковић"
+  }
+ },
+ "architect-miroslav-jovanovic": {
+  "source": "Мирослав Јовановић",
+  "labels": {
+   "ru": "Мирослав Йованович",
+   "en": "Miroslav Jovanović",
+   "uk": "Мирослав Йованович",
+   "sr": "Мирослав Јовановић"
+  }
+ },
+ "architect-mihailo-radovanovic": {
+  "source": "Михаило Радовановић",
+  "labels": {
+   "ru": "Михаило Радованович",
+   "en": "Mihailo Radovanović",
+   "uk": "Михаило Радованович",
+   "sr": "Михаило Радовановић"
+  }
+ },
+ "architect-oto-bartning": {
+  "source": "Ото Бартнинг",
+  "labels": {
+   "ru": "Ото Бартнинг",
+   "en": "Otto Bartning",
+   "uk": "Ото Бартнинг",
+   "sr": "Ото Бартнинг"
+  }
+ },
+ "architect-pavle-ilkic": {
+  "source": "Павле Илкић",
+  "labels": {
+   "ru": "Павле Илкич",
+   "en": "Pavle Ilkić",
+   "uk": "Павле Илкич",
+   "sr": "Павле Илкић"
+  }
+ },
+ "architect-pavle-stanishic": {
+  "source": "Павле Станишић",
+  "labels": {
+   "ru": "Павле Станишич",
+   "en": "Pavle Stanišić",
+   "uk": "Павле Станишич",
+   "sr": "Павле Станишић"
+  }
+ },
+ "architect-petar-vulovic": {
+  "source": "Петар Вуловић",
+  "labels": {
+   "ru": "Петар Вулович",
+   "en": "Petar Vulović",
+   "uk": "Петар Вулович",
+   "sr": "Петар Вуловић"
+  }
+ },
+ "architect-petar-krstic": {
+  "source": "Петар Крстић",
+  "labels": {
+   "ru": "Петар Крстич",
+   "en": "Petar Krstić",
+   "uk": "Петар Крстич",
+   "sr": "Петар Крстић"
+  }
+ },
+ "architect-petar-popovic": {
+  "source": "Петар Поповић",
+  "labels": {
+   "ru": "Петар Попович",
+   "en": "Petar Popović",
+   "uk": "Петар Попович",
+   "sr": "Петар Поповић"
+  }
+ },
+ "architect-radoslav-todorovic": {
+  "source": "Радослав Тодоровић",
+  "labels": {
+   "ru": "Радослав Тодорович",
+   "en": "Radoslav Todorović",
+   "uk": "Радослав Тодорович",
+   "sr": "Радослав Тодоровић"
+  }
+ },
+ "architect-svetislav-putnik": {
+  "source": "Светислав Путник",
+  "labels": {
+   "ru": "Светислав Путник",
+   "en": "Svetislav Putnik",
+   "uk": "Светислав Путник",
+   "sr": "Светислав Путник"
+  }
+ },
+ "architect-svetozar-jovanovic": {
+  "source": "Светозар Јовановић",
+  "labels": {
+   "ru": "Светозар Йованович",
+   "en": "Svetozar Jovanović",
+   "uk": "Светозар Йованович",
+   "sr": "Светозар Јовановић"
+  }
+ },
+ "architect-svetomir-lazic": {
+  "source": "Светомир Лазић",
+  "labels": {
+   "ru": "Светомир Лазич",
+   "en": "Svetomir Lazić",
+   "uk": "Светомир Лазич",
+   "sr": "Светомир Лазић"
+  }
+ },
+ "architect-stojan-veljkovic": {
+  "source": "Стојан Вељковић",
+  "labels": {
+   "ru": "Стоян Велькович",
+   "en": "Stojan Veljković",
+   "uk": "Стоян Велькович",
+   "sr": "Стојан Вељковић"
+  }
+ },
+ "architect-franja-katinchic": {
+  "source": "Фрања Катинчић",
+  "labels": {
+   "ru": "Франя Катинчич",
+   "en": "Franja Katinčić",
+   "uk": "Франя Катинчич",
+   "sr": "Фрања Катинчић"
+  }
+ },
+ "architect-franja-urban": {
+  "source": "Фрања Урбан",
+  "labels": {
+   "ru": "Франя Урбан",
+   "en": "Franja Urban",
+   "uk": "Франя Урбан",
+   "sr": "Фрања Урбан"
+  }
+ },
+ "architect-djura-borosic": {
+  "source": "Ђура Борошић",
+  "labels": {
+   "ru": "Джура Борошич",
+   "en": "Đura Borošić",
+   "uk": "Джура Борошич",
+   "sr": "Ђура Борошић"
+  }
+ },
+ "architect-zivojin-nikolic": {
+  "source": "Живојин Николић",
+  "labels": {
+   "ru": "Живоин Николич",
+   "en": "Živojin Nikolić",
+   "uk": "Живоїн Ніколич",
+   "sr": "Живојин Николић"
+  }
+ },
+ "architect-mihajlo-mitrovic": {
+  "source": "Михајло Митровић",
+  "labels": {
+   "ru": "Михайло Митрович",
+   "en": "Mihajlo Mitrović",
+   "uk": "Михайло Митрович",
+   "sr": "Михајло Митровић"
+  }
+ },
+ "architect-evgenije-gulin": {
+  "source": "Евгеније Гулин",
+  "labels": {
+   "ru": "Евгений Гулин",
+   "en": "Evgenije Gulin",
+   "uk": "Євгеній Гулін",
+   "sr": "Евгеније Гулин"
   }
  }
 }

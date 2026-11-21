@@ -20,7 +20,11 @@
   "styleIds": [
     "art-nouveau"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-svetozar-jovanovic",
+    "architect-q3015098",
+    "architect-vladimir-popovic"
+  ],
   "districtId": "savski-venac",
   "type": "commercial",
   "coordinates": [

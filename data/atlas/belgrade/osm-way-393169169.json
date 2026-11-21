@@ -21,7 +21,9 @@
     "modern-architecture",
     "art-deco"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-grigorije-samojlov"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-milan-manojlovic",
+    "architect-isak-azriel"
+  ],
   "districtId": "vracar",
   "type": "cultural",
   "coordinates": [

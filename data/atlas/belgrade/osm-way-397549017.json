@@ -20,7 +20,9 @@
   "styleIds": [
     "eclecticism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-dragoljub-a-popovic"
+  ],
   "districtId": "vracar",
   "type": "residential",
   "coordinates": [

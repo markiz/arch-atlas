@@ -21,7 +21,9 @@
     "academic-art",
     "baroque"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-dragisa-brasovan"
+  ],
   "districtId": "savski-venac",
   "type": "residential",
   "coordinates": [

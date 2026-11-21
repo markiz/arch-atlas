@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-jozef-marks"
+  ],
   "districtId": "zemun",
   "type": "industrial",
   "coordinates": [

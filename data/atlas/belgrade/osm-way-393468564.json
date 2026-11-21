@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-viktor-azriel"
+  ],
   "districtId": "stari-grad",
   "type": "commercial",
   "coordinates": [

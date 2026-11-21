@@ -20,7 +20,10 @@
   "styleIds": [
     "neoclassicism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-milan-j-jeremic",
+    "architect-jozef-marks"
+  ],
   "districtId": "zemun",
   "type": "educational",
   "coordinates": [

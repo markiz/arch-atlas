@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3028170"
+  ],
   "districtId": "savski-venac",
   "type": "government",
   "coordinates": [

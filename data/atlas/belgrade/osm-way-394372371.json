@@ -21,7 +21,9 @@
     "serbo-byzantine",
     "art-nouveau"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-aleksandar-deroko"
+  ],
   "districtId": "vracar",
   "type": "residential",
   "coordinates": [

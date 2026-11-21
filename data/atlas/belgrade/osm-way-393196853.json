@@ -20,7 +20,9 @@
   "styleIds": [
     "modern-architecture"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-ernest-vajsman"
+  ],
   "districtId": "vracar",
   "type": "cultural",
   "coordinates": [

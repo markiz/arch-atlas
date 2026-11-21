@@ -20,7 +20,9 @@
   "styleIds": [
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-svetislav-putnik"
+  ],
   "districtId": "savski-venac",
   "type": "government",
   "coordinates": [

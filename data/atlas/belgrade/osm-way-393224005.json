@@ -20,7 +20,10 @@
   "styleIds": [
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-vojislav-djokic",
+    "architect-aleksandar-gavrilovic"
+  ],
   "districtId": "savski-venac",
   "type": "cultural",
   "coordinates": [

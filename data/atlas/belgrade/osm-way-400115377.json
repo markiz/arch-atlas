@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-dushan-babic"
+  ],
   "districtId": "savski-venac",
   "type": "residential",
   "coordinates": [

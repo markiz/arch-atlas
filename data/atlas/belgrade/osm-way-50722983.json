@@ -20,7 +20,12 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3341570",
+    "architect-momcilo-belobrk",
+    "architect-zoran-radojichic",
+    "architect-dejan-miljkovic"
+  ],
   "districtId": "savski-venac",
   "type": "cultural",
   "coordinates": [

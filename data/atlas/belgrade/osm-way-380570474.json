@@ -20,7 +20,9 @@
   "styleIds": [
     "classical"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-jozef-felber"
+  ],
   "districtId": "zemun",
   "type": "commercial",
   "coordinates": [

@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3015098",
+    "architect-q2908636"
+  ],
   "districtId": "stari-grad",
   "type": "educational",
   "coordinates": [

@@ -14,9 +14,9 @@
     "uk": "Бульвар Зорана Джинджича, 155a",
     "sr": "Булевар Зорана Ђинђића 155a"
   },
-  "minYear": 1926,
-  "maxYear": 1926,
-  "yearLabelId": "year-1926",
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
   "styleIds": [
     "undetermined"
   ],
@@ -81,7 +81,7 @@
     "uk": "Контур OpenStreetMap (way/204171790)."
   },
   "photos": [
-    "15a940e2108e4a6c90fb94f2da4fe4c5a0bf38a9ed3f63025e093ab643be8e1b"
+    "ad6352320d2547888c99d83a30bb5ed2a8daa45243048150557bf1dd969427e5"
   ],
   "source": "https://www.openstreetmap.org/way/204171790",
   "otherSource": "https://www.wikidata.org/wiki/Q50041065"

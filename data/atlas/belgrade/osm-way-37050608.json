@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-milorad-pantovic"
+  ],
   "districtId": "savski-venac",
   "type": "cultural",
   "coordinates": [

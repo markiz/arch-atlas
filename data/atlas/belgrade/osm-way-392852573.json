@@ -20,7 +20,9 @@
   "styleIds": [
     "art-deco"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-vojin-simeonovic"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

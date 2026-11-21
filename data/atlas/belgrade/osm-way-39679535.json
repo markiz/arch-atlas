@@ -21,7 +21,11 @@
     "academic-art",
     "renaissance-revival"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3187158",
+    "architect-pavle-ilkic",
+    "architect-q3341570"
+  ],
   "districtId": "stari-grad",
   "type": "government",
   "coordinates": [

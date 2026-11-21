@@ -20,7 +20,10 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-ivan-antic",
+    "architect-ivanka-raspopovic"
+  ],
   "districtId": "novi-beograd",
   "type": "cultural",
   "coordinates": [

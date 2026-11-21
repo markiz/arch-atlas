@@ -20,7 +20,9 @@
   "styleIds": [
     "modernism"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q3079336"
+  ],
   "districtId": "zemun",
   "type": "residential",
   "coordinates": [

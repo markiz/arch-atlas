@@ -21,7 +21,9 @@
     "serbo-byzantine",
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-q2908636"
+  ],
   "districtId": "stari-grad",
   "type": "residential",
   "coordinates": [

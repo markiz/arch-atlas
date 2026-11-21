@@ -21,7 +21,9 @@
     "serbo-byzantine",
     "academic-art"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-jezdimir-denic"
+  ],
   "districtId": "stari-grad",
   "type": "educational",
   "coordinates": [

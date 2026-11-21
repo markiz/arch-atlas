@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-vojin-petrovic"
+  ],
   "districtId": "zemun",
   "type": "educational",
   "coordinates": [

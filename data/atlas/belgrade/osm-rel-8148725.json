@@ -20,7 +20,9 @@
   "styleIds": [
     "undetermined"
   ],
-  "architectIds": [],
+  "architectIds": [
+    "architect-svetozar-jovanovic"
+  ],
   "districtId": "savski-venac",
   "type": "commercial",
   "coordinates": [
