@@ -5,4 +5,5 @@ export const layerMemory = {
   showWater: true,
   detailedStreets: false,
   showGreen: true,
+  showDistricts: false,
 };

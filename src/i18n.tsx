@@ -648,6 +648,10 @@ Object.assign(extras.uk, {
   'Технические сведения о контуре': 'Технічні відомості про контур',
   Контур: 'Контур',
 });
+Object.assign(extras.en, { Районы: 'Districts' });
+Object.assign(extras.ka, { Районы: 'რაიონები' });
+Object.assign(extras.uk, { Районы: 'Райони' });
+Object.assign(extras.sr, { Районы: 'Рејони' });
 Object.assign(extras.en, { 'Ширина сохранена: ': 'Width kept: ', 'фотография ': 'photo ' });
 Object.assign(extras.ka, {
   'Ширина сохранена: ': 'სიგანე შენარჩუნებულია: ',

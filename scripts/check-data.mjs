@@ -211,6 +211,24 @@ async function checkCity(cityId) {
         `${feature.properties?.osmId}: ${lang} landmark name must start with a capital letter`,
       );
   }
+  const districtIds = new Set();
+  for (const feature of geo.features.filter(
+    (feature) => feature.properties?.kind === 'district',
+  )) {
+    const props = feature.properties ?? {};
+    const id = String(props.id ?? '');
+    assert(id && !districtIds.has(id), `${cityId}: duplicate district id ${id}`);
+    districtIds.add(id);
+    assert(
+      feature.geometry?.type === 'Polygon' || feature.geometry?.type === 'MultiPolygon',
+      `${cityId}/${id}: district must be a polygon`,
+    );
+    const names = props.names ?? {};
+    assert(
+      langs.every((lang) => typeof names[lang] === 'string' && names[lang].trim()),
+      `${cityId}/${id}: district names must contain ${langs.join(', ')}`,
+    );
+  }
   for (const osmId of areaMarkerIds)
     assert(
       geo.features.some(

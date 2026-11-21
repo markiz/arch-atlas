@@ -5,6 +5,12 @@ import { period, periods as defaultPeriods, periodsFor } from '../domain';
 import { landmarkSvg } from './landmark';
 import { LiveStreetLabels } from './live-street-labels';
 import {
+  districtLabel,
+  fitCenterLabelSize,
+  parseDistricts,
+  type DistrictShape,
+} from './district-labels';
+import {
   WORLD_SIZE,
   bboxIntersects,
   eachPolygonRing,
@@ -34,6 +40,7 @@ export interface AtlasLayerVisibility {
   green: boolean;
   landmarks: boolean;
   detailedStreets: boolean;
+  districts: boolean;
 }
 
 export interface AtlasCanvasOptions {
@@ -84,7 +91,14 @@ type DragSession = {
   marker: MarkerEntry | null;
 };
 type PinchSession = { startDistance: number; anchorWorld: Point; startZoom: number };
-type BaseGroups = { green: number[]; water: number[]; roads: number[]; landmarks: number[] };
+type LabelBox = { minX: number; minY: number; maxX: number; maxY: number };
+type BaseGroups = {
+  green: number[];
+  water: number[];
+  roads: number[];
+  landmarks: number[];
+  districts: number[];
+};
 type RoadGroups = { major: number[]; secondary: number[]; minor: number[] };
 
 const MAX_CANVAS_PIXELS = 11_000_000;
@@ -132,7 +146,12 @@ const DEFAULT_VISIBILITY: AtlasLayerVisibility = {
   green: true,
   landmarks: false,
   detailedStreets: false,
+  districts: false,
 };
+
+/** Solid, quiet ink for the district boundary. */
+const DISTRICT_INK = '100,89,112';
+const DISTRICT_BORDER_ALPHA = 0.38;
 
 function outlineScale(zoom: number) {
   return Math.max(0, Math.min(1, (zoom - 13.5) / 3.5));
@@ -160,6 +179,10 @@ function atlasStyle(look: AtlasLook, zoom: number) {
     opacity: dimmed ? 0.25 : 1,
   };
 }
+function boxesOverlap(a: LabelBox, b: LabelBox): boolean {
+  return a.minX < b.maxX && a.maxX > b.minX && a.minY < b.maxY && a.maxY > b.minY;
+}
+
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(max, value));
 }
@@ -233,7 +256,14 @@ export class AtlasCanvasMap {
   private rendered: RenderedCamera | null = null;
   private baseFeatures: GeoJSON.Feature[] = [];
   private baseBoxes: Float32Array | null = null;
-  private baseGroups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
+  private baseGroups: BaseGroups = {
+    green: [],
+    water: [],
+    roads: [],
+    landmarks: [],
+    districts: [],
+  };
+  private districtShapes: DistrictShape[] = [];
   private roadGroups: RoadGroups = { major: [], secondary: [], minor: [] };
   private outlineFeatures: GeoJSON.Feature[] = [];
   private outlineBinary: OutlineBinary | null = null;
@@ -325,15 +355,17 @@ export class AtlasCanvasMap {
     this.baseFeatures = collection.features;
     this.liveLabels.setSource(this.baseFeatures);
     this.baseBoxes = this.computeBoxes(this.baseFeatures);
-    const groups: BaseGroups = { green: [], water: [], roads: [], landmarks: [] };
+    const groups: BaseGroups = { green: [], water: [], roads: [], landmarks: [], districts: [] };
     for (let index = 0; index < this.baseFeatures.length; index++) {
       const kind = this.baseFeatures[index].properties?.kind;
       if (kind === 'green') groups.green.push(index);
       else if (kind === 'water') groups.water.push(index);
       else if (kind === 'road') groups.roads.push(index);
       else if (kind === 'landmark') groups.landmarks.push(index);
+      else if (kind === 'district') groups.districts.push(index);
     }
     this.baseGroups = groups;
+    this.districtShapes = parseDistricts(this.baseFeatures);
     this.roadGroups = { major: [], secondary: [], minor: [] };
     for (let index = 0; index < this.baseFeatures.length; index++) {
       if (this.baseFeatures[index].properties?.kind !== 'road') continue;
@@ -458,7 +490,8 @@ export class AtlasCanvasMap {
       previous.roads !== visibility.roads ||
       previous.water !== visibility.water ||
       previous.green !== visibility.green ||
-      previous.landmarks !== visibility.landmarks
+      previous.landmarks !== visibility.landmarks ||
+      previous.districts !== visibility.districts
     )
       this.renderBase();
     if (previous.landmarks !== visibility.landmarks) {
@@ -466,8 +499,11 @@ export class AtlasCanvasMap {
       this.repositionMarkers();
     }
     if (previous.landmarks !== visibility.landmarks) this.renderOverlay();
-    if (previous.detailedStreets !== visibility.detailedStreets) {
-      if (visibility.detailedStreets) this.renderLabels();
+    if (
+      previous.detailedStreets !== visibility.detailedStreets ||
+      previous.districts !== visibility.districts
+    ) {
+      if (visibility.detailedStreets || visibility.districts) this.renderLabels();
       else this.releaseLabelCanvas();
     }
   }
@@ -976,6 +1012,25 @@ export class AtlasCanvasMap {
       strokeRoads(this.roadGroups.secondary, '#ece3cf', detailed ? 2.6 : 2.2);
       strokeRoads(this.roadGroups.major, '#ece3cf', detailed ? 3.4 : 2.8);
     }
+    if (this.visibility.districts && boxes) {
+      // Solid but quiet: the border frames the district without becoming a
+      // second street grid, and the polygons themselves stay unpainted.
+      context.beginPath();
+      let any = false;
+      for (const index of this.baseGroups.districts) {
+        if (!this.boxVisible(boxes, index, view)) continue;
+        const geometry = this.baseFeatures[index].geometry;
+        if (!geometry) continue;
+        addGeometry(geometry, context);
+        any = true;
+      }
+      if (any) {
+        context.setLineDash([]);
+        context.strokeStyle = `rgba(${DISTRICT_INK},${DISTRICT_BORDER_ALPHA})`;
+        context.lineWidth = 1.1;
+        context.stroke();
+      }
+    }
     if (this.visibility.landmarks) {
       const landmarks = this.baseGroups.landmarks.filter((index) => {
         const feature = this.baseFeatures[index];
@@ -1456,11 +1511,12 @@ export class AtlasCanvasMap {
   }
 
   /**
-   * Street labels are re-laid out at the live camera on every frame: text stays
-   * sharp, and a name never appears later than the street it belongs to.
+   * Street and district labels are re-laid out at the live camera on every
+   * frame: text stays sharp, and a name never appears later than the feature
+   * it belongs to.
    */
   private renderLabels() {
-    if (!this.visibility.detailedStreets || !this.rendered) {
+    if ((!this.visibility.detailedStreets && !this.visibility.districts) || !this.rendered) {
       if (this.labelCanvas) this.labelCanvas.style.visibility = 'hidden';
       return;
     }
@@ -1471,15 +1527,72 @@ export class AtlasCanvasMap {
     context.setTransform(1, 0, 0, 1, 0, 0);
     context.clearRect(0, 0, canvas.width, canvas.height);
     context.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    this.liveLabels.draw(
-      context,
-      { zoom: this.view.zoom, origin: this.originFor(this.view) },
-      this.size.x,
-      this.size.y,
-      this.language,
-      this.dpr,
-    );
+    const origin = this.originFor(this.view);
+    if (this.visibility.districts) this.drawCenterDistrictLabels(context, origin);
+    // Street names go last: at a shared boundary the street name is the more
+    // local, more actionable label.
+    if (this.visibility.detailedStreets)
+      this.liveLabels.draw(
+        context,
+        { zoom: this.view.zoom, origin },
+        this.size.x,
+        this.size.y,
+        this.language,
+        this.dpr,
+      );
     canvas.style.visibility = '';
+  }
+
+  private applyLetterSpacing(context: CanvasRenderingContext2D, fontSize: number, em: number) {
+    const target = context as CanvasRenderingContext2D & { letterSpacing?: string };
+    target.letterSpacing = `${(fontSize * em).toFixed(2)}px`;
+  }
+
+  /**
+   * Option A: one large translucent name at the district's interior centre.
+   * The font size follows the polygon's on-screen bbox, which is what makes a
+   * large outlying district read differently from a small central one.
+   */
+  private drawCenterDistrictLabels(context: CanvasRenderingContext2D, origin: Point) {
+    const zoom = this.view.zoom;
+    if (zoom < 11.2) return;
+    const accepted: LabelBox[] = [];
+    const shapes = [...this.districtShapes].sort((a, b) => b.main.area - a.main.area);
+    context.save();
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+    for (const shape of shapes) {
+      const text = districtLabel(shape, this.language).toLocaleUpperCase(this.language);
+      if (!text) continue;
+      const part = shape.main;
+      const point = projectFast(part.labelPoint[1], part.labelPoint[0], zoom);
+      const x = point.x - origin.x,
+        y = point.y - origin.y;
+      if (x < -120 || x > this.size.x + 120 || y < -80 || y > this.size.y + 80) continue;
+      const topLeft = projectFast(part.bbox.maxY, part.bbox.minX, zoom);
+      const bottomRight = projectFast(part.bbox.minY, part.bbox.maxX, zoom);
+      const boxWidth = bottomRight.x - topLeft.x,
+        boxHeight = bottomRight.y - topLeft.y;
+      context.font = '600 100px Georgia, "Times New Roman", serif';
+      this.applyLetterSpacing(context, 100, 0.11);
+      const unitWidth = context.measureText(text).width / 100;
+      const size = fitCenterLabelSize(unitWidth, boxWidth, boxHeight, 11, 56);
+      if (!size) continue;
+      const width = unitWidth * size;
+      const box: LabelBox = {
+        minX: x - width / 2 - 10,
+        maxX: x + width / 2 + 10,
+        minY: y - size * 0.62,
+        maxY: y + size * 0.62,
+      };
+      if (accepted.some((other) => boxesOverlap(box, other))) continue;
+      accepted.push(box);
+      context.font = `600 ${size.toFixed(2)}px Georgia, "Times New Roman", serif`;
+      this.applyLetterSpacing(context, size, 0.11);
+      context.fillStyle = `rgba(63,72,66,${zoom >= 13 ? 0.22 : 0.27})`;
+      context.fillText(text, x, y);
+    }
+    context.restore();
   }
 
   private repositionMarkers() {

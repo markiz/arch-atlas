@@ -89,6 +89,10 @@ export default function MapView({
     }
     return box ? boundsFromBBox(box) : null;
   }, [allBuildings]);
+  const hasDistricts = useMemo(
+    () => basemap.features.some((feature) => feature.properties?.kind === 'district'),
+    [basemap],
+  );
   const [locationMessage, setLocationMessage] = useState(''),
     [locating, setLocating] = useState(false),
     [layersOpen, setLayersOpen] = useState(false),
@@ -106,19 +110,32 @@ export default function MapView({
         return false;
       }
     }),
-    [showGreen, setShowGreen] = useState(() => layerMemory.showGreen);
+    [showGreen, setShowGreen] = useState(() => layerMemory.showGreen),
+    [showDistricts, setShowDistricts] = useState(() => {
+      try {
+        return localStorage.getItem('atlas-layer-districts') === 'true';
+      } catch {
+        return layerMemory.showDistricts;
+      }
+    });
   useEffect(() => {
     try {
       localStorage.setItem('atlas-layer-landmarks', String(showLandmarks));
     } catch {}
   }, [showLandmarks]);
   useEffect(() => {
+    try {
+      localStorage.setItem('atlas-layer-districts', String(showDistricts));
+    } catch {}
+  }, [showDistricts]);
+  useEffect(() => {
     layerMemory.showRoads = showRoads;
     layerMemory.showBuildings = showBuildings;
     layerMemory.showWater = showWater;
     layerMemory.detailedStreets = detailedStreets;
     layerMemory.showGreen = showGreen;
-  }, [showRoads, showBuildings, showWater, detailedStreets, showGreen]);
+    layerMemory.showDistricts = showDistricts;
+  }, [showRoads, showBuildings, showWater, detailedStreets, showGreen, showDistricts]);
   useEffect(() => {
     if (!container.current) return;
     const saved = savedMapView(city.id);
@@ -141,6 +158,7 @@ export default function MapView({
       green: showGreen,
       landmarks: showLandmarks,
       detailedStreets,
+      districts: showDistricts && hasDistricts,
     });
     map.setAtlas(buildings, selected, selectedPeriods, hoveredPeriod);
     if (showBuildings && outlineBinary.current) {
@@ -166,8 +184,17 @@ export default function MapView({
       green: showGreen,
       landmarks: showLandmarks,
       detailedStreets,
+      districts: showDistricts && hasDistricts,
     });
-  }, [showRoads, showWater, showGreen, showLandmarks, detailedStreets]);
+  }, [
+    showRoads,
+    showWater,
+    showGreen,
+    showLandmarks,
+    detailedStreets,
+    showDistricts,
+    hasDistricts,
+  ]);
   useEffect(() => {
     mapRef.current?.setAtlas(buildings, selected, selectedPeriods, hoveredPeriod);
   }, [buildings, selected, selectedPeriods, hoveredPeriod]);
@@ -423,6 +450,16 @@ export default function MapView({
                 />{' '}
                 {t('Названия улиц')}
               </label>
+              {hasDistricts && (
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={showDistricts}
+                    onChange={(event) => setShowDistricts(event.currentTarget.checked)}
+                  />{' '}
+                  {t('Районы')}
+                </label>
+              )}
               <label>
                 <input
                   type="checkbox"

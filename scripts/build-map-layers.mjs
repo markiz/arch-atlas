@@ -75,6 +75,7 @@ async function inputPaths(city, config) {
   }
   names.push(SCRIPT);
   names.push(path.relative(ROOT, path.join(ROOT, 'data', 'cities', `${city}.json`)));
+  names.push(path.relative(ROOT, path.join(ROOT, 'data', 'aux', city, 'districts.json')));
   return [...new Set(names)].sort();
 }
 

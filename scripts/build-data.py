@@ -528,6 +528,40 @@ features=[f for f in features if f['properties'].get('kind')!='landmark' or f['g
 landmark_points_after=sum(1 for f in features if f['properties'].get('kind')=='landmark' and f['geometry']['type']=='Point')
 print('Atlas building markers hidden',landmark_points_before-landmark_points_after,f'({landmark_points_after} markers left)')
 
+# District boundaries are editorial aux data, not an OSM extract: they are
+# already simplified and translated, so they join the basemap as-is. Cities
+# without geometry simply get no district layer.
+districts_path=root/'data/aux'/city/'districts.json'
+if districts_path.exists():
+ try:
+  districts=json.loads(districts_path.read_text(encoding='utf-8'))
+ except Exception:
+  districts={}
+ district_progress=Progress(len(districts),'add district boundaries')
+ district_progress.start()
+ added_districts=0
+ for district_id,entry in districts.items():
+  geometry=entry.get('geometry')
+  if not geometry or geometry.get('type') not in ('Polygon','MultiPolygon'):
+   district_progress.advance(district_id)
+   continue
+  labels=entry.get('labels') or {}
+  names={}
+  for language in city_languages:
+   value=labels.get(language)
+   if isinstance(value,str) and value.strip():names[language]=value.strip()
+  fallback=entry.get('source') or district_id
+  if not names.get('ru'):names['ru']=fallback
+  features.append({
+   'type':'Feature',
+   'properties':{'kind':'district','id':district_id,'name':names.get('ru',fallback),'names':names},
+   'geometry':geometry,
+  })
+  added_districts+=1
+  district_progress.advance(district_id)
+ district_progress.finish()
+ print(f'District boundaries added for {city}',added_districts)
+
 # Atlas cards are stored one JSON per object in data/atlas/<city>/ and packed by
 # scripts/assemble-atlas.mjs. This builder owns only the basemap and the
 # city-wide building outlines; it must not create or edit card records.
