@@ -1,16 +1,18 @@
-// Convert a city's generated building-outlines.geojson into a compact binary:
-// 32-byte header, Float32 [lng,lat] points, Uint32 ring starts, Uint32 feature
-// ring ranges and Float32 bboxes. Empty cities get a valid header-only file so
-// every ready city has the same package shape.
+// Convert a city's generated building-outlines.geojson into a compact binary.
+// Version 2 quantizes coordinates to microdegrees and delta-encodes them as
+// varints: closing points and stored bboxes are dropped, bboxes are rebuilt
+// while parsing. Coordinates decode back to Float32, which is already the
+// precision the renderer used.
 import { readFile, rename, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { Progress } from './lib/progress.mjs';
 import { ROOT, readCityConfig, readCityConfigs } from './lib/cities.mjs';
 
-const MAGIC = 'ATLOUT01';
-const VERSION = 1;
+const MAGIC = 'ATLOUT02';
+const VERSION = 2;
 const HEADER_BYTES = 32;
+const SCALE = 1_000_000;
 const silent = { write() {} };
 
 function sourcePath(city) {
@@ -45,6 +47,62 @@ async function fresh(city) {
   }
 }
 
+class Writer {
+  constructor(size = 1 << 20) {
+    this.buffer = Buffer.allocUnsafe(size);
+    this.length = 0;
+  }
+  ensure(extra) {
+    if (this.length + extra <= this.buffer.length) return;
+    let size = this.buffer.length * 2;
+    while (size < this.length + extra) size *= 2;
+    const next = Buffer.allocUnsafe(size);
+    this.buffer.copy(next, 0, 0, this.length);
+    this.buffer = next;
+  }
+  varint(value) {
+    if (!Number.isFinite(value) || value < 0) throw new Error(`bad varint ${value}`);
+    value = Math.floor(value);
+    this.ensure(10);
+    while (value >= 0x80) {
+      this.buffer[this.length++] = (value & 0x7f) | 0x80;
+      value = Math.floor(value / 128);
+    }
+    this.buffer[this.length++] = value;
+  }
+  zigzag(value) {
+    if (!Number.isFinite(value)) throw new Error(`bad zigzag ${value}`);
+    value = Math.round(value);
+    this.varint(value >= 0 ? value * 2 : -value * 2 - 1);
+  }
+  toBuffer() {
+    return this.buffer.subarray(0, this.length);
+  }
+}
+
+/** Drop the duplicated closing vertex and collapse points equal after rounding. */
+function quantizeRing(ring) {
+  let points = ring;
+  if (points.length > 1) {
+    const first = points[0];
+    const last = points[points.length - 1];
+    if (first?.[0] === last?.[0] && first?.[1] === last?.[1]) points = points.slice(0, -1);
+  }
+  const quantized = [];
+  for (const point of points) {
+    const lng = point?.[0];
+    const lat = point?.[1];
+    if (!Number.isFinite(lng) || !Number.isFinite(lat)) throw new Error('некорректная точка');
+    const x = Math.round(lng * SCALE);
+    const y = Math.round(lat * SCALE);
+    const previous = quantized[quantized.length - 1];
+    if (!previous || previous[0] !== x || previous[1] !== y) quantized.push([x, y]);
+  }
+  if (quantized.length < 3)
+    return points.map(([lng, lat]) => [Math.round(lng * SCALE), Math.round(lat * SCALE)]);
+  return quantized;
+}
+
 /** Build the compact outline file for one city. */
 export async function buildOutlinesBinary({ city, quiet = false, force = false } = {}) {
   if (!city) throw new Error('buildOutlinesBinary requires a city');
@@ -59,101 +117,67 @@ export async function buildOutlinesBinary({ city, quiet = false, force = false }
   }
   const data = JSON.parse(await readFile(sourcePath(city), 'utf8'));
   const features = Array.isArray(data?.features) ? data.features : [];
-  let ringCount = 0;
-  let pointCount = 0;
-  for (const feature of features) {
-    for (const ring of ringsOf(feature?.geometry)) {
-      ringCount++;
-      pointCount += ring.length;
-    }
-  }
-  const points = new Float32Array(pointCount * 2);
-  const ringStarts = new Uint32Array(ringCount + 1);
-  const featureRings = new Uint32Array(features.length + 1);
-  const boxes = new Float32Array(features.length * 4);
-  boxes.fill(Infinity);
-  for (let index = 0; index < features.length; index++) {
-    boxes[index * 4 + 2] = -Infinity;
-    boxes[index * 4 + 3] = -Infinity;
-  }
+  const body = new Writer(1 << 22);
   const progress = new Progress(features.length, {
     label: `build ${city} outlines binary`,
     stream: quiet ? silent : process.stderr,
   });
-  progress.start(`${features.length} features, ${pointCount} points`);
-  let ringCursor = 0;
-  let pointCursor = 0;
-  for (let index = 0; index < features.length; index++) {
-    featureRings[index] = ringCursor;
-    const rings = ringsOf(features[index]?.geometry);
-    let minX = Infinity;
-    let minY = Infinity;
-    let maxX = -Infinity;
-    let maxY = -Infinity;
-    for (const ring of rings) {
-      ringStarts[ringCursor++] = pointCursor;
-      for (const point of ring) {
-        const lng = point?.[0];
-        const lat = point?.[1];
-        if (!Number.isFinite(lng) || !Number.isFinite(lat))
-          throw new Error(`building-outlines: некорректная точка в feature ${index}`);
-        points[pointCursor * 2] = lng;
-        points[pointCursor * 2 + 1] = lat;
-        pointCursor++;
-        if (lng < minX) minX = lng;
-        if (lng > maxX) maxX = lng;
-        if (lat < minY) minY = lat;
-        if (lat > maxY) maxY = lat;
+  progress.start(`${features.length} features`);
+  let ringCount = 0;
+  let pointCount = 0;
+  for (const feature of features) {
+    const rings = ringsOf(feature?.geometry)
+      .map(quantizeRing)
+      .filter((ring) => ring.length);
+    body.varint(rings.length);
+    let featureX = 0;
+    let featureY = 0;
+    rings.forEach((ring, ringIndex) => {
+      ringCount++;
+      pointCount += ring.length;
+      body.varint(ring.length);
+      let previousX = 0;
+      let previousY = 0;
+      for (let index = 0; index < ring.length; index++) {
+        const [x, y] = ring[index];
+        if (index === 0 && ringIndex === 0) {
+          body.zigzag(x);
+          body.zigzag(y);
+          featureX = x;
+          featureY = y;
+        } else if (index === 0) {
+          body.zigzag(x - featureX);
+          body.zigzag(y - featureY);
+        } else {
+          body.zigzag(x - previousX);
+          body.zigzag(y - previousY);
+        }
+        previousX = x;
+        previousY = y;
       }
-    }
-    if (minX !== Infinity) {
-      boxes[index * 4] = minX;
-      boxes[index * 4 + 1] = minY;
-      boxes[index * 4 + 2] = maxX;
-      boxes[index * 4 + 3] = maxY;
-    }
-    progress.advance(`feature ${index + 1}/${features.length}`);
+    });
+    progress.advance(`feature ${progress.done + 1}/${features.length}`);
   }
-  featureRings[features.length] = ringCursor;
-  ringStarts[ringCount] = pointCursor;
   progress.finish();
-  if (ringCursor !== ringCount || pointCursor !== pointCount)
-    throw new Error('building-outlines: не совпали счетчики');
-  const pointsBytes = points.byteLength;
-  const ringBytes = ringStarts.byteLength;
-  const featureBytes = featureRings.byteLength;
-  const boxBytes = boxes.byteLength;
-  const total = HEADER_BYTES + pointsBytes + ringBytes + featureBytes + boxBytes;
-  const buffer = Buffer.allocUnsafe(total);
+  const payload = body.toBuffer();
+  const buffer = Buffer.allocUnsafe(HEADER_BYTES + payload.length);
   buffer.write(MAGIC, 0, 'ascii');
   buffer.writeUInt32LE(VERSION, 8);
   buffer.writeUInt32LE(features.length, 12);
   buffer.writeUInt32LE(ringCount, 16);
   buffer.writeUInt32LE(pointCount, 20);
-  buffer.writeUInt32LE(0, 24);
+  buffer.writeUInt32LE(SCALE, 24);
   buffer.writeUInt32LE(0, 28);
-  Buffer.from(points.buffer, points.byteOffset, pointsBytes).copy(buffer, HEADER_BYTES);
-  Buffer.from(ringStarts.buffer, ringStarts.byteOffset, ringBytes).copy(
-    buffer,
-    HEADER_BYTES + pointsBytes,
-  );
-  Buffer.from(featureRings.buffer, featureRings.byteOffset, featureBytes).copy(
-    buffer,
-    HEADER_BYTES + pointsBytes + ringBytes,
-  );
-  Buffer.from(boxes.buffer, boxes.byteOffset, boxBytes).copy(
-    buffer,
-    HEADER_BYTES + pointsBytes + ringBytes + featureBytes,
-  );
+  payload.copy(buffer, HEADER_BYTES);
   const temporary = `${target}.${process.pid}.tmp`;
   await writeFile(temporary, buffer);
   await rename(temporary, target);
   if (!quiet)
     console.log(
       `Контуры ${city}: ${features.length} фич, ${ringCount} колец, ${pointCount} точек, ` +
-        `${(total / 1048576).toFixed(1)} МБ -> ${target}`,
+        `${(buffer.length / 1048576).toFixed(1)} МБ -> ${target}`,
     );
-  return { path: target, skipped: false, bytes: total };
+  return { path: target, skipped: false, bytes: buffer.length };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

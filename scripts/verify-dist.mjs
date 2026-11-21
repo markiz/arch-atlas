@@ -43,7 +43,7 @@ function verifyBasemap(basemap, city) {
 }
 
 function verifyOutline(bytes, city) {
-  assert(bytes.subarray(0, 8).toString() === 'ATLOUT01', `${city.id}: outline magic`);
+  assert(/^ATLOUT0[12]$/.test(bytes.subarray(0, 8).toString()), `${city.id}: outline magic`);
   assert(bytes.byteLength >= 32, `${city.id}: outline header`);
 }
 

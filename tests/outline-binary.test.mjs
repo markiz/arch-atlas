@@ -67,3 +67,83 @@ test('rejects an unknown magic or a truncated file', () => {
   assert.throws(() => parseOutlineBinary(unknown.buffer), /формат контуров/);
   assert.throws(() => parseOutlineBinary(buffer.slice(0, 40)), /Поврежденный файл контуров/);
 });
+
+function varint(value) {
+  const bytes = [];
+  while (value >= 0x80) {
+    bytes.push((value & 0x7f) | 0x80);
+    value = Math.floor(value / 128);
+  }
+  bytes.push(value);
+  return bytes;
+}
+
+function zigzag(value) {
+  return varint(value >= 0 ? value * 2 : -value * 2 - 1);
+}
+
+function fixtureV2() {
+  const coords = [
+    [44.8, 41.71],
+    [44.81, 41.71],
+    [44.81, 41.72],
+    [44.8, 41.72],
+  ];
+  const scale = 1_000_000;
+  const body = [...varint(1), ...varint(coords.length)];
+  let previousX = 0;
+  let previousY = 0;
+  coords.forEach(([lng, lat], index) => {
+    const x = Math.round(lng * scale);
+    const y = Math.round(lat * scale);
+    if (index === 0) body.push(...zigzag(x), ...zigzag(y));
+    else body.push(...zigzag(x - previousX), ...zigzag(y - previousY));
+    previousX = x;
+    previousY = y;
+  });
+  const header = Buffer.alloc(32);
+  header.write('ATLOUT02', 0, 'ascii');
+  header.writeUInt32LE(2, 8);
+  header.writeUInt32LE(1, 12);
+  header.writeUInt32LE(1, 16);
+  header.writeUInt32LE(coords.length, 20);
+  header.writeUInt32LE(scale, 24);
+  const bytes = Buffer.concat([header, Buffer.from(body)]);
+  return {
+    bytes,
+    buffer: bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength),
+  };
+}
+
+test('parses the quantized outline file and rebuilds boxes', () => {
+  const { buffer } = fixtureV2();
+  const outline = parseOutlineBinary(buffer);
+  assert.equal(outline.featureCount, 1);
+  assert.equal(outline.points.length, 8);
+  assert.deepEqual(
+    [...outline.points].map((value) => +value.toFixed(5)),
+    [44.8, 41.71, 44.81, 41.71, 44.81, 41.72, 44.8, 41.72],
+  );
+  assert.deepEqual([...outline.ringStarts], [0, 4]);
+  assert.deepEqual([...outline.featureRings], [0, 1]);
+  assert.deepEqual(
+    [...outline.boxes].map((value) => +value.toFixed(5)),
+    [44.8, 41.71, 44.81, 41.72],
+  );
+});
+
+test('parses a header-only quantized outline file', () => {
+  const header = Buffer.alloc(32);
+  header.write('ATLOUT02', 0, 'ascii');
+  header.writeUInt32LE(2, 8);
+  const outline = parseOutlineBinary(
+    header.buffer.slice(header.byteOffset, header.byteOffset + header.byteLength),
+  );
+  assert.equal(outline.featureCount, 0);
+  assert.equal(outline.points.length, 0);
+});
+
+test('rejects a truncated quantized outline file', () => {
+  const { buffer } = fixtureV2();
+  assert.throws(() => parseOutlineBinary(buffer.slice(0, 34)), /Поврежденный файл контуров/);
+});

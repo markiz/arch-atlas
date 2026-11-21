@@ -13,7 +13,7 @@ import { readResponseBytes } from './fetch-progress';
 
 type Props = MapViewProps;
 
-/** Drop the 79 MB outline graph after the layer has been off for a while. */
+/** Drop the decoded outline buffers after the layer has been off for a while. */
 const OUTLINE_RELEASE_MS = 20_000;
 
 /**
