@@ -16,6 +16,7 @@ type LoadState<T> = {
   status: 'idle' | 'loading' | 'ready' | 'error' | 'unavailable';
   value: T;
   error: string;
+  language?: Language;
 };
 
 async function hashHex(bytes: ArrayBuffer) {
@@ -38,7 +39,12 @@ async function loadVerified(file: ManifestFile, signal: AbortSignal) {
 
 function parseDetails(bundle: unknown, language: Language): Map<string, BuildingDetails> {
   const value = bundle as AtlasDetailsBundle;
-  if (!value || value.version !== 1 || value.language !== language || !Array.isArray(value.buildings))
+  if (
+    !value ||
+    value.version !== 1 ||
+    value.language !== language ||
+    !Array.isArray(value.buildings)
+  )
     throw new Error('Неизвестный формат описаний');
   return new Map(
     value.buildings.map((item) => [
@@ -69,27 +75,28 @@ export function useCityDetails(data: Data, language: Language) {
     status: 'idle',
     value: new Map(),
     error: '',
+    language,
   });
   useEffect(() => {
     if (!file) {
-      setState({ status: 'unavailable', value: new Map(), error: '' });
+      setState({ status: 'unavailable', value: new Map(), error: '', language });
       return;
     }
     const key = `${data.city.id}:${language}:${file.sha256}`;
     const cached = cache.current.get(key);
     if (cached) {
-      setState({ status: 'ready', value: cached, error: '' });
+      setState({ status: 'ready', value: cached, error: '', language });
       return;
     }
     const controller = new AbortController();
     let active = true;
-    setState({ status: 'loading', value: new Map(), error: '' });
+    setState({ status: 'loading', value: new Map(), error: '', language });
     loadVerified(file, controller.signal)
       .then((bundle) => parseDetails(bundle, language))
       .then((details) => {
         if (!active) return;
         cache.current.set(key, details);
-        setState({ status: 'ready', value: details, error: '' });
+        setState({ status: 'ready', value: details, error: '', language });
       })
       .catch((error) => {
         if (!active || controller.signal.aborted) return;
@@ -97,6 +104,7 @@ export function useCityDetails(data: Data, language: Language) {
           status: 'error',
           value: new Map(),
           error: error instanceof Error ? error.message : 'Ошибка загрузки описаний',
+          language,
         });
       });
     return () => {
@@ -106,6 +114,7 @@ export function useCityDetails(data: Data, language: Language) {
   }, [data.city.id, file, language, attempt]);
   return {
     ...state,
+    value: state.language === language ? state.value : new Map(),
     retry: () => {
       if (file) cache.current.delete(`${data.city.id}:${language}:${file.sha256}`);
       setAttempt((value) => value + 1);

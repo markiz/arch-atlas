@@ -443,8 +443,7 @@ export function splitAtlas(cards, languages = LANGS) {
     };
     if (card.otherSource !== undefined) item.otherSource = card.otherSource;
     if (card.googlePlaceId !== undefined) item.googlePlaceId = card.googlePlaceId;
-    if (card.googlePlaceIdSource !== undefined)
-      item.googlePlaceIdSource = card.googlePlaceIdSource;
+    if (card.googlePlaceIdSource !== undefined) item.googlePlaceIdSource = card.googlePlaceIdSource;
     if (card.geometry !== undefined) item.geometry = card.geometry;
     if (card.geometryRole !== undefined) item.geometryRole = card.geometryRole;
     if (card.geometryVariants !== undefined) item.geometryVariants = card.geometryVariants;
@@ -483,7 +482,9 @@ export function splitAtlas(cards, languages = LANGS) {
 }
 
 function hasText(labels) {
-  return !!labels && Object.values(labels).some((value) => typeof value === 'string' && value.trim());
+  return (
+    !!labels && Object.values(labels).some((value) => typeof value === 'string' && value.trim())
+  );
 }
 
 async function writeSplitFiles(destination, split, city, languages) {
@@ -496,10 +497,7 @@ async function writeSplitFiles(destination, split, city, languages) {
       path.join(directory, `buildings.details.${language}.json`),
     ]),
   );
-  await writeFileAtomic(
-    coreFile,
-    `${JSON.stringify({ version: 1, buildings: split.core })}\n`,
-  );
+  await writeFileAtomic(coreFile, `${JSON.stringify({ version: 1, buildings: split.core })}\n`);
   for (const language of languages)
     await writeFileAtomic(
       detailFiles[language],

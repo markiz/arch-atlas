@@ -144,7 +144,9 @@ for (const city of catalog.cities) {
   assert.equal(primary.city, city.id, `${city.id}: manifest city`);
   if (primary.version === 3 && city.manifestRevision)
     assert.equal(primary.revision, city.manifestRevision, `${city.id}: catalog revision`);
-  const allPaths = new Set(manifests.flatMap((manifest) => manifest.files.map((file) => file.path)));
+  const allPaths = new Set(
+    manifests.flatMap((manifest) => manifest.files.map((file) => file.path)),
+  );
   const progress = new Progress(allPaths.size, { label: `verify ${city.id} files` });
   progress.start();
   for (const path of allPaths) {
@@ -155,11 +157,7 @@ for (const city of catalog.cities) {
       .find((candidate) => candidate.path === path);
     assert(file, `${city.id}: ${path} has no manifest entry`);
     assert.equal(bytes.length, file.size, `${path}: size`);
-    assert.equal(
-      createHash('sha256').update(bytes).digest('hex'),
-      file.sha256,
-      `${path}: hash`,
-    );
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, `${path}: hash`);
     if (path.endsWith('.webp'))
       assert(
         bytes.subarray(0, 4).toString() === 'RIFF' && bytes.subarray(8, 12).toString() === 'WEBP',

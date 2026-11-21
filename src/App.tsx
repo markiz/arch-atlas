@@ -24,7 +24,14 @@ import type {
   Photo,
   PhotoCredit,
 } from './types';
-import { filterBuildings, isInteresting, normalize, period, periodsFor, styleEntries } from './domain';
+import {
+  filterBuildings,
+  isInteresting,
+  normalize,
+  period,
+  periodsFor,
+  styleEntries,
+} from './domain';
 import {
   buildingAddress,
   buildingArchitects,
@@ -265,7 +272,10 @@ function photoTechnicalNote(modifications: string, t: (value: string) => string)
   if (other) parts.push(other);
   return parts.length ? parts.join(' · ') : clean;
 }
-function photoCreditText(photo: { author?: string; license?: string }, t: (value: string) => string) {
+function photoCreditText(
+  photo: { author?: string; license?: string },
+  t: (value: string) => string,
+) {
   const author = (photo.author || '').trim(),
     license = (photo.license || '').trim();
   if (author && license) return `${t('Фото: ')}${author} · ${license}`;
@@ -1378,7 +1388,9 @@ function AppContent({
   const selectedBuilding = data.buildings.find((x) => x.id === selected) || null;
   const detailsState = useCityDetails(data, language);
   const creditsState = usePhotoCredits(data, !!selectedBuilding);
-  const selectedDetails = selectedBuilding ? detailsState.value.get(selectedBuilding.id) : undefined;
+  const selectedDetails = selectedBuilding
+    ? detailsState.value.get(selectedBuilding.id)
+    : undefined;
   const selectedPhotos = useBuildingPhotos(selectedBuilding, data.photoFiles);
   const sortName = (building: Building) => buildingName(building, language);
   const sorted = [...filtered].sort((a, b) =>

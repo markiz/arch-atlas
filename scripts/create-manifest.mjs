@@ -36,16 +36,15 @@ export async function createManifest({ city, quiet = false } = {}) {
   const entry = {
     core: `cities/${city}/buildings.core.json`,
     details: Object.fromEntries(
-      languages.map((language) => [
-        language,
-        `cities/${city}/buildings.details.${language}.json`,
-      ]),
+      languages.map((language) => [language, `cities/${city}/buildings.details.${language}.json`]),
     ),
     basemap: legacyEntry.basemap,
     outlines: legacyEntry.outlines,
     credits: `cities/${city}/photo-credits.json`,
   };
-  const buildings = JSON.parse(await readFile(path.join(ATLAS_ROOT, legacyEntry.buildings), 'utf8'));
+  const buildings = JSON.parse(
+    await readFile(path.join(ATLAS_ROOT, legacyEntry.buildings), 'utf8'),
+  );
   if (!Array.isArray(buildings)) throw new Error(`${legacyEntry.buildings}: expected an array`);
   const photos = [
     ...new Set(

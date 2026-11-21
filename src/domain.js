@@ -83,9 +83,7 @@ const anyFilled = (value) =>
  */
 export function isInteresting(building) {
   return (
-    building.hasStory === true ||
-    anyFilled(building.descriptions) ||
-    anyFilled(building.histories)
+    building.hasStory === true || anyFilled(building.descriptions) || anyFilled(building.histories)
   );
 }
 export function isResidential(building) {
