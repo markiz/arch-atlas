@@ -185,6 +185,10 @@ for (const city of catalog.cities) {
 }
 const html = await readFile('dist/index.html', 'utf8');
 assert(!/\b(?:src|href)="https?:\/\//i.test(html), 'external asset in HTML');
+const sw = await readFile('dist/sw.js', 'utf8');
+assert(!sw.includes('__CACHE_VERSION__'), 'service worker version is not generated');
+assert(!sw.includes('PRECACHE_'), 'service worker still contains a precache list');
+assert(sw.includes("addEventListener('fetch'"), 'service worker has no fetch handler');
 console.log(
   `Verified dist: ${catalog.cities.length} cities, ${totalBuildings} buildings, ${totalFiles} local resources and their SHA-256 hashes.`,
 );

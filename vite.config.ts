@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
-import { readFile, stat } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { gzipSync } from 'node:zlib';
 import { defineConfig, type Plugin, type ViteDevServer } from 'vite';
@@ -162,10 +163,35 @@ function atlasHotReload(): Plugin {
   };
 }
 
+// A build-specific cache name retires the old runtime cache when the shell
+// changes. Nothing is fetched here: the worker only caches requests that
+// pages actually make.
+function atlasServiceWorker(): Plugin {
+  let outDir = 'dist';
+  return {
+    name: 'atlas-service-worker',
+    apply: 'build',
+    configResolved(config) {
+      outDir = config.build.outDir;
+    },
+    async closeBundle() {
+      const dist = path.resolve(PROJECT_ROOT, outDir);
+      const template = await readFile(
+        path.join(PROJECT_ROOT, 'scripts/service-worker.template.js'),
+        'utf8',
+      );
+      const html = await readFile(path.join(dist, 'index.html'), 'utf8');
+      const version = createHash('sha256').update(template).update(html).digest('hex').slice(0, 12);
+      await writeFile(path.join(dist, 'sw.js'), template.replace('__CACHE_VERSION__', version));
+      console.log(`[atlas] service worker: ${version}`);
+    },
+  };
+}
+
 export default defineConfig({
   base: './',
   define: { __ATLAS_REVISION__: JSON.stringify(catalogRevision) },
-  plugins: [atlasGzip(), atlasHotReload()],
+  plugins: [atlasGzip(), atlasHotReload(), atlasServiceWorker()],
   server: { watch: { usePolling: process.env.VITE_USE_POLLING === 'true' } },
   build: { target: 'es2022' },
 });

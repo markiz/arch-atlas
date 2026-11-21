@@ -9,6 +9,7 @@ import type {
 } from './types';
 import type { Language } from './languages.ts';
 import { readResponseBytes } from './fetch-progress';
+import { waitForServiceWorker } from './service-worker';
 
 const atlasBase = import.meta.env.BASE_URL + 'atlas/';
 
@@ -28,6 +29,7 @@ async function hashHex(bytes: ArrayBuffer) {
 async function loadVerified(file: ManifestFile, signal: AbortSignal) {
   if (file.path.includes('..') || file.path.startsWith('/'))
     throw new Error('Некорректный путь в пакете');
+  await waitForServiceWorker();
   const response = await fetch(`${atlasBase}${file.path}?v=${encodeURIComponent(file.sha256)}`, {
     signal,
   });

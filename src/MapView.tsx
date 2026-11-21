@@ -10,6 +10,7 @@ import { layerMemory } from './map/layer-state';
 import { desktopStartView, isMobileMapLayout, mobileStartView } from './map/start-view';
 import { rememberMapView, savedMapView } from './map/view-memory';
 import { readResponseBytes } from './fetch-progress';
+import { waitForServiceWorker } from './service-worker';
 
 type Props = MapViewProps;
 
@@ -192,6 +193,7 @@ export default function MapView({
         buildingData.current = (async () => {
           if (buildingOutlines.path.includes('..') || buildingOutlines.path.startsWith('/'))
             throw new Error('Некорректный путь в пакете');
+          await waitForServiceWorker();
           const url = `${import.meta.env.BASE_URL}atlas/${buildingOutlines.path}?v=${encodeURIComponent(buildingOutlines.sha256)}`;
           const response = await fetch(url);
           if (!response.ok) throw new Error(`Не удалось загрузить ${buildingOutlines.path}`);

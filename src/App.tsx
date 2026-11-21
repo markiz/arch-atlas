@@ -61,6 +61,7 @@ import {
 import { usePhotoLightboxGestures, usePhotoSwipe } from './photo-gestures';
 import { readResponseBytes } from './fetch-progress';
 import { useCityDetails, usePhotoCredits } from './city-details';
+import { waitForServiceWorker } from './service-worker';
 
 const initialFilters: Filters = {
   query: '',
@@ -699,6 +700,8 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
         setError('');
         setStatus('Загружаем карту и данные…');
         setProgress(null);
+        await waitForServiceWorker();
+        if (cancelled) return;
         const revision = import.meta.env.DEV
           ? String(Date.now())
           : (city.manifestRevision ?? __ATLAS_REVISION__);
@@ -2005,6 +2008,8 @@ export default function App() {
     async function run() {
       try {
         setCatalogError('');
+        await waitForServiceWorker();
+        if (cancelled) return;
         const revision = import.meta.env.DEV ? String(Date.now()) : __ATLAS_REVISION__;
         const response = await fetch(`${base}cities.json?v=${encodeURIComponent(revision)}`, {
           signal: controller.signal,

@@ -43,6 +43,15 @@ export default tseslint.config(
     },
   },
   {
+    files: ['scripts/service-worker.template.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.serviceworker,
+      },
+    },
+  },
+  {
     files: ['**/*.{ts,tsx,js,mjs}'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
