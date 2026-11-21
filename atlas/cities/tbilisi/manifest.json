@@ -1,7 +1,7 @@
 {
   "version": 2,
   "city": "tbilisi",
-  "revision": "7d5d87e73aa83c5f",
+  "revision": "b30c30f83da7f6a7",
   "entry": {
     "buildings": "cities/tbilisi/buildings.json",
     "basemap": "cities/tbilisi/basemap.geojson",
@@ -15,8 +15,8 @@
     },
     {
       "path": "cities/tbilisi/basemap.geojson",
-      "size": 10889910,
-      "sha256": "dab0a86641ce50a3f391ed076ff395e4c2548c195bd093fd2a89484c9a9f61b4"
+      "size": 10977292,
+      "sha256": "b4ec459c73ab9c4fbeab676232cccd3a8a59715b4ad7df230322f13cb74ab3d7"
     },
     {
       "path": "cities/tbilisi/building-outlines.bin",

@@ -1,7 +1,7 @@
 {
   "version": 2,
   "city": "belgrade",
-  "revision": "a5839b30cdd15af5",
+  "revision": "a2f42a734c12e955",
   "entry": {
     "buildings": "cities/belgrade/buildings.json",
     "basemap": "cities/belgrade/basemap.geojson",
@@ -15,8 +15,8 @@
     },
     {
       "path": "cities/belgrade/basemap.geojson",
-      "size": 13190699,
-      "sha256": "b60e9cb8b0a163e2ca5bff7f7d503bd2c8dbd5b1ab340eadc4c0563cb1681532"
+      "size": 13271716,
+      "sha256": "8e131db1a6d643776b69c186325cdc9e63dce88e48674f10133bd58cd6523aeb"
     },
     {
       "path": "cities/belgrade/building-outlines.bin",

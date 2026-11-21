@@ -139,7 +139,7 @@
       "counts": {
         "buildings": 502
       },
-      "manifestRevision": "9bc544e99eb997e7"
+      "manifestRevision": "87cc28c116b1e37a"
     },
     {
       "id": "belgrade",
@@ -254,8 +254,8 @@
       "counts": {
         "buildings": 412
       },
-      "manifestRevision": "12646a8ab2c984e2"
+      "manifestRevision": "4a530e1c116a8edc"
     }
   ],
-  "revision": "cf31eb8dadde0485"
+  "revision": "b982e5569f78b53a"
 }
