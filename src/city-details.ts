@@ -124,22 +124,46 @@ export function useCityDetails(data: Data, language: Language) {
   };
 }
 
-/** Photo credits are only needed when the inspector is open. */
-export function usePhotoCredits(data: Data, enabled: boolean) {
+/** Download a city-wide pack once the browser has spare time. */
+function whenIdle(callback: () => void) {
+  if (typeof window.requestIdleCallback === 'function') {
+    const id = window.requestIdleCallback(callback, { timeout: 2000 });
+    return () => window.cancelIdleCallback(id);
+  }
+  const id = window.setTimeout(callback, 1200);
+  return () => window.clearTimeout(id);
+}
+
+/**
+ * The photo credits pack is downloaded in the background after the city opens,
+ * so the inspector rarely waits for it. `urgent` skips the idle delay when a
+ * card is already open — from a deep link or an early click.
+ */
+export function usePhotoCredits(data: Data, urgent: boolean) {
   const file = data.creditsFile;
   const cache = useRef(new Map<string, Map<string, PhotoCredit>>());
   const [attempt, setAttempt] = useState(0);
+  const [started, setStarted] = useState(false);
   const [state, setState] = useState<LoadState<Map<string, PhotoCredit>>>({
     status: 'idle',
     value: new Map(),
     error: '',
   });
   useEffect(() => {
-    if (!enabled) return;
     if (!file) {
       setState({ status: 'unavailable', value: new Map(), error: '' });
       return;
     }
+    if (started) return;
+    if (cache.current.has(`${data.city.id}:${file.sha256}`)) return;
+    if (urgent) {
+      setStarted(true);
+      return;
+    }
+    return whenIdle(() => setStarted(true));
+  }, [data.city.id, file, urgent, started]);
+  useEffect(() => {
+    if (!file || !started) return;
     const key = `${data.city.id}:${file.sha256}`;
     const cached = cache.current.get(key);
     if (cached) {
@@ -168,11 +192,25 @@ export function usePhotoCredits(data: Data, enabled: boolean) {
       active = false;
       controller.abort();
     };
-  }, [data.city.id, file, enabled, attempt]);
+  }, [data.city.id, file, started, attempt]);
+  const retried = useRef(false);
+  useEffect(() => {
+    if (!urgent) {
+      retried.current = false;
+      return;
+    }
+    // A failed background prefetch must not hide the credits for the whole
+    // session; retry once when the reader opens a card.
+    if (state.status === 'error' && !retried.current) {
+      retried.current = true;
+      setAttempt((value) => value + 1);
+    }
+  }, [urgent, state.status]);
   return {
     ...state,
     retry: () => {
       if (file) cache.current.delete(`${data.city.id}:${file.sha256}`);
+      setStarted(true);
       setAttempt((value) => value + 1);
     },
   };

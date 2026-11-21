@@ -21,6 +21,7 @@ import type {
   Data,
   Filters,
   ManifestFile,
+  Photo,
   PhotoCredit,
 } from './types';
 import {
@@ -986,9 +987,13 @@ function Inspector({
   const nextAsset = images.length > 1 ? images[(photoIndex + 1) % images.length] : undefined;
   const previousPreview = previousAsset?.thumb;
   const nextPreview = nextAsset?.thumb;
-  const photoRef = current?.photo;
+  const rankedPhotos = useMemo(
+    () => rankPhotos(building.photos ?? (building.photo ? [building.photo] : [])) as Photo[],
+    [building],
+  );
+  const photoRef = rankedPhotos[photoIndex] ?? rankedPhotos[0] ?? current?.photo;
   const inlineCredit: PhotoCredit | undefined =
-    photoRef && (photoRef.author || photoRef.license)
+    photoRef && (photoRef.author || photoRef.license || photoRef.licenseUrl || photoRef.source)
       ? {
           id: photoRef.id,
           author: photoRef.author ?? '',
