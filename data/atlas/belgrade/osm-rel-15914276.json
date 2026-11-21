@@ -148,7 +148,9 @@
     "sr": "Контура OpenStreetMap (relation/15914276).",
     "uk": "Контур OpenStreetMap (relation/15914276)."
   },
-  "photos": [],
+  "photos": [
+    "a92cd9940ade25014cb075909a03f0c5cfa0f36673ad4382499830436647debe"
+  ],
   "source": "https://www.openstreetmap.org/relation/15914276",
   "otherSource": "https://www.wikidata.org/wiki/Q61130939"
 }
