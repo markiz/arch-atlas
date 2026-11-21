@@ -92,7 +92,9 @@
     "sr": "Контура OpenStreetMap (way/406024524).",
     "uk": "Контур OpenStreetMap (way/406024524)."
   },
-  "photos": [],
+  "photos": [
+    "fd24ecfaca4c45ed3aae7fb08bfc55b2eafc5811bd299a9a57c371de3ac10af8"
+  ],
   "source": "https://www.openstreetmap.org/way/406024524",
   "otherSource": "https://www.wikidata.org/wiki/Q16507003",
   "descriptions": {
