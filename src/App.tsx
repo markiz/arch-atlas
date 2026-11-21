@@ -21,7 +21,6 @@ import type {
   Data,
   Filters,
   ManifestFile,
-  Photo,
   PhotoCredit,
 } from './types';
 import {

@@ -53,8 +53,8 @@ export interface PhotoRef {
   visualTags?: string[];
 }
 
-/** Full photo record: a ref plus the attribution loaded from the credits pack. */
-export interface Photo extends PhotoRef {}
+/** Full photo record: a ref plus optional attribution from v2 bundles. */
+export type Photo = PhotoRef;
 export interface Building extends BuildingCore {
   /** v2 bundles carried the inspector text inline; v3 keeps it in details packs. */
   descriptions?: Partial<Record<Language, string>>;
