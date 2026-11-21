@@ -1,0 +1,56 @@
+- generic [ref=f79e10]:
+  - banner [ref=f79e11]:
+    - link "АРХИТЕКТУРНЫЙ АТЛАС" [ref=f79e12] [cursor=pointer]:
+      - /url: "#city=tbilisi&view=map&lang=ru"
+      - generic [ref=f79e13]: ა
+    - combobox "ГОРОД" [ref=f79e16]:
+      - option "Тбилиси" [selected]
+      - option "Белград"
+    - generic [ref=f79e17]:
+      - generic [ref=f79e18]: ЯЗЫК
+      - combobox "ЯЗЫК" [ref=f79e19]:
+        - option "Русский" [selected]
+        - option "English"
+        - option "Українська"
+        - option "ქართული"
+  - main [ref=f79e20]:
+    - generic [ref=f79e21]:
+      - textbox "Поиск по атласу" [ref=f79e26]:
+        - /placeholder: Название, архитектор, адрес…
+      - button "Фильтры" [ref=f79e27] [cursor=pointer]
+      - group "Вид атласа" [ref=f79e32]:
+        - button "Карта" [ref=f79e33] [cursor=pointer]
+        - button "Каталог" [ref=f79e37] [cursor=pointer]
+    - generic [ref=f79e42]:
+      - generic [ref=f79e43]:
+        - generic "Интерактивная карта архитектурного атласа" [ref=f79e44]
+        - generic [ref=f79e46]:
+          - text: ©
+          - link "OpenStreetMap" [ref=f79e47] [cursor=pointer]:
+            - /url: https://www.openstreetmap.org/copyright
+          - text: contributors
+        - generic [ref=f79e48]:
+          - button "Приблизить" [ref=f79e49] [cursor=pointer]: +
+          - button "Отдалить" [ref=f79e50] [cursor=pointer]: −
+      - button "Слои" [ref=f79e53] [cursor=pointer]
+      - button "Показать моё местоположение" [ref=f79e58] [cursor=pointer]
+      - generic [ref=f79e63]: Тбилиси, Грузия 354/502 ОБЪЕКТОВ
+      - button "⌖" [ref=f79e66] [cursor=pointer]
+      - generic [ref=f79e67]:
+        - button "Период постройки" [expanded] [ref=f79e68] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f79e70]: −
+        - generic [ref=f79e71]:
+          - generic [ref=f79e82]:
+            - generic [ref=f79e83]: До 1500
+            - generic [ref=f79e84]: С 1991
+          - generic [ref=f79e85]:
+            - button "До 1500" [ref=f79e86] [cursor=pointer]
+            - button "1500–1800" [ref=f79e88] [cursor=pointer]
+            - button "1801–1860" [ref=f79e90] [cursor=pointer]
+            - button "1861–1899" [ref=f79e92] [cursor=pointer]
+            - button "1900–1920" [ref=f79e94] [cursor=pointer]
+            - button "1921–1932" [ref=f79e96] [cursor=pointer]
+            - button "1933–1954" [ref=f79e98] [cursor=pointer]
+            - button "1955–1990" [ref=f79e100] [cursor=pointer]
+            - button "С 1991" [ref=f79e102] [cursor=pointer]
+            - button "Неизвестно" [ref=f79e104] [cursor=pointer]

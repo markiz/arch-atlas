@@ -17,6 +17,15 @@ import {
   unprojectX,
   unprojectY,
 } from './geometry';
+import {
+  mercatorBoxes,
+  mercatorYFast,
+  normalizedBounds,
+  projectFast,
+  warmMercatorTable,
+} from './mercator';
+import { buildFeatureGrid, gridCoversMost, queryFeatureGrid } from './spatial-index';
+import type { FeatureGrid } from './spatial-index';
 import type { BBox, Bounds, LatLng, OutlineBinary, Point } from './types';
 
 export interface AtlasLayerVisibility {
@@ -229,6 +238,9 @@ export class AtlasCanvasMap {
   private outlineFeatures: GeoJSON.Feature[] = [];
   private outlineBinary: OutlineBinary | null = null;
   private outlineBoxes: Float32Array | null = null;
+  /** Same outlines in normalized world units, so culling needs no projection. */
+  private outlineNorm: Float64Array | null = null;
+  private outlineGrid: FeatureGrid | null = null;
   private atlasSource: Building[] | null = null;
   private atlasEntries: AtlasEntry[] = [];
   private landmarkCardIds = new Set<string>();
@@ -242,6 +254,8 @@ export class AtlasCanvasMap {
   private buildingsVisible = false;
   private position: PositionShape | null = null;
   private markers: MarkerEntry[] = [];
+  /** Camera the marker positions were written at; markers shift from here. */
+  private markerCamera: RenderedCamera | null = null;
   private raf: number | null = null;
   private animating = false;
   private wheelRaf: number | null = null;
@@ -267,6 +281,8 @@ export class AtlasCanvasMap {
   } | null = null;
 
   constructor(container: HTMLElement, options: AtlasCanvasOptions) {
+    // The table costs a few milliseconds; build it before the first repaint.
+    warmMercatorTable();
     this.container = container;
     this.container.classList.add('atlas-map-host');
     this.minZoom = options.minZoom ?? 10;
@@ -467,6 +483,12 @@ export class AtlasCanvasMap {
     this.outlineFeatures = features ?? [];
     this.outlineBinary = null;
     this.outlineBoxes = features ? this.computeBoxes(features) : null;
+    this.outlineNorm = this.outlineBoxes
+      ? mercatorBoxes(this.outlineBoxes, this.outlineFeatures.length)
+      : null;
+    this.outlineGrid = this.outlineBoxes
+      ? buildFeatureGrid(this.outlineBoxes, this.outlineFeatures.length)
+      : null;
     if (this.buildingsVisible) this.renderBase();
   }
 
@@ -475,6 +497,8 @@ export class AtlasCanvasMap {
     this.outlineFeatures = [];
     this.outlineBinary = binary;
     this.outlineBoxes = binary?.boxes ?? null;
+    this.outlineNorm = binary ? mercatorBoxes(binary.boxes, binary.featureCount) : null;
+    this.outlineGrid = binary ? buildFeatureGrid(binary.boxes, binary.featureCount) : null;
     if (this.buildingsVisible) this.renderBase();
   }
 
@@ -679,6 +703,30 @@ export class AtlasCanvasMap {
     );
   }
 
+  /**
+   * The grid for this repaint, or null when the view covers most of the layer
+   * and a sequential pass is both simpler and cheaper.
+   */
+  private activeOutlineGrid(view: Bounds) {
+    const grid = this.outlineGrid;
+    return grid && !gridCoversMost(grid, view) ? grid : null;
+  }
+
+  /** The same test in normalized world units: y grows southwards there. */
+  private boxVisibleNorm(
+    norm: Float64Array,
+    index: number,
+    view: { west: number; east: number; north: number; south: number },
+  ) {
+    const offset = index * 4;
+    return (
+      norm[offset] <= view.east &&
+      norm[offset + 2] >= view.west &&
+      norm[offset + 1] <= view.south &&
+      norm[offset + 3] >= view.north
+    );
+  }
+
   private previewRatio() {
     // Keep a preview pass near this many backing-store pixels: on phones the
     // 0.6x device ratio is already well inside the budget, while a retina
@@ -814,11 +862,7 @@ export class AtlasCanvasMap {
     const offsetX = this.padding.x - camera.origin.x,
       offsetY = this.padding.y - camera.origin.y;
     const projectCanvasX = (lng: number) => ((lng + 180) / 360) * scale + offsetX;
-    const projectCanvasY = (lat: number) => {
-      const safe = Math.max(-85.0511287798, Math.min(85.0511287798, lat));
-      const sin = Math.sin((safe * Math.PI) / 180);
-      return (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * scale + offsetY;
-    };
+    const projectCanvasY = (lat: number) => mercatorYFast(lat) * scale + offsetY;
     const addRing = (ring: number[][], close: boolean, path: Path2D | CanvasRenderingContext2D) => {
       let first = true;
       for (const point of ring) {
@@ -1100,6 +1144,7 @@ export class AtlasCanvasMap {
       bakeY = this.rendered.origin.y - viewOrigin.y;
     if (Math.abs(bakeX) > 0.25 || Math.abs(bakeY) > 0.25) this.recenterForDrag();
     else this.applyPanTransform(this.rendered, this.view);
+    if (this.markersLayer.style.transform) this.repositionMarkers();
     this.reportView();
   }
 
@@ -1110,32 +1155,28 @@ export class AtlasCanvasMap {
     offsetX: number,
     offsetY: number,
   ) {
-    const boxes = this.outlineBoxes!;
     const features = this.outlineFeatures;
+    const norm = this.outlineNorm;
+    if (!norm) return;
+    const activeGrid = this.activeOutlineGrid(view);
+    const total = activeGrid ? queryFeatureGrid(activeGrid, view) : features.length;
+    const viewNorm = normalizedBounds(view);
+    const featureAt = (position: number) => (activeGrid ? activeGrid.out[position] : position);
     const projectCanvasX = (lng: number) => ((lng + 180) / 360) * scale + offsetX;
-    const projectCanvasY = (lat: number) => {
-      const safe = Math.max(-85.0511287798, Math.min(85.0511287798, lat));
-      const sin = Math.sin((safe * Math.PI) / 180);
-      return (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * scale + offsetY;
-    };
-    const projectedBox = (index: number) => {
-      const offset = index * 4;
-      const x1 = projectCanvasX(boxes[offset]),
-        x2 = projectCanvasX(boxes[offset + 2]);
-      const y1 = projectCanvasY(boxes[offset + 1]),
-        y2 = projectCanvasY(boxes[offset + 3]);
-      return { x1, y1, x2, y2 };
-    };
+    const projectCanvasY = (lat: number) => mercatorYFast(lat) * scale + offsetY;
     // A single path containing tens of thousands of polygons makes Chrome's
     // Path2D tessellation superlinear. Batches keep the work linear and avoid a
     // multi-second freeze at middle zoom levels.
     const BATCH_SIZE = 100;
     let batch = 0;
     context.beginPath();
-    for (let index = 0; index < features.length; index++) {
-      if (!this.boxVisible(boxes, index, view)) continue;
-      const box = projectedBox(index);
-      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) < DOT_THRESHOLD) continue;
+    for (let position = 0; position < total; position++) {
+      const index = featureAt(position);
+      if (!activeGrid && !this.boxVisibleNorm(norm, index, viewNorm)) continue;
+      const offset = index * 4;
+      const width = (norm[offset + 2] - norm[offset]) * scale;
+      const height = (norm[offset + 3] - norm[offset + 1]) * scale;
+      if (Math.max(width, height) < DOT_THRESHOLD) continue;
       const geometry = features[index].geometry;
       if (!geometry) continue;
       eachPolygonRing(geometry, (ring) => {
@@ -1172,12 +1213,15 @@ export class AtlasCanvasMap {
     // a separate one-pixel fill path, which preserves the texture of the city
     // without paying for full outlines.
     context.beginPath();
-    for (let index = 0; index < features.length; index++) {
-      if (!this.boxVisible(boxes, index, view)) continue;
-      const box = projectedBox(index);
-      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
-      const x = Math.round((box.x1 + box.x2) / 2),
-        y = Math.round((box.y1 + box.y2) / 2);
+    for (let position = 0; position < total; position++) {
+      const index = featureAt(position);
+      if (!activeGrid && !this.boxVisibleNorm(norm, index, viewNorm)) continue;
+      const offset = index * 4;
+      const width = (norm[offset + 2] - norm[offset]) * scale;
+      const height = (norm[offset + 3] - norm[offset + 1]) * scale;
+      if (Math.max(width, height) >= DOT_THRESHOLD) continue;
+      const x = Math.round(((norm[offset] + norm[offset + 2]) / 2) * scale + offsetX),
+        y = Math.round(((norm[offset + 1] + norm[offset + 3]) / 2) * scale + offsetY);
       const size = 1 / this.pixelRatio;
       context.rect(x, y, size, size);
     }
@@ -1197,31 +1241,27 @@ export class AtlasCanvasMap {
     offsetY: number,
   ) {
     const data = this.outlineBinary!;
-    const { points, ringStarts, featureRings, boxes, featureCount } = data;
+    const { points, ringStarts, featureRings, featureCount } = data;
+    const norm = this.outlineNorm;
+    if (!norm) return;
+    const activeGrid = this.activeOutlineGrid(view);
+    const total = activeGrid ? queryFeatureGrid(activeGrid, view) : featureCount;
+    const viewNorm = normalizedBounds(view);
+    const featureAt = (position: number) => (activeGrid ? activeGrid.out[position] : position);
     const projectCanvasX = (lng: number) => ((lng + 180) / 360) * scale + offsetX;
-    const projectCanvasY = (lat: number) => {
-      const safe = Math.max(-85.0511287798, Math.min(85.0511287798, lat));
-      const sin = Math.sin((safe * Math.PI) / 180);
-      return (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * scale + offsetY;
-    };
-    const projectedBox = (index: number) => {
-      const offset = index * 4;
-      return {
-        x1: projectCanvasX(boxes[offset]),
-        y1: projectCanvasY(boxes[offset + 1]),
-        x2: projectCanvasX(boxes[offset + 2]),
-        y2: projectCanvasY(boxes[offset + 3]),
-      };
-    };
+    const projectCanvasY = (lat: number) => mercatorYFast(lat) * scale + offsetY;
     const BATCH_SIZE = 100;
     let batch = 0;
     context.beginPath();
-    for (let index = 0; index < featureCount; index++) {
-      if (!this.boxVisible(boxes, index, view)) continue;
+    for (let position = 0; position < total; position++) {
+      const index = featureAt(position);
+      if (!activeGrid && !this.boxVisibleNorm(norm, index, viewNorm)) continue;
       const ringEnd = featureRings[index + 1];
       if (ringEnd === featureRings[index]) continue;
-      const box = projectedBox(index);
-      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) < DOT_THRESHOLD) continue;
+      const offset = index * 4;
+      const width = (norm[offset + 2] - norm[offset]) * scale;
+      const height = (norm[offset + 3] - norm[offset + 1]) * scale;
+      if (Math.max(width, height) < DOT_THRESHOLD) continue;
       for (let ring = featureRings[index]; ring < ringEnd; ring++) {
         const start = ringStarts[ring];
         const end = ringStarts[ring + 1];
@@ -1252,12 +1292,15 @@ export class AtlasCanvasMap {
       context.stroke();
     }
     context.beginPath();
-    for (let index = 0; index < featureCount; index++) {
-      if (!this.boxVisible(boxes, index, view)) continue;
-      const box = projectedBox(index);
-      if (Math.max(Math.abs(box.x2 - box.x1), Math.abs(box.y2 - box.y1)) >= DOT_THRESHOLD) continue;
-      const x = Math.round((box.x1 + box.x2) / 2);
-      const y = Math.round((box.y1 + box.y2) / 2);
+    for (let position = 0; position < total; position++) {
+      const index = featureAt(position);
+      if (!activeGrid && !this.boxVisibleNorm(norm, index, viewNorm)) continue;
+      const offset = index * 4;
+      const width = (norm[offset + 2] - norm[offset]) * scale;
+      const height = (norm[offset + 3] - norm[offset + 1]) * scale;
+      if (Math.max(width, height) >= DOT_THRESHOLD) continue;
+      const x = Math.round(((norm[offset] + norm[offset + 2]) / 2) * scale + offsetX);
+      const y = Math.round(((norm[offset + 1] + norm[offset + 3]) / 2) * scale + offsetY);
       const size = 1 / this.pixelRatio;
       context.rect(x, y, size, size);
     }
@@ -1304,11 +1347,7 @@ export class AtlasCanvasMap {
       offsetY = this.padding.y - camera.origin.y;
     const scale = WORLD_SIZE * 2 ** camera.zoom;
     const projectCanvasX = (lng: number) => ((lng + 180) / 360) * scale + offsetX;
-    const projectCanvasY = (lat: number) => {
-      const safe = Math.max(-85.0511287798, Math.min(85.0511287798, lat));
-      const sin = Math.sin((safe * Math.PI) / 180);
-      return (0.5 - Math.log((1 + sin) / (1 - sin)) / (4 * Math.PI)) * scale + offsetY;
-    };
+    const projectCanvasY = (lat: number) => mercatorYFast(lat) * scale + offsetY;
     const activePeriods =
       this.hoveredPeriod && !this.selectedPeriods.includes(this.hoveredPeriod)
         ? [...this.selectedPeriods, this.hoveredPeriod]
@@ -1403,8 +1442,6 @@ export class AtlasCanvasMap {
     canvas.style.left = '0';
     canvas.style.top = '0';
     canvas.style.visibility = 'hidden';
-    // The labels are screen-space: they live outside the CSS-scaled pan and are
-    // re-laid out every frame at the live camera, like a vector layer.
     this.container.insertBefore(canvas, this.tooltip);
   }
 
@@ -1419,9 +1456,8 @@ export class AtlasCanvasMap {
   }
 
   /**
-   * Street labels are a separate screen-space canvas: they are re-laid out at
-   * the live (fractional) zoom on every frame, so the text stays sharp and the
-   * motion stays continuous through gestures.
+   * Street labels are re-laid out at the live camera on every frame: text stays
+   * sharp, and a name never appears later than the street it belongs to.
    */
   private renderLabels() {
     if (!this.visibility.detailedStreets || !this.rendered) {
@@ -1450,8 +1486,10 @@ export class AtlasCanvasMap {
     if (!this.rendered) return;
     const zoom = this.view.zoom;
     const origin = this.originFor(this.view);
+    this.markersLayer.style.transform = '';
+    this.markerCamera = { center: { ...this.view.center }, zoom, origin };
     for (const marker of this.markers) {
-      const point = project(marker.lat, marker.lng, zoom);
+      const point = projectFast(marker.lat, marker.lng, zoom);
       marker.element.style.left = `${point.x - origin.x}px`;
       marker.element.style.top = `${point.y - origin.y}px`;
       marker.element.style.transform = '';
@@ -1472,6 +1510,27 @@ export class AtlasCanvasMap {
       return;
     }
     this.positionTooltip(this.markerName(this.tooltipMarker.feature), x, y);
+  }
+
+  /** Shift the marker layer while the camera pans at a fixed zoom. */
+  private alignMarkers(view: Camera) {
+    const camera = this.markerCamera;
+    if (!camera || Math.abs(camera.zoom - view.zoom) > 1e-9) {
+      this.repositionMarkers();
+      return;
+    }
+    const origin = this.originFor(view);
+    const shiftX = camera.origin.x - origin.x,
+      shiftY = camera.origin.y - origin.y;
+    if (Math.abs(shiftX) < 1e-6 && Math.abs(shiftY) < 1e-6) return;
+    // A shift bigger than the overscan, or a zoom, has to re-pin every marker.
+    if (Math.abs(shiftX) > this.padding.x * 0.7 || Math.abs(shiftY) > this.padding.y * 0.7) {
+      this.repositionMarkers();
+      return;
+    }
+    // The tooltip lives outside this layer, so it cannot follow the shift.
+    if (this.tooltipVisible) this.hideTooltip();
+    this.markersLayer.style.transform = `translate3d(${shiftX}px, ${shiftY}px, 0)`;
   }
 
   private updateMarkerLabels() {
@@ -1569,7 +1628,7 @@ export class AtlasCanvasMap {
     // The label and marker layers are screen-space, so they follow the live
     // camera instead of inheriting the CSS scale of the pan.
     this.renderLabels();
-    this.repositionMarkers();
+    this.alignMarkers(view);
   }
 
   private stopAnimation(render = true) {
