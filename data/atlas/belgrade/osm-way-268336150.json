@@ -122,7 +122,9 @@
     "sr": "Контура OpenStreetMap (way/268336150).",
     "uk": "Контур OpenStreetMap (way/268336150)."
   },
-  "photos": [],
+  "photos": [
+    "0ea0ba768f76c774b3e8934d2628b571fddf1192a083800687d226ddfeec50fe"
+  ],
   "source": "https://www.openstreetmap.org/way/268336150",
   "otherSource": "https://www.wikidata.org/wiki/Q1742565"
 }

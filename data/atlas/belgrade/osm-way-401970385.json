@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/401970385).",
     "uk": "Контур OpenStreetMap (way/401970385)."
   },
-  "photos": [],
+  "photos": [
+    "263260374c47e5a04db6a1f6784ae7d4aca27fb03a466babb7e755a38b7405bf"
+  ],
   "source": "https://www.openstreetmap.org/way/401970385",
   "otherSource": "https://www.wikidata.org/wiki/Q6592266"
 }
