@@ -91,11 +91,16 @@ class GeometryReader(osmium.SimpleHandler):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('pbf', type=pathlib.Path)
+    parser.add_argument('pbf', nargs='?', type=pathlib.Path)
+    parser.add_argument('--pbf', dest='pbf_option', metavar='PBF', type=pathlib.Path,
+                        help='regional OSM PBF; accepted alongside the positional form')
     parser.add_argument('--city', default='tbilisi')
     parser.add_argument('--relation', type=int)
     parser.add_argument('-o', '--output', type=pathlib.Path)
     args = parser.parse_args()
+    args.pbf = args.pbf_option or args.pbf
+    if args.pbf is None:
+        parser.error('укажите PBF: --pbf=<file> или позиционным аргументом')
     root = pathlib.Path(__file__).resolve().parent.parent
     config = json.loads((root / 'data' / 'cities' / f'{args.city}.json').read_text())
     global RELATION_ID, SOURCE_URL

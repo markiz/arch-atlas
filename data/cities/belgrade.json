@@ -56,6 +56,7 @@
     "rawDir": "raw/osm/belgrade",
     "selected": "selected.json",
     "coverage": "coverage.json",
+    "outlines": "building-outlines.geojson",
     "translationsDir": "data/translations/belgrade",
     "skipUnnamedMinorRoads": true
   },
