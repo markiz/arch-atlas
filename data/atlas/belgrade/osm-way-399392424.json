@@ -68,7 +68,9 @@
     "sr": "Контура OpenStreetMap (way/399392424).",
     "uk": "Контур OpenStreetMap (way/399392424)."
   },
-  "photos": [],
+  "photos": [
+    "665c84bc86cbb6e2dd51f119ea19a8b74dd37db07a58d343f298269f879bd8a3"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45477",
   "otherSource": "https://www.openstreetmap.org/way/399392424",
   "descriptions": {

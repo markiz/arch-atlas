@@ -72,7 +72,9 @@
     "sr": "Контура OpenStreetMap (way/394172796).",
     "uk": "Контур OpenStreetMap (way/394172796)."
   },
-  "photos": [],
+  "photos": [
+    "6f9b0aa360916384e24bb63cbdb4e61b8b09f66eed1401e9b238e2d0c035200a"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45363",
   "otherSource": "https://www.openstreetmap.org/way/394172796",
   "descriptions": {

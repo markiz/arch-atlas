@@ -64,7 +64,9 @@
     "sr": "Контура OpenStreetMap (way/396291617).",
     "uk": "Контур OpenStreetMap (way/396291617)."
   },
-  "photos": [],
+  "photos": [
+    "dcc09ef1fefd1da6fc938abd0a276ba8e5525693f3530ca99264f6a23da0e0df"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44205",
   "otherSource": "https://www.openstreetmap.org/way/396291617",
   "descriptions": {

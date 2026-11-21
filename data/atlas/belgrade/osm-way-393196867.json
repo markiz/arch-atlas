@@ -115,7 +115,9 @@
     "sr": "Контура OpenStreetMap (way/393196867).",
     "uk": "Контур OpenStreetMap (way/393196867)."
   },
-  "photos": [],
+  "photos": [
+    "52b2dae92ff121b09d9d4ceef46e2ee49c9d93d5d4f601e9452e5fbe88dad512"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=96454",
   "otherSource": "https://www.wikidata.org/wiki/Q85995572",
   "descriptions": {

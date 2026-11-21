@@ -72,7 +72,9 @@
     "sr": "Контура OpenStreetMap (way/393228437).",
     "uk": "Контур OpenStreetMap (way/393228437)."
   },
-  "photos": [],
+  "photos": [
+    "07eb65740d148ea621126108469b33755ad783503b8d3bb6643f9721f1c84d8f"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45934",
   "otherSource": "https://www.openstreetmap.org/way/393228437",
   "descriptions": {
