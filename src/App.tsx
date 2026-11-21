@@ -756,9 +756,13 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
           ? [byPath.get(v3.core)!, byPath.get(v3.basemap)!]
           : [byPath.get(legacy!.buildings)!, byPath.get(legacy!.basemap)!];
         const files = new Map<string, ArrayBuffer>();
+        const progressFiles = initialFiles.map((file) => ({
+          file,
+          loaded: 0,
+          wire: 0,
+          headers: false,
+        }));
         let done = 0;
-        const total = initialFiles.reduce((n, file) => n + file.size, 0);
-        let loaded = 0;
         let nextFile = 0;
         let lastReport = -Infinity;
         const report = (force = false) => {
@@ -766,22 +770,39 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
           const now = performance.now();
           if (!force && now - lastReport < 100) return;
           lastReport = now;
-          setProgress(total > 0 ? loaded / total : 0);
+          if (progressFiles.some((item) => !item.headers)) {
+            setProgress(0);
+            setStatus(`Загружаем карту и данные… · ${done}/${initialFiles.length}`);
+            return;
+          }
+          let wireTotal = 0;
+          let wireLoaded = 0;
+          let measured = true;
+          for (const item of progressFiles) {
+            const wire = item.wire || item.file.size;
+            if (!item.wire) measured = false;
+            wireTotal += wire;
+            wireLoaded += item.file.size ? (item.loaded / item.file.size) * wire : 0;
+          }
+          setProgress(wireTotal > 0 ? wireLoaded / wireTotal : 0);
           setStatus(
-            `Загружено ${(loaded / 1048576).toFixed(1)} из ${(total / 1048576).toFixed(1)} МБ · ${done}/${initialFiles.length}`,
+            `Загружено ${(wireLoaded / 1048576).toFixed(1)} из ${(wireTotal / 1048576).toFixed(1)} МБ ${measured ? 'по сети' : 'данных'} · ${done}/${initialFiles.length}`,
           );
         };
         report(true);
         const loadNext = async () => {
           while (nextFile < initialFiles.length) {
-            const file = initialFiles[nextFile++];
+            const item = progressFiles[nextFile++];
+            const file = item.file;
             if (file.path.includes('..') || file.path.startsWith('/'))
               throw new Error('Некорректный путь в пакете');
-            let fileLoaded = 0;
             const response = await get(file.path, file.sha256);
+            const length = Number(response.headers.get('content-length'));
+            item.wire = Number.isFinite(length) && length > 0 ? length : 0;
+            item.headers = true;
+            report(true);
             const bytes = await readResponseBytes(response, file.size, (value) => {
-              loaded += value - fileLoaded;
-              fileLoaded = value;
+              item.loaded = value;
               report();
             });
             const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
