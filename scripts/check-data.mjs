@@ -118,6 +118,50 @@ function assertRoadCoverage(cityId, geo, data) {
   return { count: points.length, farthest };
 }
 
+async function checkSplitCity(cityId, cards, languages) {
+  const directory = `public/atlas/cities/${cityId}/`;
+  const core = JSON.parse(await readFile(`${directory}buildings.core.json`, 'utf8'));
+  assert.equal(core.version, 1, `${cityId}: core version`);
+  assert(Array.isArray(core.buildings), `${cityId}: core buildings`);
+  assert.equal(core.buildings.length, cards.length, `${cityId}: core count`);
+  const coreIds = new Set(core.buildings.map((item) => item.id));
+  assert.equal(coreIds.size, cards.length, `${cityId}: duplicate core ids`);
+  const cardById = new Map(cards.map((item) => [item.id, item]));
+  for (const item of core.buildings) {
+    const card = cardById.get(item.id);
+    assert(card, `${cityId}: unknown core id ${item.id}`);
+    const story = [card.descriptions, card.histories].some(
+      (value) =>
+        value && Object.values(value).some((text) => typeof text === 'string' && text.trim()),
+    );
+    assert.equal(item.hasStory, story, `${item.id}: hasStory does not match the text`);
+    for (const key of ['description', 'history', 'geometryQuality'])
+      assert(!(key in item), `${item.id}: ${key} leaked into core`);
+    for (const photo of item.photos ?? [])
+      assert(!('author' in photo), `${item.id}: photo credit leaked into core`);
+  }
+  for (const language of languages) {
+    const details = JSON.parse(
+      await readFile(`${directory}buildings.details.${language}.json`, 'utf8'),
+    );
+    assert.equal(details.version, 1, `${cityId}/${language}: details version`);
+    assert.equal(details.language, language, `${cityId}/${language}: details language`);
+    assert.equal(details.buildings.length, cards.length, `${cityId}/${language}: details count`);
+    const detailIds = new Set(details.buildings.map((item) => item.id));
+    assert.equal(detailIds.size, cards.length, `${cityId}/${language}: duplicate details ids`);
+    for (const id of coreIds) assert(detailIds.has(id), `${cityId}/${language}: missing ${id}`);
+    for (const item of details.buildings)
+      for (const key of ['description', 'history', 'geometryQuality'])
+        assert.equal(typeof item[key], 'string', `${cityId}/${language}: ${item.id} ${key}`);
+  }
+  const credits = JSON.parse(await readFile(`${directory}photo-credits.json`, 'utf8'));
+  assert.equal(credits.version, 1, `${cityId}: credits version`);
+  const creditIds = new Set(credits.photos.map((item) => item.id));
+  for (const card of cards)
+    for (const photo of card.photos ?? [])
+      assert(creditIds.has(photo.id), `${cityId}: photo ${photo.id} has no credits`);
+}
+
 async function checkCity(cityId) {
   const config = await readCityConfig(cityId);
   const langs = config.languages;
@@ -134,6 +178,7 @@ async function checkCity(cityId) {
         .osmIds ?? [];
   } catch {}
   const ids = new Set();
+  await checkSplitCity(cityId, data, langs);
   assert(data.length > 0 || config.allowEmpty, `${cityId}: empty collection`);
   assert.equal(geo.type, 'FeatureCollection', `${cityId}: basemap type`);
   assert(geo.features.length > 0, `${cityId}: empty basemap`);

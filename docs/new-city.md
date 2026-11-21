@@ -10,7 +10,7 @@
 - `data/cities/<city>.json` описывает подписи, страну, хронологию, камеры, границы и пути к исходникам.
 - `public/atlas/cities.json` — генерируемый публичный каталог. Build-поля (`build`, `osm`) в него не попадают.
 - `ready`-город обязан иметь пакет; `coming-soon` показывается в переключателе, но не загружает данные.
-- `allowEmpty: true` разрешает `ready`-городу иметь ноль карточек. Такой город всё равно имеет подложку, пустой `buildings.json` и валидный пустой `building-outlines.bin`.
+- `allowEmpty: true` разрешает `ready`-городу иметь ноль карточек. Такой город всё равно имеет подложку, пустой core, пустые details/credits и валидный пустой `building-outlines.bin`.
 
 Периоды задаются пресетом из `src/periods.js` (`periods: "georgia"` или `"belgrade"`) либо массивом в конфиге. UI хранит `id` периода, а не его подпись; подпись можно менять без миграции состояния.
 
@@ -18,8 +18,11 @@
 
 ```text
 public/atlas/cities.json
-public/atlas/cities/<city>/manifest.json
-public/atlas/cities/<city>/buildings.json
+public/atlas/cities/<city>/manifest.v3.json
+public/atlas/cities/<city>/manifest.json          # legacy v2 на время миграции
+public/atlas/cities/<city>/buildings.core.json
+public/atlas/cities/<city>/buildings.details.<lang>.json
+public/atlas/cities/<city>/photo-credits.json
 public/atlas/cities/<city>/basemap.geojson
 public/atlas/cities/<city>/building-outlines.bin
 public/atlas/photos/<city>/<sha256>.webp
@@ -27,7 +30,7 @@ public/atlas/thumbnails/<city>/<sha256>.webp
 public/atlas/cards/<city>/<sha256>.webp
 ```
 
-Манифест версии 2 содержит `city`, `revision`, `entry` и список файлов. Пути в нём считаются от `public/atlas/`. Сборка города не трогает пакеты других городов.
+Манифест версии 3 содержит `city`, `revision`, `entry` и список файлов. Пути в нём считаются от `public/atlas/`. Сборка города не трогает пакеты других городов. Устройство v3 и порядок загрузки описаны в [city-bundle.md](city-bundle.md).
 
 ## Сборка
 
