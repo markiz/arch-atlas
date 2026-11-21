@@ -480,7 +480,10 @@ const extras: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
     Неизвестно: 'Unknown period',
     'Загружено ': 'Loaded ',
     ' из ': ' of ',
-    ' МБ · ': ' MB · ',
+    ' МБ ': ' MB ',
+    ' · ': ' · ',
+    'по сети': 'over the network',
+    данных: 'of data',
   },
   ka: {
     'Меню атласа': 'ატლასის მენიუ',
@@ -512,7 +515,10 @@ const extras: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
     Неизвестно: 'უცნობია',
     'Загружено ': 'ჩატვირთულია ',
     ' из ': ' / ',
-    ' МБ · ': ' მბ · ',
+    ' МБ ': ' მბ ',
+    ' · ': ' · ',
+    'по сети': 'ქსელში',
+    данных: 'მონაცემების',
   },
   uk: {
     'Меню атласа': 'Меню атласу',
@@ -544,7 +550,10 @@ const extras: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
     Неизвестно: 'Невідомо',
     'Загружено ': 'Завантажено ',
     ' из ': ' з ',
-    ' МБ · ': ' МБ · ',
+    ' МБ ': ' МБ ',
+    ' · ': ' · ',
+    'по сети': 'по мережі',
+    данных: 'даних',
   },
   sr: {
     'Меню атласа': 'Мени атласа',
@@ -576,7 +585,10 @@ const extras: Record<Exclude<Language, 'ru'>, Record<string, string>> = {
     Неизвестно: 'Непознато',
     'Загружено ': 'Учитано ',
     ' из ': ' од ',
-    ' МБ · ': ' МБ · ',
+    ' МБ ': ' МБ ',
+    ' · ': ' · ',
+    'по сети': 'преко мреже',
+    данных: 'података',
     'Найти…': 'Тражи…',
     'Поиск: ': 'Претрага: ',
     'Снять выбор': 'Поништи избор',
@@ -689,10 +701,12 @@ export function translate(value: string, language: Language): string {
   const direct = messages[language]?.[value] ?? extras[language]?.[value];
   if (direct) return direct;
   if (language === 'sr') return translate(value, 'en');
-  const loading = value.match(/^Загружено (.+) из (.+) МБ · (.+)$/);
+  const waiting = value.match(/^Загружаем карту и данные… · (.+)$/);
+  if (waiting) return `${translate('Загружаем карту и данные…', language)} · ${waiting[1]}`;
+  const loading = value.match(/^Загружено (.+) из (.+) МБ (по сети|данных) · (.+)$/);
   if (loading) {
-    const [_, loaded, total, count] = loading;
-    return `${translate('Загружено ', language)}${loaded}${translate(' из ', language)}${total}${translate(' МБ · ', language)}${count}`;
+    const [_, loaded, total, kind, count] = loading;
+    return `${translate('Загружено ', language)}${loaded}${translate(' из ', language)}${total}${translate(' МБ ', language)}${translate(kind, language)}${translate(' · ', language)}${count}`;
   }
   return value;
 }
