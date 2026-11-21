@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/395156404).",
     "uk": "Контур OpenStreetMap (way/395156404)."
   },
-  "photos": [],
+  "photos": [
+    "8f6ae5892c3ad59e951681c0d6c8a70c024243ead8214196d704b7c9156b70f4"
+  ],
   "source": "https://www.openstreetmap.org/way/395156404",
   "otherSource": "https://www.wikidata.org/wiki/Q116249683",
   "descriptions": {

@@ -152,6 +152,8 @@
     "sr": "Контура OpenStreetMap (way/308015705).",
     "uk": "Контур OpenStreetMap (way/308015705)."
   },
-  "photos": [],
+  "photos": [
+    "78ca3224a055f7e9d45fdc1ed4aea1949e88ac9f8c45085357650a1f97ddeedc"
+  ],
   "source": "https://www.openstreetmap.org/way/308015705"
 }

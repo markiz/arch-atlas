@@ -72,7 +72,9 @@
     "sr": "Контура OpenStreetMap (way/396238263).",
     "uk": "Контур OpenStreetMap (way/396238263)."
   },
-  "photos": [],
+  "photos": [
+    "975ad46a088cca1a2745c47e6c44454f168636fce7ef1a31f40a593f799cc9a0"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44197",
   "otherSource": "https://www.openstreetmap.org/way/396238263",
   "descriptions": {

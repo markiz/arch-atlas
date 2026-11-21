@@ -248,7 +248,9 @@
     "sr": "Контура OpenStreetMap (way/1252398362).",
     "uk": "Контур OpenStreetMap (way/1252398362)."
   },
-  "photos": [],
+  "photos": [
+    "bc043bfb7d7a9725254960a8091e7e2ed409e00157486030d7d5cc33c70ebf4d"
+  ],
   "source": "https://www.openstreetmap.org/way/1252398362",
   "otherSource": "https://www.wikidata.org/wiki/Q7472001"
 }

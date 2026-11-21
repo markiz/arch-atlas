@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/1429729503).",
     "uk": "Контур OpenStreetMap (way/1429729503)."
   },
-  "photos": [],
+  "photos": [
+    "7663f4a737749781da94b986b8b3e03327ce54bbc322851dd6a624ddca9d7be5"
+  ],
   "source": "https://www.openstreetmap.org/way/1429729503",
   "otherSource": "https://www.wikidata.org/wiki/Q12142726",
   "descriptions": {

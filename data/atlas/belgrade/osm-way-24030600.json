@@ -144,7 +144,9 @@
     "sr": "Контура OpenStreetMap (way/24030600).",
     "uk": "Контур OpenStreetMap (way/24030600)."
   },
-  "photos": [],
+  "photos": [
+    "bd5e6c42fb36cd8ceb46f00904764999227ecd966832cb2b76adb3b15dcfbcf9"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=45204",
   "otherSource": "https://www.wikidata.org/wiki/Q2940955",
   "descriptions": {

@@ -76,7 +76,9 @@
     "sr": "Контура OpenStreetMap (way/471565769).",
     "uk": "Контур OpenStreetMap (way/471565769)."
   },
-  "photos": [],
+  "photos": [
+    "0b67419e62c859eabb6f1f764a7a49a9e231b49a1a2f603195bb8ab4ac884045"
+  ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/novi-beograd/",
   "otherSource": "https://www.wikidata.org/wiki/Q65202411",
   "descriptions": {
