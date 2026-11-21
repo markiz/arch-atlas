@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/399386425).",
     "uk": "Контур OpenStreetMap (way/399386425)."
   },
-  "photos": [],
+  "photos": [
+    "bddf9b8c7e052e02f3b94edd32a572932436c05b8da62d038cb1702a4e94a4f3"
+  ],
   "source": "https://www.openstreetmap.org/way/399386425",
   "otherSource": "https://www.wikidata.org/wiki/Q110048527",
   "descriptions": {
