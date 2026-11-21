@@ -12,6 +12,15 @@ import { createPortal } from 'preact/compat';
 import type { FeatureCollection } from 'geojson';
 import type { Building, CitiesCatalog, CityPublic, Data, Filters, Photo } from './types';
 import { filterBuildings, normalize, period, periodsFor, styleEntries } from './domain';
+import {
+  buildingAddress,
+  buildingArchitects,
+  buildingDistrict,
+  buildingName,
+  buildingStyle,
+  buildingText,
+  buildingYearLabel,
+} from './building-text';
 import MapView from './MapView';
 import type { MapViewProps } from './map/types';
 import { isMobileMapLayout } from './map/start-view';
@@ -443,7 +452,7 @@ function PhotoLightbox({
   opener: { current: HTMLButtonElement | null };
 }) {
   const { t, language } = useI18n();
-  const name = building.names?.[language] || building.name;
+  const name = buildingName(building, language);
   const sourceHost = credit ? photoSourceHost(credit.source) : '';
   const creditText = credit ? photoCreditText(credit, t) : '';
   const viewRef = useRef<HTMLDivElement>(null),
@@ -755,7 +764,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
               !photoFiles.has(photo.thumb) ||
               (photo.card && !photoFiles.has(photo.card))
             )
-              throw new Error(`В пакете нет фото ${item.name}`);
+              throw new Error(`В пакете нет фото ${item.names?.ru || item.id}`);
         if (!cancelled) {
           onReady({
             city,
@@ -855,18 +864,16 @@ function Inspector({
   onFilter: (key: 'architect' | 'style', value: string) => void;
 }) {
   const { t, language } = useI18n();
-  const name = building.names?.[language] || building.name;
-  const description = (building.descriptions?.[language] || building.description || '').trim();
-  const history = building.histories?.[language] || (language === 'ru' ? building.history : '');
+  const name = buildingName(building, language);
+  const text = buildingText(building, undefined, language);
+  const description = text.description.trim();
+  const history = text.history;
   const individualStyles = styleEntries(building, language) as { id: string; label: string }[];
-  const constructionLabel = building.yearLabels?.[language] || building.yearLabel;
-  const district = building.districts?.[language] || building.district;
-  const address = building.addresses?.[language] ?? building.address;
-  const geometryQuality =
-    language === 'ru'
-      ? building.geometryQuality
-      : building.geometryQualityTranslations?.[language] || building.geometryQuality;
-  const architects = building.architectsByLanguage?.[language] || building.architects;
+  const constructionLabel = buildingYearLabel(building, language);
+  const district = buildingDistrict(building, language);
+  const address = buildingAddress(building, language);
+  const geometryQuality = text.geometryQuality;
+  const architects = buildingArchitects(building, language);
   const [photoIndex, setPhotoIndex] = useState(0),
     [lightboxOpen, setLightboxOpen] = useState(false);
   // The window keydown listener is subscribed once per building, so it reads
@@ -908,7 +915,7 @@ function Inspector({
     return () => window.removeEventListener('keydown', key);
   }, [building.id]);
   const googleMapsQuery = encodeURIComponent(
-    `${building.nameEn || building.name}, ${building.addresses?.en || ''}, ${city.labels.en}, ${city.country.en}`,
+    `${building.names.en || building.names.ru || building.id}, ${building.addresses?.en || ''}, ${city.labels.en}, ${city.country.en}`,
   );
   const googleMapsUrl = building.googlePlaceId
     ? `https://www.google.com/maps/search/?api=1&query=${googleMapsQuery}&query_place_id=${encodeURIComponent(building.googlePlaceId)}`
@@ -1063,7 +1070,7 @@ function Inspector({
               <span>{district}</span>
             </div>
             <h2>{name}</h2>
-            <p className="georgian">{building.nameKa}</p>
+            <p className="georgian">{building.names.ka}</p>
             <a
               className="address address-link"
               href={googleMapsUrl}
@@ -1257,14 +1264,14 @@ function AppContent({
             value: id,
             label:
               building.architectsByLanguage?.[language]?.[index] ||
-              building.architects[index] ||
+              building.architectIds[index] ||
               id,
             count: 1,
           });
       });
     const options = [...byId.values()].sort((a, b) => a.label.localeCompare(b.label, language));
     const unknownCount = data.buildings.filter(
-      (building) => building.architects.length === 0,
+      (building) => building.architectIds.length === 0,
     ).length;
     if (unknownCount)
       options.push({ value: 'unknown', label: t('Не установлен'), count: unknownCount });
@@ -1282,7 +1289,7 @@ function AppContent({
   }, [data.buildings, language]);
   const selectedBuilding = data.buildings.find((x) => x.id === selected) || null;
   const selectedPhotos = useBuildingPhotos(selectedBuilding, data.photoFiles);
-  const sortName = (building: Building) => building.names?.[language] || building.name;
+  const sortName = (building: Building) => buildingName(building, language);
   const sorted = [...filtered].sort((a, b) =>
     sort === 'name'
       ? sortName(a).localeCompare(sortName(b), language)
@@ -1691,7 +1698,7 @@ function AppContent({
                             <button
                               className="card-image"
                               onClick={() => select(b.id)}
-                              aria-label={t('Подробнее: ') + (b.names?.[language] || b.name)}
+                              aria-label={t('Подробнее: ') + buildingName(b, language)}
                             >
                               <CardPhoto building={b} photoFiles={data.photoFiles} />
                               <span className="card-year">
@@ -1700,18 +1707,18 @@ function AppContent({
                                     background: period(b.minYear, b.maxYear, periods)!.color,
                                   }}
                                 />
-                                {b.yearLabels?.[language] || b.yearLabel}
+                                {buildingYearLabel(b, language)}
                               </span>
                             </button>
                             <div className="card-body">
                               <span className="card-district">
-                                {b.districts?.[language] || b.district}
+                                {buildingDistrict(b, language)}
                                 {!b.styleIds?.includes('undetermined') && (
-                                  <> / {b.styles?.[language] || b.style}</>
+                                  <> / {buildingStyle(b, language)}</>
                                 )}
                               </span>
                               <button className="card-title" onClick={() => select(b.id)}>
-                                {b.names?.[language] || b.name}
+                                {buildingName(b, language)}
                               </button>
                               <p>{b.addresses?.[language] || t('Адрес не установлен')}</p>
                               <button className="text-link" onClick={() => goMap(b.id)}>

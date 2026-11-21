@@ -1729,7 +1729,7 @@ export class AtlasCanvasMap {
     if (this.pointers.size) return;
     const building = this.hitAt(point, pointerType);
     if (building) {
-      const name = building.names?.[this.language] || building.name;
+      const name = building.names[this.language] || building.names.ru || building.id;
       this.showTooltip(name, point.x, point.y - 14);
       this.container.style.cursor = 'pointer';
     } else {

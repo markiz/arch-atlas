@@ -52,7 +52,7 @@ export function styleEntries(building, language = 'ru') {
     Array.isArray(building.styleIds) && building.styleIds.length
       ? building.styleIds
       : ['undetermined'];
-  const labels = (building.styles?.[language] || building.style || ids.join(', ')).split(/,\s*/);
+  const labels = (building.styles?.[language] || ids.join(', ')).split(/,\s*/);
   return ids.map((id, index) => ({ id, label: labels[index] || id }));
 }
 export function searchableText(b) {
@@ -60,18 +60,10 @@ export function searchableText(b) {
   const osmNumber = osmId.match(/(\d+)$/)?.[1];
   const osmType = osmId.split('/')[0];
   return [
-    b.name,
-    b.nameKa,
-    b.nameEn,
-    b.nameUk,
     ...Object.values(b.names || {}),
-    b.address,
     ...Object.values(b.addresses || {}),
-    b.district,
     ...Object.values(b.districts || {}),
-    b.style,
     ...Object.values(b.styles || {}),
-    ...b.architects,
     ...Object.values(b.architectsByLanguage || {}).flat(),
     b.id,
     osmId,
@@ -91,10 +83,9 @@ const anyFilled = (value) =>
  */
 export function isInteresting(building) {
   return (
+    building.hasStory === true ||
     anyFilled(building.descriptions) ||
-    filled(building.description) ||
-    anyFilled(building.histories) ||
-    filled(building.history)
+    anyFilled(building.histories)
   );
 }
 export function isResidential(building) {
@@ -117,7 +108,7 @@ export function filterBuildings(buildings, f) {
       (!dateActive || (b.minYear !== null && b.minYear <= to && b.maxYear >= from)) &&
       (!architects.length ||
         architects.some((id) =>
-          id === 'unknown' ? b.architects.length === 0 : b.architectIds.includes(id),
+          id === 'unknown' ? b.architectIds.length === 0 : b.architectIds.includes(id),
         )) &&
       (!styles.length || styles.some((id) => buildingStyles.includes(id)))
     );

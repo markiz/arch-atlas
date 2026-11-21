@@ -30,12 +30,20 @@ export type BuildingType =
   | 'public'
   | 'mixed'
   | 'unknown';
-export interface Photo {
+/** Photo fields needed by cards and the gallery before credits are fetched. */
+export interface PhotoRef {
   id: string;
   file: string;
   thumb: string;
   /** Smaller catalog-only preview; falls back to `thumb` for old bundles. */
   card?: string;
+  rating: number;
+  /** Documentary tags; `stamp` marks postage-stamp scans. */
+  tags?: string[];
+}
+
+/** Full photo record: a ref plus the attribution loaded from the credits pack. */
+export interface Photo extends PhotoRef {
   author: string;
   license: string;
   licenseUrl: string;
@@ -43,58 +51,20 @@ export interface Photo {
   modifications: string;
   width: number;
   height: number;
-  rating: number;
   descriptions?: Partial<Record<Language, string>>;
   sourceTags?: string[];
   visualTags?: string[];
-  /** Documentary tags; `stamp` marks postage-stamp scans. */
-  tags?: string[];
 }
-export interface Building {
-  id: string;
-  cityId: string;
-  name: string;
-  nameKa?: string;
-  nameEn?: string;
-  nameUk?: string;
-  nameSr?: string;
-  names: Partial<Record<Language, string>>;
-  originalLanguage: string;
-  address: string;
-  addresses: Partial<Record<Language, string>>;
-  district: string;
-  districtId: string;
-  districts: Partial<Record<Language, string>>;
-  type: BuildingType;
-  typeLabels: Partial<Record<Language, string>>;
-  minYear: number | null;
-  maxYear: number | null;
-  yearLabel: string;
-  yearLabelId: string;
-  yearLabels: Partial<Record<Language, string>>;
-  architects: string[];
-  architectIds: string[];
-  architectsByLanguage: Partial<Record<Language, string[]>>;
-  style: string;
-  styleIds: string[];
-  styles: Partial<Record<Language, string>>;
-  description: string;
-  descriptions?: Partial<Record<Language, string>>;
-  history: string;
-  histories?: Partial<Record<Language, string>>;
-  coordinates: [number, number];
-  photo?: Photo;
+export interface Building extends BuildingCore {
   photos?: Photo[];
-  source: string;
-  otherSource?: string;
-  googlePlaceId?: string;
-  googlePlaceIdSource?: string;
-  geometry?: Geometry | null;
-  geometryRole?: GeometryRole;
-  geometryVariants?: GeometryVariant[];
-  geometryQuality: string;
+  /** v2 bundles carried the inspector text inline; v3 keeps it in details packs. */
+  descriptions?: Partial<Record<Language, string>>;
+  histories?: Partial<Record<Language, string>>;
+  geometryQuality?: string;
   geometryQualityTranslations?: Partial<Record<Exclude<Language, 'ru'>, string>>;
-  osmId?: string;
+  /** Legacy single-photo field; v3 always uses `photos`. */
+  photo?: Photo;
+  originalLanguage?: string;
 }
 /** Photo fields needed by cards and the gallery before credits are fetched. */
 export interface PhotoRef {
