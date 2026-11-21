@@ -947,9 +947,11 @@ export class AtlasCanvasMap {
       });
       drawGroup(landmarks, { fill: 'rgba(199,168,120,.34)', stroke: '#947652', width: 1.4 });
     }
-    // Outlines are the most expensive layer and are barely legible at preview
-    // resolution; skip them while a gesture is repainting coarsely.
-    if (this.buildingsVisible && this.outlineBoxes && !this.preview) {
+    // Zoom animations move a bitmap with the CSS transform, and a zoom-out also
+    // pre-renders its preview at the target camera. Outlines missing from a
+    // preview would therefore vanish for the entire motion instead of scaling
+    // and only come back in the final crisp pass.
+    if (this.buildingsVisible && this.outlineBoxes) {
       if (this.outlineBinary)
         this.drawBuildingOutlinesBinary(context, view, scale, offsetX, offsetY);
       else if (this.outlineFeatures.length)
