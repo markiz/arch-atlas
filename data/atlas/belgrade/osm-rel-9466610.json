@@ -200,7 +200,9 @@
     "sr": "Контура OpenStreetMap (relation/9466610).",
     "uk": "Контур OpenStreetMap (relation/9466610)."
   },
-  "photos": [],
+  "photos": [
+    "b8012c92f7be3a171e5bf451facadfc1013e7ae48d541658b5bb1f2dcf3c16cd"
+  ],
   "source": "https://www.openstreetmap.org/relation/9466610",
   "otherSource": "https://www.wikidata.org/wiki/Q1281959"
 }

@@ -164,7 +164,9 @@
     "sr": "Контура OpenStreetMap (way/23926095).",
     "uk": "Контур OpenStreetMap (way/23926095)."
   },
-  "photos": [],
+  "photos": [
+    "2b9edd7437fd903689a50e8d4034aac5034bf57756a661e7365e4b6b39edf629"
+  ],
   "source": "https://nasledje.gov.rs/index.cfm/spomenici/pregled_spomenika?spomenik_id=44203",
   "otherSource": "https://www.openstreetmap.org/way/23926095",
   "descriptions": {

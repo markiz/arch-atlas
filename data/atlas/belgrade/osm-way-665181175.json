@@ -248,7 +248,9 @@
     "sr": "Контура OpenStreetMap (way/665181175).",
     "uk": "Контур OpenStreetMap (way/665181175)."
   },
-  "photos": [],
+  "photos": [
+    "7a85b0571fc40de991f48f535a1d5c336102ddeba8564dde4a3ac1afb38a770e"
+  ],
   "source": "https://www.openstreetmap.org/way/665181175",
   "otherSource": "https://www.wikidata.org/wiki/Q97192472",
   "descriptions": {

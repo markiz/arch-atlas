@@ -172,7 +172,9 @@
     "sr": "Контура OpenStreetMap (way/822843445).",
     "uk": "Контур OpenStreetMap (way/822843445)."
   },
-  "photos": [],
+  "photos": [
+    "8640e2b2c56566a8a60ce36d1933a3ae94ce8f9eaf2cf38992d71b462685467f"
+  ],
   "source": "https://www.openstreetmap.org/way/822843445",
   "otherSource": "https://www.wikidata.org/wiki/Q86000245",
   "descriptions": {

@@ -100,7 +100,9 @@
     "sr": "Контура OpenStreetMap (way/308103240).",
     "uk": "Контур OpenStreetMap (way/308103240)."
   },
-  "photos": [],
+  "photos": [
+    "a0e936d274906aace34f897050961ebe7b98d6d02a2fe850e6ef6b4f6dd202f9"
+  ],
   "source": "https://www.openstreetmap.org/way/308103240",
   "otherSource": "https://www.wikidata.org/wiki/Q189419"
 }

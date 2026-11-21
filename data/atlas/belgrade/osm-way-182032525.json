@@ -230,7 +230,9 @@
     "sr": "Контура OpenStreetMap (way/182032525).",
     "uk": "Контур OpenStreetMap (way/182032525)."
   },
-  "photos": [],
+  "photos": [
+    "f49806bf8c78de21b210f6ce8897407eaebcc991e49e1632b468777e0e6b9d26"
+  ],
   "source": "https://www.openstreetmap.org/way/182032525",
   "otherSource": "https://www.wikidata.org/wiki/Q20438257"
 }

@@ -256,6 +256,8 @@
     "sr": "Контура OpenStreetMap (relation/2748745).",
     "uk": "Контур OpenStreetMap (relation/2748745)."
   },
-  "photos": [],
+  "photos": [
+    "b38e66b4ae0d39951b75d577700a61deeb42d9759d33897ad3dd407668bd88d6"
+  ],
   "source": "https://www.openstreetmap.org/relation/2748745"
 }

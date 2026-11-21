@@ -100,7 +100,9 @@
     "sr": "Контура OpenStreetMap (way/404647860).",
     "uk": "Контур OpenStreetMap (way/404647860)."
   },
-  "photos": [],
+  "photos": [
+    "97ac0173e9e22501f4c00216948715b7ebeb0ba4b098b3ecfe78f55ecf08e306"
+  ],
   "source": "https://beogradskonasledje.rs/skpz-po-opstinama/cukarica/",
   "otherSource": "https://www.wikidata.org/wiki/Q16082940",
   "descriptions": {

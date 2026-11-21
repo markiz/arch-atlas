@@ -60,7 +60,9 @@
     "sr": "Контура OpenStreetMap (way/397836507).",
     "uk": "Контур OpenStreetMap (way/397836507)."
   },
-  "photos": [],
+  "photos": [
+    "1274104cb03f3319454c8fa5a3de7965d6993e9eb0724336918bef55614e13dc"
+  ],
   "source": "https://www.openstreetmap.org/way/397836507",
   "otherSource": "https://www.wikidata.org/wiki/Q124301701",
   "descriptions": {

@@ -124,7 +124,9 @@
     "sr": "Контура OpenStreetMap (way/392310135).",
     "uk": "Контур OpenStreetMap (way/392310135)."
   },
-  "photos": [],
+  "photos": [
+    "598e809c8c99739c147c5be0323ce9839daea542dcbc21fb5b1468a9426e02d1"
+  ],
   "source": "https://www.openstreetmap.org/way/392310135",
   "otherSource": "https://www.wikidata.org/wiki/Q86000239"
 }
