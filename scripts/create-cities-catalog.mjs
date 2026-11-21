@@ -17,14 +17,20 @@ export async function createCitiesCatalog({ root = ROOT } = {}) {
     let counts = { buildings: 0 };
     let manifestRevision;
     try {
-      const buildings = JSON.parse(await readFile(path.join(base, 'buildings.json'), 'utf8'));
-      counts = { buildings: Array.isArray(buildings) ? buildings.length : 0 };
-    } catch {}
-    try {
-      manifestRevision = JSON.parse(
-        await readFile(path.join(base, 'manifest.json'), 'utf8'),
-      ).revision;
-    } catch {}
+      const bundle = JSON.parse(await readFile(path.join(base, 'buildings.core.json'), 'utf8'));
+      counts = { buildings: Array.isArray(bundle?.buildings) ? bundle.buildings.length : 0 };
+    } catch {
+      try {
+        const buildings = JSON.parse(await readFile(path.join(base, 'buildings.json'), 'utf8'));
+        counts = { buildings: Array.isArray(buildings) ? buildings.length : 0 };
+      } catch {}
+    }
+    for (const name of ['manifest.v3.json', 'manifest.json']) {
+      try {
+        manifestRevision = JSON.parse(await readFile(path.join(base, name), 'utf8')).revision;
+        break;
+      } catch {}
+    }
     entries.push({ city, counts, manifestRevision });
   }
   return writeCitiesCatalog({

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtemp, mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { assembleAtlas, hydrateCard } from '../scripts/assemble-atlas.mjs';
+import { assembleAtlas, hydrateCard, splitAtlas } from '../scripts/assemble-atlas.mjs';
 
 const labels = (ru, en, ka, uk) => ({ ru, en, ka, uk });
 
@@ -493,4 +493,108 @@ test('hydrates a Serbian city from its city language set', () => {
   });
   assert.equal(out.districts.sr, 'Центар');
   assert.equal(out.typeLabels.sr, 'Јавни');
+});
+
+test('splitAtlas keeps long text and photo credits out of the core', () => {
+  const item = {
+    id: 'split-1',
+    cityId: 'tbilisi',
+    names: labels('Дом', 'House', 'სახლი', 'Будинок'),
+    addresses: labels('улица 1', '1 Street', 'ქუჩა 1', 'вулиця 1'),
+    districtId: 'sololaki',
+    districts: labels('Сололаки', 'Sololaki', 'სოლოლაკი', 'Сололакі'),
+    type: 'residential',
+    typeLabels: labels('Жилой', 'Residential', 'საცხოვრებელი', 'Житловий'),
+    minYear: 1905,
+    maxYear: 1905,
+    yearLabelId: 'year-1905',
+    yearLabels: labels('1905 год', '1905', '1905', '1905'),
+    architectIds: [],
+    architectsByLanguage: { ru: [], en: [], ka: [], uk: [] },
+    styleIds: ['art-nouveau'],
+    styles: labels('Модерн', 'Art Nouveau', 'არტ ნუვო', 'Модерн'),
+    coordinates: [44.8, 41.7],
+    geometry: {
+      type: 'Polygon',
+      coordinates: [
+        [
+          [44.8, 41.7],
+          [44.81, 41.7],
+          [44.81, 41.71],
+          [44.8, 41.7],
+        ],
+      ],
+    },
+    photos: [
+      {
+        id: 'photo-1',
+        file: 'photos/tbilisi/photo-1.webp',
+        thumb: 'thumbnails/tbilisi/photo-1.webp',
+        card: 'cards/tbilisi/photo-1.webp',
+        author: 'Author',
+        license: 'CC0',
+        licenseUrl: 'https://example.com/license',
+        source: 'https://example.com/photo',
+        modifications: 'resized',
+        width: 1200,
+        height: 800,
+        rating: 70,
+        tags: ['stamp'],
+      },
+    ],
+    source: 'https://example.com/card',
+    descriptions: labels('Описание', 'Description', 'აღწერა', 'Опис'),
+    histories: labels('История', '', '', ''),
+    geometryQuality: 'тестовый контур',
+  };
+  const split = splitAtlas([item], ['ru', 'en', 'uk', 'ka']);
+  const core = split.core[0];
+  assert.equal(core.hasStory, true);
+  assert.equal('description' in core, false);
+  assert.equal('history' in core, false);
+  assert.equal('geometryQuality' in core, false);
+  assert.equal('descriptions' in core, false);
+  assert.deepEqual(core.photos, [
+    {
+      id: 'photo-1',
+      file: 'photos/tbilisi/photo-1.webp',
+      thumb: 'thumbnails/tbilisi/photo-1.webp',
+      card: 'cards/tbilisi/photo-1.webp',
+      rating: 70,
+      tags: ['stamp'],
+    },
+  ]);
+  assert.equal(split.details.ru[0].description, 'Описание');
+  assert.equal(split.details.en[0].description, 'Description');
+  assert.equal(split.details.en[0].history, '');
+  assert.equal(split.details.ka[0].description, 'აღწერა');
+  assert.equal(split.credits.length, 1);
+  assert.equal(split.credits[0].author, 'Author');
+  assert.equal('author' in core.photos[0], false);
+});
+
+test('assembleAtlas writes core, language details and credits next to the bundle', async () => {
+  const root = await fixture();
+  try {
+    await writeCard(root, 'osm-1.json', card('osm-1'));
+    const outFile = path.join(root, 'public', 'atlas', 'buildings.json');
+    const output = await assembleAtlas({ root, outFile, quiet: true });
+    assert.ok(output.splitFiles);
+    for (const file of [
+      output.splitFiles.core,
+      output.splitFiles.credits,
+      ...Object.values(output.splitFiles.details),
+    ])
+      assert.ok((await readFile(file, 'utf8')).length > 0);
+    const core = JSON.parse(await readFile(output.splitFiles.core, 'utf8'));
+    assert.equal(core.version, 1);
+    assert.equal(core.buildings.length, 1);
+    const details = JSON.parse(await readFile(output.splitFiles.details.ru, 'utf8'));
+    assert.equal(details.language, 'ru');
+    assert.equal(details.buildings[0].description, 'Описание');
+    const credits = JSON.parse(await readFile(output.splitFiles.credits, 'utf8'));
+    assert.deepEqual(credits.photos, []);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
 });

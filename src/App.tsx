@@ -763,6 +763,7 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
             basemap,
             buildingOutlines: outlines,
             photoFiles,
+            detailsFiles: {},
           });
         }
       } catch (e) {

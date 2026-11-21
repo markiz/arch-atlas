@@ -96,6 +96,90 @@ export interface Building {
   geometryQualityTranslations?: Partial<Record<Exclude<Language, 'ru'>, string>>;
   osmId?: string;
 }
+/** Photo fields needed by cards and the gallery before credits are fetched. */
+export interface PhotoRef {
+  id: string;
+  file: string;
+  thumb: string;
+  card?: string;
+  rating: number;
+  tags?: string[];
+}
+
+/** Language-independent photo attribution, fetched separately from the map. */
+export interface PhotoCredit {
+  id: string;
+  author: string;
+  license: string;
+  licenseUrl: string;
+  source: string;
+  modifications: string;
+  width: number;
+  height: number;
+  descriptions?: Partial<Record<Language, string>>;
+}
+
+/**
+ * The map + catalog half of a card. Long text, technical notes and photo
+ * credits live in separate language packs so they never block the first paint.
+ */
+export interface BuildingCore {
+  id: string;
+  cityId: string;
+  names: Partial<Record<Language, string>>;
+  addresses: Partial<Record<Language, string>>;
+  districtId: string;
+  districts: Partial<Record<Language, string>>;
+  type: BuildingType;
+  typeLabels: Partial<Record<Language, string>>;
+  minYear: number | null;
+  maxYear: number | null;
+  yearLabelId: string;
+  yearLabels: Partial<Record<Language, string>>;
+  architectIds: string[];
+  architectsByLanguage: Partial<Record<Language, string[]>>;
+  styleIds: string[];
+  styles: Partial<Record<Language, string>>;
+  coordinates: [number, number];
+  photos?: PhotoRef[];
+  source: string;
+  otherSource?: string;
+  googlePlaceId?: string;
+  googlePlaceIdSource?: string;
+  geometry?: Geometry | null;
+  geometryRole?: GeometryRole;
+  geometryVariants?: GeometryVariant[];
+  osmId?: string;
+  /** True when at least one language has a description or a history. */
+  hasStory: boolean;
+}
+
+/** Inspector text for one language. */
+export interface BuildingDetails {
+  id: string;
+  description: string;
+  history: string;
+  geometryQuality: string;
+}
+
+export interface AtlasCoreBundle {
+  version: 1;
+  buildings: BuildingCore[];
+}
+
+export interface AtlasDetailsBundle {
+  version: 1;
+  city: string;
+  language: Language;
+  buildings: BuildingDetails[];
+}
+
+export interface AtlasCreditsBundle {
+  version: 1;
+  city: string;
+  photos: PhotoCredit[];
+}
+
 export interface ManifestFile {
   path: string;
   size: number;
@@ -149,12 +233,29 @@ export interface CityManifest {
   entry: ManifestEntry;
   files: ManifestFile[];
 }
+/** Split city package introduced in manifest version 3. */
+export interface ManifestEntryV3 {
+  core: string;
+  details: Partial<Record<Language, string>>;
+  basemap: string;
+  outlines: string;
+  credits: string;
+}
+export interface CityManifestV3 {
+  version: 3;
+  city: string;
+  revision: string;
+  entry: ManifestEntryV3;
+  files: ManifestFile[];
+}
 export interface Data {
   city: CityPublic;
   buildings: Building[];
   basemap: GeoJsonObject;
   buildingOutlines: ManifestFile;
   photoFiles: Map<string, ManifestFile>;
+  detailsFiles: Partial<Record<Language, ManifestFile>>;
+  creditsFile?: ManifestFile;
 }
 export interface Filters {
   query: string;

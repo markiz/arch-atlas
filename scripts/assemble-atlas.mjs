@@ -405,8 +405,121 @@ export function hydrateCard(
 }
 
 /**
+ * Split hydrated cards into the map/catalog core, per-language inspector text
+ * and language-independent photo credits. `hasStory` must be computed from all
+ * languages: the catalog filter runs before details are fetched.
+ */
+export function splitAtlas(cards, languages = LANGS) {
+  const credits = new Map();
+  const core = cards.map((card) => {
+    const item = {
+      id: card.id,
+      cityId: card.cityId,
+      names: card.names,
+      addresses: card.addresses,
+      districtId: card.districtId,
+      districts: card.districts,
+      type: card.type,
+      typeLabels: card.typeLabels,
+      minYear: card.minYear,
+      maxYear: card.maxYear,
+      yearLabelId: card.yearLabelId,
+      yearLabels: card.yearLabels,
+      architectIds: card.architectIds,
+      architectsByLanguage: card.architectsByLanguage,
+      styleIds: card.styleIds,
+      styles: card.styles,
+      coordinates: card.coordinates,
+      photos: (card.photos ?? []).map((photo) => ({
+        id: photo.id,
+        file: photo.file,
+        thumb: photo.thumb,
+        ...(photo.card ? { card: photo.card } : {}),
+        rating: photo.rating ?? 0,
+        ...(photo.tags?.length ? { tags: photo.tags } : {}),
+      })),
+      hasStory: hasText(card.descriptions) || hasText(card.histories),
+      source: card.source,
+    };
+    if (card.otherSource !== undefined) item.otherSource = card.otherSource;
+    if (card.googlePlaceId !== undefined) item.googlePlaceId = card.googlePlaceId;
+    if (card.googlePlaceIdSource !== undefined)
+      item.googlePlaceIdSource = card.googlePlaceIdSource;
+    if (card.geometry !== undefined) item.geometry = card.geometry;
+    if (card.geometryRole !== undefined) item.geometryRole = card.geometryRole;
+    if (card.geometryVariants !== undefined) item.geometryVariants = card.geometryVariants;
+    if (card.osmId !== undefined) item.osmId = card.osmId;
+    for (const photo of card.photos ?? []) {
+      if (credits.has(photo.id)) continue;
+      credits.set(photo.id, {
+        id: photo.id,
+        author: photo.author,
+        license: photo.license,
+        licenseUrl: photo.licenseUrl,
+        source: photo.source,
+        modifications: photo.modifications,
+        width: photo.width,
+        height: photo.height,
+        ...(photo.descriptions ? { descriptions: photo.descriptions } : {}),
+      });
+    }
+    return item;
+  });
+  const details = Object.fromEntries(
+    languages.map((language) => [
+      language,
+      cards.map((card) => ({
+        id: card.id,
+        description: card.descriptions?.[language] || card.descriptions?.ru || '',
+        history: card.histories?.[language] || '',
+        geometryQuality:
+          language === 'ru'
+            ? card.geometryQuality
+            : card.geometryQualityTranslations?.[language] || card.geometryQuality,
+      })),
+    ]),
+  );
+  return { core, details, credits: [...credits.values()] };
+}
+
+function hasText(labels) {
+  return !!labels && Object.values(labels).some((value) => typeof value === 'string' && value.trim());
+}
+
+async function writeSplitFiles(destination, split, city, languages) {
+  const directory = path.dirname(destination);
+  const coreFile = path.join(directory, 'buildings.core.json');
+  const creditFile = path.join(directory, 'photo-credits.json');
+  const detailFiles = Object.fromEntries(
+    languages.map((language) => [
+      language,
+      path.join(directory, `buildings.details.${language}.json`),
+    ]),
+  );
+  await writeFileAtomic(
+    coreFile,
+    `${JSON.stringify({ version: 1, buildings: split.core })}\n`,
+  );
+  for (const language of languages)
+    await writeFileAtomic(
+      detailFiles[language],
+      `${JSON.stringify({
+        version: 1,
+        city,
+        language,
+        buildings: split.details[language],
+      })}\n`,
+    );
+  await writeFileAtomic(
+    creditFile,
+    `${JSON.stringify({ version: 1, city, photos: split.credits })}\n`,
+  );
+  return { core: coreFile, details: detailFiles, credits: creditFile };
+}
+
+/**
  * Read data/atlas/<city>/*.json and write the packed city bundle.
- * @param {{city?:string,root?:string,outFile?:string,quiet?:boolean}} options
+ * @param {{city?:string,root?:string,outFile?:string,quiet?:boolean,split?:boolean,legacy?:boolean}} options
  */
 export async function assembleAtlas({
   city = DEFAULT_CITY,
@@ -416,6 +529,8 @@ export async function assembleAtlas({
   allowEmpty = false,
   bounds = null,
   languages = LANGS,
+  split = true,
+  legacy = true,
 } = {}) {
   if (!/^[a-z0-9-]+$/.test(city)) throw new Error(`invalid city "${city}"`);
   const destination = outFile ?? path.join(cityBuildDir(root, city), 'buildings.json');
@@ -457,8 +572,18 @@ export async function assembleAtlas({
   progress.finish();
 
   await mkdir(path.dirname(destination), { recursive: true });
-  await writeFileAtomic(destination, `${JSON.stringify(cards)}\n`);
-  return { cards, city, outFile: destination };
+  if (legacy) await writeFileAtomic(destination, `${JSON.stringify(cards)}\n`);
+  const splitData = splitAtlas(cards, languages);
+  const splitFiles = split ? await writeSplitFiles(destination, splitData, city, languages) : null;
+  return {
+    cards,
+    core: splitData.core,
+    details: splitData.details,
+    credits: splitData.credits,
+    city,
+    outFile: destination,
+    splitFiles,
+  };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
