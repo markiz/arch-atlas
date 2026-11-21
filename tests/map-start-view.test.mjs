@@ -12,6 +12,7 @@ import {
 } from '../src/map/start-view.ts';
 
 const atlasDir = fileURLToPath(new URL('../data/atlas/tbilisi/', import.meta.url));
+const belgradeDir = fileURLToPath(new URL('../data/atlas/belgrade/', import.meta.url));
 const WORLD_SIZE = 256;
 const DEG_TO_RAD = Math.PI / 180;
 const EARTH_RADIUS = 6378137;
@@ -22,19 +23,27 @@ function metersPerPixel(lat, zoom) {
   return (Math.cos(lat * DEG_TO_RAD) * 2 * Math.PI * EARTH_RADIUS) / (WORLD_SIZE * 2 ** zoom);
 }
 
-/** Share of atlas objects inside the viewport of a 1440×900 desktop window. */
-function visibleShare({ center, zoom }, width = 1340, height = 710) {
+function atlasPoints(dir) {
+  return fs
+    .readdirSync(dir)
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => JSON.parse(fs.readFileSync(dir + file, 'utf8')).coordinates)
+    .filter((point) => Array.isArray(point) && point.length === 2);
+}
+
+/** Atlas objects inside the given viewport, using the same scale as src/map/geometry.ts. */
+function visibleCount(points, { center, zoom }, width, height) {
   const meters = metersPerPixel(center.lat, zoom);
   const halfLat = (height * meters) / 2 / METERS_PER_DEGREE;
   const halfLng = (width * meters) / 2 / (METERS_PER_DEGREE * Math.cos(center.lat * DEG_TO_RAD));
-  const coordinates = fs
-    .readdirSync(atlasDir)
-    .map((file) => JSON.parse(fs.readFileSync(atlasDir + file, 'utf8')).coordinates)
-    .filter((point) => Array.isArray(point) && point.length === 2);
-  const visible = coordinates.filter(
+  return points.filter(
     ([lng, lat]) => Math.abs(lng - center.lng) <= halfLng && Math.abs(lat - center.lat) <= halfLat,
-  );
-  return visible.length / coordinates.length;
+  ).length;
+}
+
+/** Share of atlas objects inside the viewport of a 1440×900 desktop window. */
+function visibleShare(points, view, width = 1340, height = 710) {
+  return visibleCount(points, view, width, height) / points.length;
 }
 
 test('mobile start view points at central Rustaveli', () => {
@@ -45,7 +54,7 @@ test('mobile start view points at central Rustaveli', () => {
 });
 
 test('desktop start view keeps about half of the atlas on screen', () => {
-  const share = visibleShare(desktopStartView());
+  const share = visibleShare(atlasPoints(atlasDir), desktopStartView());
   assert.ok(share >= 0.45 && share <= 0.55, `expected ~50% of objects, got ${share}`);
 });
 
@@ -71,6 +80,16 @@ test('city configs override the default Tbilisi launch cameras', async () => {
   const desktop = desktopStartView(belgrade);
   assert.deepEqual(desktop.center, belgrade.map.start.desktop.center);
   assert.equal(desktop.zoom, belgrade.map.start.desktop.zoom);
+});
+
+test('Belgrade opens on its historic core with plenty of objects', async () => {
+  const { byId } = await readCityConfigs();
+  const belgrade = byId.get('belgrade');
+  const points = atlasPoints(belgradeDir);
+  const desktop = visibleShare(points, desktopStartView(belgrade));
+  assert.ok(desktop >= 0.35 && desktop <= 0.5, `expected 35–50% of objects, got ${desktop}`);
+  const phone = visibleCount(points, mobileStartView(belgrade), 360, 724);
+  assert.ok(phone >= 200, `expected a full phone screen of objects, got ${phone}`);
 });
 
 test('mobile start view is off outside the browser', () => {
