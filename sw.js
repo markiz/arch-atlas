@@ -1,5 +1,5 @@
 // Generated into dist/sw.js by vite.config.ts. Do not edit dist/sw.js.
-const CACHE_VERSION = 'c3590b6ec7d3';
+const CACHE_VERSION = 'a9ab9c55262f';
 const CACHE_NAME = `atlas-${CACHE_VERSION}`;
 const INDEX_URL = new URL('./index.html', self.location).href;
 const PHOTO_PATTERN = /\/atlas\/(?:photos|thumbnails|cards)\//;
