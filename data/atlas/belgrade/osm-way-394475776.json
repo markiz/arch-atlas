@@ -1,0 +1,103 @@
+{
+  "id": "osm-way-394475776",
+  "osmId": "way/394475776",
+  "names": {
+    "ru": "Институт охраны здоровья студентов",
+    "en": "Institute for Student Health Care",
+    "uk": "Інститут охорони здоров'я студентів",
+    "sr": "Завод за здравствену заштиту студената"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Улица Крунска, 57, Врачар, Белград",
+    "en": "Krunska 57, Vračar, Belgrade",
+    "uk": "Вулиця Крунска, 57, Врачар, Белград",
+    "sr": "Крунска 57, Врачар, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "healthcare",
+  "coordinates": [
+    20.4712965,
+    44.80475
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4710946,
+          44.8047756
+        ],
+        [
+          20.4713211,
+          44.8046162
+        ],
+        [
+          20.4714166,
+          44.8046933
+        ],
+        [
+          20.4714086,
+          44.8047009
+        ],
+        [
+          20.471512,
+          44.804781
+        ],
+        [
+          20.4714702,
+          44.8048094
+        ],
+        [
+          20.4714666,
+          44.8048221
+        ],
+        [
+          20.4713965,
+          44.8048208
+        ],
+        [
+          20.4713965,
+          44.8048066
+        ],
+        [
+          20.471328,
+          44.8047436
+        ],
+        [
+          20.4712476,
+          44.8048027
+        ],
+        [
+          20.4712999,
+          44.8048427
+        ],
+        [
+          20.4712397,
+          44.8048809
+        ],
+        [
+          20.4710946,
+          44.8047756
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/394475776).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/394475776).",
+    "sr": "Контура OpenStreetMap (way/394475776).",
+    "uk": "Контур OpenStreetMap (way/394475776)."
+  },
+  "photos": [
+    "aa5f98121b5986dabb4690215b85f4b010f5a222d1c92b17ac53942d7805893a"
+  ],
+  "source": "https://www.openstreetmap.org/way/394475776"
+}

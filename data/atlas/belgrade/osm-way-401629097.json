@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-401629097",
+  "osmId": "way/401629097",
+  "names": {
+    "ru": "Начальная школа имени Народного героя Душана Дугалича",
+    "en": "Primary School “NH Dušan Dugalić”",
+    "uk": "Початкова школа імені Народного героя Душана Дугалича",
+    "sr": "Основна школа „Н.Х. Душан Дугалић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Джердапска, 19, Белград",
+    "en": "19 Đerdapska Street, Belgrade",
+    "uk": "вулиця Джердапська, 19, Белград",
+    "sr": "Ђердапска 19, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "educational",
+  "coordinates": [
+    20.4859577,
+    44.7927147
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4856224,
+          44.7930028
+        ],
+        [
+          20.485493,
+          44.7925716
+        ],
+        [
+          20.4862804,
+          44.7924291
+        ],
+        [
+          20.4864367,
+          44.7928494
+        ],
+        [
+          20.4856224,
+          44.7930028
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/401629097).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/401629097).",
+    "sr": "Контура OpenStreetMap (way/401629097).",
+    "uk": "Контур OpenStreetMap (way/401629097)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/401629097",
+  "otherSource": "https://www.wikidata.org/wiki/Q97201216"
+}

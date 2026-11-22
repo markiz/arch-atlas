@@ -1,0 +1,65 @@
+{
+  "id": "osm-way-1245889919",
+  "osmId": "way/1245889919",
+  "names": {
+    "ru": "Пожарная станция «Београд на води»",
+    "en": "Belgrade Waterfront Fire Station",
+    "uk": "Пожежна станція «Београд на води»",
+    "sr": "Ватрогасна станица „Београд на води”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Идеја, 3, Савски-Венац, Белград",
+    "en": "Ideja 3, Savski Venac, Belgrade",
+    "uk": "вулиця Ідея, 3, Савски-Венац, Белград",
+    "sr": "Улица Идеја 3, Савски венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "government",
+  "coordinates": [
+    20.4465184,
+    44.7991891
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.446502,
+          44.7993149
+        ],
+        [
+          20.4466859,
+          44.799231
+        ],
+        [
+          20.4465353,
+          44.7990631
+        ],
+        [
+          20.4463505,
+          44.7991478
+        ],
+        [
+          20.446502,
+          44.7993149
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1245889919).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1245889919).",
+    "sr": "Контура OpenStreetMap (way/1245889919).",
+    "uk": "Контур OpenStreetMap (way/1245889919)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/1245889919"
+}

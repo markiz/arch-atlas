@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-412982277",
+  "osmId": "way/412982277",
+  "names": {
+    "ru": "Основная школа «Сава Йованович Сирогойно»",
+    "en": "\"Sava Jovanović Sirogojno\" Elementary School",
+    "uk": "Основна школа «Сава Йованович Сирогойно»",
+    "sr": "Основна школа Сава Јовановић Сирогојно"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Призренска, 37, Земун, Белград",
+    "en": "Prizrenska 37, Zemun, Belgrade",
+    "uk": "вулиця Призренська, 37, Земун, Белград",
+    "sr": "Призренска 37, Земун, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "educational",
+  "coordinates": [
+    20.3840374,
+    44.8532588
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3835835,
+          44.8532702
+        ],
+        [
+          20.3835499,
+          44.8530421
+        ],
+        [
+          20.3843727,
+          44.8529832
+        ],
+        [
+          20.3844358,
+          44.8535204
+        ],
+        [
+          20.3837852,
+          44.8535527
+        ],
+        [
+          20.3837564,
+          44.8532617
+        ],
+        [
+          20.3835835,
+          44.8532702
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/412982277).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/412982277).",
+    "sr": "Контура OpenStreetMap (way/412982277).",
+    "uk": "Контур OpenStreetMap (way/412982277)."
+  },
+  "photos": [
+    "65158f36de4f3f7342abeb9c4cc40d158185bc83c7d683237f5db41535a3e989"
+  ],
+  "source": "https://www.openstreetmap.org/way/412982277",
+  "otherSource": "https://www.wikidata.org/wiki/Q110048287"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-377744850",
+  "osmId": "way/377744850",
+  "names": {
+    "ru": "Двенадцатая белградская гимназия",
+    "en": "Twelfth Belgrade Gymnasium",
+    "uk": "Дванадцята белградська гімназія",
+    "sr": "Дванаеста београдска гимназија"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Воеводы Степы, 82, Вождовац, Белград",
+    "en": "Vojvode Stepe 82, Voždovac, Belgrade",
+    "uk": "вулиця Воєводи Степи, 82, Вождовац, Белград",
+    "sr": "Улица Војводе Степе 82, Вождовац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "educational",
+  "coordinates": [
+    20.4716721,
+    44.780539
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4708005,
+          44.7809333
+        ],
+        [
+          20.471962,
+          44.7811454
+        ],
+        [
+          20.4720005,
+          44.7810849
+        ],
+        [
+          20.4725379,
+          44.7802851
+        ],
+        [
+          20.4719962,
+          44.7801219
+        ],
+        [
+          20.4720565,
+          44.7800121
+        ],
+        [
+          20.4714801,
+          44.7798435
+        ],
+        [
+          20.4708005,
+          44.7809333
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/377744850).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/377744850).",
+    "sr": "Контура OpenStreetMap (way/377744850).",
+    "uk": "Контур OpenStreetMap (way/377744850)."
+  },
+  "photos": [
+    "2a252d99e04d15a90257313d6335058c660302494a8faca877f6149764cf2f62"
+  ],
+  "source": "https://www.openstreetmap.org/way/377744850",
+  "otherSource": "https://www.wikidata.org/wiki/Q3038255"
+}

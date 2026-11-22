@@ -1,0 +1,90 @@
+{
+  "id": "osm-way-392169933",
+  "osmId": "way/392169933",
+  "names": {
+    "ru": "Дом здоровья «Раковица»",
+    "en": "Rakovica Health Centre",
+    "uk": "Дім здоров'я «Раковица»",
+    "sr": "Дом здравља Раковица"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Улица Краљице Јелене, 22, Раковица, Белград",
+    "en": "Kraljice Jelene 22, Rakovica, Belgrade",
+    "uk": "Вулиця Краљице Јелене, 22, Раковица, Белград",
+    "sr": "Краљице Јелене 22, Раковица, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "rakovica",
+  "type": "healthcare",
+  "coordinates": [
+    20.4413467,
+    44.7453805
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4414652,
+          44.7455712
+        ],
+        [
+          20.4413047,
+          44.7454022
+        ],
+        [
+          20.4412779,
+          44.745374
+        ],
+        [
+          20.4412386,
+          44.7453928
+        ],
+        [
+          20.4410946,
+          44.7452412
+        ],
+        [
+          20.4411999,
+          44.7451908
+        ],
+        [
+          20.4413202,
+          44.7453174
+        ],
+        [
+          20.4413745,
+          44.7452914
+        ],
+        [
+          20.4415856,
+          44.7455135
+        ],
+        [
+          20.4415236,
+          44.7455432
+        ],
+        [
+          20.4414652,
+          44.7455712
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392169933).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392169933).",
+    "sr": "Контура OpenStreetMap (way/392169933).",
+    "uk": "Контур OpenStreetMap (way/392169933)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/392169933",
+  "otherSource": "https://www.wikidata.org/wiki/Q110048198"
+}

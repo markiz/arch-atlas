@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-392765115",
+  "osmId": "way/392765115",
+  "names": {
+    "ru": "Школа для детей с нарушениями слуха «Стефан Дечанский»",
+    "en": "Stefan Dečanski School for the Deaf and Hard of Hearing",
+    "uk": "Школа для дітей з порушеннями слуху «Стефан Дечанський»",
+    "sr": "Школа за оштећене слухом-наглуве „Стефан Дечански”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Светозара Марковича, 85, Савски-Венац, Белград",
+    "en": "85 Svetozara Markovića Street, Savski Venac, Belgrade",
+    "uk": "вулиця Светозара Марковича, 85, Савски-Венац, Белград",
+    "sr": "Светозара Марковића 85, Савски венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.461289,
+    44.8010758
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4612544,
+          44.80126
+        ],
+        [
+          20.4613322,
+          44.8013259
+        ],
+        [
+          20.4616189,
+          44.8011555
+        ],
+        [
+          20.4612374,
+          44.8008323
+        ],
+        [
+          20.4609451,
+          44.801006
+        ],
+        [
+          20.4610281,
+          44.8010734
+        ],
+        [
+          20.4610478,
+          44.801058
+        ],
+        [
+          20.4612731,
+          44.8012489
+        ],
+        [
+          20.4612544,
+          44.80126
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392765115).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392765115).",
+    "sr": "Контура OpenStreetMap (way/392765115).",
+    "uk": "Контур OpenStreetMap (way/392765115)."
+  },
+  "photos": [
+    "7057304a3ef1bb2c6dc13919331d735a318431b297e207cff488ffa85c056114"
+  ],
+  "source": "https://www.openstreetmap.org/way/392765115",
+  "otherSource": "https://www.wikidata.org/wiki/Q110049237"
+}

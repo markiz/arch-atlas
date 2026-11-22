@@ -1,0 +1,90 @@
+{
+  "id": "osm-way-466972605",
+  "osmId": "way/466972605",
+  "names": {
+    "ru": "Дом гвардии в Топчидере",
+    "en": "Guard House in Topčider",
+    "uk": "Дім гвардії у Топчидері",
+    "sr": "Дом гарде у Топчидеру"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Топчидер, Савски-Венац, Белград",
+    "en": "Topčider, Savski Venac, Belgrade",
+    "uk": "Топчидер, Савски-Венац, Белград",
+    "sr": "Топчидер, Савски венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "military",
+  "coordinates": [
+    20.4423304,
+    44.7757942
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4425422,
+          44.7759331
+        ],
+        [
+          20.4426372,
+          44.775676
+        ],
+        [
+          20.4426129,
+          44.7756195
+        ],
+        [
+          20.4425754,
+          44.7756023
+        ],
+        [
+          20.4424936,
+          44.7755897
+        ],
+        [
+          20.4424362,
+          44.7755976
+        ],
+        [
+          20.4419679,
+          44.7757403
+        ],
+        [
+          20.4420629,
+          44.7759112
+        ],
+        [
+          20.4421269,
+          44.7758971
+        ],
+        [
+          20.4421888,
+          44.776021
+        ],
+        [
+          20.4425422,
+          44.7759331
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/466972605).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/466972605).",
+    "sr": "Контура OpenStreetMap (way/466972605).",
+    "uk": "Контур OpenStreetMap (way/466972605)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/466972605",
+  "otherSource": "https://www.wikidata.org/wiki/Q110047527"
+}

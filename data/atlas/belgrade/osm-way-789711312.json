@@ -1,0 +1,70 @@
+{
+  "id": "osm-way-789711312",
+  "osmId": "way/789711312",
+  "names": {
+    "ru": "Средняя туристическая школа",
+    "en": "Secondary School of Tourism",
+    "uk": "Середня туристична школа",
+    "sr": "Средња туристичка школа"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Отона Жупанчича, 4, Нови-Беград, Белград",
+    "en": "Otona Župančića 4, New Belgrade, Belgrade",
+    "uk": "вулиця Отона Жупанчича, 4, Новий Белград, Белград",
+    "sr": "Отона Жупанчича 4, Нови Београд, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "novi-beograd",
+  "type": "educational",
+  "coordinates": [
+    20.41021,
+    44.8265825
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4101447,
+          44.826954
+        ],
+        [
+          20.4097019,
+          44.8264206
+        ],
+        [
+          20.4099286,
+          44.8263259
+        ],
+        [
+          20.4101838,
+          44.8262182
+        ],
+        [
+          20.4107661,
+          44.8266946
+        ],
+        [
+          20.4101447,
+          44.826954
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/789711312).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/789711312).",
+    "sr": "Контура OpenStreetMap (way/789711312).",
+    "uk": "Контур OpenStreetMap (way/789711312)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/789711312",
+  "otherSource": "https://www.wikidata.org/wiki/Q97330232"
+}

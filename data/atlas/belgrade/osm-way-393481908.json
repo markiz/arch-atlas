@@ -1,0 +1,67 @@
+{
+  "id": "osm-way-393481908",
+  "osmId": "way/393481908",
+  "names": {
+    "ru": "Венгерский культурный центр",
+    "en": "Collegium Hungaricum Belgrade",
+    "uk": "Угорський культурний центр",
+    "sr": "Мађарски културни центар"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Грачаничка, 14, Стари-Град, Белград",
+    "en": "Gračanička 14, Stari Grad, Belgrade",
+    "uk": "вулиця Грачаничка, 14, Старий Град, Белград",
+    "sr": "Улица Грачаничка 14, Стари град, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "cultural",
+  "coordinates": [
+    20.4543463,
+    44.8175489
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4542575,
+          44.8175251
+        ],
+        [
+          20.4543154,
+          44.8174808
+        ],
+        [
+          20.4544775,
+          44.8175192
+        ],
+        [
+          20.4542999,
+          44.8176453
+        ],
+        [
+          20.4542575,
+          44.8175251
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/393481908).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/393481908).",
+    "sr": "Контура OpenStreetMap (way/393481908).",
+    "uk": "Контур OpenStreetMap (way/393481908)."
+  },
+  "photos": [
+    "bf4c61bf9d75faea61f01f382ae09244833cc925d46452de415f151449a8bbea"
+  ],
+  "source": "https://www.openstreetmap.org/way/393481908"
+}

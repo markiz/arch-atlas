@@ -1,0 +1,84 @@
+{
+  "id": "osm-way-675827207",
+  "osmId": "way/675827207",
+  "names": {
+    "ru": "Начальная школа «Яинци»",
+    "en": "Primary School Jajinci",
+    "uk": "Початкова школа «Яїнці»",
+    "sr": "Основна школа Јајинци"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Илии Петровича, 12, Белград",
+    "en": "12 Ilije Petrovića Street, Belgrade",
+    "uk": "вулиця Ілії Петровича, 12, Белград",
+    "sr": "Илије Петровића 12, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vozdovac",
+  "type": "educational",
+  "coordinates": [
+    20.4869456,
+    44.7362655
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.487454,
+          44.7360305
+        ],
+        [
+          20.4872936,
+          44.7357766
+        ],
+        [
+          20.4864853,
+          44.7360632
+        ],
+        [
+          20.4866399,
+          44.7362304
+        ],
+        [
+          20.4864467,
+          44.7363277
+        ],
+        [
+          20.4869536,
+          44.7368038
+        ],
+        [
+          20.4873302,
+          44.7365119
+        ],
+        [
+          20.487002,
+          44.7362043
+        ],
+        [
+          20.487454,
+          44.7360305
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/675827207).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/675827207).",
+    "sr": "Контура OpenStreetMap (way/675827207).",
+    "uk": "Контур OpenStreetMap (way/675827207)."
+  },
+  "photos": [
+    "796a9236fdd1532b9a24129e52411bf0adccf9bc467c258e9bb73b3cb6c00f91"
+  ],
+  "source": "https://www.openstreetmap.org/way/675827207",
+  "otherSource": "https://www.wikidata.org/wiki/Q85997084"
+}

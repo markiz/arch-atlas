@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-396057918",
+  "osmId": "way/396057918",
+  "names": {
+    "ru": "Центр образования и культуры «Божидарац 1947»",
+    "en": "Božidarac 1947 Education and Culture Centre",
+    "uk": "Центр освіти і культури «Божидарац 1947»",
+    "sr": "Центар за образовање и културу „Божидарац 1947”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Радослава Грујића, 3, Врачар, Белград",
+    "en": "Radoslava Grujića 3, Vračar, Belgrade",
+    "uk": "вулиця Радослава Грујића, 3, Врачар, Белград",
+    "sr": "Улица Радослава Грујића 3, Врачар, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "cultural",
+  "coordinates": [
+    20.4792862,
+    44.7984274
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4790174,
+          44.798542
+        ],
+        [
+          20.4790179,
+          44.7983122
+        ],
+        [
+          20.479555,
+          44.7983127
+        ],
+        [
+          20.4795545,
+          44.7985426
+        ],
+        [
+          20.4790174,
+          44.798542
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396057918).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396057918).",
+    "sr": "Контура OpenStreetMap (way/396057918).",
+    "uk": "Контур OpenStreetMap (way/396057918)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/396057918",
+  "otherSource": "https://www.wikidata.org/wiki/Q110048342"
+}

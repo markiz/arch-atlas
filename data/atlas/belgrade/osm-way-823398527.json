@@ -1,0 +1,86 @@
+{
+  "id": "osm-way-823398527",
+  "osmId": "way/823398527",
+  "names": {
+    "ru": "Дом здоровья «Доктор Милутин Ивкович» Палилула",
+    "en": "Dr Milutin Ivković Health Centre, Palilula",
+    "uk": "Дім здоров'я «Доктор Мілутін Івковіч» Палілула",
+    "sr": "Дом здравља „Др Милутин Ивковић” Палилула"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Кнеза Данила, 16, Палилула, Белград",
+    "en": "16 Kneza Danila Street, Palilula, Belgrade",
+    "uk": "вулиця Кнеза Данила, 16, Палілула, Белград",
+    "sr": "Кнеза Данила 16, Палилула, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "healthcare",
+  "coordinates": [
+    20.4761311,
+    44.8107262
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4756786,
+          44.8107976
+        ],
+        [
+          20.4763218,
+          44.8110718
+        ],
+        [
+          20.4765448,
+          44.8106854
+        ],
+        [
+          20.4764381,
+          44.8106414
+        ],
+        [
+          20.4763357,
+          44.8105983
+        ],
+        [
+          20.4762401,
+          44.8105581
+        ],
+        [
+          20.4763138,
+          44.8104692
+        ],
+        [
+          20.4760591,
+          44.8103575
+        ],
+        [
+          20.4758453,
+          44.8106078
+        ],
+        [
+          20.4756786,
+          44.8107976
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/823398527).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/823398527).",
+    "sr": "Контура OpenStreetMap (way/823398527).",
+    "uk": "Контур OpenStreetMap (way/823398527)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/823398527",
+  "otherSource": "https://www.wikidata.org/wiki/Q110048840"
+}

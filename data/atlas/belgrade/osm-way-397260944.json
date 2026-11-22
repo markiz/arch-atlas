@@ -1,0 +1,78 @@
+{
+  "id": "osm-way-397260944",
+  "osmId": "way/397260944",
+  "names": {
+    "ru": "Начальная школа «Майка Юговича»",
+    "en": "Primary School Majka Jugovića",
+    "uk": "Початкова школа «Майка Юговича»",
+    "sr": "ОШ „Мајка Југовића”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Градски парк, 9, Земун",
+    "en": "9 Gradski Park Street, Zemun",
+    "uk": "вулиця Градскі парк, 9, Земун",
+    "sr": "Градски парк 9, Земун"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zemun",
+  "type": "educational",
+  "coordinates": [
+    20.4098053,
+    44.8403556
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4100179,
+          44.8407453
+        ],
+        [
+          20.4101416,
+          44.8405777
+        ],
+        [
+          20.410085,
+          44.8405567
+        ],
+        [
+          20.4103231,
+          44.8402202
+        ],
+        [
+          20.4096372,
+          44.8399432
+        ],
+        [
+          20.4092824,
+          44.8404899
+        ],
+        [
+          20.4100079,
+          44.8407647
+        ],
+        [
+          20.4100179,
+          44.8407453
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/397260944).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/397260944).",
+    "sr": "Контура OpenStreetMap (way/397260944).",
+    "uk": "Контур OpenStreetMap (way/397260944)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/397260944",
+  "otherSource": "https://www.wikidata.org/wiki/Q97330048"
+}

@@ -1,0 +1,104 @@
+{
+  "id": "osm-way-408673712",
+  "osmId": "way/408673712",
+  "names": {
+    "ru": "Основная школа «Милан Ракич»",
+    "en": "\"Milan Rakić\" Elementary School",
+    "uk": "Основна школа «Мілан Ракич»",
+    "sr": "ОШ „Милан Ракић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Воеводинская, 62, Нови-Београд, Белград",
+    "en": "Vojvođanska 62, New Belgrade, Belgrade",
+    "uk": "вулиця Воєводинська, 62, Новий Белград, Белград",
+    "sr": "Улица Војвођанска 62, Нови Београд, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "novi-beograd",
+  "type": "educational",
+  "coordinates": [
+    20.3751916,
+    44.8082001
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.3752869,
+          44.808831
+        ],
+        [
+          20.3754852,
+          44.8085947
+        ],
+        [
+          20.3759991,
+          44.8079824
+        ],
+        [
+          20.3760023,
+          44.8079623
+        ],
+        [
+          20.3759962,
+          44.8079362
+        ],
+        [
+          20.3759781,
+          44.8079181
+        ],
+        [
+          20.3759426,
+          44.8078962
+        ],
+        [
+          20.3755904,
+          44.8077462
+        ],
+        [
+          20.3751626,
+          44.8075675
+        ],
+        [
+          20.3748536,
+          44.8079428
+        ],
+        [
+          20.3747678,
+          44.8079101
+        ],
+        [
+          20.3743324,
+          44.8084362
+        ],
+        [
+          20.374356,
+          44.808446
+        ],
+        [
+          20.3752869,
+          44.808831
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/408673712).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/408673712).",
+    "sr": "Контура OpenStreetMap (way/408673712).",
+    "uk": "Контур OpenStreetMap (way/408673712)."
+  },
+  "photos": [
+    "a4257ddd1a4ad7ad228313769579fafe0eeef403afc06564c2adb800d946926e"
+  ],
+  "source": "https://www.openstreetmap.org/way/408673712",
+  "otherSource": "https://www.wikidata.org/wiki/Q85997274"
+}

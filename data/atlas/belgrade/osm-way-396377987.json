@@ -1,0 +1,73 @@
+{
+  "id": "osm-way-396377987",
+  "osmId": "way/396377987",
+  "names": {
+    "ru": "Христианская адвентистская церковь",
+    "en": "Christian Adventist Church",
+    "uk": "Християнська адвентистська церква",
+    "sr": "Хришћанска адвентистичка црква"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Радослава Груича, 4, Врачар, Белград",
+    "en": "Radoslava Grujića 4, Vračar, Belgrade",
+    "uk": "вулиця Радослава Груїча, 4, Врачар, Белград",
+    "sr": "Улица Радослава Грујића 4, Врачар, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "religious",
+  "coordinates": [
+    20.479911,
+    44.7988653
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4796879,
+          44.7987067
+        ],
+        [
+          20.4797803,
+          44.7990186
+        ],
+        [
+          20.480193,
+          44.7989571
+        ],
+        [
+          20.4801496,
+          44.7988106
+        ],
+        [
+          20.4799358,
+          44.7988425
+        ],
+        [
+          20.4798868,
+          44.7986771
+        ],
+        [
+          20.4796879,
+          44.7987067
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396377987).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396377987).",
+    "sr": "Контура OpenStreetMap (way/396377987).",
+    "uk": "Контур OpenStreetMap (way/396377987)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/396377987"
+}

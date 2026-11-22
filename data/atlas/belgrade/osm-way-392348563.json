@@ -1,0 +1,89 @@
+{
+  "id": "osm-way-392348563",
+  "osmId": "way/392348563",
+  "names": {
+    "ru": "Городской институт скорой медицинской помощи",
+    "en": "City Institute for Emergency Medicine",
+    "uk": "Міський інститут швидкої медичної допомоги",
+    "sr": "Градски завод за хитну медицинску помоћ"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "Булевар Франше д'Епереа, 5, Савски-Венац, Белград",
+    "en": "Bulevar Franše d'Eperea 5, Savski Venac, Belgrade",
+    "uk": "Булевар Франше д'Епереа, 5, Савски-Венац, Белград",
+    "sr": "Булевар Франше д'Епереа 5, Савски Венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "healthcare",
+  "coordinates": [
+    20.4539369,
+    44.7969855
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4533965,
+          44.7972754
+        ],
+        [
+          20.453259,
+          44.7970393
+        ],
+        [
+          20.4538081,
+          44.7968783
+        ],
+        [
+          20.453775,
+          44.7968217
+        ],
+        [
+          20.4542837,
+          44.7966719
+        ],
+        [
+          20.4544216,
+          44.7969077
+        ],
+        [
+          20.4545448,
+          44.7968714
+        ],
+        [
+          20.4546129,
+          44.7969878
+        ],
+        [
+          20.4539895,
+          44.7971714
+        ],
+        [
+          20.4539545,
+          44.7971117
+        ],
+        [
+          20.4533965,
+          44.7972754
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392348563).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392348563).",
+    "sr": "Контура OpenStreetMap (way/392348563).",
+    "uk": "Контур OpenStreetMap (way/392348563)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/392348563"
+}

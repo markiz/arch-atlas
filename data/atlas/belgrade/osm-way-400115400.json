@@ -1,0 +1,65 @@
+{
+  "id": "osm-way-400115400",
+  "osmId": "way/400115400",
+  "names": {
+    "ru": "Легат Гашпаровича",
+    "en": "Gašparović Legacy",
+    "uk": "Легат Гашпаровича",
+    "sr": "Легат Гашпаровић"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Персиды Миленкович, 12, Савски-Венац, Белград",
+    "en": "12 Perside Milenković Street, Savski Venac, Belgrade",
+    "uk": "вулиця Персиди Міленкович, 12, Савски-Венац, Белград",
+    "sr": "Персиде Миленковић 12, Савски венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "cultural",
+  "coordinates": [
+    20.4386873,
+    44.7917246
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4385889,
+          44.791814
+        ],
+        [
+          20.4385283,
+          44.7917364
+        ],
+        [
+          20.4387856,
+          44.7916352
+        ],
+        [
+          20.4388463,
+          44.7917129
+        ],
+        [
+          20.4385889,
+          44.791814
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/400115400).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/400115400).",
+    "sr": "Контура OpenStreetMap (way/400115400).",
+    "uk": "Контур OpenStreetMap (way/400115400)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/400115400"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "osm-way-392346760",
+  "osmId": "way/392346760",
+  "names": {
+    "ru": "Высшая медицинская школа «Милутин Миланкович»",
+    "en": "Milutin Milanković College of Medical Studies",
+    "uk": "Вища медична школа «Мілутін Міланкович»",
+    "sr": "Висока медицинска школа „Милутин Миланковић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Црнотравска, 27, Савски-Венац, Белград",
+    "en": "27 Crnotravska Street, Savski Venac, Belgrade",
+    "uk": "вулиця Црнотравська, 27, Савски-Венац, Белград",
+    "sr": "Црнотравска 27, Савски венац, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.4672138,
+    44.7683764
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4670121,
+          44.7683781
+        ],
+        [
+          20.4671093,
+          44.768405
+        ],
+        [
+          20.4672354,
+          44.7685143
+        ],
+        [
+          20.4672536,
+          44.7685037
+        ],
+        [
+          20.4672747,
+          44.768522
+        ],
+        [
+          20.467317,
+          44.7684973
+        ],
+        [
+          20.4672736,
+          44.7684598
+        ],
+        [
+          20.467315,
+          44.7684357
+        ],
+        [
+          20.4673623,
+          44.7684487
+        ],
+        [
+          20.4674179,
+          44.7683471
+        ],
+        [
+          20.4670802,
+          44.7682538
+        ],
+        [
+          20.4670582,
+          44.768294
+        ],
+        [
+          20.4670121,
+          44.7683781
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/392346760).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/392346760).",
+    "sr": "Контура OpenStreetMap (way/392346760).",
+    "uk": "Контур OpenStreetMap (way/392346760)."
+  },
+  "photos": [
+    "411ad34222822fd609b759fecb6a5bcce69dc70b7932f77bcb7eedbf4b00321e"
+  ],
+  "source": "https://www.openstreetmap.org/way/392346760",
+  "otherSource": "https://sr.wikipedia.org/wiki/%D0%92%D0%B8%D1%81%D0%BE%D0%BA%D0%B0_%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B0_%D1%88%D0%BA%D0%BE%D0%BB%D0%B0_%D1%81%D1%82%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BD%D0%B8%D1%85_%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%98%D0%B0_%E2%80%9E%D0%9C%D0%B8%D0%BB%D1%83%D1%82%D0%B8%D0%BD_%D0%9C%D0%B8%D0%BB%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%B8%D1%9B%E2%80%9D_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4"
+}

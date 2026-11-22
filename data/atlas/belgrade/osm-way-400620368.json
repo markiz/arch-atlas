@@ -1,0 +1,66 @@
+{
+  "id": "osm-way-400620368",
+  "osmId": "way/400620368",
+  "names": {
+    "ru": "Начальная школа «Бошко Буха»",
+    "en": "Primary School Boško Buha",
+    "uk": "Початкова школа «Бошко Буха»",
+    "sr": "Основна школа Бошко Буха"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Двадцать первой дивизии, 31, Белград",
+    "en": "31 Dvadeset prve divizije Street, Belgrade",
+    "uk": "вулиця Двадцять першої дивізії, 31, Белград",
+    "sr": "Двадесет прве дивизије 31, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "zvezdara",
+  "type": "educational",
+  "coordinates": [
+    20.4939233,
+    44.8029121
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4938534,
+          44.8032719
+        ],
+        [
+          20.4934016,
+          44.8028275
+        ],
+        [
+          20.4939996,
+          44.8025497
+        ],
+        [
+          20.4944408,
+          44.8030032
+        ],
+        [
+          20.4938534,
+          44.8032719
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/400620368).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/400620368).",
+    "sr": "Контура OpenStreetMap (way/400620368).",
+    "uk": "Контур OpenStreetMap (way/400620368)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/400620368",
+  "otherSource": "https://www.wikidata.org/wiki/Q85997112"
+}

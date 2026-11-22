@@ -1,0 +1,114 @@
+{
+  "id": "osm-way-399992224",
+  "osmId": "way/399992224",
+  "names": {
+    "ru": "Немецкая школа в Белграде",
+    "en": "German School Belgrade",
+    "uk": "Німецька школа в Белграді",
+    "sr": "Немачка школа Београд"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Петра Чайковского, 4, Белград",
+    "en": "4 Petra Čajkovskog Street, Belgrade",
+    "uk": "вулиця Петра Чайковського, 4, Белград",
+    "sr": "Петра Чајковског 4, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.4404626,
+    44.7866714
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4402272,
+          44.7868118
+        ],
+        [
+          20.4402238,
+          44.78675
+        ],
+        [
+          20.4401502,
+          44.7867521
+        ],
+        [
+          20.4401333,
+          44.786452
+        ],
+        [
+          20.4403227,
+          44.7864466
+        ],
+        [
+          20.4403346,
+          44.786658
+        ],
+        [
+          20.4409518,
+          44.7866405
+        ],
+        [
+          20.4409577,
+          44.7867464
+        ],
+        [
+          20.440938,
+          44.78675
+        ],
+        [
+          20.4407931,
+          44.7867511
+        ],
+        [
+          20.4407563,
+          44.7867521
+        ],
+        [
+          20.4407595,
+          44.7868082
+        ],
+        [
+          20.440575,
+          44.7868135
+        ],
+        [
+          20.4405721,
+          44.7867608
+        ],
+        [
+          20.440354,
+          44.7867669
+        ],
+        [
+          20.4403563,
+          44.7868082
+        ],
+        [
+          20.4402272,
+          44.7868118
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/399992224).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/399992224).",
+    "sr": "Контура OpenStreetMap (way/399992224).",
+    "uk": "Контур OpenStreetMap (way/399992224)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/399992224",
+  "otherSource": "https://www.wikidata.org/wiki/Q1203916"
+}

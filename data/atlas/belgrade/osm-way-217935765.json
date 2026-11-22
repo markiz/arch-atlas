@@ -1,0 +1,98 @@
+{
+  "id": "osm-way-217935765",
+  "osmId": "way/217935765",
+  "names": {
+    "ru": "Основная школа «Йосиф Панчич»",
+    "en": "\"Josif Pančić\" Elementary School",
+    "uk": "Основна школа «Йосиф Панчич»",
+    "sr": "ОШ „Јосиф Панчић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Пожешка, 52, Чукарица, Белград",
+    "en": "Požeška 52, Čukarica, Belgrade",
+    "uk": "вулиця Пожешка, 52, Чукариця, Белград",
+    "sr": "Пожешка 52, Чукарица, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "cukarica",
+  "type": "educational",
+  "coordinates": [
+    20.4162491,
+    44.7806654
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4162178,
+          44.7809339
+        ],
+        [
+          20.4157005,
+          44.7809488
+        ],
+        [
+          20.415468,
+          44.7805846
+        ],
+        [
+          20.416541,
+          44.7802471
+        ],
+        [
+          20.4167207,
+          44.7804741
+        ],
+        [
+          20.4169692,
+          44.7808046
+        ],
+        [
+          20.4169653,
+          44.7808483
+        ],
+        [
+          20.4169368,
+          44.7808871
+        ],
+        [
+          20.4168955,
+          44.7809008
+        ],
+        [
+          20.4168255,
+          44.7809241
+        ],
+        [
+          20.4167747,
+          44.780937
+        ],
+        [
+          20.4166997,
+          44.7809406
+        ],
+        [
+          20.4162178,
+          44.7809339
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/217935765).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/217935765).",
+    "sr": "Контура OpenStreetMap (way/217935765).",
+    "uk": "Контур OpenStreetMap (way/217935765)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/217935765",
+  "otherSource": "https://www.wikidata.org/wiki/Q88467198"
+}

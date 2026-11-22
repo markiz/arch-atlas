@@ -1,0 +1,76 @@
+{
+  "id": "osm-way-1298783607",
+  "osmId": "way/1298783607",
+  "names": {
+    "ru": "Гимназия «Свети Сава»",
+    "en": "Gymnasium Sveti Sava",
+    "uk": "Гімназія «Свети Сава»",
+    "sr": "Гимназија „Свети Сава”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Ресавская, 58, Белград",
+    "en": "58 Resavska Street, Belgrade",
+    "uk": "вулиця Ресавська, 58, Белград",
+    "sr": "Ресавска 58, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.4583444,
+    44.8026756
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.458396,
+          44.8022732
+        ],
+        [
+          20.4588595,
+          44.802692
+        ],
+        [
+          20.458156,
+          44.803084
+        ],
+        [
+          20.4579078,
+          44.8028596
+        ],
+        [
+          20.4581538,
+          44.8027226
+        ],
+        [
+          20.4579386,
+          44.8025281
+        ],
+        [
+          20.458396,
+          44.8022732
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/1298783607).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/1298783607).",
+    "sr": "Контура OpenStreetMap (way/1298783607).",
+    "uk": "Контур OpenStreetMap (way/1298783607)."
+  },
+  "photos": [
+    "8e5efb666465ae4dcc921025e091b02831fb501b9fca4991570ed8ed64898781"
+  ],
+  "source": "https://www.openstreetmap.org/way/1298783607",
+  "otherSource": "https://sr.wikipedia.org/wiki/%D0%93%D0%B8%D0%BC%D0%BD%D0%B0%D0%B7%D0%B8%D1%98%D0%B0_%E2%80%9E%D0%A1%D0%B2%D0%B5%D1%82%D0%B8_%D0%A1%D0%B0%D0%B2%D0%B0%E2%80%9D_%D0%91%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%B4"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "osm-way-396466568",
+  "osmId": "way/396466568",
+  "names": {
+    "ru": "Основная школа «Светозар Маркович»",
+    "en": "\"Svetozar Marković\" Elementary School",
+    "uk": "Основна школа «Светозар Маркович»",
+    "sr": "ОШ „Светозар Марковић”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Хаджи-Мелентиева, 62, Врачар, Белград",
+    "en": "Hadži-Melentijeva 62, Vračar, Belgrade",
+    "uk": "вулиця Хаджи-Мелентієва, 62, Врачар, Белград",
+    "sr": "Хаџи-Мелентијева 62, Врачар, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "vracar",
+  "type": "educational",
+  "coordinates": [
+    20.474232,
+    44.7938887
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4735908,
+          44.7940394
+        ],
+        [
+          20.4736036,
+          44.7939314
+        ],
+        [
+          20.4743884,
+          44.7936446
+        ],
+        [
+          20.4743993,
+          44.7936243
+        ],
+        [
+          20.474503,
+          44.7936437
+        ],
+        [
+          20.474539,
+          44.7936286
+        ],
+        [
+          20.4747987,
+          44.7937515
+        ],
+        [
+          20.4747672,
+          44.7939144
+        ],
+        [
+          20.4745076,
+          44.7938897
+        ],
+        [
+          20.4744548,
+          44.7941234
+        ],
+        [
+          20.4735908,
+          44.7940394
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/396466568).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/396466568).",
+    "sr": "Контура OpenStreetMap (way/396466568).",
+    "uk": "Контур OpenStreetMap (way/396466568)."
+  },
+  "photos": [
+    "2cde2dd9b740361735f41caeb114236429aaec93f1535b388e1a0e80b3996b43"
+  ],
+  "source": "https://www.openstreetmap.org/way/396466568",
+  "otherSource": "https://www.wikidata.org/wiki/Q98098448"
+}

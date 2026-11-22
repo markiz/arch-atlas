@@ -1,0 +1,114 @@
+{
+  "id": "osm-way-23098173",
+  "osmId": "way/23098173",
+  "names": {
+    "ru": "Высшая текстильная школа дизайна, технологий и менеджмента",
+    "en": "Higher Textile Vocational School for Design, Technology and Management",
+    "uk": "Вища текстильна школа дизайну, технологій і менеджменту",
+    "sr": "Висока текстилна струковна школа за дизајн, технологију и менаџмент"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Старине Новака, 24, Белград",
+    "en": "24 Starine Novaka Street, Belgrade",
+    "uk": "вулиця Старіне Новака, 24, Белград",
+    "sr": "Старине Новака 24, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "educational",
+  "coordinates": [
+    20.4782435,
+    44.810394
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4784626,
+          44.8104837
+        ],
+        [
+          20.4785113,
+          44.8105003
+        ],
+        [
+          20.4784701,
+          44.8105611
+        ],
+        [
+          20.4783674,
+          44.8105261
+        ],
+        [
+          20.4783899,
+          44.8104929
+        ],
+        [
+          20.4782712,
+          44.8104524
+        ],
+        [
+          20.4782353,
+          44.8105054
+        ],
+        [
+          20.4780914,
+          44.8104563
+        ],
+        [
+          20.4781282,
+          44.810402
+        ],
+        [
+          20.4780174,
+          44.8103642
+        ],
+        [
+          20.4779994,
+          44.8103907
+        ],
+        [
+          20.4779164,
+          44.8103624
+        ],
+        [
+          20.4779492,
+          44.8103139
+        ],
+        [
+          20.4779974,
+          44.8103304
+        ],
+        [
+          20.478058,
+          44.8102409
+        ],
+        [
+          20.4785203,
+          44.8103986
+        ],
+        [
+          20.4784626,
+          44.8104837
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/23098173).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/23098173).",
+    "sr": "Контура OpenStreetMap (way/23098173).",
+    "uk": "Контур OpenStreetMap (way/23098173)."
+  },
+  "photos": [],
+  "source": "https://www.openstreetmap.org/way/23098173",
+  "otherSource": "https://www.wikidata.org/wiki/Q124513256"
+}

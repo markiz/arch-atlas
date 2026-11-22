@@ -1,0 +1,72 @@
+{
+  "id": "osm-way-395903502",
+  "osmId": "way/395903502",
+  "names": {
+    "ru": "Электротехническая школа «Стари-Град»",
+    "en": "Electrical Engineering School \"Stari Grad\"",
+    "uk": "Електротехнічна школа «Стари-Град»",
+    "sr": "Електротехничка школа „Стари град”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Високого Стевана, 37, Стари-Град, Белград",
+    "en": "37 Visokog Stevana Street, Stari Grad, Belgrade",
+    "uk": "вулиця Високого Стевана, 37, Стари-Град, Белград",
+    "sr": "Улица Високог Стевана 37, Стари град, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "stari-grad",
+  "type": "educational",
+  "coordinates": [
+    20.4628888,
+    44.8246857
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4625011,
+          44.8244178
+        ],
+        [
+          20.4624435,
+          44.8247997
+        ],
+        [
+          20.46264,
+          44.8250655
+        ],
+        [
+          20.463466,
+          44.8248771
+        ],
+        [
+          20.4630366,
+          44.8242706
+        ],
+        [
+          20.4625011,
+          44.8244178
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/395903502).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/395903502).",
+    "sr": "Контура OpenStreetMap (way/395903502).",
+    "uk": "Контур OpenStreetMap (way/395903502)."
+  },
+  "photos": [
+    "055a600fc2f668de5f94e2d2954a1a9a30ae4c01e47fc870b774521f78c8d7a2"
+  ],
+  "source": "https://www.openstreetmap.org/way/395903502",
+  "otherSource": "https://sr.wikipedia.org/wiki/%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%BA%D0%B0_%D1%88%D0%BA%D0%BE%D0%BB%D0%B0_%E2%80%9E%D0%A1%D1%82%D0%B0%D1%80%D0%B8_%D0%B3%D1%80%D0%B0%D0%B4%E2%80%9D"
+}

@@ -1,0 +1,116 @@
+{
+  "id": "osm-way-385635124",
+  "osmId": "way/385635124",
+  "names": {
+    "ru": "Высшая школа информационных и коммуникационных технологий",
+    "en": "College of Information and Communication Technologies",
+    "uk": "Вища школа інформаційних і комунікаційних технологій",
+    "sr": "Висока школа за информационе и комуникационе технологије"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Здравка Челара, 16, Белград",
+    "en": "16 Zdravka Čelara Street, Belgrade",
+    "uk": "вулиця Здравка Челара, 16, Белград",
+    "sr": "Здравка Челара 16, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "palilula",
+  "type": "educational",
+  "coordinates": [
+    20.483802,
+    44.8145221
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4841238,
+          44.8142706
+        ],
+        [
+          20.4841243,
+          44.8143309
+        ],
+        [
+          20.484053,
+          44.8143312
+        ],
+        [
+          20.4838793,
+          44.8143319
+        ],
+        [
+          20.4838822,
+          44.8146721
+        ],
+        [
+          20.4838233,
+          44.8146723
+        ],
+        [
+          20.4838244,
+          44.8148044
+        ],
+        [
+          20.483986,
+          44.8148037
+        ],
+        [
+          20.4839868,
+          44.8148868
+        ],
+        [
+          20.4834424,
+          44.8148892
+        ],
+        [
+          20.4834416,
+          44.8147899
+        ],
+        [
+          20.4837786,
+          44.8147885
+        ],
+        [
+          20.4837777,
+          44.8146738
+        ],
+        [
+          20.4836867,
+          44.8146741
+        ],
+        [
+          20.4836825,
+          44.8141919
+        ],
+        [
+          20.4841231,
+          44.81419
+        ],
+        [
+          20.4841238,
+          44.8142706
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/385635124).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/385635124).",
+    "sr": "Контура OpenStreetMap (way/385635124).",
+    "uk": "Контур OpenStreetMap (way/385635124)."
+  },
+  "photos": [
+    "92f51a3e4ee86afffb9fe7c063a379cccd41198f36d7399f28a894ab21a7d877"
+  ],
+  "source": "https://www.openstreetmap.org/way/385635124",
+  "otherSource": "https://www.wikidata.org/wiki/Q110044947"
+}

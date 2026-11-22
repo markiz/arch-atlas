@@ -1,0 +1,80 @@
+{
+  "id": "osm-way-974475375",
+  "osmId": "way/974475375",
+  "names": {
+    "ru": "Начальная школа имени доктора Драгана Херцога",
+    "en": "Primary School Dr Dragan Hercog",
+    "uk": "Початкова школа імені доктора Драгана Херцога",
+    "sr": "Основна школа „Др Драган Херцог”"
+  },
+  "originalLanguage": "sr",
+  "addresses": {
+    "ru": "улица Воеводы Миленка, 33а, Белград",
+    "en": "33a Vojvode Milenka Street, Belgrade",
+    "uk": "вулиця Воєводи Міленка, 33а, Белград",
+    "sr": "Војводе Миленка 33а, Београд"
+  },
+  "minYear": null,
+  "maxYear": null,
+  "yearLabelId": "unknown",
+  "styleIds": [
+    "undetermined"
+  ],
+  "architectIds": [],
+  "districtId": "savski-venac",
+  "type": "educational",
+  "coordinates": [
+    20.4608846,
+    44.8024315
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20.4607562,
+          44.8024436
+        ],
+        [
+          20.4607941,
+          44.8024771
+        ],
+        [
+          20.4607982,
+          44.8024748
+        ],
+        [
+          20.4608052,
+          44.8024708
+        ],
+        [
+          20.4608527,
+          44.8025128
+        ],
+        [
+          20.4610085,
+          44.8024241
+        ],
+        [
+          20.460923,
+          44.8023486
+        ],
+        [
+          20.4607562,
+          44.8024436
+        ]
+      ]
+    ]
+  },
+  "geometryQuality": "Контур OpenStreetMap (way/974475375).",
+  "geometryQualityTranslations": {
+    "en": "OpenStreetMap outline (way/974475375).",
+    "sr": "Контура OpenStreetMap (way/974475375).",
+    "uk": "Контур OpenStreetMap (way/974475375)."
+  },
+  "photos": [
+    "8deb55af008447a9184c7876e47ad68674f234d9a726d1019063a49b47673f73"
+  ],
+  "source": "https://www.openstreetmap.org/way/974475375",
+  "otherSource": "https://www.wikidata.org/wiki/Q110048318"
+}
