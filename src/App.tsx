@@ -678,7 +678,7 @@ function CatalogLoader({ error, onRetry }: { error: string; onRetry: () => void 
       </div>
       <h1>{atlasTitle(null, language)}</h1>
       <LoaderLine />
-      <p>{error || t('Загружаем карту и данные…')}</p>
+      <p>{error ? t(error) : t('Загружаем карту и данные…')}</p>
       {error && (
         <button className="primary-button" onClick={onRetry}>
           {t('Попробовать снова')}
@@ -884,7 +884,11 @@ function CityLoader({ city, onReady }: { city: CityPublic; onReady: (data: Data)
       <h1>{atlasTitle(city.labels[language] ?? city.labels.ru ?? city.id, language)}</h1>
       <LoaderLine value={error ? undefined : (progress ?? undefined)} />
       <p>
-        {error || (progress !== null ? `${Math.round(progress * 100)}% · ${t(status)}` : t(status))}
+        {error
+          ? t(error)
+          : progress !== null
+            ? `${Math.round(progress * 100)}% · ${t(status)}`
+            : t(status)}
       </p>
       {error && (
         <button className="primary-button" onClick={() => setAttempt((x) => x + 1)}>
@@ -1135,7 +1139,7 @@ function Inspector({
                 </>
               ) : photos.status === 'error' ? (
                 <div className="photo-error">
-                  <p>{photos.error || t('Не удалось загрузить фотографии')}</p>
+                  <p>{photos.error ? t(photos.error) : t('Не удалось загрузить фотографии')}</p>
                   <button onClick={photos.retry}>{t('Попробовать снова')}</button>
                 </div>
               ) : photos.phase === 'preview' ? (
@@ -1210,7 +1214,7 @@ function Inspector({
             )}
             {!description && building.hasStory && textStatus === 'error' && (
               <p className="description description-loading">
-                {textError || t('Не удалось загрузить текст')}{' '}
+                {textError ? t(textError) : t('Не удалось загрузить текст')}{' '}
                 <button type="button" className="text-link" onClick={onRetryText}>
                   {t('Повторить')}
                 </button>
@@ -2111,8 +2115,8 @@ export default function App() {
     const name = named ? (named.labels[language] ?? named.labels.ru ?? named.id) : null;
     document.title = atlasTitle(name, language);
     const description = city
-      ? `Интерактивный атлас архитектуры ${city.labels.ru ?? city.id}: история, архитекторы и стили зданий.`
-      : 'Интерактивный атлас архитектуры: история, архитекторы и стили зданий.';
+      ? `${t('Интерактивный атлас архитектуры ')}${name ?? city.labels.ru ?? city.id}${t(': история, архитекторы и стили зданий.')}`
+      : t('Интерактивный атлас архитектуры: история, архитекторы и стили зданий.');
     document.querySelector('meta[name="description"]')?.setAttribute('content', description);
     document.documentElement.lang = language;
   }, [catalog, cityId, language]);
