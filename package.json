@@ -14,7 +14,7 @@
     "outlines:build": "node scripts/build-outlines-binary.mjs --all",
     "outlines:force": "node scripts/build-outlines-binary.mjs --all --force",
     "build": "node scripts/build-all.mjs && tsc -b && vite build",
-    "check": "node scripts/build-all.mjs --check && tsc --noEmit && node scripts/check-data.mjs --all",
+    "check": "node scripts/build-all.mjs --check && tsc --noEmit && node scripts/check-data.mjs --all && node scripts/check-significance.mjs --all",
     "photos:sync": "node scripts/create-photo-thumbs.mjs && node scripts/sync-photos.mjs",
     "photos:thumbs": "python3 scripts/create-photo-thumbs.py --all",
     "test": "node --test tests/*.test.mjs",
@@ -22,7 +22,8 @@
     "photos:rate": "python3 scripts/rate-photos.py --all",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.mjs\" \"vite.config.ts\" \"eslint.config.mjs\" \"tsconfig.json\" \"index.html\" \"package.json\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,js,css}\" \"scripts/**/*.{js,mjs}\" \"tests/**/*.mjs\" \"vite.config.ts\" \"eslint.config.mjs\" \"tsconfig.json\" \"index.html\" \"package.json\"",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check:significance": "node scripts/check-significance.mjs --all"
   },
   "dependencies": {
     "preact": "^11.2.0"
