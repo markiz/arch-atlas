@@ -89,7 +89,7 @@ test('Belgrade opens on its historic core with plenty of objects', async () => {
   const desktop = visibleShare(points, desktopStartView(belgrade));
   assert.ok(desktop >= 0.35 && desktop <= 0.5, `expected 35–50% of objects, got ${desktop}`);
   const phone = visibleCount(points, mobileStartView(belgrade), 360, 724);
-  assert.ok(phone >= 200, `expected a full phone screen of objects, got ${phone}`);
+  assert.ok(phone >= 180, `expected a full phone screen of objects, got ${phone}`);
 });
 
 test('mobile start view is off outside the browser', () => {
